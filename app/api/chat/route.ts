@@ -14,14 +14,16 @@ function hasRequiredApiKey(modelId: ModelId): { valid: boolean; error?: string }
   const provider = model.provider;
   
   if (provider === 'anthropic' || provider === 'auto') {
-    if (!process.env.ANTHROPIC_API_KEY) {
-      return { valid: false, error: 'ANTHROPIC_API_KEY is not configured' };
+    const apiKey = process.env.ANTHROPIC_API_KEY?.trim();
+    if (!apiKey) {
+      return { valid: false, error: 'ANTHROPIC_API_KEY is not configured. Please add it to your .env.local file.' };
     }
   }
   
   if (provider === 'perplexity') {
-    if (!process.env.PERPLEXITY_API_KEY) {
-      return { valid: false, error: 'PERPLEXITY_API_KEY is not configured' };
+    const apiKey = process.env.PERPLEXITY_API_KEY?.trim();
+    if (!apiKey) {
+      return { valid: false, error: 'PERPLEXITY_API_KEY is not configured. Please add it to your .env.local file.' };
     }
   }
 
