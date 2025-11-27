@@ -42,8 +42,8 @@ Guidelines:
 - Be concise but thorough`,
     });
 
-    // Return streaming response in format useChat expects
-    return result.toDataStreamResponse({
+    // Return streaming response in format useChat expects (AI SDK 5.x)
+    return result.toTextStreamResponse({
       headers: {
         'X-Model-Used': selectedModel,
       },
