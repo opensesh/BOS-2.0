@@ -1,0 +1,101 @@
+{
+  "type": "long-form",
+  "date": "2025-11-09T17:14:43.184Z",
+  "ideas": [
+    {
+      "title": "Tutorial: Adobe Firefly + Figma workflow for rapid brand creation",
+      "description": "Complete workflow showing how to generate brand assets in Firefly and build design systems in Figma",
+      "starred": true,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/what-is-adobe-firefly/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/08/is-wall-street-losing-faith-in-ai/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/column/815744/music-recommendation-algorithms"
+        }
+      ]
+    },
+    {
+      "title": "Deep Dive: Building AI-resistant design processes (lessons from 'Pluribus')",
+      "description": "Framework for maintaining human creativity while leveraging AI tools - inspired by 'made by humans' movement",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/08/breaking-bad-creators-new-show-pluribus-was-emphatically-made-by-humans-not-ai/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/report/816427/no-mans-sky-album-journeys-65daysofstatic"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/07/kim-kardashian-says-chatgpt-is-her-frenemy/"
+        }
+      ]
+    },
+    {
+      "title": "Tutorial: ChatGPT + design critique workflow for better iterations",
+      "description": "Step-by-step guide to using AI for design feedback while avoiding creative dependency traps",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/07/kim-kardashian-says-chatgpt-is-her-frenemy/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/07/seven-more-families-are-now-suing-openai-over-chatgpts-role-in-suicides-delusions/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/column/815744/music-recommendation-algorithms"
+        }
+      ]
+    },
+    {
+      "title": "Business Case Study: How we use AI translation for global design systems",
+      "description": "Real workflow showing how Amazon's Kindle Translate approach applies to design asset localization",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/amazon-launches-an-ai-powered-kindle-translate-service-for-ebook-authors/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/gallery/best-kindle/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/sam-altman-says-openai-has-20b-arr-and-about-1-4-trillion-in-data-center-commitments/"
+        }
+      ]
+    },
+    {
+      "title": "Framework: Algorithm-proof design thinking for creative authenticity",
+      "description": "Design methodology that maintains creative integrity in an algorithm-driven world",
+      "starred": false,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/column/815744/music-recommendation-algorithms"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/report/816427/no-mans-sky-album-journeys-65daysofstatic"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/softbank-is-back-and-the-ai-hype-cycle-is-eating-itself/"
+        }
+      ]
+    }
+  ]
+}

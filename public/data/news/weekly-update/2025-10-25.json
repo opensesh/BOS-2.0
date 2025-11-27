@@ -1,0 +1,68 @@
+{
+  "type": "weekly-update",
+  "date": "2025-10-25T17:15:52.601Z",
+  "updates": [
+    {
+      "title": "OpenAI launches Atlas, an AI-powered browser that lets users navigate the web using natural language commands, sparking new browser wars with Microsoft quickly following with similar Copilot Mode features in Edge.",
+      "timestamp": "10/25/2025, 4:51 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/who-are-ai-browsers-for/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/video/the-browser-wars-are-back-and-this-time-theyre-powered-by-ai/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/23/two-days-after-openais-atlas-microsoft-launches-a-nearly-identical-ai-browser/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/web-browsers-ai-tour-guide-openai-atlas-ask-chatgpt/"
+        }
+      ]
+    },
+    {
+      "title": "ChatGPT now integrates directly with major design and creative apps including Figma, Canva, and Spotify, allowing users to control these platforms through natural language commands within the ChatGPT interface.",
+      "timestamp": "10/24/2025, 7:08 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/24/how-to-use-the-new-chatgpt-app-integrations-including-spotify-figma-canva-and-others/"
+        }
+      ]
+    },
+    {
+      "title": "OpenAI acquires Sky (Software Applications Inc.), an AI-powered natural language interface for Mac that can view screens and take actions in apps, signaling expansion into desktop AI automation tools.",
+      "timestamp": "10/23/2025, 8:53 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/23/openai-buys-sky-an-ai-interface-for-mac/"
+        }
+      ]
+    },
+    {
+      "title": "Meta integrates AI photo editing tools directly into Instagram Stories, allowing users to describe changes they want to make using natural language through the paintbrush icon interface.",
+      "timestamp": "10/23/2025, 7:22 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/23/instagram-users-can-now-use-meta-ai-editing-tools-directly-in-ig-stories/"
+        }
+      ]
+    },
+    {
+      "title": "Microsoft introduces Mico, an animated AI avatar for Copilot that serves as a modern, customizable version of Clippy, bringing personality back to AI assistants with expressive blob animations.",
+      "timestamp": "10/23/2025, 5:08 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/23/microsofts-mico-is-a-clippy-for-the-ai-era/"
+        }
+      ]
+    }
+  ]
+}

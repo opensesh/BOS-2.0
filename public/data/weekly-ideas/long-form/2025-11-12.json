@@ -1,0 +1,101 @@
+{
+  "type": "long-form",
+  "date": "2025-11-12T17:19:25.004Z",
+  "ideas": [
+    {
+      "title": "Tutorial: Figma India expansion features for design teams",
+      "description": "Complete walkthrough of Figma's new collaboration tools and how to integrate them into your workflow",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/12/figma-bets-on-india-to-expand-beyond-design/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/818552/waymo-highway-california-arizona-robotaxi-challenge"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/ai-boom-networking-technology-photonics/"
+        }
+      ]
+    },
+    {
+      "title": "Deep Dive: World Labs Marble for 3D design workflows",
+      "description": "Hands-on exploration of Fei-Fei Li's new world model tool and how designers can use it for 3D mockups",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/12/fei-fei-lis-world-labs-speeds-up-the-world-model-race-with-marble-its-first-commercial-product/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/11/the-global-race-for-the-ai-app-layer-is-still-on/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/ai-boom-networking-technology-photonics/"
+        }
+      ]
+    },
+    {
+      "title": "Framework: AI product-market fit for design agencies",
+      "description": "How to validate your AI design services using proven startup frameworks - our complete methodology",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/11/how-ai-startups-should-be-thinking-about-product-market-fit/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/what-startups-want-from-openai/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/11/the-global-race-for-the-ai-app-layer-is-still-on/"
+        }
+      ]
+    },
+    {
+      "title": "Tutorial: WisdomAI data integration for design research",
+      "description": "Step-by-step guide to using AI data tools for user research and design validation workflows",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/12/ai-data-startup-wisdomai-has-raised-another-50m-led-by-kleiner-nvidia/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/11/how-ai-startups-should-be-thinking-about-product-market-fit/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/talk-to-chatgpt-for-free-inside-whatsapp/"
+        }
+      ]
+    },
+    {
+      "title": "Our Workflow: Personal AI avatars for client presentations",
+      "description": "How we use Eternos-style AI avatars to create personalized client pitch videos at OPEN SESSION",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/11/immortality-startup-eternos-pivots-to-a-personal-ai-that-sounds-like-you/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/talk-to-chatgpt-for-free-inside-whatsapp/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/818814/amazon-echo-show-11-8-alexa-plus-hands-on"
+        }
+      ]
+    }
+  ]
+}

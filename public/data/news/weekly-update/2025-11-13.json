@@ -1,0 +1,80 @@
+{
+  "type": "weekly-update",
+  "date": "2025-11-13T17:19:32.551Z",
+  "updates": [
+    {
+      "title": "Google launches NotebookLM 'Deep Research' tool that automates complex online research, while SIMA 2 agent uses Gemini to reason and act in virtual worlds as a step toward AGI systems.",
+      "timestamp": "11/13/2025, 5:00 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/13/googles-notebooklm-adds-deep-research-tool-support-for-more-file-types/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/13/googles-sima-2-agent-uses-gemini-to-reason-and-act-in-virtual-worlds/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/820022/google-notebooklm-gemini-deep-research"
+        }
+      ]
+    },
+    {
+      "title": "Cursor AI coding assistant raises $2.3 billion just five months after previous round to continue developing Composer AI model, while 'Chad: The Brainrot IDE' emerges as Y Combinator's most unconventional coding tool yet.",
+      "timestamp": "11/13/2025, 1:58 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/13/coding-assistant-cursor-raises-2-3bn-five-months-after-its-previous-round/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/12/chad-the-brainrot-ide-is-a-new-y-combinator-backed-product-so-wild-people-thought-it-was-fake/"
+        }
+      ]
+    },
+    {
+      "title": "Fei-Fei Li's World Labs launches Marble, its first commercial 3D world generation product that creates persistent, downloadable environments, marking a major milestone in the world model AI race.",
+      "timestamp": "11/12/2025, 1:44 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/12/fei-fei-lis-world-labs-speeds-up-the-world-model-race-with-marble-its-first-commercial-product/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/820016/world-labs-is-betting-on-world-generation-as-the-next-ai-frontier"
+        }
+      ]
+    },
+    {
+      "title": "ElevenLabs strikes deals with Michael Caine and Matthew McConaughey to AI-generate their voices, while Anthropic announces $50 billion data center partnership with Fluidstack for US facilities expansion.",
+      "timestamp": "11/12/2025, 8:00 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/12/elevenlabs-strike-deals-with-celebs-to-create-ai-audio/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/12/anthropic-announces-50-billion-data-center-plan/"
+        }
+      ]
+    },
+    {
+      "title": "German court rules OpenAI violated copyright law by training ChatGPT on licensed musical works without permission and orders damages, setting important precedent for AI training data rights.",
+      "timestamp": "11/12/2025, 7:18 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/12/court-rules-that-openai-violated-german-copyright-law-ordered-it-to-pay-damages/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/ai-relationships-are-on-the-rise-a-divorce-boom-could-be-next/"
+        }
+      ]
+    }
+  ]
+}

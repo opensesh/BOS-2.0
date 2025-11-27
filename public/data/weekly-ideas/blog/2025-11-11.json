@@ -1,0 +1,89 @@
+{
+  "type": "blog",
+  "date": "2025-11-11T17:17:50.742Z",
+  "ideas": [
+    {
+      "title": "Why the AI startup bubble tells us everything about design's future",
+      "description": "What venture funding patterns reveal about which design tools will actually survive and thrive",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/video/the-circular-money-problem-at-the-heart-of-ais-biggest-deals/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/10/a-better-way-of-thinking-about-the-ai-bubble/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/11/how-ai-startups-should-be-thinking-about-product-market-fit/"
+        }
+      ]
+    },
+    {
+      "title": "The empathy gap: Why AI companions signal a crisis in design thinking",
+      "description": "How the rise of AI emotional support reveals what we're missing in human-centered design",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/11/a-former-physician-has-launched-robyn-an-empathetic-ai-companion/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/11/wonderful-raised-100m-series-a-to-put-ai-agents-on-the-front-lines-of-customer-service/"
+        }
+      ]
+    },
+    {
+      "title": "Why 8 million users doesn't matter: The real metrics for AI design tools",
+      "description": "Beyond vanity metrics - what actually indicates whether an AI tool will transform your workflow",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/10/lovable-says-its-nearing-8-million-users-as-the-year-old-ai-coding-startup-eyes-more-corporate-employees/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/818470/elevenlabs-iconic-voice-marketplace-ai-audio"
+        }
+      ]
+    },
+    {
+      "title": "The Wikipedia moment: Why scraping vs. APIs will define ethical AI design",
+      "description": "How data sourcing decisions reveal which AI companies designers should actually trust",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/10/wikipedia-urges-ai-companies-to-use-its-paid-api-and-stop-scraping/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/11/metas-chief-ai-scientist-yann-lecun-reportedly-plans-to-leave-to-build-his-own-startup/"
+        }
+      ]
+    },
+    {
+      "title": "Beyond the interface: Why voice marketplaces are the new design systems",
+      "description": "How audio-first AI platforms are reshaping brand identity and what designers need to prepare for",
+      "starred": false,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/818470/elevenlabs-iconic-voice-marketplace-ai-audio"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/818346/google-photos-ios-help-me-edit-update"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/10/google-brings-gemini-to-the-google-tv-streamer/"
+        }
+      ]
+    }
+  ]
+}

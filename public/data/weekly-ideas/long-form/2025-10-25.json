@@ -1,0 +1,101 @@
+{
+  "type": "long-form",
+  "date": "2025-10-25T17:15:21.998Z",
+  "ideas": [
+    {
+      "title": "Tutorial: Using ChatGPT's new Figma integration for automated design workflows",
+      "description": "Complete setup guide showing how to connect ChatGPT to Figma and automate component creation with real examples",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/24/how-to-use-the-new-chatgpt-app-integrations-including-spotify-figma-canva-and-others/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/806174/apple-airtag-hulu-with-live-tv-deal-sale"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/openai-atlas-browser-hands-on-web-browsers-ai-tour-guide/"
+        }
+      ]
+    },
+    {
+      "title": "Deep Dive: AI browser security for designers - what you need to know before using",
+      "description": "Hands-on exploration of AI browser security risks with practical safety workflows for design teams",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/the-glaring-security-risks-with-ai-browser-agents/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/openai-wants-to-power-your-browser-and-that-might-be-a-security-nightmare/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/openai-atlas-browser-hands-on-web-browsers-ai-tour-guide/"
+        }
+      ]
+    },
+    {
+      "title": "Framework: Building AI-first design systems in the browser wars era",
+      "description": "Conceptual framework showing how to future-proof design systems as AI browsers reshape web interaction",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/video/the-browser-wars-are-back-and-this-time-theyre-powered-by-ai/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/who-are-ai-browsers-for/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/806052/msi-titan-18-ai-rtx-5090-gaming-laptop-review"
+        }
+      ]
+    },
+    {
+      "title": "Tutorial: ChatGPT + Canva workflow for rapid brand iteration at OPEN SESSION",
+      "description": "Step-by-step showing our exact process for using ChatGPT's Canva integration for client brand concepts",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/24/how-to-use-the-new-chatgpt-app-integrations-including-spotify-figma-canva-and-others/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/the-pepsi-man-is-coming-to-save-samsung-from-boring-design/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/806465/catch-cheater-app-facial-recognition-tinder"
+        }
+      ]
+    },
+    {
+      "title": "Deep Dive: Testing OpenAI Atlas browser for design research and inspiration gathering",
+      "description": "Hands-on test of Atlas browser's AI tour guide features with real design research workflows and results",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/openai-atlas-browser-hands-on-web-browsers-ai-tour-guide/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/who-are-ai-browsers-for/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/video/the-browser-wars-are-back-and-this-time-theyre-powered-by-ai/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "type": "long-form",
+  "date": "2025-11-18T17:18:46.277Z",
+  "ideas": [
+    {
+      "title": "Tutorial: Setting up Poe's group chats for design team collaboration",
+      "description": "How to use multiple AI models together for design feedback, iteration, and creative brainstorming",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/18/poes-ai-app-now-supports-group-chats-across-ai-models/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/822496/openai-employee-equity-donation-charity-rounds-share-valuation"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/google-launches-gemini-3-ai-bubble-search/"
+        }
+      ]
+    },
+    {
+      "title": "Deep Dive: Google's Gemini 3 coding features for design system automation",
+      "description": "Hands-on exploration of Gemini 3's new coding app and how it can generate design tokens and components",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/18/google-launches-gemini-3-with-new-coding-app-and-record-benchmark-scores/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/google-launches-gemini-3-ai-bubble-search/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/report/822443/microsoft-windows-copilot-vision-ai-assistant-pc-voice-controls-impressions"
+        }
+      ]
+    },
+    {
+      "title": "Tutorial: Integrating Intuit apps with ChatGPT for client project management",
+      "description": "Step-by-step setup showing how to connect QuickBooks and design workflows through OpenAI integration",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/18/intuit-signs-100m-deal-with-openai-to-bring-its-apps-to-chatgpt/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/822496/openai-employee-equity-donation-charity-rounds-share-valuation"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/microsoft-ai-agent-365/"
+        }
+      ]
+    },
+    {
+      "title": "Framework: Why ChatGPT search changes how designers research and validate concepts",
+      "description": "Understanding the shift from Google to AI search and building research workflows that actually work",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/17/as-consumers-ditch-google-for-chatgpt-peec-ai-raises-21m-to-help-brands-adapt/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/google-launches-gemini-3-ai-bubble-search/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/822636/google-robby-starbuck-defamation-lawsuit-ai-chatbot"
+        }
+      ]
+    },
+    {
+      "title": "Our Business Use Case: How we use Microsoft Agent 365 for client workflow automation",
+      "description": "Behind-the-scenes look at automating design handoffs, client communications, and project management",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/microsoft-ai-agent-365/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/report/822443/microsoft-windows-copilot-vision-ai-assistant-pc-voice-controls-impressions"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/18/databricks-reportedly-in-talks-to-raise-funding-at-a-130b-valuation/"
+        }
+      ]
+    }
+  ]
+}

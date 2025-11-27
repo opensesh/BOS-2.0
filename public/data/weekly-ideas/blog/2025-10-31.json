@@ -1,0 +1,89 @@
+{
+  "type": "blog",
+  "date": "2025-10-31T17:18:28.256Z",
+  "ideas": [
+    {
+      "title": "Why the AI bubble feels different this time (and what it means for designers)",
+      "description": "Analysis of why current AI investment patterns signal a permanent shift in creative work, not just hype",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/equity-live-from-300m-seed-rounds-to-data-center-builds-ai-is-feeling-bubbly/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/30/nvidia-is-reportedly-investing-up-to-1-billion-in-poolside/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/31/tim-cook-says-apple-is-open-to-ma-on-the-ai-front/"
+        }
+      ]
+    },
+    {
+      "title": "The licensing wars are reshaping creative AI (and designers need to pay attention)",
+      "description": "Why Perplexity's Getty deal signals a new era where content partnerships matter more than raw AI power",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/31/perplexity-strikes-multi-year-licensing-deal-with-getty-images/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/guillermo-del-toro-hopes-hes-dead-before-ai-art-goes-mainstream/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/republicans-claim-biden-censored-youtube/"
+        }
+      ]
+    },
+    {
+      "title": "Why text-to-3D tools won't replace 3D artists (but will transform how we work)",
+      "description": "Realistic analysis of Adam's viral success and what it reveals about AI's actual role in 3D workflows",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/31/yc-alum-adam-raises-4-1m-to-turn-viral-text-to-3d-tool-into-ai-copilot/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/guillermo-del-toro-hopes-hes-dead-before-ai-art-goes-mainstream/"
+        }
+      ]
+    },
+    {
+      "title": "The chatbot traffic myth and what it means for design strategy",
+      "description": "Why Reddit's CEO is right about chatbots, and how this changes how we think about AI-driven user experiences",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/31/reddit-ceo-says-chatbots-are-not-a-traffic-driver/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/30/google-partners-with-ambanis-reliance-to-offer-free-ai-pro-access-to-millions-of-jio-users-in-india/"
+        }
+      ]
+    },
+    {
+      "title": "Our take: Why modular design systems are the Stream Deck moment for creativity",
+      "description": "How Sound Blaster's modular approach reveals the future of customizable creative workflows and design tools",
+      "starred": false,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/811357/creative-sound-blaster-reimagine-modular-audio-hub-kickstarter/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/31/yc-alum-adam-raises-4-1m-to-turn-viral-text-to-3d-tool-into-ai-copilot/"
+        }
+      ]
+    }
+  ]
+}

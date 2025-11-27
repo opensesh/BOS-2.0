@@ -1,0 +1,69 @@
+{
+  "type": "short-form",
+  "date": "2025-11-19T17:18:38.295Z",
+  "ideas": [
+    {
+      "title": "Carousel: Adobe's $1.9B bet on marketing AI",
+      "description": "3 slides showing how Adobe + Semrush changes creative workflows for designers",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/19/adobe-to-buy-semrush-for-1-9-billion/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/823887/adobe-semrush-acquisition-digital-marketing"
+        }
+      ]
+    },
+    {
+      "title": "Reel: Are we in an AI bubble or LLM bubble?",
+      "description": "Quick visual breakdown of Hugging Face CEO's perspective on current AI landscape",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/18/hugging-face-ceo-says-were-in-an-llm-bubble-not-an-ai-bubble/"
+        }
+      ]
+    },
+    {
+      "title": "Carousel: TikTok's AI content controls",
+      "description": "How platforms are letting users curate AI vs human content - what this means for creators",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/18/tiktok-now-lets-you-choose-how-much-ai-generated-content-you-want-to-see/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/823775/tiktok-ai-generated-content-controls-manage-topics"
+        }
+      ]
+    },
+    {
+      "title": "Static post: Stack Overflow becomes AI training data",
+      "description": "Visual showing how knowledge platforms are pivoting to feed AI - what designers need to know",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/18/stack-overflow-is-remaking-itself-into-an-ai-data-provider/"
+        }
+      ]
+    },
+    {
+      "title": "Reel: Multi-AI collaboration with Poe",
+      "description": "30-second demo of group chats across different AI models for design feedback",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/18/poes-ai-app-now-supports-group-chats-across-ai-models/"
+        }
+      ]
+    }
+  ]
+}

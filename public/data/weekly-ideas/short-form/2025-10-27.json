@@ -1,0 +1,101 @@
+{
+  "type": "short-form",
+  "date": "2025-10-27T17:16:37.905Z",
+  "ideas": [
+    {
+      "title": "Carousel: ChatGPT's new Figma integration breakdown",
+      "description": "3-slide visual guide showing how ChatGPT + Figma changes design workflows forever",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/24/how-to-use-the-new-chatgpt-app-integrations-including-spotify-figma-canva-and-others/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/report/806359/openai-sora-deepfake-detection-c2pa-content-credentials"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/ai-sentient-consciousness-algorithm/"
+        }
+      ]
+    },
+    {
+      "title": "Reel: AI browser agents security risks explained",
+      "description": "Quick visual showing why AI browsers might be dangerous for designers",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/the-glaring-security-risks-with-ai-browser-agents/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/who-are-ai-browsers-for/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/video/the-browser-wars-are-back-and-this-time-theyre-powered-by-ai/"
+        }
+      ]
+    },
+    {
+      "title": "Static: What happens when AI designs better than humans?",
+      "description": "Provocative question post about consciousness algorithms and the future of creativity",
+      "starred": true,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/ai-sentient-consciousness-algorithm/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/ai-weapon-anduril-llms-drones/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/report/806359/openai-sora-deepfake-detection-c2pa-content-credentials"
+        }
+      ]
+    },
+    {
+      "title": "Carousel: Pinterest's AI boards vs traditional mood boarding",
+      "description": "Side-by-side comparison of AI-powered vs manual creative research methods",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/27/pinterest-experiments-with-new-ai-powered-personalized-boards/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/806486/if-you-cant-afford-a-vacation-an-ai-app-will-sell-you-pictures-of-one"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/teens-stem-school-career-artificial-intelligence/"
+        }
+      ]
+    },
+    {
+      "title": "Reel: OpenAI's music tool - what this means for creative teams",
+      "description": "30-second take on how generative music changes brand identity and video content",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/openai-reportedly-developing-new-generative-music-tool/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/report/806887/clinical-grade-ai-buzzword"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/ai-americanizer-end-accents/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "type": "short-form",
+  "date": "2025-11-11T17:17:20.606Z",
+  "ideas": [
+    {
+      "title": "Carousel: AI agents vs human designers - who wins what?",
+      "description": "5-slide breakdown showing where AI agents excel and where human creativity still dominates",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/11/wonderful-raised-100m-series-a-to-put-ai-agents-on-the-front-lines-of-customer-service/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/11/a-former-physician-has-launched-robyn-an-empathetic-ai-companion/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/818346/google-photos-ios-help-me-edit-update"
+        }
+      ]
+    },
+    {
+      "title": "Reel: Google Photos 'Help Me Edit' for designers",
+      "description": "Quick demo showing how descriptive editing could change design workflows",
+      "starred": true,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/818346/google-photos-ios-help-me-edit-update"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/818470/elevenlabs-iconic-voice-marketplace-ai-audio"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/10/lovable-says-its-nearing-8-million-users-as-the-year-old-ai-coding-startup-eyes-more-corporate-employees/"
+        }
+      ]
+    },
+    {
+      "title": "Static post: The AI bubble question every designer should ask",
+      "description": "Thought-provoking question about whether we're building sustainable AI workflows or just riding hype",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/10/a-better-way-of-thinking-about-the-ai-bubble/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/video/the-circular-money-problem-at-the-heart-of-ais-biggest-deals/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/11/how-ai-startups-should-be-thinking-about-product-market-fit/"
+        }
+      ]
+    },
+    {
+      "title": "Carousel: Voice AI for brand identity - the ElevenLabs shift",
+      "description": "3-slide exploration of how AI voice marketplaces are changing brand audio identity",
+      "starred": false,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/818470/elevenlabs-iconic-voice-marketplace-ai-audio"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/10/kaltura-acquires-eself-founded-by-creator-of-snaps-ai-in-27m-deal/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/11/a-former-physician-has-launched-robyn-an-empathetic-ai-companion/"
+        }
+      ]
+    },
+    {
+      "title": "Reel: 8 million users can't be wrong - Lovable's design lesson",
+      "description": "Quick analysis of what Lovable's rapid growth teaches us about AI-first product design",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/10/lovable-says-its-nearing-8-million-users-as-the-year-old-ai-coding-startup-eyes-more-corporate-employees/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/11/how-ai-startups-should-be-thinking-about-product-market-fit/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/10/a-better-way-of-thinking-about-the-ai-bubble/"
+        }
+      ]
+    }
+  ]
+}

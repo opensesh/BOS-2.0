@@ -1,0 +1,101 @@
+{
+  "type": "blog",
+  "date": "2025-10-30T17:17:33.710Z",
+  "ideas": [
+    {
+      "title": "Why Figma's Weavy acquisition signals the end of the design-dev handoff",
+      "description": "AI-powered media generation isn't just about assets—it's reshaping how design systems scale",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/30/figma-acquires-ai-powered-media-generation-company-weavy/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/810251/canva-affinity-design-suite-free-app-relaunch"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/29/box-ceo-aaron-levie-on-how-ai-is-changing-the-enterprise-saas-landscape/"
+        }
+      ]
+    },
+    {
+      "title": "The commoditization trap: Why most design agencies will struggle with AI audio/visual tools",
+      "description": "ElevenLabs CEO's prediction reveals what separates sustainable design practices from commodity work",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/29/elevenlabs-ceo-says-ai-audio-models-will-be-commoditized-over-time/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/809326/pinterest-ai-shopping-assistant-ceo-ready"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/29/solana-co-founder-anatoly-yakovenko-is-a-big-fan-of-agentic-coding/"
+        }
+      ]
+    },
+    {
+      "title": "Our perspective: Why AI browsers are actually a design opportunity, not a threat",
+      "description": "The cybersecurity concerns miss the bigger picture—this is how design systems become truly intelligent",
+      "starred": true,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/report/810083/ai-browser-cybersecurity-problems"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/810034/samsung-internet-browser-windows-pc-launch"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/29/how-ai-labs-use-mercor-to-get-the-data-companies-wont-share/"
+        }
+      ]
+    },
+    {
+      "title": "The real reason Nvidia hit $5 trillion: What it means for design infrastructure",
+      "description": "Beyond the hype—how GPU economics will reshape creative workflows and who gets left behind",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/29/nvidia-becomes-first-public-company-worth-5-trillion/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/810254/google-ai-data-center-nuclear-power-plant-restart"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/29/box-ceo-aaron-levie-on-how-ai-is-changing-the-enterprise-saas-landscape/"
+        }
+      ]
+    },
+    {
+      "title": "Why ragebait marketing actually reveals something important about design authenticity",
+      "description": "Cluely's controversial strategy exposes the tension between algorithmic engagement and genuine brand building",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/29/cluelys-roy-lee-on-the-ragebait-strategy-for-startup-marketing/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/policy/809914/trump-white-house-ballroom-3d-model-ai"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/809956/threads-reply-approvals-posts-filter-people-you-follow"
+        }
+      ]
+    }
+  ]
+}

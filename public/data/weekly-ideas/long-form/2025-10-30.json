@@ -1,0 +1,101 @@
+{
+  "type": "long-form",
+  "date": "2025-10-30T17:17:18.955Z",
+  "ideas": [
+    {
+      "title": "Tutorial: Figma + Weavy AI integration for automated media generation",
+      "description": "Complete workflow showing how to use AI-powered media generation directly in your design process",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/30/figma-acquires-ai-powered-media-generation-company-weavy/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/buying-guides/720160/best-switch-2-accessories"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/gallery/best-gaming-laptops/"
+        }
+      ]
+    },
+    {
+      "title": "Deep Dive: AI browser automation for design workflows (security guide)",
+      "description": "How to safely use browser AI tools for design research while avoiding cybersecurity risks",
+      "starred": true,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/report/810083/ai-browser-cybersecurity-problems"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/29/solana-co-founder-anatoly-yakovenko-is-a-big-fan-of-agentic-coding/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/nasas-quiet-supersonic-jet-takes-flight/"
+        }
+      ]
+    },
+    {
+      "title": "Tutorial: Pinterest AI shopping assistant for design mood boards",
+      "description": "Step-by-step guide using Pinterest's new AI to create better design inspiration boards",
+      "starred": false,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/809326/pinterest-ai-shopping-assistant-ceo-ready"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/30/bevel-raises-10m-series-a-from-general-catalyst-for-its-ai-health-companion/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/gallery/best-smart-christmas-lights/"
+        }
+      ]
+    },
+    {
+      "title": "Framework: Enterprise AI design systems (lessons from Box CEO)",
+      "description": "How enterprise SaaS changes affect design systems - practical framework for scaling AI tools",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/29/box-ceo-aaron-levie-on-how-ai-is-changing-the-enterprise-saas-landscape/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/810251/canva-affinity-design-suite-free-app-relaunch"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/startup-edit-human-embryos-manhattan-genomics-cathy-tie/"
+        }
+      ]
+    },
+    {
+      "title": "Our Workflow: How we use agentic coding for design system automation",
+      "description": "Behind-the-scenes look at how OPEN SESSION uses AI coding agents for component libraries",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/29/solana-co-founder-anatoly-yakovenko-is-a-big-fan-of-agentic-coding/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/29/how-ai-labs-use-mercor-to-get-the-data-companies-wont-share/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/810034/samsung-internet-browser-windows-pc-launch"
+        }
+      ]
+    }
+  ]
+}

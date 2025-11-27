@@ -1,0 +1,101 @@
+{
+  "type": "short-form",
+  "date": "2025-10-24T17:16:47.279Z",
+  "ideas": [
+    {
+      "title": "Reel: Meta AI editing in Instagram Stories workflow",
+      "description": "30-second demo showing how designers can use Meta AI tools directly in Stories for quick mockups",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/23/instagram-users-can-now-use-meta-ai-editing-tools-directly-in-ig-stories/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/806046/openai-chatgpt-company-knowledge-update"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/gallery/best-webcams/"
+        }
+      ]
+    },
+    {
+      "title": "Carousel: The future of AI browsers for designers",
+      "description": "3-slide breakdown of OpenAI Atlas vs Microsoft's browser and what it means for creative workflows",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/openai-wants-to-power-your-browser-and-that-might-be-a-security-nightmare/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/23/two-days-after-openais-atlas-microsoft-launches-a-nearly-identical-ai-browser/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/806162/microsoft-outlook-ai-overhaul-notepad"
+        }
+      ]
+    },
+    {
+      "title": "Story series: Design system components in the AI era",
+      "description": "Visual breakdown showing how atomic design principles apply when AI generates your components",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/23/openai-buys-sky-an-ai-interface-for-mac/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/806162/microsoft-outlook-ai-overhaul-notepad"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/uncanny-valley-podcast-how-data-centers-actually-work/"
+        }
+      ]
+    },
+    {
+      "title": "Reel: When AI designs better than humans",
+      "description": "Provocative 15-second question with visual examples - exploring the uncomfortable truth about AI creativity",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/24/ai-at-the-edge-how-startups-are-powering-the-future-of-space-at-techcrunch-disrupt-2025/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/23/20-year-old-dropouts-built-ai-notetaker-turbo-ai-to-5-million-users/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/806259/nike-mind-neuroscience-footwear-foam-nodes"
+        }
+      ]
+    },
+    {
+      "title": "Carousel: Mac AI interface evolution",
+      "description": "Visual timeline showing how AI interfaces on Mac are changing with OpenAI's Sky acquisition",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/23/openai-buys-sky-an-ai-interface-for-mac/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/806162/microsoft-outlook-ai-overhaul-notepad"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/gallery/best-laptop-stands/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "type": "monthly-outlook",
+  "date": "2025-11-06T17:19:39.703Z",
+  "updates": [
+    {
+      "title": "Major AI partnerships reshape platform ecosystems as Apple reportedly nears $1B annual deal with Google for Siri and Perplexity secures $400M agreement to power Snapchat search, signaling a shift toward AI-powered platform integrations in Q4 2025.",
+      "timestamp": "11/06/2025, 11:33 AM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/perplexity-to-pay-snap-400m-to-power-search-in-snapchat/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/05/apple-nears-deal-to-pay-google-1b-annually-to-power-new-siri-report-says/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/05/softbank-openai-launch-new-joint-venture-in-japan-as-ai-deals-grow-ever-more-circular/"
+        }
+      ]
+    },
+    {
+      "title": "Code generation AI enters new phase with Inception's $50M funding for diffusion models targeting software development, potentially disrupting traditional coding workflows and design-to-code tools in early 2026.",
+      "timestamp": "11/06/2025, 1:00 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/inception-raises-50-million-to-build-diffusion-models-for-code-and-text/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/05/microsoft-built-a-synthetic-marketplace-for-testing-ai-agents/"
+        }
+      ]
+    },
+    {
+      "title": "Creative platforms accelerate AI integration as Tinder tests AI-powered profile creation using Camera Roll analysis and Wabi launches as 'YouTube for apps' with $20M funding, indicating expanded AI personalization across consumer platforms.",
+      "timestamp": "11/05/2025, 6:22 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/05/tinder-to-use-ai-to-get-to-know-users-tap-into-their-camera-roll-photos/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/05/replika-founder-raises-20m-pre-seed-for-wabi-the-youtube-of-apps/"
+        }
+      ]
+    },
+    {
+      "title": "Enterprise AI adoption accelerates with Google's Gemini integration into Maps navigation and Chrome mobile browsers, while Pinterest reports cost savings from open-source AI models, suggesting broader enterprise AI deployment in Q1 2026.",
+      "timestamp": "11/06/2025, 11:56 AM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/google-maps-upgrades-navigation-in-india-with-gemini-safety-alerts/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/05/google-makes-it-easier-to-access-ai-mode-in-chrome-on-ios-and-android/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/05/pinterest-ceo-touts-open-source-ai-tremendous-performance-with-reduced-costs/"
+        }
+      ]
+    },
+    {
+      "title": "Microsoft AI leadership outlines 'humanist superintelligence' approach while internal testing reveals AI agent limitations, highlighting the gap between AI promises and current capabilities as companies prepare for 2026 deployments.",
+      "timestamp": "11/06/2025, 4:51 PM",
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/815619/microsoft-ai-humanist-superintelligence"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/05/microsoft-built-a-synthetic-marketplace-for-testing-ai-agents/"
+        }
+      ]
+    }
+  ]
+}

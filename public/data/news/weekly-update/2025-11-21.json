@@ -1,0 +1,72 @@
+{
+  "type": "weekly-update",
+  "date": "2025-11-21T17:18:04.544Z",
+  "updates": [
+    {
+      "title": "ChatGPT launches group chats globally, allowing teams to collaborate on trips, documents, and research while ChatGPT helps search, summarize, and compare information in real-time.",
+      "timestamp": "11/20/2025, 7:07 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/chatgpt-launches-group-chats-globally/"
+        }
+      ]
+    },
+    {
+      "title": "Google releases Nano Banana Pro, its latest image-generation model with new editing capabilities, higher resolutions, more accurate text rendering, and web search functionality.",
+      "timestamp": "11/20/2025, 3:00 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/google-releases-nano-banana-pro-its-latest-image-generation-model/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/mixup-is-a-new-mad-libs-style-app-for-creating-ai-images-from-photos-text-and-doodles/"
+        }
+      ]
+    },
+    {
+      "title": "Nvidia reports record $57B revenue with upbeat forecast, quieting AI bubble concerns as data center business continues to dominate earnings.",
+      "timestamp": "11/19/2025, 10:17 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/19/nvidias-record-57b-revenue-and-upbeat-forecast-quiets-ai-bubble-talk/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/ai-industry-monopoly-nvidia-microsoft-google/"
+        }
+      ]
+    },
+    {
+      "title": "AI agents are expanding to PC platforms with new Windows integrations, while voice AI company Wispr secures $25M in funding for its dictation app that's gaining traction.",
+      "timestamp": "11/21/2025, 3:15 PM",
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/podcast/825979/ai-agents-are-invading-your-pc"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/as-its-voice-dectation-app-takes-off-wispr-secures-25m-from-notable-capital/"
+        }
+      ]
+    },
+    {
+      "title": "Gemini 3 shows quirky behavior refusing to believe it's 2025, while Gemini starts rolling out to Android Auto globally, replacing Google Assistant with enhanced voice capabilities.",
+      "timestamp": "11/20/2025, 5:38 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/gemini-3-refused-to-believe-it-was-2025-and-hilarity-ensued/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/gemini-starts-rolling-out-to-android-auto-globally/"
+        }
+      ]
+    }
+  ]
+}

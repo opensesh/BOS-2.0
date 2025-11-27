@@ -1,0 +1,89 @@
+{
+  "type": "blog",
+  "date": "2025-10-25T17:15:37.260Z",
+  "ideas": [
+    {
+      "title": "Why AI browsers are the wrong solution to the right problem",
+      "description": "The security nightmare of AI web agents reveals what designers actually need: better design systems, not smarter browsers",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/who-are-ai-browsers-for/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/the-glaring-security-risks-with-ai-browser-agents/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/video/the-browser-wars-are-back-and-this-time-theyre-powered-by-ai/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/web-browsers-ai-tour-guide-openai-atlas-ask-chatgpt/"
+        }
+      ]
+    },
+    {
+      "title": "The ChatGPT integration wave: Why most designers will waste this opportunity",
+      "description": "Spotify, Figma, Canva integrations look exciting, but the real value is in systematic workflow transformation, not feature hunting",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/24/how-to-use-the-new-chatgpt-app-integrations-including-spotify-figma-canva-and-others/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/column/806666/sam-altman-merge-labs-brain-computer-interface-startup-hire"
+        }
+      ]
+    },
+    {
+      "title": "Our perspective: The panopticon problem is a design system problem",
+      "description": "ICE surveillance and 'catch a cheater' apps expose how poor UX design enables our worst impulses—and how good design can prevent it",
+      "starred": false,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/policy/806425/ice-social-media-surveillance-free-speech-assault"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/806465/catch-cheater-app-facial-recognition-tinder"
+        }
+      ]
+    },
+    {
+      "title": "Why the metaverse comeback reveals what designers got wrong about Web3",
+      "description": "Bored Apes returning as metaverse shows the gap between hype-driven design and sustainable digital experiences that actually serve users",
+      "starred": false,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/806492/bored-ape-yacht-club-bayc-crypto-metaverse-otherside-yuga-labs"
+        }
+      ]
+    },
+    {
+      "title": "The realistic AI adoption framework for design teams in 2025",
+      "description": "Beyond the hype: What actually works, what's still broken, and how to build AI workflows that enhance rather than replace creativity",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/24/how-to-use-the-new-chatgpt-app-integrations-including-spotify-figma-canva-and-others/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/web-browsers-ai-tour-guide-openai-atlas-ask-chatgpt/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/gear-news-of-the-week-theres-yet-another-new-ai-browser-and-fujifilm-debuts-the-x-t30-iii/"
+        }
+      ]
+    }
+  ]
+}

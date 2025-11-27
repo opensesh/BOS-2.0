@@ -1,0 +1,101 @@
+{
+  "type": "short-form",
+  "date": "2025-10-22T17:57:52.952Z",
+  "ideas": [
+    {
+      "title": "Carousel: Netflix's AI design revolution",
+      "description": "5 slides showing how entertainment giants are using AI in their design systems",
+      "starred": true,
+      "sources": [
+        {
+          "name": "Netflix goes 'all in' on generative AI as entertainment industry remains divided",
+          "url": "https://techcrunch.com/2025/10/21/netflix-goes-all-in-on-generative-ai-as-entertainment-industry-remains-divided/"
+        },
+        {
+          "name": "Open source agentic startup LangChain hits $1.25B valuation",
+          "url": "https://techcrunch.com/2025/10/21/open-source-agentic-startup-langchain-hits-1-25b-valuation/"
+        },
+        {
+          "name": "This Open Source Robot Brain Thinks in 3D",
+          "url": "https://www.wired.com/story/this-open-source-robot-brain-thinks-in-3d/"
+        }
+      ]
+    },
+    {
+      "title": "Reel: When AI scrapes your design work",
+      "description": "Quick breakdown of Reddit vs Perplexity case and what it means for designers",
+      "starred": true,
+      "sources": [
+        {
+          "name": "Reddit sues Perplexity for allegedly ripping its content to feed AI",
+          "url": "https://www.theverge.com/news/804660/reddit-suing-perplexity-data-scrapers-ai-lawsuit"
+        },
+        {
+          "name": "Several users reportedly complain to FTC that ChatGPT is causing psychological harm",
+          "url": "https://techcrunch.com/2025/10/22/several-users-reportedly-complain-to-ftc-that-chatgpt-is-causing-psychological-harm/"
+        },
+        {
+          "name": "Meta cuts 600 AI jobs amid ongoing reorganization",
+          "url": "https://techcrunch.com/2025/10/22/meta-cuts-600-ai-jobs-amid-ongoing-reorganization/"
+        }
+      ]
+    },
+    {
+      "title": "Static: The future of automotive UI design",
+      "description": "Visual concept showing how GM's eyes-off driving changes interface design forever",
+      "starred": false,
+      "sources": [
+        {
+          "name": "GM to introduce eyes-off, hands-off driving system in 2028",
+          "url": "https://techcrunch.com/2025/10/22/gm-to-introduce-eyes-off-hands-off-driving-system-in-2028/"
+        },
+        {
+          "name": "GM will ditch Apple CarPlay and Android Auto on all its cars, not just EVs",
+          "url": "https://www.theverge.com/transportation/804562/gm-apple-carplay-android-auto-gas-cars-mary-barra"
+        },
+        {
+          "name": "General Motors' 'Eyes-Off' System Begs the Question: What Happens When Cars Go AI?",
+          "url": "https://www.wired.com/story/cadillac-escalade-eyes-off-driving/"
+        }
+      ]
+    },
+    {
+      "title": "Carousel: Modular design is everywhere now",
+      "description": "3 examples: Rivian's modular e-bike, design systems, and why everything's going atomic",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Rivian's first e-bike is unlike anything you've ever seen",
+          "url": "https://www.theverge.com/news/804157/rivian-tm-b-electric-bike-price-specs-helmet-quad"
+        },
+        {
+          "name": "Also TM-B Ebike: Specs, Release Date, Price, and Features",
+          "url": "https://www.wired.com/story/rivian-also-tm-b-modular-repairable-electric-bike/"
+        },
+        {
+          "name": "Inside Rivian's $4,500 electric bike gamble",
+          "url": "https://www.theverge.com/transportation/804163/rivian-also-tm-b-ebike-specs-price"
+        }
+      ]
+    },
+    {
+      "title": "Reel: What happens when deployment gets easy?",
+      "description": "Quick demo inspired by Shuttle's vibe-coding solution - showing design-to-deploy workflow",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Shuttle raises $6 million to fix vibe-coding's deployment problem",
+          "url": "https://techcrunch.com/2025/10/22/shuttle-raises-6-million-to-fix-vibe-codings-deployment-problem/"
+        },
+        {
+          "name": "Open source agentic startup LangChain hits $1.25B valuation",
+          "url": "https://techcrunch.com/2025/10/21/open-source-agentic-startup-langchain-hits-1-25b-valuation/"
+        },
+        {
+          "name": "The Long Tail of the AWS Outage",
+          "url": "https://www.wired.com/story/aws-cloud-outage-long-tail/"
+        }
+      ]
+    }
+  ]
+}

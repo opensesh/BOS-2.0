@@ -1,0 +1,101 @@
+{
+  "type": "long-form",
+  "date": "2025-11-23T17:15:49.526Z",
+  "ideas": [
+    {
+      "title": "Tutorial: Building AI-safe design workflows after the ChatGPT tragedy warnings",
+      "description": "How to set up responsible AI boundaries in your design process with practical safeguards",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/23/chatgpt-told-them-they-were-special-their-families-say-it-led-to-tragedy/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/22/trump-administration-might-not-fight-state-ai-regulations-after-all/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/google-steps-up-ai-scam-protection-in-india-but-gaps-remain/"
+        }
+      ]
+    },
+    {
+      "title": "Complete workflow: Raycast + AI design tools integration for Windows users",
+      "description": "Step-by-step setup connecting Raycast with Figma, Claude, and other design AI tools",
+      "starred": true,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/826971/raycast-kirby-comet-deadpool-vr-installer"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/21/bret-taylors-sierra-reaches-100m-arr-in-under-two-years/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/21/the-hottest-ai-wearables-and-gadgets-you-can-buy-right-now/"
+        }
+      ]
+    },
+    {
+      "title": "Framework: Why atomic design systems matter more in the AI era",
+      "description": "Breaking down component architecture that works with AI tools, with real examples",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/21/bret-taylors-sierra-reaches-100m-arr-in-under-two-years/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/column/825282/apple-tv-streaming-grow-audience"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/game-theory-explains-how-algorithms-can-drive-up-prices/"
+        }
+      ]
+    },
+    {
+      "title": "Deep dive: Spotify's playlist import feature - UX lessons for designers",
+      "description": "Analyzing Spotify's new import flow and applying these patterns to your own projects",
+      "starred": false,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/825646/spotify-playlist-import"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/podcast/827102/vine-influence-tiktok-reels-shorts-version-history"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/how-to-get-the-perfect-surround-sound-speaker-setup/"
+        }
+      ]
+    },
+    {
+      "title": "Business case study: How we use algorithm theory in our design pricing strategy",
+      "description": "Real examples of game theory principles applied to design agency pricing and client work",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/game-theory-explains-how-algorithms-can-drive-up-prices/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/22/meta-wants-to-get-into-the-electricity-trading-business/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/21/how-this-founders-unlikely-path-to-silicon-valley-could-become-an-edge-in-industrial-tech/"
+        }
+      ]
+    }
+  ]
+}

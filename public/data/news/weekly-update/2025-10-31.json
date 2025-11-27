@@ -1,0 +1,60 @@
+{
+  "type": "weekly-update",
+  "date": "2025-10-31T17:18:44.210Z",
+  "updates": [
+    {
+      "title": "Figma acquires AI-powered media generation company Weavy, expanding its AI capabilities with plans to integrate under the Figma Weave brand alongside the rest of the platform.",
+      "timestamp": "10/30/2025, 1:15 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/30/figma-acquires-ai-powered-media-generation-company-weavy/"
+        }
+      ]
+    },
+    {
+      "title": "Perplexity launches AI-powered patent research tool to simplify searching through complex patent databases and strikes multi-year licensing deal with Getty Images to legitimize stock photo usage.",
+      "timestamp": "10/31/2025, 3:46 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/31/perplexity-strikes-multi-year-licensing-deal-with-getty-images/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/811340/perplexity-ai-patent-research-tool"
+        }
+      ]
+    },
+    {
+      "title": "Y Combinator alum Adam raises $4.1M seed round to transform its viral text-to-3D model app into an AI copilot after generating over 10 million social media impressions.",
+      "timestamp": "10/31/2025, 2:20 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/31/yc-alum-adam-raises-4-1m-to-turn-viral-text-to-3d-tool-into-ai-copilot/"
+        }
+      ]
+    },
+    {
+      "title": "Apple CEO Tim Cook announces the company is open to M&A on the AI front and preparing to announce more AI partnerships similar to its OpenAI integration for ChatGPT in Siri.",
+      "timestamp": "10/31/2025, 3:17 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/31/tim-cook-says-apple-is-open-to-ma-on-the-ai-front/"
+        }
+      ]
+    },
+    {
+      "title": "ElevenLabs CEO predicts AI audio models will become 'commoditized' over time while acknowledging they currently represent the biggest competitive advantage in the space.",
+      "timestamp": "10/29/2025, 4:59 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/29/elevenlabs-ceo-says-ai-audio-models-will-be-commoditized-over-time/"
+        }
+      ]
+    }
+  ]
+}

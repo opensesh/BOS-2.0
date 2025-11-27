@@ -1,0 +1,72 @@
+{
+  "type": "monthly-outlook",
+  "date": "2025-11-10T17:18:46.091Z",
+  "updates": [
+    {
+      "title": "OpenAI reveals $20B ARR and $1.4 trillion in data center commitments, signaling massive infrastructure expansion ahead as the company positions for next-generation AI model deployment.",
+      "timestamp": "11/06/2025, 9:18 PM",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/11/06/sam-altman-says-openai-has-20b-arr-and-about-1-4-trillion-in-data-center-commitments/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/11/08/openai-asked-trump-administration-to-expand-chips-act-tax-credit-to-cover-data-centers/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/podcast/softbank-is-back-and-the-ai-hype-cycle-is-eating-itself/"
+        }
+      ]
+    },
+    {
+      "title": "Google Maps launches AI-powered interactive project creation tools, enabling developers to build custom mapping applications with AI-generated code, expanding creative possibilities for location-based design projects.",
+      "timestamp": "11/10/2025, 4:00 PM",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/11/10/google-maps-releases-new-ai-tools-to-let-you-create-interactive-projects/"
+        }
+      ]
+    },
+    {
+      "title": "Amazon's House of David uses over 350 AI shots in Season 2, demonstrating mainstream adoption of AI in video production workflows as creative teams integrate AI tools for battle scenes and visual effects.",
+      "timestamp": "11/10/2025, 10:00 AM",
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/amazons-house-of-david-used-over-350-ai-shots-in-season-2-its-creator-isnt-sorry/"
+        }
+      ]
+    },
+    {
+      "title": "Wall Street confidence in AI investments shows signs of wavering following rough tech stock performance, potentially impacting funding for AI design tools and creative platforms in the coming months.",
+      "timestamp": "11/08/2025, 8:53 PM",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/11/08/is-wall-street-losing-faith-in-ai/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/podcast/softbank-is-back-and-the-ai-hype-cycle-is-eating-itself/"
+        }
+      ]
+    },
+    {
+      "title": "Meta's AI-generated content feed 'Vibes' expands to Europe with 10x increase in AI media generation, indicating growing creator adoption of AI tools for short-form video content production.",
+      "timestamp": "11/06/2025, 6:22 PM",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/11/06/meta-brings-its-short-form-video-feed-of-ai-slop-to-europe/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/11/06/sora-for-android-saw-nearly-half-a-million-installs-on-its-first-day/"
+        }
+      ]
+    }
+  ]
+}

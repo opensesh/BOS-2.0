@@ -1,0 +1,105 @@
+{
+  "type": "short-form",
+  "date": "2025-10-21T23:00:59.167Z",
+  "ideas": [
+    {
+      "title": "OpenAI's Atlas Browser: Design's New Frontier",
+      "description": "AI-powered browsing changes everything for web designers and UX research workflows",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/21/openai-launches-an-ai-powered-browser-chatgpt-atlas/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/21/openais-new-browser-is-a-broadside-shot-at-google/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/openai-atlas-browser-chrome-agents-web-browsing/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/21/as-the-browser-wars-heat-up-here-are-the-hottest-alternatives-to-chrome-and-safari-in-2025/"
+        }
+      ]
+    },
+    {
+      "title": "Netflix Goes All-In on AI: What Creators Need to Know",
+      "description": "Entertainment giant's AI strategy reveals future of content creation and interactive design",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/21/netflix-goes-all-in-on-generative-ai-as-entertainment-industry-remains-divided/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/803097/netflix-games-interactive-experiences-real-time-voting-q3-2025-earnings"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/803818/youtube-ai-likeness-detection-deepfake"
+        }
+      ]
+    },
+    {
+      "title": "Fal.ai's $4B Valuation: Multimodal AI Revolution",
+      "description": "How this multimodal startup is changing visual content creation workflows for designers",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/21/sources-multimodal-ai-startup-fal-ai-already-raised-at-4b-valuation/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/21/open-source-agentic-startup-langchain-hits-1-25b-valuation/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/21/sesame-the-conversational-ai-startup-from-oculus-founders-raises-250m-and-launches-beta/"
+        }
+      ]
+    },
+    {
+      "title": "From SEO to GEO: Optimizing for AI Search",
+      "description": "Generative Engine Optimization is the new SEO - designers need to understand this shift",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/goodbye-seo-hello-geo-brandlight-openai/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/21/cloudflare-ceo-matthew-prince-is-pushing-uk-regulator-to-unbundle-googles-search-and-ai-crawlers/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/21/openais-new-browser-is-a-broadside-shot-at-google/"
+        }
+      ]
+    },
+    {
+      "title": "AI Agents as Office Managers: UX Design Implications",
+      "description": "Codi's AI office manager shows how conversational interfaces are evolving workplace design",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/21/a16z-backed-codi-launches-ai-agent-office-manager/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/21/sesame-the-conversational-ai-startup-from-oculus-founders-raises-250m-and-launches-beta/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/21/open-source-agentic-startup-langchain-hits-1-25b-valuation/"
+        }
+      ]
+    }
+  ]
+}

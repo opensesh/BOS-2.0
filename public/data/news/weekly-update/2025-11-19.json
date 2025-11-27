@@ -1,0 +1,76 @@
+{
+  "type": "weekly-update",
+  "date": "2025-11-19T17:19:20.598Z",
+  "updates": [
+    {
+      "title": "Google launches Gemini 3, its most advanced foundation model with record benchmark scores and new coding capabilities, immediately available through Gemini app and AI search.",
+      "timestamp": "11/18/2025, 4:00 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/18/google-launches-gemini-3-with-new-coding-app-and-record-benchmark-scores/"
+        }
+      ]
+    },
+    {
+      "title": "Adobe acquires digital marketing platform Semrush for $1.9 billion to enhance marketing insights, offering $12 per share nearly double Tuesday's closing price.",
+      "timestamp": "11/19/2025, 3:42 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/19/adobe-to-buy-semrush-for-1-9-billion/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/823887/adobe-semrush-acquisition-digital-marketing"
+        }
+      ]
+    },
+    {
+      "title": "OpenAI expands retail partnerships with Target launching ChatGPT-powered shopping app in beta next week, following major deals with Intuit worth $100M+ for TurboTax and QuickBooks integration.",
+      "timestamp": "11/19/2025, 2:36 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/19/target-joins-openais-growing-list-of-retail-apps/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/18/intuit-signs-100m-deal-with-openai-to-bring-its-apps-to-chatgpt/"
+        }
+      ]
+    },
+    {
+      "title": "TikTok introduces AI-generated content controls allowing users to dial up or down how much AI content appears in their feeds, addressing growing concerns about synthetic media.",
+      "timestamp": "11/18/2025, 5:01 AM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/18/tiktok-now-lets-you-choose-how-much-ai-generated-content-you-want-to-see/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/823775/tiktok-ai-generated-content-controls-manage-topics"
+        }
+      ]
+    },
+    {
+      "title": "AI infrastructure sees massive funding as Lambda raises $1.5B after Microsoft deal and Databricks reportedly seeks funding at $130B+ valuation, while Hugging Face CEO warns of 'LLM bubble' favoring specialized models.",
+      "timestamp": "11/18/2025, 7:37 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/18/ai-data-center-provider-lambda-raises-whopping-1-5b-after-multibillion-dollar-microsoft-deal/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/18/databricks-reportedly-in-talks-to-raise-funding-at-a-130b-valuation/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/18/hugging-face-ceo-says-were-in-an-llm-bubble-not-an-ai-bubble/"
+        }
+      ]
+    }
+  ]
+}

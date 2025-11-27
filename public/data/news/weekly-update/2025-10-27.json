@@ -1,0 +1,76 @@
+{
+  "type": "weekly-update",
+  "date": "2025-10-27T17:17:25.014Z",
+  "updates": [
+    {
+      "title": "OpenAI launches ChatGPT app integrations with design tools including Figma, Canva, and Spotify, enabling direct creative workflows within the AI interface.",
+      "timestamp": "10/24/2025, 7:08 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/24/how-to-use-the-new-chatgpt-app-integrations-including-spotify-figma-canva-and-others/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/video/the-browser-wars-are-back-and-this-time-theyre-powered-by-ai/"
+        }
+      ]
+    },
+    {
+      "title": "OpenAI reportedly developing new generative music tool that can add music to videos and instrumental accompaniment to existing vocal tracks, expanding AI creative capabilities.",
+      "timestamp": "10/25/2025, 7:48 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/openai-reportedly-developing-new-generative-music-tool/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/ai-kink-sex-clive-owen/"
+        }
+      ]
+    },
+    {
+      "title": "Pinterest experiments with AI-powered personalized boards and outfit creation features, using AI to help users create outfits from saved Pins and curate personalized collections.",
+      "timestamp": "10/27/2025, 3:35 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/27/pinterest-experiments-with-new-ai-powered-personalized-boards/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/806940/threads-disappearing-ghost-posts-launch"
+        }
+      ]
+    },
+    {
+      "title": "Fitbit launches Gemini-powered AI health coach and completely redesigned app experience, marking Google's major push into personalized AI wellness coaching.",
+      "timestamp": "10/27/2025, 5:00 PM",
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/806243/fitbit-ai-health-coach-app-update-preview/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/ai-therapist-collective-psyche/"
+        }
+      ]
+    },
+    {
+      "title": "Mercor raises $350M Series C at $10B valuation, connecting AI labs with domain experts for foundational model training, highlighting massive investment in AI infrastructure.",
+      "timestamp": "10/27/2025, 3:53 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/27/mercor-quintuples-valuation-to-10b-with-350m-series-c/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/ai-americanizer-end-accents/"
+        }
+      ]
+    }
+  ]
+}

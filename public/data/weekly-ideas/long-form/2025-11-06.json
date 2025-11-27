@@ -1,0 +1,101 @@
+{
+  "type": "long-form",
+  "date": "2025-11-06T17:18:51.637Z",
+  "ideas": [
+    {
+      "title": "Tutorial: Building AI-powered design systems with diffusion models for code generation",
+      "description": "Step-by-step guide to using new diffusion models for generating design system components and CSS code",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/inception-raises-50-million-to-build-diffusion-models-for-code-and-text/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/814876/ilya-sutskever-deposition-openai-sam-altman-elon-musk-lawsuit"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/gallery/best-cheap-laptops/"
+        }
+      ]
+    },
+    {
+      "title": "Complete workflow: Integrating Google's Gemini AI into your design research process",
+      "description": "How to use Gemini's new capabilities for user research, navigation analysis, and design insights",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/google-maps-upgrades-navigation-in-india-with-gemini-safety-alerts/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/05/google-makes-it-easier-to-access-ai-mode-in-chrome-on-ios-and-android/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/815300/google-finance-gets-ai-deep-search"
+        }
+      ]
+    },
+    {
+      "title": "Framework Deep Dive: Why open-source AI beats proprietary tools for design workflows",
+      "description": "Breaking down Pinterest's approach and how to implement open-source AI in your design system",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/05/pinterest-ceo-touts-open-source-ai-tremendous-performance-with-reduced-costs/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/815619/microsoft-ai-humanist-superintelligence"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/05/microsoft-built-a-synthetic-marketplace-for-testing-ai-agents/"
+        }
+      ]
+    },
+    {
+      "title": "Tutorial: Setting up AI agents for design testing and validation (Microsoft's approach)",
+      "description": "How to create synthetic testing environments for your design systems using AI agents",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/05/microsoft-built-a-synthetic-marketplace-for-testing-ai-agents/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/815619/microsoft-ai-humanist-superintelligence"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/podcast/815434/ai-education-schools-research-cheating-chatgpt-jobs-grades"
+        }
+      ]
+    },
+    {
+      "title": "Our Business Case: How we use Chrome's AI Mode for client design workflows",
+      "description": "Real examples of integrating Chrome's AI features into our design process at OPEN SESSION",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/05/google-makes-it-easier-to-access-ai-mode-in-chrome-on-ios-and-android/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/05/apple-nears-deal-to-pay-google-1b-annually-to-power-new-siri-report-says/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/815300/google-finance-gets-ai-deep-search"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "type": "monthly-outlook",
+  "date": "2025-10-31T17:18:57.529Z",
+  "updates": [
+    {
+      "title": "November marks the beginning of major AI consolidation with Apple opening M&A discussions and Nvidia investing $1B in coding AI startup Poolside, signaling a shift toward strategic acquisitions in the AI space.",
+      "timestamp": "10/31/2025, 3:17 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/31/tim-cook-says-apple-is-open-to-ma-on-the-ai-front/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/30/nvidia-is-reportedly-investing-up-to-1-billion-in-poolside/"
+        }
+      ]
+    },
+    {
+      "title": "Figma's acquisition of AI-powered media generation company Weavy positions the design platform for major AI feature rollouts in November, with plans to integrate Weavy into the broader Figma ecosystem.",
+      "timestamp": "10/30/2025, 1:15 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/30/figma-acquires-ai-powered-media-generation-company-weavy/"
+        }
+      ]
+    },
+    {
+      "title": "Content licensing deals are reshaping AI search with Perplexity's Getty Images partnership and new patent research tools launching, indicating November will see more AI companies securing content rights for training data.",
+      "timestamp": "10/31/2025, 3:46 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/31/perplexity-strikes-multi-year-licensing-deal-with-getty-images/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/811340/perplexity-ai-patent-research-tool"
+        }
+      ]
+    },
+    {
+      "title": "The 3D AI generation market is heating up with Adam raising $4.1M after viral success, while ElevenLabs CEO predicts AI audio models will become commoditized, suggesting November will bring more accessible creative AI tools.",
+      "timestamp": "10/31/2025, 2:20 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/31/yc-alum-adam-raises-4-1m-to-turn-viral-text-to-3d-tool-into-ai-copilot/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/29/elevenlabs-ceo-says-ai-audio-models-will-be-commoditized-over-time/"
+        }
+      ]
+    },
+    {
+      "title": "Enterprise AI adoption accelerates with AWS exceeding expectations and Box CEO discussing AI agents riding on top of SaaS platforms, pointing to November as a key month for B2B AI integrations.",
+      "timestamp": "10/31/2025, 4:59 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/31/aws-exceeds-wall-streets-expectations-as-demand-for-cloud-infra-remains-high/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/29/box-ceo-aaron-levie-on-how-ai-is-changing-the-enterprise-saas-landscape/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "type": "short-form",
+  "date": "2025-11-23T17:15:37.066Z",
+  "ideas": [
+    {
+      "title": "Carousel: AI regulation's impact on design tools",
+      "description": "5 slides showing how state AI regulations could change our favorite design tools",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/22/trump-administration-might-not-fight-state-ai-regulations-after-all/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/google-steps-up-ai-scam-protection-in-india-but-gaps-remain/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/game-theory-explains-how-algorithms-can-drive-up-prices/"
+        }
+      ]
+    },
+    {
+      "title": "Reel: When AI becomes too personal",
+      "description": "Quick visual on healthy boundaries between designers and AI tools",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/23/chatgpt-told-them-they-were-special-their-families-say-it-led-to-tragedy/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/grok-says-elon-musk-is-better-than-basically-everyone-except-shohei-ohtani/"
+        }
+      ]
+    },
+    {
+      "title": "Static: The $100M ARR AI design lesson",
+      "description": "What Sierra's rapid growth teaches us about AI-first design systems",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/21/bret-taylors-sierra-reaches-100m-arr-in-under-two-years/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/ai-mania-is-making-nvidia-a-lot-of-money/"
+        }
+      ]
+    },
+    {
+      "title": "Carousel: AI wearables changing interface design",
+      "description": "3 slides breaking down how wearable AI will reshape how we think about UX",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/21/the-hottest-ai-wearables-and-gadgets-you-can-buy-right-now/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/gadgets/826225/xreal-one-viture-luma-pro-ar-glasses-steam-deck-switch-2-deal-sale"
+        }
+      ]
+    },
+    {
+      "title": "Reel: Energy costs of AI design tools",
+      "description": "Quick breakdown of what Meta's electricity trading means for creative sustainability",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/22/meta-wants-to-get-into-the-electricity-trading-business/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/ai-mania-is-making-nvidia-a-lot-of-money/"
+        }
+      ]
+    }
+  ]
+}
