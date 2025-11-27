@@ -8,6 +8,8 @@ const DELETING_SPEED = 40;
 const PAUSE_DURATION = 2000;
 
 export function TypewriterText() {
+  // Track if component has mounted to prevent hydration mismatch
+  const [isMounted, setIsMounted] = useState(false);
   const [text, setText] = useState('');
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const pauseTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -15,7 +17,15 @@ export function TypewriterText() {
   const loopNumRef = useRef(0);
   const charIndexRef = useRef(0);
 
+  // Set mounted state on client
   useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    // Only start animation after mount to avoid hydration issues
+    if (!isMounted) return;
+
     const type = () => {
       const i = loopNumRef.current % PHRASES.length;
       const fullText = PHRASES[i];
@@ -58,13 +68,16 @@ export function TypewriterText() {
         clearTimeout(pauseTimeoutRef.current);
       }
     };
-  }, []); // Run once on mount
+  }, [isMounted]);
 
   return (
     <div className="text-base md:text-lg text-os-text-secondary-dark font-mono mt-2">
       <span>Made to help you </span>
-      <div className="inline whitespace-pre-wrap tracking-tight text-brand-aperol font-accent">
-        <span>{text}</span>
+      <div 
+        className="inline whitespace-pre-wrap tracking-tight text-brand-aperol font-accent"
+        suppressHydrationWarning
+      >
+        <span suppressHydrationWarning>{text}</span>
         <span className="ml-1 animate-cursor">_</span>
       </div>
     </div>
