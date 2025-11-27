@@ -1,8 +1,32 @@
 import { streamText } from 'ai';
-import { ModelId, getModelInstance } from '@/lib/ai/providers';
+import { ModelId, getModelInstance, models } from '@/lib/ai/providers';
 import { autoSelectModel } from '@/lib/ai/auto-router';
 
 export const maxDuration = 30; // Allow streaming responses up to 30 seconds
+
+// Check if required API key is available for a model
+function hasRequiredApiKey(modelId: ModelId): { valid: boolean; error?: string } {
+  const model = models[modelId];
+  if (!model) {
+    return { valid: false, error: `Unknown model: ${modelId}` };
+  }
+
+  const provider = model.provider;
+  
+  if (provider === 'anthropic' || provider === 'auto') {
+    if (!process.env.ANTHROPIC_API_KEY) {
+      return { valid: false, error: 'ANTHROPIC_API_KEY is not configured' };
+    }
+  }
+  
+  if (provider === 'perplexity') {
+    if (!process.env.PERPLEXITY_API_KEY) {
+      return { valid: false, error: 'PERPLEXITY_API_KEY is not configured' };
+    }
+  }
+
+  return { valid: true };
+}
 
 export async function POST(req: Request) {
   try {
@@ -18,6 +42,16 @@ export async function POST(req: Request) {
 
     // Select model (auto-route if needed)
     const selectedModel: ModelId = model === 'auto' ? autoSelectModel(messages) : model;
+
+    // Validate API key is available for selected model
+    const keyCheck = hasRequiredApiKey(selectedModel);
+    if (!keyCheck.valid) {
+      console.error('API key missing:', keyCheck.error);
+      return new Response(
+        JSON.stringify({ error: keyCheck.error }),
+        { status: 503, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
 
     // Get the model instance
     const modelInstance = getModelInstance(selectedModel);
@@ -50,9 +84,18 @@ Guidelines:
     });
   } catch (error) {
     console.error('Error in chat API:', error);
+    
+    // Provide more specific error messages
+    const errorMessage = error instanceof Error ? error.message : 'An error occurred';
+    const isAuthError = errorMessage.includes('api-key') || errorMessage.includes('authentication') || errorMessage.includes('401');
+    
     return new Response(
-      JSON.stringify({ error: error instanceof Error ? error.message : 'An error occurred' }),
-      { status: 500, headers: { 'Content-Type': 'application/json' } }
+      JSON.stringify({ 
+        error: isAuthError 
+          ? 'API authentication failed. Please check your API keys.' 
+          : errorMessage 
+      }),
+      { status: isAuthError ? 401 : 500, headers: { 'Content-Type': 'application/json' } }
     );
   }
 }
