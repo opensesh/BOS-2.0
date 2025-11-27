@@ -16,6 +16,7 @@ import {
   User,
   Bot,
   Loader2,
+  AlertCircle,
 } from 'lucide-react';
 import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts';
 import { BackgroundGradient } from './BackgroundGradient';
@@ -43,6 +44,7 @@ export function ChatInterface() {
   const [showPaperclipDropdown, setShowPaperclipDropdown] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [suggestionsMode, setSuggestionsMode] = useState<'search' | 'research'>('search');
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const globeButtonRef = useRef<HTMLButtonElement>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -51,9 +53,20 @@ export function ChatInterface() {
   const { messages, append, status, error } = useChat({
     api: '/api/chat',
     body: { model: selectedModel },
+    onError: (err) => {
+      console.error('Chat error:', err);
+      setSubmitError(err.message || 'An error occurred while sending your message');
+    },
   });
 
   const isLoading = status === 'submitted' || status === 'streaming';
+  
+  // Clear submit error when user starts typing
+  useEffect(() => {
+    if (localInput && submitError) {
+      setSubmitError(null);
+    }
+  }, [localInput, submitError]);
   
   // Use local input for controlled textarea
   const input = localInput;
@@ -179,15 +192,36 @@ export function ChatInterface() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (input.trim() && !isLoading) {
-      const userMessage = input.trim();
-      setInput('');
-      setShowSuggestions(false);
+    
+    // Clear any previous errors
+    setSubmitError(null);
+    
+    if (!input.trim() || isLoading) {
+      return;
+    }
+    
+    // Defensive check for append function
+    if (typeof append !== 'function') {
+      console.error('Chat not initialized: append is not a function');
+      setSubmitError('Chat is not ready. Please refresh the page and try again.');
+      return;
+    }
+    
+    const userMessage = input.trim();
+    setInput('');
+    setShowSuggestions(false);
+    
+    try {
       // Use append with a properly formatted message object (AI SDK 5.x pattern)
       await append({
         role: 'user',
         content: userMessage,
       });
+    } catch (err) {
+      console.error('Failed to send message:', err);
+      setSubmitError(err instanceof Error ? err.message : 'Failed to send message');
+      // Restore the input so user doesn't lose their message
+      setInput(userMessage);
     }
   };
 
@@ -310,9 +344,13 @@ export function ChatInterface() {
               )}
 
               {/* Error display */}
-              {error && (
-                <div className="bg-red-500/10 border border-red-500/20 rounded-xl px-4 py-3 text-red-400 text-sm">
-                  Error: {error.message}
+              {(error || submitError) && (
+                <div className="bg-red-500/10 border border-red-500/20 rounded-xl px-4 py-3 text-red-400 text-sm flex items-start gap-3">
+                  <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-medium">Error</p>
+                    <p className="mt-1">{error?.message || submitError}</p>
+                  </div>
                 </div>
               )}
 
@@ -328,6 +366,17 @@ export function ChatInterface() {
               Brand Operating System
             </h1>
             <TypewriterText />
+            
+            {/* Error display for landing page */}
+            {(error || submitError) && (
+              <div className="mt-4 bg-red-500/10 border border-red-500/20 rounded-xl px-4 py-3 text-red-400 text-sm flex items-start gap-3 text-left">
+                <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-medium">Error</p>
+                  <p className="mt-1">{error?.message || submitError}</p>
+                </div>
+              </div>
+            )}
           </div>
         )}
 
