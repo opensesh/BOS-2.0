@@ -49,8 +49,8 @@ export function ChatInterface() {
   const globeButtonRef = useRef<HTMLButtonElement>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  // AI SDK useChat hook (v5 API) - using append for programmatic message submission
-  const { messages, append, status, error } = useChat({
+  // AI SDK useChat hook (v5 API) - using sendMessage for programmatic message submission
+  const { messages, sendMessage, status, error, isLoading: chatLoading } = useChat({
     api: '/api/chat',
     body: { model: selectedModel },
     onError: (err) => {
@@ -59,7 +59,7 @@ export function ChatInterface() {
     },
   });
 
-  const isLoading = status === 'submitted' || status === 'streaming';
+  const isLoading = chatLoading || status === 'submitted' || status === 'streaming';
   
   // Clear submit error when user starts typing
   useEffect(() => {
@@ -200,9 +200,9 @@ export function ChatInterface() {
       return;
     }
     
-    // Defensive check for append function
-    if (typeof append !== 'function') {
-      console.error('Chat not initialized: append is not a function');
+    // Defensive check for sendMessage function
+    if (typeof sendMessage !== 'function') {
+      console.error('Chat not initialized: sendMessage is not a function');
       setSubmitError('Chat is not ready. Please refresh the page and try again.');
       return;
     }
@@ -212,11 +212,8 @@ export function ChatInterface() {
     setShowSuggestions(false);
     
     try {
-      // Use append with a properly formatted message object (AI SDK 5.x pattern)
-      await append({
-        role: 'user',
-        content: userMessage,
-      });
+      // Use sendMessage with content (AI SDK 5.x pattern)
+      await sendMessage({ content: userMessage });
     } catch (err) {
       console.error('Failed to send message:', err);
       setSubmitError(err instanceof Error ? err.message : 'Failed to send message');
