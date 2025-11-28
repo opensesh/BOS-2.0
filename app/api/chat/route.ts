@@ -31,8 +31,11 @@ function hasRequiredApiKey(modelId: ModelId): { valid: boolean; error?: string }
 }
 
 export async function POST(req: Request) {
+  console.log('=== Chat API called ===');
   try {
-    const { messages, model = 'auto' } = await req.json();
+    const body = await req.json();
+    console.log('Request body:', JSON.stringify(body, null, 2));
+    const { messages, model = 'auto' } = body;
 
     // Validate request
     if (!messages || !Array.isArray(messages) || messages.length === 0) {

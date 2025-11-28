@@ -50,12 +50,18 @@ export function ChatInterface() {
   const globeButtonRef = useRef<HTMLButtonElement>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  // AI SDK useChat hook (v5 API) - using DefaultChatTransport for API configuration
-  const { messages, sendMessage, status, error } = useChat({
-    transport: new DefaultChatTransport({
+  // Memoize transport to prevent recreation on every render
+  const transport = useMemo(
+    () => new DefaultChatTransport({
       api: '/api/chat',
       body: { model: selectedModel },
     }),
+    [selectedModel]
+  );
+
+  // AI SDK useChat hook (v5 API) - using DefaultChatTransport for API configuration
+  const { messages, sendMessage, status, error } = useChat({
+    transport,
     onError: (err) => {
       console.error('Chat error:', err);
       setSubmitError(err.message || 'An error occurred while sending your message');
