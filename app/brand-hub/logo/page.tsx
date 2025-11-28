@@ -118,18 +118,18 @@ function Dropdown({
           e.stopPropagation();
           setIsOpen(!isOpen);
         }}
-        className="flex items-center gap-1 px-2.5 py-1 rounded-md bg-brand-vanilla hover:bg-brand-vanilla/90 transition-colors text-[11px] border border-os-border-dark/30 shadow-sm"
+        className="flex items-center gap-1 px-2.5 py-1 rounded-md bg-os-surface-dark hover:bg-os-surface-dark/80 transition-colors text-[11px] border border-os-border-dark/30 shadow-sm"
         aria-label={hideLabel ? (Icon === Download ? 'Download logo' : 'Select option') : undefined}
       >
-        {Icon && <Icon className="w-3 h-3 text-brand-charcoal/70" />}
+        {Icon && <Icon className="w-3 h-3 text-brand-vanilla/70" />}
         {!hideLabel && selectedOption && (
-          <span className="text-brand-charcoal font-medium font-display">{selectedOption.label}</span>
+          <span className="text-brand-vanilla font-medium font-display">{selectedOption.label}</span>
         )}
-        <ChevronDown className={`w-2.5 h-2.5 text-brand-charcoal/70 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+        <ChevronDown className={`w-2.5 h-2.5 text-brand-vanilla/70 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
       </button>
       
       {isOpen && (
-        <div className="absolute top-full left-0 mt-1 w-24 rounded bg-brand-vanilla border border-os-border-dark/30 shadow-xl z-30 overflow-hidden">
+        <div className="absolute top-full left-0 mt-1 w-24 rounded bg-os-surface-dark border border-os-border-dark shadow-xl z-30 overflow-hidden">
           {options.map((option) => (
             <button
               key={option.value}
@@ -141,7 +141,7 @@ function Dropdown({
               className={`w-full px-2 py-1.5 text-left text-[11px] transition-colors ${
                 option.value === value
                   ? 'bg-brand-aperol/20 text-brand-aperol font-medium'
-                  : 'text-brand-charcoal hover:bg-os-border-dark/20'
+                  : 'text-brand-vanilla hover:bg-os-border-dark/20'
               }`}
             >
               {option.label}
@@ -229,6 +229,12 @@ function LogoCard({
     }
   };
 
+  // Scale customization based on logo ID
+  const isWideOrStacked = ['combo', 'stacked', 'horizontal'].includes(logo.id);
+  const imageSizeClass = isWideOrStacked 
+    ? "max-w-[85%] max-h-[85%]" // Bigger for combo/stacked/horizontal
+    : "max-w-[70%] max-h-[70%]"; // Default for others
+
   return (
     <div 
       className="group relative rounded-xl overflow-hidden border border-os-border-dark transition-all duration-300 hover:border-brand-vanilla bg-os-surface-dark"
@@ -236,9 +242,9 @@ function LogoCard({
       aria-label={`${logo.name} logo - ${colorVariant} variant`}
     >
       {/* Header Row with Logo Name and Controls */}
-      <div className="bg-brand-vanilla px-3 py-2 rounded-t-xl border-b border-os-border-dark/30 flex items-center justify-between">
+      <div className="bg-brand-charcoal px-3 py-2 rounded-t-xl border-b border-os-border-dark/30 flex items-center justify-between">
         {/* Logo Name Label */}
-        <span className="text-[11px] font-medium text-brand-charcoal font-display">{logo.name}</span>
+        <span className="text-[11px] font-medium text-brand-vanilla font-display">{logo.name}</span>
         
         {/* Controls */}
         <div className="flex gap-1.5 items-center">
@@ -266,7 +272,7 @@ function LogoCard({
           alt={`${logo.name} logo in ${colorVariant} variant`}
           width={100}
           height={100}
-          className="object-contain max-w-[70%] max-h-[70%]"
+          className={`object-contain ${imageSizeClass}`}
         />
       </div>
     </div>
