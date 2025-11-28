@@ -41,6 +41,7 @@ export default function SpacePage() {
     isLoaded,
     getSpace,
     deleteSpace,
+    updateSpace,
     addFile,
     removeFile,
     addLink,
@@ -112,6 +113,7 @@ export default function SpacePage() {
               icon={space.icon}
               spaceId={isUserSpace ? space.id : undefined}
               onDelete={isUserSpace ? deleteSpace : undefined}
+              onRename={isUserSpace ? (newTitle) => updateSpace(space.id, { title: newTitle }) : undefined}
             />
 
             {/* Description */}
@@ -160,7 +162,7 @@ export default function SpacePage() {
             </div>
 
             {/* Input Card */}
-            <div className="mb-8 p-6 rounded-lg bg-os-surface-dark border border-os-border-dark">
+            <div className="mb-8 p-6 rounded-xl bg-os-surface-dark border border-os-border-dark">
               <textarea
                 placeholder={`Ask anything about ${space.title}. Type / for shortcuts.`}
                 className="

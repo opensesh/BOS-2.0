@@ -54,7 +54,7 @@ export function AddInstructionsModal({
             placeholder="Example: Always respond in a formal tone. Focus on technical accuracy. Include code examples when explaining concepts..."
             rows={8}
             className="
-              w-full px-3 py-2 rounded-lg resize-none
+              w-full px-3 py-2 rounded-xl resize-none
               bg-os-border-dark border border-os-border-dark
               text-os-text-primary-dark placeholder-os-text-secondary-dark
               focus:outline-none focus:ring-2 focus:ring-brand-aperol/50 focus:border-brand-aperol
@@ -67,7 +67,7 @@ export function AddInstructionsModal({
         </div>
 
         {/* Tips */}
-        <div className="p-3 rounded-lg bg-os-surface-dark">
+        <div className="p-3 rounded-xl bg-os-surface-dark">
           <h4 className="text-xs font-medium text-os-text-primary-dark mb-2">
             Tips for effective instructions:
           </h4>
@@ -84,14 +84,14 @@ export function AddInstructionsModal({
       <div className="flex justify-end gap-3 mt-6 pt-4 border-t border-os-border-dark">
         <button
           onClick={handleClose}
-          className="px-4 py-2 rounded-lg text-sm font-medium text-os-text-primary-dark bg-os-border-dark hover:bg-os-border-dark/80 transition-colors"
+          className="px-4 py-2 rounded-xl text-sm font-medium text-os-text-primary-dark bg-os-border-dark hover:bg-os-border-dark/80 transition-colors"
         >
           Cancel
         </button>
         <button
           onClick={handleSave}
           disabled={!hasChanges}
-          className="px-4 py-2 rounded-lg text-sm font-medium text-white bg-brand-aperol hover:bg-brand-aperol/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="px-4 py-2 rounded-xl text-sm font-medium text-white bg-brand-aperol hover:bg-brand-aperol/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
           Save Instructions
         </button>

@@ -15,7 +15,8 @@ import {
   FolderTree,
   BookOpen,
   PenTool,
-  ArrowUpRight
+  ArrowUpRight,
+  Zap
 } from 'lucide-react';
 
 // Bento cards for subpages
@@ -40,6 +41,13 @@ const brainPages = [
     description: 'Voice and tone guidelines',
     href: '/brain/writing-styles',
     icon: PenTool,
+  },
+  {
+    id: 'skills',
+    title: 'Skills',
+    description: 'System capabilities and configuration',
+    href: '/brain/skills',
+    icon: Zap,
   },
 ];
 
@@ -127,37 +135,24 @@ function BentoCard({ item }: { item: typeof brainPages[0] }) {
   return (
     <Link
       href={item.href}
-      className="group relative overflow-hidden rounded-2xl bg-os-surface-dark border border-os-border-dark hover:border-brand-aperol/50 hover:bg-os-surface-dark/80 transition-all duration-300 ease-out"
+      className="group relative h-full flex flex-col justify-between p-6 md:p-8 rounded-2xl bg-os-surface-dark border border-os-border-dark hover:border-brand-aperol/50 hover:bg-os-surface-dark/80 transition-all duration-300 ease-out min-h-[200px]"
     >
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <Icon className="w-32 h-32 text-brand-vanilla" />
+      {/* Top Section: Icon and Arrow */}
+      <div className="flex items-start justify-between mb-auto">
+        <div className="p-3 rounded-xl bg-os-bg-dark/50 border border-os-border-dark">
+          <Icon className="w-6 h-6 text-brand-vanilla" />
         </div>
+        <ArrowUpRight className="w-5 h-5 text-os-text-secondary-dark opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-y-2 translate-x-2 group-hover:translate-y-0 group-hover:translate-x-0" />
       </div>
-
-      {/* Content */}
-      <div className="relative h-full p-6 md:p-8 flex flex-col justify-between min-h-[200px]">
-        <div className="flex items-start justify-between">
-          <div className="p-3 rounded-xl bg-os-bg-dark/50 border border-os-border-dark">
-            <Icon className="w-6 h-6 text-brand-vanilla" />
-          </div>
-          <ArrowUpRight className="w-5 h-5 text-os-text-secondary-dark opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-2 -translate-y-2 group-hover:translate-x-0 group-hover:translate-y-0" />
-        </div>
-        
-        <div className="space-y-2">
-          <h3 className="text-xl md:text-2xl font-display font-bold text-brand-vanilla group-hover:text-brand-aperol transition-colors">
-            {item.title}
-          </h3>
-          <p className="text-sm md:text-base text-os-text-secondary-dark">
-            {item.description}
-          </p>
-        </div>
-      </div>
-
-      {/* Hover Glow Effect */}
-      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-aperol/5 to-transparent" />
+      
+      {/* Bottom Section: Text */}
+      <div className="space-y-2 mt-6">
+        <h3 className="text-xl md:text-2xl font-display font-bold text-brand-vanilla group-hover:text-brand-aperol transition-colors">
+          {item.title}
+        </h3>
+        <p className="text-sm md:text-base text-os-text-secondary-dark line-clamp-2">
+          {item.description}
+        </p>
       </div>
     </Link>
   );
@@ -187,50 +182,50 @@ export default function BrainPage() {
       <main className="flex-1 flex flex-col overflow-hidden">
         <div className="flex-1 overflow-y-auto custom-scrollbar">
           <div className="w-full max-w-6xl mx-auto px-6 py-8 md:px-12 md:py-12">
-          {/* Page Header */}
-          <div className="flex items-start justify-between mb-8">
-            <div className="flex flex-col gap-2">
-              <h1 className="text-4xl md:text-5xl font-display font-bold text-brand-vanilla leading-tight">
-                Brain
-              </h1>
+            {/* Page Header */}
+            <div className="flex flex-col gap-2 mb-10">
+              <div className="flex items-start justify-between w-full">
+                <h1 className="text-4xl md:text-5xl font-display font-bold text-brand-vanilla">
+                  Brain
+                </h1>
+                <button
+                  onClick={() => setIsSettingsOpen(true)}
+                  className="p-3 rounded-xl bg-os-surface-dark hover:bg-os-border-dark border border-os-border-dark transition-colors group"
+                  title="Brain Settings"
+                >
+                  <Settings className="w-5 h-5 text-os-text-secondary-dark group-hover:text-brand-vanilla transition-colors" />
+                </button>
+              </div>
               <p className="text-base md:text-lg text-os-text-secondary-dark max-w-2xl">
                 Your brand&apos;s AI knowledge center. Configure Claude with your brand identity, 
                 messaging, and writing styles for consistent, on-brand content generation.
               </p>
             </div>
-            <button
-              onClick={() => setIsSettingsOpen(true)}
-              className="p-3 rounded-xl bg-os-surface-dark hover:bg-os-border-dark border border-os-border-dark transition-colors group"
-              title="Brain Settings"
-            >
-              <Settings className="w-5 h-5 text-os-text-secondary-dark group-hover:text-brand-vanilla transition-colors" />
-            </button>
-          </div>
 
-          {/* Claude Resources Section */}
-          <section className="mb-10">
-            <h2 className="text-xl font-display font-semibold text-brand-vanilla mb-4">
-              Resources
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-3">
-              {isLoaded && resources.map((resource) => (
-                <ResourceCard 
-                  key={resource.id} 
-                  resource={resource} 
-                  onDelete={deleteResource}
-                  onEdit={handleEditResource}
-                />
+            {/* Bento Cards for Subpages */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-10">
+              {brainPages.map((page) => (
+                <BentoCard key={page.id} item={page} />
               ))}
-              <AddResourceCard onClick={() => setIsAddResourceOpen(true)} />
             </div>
-          </section>
 
-          {/* Bento Cards for Subpages */}
-          <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-fr gap-4 md:gap-6 md:max-h-[calc(100vh-24rem)]">
-            {brainPages.map((page) => (
-              <BentoCard key={page.id} item={page} />
-            ))}
-          </div>
+            {/* Claude Resources Section */}
+            <section>
+              <h2 className="text-xl font-display font-semibold text-brand-vanilla mb-4">
+                Resources
+              </h2>
+              <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-3">
+                {isLoaded && resources.map((resource) => (
+                  <ResourceCard 
+                    key={resource.id} 
+                    resource={resource} 
+                    onDelete={deleteResource}
+                    onEdit={handleEditResource}
+                  />
+                ))}
+                <AddResourceCard onClick={() => setIsAddResourceOpen(true)} />
+              </div>
+            </section>
           </div>
         </div>
       </main>

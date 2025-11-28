@@ -88,7 +88,7 @@ export function CreateSpaceModal({ isOpen, onClose, onCreate }: CreateSpaceModal
             placeholder="e.g., Marketing Research, Design System, Q4 Strategy"
             disabled={isCreating}
             className="
-              w-full px-4 py-3 rounded-lg
+              w-full px-4 py-3 rounded-xl
               bg-os-bg-dark
               border border-os-border-dark
               text-brand-vanilla placeholder:text-os-text-secondary-dark
@@ -117,7 +117,7 @@ export function CreateSpaceModal({ isOpen, onClose, onCreate }: CreateSpaceModal
             rows={3}
             disabled={isCreating}
             className="
-              w-full px-4 py-3 rounded-lg
+              w-full px-4 py-3 rounded-xl
               bg-os-bg-dark
               border border-os-border-dark
               text-brand-vanilla placeholder:text-os-text-secondary-dark
@@ -142,7 +142,7 @@ export function CreateSpaceModal({ isOpen, onClose, onCreate }: CreateSpaceModal
                 onClick={() => setSelectedIcon(icon === selectedIcon ? '' : icon)}
                 disabled={isCreating}
                 className={`
-                  w-full aspect-square rounded-lg
+                  w-full aspect-square rounded-xl
                   flex items-center justify-center
                   text-2xl
                   transition-all duration-200
@@ -178,7 +178,7 @@ export function CreateSpaceModal({ isOpen, onClose, onCreate }: CreateSpaceModal
             onClick={handleClose}
             disabled={isCreating}
             className="
-              px-5 py-2.5 rounded-lg
+              px-5 py-2.5 rounded-xl
               text-sm font-medium
               text-os-text-primary-dark
               bg-os-border-dark
@@ -193,7 +193,7 @@ export function CreateSpaceModal({ isOpen, onClose, onCreate }: CreateSpaceModal
             type="submit"
             disabled={!title.trim() || isCreating}
             className="
-              px-5 py-2.5 rounded-lg
+              px-5 py-2.5 rounded-xl
               text-sm font-medium
               text-white
               bg-brand-aperol

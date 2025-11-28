@@ -89,7 +89,7 @@ export function AddFilesModal({
         onDrop={handleDrop}
         onClick={() => fileInputRef.current?.click()}
         className={`
-          border-2 border-dashed rounded-lg p-8
+          border-2 border-dashed rounded-xl p-8
           flex flex-col items-center justify-center
           cursor-pointer transition-colors
           ${isDragging 
@@ -186,14 +186,14 @@ export function AddFilesModal({
       <div className="flex justify-end gap-3 mt-6 pt-4 border-t border-os-border-dark">
         <button
           onClick={handleClose}
-          className="px-4 py-2 rounded-lg text-sm font-medium text-os-text-primary-dark bg-os-border-dark hover:bg-os-border-dark/80 transition-colors"
+          className="px-4 py-2 rounded-xl text-sm font-medium text-os-text-primary-dark bg-os-border-dark hover:bg-os-border-dark/80 transition-colors"
         >
           Cancel
         </button>
         <button
           onClick={handleSave}
           disabled={pendingFiles.length === 0}
-          className="px-4 py-2 rounded-lg text-sm font-medium text-white bg-brand-aperol hover:bg-brand-aperol/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="px-4 py-2 rounded-xl text-sm font-medium text-white bg-brand-aperol hover:bg-brand-aperol/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
           Add {pendingFiles.length > 0 ? `${pendingFiles.length} file${pendingFiles.length > 1 ? 's' : ''}` : 'files'}
         </button>

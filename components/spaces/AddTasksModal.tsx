@@ -69,7 +69,7 @@ export function AddTasksModal({
             onKeyDown={handleKeyDown}
             placeholder="What needs to be done?"
             className="
-              w-full px-3 py-2 rounded-lg
+              w-full px-3 py-2 rounded-xl
               bg-os-border-dark border border-os-border-dark
               text-os-text-primary-dark placeholder-os-text-secondary-dark
               focus:outline-none focus:ring-2 focus:ring-brand-aperol/50 focus:border-brand-aperol
@@ -88,7 +88,7 @@ export function AddTasksModal({
             placeholder="Add more details..."
             rows={2}
             className="
-              w-full px-3 py-2 rounded-lg resize-none
+              w-full px-3 py-2 rounded-xl resize-none
               bg-os-border-dark border border-os-border-dark
               text-os-text-primary-dark placeholder-os-text-secondary-dark
               focus:outline-none focus:ring-2 focus:ring-brand-aperol/50 focus:border-brand-aperol
@@ -100,7 +100,7 @@ export function AddTasksModal({
         <button
           onClick={handleAddTask}
           disabled={!title.trim()}
-          className="flex items-center justify-center gap-2 w-full px-4 py-2 rounded-lg text-sm font-medium text-white bg-brand-aperol hover:bg-brand-aperol/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="flex items-center justify-center gap-2 w-full px-4 py-2 rounded-xl text-sm font-medium text-white bg-brand-aperol hover:bg-brand-aperol/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <Plus className="w-4 h-4" />
           Add Task
@@ -185,7 +185,7 @@ export function AddTasksModal({
       <div className="flex justify-end mt-6 pt-4 border-t border-os-border-dark">
         <button
           onClick={handleClose}
-          className="px-4 py-2 rounded-lg text-sm font-medium text-os-text-primary-dark bg-os-border-dark hover:bg-os-border-dark/80 transition-colors"
+          className="px-4 py-2 rounded-xl text-sm font-medium text-os-text-primary-dark bg-os-border-dark hover:bg-os-border-dark/80 transition-colors"
         >
           Done
         </button>
