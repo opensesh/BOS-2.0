@@ -349,18 +349,25 @@ export function ChatInterface() {
 
   return (
     <>
-      <BackgroundGradient />
+      {/* Background fades out in chat mode for cleaner UI */}
+      <BackgroundGradient fadeOut={hasMessages} />
+
+      {/* Solid background for chat mode */}
+      {hasMessages && (
+        <div className="fixed inset-0 z-0 bg-os-bg-dark" />
+      )}
 
       {/* Main container - switches between centered landing and full chat view */}
       <div
         className={`fixed inset-0 z-20 flex flex-col ${
-          hasMessages ? 'pt-4 pb-0' : 'items-center justify-center'
+          hasMessages ? '' : 'items-center justify-center'
         }`}
       >
-        {/* Messages Area - only shown when there are messages */}
+        {/* Chat Mode Layout - sticky header, scrolling content, fixed footer */}
         {hasMessages && (
-          <div className="flex-1 overflow-y-auto px-4 pb-4">
-            <div className="max-w-3xl mx-auto pt-4">
+          <div className="flex flex-col h-full">
+            {/* Scrollable content area */}
+            <div className="flex-1 overflow-y-auto">
               {/* Group messages into query-response pairs for Perplexity-style display */}
               {parsedMessages.map((message, idx) => {
                 // Skip user messages - they'll be shown in the ChatResponse component
@@ -369,31 +376,29 @@ export function ChatInterface() {
                   const nextMessage = parsedMessages[idx + 1];
                   if (nextMessage?.role === 'assistant') {
                     return (
-                      <div key={message.id} className="mb-8">
-                        <ChatResponse
-                          query={message.content}
-                          content={nextMessage.content}
-                          sources={nextMessage.sources}
-                          images={nextMessage.images}
-                          isStreaming={isLoading && idx === parsedMessages.length - 2}
-                          modelUsed={nextMessage.modelUsed}
-                          onFollowUpClick={handleFollowUpSubmit}
-                          onRegenerate={() => handleFollowUpSubmit(message.content)}
-                        />
-                      </div>
+                      <ChatResponse
+                        key={message.id}
+                        query={message.content}
+                        content={nextMessage.content}
+                        sources={nextMessage.sources}
+                        images={nextMessage.images}
+                        isStreaming={isLoading && idx === parsedMessages.length - 2}
+                        modelUsed={nextMessage.modelUsed}
+                        onFollowUpClick={handleFollowUpSubmit}
+                        onRegenerate={() => handleFollowUpSubmit(message.content)}
+                      />
                     );
                   }
                   // User message without response yet (loading state)
                   if (!nextMessage && isLoading) {
                     return (
-                      <div key={message.id} className="mb-8">
-                        <ChatResponse
-                          query={message.content}
-                          content=""
-                          isStreaming={true}
-                          onFollowUpClick={handleFollowUpSubmit}
-                        />
-                      </div>
+                      <ChatResponse
+                        key={message.id}
+                        query={message.content}
+                        content=""
+                        isStreaming={true}
+                        onFollowUpClick={handleFollowUpSubmit}
+                      />
                     );
                   }
                 }
@@ -402,16 +407,31 @@ export function ChatInterface() {
 
               {/* Error display */}
               {(error || submitError) && (
-                <div className="bg-red-500/10 border border-red-500/20 rounded-xl px-4 py-3 text-red-400 text-sm flex items-start gap-3 mb-4">
-                  <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-medium">Error</p>
-                    <p className="mt-1">{error?.message || submitError}</p>
+                <div className="max-w-3xl mx-auto px-4 py-4">
+                  <div className="bg-red-500/10 border border-red-500/20 rounded-xl px-4 py-3 text-red-400 text-sm flex items-start gap-3">
+                    <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-medium">Error</p>
+                      <p className="mt-1">{error?.message || submitError}</p>
+                    </div>
                   </div>
                 </div>
               )}
 
               <div ref={messagesEndRef} />
+            </div>
+
+            {/* Fixed Follow-up input with gradient fade */}
+            <div className="relative">
+              {/* Gradient fade effect */}
+              <div className="absolute inset-x-0 -top-8 h-8 bg-gradient-to-t from-os-bg-dark to-transparent pointer-events-none" />
+              <div className="bg-os-bg-dark px-4 py-4">
+                <FollowUpInput
+                  onSubmit={handleFollowUpSubmit}
+                  isLoading={isLoading}
+                  placeholder="Ask a follow-up"
+                />
+              </div>
             </div>
           </div>
         )}
@@ -437,17 +457,8 @@ export function ChatInterface() {
           </div>
         )}
 
-        {/* Input Area - changes based on state */}
-        {hasMessages ? (
-          /* Follow-up input for chat mode */
-          <div className="border-t border-os-border-dark bg-os-bg-darker/80 backdrop-blur-xl px-4 py-4">
-            <FollowUpInput
-              onSubmit={handleFollowUpSubmit}
-              isLoading={isLoading}
-              placeholder="Ask a follow-up"
-            />
-          </div>
-        ) : (
+        {/* Landing Input Area */}
+        {!hasMessages && (
           /* Full input for landing mode */
           <div className="w-full">
             <div className="max-w-3xl mx-auto px-4">

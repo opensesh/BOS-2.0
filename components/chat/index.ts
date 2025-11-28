@@ -11,4 +11,5 @@ export { SourcePopover } from './SourcePopover';
 export { RelatedQuestions } from './RelatedQuestions';
 export { ChatResponse } from './ChatResponse';
 export { FollowUpInput } from './FollowUpInput';
+export { ShortcutModal } from './ShortcutModal';
 

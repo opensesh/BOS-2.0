@@ -1,8 +1,16 @@
 'use client';
 
-export function BackgroundGradient() {
+interface BackgroundGradientProps {
+  fadeOut?: boolean;
+}
+
+export function BackgroundGradient({ fadeOut = false }: BackgroundGradientProps) {
   return (
-    <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+    <div 
+      className={`fixed inset-0 z-0 pointer-events-none overflow-hidden transition-opacity duration-500 ${
+        fadeOut ? 'opacity-0' : 'opacity-100'
+      }`}
+    >
       {/* Grid Pattern */}
       <div 
         className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]"
@@ -18,4 +26,3 @@ export function BackgroundGradient() {
     </div>
   );
 }
-
