@@ -13,10 +13,11 @@ export interface SourceInfo {
 }
 
 export interface ContentSection {
-  type: 'heading' | 'paragraph';
+  type: 'heading' | 'paragraph' | 'list';
   content: string;
   level?: number; // For headings: 1, 2, 3
   citations?: SourceInfo[];
+  items?: string[]; // For lists
 }
 
 interface AnswerViewProps {
@@ -41,16 +42,16 @@ export function AnswerView({
   };
 
   return (
-    <div className="space-y-4">
-      {/* User Query Display */}
-      <div className="flex justify-end mb-6">
-        <div className="bg-os-surface-dark/60 rounded-xl px-4 py-3 max-w-[80%]">
+    <div>
+      {/* User Query Display - Right aligned bubble */}
+      <div className="flex justify-end mb-8">
+        <div className="bg-os-surface-dark/50 rounded-2xl px-4 py-2.5 max-w-[85%]">
           <p className="text-[15px] text-os-text-primary-dark">{query}</p>
         </div>
       </div>
 
       {/* Answer Content */}
-      <div className="chat-content">
+      <div className="space-y-4">
         {sections.map((section, idx) => {
           if (section.type === 'heading') {
             const HeadingTag = `h${section.level || 2}` as keyof JSX.IntrinsicElements;
@@ -58,14 +59,26 @@ export function AnswerView({
               <HeadingTag
                 key={idx}
                 className={`
-                  font-semibold text-os-text-primary-dark
-                  ${section.level === 1 ? 'text-xl mt-6 mb-3' : ''}
-                  ${section.level === 2 ? 'text-[17px] mt-5 mb-2' : ''}
-                  ${section.level === 3 ? 'text-[15px] mt-4 mb-2' : ''}
+                  font-semibold text-os-text-primary-dark leading-tight
+                  ${section.level === 1 ? 'text-lg mt-6 mb-2' : ''}
+                  ${section.level === 2 ? 'text-base mt-5 mb-2' : ''}
+                  ${section.level === 3 ? 'text-[15px] mt-4 mb-1.5' : ''}
                 `}
               >
                 {section.content}
               </HeadingTag>
+            );
+          }
+
+          if (section.type === 'list' && section.items) {
+            return (
+              <ul key={idx} className="space-y-1.5 pl-5 list-disc">
+                {section.items.map((item, itemIdx) => (
+                  <li key={itemIdx} className="text-[15px] leading-relaxed text-os-text-primary-dark/90">
+                    {item}
+                  </li>
+                ))}
+              </ul>
             );
           }
 
@@ -75,7 +88,7 @@ export function AnswerView({
           return (
             <p
               key={idx}
-              className="text-[15px] leading-[1.7] text-os-text-primary-dark/90 mb-4"
+              className="text-[15px] leading-[1.75] text-os-text-primary-dark/90"
             >
               {section.content}
               {showCitations && sectionSources.length > 0 && (
@@ -94,7 +107,7 @@ export function AnswerView({
 
         {/* Streaming indicator */}
         {isStreaming && (
-          <div className="flex items-center gap-2 text-os-text-secondary-dark">
+          <div className="flex items-center gap-2 text-os-text-secondary-dark py-2">
             <div className="flex gap-1">
               <span className="w-1.5 h-1.5 bg-brand-aperol rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
               <span className="w-1.5 h-1.5 bg-brand-aperol rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
@@ -115,6 +128,8 @@ export function parseContentToSections(
   const lines = content.split('\n');
   const sections: ContentSection[] = [];
   let currentParagraph = '';
+  let currentList: string[] = [];
+  let inList = false;
 
   const flushParagraph = () => {
     if (currentParagraph.trim()) {
@@ -141,29 +156,56 @@ export function parseContentToSections(
     }
   };
 
+  const flushList = () => {
+    if (currentList.length > 0) {
+      sections.push({
+        type: 'list',
+        content: '',
+        items: [...currentList],
+      });
+      currentList = [];
+      inList = false;
+    }
+  };
+
   for (const line of lines) {
     // Check for headings
     const h1Match = line.match(/^#\s+(.+)$/);
     const h2Match = line.match(/^##\s+(.+)$/);
     const h3Match = line.match(/^###\s+(.+)$/);
+    
+    // Check for list items
+    const listMatch = line.match(/^[-*]\s+(.+)$/);
+    const numberedListMatch = line.match(/^\d+\.\s+(.+)$/);
 
     if (h1Match) {
       flushParagraph();
+      flushList();
       sections.push({ type: 'heading', content: h1Match[1], level: 1 });
     } else if (h2Match) {
       flushParagraph();
+      flushList();
       sections.push({ type: 'heading', content: h2Match[1], level: 2 });
     } else if (h3Match) {
       flushParagraph();
+      flushList();
       sections.push({ type: 'heading', content: h3Match[1], level: 3 });
+    } else if (listMatch || numberedListMatch) {
+      flushParagraph();
+      inList = true;
+      currentList.push((listMatch || numberedListMatch)![1]);
     } else if (line.trim() === '') {
       flushParagraph();
+      flushList();
     } else {
+      if (inList) {
+        flushList();
+      }
       currentParagraph += (currentParagraph ? ' ' : '') + line.trim();
     }
   }
 
   flushParagraph();
+  flushList();
   return sections;
 }
-

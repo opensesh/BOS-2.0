@@ -20,8 +20,10 @@ import {
   History,
   Code,
   PenTool,
+  MessageSquare,
 } from 'lucide-react';
 import { SPACES } from '@/lib/mock-data';
+import { useChatContext } from '@/lib/chat-context';
 
 interface NavigationDrawerProps {
   isOpen: boolean;
@@ -44,6 +46,7 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef }: NavigationD
   const [position, setPosition] = useState({ top: 0, left: 0, height: 0 });
   const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const onCloseRef = useRef(onClose);
+  const { chatHistory } = useChatContext();
 
   // Keep onClose ref up to date without triggering re-renders
   useEffect(() => {
@@ -190,29 +193,27 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef }: NavigationD
                   </button>
                 </div>
                 <div className="space-y-1">
-                  {[
-                    'reddit sonnet 4.5 still be',
-                    'is brand os app open s',
-                    'brand operating system',
-                    '25mb to 100Kb is how b',
-                    'how would you define a',
-                    'What are the latest resea',
-                    'switch to light mode plea',
-                    'come and go yeat',
-                    'Can you help me summa',
-                    'claude context windows',
-                  ].map((query, idx) => (
-                    <button
-                      key={idx}
-                      className="w-full text-left px-3 py-2 rounded-lg text-sm text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-brand-vanilla transition-colors truncate"
-                    >
-                      {query}
-                    </button>
-                  ))}
+                  {chatHistory.length > 0 ? (
+                    chatHistory.map((chat) => (
+                      <button
+                        key={chat.id}
+                        className="w-full text-left px-3 py-2 rounded-lg text-sm text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-brand-vanilla transition-colors flex items-center gap-2"
+                      >
+                        <MessageSquare className="w-4 h-4 flex-shrink-0" />
+                        <span className="truncate">{chat.title}</span>
+                      </button>
+                    ))
+                  ) : (
+                    <p className="text-xs text-os-text-secondary-dark/60 px-3 py-2">
+                      No recent chats yet
+                    </p>
+                  )}
                 </div>
-                <button className="mt-2 text-xs text-brand-aperol hover:underline px-3">
-                  View All
-                </button>
+                {chatHistory.length > 0 && (
+                  <button className="mt-2 text-xs text-brand-aperol hover:underline px-3">
+                    View All
+                  </button>
+                )}
               </div>
             </div>
           </div>

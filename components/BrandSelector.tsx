@@ -83,9 +83,10 @@ interface BrandSelectorProps {
   size?: number;
   className?: string;
   href?: string;
+  onClick?: () => void;
 }
 
-export function BrandSelector({ size = 32, className = '', href = '/' }: BrandSelectorProps) {
+export function BrandSelector({ size = 32, className = '', href = '/', onClick }: BrandSelectorProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [showAddModal, setShowAddModal] = useState(false);
   const [brands, setBrands] = useState<Brand[]>(getStoredBrands());
@@ -211,6 +212,8 @@ export function BrandSelector({ size = 32, className = '', href = '/' }: BrandSe
               group-hover:scale-90
             "
             onClick={(e) => {
+              // Call custom onClick handler if provided
+              onClick?.();
               // Don't navigate if clicking the button area
               if (e.target !== e.currentTarget) {
                 e.preventDefault();

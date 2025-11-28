@@ -14,7 +14,6 @@ import {
   DollarSign,
   Mail,
   Share2,
-  Loader2,
   AlertCircle,
 } from 'lucide-react';
 import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts';
@@ -25,11 +24,13 @@ import { ConnectorDropdown } from './ui/connector-dropdown';
 import { ModelSelector } from './ui/model-selector';
 import { useVoiceRecognition } from '@/hooks/useVoiceRecognition';
 import { ModelId } from '@/lib/ai/providers';
+import { useChatContext } from '@/lib/chat-context';
 import {
-  ChatResponse,
   FollowUpInput,
   SourceInfo,
   ImageResult,
+  ChatHeader,
+  ChatContent,
 } from './chat';
 
 interface Connector {
@@ -61,9 +62,13 @@ export function ChatInterface() {
   const [suggestionsMode, setSuggestionsMode] = useState<'search' | 'research'>('search');
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [modelUsed, setModelUsed] = useState<string | undefined>();
+  const [activeTab, setActiveTab] = useState<'answer' | 'links' | 'images'>('answer');
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const globeButtonRef = useRef<HTMLButtonElement>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  // Chat context for cross-component communication
+  const { shouldResetChat, acknowledgeChatReset, addToHistory } = useChatContext();
 
   // Create transport once - stable reference
   const chatTransport = useRef(new DefaultChatTransport({
@@ -71,13 +76,55 @@ export function ChatInterface() {
   })).current;
 
   // AI SDK useChat hook (v5 API)
-  const { messages, sendMessage, status, error } = useChat({
+  const { messages, sendMessage, status, error, setMessages } = useChat({
     transport: chatTransport,
     onError: (err) => {
       console.error('Chat error:', err);
       setSubmitError(err.message || 'An error occurred while sending your message');
     },
   });
+
+  // Reset chat function
+  const resetChat = useCallback(() => {
+    setMessages([]);
+    setActiveTab('answer');
+    setLocalInput('');
+    setSubmitError(null);
+  }, [setMessages]);
+
+  // Helper to get message content (defined early for use in effect)
+  const getMessageContent = useCallback((message: { content?: string; parts?: Array<{ type: string; text?: string }> }): string => {
+    if (typeof message.content === 'string') return message.content;
+    if (Array.isArray(message.parts)) {
+      return message.parts
+        .filter((part): part is { type: string; text: string } => 
+          part && typeof part === 'object' && part.type === 'text' && typeof part.text === 'string'
+        )
+        .map((part) => part.text)
+        .join('');
+    }
+    return '';
+  }, []);
+
+  // Listen for reset signals from context (e.g., sidebar navigation)
+  useEffect(() => {
+    if (shouldResetChat) {
+      // Save current chat to history if there are messages
+      if (messages.length > 0) {
+        const firstUserMessage = messages.find(m => m.role === 'user');
+        const firstAssistantMessage = messages.find(m => m.role === 'assistant');
+        if (firstUserMessage) {
+          const title = getMessageContent(firstUserMessage).slice(0, 50) || 'Untitled Chat';
+          const preview = firstAssistantMessage 
+            ? getMessageContent(firstAssistantMessage).slice(0, 100)
+            : '';
+          addToHistory(title, preview);
+        }
+      }
+      resetChat();
+      acknowledgeChatReset();
+    }
+  }, [shouldResetChat, acknowledgeChatReset, resetChat, messages, addToHistory, getMessageContent]);
 
   // status can be: 'submitted' | 'streaming' | 'ready' | 'error'
   const isLoading = status === 'submitted' || status === 'streaming';
@@ -94,48 +141,12 @@ export function ChatInterface() {
   const setInput = setLocalInput;
 
   const connectors: Connector[] = [
-    {
-      id: 'web',
-      icon: Globe,
-      title: 'Web',
-      description: 'Search across the entire Internet',
-      enabled: true,
-    },
-    {
-      id: 'academic',
-      icon: GraduationCap,
-      title: 'Academic',
-      description: 'Search academic papers',
-      enabled: false,
-    },
-    {
-      id: 'social',
-      icon: Users,
-      title: 'Social',
-      description: 'Discussions and opinions',
-      enabled: false,
-    },
-    {
-      id: 'finance',
-      icon: DollarSign,
-      title: 'Finance',
-      description: 'Search SEC filings',
-      enabled: false,
-    },
-    {
-      id: 'gmail',
-      icon: Mail,
-      title: 'Gmail with Calendar',
-      description: '',
-      enabled: false,
-    },
-    {
-      id: 'browse-all',
-      icon: Share2,
-      title: 'Browse all connectors',
-      description: '',
-      enabled: false,
-    },
+    { id: 'web', icon: Globe, title: 'Web', description: 'Search across the entire Internet', enabled: true },
+    { id: 'academic', icon: GraduationCap, title: 'Academic', description: 'Search academic papers', enabled: false },
+    { id: 'social', icon: Users, title: 'Social', description: 'Discussions and opinions', enabled: false },
+    { id: 'finance', icon: DollarSign, title: 'Finance', description: 'Search SEC filings', enabled: false },
+    { id: 'gmail', icon: Mail, title: 'Gmail with Calendar', description: '', enabled: false },
+    { id: 'browse-all', icon: Share2, title: 'Browse all connectors', description: '', enabled: false },
   ];
 
   const [activeConnectors, setActiveConnectors] = useState<Set<string>>(new Set(['web']));
@@ -173,7 +184,6 @@ export function ChatInterface() {
   useEffect(() => {
     if (transcript && isListening) {
       setInput((prev) => {
-        // Replace interim transcript
         const base = prev.replace(transcript, '').trim();
         return base + (base ? ' ' : '') + transcript;
       });
@@ -193,18 +203,12 @@ export function ChatInterface() {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
-  // Keyboard shortcuts - memoized to prevent recreation on every render
+  // Keyboard shortcuts
   const shortcuts = useMemo(
     () => ({
-      'cmd+k': () => {
-        textareaRef.current?.focus();
-      },
-      'ctrl+k': () => {
-        textareaRef.current?.focus();
-      },
-      Escape: () => {
-        textareaRef.current?.blur();
-      },
+      'cmd+k': () => textareaRef.current?.focus(),
+      'ctrl+k': () => textareaRef.current?.focus(),
+      Escape: () => textareaRef.current?.blur(),
     }),
     []
   );
@@ -213,17 +217,11 @@ export function ChatInterface() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Clear any previous errors
     setSubmitError(null);
     
-    if (!input.trim() || isLoading) {
-      return;
-    }
+    if (!input.trim() || isLoading) return;
     
-    // Defensive check for sendMessage function
     if (typeof sendMessage !== 'function') {
-      console.error('Chat not initialized: sendMessage is not a function');
       setSubmitError('Chat is not ready. Please refresh the page and try again.');
       return;
     }
@@ -233,13 +231,10 @@ export function ChatInterface() {
     setShowSuggestions(false);
     
     try {
-      // Use sendMessage with text (AI SDK 5.x pattern)
-      // Pass model selection in body options
       await sendMessage({ text: userMessage }, { body: { model: selectedModel } });
     } catch (err) {
       console.error('Failed to send message:', err);
       setSubmitError(err instanceof Error ? err.message : 'Failed to send message');
-      // Restore the input so user doesn't lose their message
       setInput(userMessage);
     }
   };
@@ -299,367 +294,345 @@ export function ChatInterface() {
     }
   }, [showConnectorDropdown, showGridDropdown, showPaperclipDropdown]);
 
-  // Helper to get message content (handles AI SDK 5.x parts format)
-  const getMessageContent = (message: { content?: string; parts?: Array<{ type: string; text?: string }> }): string => {
-    // First check for direct content string (simpler format)
-    if (typeof message.content === 'string') {
-      return message.content;
-    }
-    // Handle parts array format (AI SDK 5.x)
-    if (Array.isArray(message.parts)) {
-      return message.parts
-        .filter((part): part is { type: string; text: string } => 
-          part && typeof part === 'object' && part.type === 'text' && typeof part.text === 'string'
-        )
-        .map((part) => part.text)
-        .join('');
-    }
-    return '';
-  };
-
-  // Parse messages into our format with sources
+  // Parse messages into our format
   const parsedMessages: ParsedMessage[] = useMemo(() => {
-    return messages.map((message) => {
-      const content = getMessageContent(message);
-      
-      // For now, sources would come from Perplexity responses
-      // This can be enhanced to parse structured responses
-      const sources: SourceInfo[] = [];
-      const images: ImageResult[] = [];
-      
-      return {
-        id: message.id,
-        role: message.role as 'user' | 'assistant',
-        content,
-        sources,
-        images,
-        modelUsed,
-      };
-    });
+    return messages.map((message) => ({
+      id: message.id,
+      role: message.role as 'user' | 'assistant',
+      content: getMessageContent(message),
+      sources: [],
+      images: [],
+      modelUsed,
+    }));
   }, [messages, modelUsed]);
 
-  // Get the last user query for context
-  const lastUserQuery = useMemo(() => {
-    const userMessages = parsedMessages.filter(m => m.role === 'user');
-    return userMessages[userMessages.length - 1]?.content || '';
+  // Get all sources and images from messages
+  const allSources = useMemo(() => {
+    return parsedMessages.flatMap(m => m.sources || []);
   }, [parsedMessages]);
 
-  // Check if we have messages (chat mode) or not (landing mode)
+  const allImages = useMemo(() => {
+    return parsedMessages.flatMap(m => m.images || []);
+  }, [parsedMessages]);
+
+  // Get first query for thread title
+  const threadTitle = useMemo(() => {
+    const firstUserMessage = parsedMessages.find(m => m.role === 'user');
+    return firstUserMessage?.content.slice(0, 50) || 'New Thread';
+  }, [parsedMessages]);
+
   const hasMessages = messages.length > 0;
 
   return (
     <>
-      {/* Background fades out in chat mode for cleaner UI */}
       <BackgroundGradient fadeOut={hasMessages} />
+      {hasMessages && <div className="fixed inset-0 z-0 bg-os-bg-dark" />}
 
-      {/* Solid background for chat mode */}
-      {hasMessages && (
-        <div className="fixed inset-0 z-0 bg-os-bg-dark" />
-      )}
-
-      {/* Main container - switches between centered landing and full chat view */}
-      <div
-        className={`fixed inset-0 z-20 flex flex-col ${
-          hasMessages ? '' : 'items-center justify-center'
-        }`}
-      >
-        {/* Chat Mode Layout - sticky header, scrolling content, fixed footer */}
+      <div className={`fixed inset-0 z-20 flex flex-col ${hasMessages ? '' : 'items-center justify-center'}`}>
+        {/* Chat Mode */}
         {hasMessages && (
           <div className="flex flex-col h-full">
-            {/* Scrollable content area */}
-            <div className="flex-1 overflow-y-auto">
-              {/* Group messages into query-response pairs for Perplexity-style display */}
-              {parsedMessages.map((message, idx) => {
-                // Skip user messages - they'll be shown in the ChatResponse component
-                if (message.role === 'user') {
-                  // Find the corresponding assistant response
-                  const nextMessage = parsedMessages[idx + 1];
-                  if (nextMessage?.role === 'assistant') {
-                    return (
-                      <ChatResponse
-                        key={message.id}
-                        query={message.content}
-                        content={nextMessage.content}
-                        sources={nextMessage.sources}
-                        images={nextMessage.images}
-                        isStreaming={isLoading && idx === parsedMessages.length - 2}
-                        modelUsed={nextMessage.modelUsed}
-                        onFollowUpClick={handleFollowUpSubmit}
-                        onRegenerate={() => handleFollowUpSubmit(message.content)}
-                      />
-                    );
-                  }
-                  // User message without response yet (loading state)
-                  if (!nextMessage && isLoading) {
-                    return (
-                      <ChatResponse
-                        key={message.id}
-                        query={message.content}
-                        content=""
-                        isStreaming={true}
-                        onFollowUpClick={handleFollowUpSubmit}
-                      />
-                    );
-                  }
-                }
-                return null;
-              })}
+            {/* Single sticky header */}
+            <ChatHeader
+              activeTab={activeTab}
+              onTabChange={setActiveTab}
+              hasLinks={allSources.length > 0}
+              hasImages={allImages.length > 0}
+              linksCount={allSources.length}
+              imagesCount={allImages.length}
+              threadTitle={threadTitle}
+              onBack={resetChat}
+            />
 
-              {/* Error display */}
-              {(error || submitError) && (
-                <div className="max-w-3xl mx-auto px-4 py-4">
-                  <div className="bg-red-500/10 border border-red-500/20 rounded-xl px-4 py-3 text-red-400 text-sm flex items-start gap-3">
-                    <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                    <div>
-                      <p className="font-medium">Error</p>
-                      <p className="mt-1">{error?.message || submitError}</p>
+            {/* Scrollable content */}
+            <div className="flex-1 overflow-y-auto">
+              <div className="max-w-3xl mx-auto px-4">
+                {activeTab === 'answer' && (
+                  <>
+                    {parsedMessages.map((message, idx) => {
+                      if (message.role === 'user') {
+                        const nextMessage = parsedMessages[idx + 1];
+                        if (nextMessage?.role === 'assistant') {
+                          return (
+                            <ChatContent
+                              key={message.id}
+                              query={message.content}
+                              content={nextMessage.content}
+                              sources={nextMessage.sources}
+                              isStreaming={isLoading && idx === parsedMessages.length - 2}
+                              modelUsed={nextMessage.modelUsed}
+                              onFollowUpClick={handleFollowUpSubmit}
+                              onRegenerate={() => handleFollowUpSubmit(message.content)}
+                              isLastResponse={idx === parsedMessages.length - 2}
+                            />
+                          );
+                        }
+                        if (!nextMessage && isLoading) {
+                          return (
+                            <ChatContent
+                              key={message.id}
+                              query={message.content}
+                              content=""
+                              isStreaming={true}
+                              onFollowUpClick={handleFollowUpSubmit}
+                              isLastResponse={true}
+                            />
+                          );
+                        }
+                      }
+                      return null;
+                    })}
+                  </>
+                )}
+
+                {activeTab === 'links' && (
+                  <div className="py-6">
+                    {/* Links view content */}
+                    <p className="text-os-text-secondary-dark text-sm">
+                      {allSources.length > 0 
+                        ? `${allSources.length} sources found`
+                        : 'No links available'
+                      }
+                    </p>
+                  </div>
+                )}
+
+                {activeTab === 'images' && (
+                  <div className="py-6">
+                    {/* Images view content */}
+                    <p className="text-os-text-secondary-dark text-sm">
+                      {allImages.length > 0 
+                        ? `${allImages.length} images found`
+                        : 'No images available'
+                      }
+                    </p>
+                  </div>
+                )}
+
+                {/* Error display */}
+                {(error || submitError) && (
+                  <div className="py-4">
+                    <div className="bg-red-500/10 border border-red-500/20 rounded-xl px-4 py-3 text-red-400 text-sm flex items-start gap-3">
+                      <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p className="font-medium">Error</p>
+                        <p className="mt-1">{error?.message || submitError}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              )}
+                )}
 
-              <div ref={messagesEndRef} />
+                <div ref={messagesEndRef} />
+              </div>
             </div>
 
-            {/* Fixed Follow-up input with gradient fade */}
+            {/* Follow-up input */}
             <div className="relative">
-              {/* Gradient fade effect */}
               <div className="absolute inset-x-0 -top-8 h-8 bg-gradient-to-t from-os-bg-dark to-transparent pointer-events-none" />
               <div className="bg-os-bg-dark px-4 py-4">
                 <FollowUpInput
                   onSubmit={handleFollowUpSubmit}
                   isLoading={isLoading}
                   placeholder="Ask a follow-up"
+                  selectedModel={selectedModel}
+                  onModelChange={setSelectedModel}
                 />
               </div>
             </div>
           </div>
         )}
 
-        {/* Landing content - only shown when no messages */}
+        {/* Landing Mode */}
         {!hasMessages && (
-          <div className="w-full max-w-3xl px-4 mb-8 text-center">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-vanilla mb-2 tracking-tight font-display">
-              Brand Operating System
-            </h1>
-            <TypewriterText />
-            
-            {/* Error display for landing page */}
-            {(error || submitError) && (
-              <div className="mt-4 bg-red-500/10 border border-red-500/20 rounded-xl px-4 py-3 text-red-400 text-sm flex items-start gap-3 text-left">
-                <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-medium">Error</p>
-                  <p className="mt-1">{error?.message || submitError}</p>
-                </div>
-              </div>
-            )}
-          </div>
-        )}
-
-        {/* Landing Input Area */}
-        {!hasMessages && (
-          /* Full input for landing mode */
-          <div className="w-full">
-            <div className="max-w-3xl mx-auto px-4">
-              <form onSubmit={handleSubmit} className="relative">
-                <div
-                  className={`
-                  relative bg-os-surface-dark/80 backdrop-blur-xl rounded-xl
-                  border transition-all duration-200
-                  ${
-                    isFocused
-                      ? 'border-brand-aperol shadow-lg shadow-brand-aperol/20'
-                      : 'border-os-border-dark hover:border-os-border-dark/60'
-                  }
-                `}
-                >
-                  {/* Text Input */}
-                  <div className="relative">
-                    <textarea
-                      ref={textareaRef}
-                      value={input}
-                      onChange={(e) => setInput(e.target.value)}
-                      onKeyDown={handleKeyDown}
-                      onFocus={() => setIsFocused(true)}
-                      onBlur={() => setIsFocused(false)}
-                      placeholder="Ask anything. Type @ for mentions and / for shortcuts."
-                      className="w-full px-4 py-4 bg-transparent text-os-text-primary-dark placeholder:text-os-text-secondary-dark resize-none focus:outline-none min-h-[60px] max-h-[300px]"
-                      rows={1}
-                      aria-label="Chat input"
-                      disabled={isLoading}
-                    />
+          <>
+            <div className="w-full max-w-3xl px-4 mb-8 text-center">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-vanilla mb-2 tracking-tight font-display">
+                Brand Operating System
+              </h1>
+              <TypewriterText />
+              
+              {(error || submitError) && (
+                <div className="mt-4 bg-red-500/10 border border-red-500/20 rounded-xl px-4 py-3 text-red-400 text-sm flex items-start gap-3 text-left">
+                  <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-medium">Error</p>
+                    <p className="mt-1">{error?.message || submitError}</p>
                   </div>
+                </div>
+              )}
+            </div>
 
-                  {/* Footer Toolbar */}
-                  <div className="flex items-center justify-between px-4 py-3 border-t border-os-border-dark flex-nowrap gap-4">
-                    {/* Left Side - Model Selector + Search/Research Toggle */}
-                    <div className="flex items-center gap-2">
-                      <ModelSelector
-                        selectedModel={selectedModel}
-                        onModelChange={setSelectedModel}
+            <div className="w-full">
+              <div className="max-w-3xl mx-auto px-4">
+                <form onSubmit={handleSubmit} className="relative">
+                  <div
+                    className={`
+                      relative bg-os-surface-dark/80 backdrop-blur-xl rounded-xl
+                      border transition-all duration-200
+                      ${isFocused
+                        ? 'border-brand-aperol shadow-lg shadow-brand-aperol/20'
+                        : 'border-os-border-dark hover:border-os-border-dark/60'
+                      }
+                    `}
+                  >
+                    <div className="relative">
+                      <textarea
+                        ref={textareaRef}
+                        value={input}
+                        onChange={(e) => setInput(e.target.value)}
+                        onKeyDown={handleKeyDown}
+                        onFocus={() => setIsFocused(true)}
+                        onBlur={() => setIsFocused(false)}
+                        placeholder="Ask anything. Type @ for mentions and / for shortcuts."
+                        className="w-full px-4 py-4 bg-transparent text-os-text-primary-dark placeholder:text-os-text-secondary-dark resize-none focus:outline-none min-h-[60px] max-h-[300px]"
+                        rows={1}
+                        aria-label="Chat input"
                         disabled={isLoading}
-                      />
-                      <div className="w-px h-6 bg-os-border-dark" />
-                      <SearchResearchToggle
-                        onQueryClick={handleQueryClick}
-                        onModeChange={handleModeChange}
-                        showSuggestions={showSuggestions}
                       />
                     </div>
 
-                    {/* Right Side - Icon Buttons */}
-                    <div className="flex items-center space-x-2 flex-shrink-0">
-                      {/* Globe - Connectors */}
-                      <div className="relative">
-                        <button
-                          ref={globeButtonRef}
-                          type="button"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setShowConnectorDropdown(!showConnectorDropdown);
-                            setShowGridDropdown(false);
-                            setShowPaperclipDropdown(false);
-                          }}
-                          className={`
-                            p-2 rounded-lg transition-all
-                            ${
-                              showConnectorDropdown
-                                ? 'bg-brand-aperol/20 text-brand-aperol'
-                                : 'text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-bg-dark'
-                            }
-                          `}
-                          aria-label="Connectors"
-                          title="Connectors"
-                        >
-                          <Globe className="w-5 h-5" />
-                        </button>
-                        <ConnectorDropdown
-                          isOpen={showConnectorDropdown}
-                          onClose={handleConnectorDropdownClose}
-                          connectors={updatedConnectors}
-                          onToggleConnector={handleToggleConnector}
-                          triggerRef={globeButtonRef as React.RefObject<HTMLElement>}
+                    <div className="flex items-center justify-between px-4 py-3 border-t border-os-border-dark flex-nowrap gap-4">
+                      <div className="flex items-center gap-2">
+                        <ModelSelector
+                          selectedModel={selectedModel}
+                          onModelChange={setSelectedModel}
+                          disabled={isLoading}
+                        />
+                        <div className="w-px h-6 bg-os-border-dark" />
+                        <SearchResearchToggle
+                          onQueryClick={handleQueryClick}
+                          onModeChange={handleModeChange}
+                          showSuggestions={showSuggestions}
                         />
                       </div>
 
-                      {/* Grid */}
-                      <div className="relative">
-                        <button
-                          type="button"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setShowGridDropdown(!showGridDropdown);
-                            setShowConnectorDropdown(false);
-                            setShowPaperclipDropdown(false);
-                          }}
-                          className={`
-                            p-2 rounded-lg transition-all
-                            ${
+                      <div className="flex items-center space-x-2 flex-shrink-0">
+                        <div className="relative">
+                          <button
+                            ref={globeButtonRef}
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setShowConnectorDropdown(!showConnectorDropdown);
+                              setShowGridDropdown(false);
+                              setShowPaperclipDropdown(false);
+                            }}
+                            className={`p-2 rounded-lg transition-all ${
+                              showConnectorDropdown
+                                ? 'bg-brand-aperol/20 text-brand-aperol'
+                                : 'text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-bg-dark'
+                            }`}
+                            aria-label="Connectors"
+                            title="Connectors"
+                          >
+                            <Globe className="w-5 h-5" />
+                          </button>
+                          <ConnectorDropdown
+                            isOpen={showConnectorDropdown}
+                            onClose={handleConnectorDropdownClose}
+                            connectors={updatedConnectors}
+                            onToggleConnector={handleToggleConnector}
+                            triggerRef={globeButtonRef as React.RefObject<HTMLElement>}
+                          />
+                        </div>
+
+                        <div className="relative">
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setShowGridDropdown(!showGridDropdown);
+                              setShowConnectorDropdown(false);
+                              setShowPaperclipDropdown(false);
+                            }}
+                            className={`p-2 rounded-lg transition-all ${
                               showGridDropdown
                                 ? 'bg-brand-aperol/20 text-brand-aperol'
                                 : 'text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-bg-dark'
-                            }
-                          `}
-                          aria-label="More options"
-                          title="More options"
-                        >
-                          <Grid3x3 className="w-5 h-5" />
-                        </button>
-                        {showGridDropdown && (
-                          <div className="absolute bottom-full right-0 mb-2 w-64 bg-os-surface-dark rounded-lg border border-os-border-dark shadow-lg p-2 z-50">
-                            <p className="text-sm text-os-text-secondary-dark p-2">
-                              More options coming soon
-                            </p>
-                          </div>
-                        )}
-                      </div>
+                            }`}
+                            aria-label="More options"
+                            title="More options"
+                          >
+                            <Grid3x3 className="w-5 h-5" />
+                          </button>
+                          {showGridDropdown && (
+                            <div className="absolute bottom-full right-0 mb-2 w-64 bg-os-surface-dark rounded-lg border border-os-border-dark shadow-lg p-2 z-50">
+                              <p className="text-sm text-os-text-secondary-dark p-2">More options coming soon</p>
+                            </div>
+                          )}
+                        </div>
 
-                      {/* Paperclip */}
-                      <div className="relative">
-                        <button
-                          type="button"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setShowPaperclipDropdown(!showPaperclipDropdown);
-                            setShowConnectorDropdown(false);
-                            setShowGridDropdown(false);
-                          }}
-                          className={`
-                            p-2 rounded-lg transition-all
-                            ${
+                        <div className="relative">
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setShowPaperclipDropdown(!showPaperclipDropdown);
+                              setShowConnectorDropdown(false);
+                              setShowGridDropdown(false);
+                            }}
+                            className={`p-2 rounded-lg transition-all ${
                               showPaperclipDropdown
                                 ? 'bg-brand-aperol/20 text-brand-aperol'
                                 : 'text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-bg-dark'
-                            }
-                          `}
-                          aria-label="Attach file"
-                          title="Attach file"
-                        >
-                          <Paperclip className="w-5 h-5" />
-                        </button>
-                        {showPaperclipDropdown && (
-                          <div className="absolute bottom-full right-0 mb-2 w-64 bg-os-surface-dark rounded-lg border border-os-border-dark shadow-lg p-2 z-50">
-                            <p className="text-sm text-os-text-secondary-dark p-2">
-                              Attachment options coming soon
-                            </p>
-                          </div>
-                        )}
-                      </div>
+                            }`}
+                            aria-label="Attach file"
+                            title="Attach file"
+                          >
+                            <Paperclip className="w-5 h-5" />
+                          </button>
+                          {showPaperclipDropdown && (
+                            <div className="absolute bottom-full right-0 mb-2 w-64 bg-os-surface-dark rounded-lg border border-os-border-dark shadow-lg p-2 z-50">
+                              <p className="text-sm text-os-text-secondary-dark p-2">Attachment options coming soon</p>
+                            </div>
+                          )}
+                        </div>
 
-                      {/* Microphone */}
-                      <button
-                        type="button"
-                        onClick={handleMicClick}
-                        className={`
-                          p-2 rounded-lg transition-all relative
-                          ${
+                        <button
+                          type="button"
+                          onClick={handleMicClick}
+                          className={`p-2 rounded-lg transition-all relative ${
                             isListening
                               ? 'bg-brand-aperol text-white animate-pulse'
                               : 'text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-bg-dark'
-                          }
-                        `}
-                        aria-label="Voice input"
-                        title={isListening ? 'Stop recording' : 'Start voice input'}
-                      >
-                        <Mic className="w-5 h-5" />
-                        {voiceError && (
-                          <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs text-red-400 whitespace-nowrap">
-                            {voiceError}
-                          </span>
-                        )}
-                      </button>
+                          }`}
+                          aria-label="Voice input"
+                          title={isListening ? 'Stop recording' : 'Start voice input'}
+                        >
+                          <Mic className="w-5 h-5" />
+                          {voiceError && (
+                            <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs text-red-400 whitespace-nowrap">
+                              {voiceError}
+                            </span>
+                          )}
+                        </button>
 
-                      {/* Send Button */}
-                      <button
-                        type="submit"
-                        disabled={!input.trim() || isLoading}
-                        className={`
-                          p-2 rounded-lg transition-all
-                          ${
+                        <button
+                          type="submit"
+                          disabled={!input.trim() || isLoading}
+                          className={`p-2 rounded-lg transition-all ${
                             input.trim() && !isLoading
                               ? 'bg-brand-aperol text-white hover:bg-brand-aperol/90'
                               : 'text-os-text-secondary-dark/50 cursor-not-allowed'
-                          }
-                        `}
-                        aria-label="Send message"
-                        title="Send message"
-                      >
-                        <Send className="w-5 h-5" />
-                      </button>
+                          }`}
+                          aria-label="Send message"
+                          title="Send message"
+                        >
+                          <Send className="w-5 h-5" />
+                        </button>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
-          </div>
-        )}
 
-        {/* Fixed suggestions container - positioned directly below chat input when in landing mode */}
-        {showSuggestions && !hasMessages && (
-          <div className="w-full max-w-3xl mx-auto px-4 mt-4">
-            <SearchResearchSuggestions mode={suggestionsMode} onQueryClick={handleQueryClick} />
-          </div>
+            {showSuggestions && (
+              <div className="w-full max-w-3xl mx-auto px-4 mt-4">
+                <SearchResearchSuggestions mode={suggestionsMode} onQueryClick={handleQueryClick} />
+              </div>
+            )}
+          </>
         )}
       </div>
     </>

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/lib/theme-provider';
+import { ChatProvider } from '@/lib/chat-context';
 import { VercelAnalytics } from '@/components/VercelAnalytics';
 
 const inter = Inter({
@@ -28,11 +29,12 @@ export default function RootLayout({
           forcedTheme="dark"
           disableTransitionOnChange
         >
-          {children}
+          <ChatProvider>
+            {children}
+          </ChatProvider>
         </ThemeProvider>
         <VercelAnalytics />
       </body>
     </html>
   );
 }
-

@@ -14,11 +14,13 @@ import {
   X,
   Plus,
   ArrowUpRight,
+  MessageSquare,
 } from 'lucide-react';
 import { NavigationDrawer } from './NavigationDrawer';
 import { Brandmark } from './Brandmark';
 import { BrandSelector } from './BrandSelector';
 import { MobileBrandSelector } from './MobileBrandSelector';
+import { useChatContext } from '@/lib/chat-context';
 
 const navItems = [
   { label: 'Home', href: '/', icon: Home },
@@ -33,10 +35,23 @@ export function Sidebar() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const railRef = useRef<HTMLElement>(null);
+  const { chatHistory, triggerChatReset } = useChatContext();
 
   const handleDrawerClose = useCallback(() => {
     setHoveredItem(null);
   }, []);
+
+  const handleNewChat = useCallback(() => {
+    triggerChatReset();
+    setIsMobileOpen(false);
+  }, [triggerChatReset]);
+
+  const handleHomeClick = useCallback(() => {
+    if (pathname === '/') {
+      triggerChatReset();
+    }
+    setIsMobileOpen(false);
+  }, [pathname, triggerChatReset]);
 
   return (
     <>
@@ -74,12 +89,13 @@ export function Sidebar() {
       >
         {/* Brand Selector - Desktop Only */}
         <div className="h-16 flex items-center justify-center border-b border-os-border-dark px-2 relative z-[70]">
-          <BrandSelector size={32} href="/" />
+          <BrandSelector size={32} href="/" onClick={handleHomeClick} />
         </div>
 
         {/* New Chat Button */}
         <div className="p-2">
           <button
+            onClick={handleNewChat}
             className="
               w-full flex flex-col items-center justify-center
               py-2 px-2 font-medium
@@ -106,15 +122,12 @@ export function Sidebar() {
                 key={item.href}
                 className="relative"
                 onMouseEnter={() => setHoveredItem(item.label)}
-                onMouseLeave={() => {
-                  // Don't immediately close - let NavigationDrawer handle it
-                  // This allows smooth movement from rail item to drawer
-                }}
+                onMouseLeave={() => {}}
               >
                 <Link
                   data-nav-item={item.label}
                   href={item.href}
-                  onClick={() => setIsMobileOpen(false)}
+                  onClick={item.href === '/' ? handleHomeClick : () => setIsMobileOpen(false)}
                   className={`
                     w-full flex flex-col items-center justify-center
                     py-2 px-2
@@ -126,18 +139,12 @@ export function Sidebar() {
                   <div className={`
                     w-8 h-8 flex items-center justify-center rounded-lg mb-1
                     transition-all duration-200
-                    ${
-                      isActive
-                        ? 'bg-os-surface-dark'
-                        : 'hover:bg-os-surface-dark'
-                    }
+                    ${isActive ? 'bg-os-surface-dark' : 'hover:bg-os-surface-dark'}
                   `}>
                     <Icon className={`w-5 h-5 flex-shrink-0 ${isActive ? 'text-brand-aperol' : 'text-os-text-secondary-dark group-hover:text-os-text-primary-dark'}`} />
                   </div>
                   <span className={`text-[10px] text-center leading-tight ${
-                    isActive
-                      ? 'text-brand-aperol'
-                      : 'text-os-text-secondary-dark hover:text-os-text-primary-dark'
+                    isActive ? 'text-brand-aperol' : 'text-os-text-secondary-dark hover:text-os-text-primary-dark'
                   }`}>
                     {item.label}
                   </span>
@@ -152,16 +159,8 @@ export function Sidebar() {
 
         {/* Bottom Section */}
         <div className="p-2 space-y-0.5">
-          {/* Notifications */}
           <button
-            className="
-              w-full flex flex-col items-center justify-center
-              py-2 px-2
-              text-os-text-secondary-dark
-              hover:text-os-text-primary-dark
-              transition-all duration-200
-              group
-            "
+            className="w-full flex flex-col items-center justify-center py-2 px-2 text-os-text-secondary-dark hover:text-os-text-primary-dark transition-all duration-200 group"
             title="Notifications"
           >
             <div className="w-8 h-8 flex items-center justify-center rounded-lg mb-1 hover:bg-os-surface-dark transition-all duration-200">
@@ -170,16 +169,8 @@ export function Sidebar() {
             <span className="text-[10px] text-center">Alerts</span>
           </button>
 
-          {/* User Profile */}
           <button
-            className="
-              w-full flex flex-col items-center justify-center
-              py-2 px-2
-              text-os-text-secondary-dark
-              hover:text-os-text-primary-dark
-              transition-all duration-200
-              group
-            "
+            className="w-full flex flex-col items-center justify-center py-2 px-2 text-os-text-secondary-dark hover:text-os-text-primary-dark transition-all duration-200 group"
             title="Account"
           >
             <div className="w-8 h-8 flex items-center justify-center rounded-lg mb-1 hover:bg-os-surface-dark transition-all duration-200">
@@ -190,16 +181,8 @@ export function Sidebar() {
             <span className="text-[10px] text-center">Account</span>
           </button>
 
-          {/* Upgrade */}
           <button
-            className="
-              w-full flex flex-col items-center justify-center
-              py-2 px-2
-              text-os-text-secondary-dark
-              hover:text-os-text-primary-dark
-              transition-all duration-200
-              group
-            "
+            className="w-full flex flex-col items-center justify-center py-2 px-2 text-os-text-secondary-dark hover:text-os-text-primary-dark transition-all duration-200 group"
             title="Upgrade"
           >
             <div className="w-8 h-8 flex items-center justify-center rounded-lg mb-1 hover:bg-os-surface-dark transition-all duration-200">
@@ -231,18 +214,38 @@ export function Sidebar() {
           {/* New Chat Button */}
           <div className="p-4">
             <button
+              onClick={handleNewChat}
               className="
                 w-full flex items-center space-x-3
                 py-3 px-4 bg-os-surface-dark hover:bg-os-border-dark 
                 text-os-text-primary-dark rounded-lg font-medium border border-os-border-dark
                 transition-all hover:shadow-lg
               "
-              onClick={() => setIsMobileOpen(false)}
             >
               <Plus className="w-5 h-5 text-brand-aperol" />
               <span>New Chat</span>
             </button>
           </div>
+
+          {/* Recent Chats */}
+          {chatHistory.length > 0 && (
+            <div className="px-4 pb-4">
+              <p className="text-xs font-medium text-os-text-secondary-dark uppercase tracking-wider mb-2">
+                Recent
+              </p>
+              <div className="space-y-1">
+                {chatHistory.map((chat) => (
+                  <button
+                    key={chat.id}
+                    className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-left text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-os-text-primary-dark transition-colors"
+                  >
+                    <MessageSquare className="w-4 h-4 flex-shrink-0" />
+                    <span className="text-sm truncate">{chat.title}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Navigation Items */}
           <nav className="px-3 space-y-1">
@@ -254,14 +257,13 @@ export function Sidebar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  onClick={() => setIsMobileOpen(false)}
+                  onClick={item.href === '/' ? handleHomeClick : () => setIsMobileOpen(false)}
                   className={`
                     flex items-center space-x-3 px-3 py-3 rounded-lg
                     transition-all duration-200
-                    ${
-                      isActive
-                        ? 'bg-os-surface-dark text-brand-aperol'
-                        : 'text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-os-text-primary-dark'
+                    ${isActive
+                      ? 'bg-os-surface-dark text-brand-aperol'
+                      : 'text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-os-text-primary-dark'
                     }
                   `}
                 >
@@ -272,33 +274,15 @@ export function Sidebar() {
             })}
           </nav>
 
-          {/* Divider */}
           <div className="border-t border-os-border-dark my-4" />
 
-          {/* Bottom Section */}
           <div className="px-3 space-y-1">
-            {/* Notifications */}
-            <button
-              className="
-                w-full flex items-center space-x-3 px-3 py-3 rounded-lg
-                text-os-text-secondary-dark
-                hover:bg-os-surface-dark hover:text-os-text-primary-dark
-                transition-all duration-200
-              "
-            >
+            <button className="w-full flex items-center space-x-3 px-3 py-3 rounded-lg text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-os-text-primary-dark transition-all duration-200">
               <Bell className="w-5 h-5" />
               <span className="font-medium">Notifications</span>
             </button>
 
-            {/* User Profile */}
-            <button
-              className="
-                w-full flex items-center space-x-3 px-3 py-3 rounded-lg
-                text-os-text-secondary-dark
-                hover:bg-os-surface-dark
-                transition-all duration-200
-              "
-            >
+            <button className="w-full flex items-center space-x-3 px-3 py-3 rounded-lg text-os-text-secondary-dark hover:bg-os-surface-dark transition-all duration-200">
               <div className="w-8 h-8 bg-gradient-to-br from-brand-charcoal to-black border border-os-border-dark rounded-full flex items-center justify-center flex-shrink-0">
                 <span className="text-white text-xs font-mono">A</span>
               </div>
@@ -308,15 +292,7 @@ export function Sidebar() {
               </div>
             </button>
 
-            {/* Upgrade */}
-            <button
-              className="
-                w-full flex items-center space-x-3 px-3 py-3 rounded-lg
-                text-os-text-secondary-dark
-                hover:bg-os-surface-dark hover:text-os-text-primary-dark
-                transition-all duration-200
-              "
-            >
+            <button className="w-full flex items-center space-x-3 px-3 py-3 rounded-lg text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-os-text-primary-dark transition-all duration-200">
               <ArrowUpRight className="w-5 h-5" />
               <span className="font-medium">Upgrade</span>
             </button>

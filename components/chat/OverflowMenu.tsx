@@ -14,23 +14,19 @@ import {
 
 interface OverflowMenuProps {
   threadTitle?: string;
+  content?: string;
   onAddBookmark?: () => void;
   onAddToSpace?: () => void;
   onRename?: () => void;
-  onExportPDF?: () => void;
-  onExportMarkdown?: () => void;
-  onExportDOCX?: () => void;
   onDelete?: () => void;
 }
 
 export function OverflowMenu({
   threadTitle = 'Untitled Thread',
+  content = '',
   onAddBookmark,
   onAddToSpace,
   onRename,
-  onExportPDF,
-  onExportMarkdown,
-  onExportDOCX,
   onDelete,
 }: OverflowMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,43 +45,102 @@ export function OverflowMenu({
     }
   }, [isOpen]);
 
+  const handleExport = async (format: 'pdf' | 'markdown' | 'docx') => {
+    setIsOpen(false);
+    
+    if (format === 'markdown') {
+      const blob = new Blob([content], { type: 'text/markdown' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${threadTitle.slice(0, 30).replace(/[^a-z0-9]/gi, '-')}.md`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    } else if (format === 'pdf') {
+      const printWindow = window.open('', '_blank');
+      if (printWindow) {
+        printWindow.document.write(`
+          <html>
+            <head>
+              <title>${threadTitle}</title>
+              <style>
+                body { font-family: system-ui; padding: 40px; max-width: 800px; margin: 0 auto; line-height: 1.6; }
+                h1, h2, h3 { margin-top: 1.5em; }
+              </style>
+            </head>
+            <body>
+              <h1>${threadTitle}</h1>
+              ${content.split('\n').map(line => `<p>${line}</p>`).join('')}
+            </body>
+          </html>
+        `);
+        printWindow.document.close();
+        printWindow.print();
+      }
+    } else if (format === 'docx') {
+      const blob = new Blob([content], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${threadTitle.slice(0, 30).replace(/[^a-z0-9]/gi, '-')}.txt`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+  };
+
   const menuItems = [
     {
       icon: Bookmark,
       label: 'Add Bookmark',
-      onClick: onAddBookmark || (() => console.log('Add Bookmark')),
+      onClick: () => {
+        onAddBookmark?.();
+        setIsOpen(false);
+      },
     },
     {
       icon: FolderPlus,
       label: 'Add to Space',
-      onClick: onAddToSpace || (() => console.log('Add to Space')),
+      onClick: () => {
+        onAddToSpace?.();
+        setIsOpen(false);
+      },
     },
     {
       icon: Pencil,
       label: 'Rename Thread',
-      onClick: onRename || (() => console.log('Rename Thread')),
+      onClick: () => {
+        onRename?.();
+        setIsOpen(false);
+      },
     },
     { type: 'divider' as const },
     {
       icon: FileText,
       label: 'Export as PDF',
-      onClick: onExportPDF || (() => console.log('Export PDF')),
+      onClick: () => handleExport('pdf'),
     },
     {
       icon: FileCode,
       label: 'Export as Markdown',
-      onClick: onExportMarkdown || (() => console.log('Export Markdown')),
+      onClick: () => handleExport('markdown'),
     },
     {
       icon: FileDown,
       label: 'Export as DOCX',
-      onClick: onExportDOCX || (() => console.log('Export DOCX')),
+      onClick: () => handleExport('docx'),
     },
     { type: 'divider' as const },
     {
       icon: Trash2,
       label: 'Delete',
-      onClick: onDelete || (() => console.log('Delete')),
+      onClick: () => {
+        onDelete?.();
+        setIsOpen(false);
+      },
       danger: true,
     },
   ];
@@ -138,10 +193,7 @@ export function OverflowMenu({
               return (
                 <button
                   key={idx}
-                  onClick={() => {
-                    if ('onClick' in item) item.onClick();
-                    setIsOpen(false);
-                  }}
+                  onClick={'onClick' in item ? item.onClick : undefined}
                   className={`
                     w-full flex items-center gap-3 px-4 py-2.5 text-sm transition-colors
                     ${
@@ -162,4 +214,3 @@ export function OverflowMenu({
     </div>
   );
 }
-
