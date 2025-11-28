@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback, useMemo } from 'react';
 import { useChat } from '@ai-sdk/react';
+import { DefaultChatTransport } from 'ai';
 import {
   Mic,
   Paperclip,
@@ -49,10 +50,12 @@ export function ChatInterface() {
   const globeButtonRef = useRef<HTMLButtonElement>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  // AI SDK useChat hook (v5 API) - using sendMessage for programmatic message submission
+  // AI SDK useChat hook (v5 API) - using DefaultChatTransport for API configuration
   const { messages, sendMessage, status, error } = useChat({
-    api: '/api/chat',
-    body: { model: selectedModel },
+    transport: new DefaultChatTransport({
+      api: '/api/chat',
+      body: { model: selectedModel },
+    }),
     onError: (err) => {
       console.error('Chat error:', err);
       setSubmitError(err.message || 'An error occurred while sending your message');
@@ -213,8 +216,8 @@ export function ChatInterface() {
     setShowSuggestions(false);
     
     try {
-      // Use sendMessage with text (AI SDK 5.x pattern)
-      await sendMessage({ text: userMessage });
+      // Use sendMessage with role and content (AI SDK 5.x pattern)
+      await sendMessage({ role: 'user', content: userMessage });
     } catch (err) {
       console.error('Failed to send message:', err);
       setSubmitError(err instanceof Error ? err.message : 'Failed to send message');
