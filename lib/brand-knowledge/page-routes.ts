@@ -117,13 +117,16 @@ export const BRAND_PAGE_ROUTES: Record<string, BrandPageRoute> = {
 };
 
 // Brand source documents with metadata
-export const BRAND_SOURCES: Record<string, { id: string; name: string; title: string; path: string; snippet: string }> = {
+// href is the page link for clicking the citation inline
+// tab is the specific tab/filter to select on that page (if applicable)
+export const BRAND_SOURCES: Record<string, { id: string; name: string; title: string; path: string; snippet: string; href: string; tab?: string }> = {
   brand_identity: {
     id: 'brand_identity',
     name: 'Brand Identity',
     title: 'Open Session Brand Identity System',
     path: '/.claude/knowledge/core/OS_brand identity.md',
     snippet: 'Logo, color, typography, and visual guidelines',
+    href: '/brain/brand-identity',
   },
   brand_messaging: {
     id: 'brand_messaging',
@@ -131,6 +134,7 @@ export const BRAND_SOURCES: Record<string, { id: string; name: string; title: st
     title: 'Open Session Brand Messaging',
     path: '/.claude/knowledge/core/OS_brand messaging.md',
     snippet: 'Voice, tone, content pillars, and writing guidelines',
+    href: '/brain/writing-styles',
   },
   art_direction: {
     id: 'art_direction',
@@ -138,41 +142,52 @@ export const BRAND_SOURCES: Record<string, { id: string; name: string; title: st
     title: 'Open Session Art Direction Guide',
     path: '/.claude/knowledge/core/OS_art direction.md',
     snippet: 'Creative territories, photography, textures',
+    href: '/brand-hub/art-direction',
   },
   writing_short: {
     id: 'writing_short',
-    name: 'Short-form Writing',
+    name: 'short-form writing',
     title: 'Short-form Content Guide',
     path: '/.claude/knowledge/writing-styles/short-form.md',
     snippet: 'Instagram, LinkedIn, social media writing',
+    href: '/brain/writing-styles',
+    tab: 'short-form',
   },
   writing_long: {
     id: 'writing_long',
-    name: 'Long-form Writing',
+    name: 'long-form writing',
     title: 'Long-form Content Guide',
     path: '/.claude/knowledge/writing-styles/long-form.md',
     snippet: 'YouTube, video scripts, in-depth content',
+    href: '/brain/writing-styles',
+    tab: 'long-form',
   },
   writing_blog: {
     id: 'writing_blog',
-    name: 'Blog Writing',
+    name: 'blog writing',
     title: 'Blog Writing Guide',
     path: '/.claude/knowledge/writing-styles/blog.md',
     snippet: 'Medium, Substack, website articles',
+    href: '/brain/writing-styles',
+    tab: 'blog',
   },
   writing_creative: {
     id: 'writing_creative',
-    name: 'Creative Writing',
+    name: 'creative writing',
     title: 'Creative Writing Guide',
     path: '/.claude/knowledge/writing-styles/creative.md',
     snippet: 'Experimental, artistic, AI creative workflows',
+    href: '/brain/writing-styles',
+    tab: 'creative',
   },
   writing_strategic: {
     id: 'writing_strategic',
-    name: 'Strategic Writing',
+    name: 'strategic writing',
     title: 'Strategic Communication Guide',
     path: '/.claude/knowledge/writing-styles/strategic.md',
     snippet: 'Business communication, proposals, advisory',
+    href: '/brain/writing-styles',
+    tab: 'strategic',
   },
 };
 

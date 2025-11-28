@@ -7,15 +7,17 @@ interface ShortcutModalProps {
   isOpen: boolean;
   onClose: () => void;
   defaultInstructions?: string;
+  defaultName?: string;
 }
 
 export function ShortcutModal({
   isOpen,
   onClose,
   defaultInstructions = '',
+  defaultName = '',
 }: ShortcutModalProps) {
   const [shortcutName, setShortcutName] = useState('');
-  const [instructions, setInstructions] = useState(defaultInstructions);
+  const [instructions, setInstructions] = useState('');
   const [showAdvanced, setShowAdvanced] = useState(false);
   const [mode, setMode] = useState<'search' | 'research'>('search');
   const [model, setModel] = useState('Best');
@@ -23,22 +25,31 @@ export function ShortcutModal({
 
   // Generate slug from name
   useEffect(() => {
-    const slug = shortcutName
-      .toLowerCase()
-      .replace(/[^a-z0-9\s-]/g, '')
-      .replace(/\s+/g, '-')
-      .slice(0, 30);
-    // Could be used for display
+    // Removed auto-slug effect to allow manual editing
   }, [shortcutName]);
 
   // Reset form when modal opens
   useEffect(() => {
     if (isOpen) {
-      setInstructions(defaultInstructions);
-      setShortcutName('');
+      // Use placeholder for instructions instead of response content
+      setInstructions('');
+      
+      // Set clean shortcut name from query
+      if (defaultName) {
+        const cleanName = defaultName
+          .replace(/^\//, '') // remove leading slash if present
+          .toLowerCase()
+          .replace(/[^a-z0-9\s-]/g, '')
+          .replace(/\s+/g, '-')
+          .slice(0, 40);
+        setShortcutName(cleanName);
+      } else {
+        setShortcutName('');
+      }
+      
       setShowAdvanced(false);
     }
-  }, [isOpen, defaultInstructions]);
+  }, [isOpen, defaultInstructions, defaultName]);
 
   const handleSave = () => {
     // Save shortcut logic would go here
@@ -126,30 +137,32 @@ export function ShortcutModal({
                 <label className="block text-sm text-os-text-secondary-dark mb-2">
                   Mode
                 </label>
-                <div className="flex items-center gap-1 p-1 bg-os-bg-dark rounded-lg border border-os-border-dark">
+                <div className="inline-flex items-center gap-1 p-1 bg-os-bg-dark rounded-lg border border-os-border-dark">
                   <button
                     onClick={() => setMode('search')}
                     className={`
                       flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm transition-colors
                       ${mode === 'search' 
-                        ? 'bg-brand-aperol/10 text-brand-aperol' 
+                        ? 'bg-brand-aperol/10 text-brand-aperol font-medium' 
                         : 'text-os-text-secondary-dark hover:text-os-text-primary-dark'
                       }
                     `}
                   >
                     <Search className="w-3.5 h-3.5" />
+                    <span>Search</span>
                   </button>
                   <button
                     onClick={() => setMode('research')}
                     className={`
                       flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm transition-colors
                       ${mode === 'research' 
-                        ? 'bg-brand-aperol/10 text-brand-aperol' 
+                        ? 'bg-brand-aperol/10 text-brand-aperol font-medium' 
                         : 'text-os-text-secondary-dark hover:text-os-text-primary-dark'
                       }
                     `}
                   >
                     <Sparkles className="w-3.5 h-3.5" />
+                    <span>Reason</span>
                   </button>
                 </div>
               </div>

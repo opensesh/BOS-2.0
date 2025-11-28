@@ -12,6 +12,8 @@ export interface BrandSourceInfo {
   path: string;
   snippet?: string;
   thumbnail?: string;
+  href?: string; // Page link for navigation
+  tab?: string;  // Tab/filter to select on the page
 }
 
 interface BrandSourcePopoverProps {

@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { AnswerView, parseContentToSections, SourceInfo } from './AnswerView';
+import { AnswerView, parseContentToSections, extractResourceCards, SourceInfo } from './AnswerView';
 import { ResponseActions } from './ResponseActions';
 import { RelatedQuestions } from './RelatedQuestions';
 
@@ -34,6 +34,11 @@ export function ChatContent({
     return parseContentToSections(content, sources);
   }, [content, sources]);
 
+  // Extract resource cards from content
+  const resourceCards = React.useMemo(() => {
+    return extractResourceCards(content);
+  }, [content]);
+
   const hasLinks = sources.length > 0;
 
   return (
@@ -44,13 +49,16 @@ export function ChatContent({
         sources={sources}
         isStreaming={isStreaming}
         showCitations={showCitations}
+        resourceCards={resourceCards}
       />
 
-      {/* Response actions - only on last response */}
-      {!isStreaming && content && isLastResponse && (
+      {/* Response actions - shown for all completed responses */}
+      {!isStreaming && content && (
         <ResponseActions
           sources={sources}
+          resourceCards={resourceCards}
           content={content}
+          query={query}
           onRegenerate={onRegenerate}
           showSources={hasLinks}
           modelUsed={modelUsed}

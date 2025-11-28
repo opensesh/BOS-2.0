@@ -8,7 +8,6 @@ import {
   ThumbsUp,
   ThumbsDown,
   Copy,
-  MoreHorizontal,
   Check,
   SquareSlash,
   FileText,
@@ -26,6 +25,7 @@ interface ResponseActionsProps {
   sources?: SourceInfo[];
   resourceCards?: BrandResourceCardProps[];
   content?: string;
+  query?: string;
   onShare?: () => void;
   onRegenerate?: () => void;
   showSources?: boolean;
@@ -48,6 +48,7 @@ export function ResponseActions({
   sources = [],
   resourceCards = [],
   content = '',
+  query = '',
   onShare,
   onRegenerate,
   showSources = false,
@@ -148,9 +149,9 @@ export function ResponseActions({
 
   return (
     <>
-      <div className="flex items-center justify-between py-3 mt-4">
+      <div className="flex flex-wrap items-center justify-between gap-2 py-3 mt-4">
         {/* Left side - action buttons */}
-        <div className="flex items-center gap-0.5">
+        <div className="flex items-center gap-0.5 flex-wrap">
           {/* Share button */}
           <Tooltip label={shared ? 'Link copied!' : 'Share'}>
             <button
@@ -267,7 +268,7 @@ export function ResponseActions({
         </div>
 
         {/* Right side - feedback and copy */}
-        <div className="flex items-center gap-0.5">
+        <div className="flex items-center gap-0.5 flex-shrink-0">
           <Tooltip label="Good response">
             <button
               onClick={() => setFeedback(feedback === 'up' ? null : 'up')}
@@ -312,14 +313,6 @@ export function ResponseActions({
               )}
             </button>
           </Tooltip>
-
-          <Tooltip label="More options">
-            <button
-              className="p-2 text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-surface-dark rounded-lg transition-colors"
-            >
-              <MoreHorizontal className="w-4 h-4" />
-            </button>
-          </Tooltip>
         </div>
       </div>
 
@@ -335,7 +328,8 @@ export function ResponseActions({
       <ShortcutModal
         isOpen={showShortcutModal}
         onClose={() => setShowShortcutModal(false)}
-        defaultInstructions={content.slice(0, 200)}
+        defaultInstructions=""
+        defaultName={query ? `/${query.slice(0, 30).toLowerCase().replace(/[^a-z0-9]+/g, '-')}` : '/new-shortcut'}
       />
 
       {/* Sources Drawer */}

@@ -1,12 +1,13 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import { Sidebar } from '@/components/Sidebar';
 import { MarkdownCodeViewer } from '@/components/brain/MarkdownCodeViewer';
 import { TabSelector } from '@/components/brain/TabSelector';
 import { BrainSettingsModal } from '@/components/brain/BrainSettingsModal';
-import { ArrowLeft, Settings } from 'lucide-react';
+import { ArrowLeft, Settings, Loader2 } from 'lucide-react';
 
 const writingStyles = [
   { id: 'blog', label: 'Blog', file: 'blog.md', path: '/claude-data/knowledge/writing-styles/blog.md' },
@@ -16,10 +17,19 @@ const writingStyles = [
   { id: 'strategic', label: 'Strategic', file: 'strategic.md', path: '/claude-data/knowledge/writing-styles/strategic.md' },
 ];
 
-export default function WritingStylesPage() {
+function WritingStylesContent() {
+  const searchParams = useSearchParams();
+  const tabParam = searchParams.get('tab');
   const [activeTab, setActiveTab] = useState('blog');
   const [content, setContent] = useState('');
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+
+  // Set active tab from URL param on mount
+  useEffect(() => {
+    if (tabParam && writingStyles.some(w => w.id === tabParam)) {
+      setActiveTab(tabParam);
+    }
+  }, [tabParam]);
 
   useEffect(() => {
     const activeFile = writingStyles.find(w => w.id === activeTab);
@@ -92,5 +102,19 @@ export default function WritingStylesPage() {
         defaultSection="writing"
       />
     </div>
+  );
+}
+
+export default function WritingStylesPage() {
+  return (
+    <Suspense 
+      fallback={
+        <div className="flex h-screen items-center justify-center bg-os-bg-dark text-os-text-primary-dark">
+          <Loader2 className="w-8 h-8 animate-spin text-brand-aperol" />
+        </div>
+      }
+    >
+      <WritingStylesContent />
+    </Suspense>
   );
 }
