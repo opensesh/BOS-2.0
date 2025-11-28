@@ -88,8 +88,8 @@ export function Sidebar() {
         `}
       >
         {/* Brand Selector - Desktop Only */}
-        <div className="h-16 flex items-center justify-center border-b border-os-border-dark px-2 relative z-[70]">
-          <BrandSelector size={32} href="/" onClick={handleHomeClick} />
+        <div className="h-12 flex items-center justify-center border-b border-os-border-dark px-2 relative z-[70]">
+          <BrandSelector size={24} href="/" onClick={handleHomeClick} />
         </div>
 
         {/* New Chat Button */}
@@ -205,7 +205,7 @@ export function Sidebar() {
         `}
       >
         {/* Mobile Header with Brand Selector */}
-        <div className="h-16 flex items-center justify-between px-4 border-b border-os-border-dark">
+        <div className="h-12 flex items-center justify-between px-4 border-b border-os-border-dark">
           <MobileBrandSelector onClose={() => setIsMobileOpen(false)} />
         </div>
 

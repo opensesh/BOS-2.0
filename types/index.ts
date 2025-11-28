@@ -182,3 +182,30 @@ export interface BrandResource {
   customIconUrl?: string;
   createdAt: string;
 }
+
+// Article Enrichment Types
+export interface ParagraphSource {
+  id: string;
+  name: string;
+  url: string;
+  title?: string;
+  favicon?: string;
+}
+
+export interface ArticleParagraph {
+  content: string;
+  sources: ParagraphSource[];
+}
+
+export interface ArticleSection {
+  id: string;
+  title?: string;
+  paragraphs: ArticleParagraph[];
+  imageUrl?: string;
+}
+
+export interface EnrichedArticleData {
+  sections: ArticleSection[];
+  relatedQueries: string[];
+  allSources: ParagraphSource[];
+}
