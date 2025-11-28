@@ -135,7 +135,7 @@ function BentoCard({ item }: { item: typeof brainPages[0] }) {
   return (
     <Link
       href={item.href}
-      className="group relative h-[260px] flex flex-col p-6 md:p-8 gap-6 md:gap-8 rounded-2xl bg-os-surface-dark border border-os-border-dark hover:border-brand-aperol/50 hover:bg-os-surface-dark/80 transition-all duration-300 ease-out"
+      className="group relative h-full flex flex-col p-6 md:p-8 gap-6 md:gap-8 rounded-2xl bg-os-surface-dark border border-os-border-dark hover:border-brand-aperol/50 hover:bg-os-surface-dark/80 transition-all duration-300 ease-out"
     >
       {/* Top Section: Icon and Arrow */}
       <div className="flex items-start justify-between">
