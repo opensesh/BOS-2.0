@@ -37,8 +37,8 @@ export function NewsCardMenu({
     setIsOpen(false);
   };
 
-  const iconSize = size === 'sm' ? 'w-4 h-4' : 'w-5 h-5';
-  const buttonPadding = size === 'sm' ? 'p-1.5' : 'p-2';
+  const iconSize = size === 'sm' ? 'w-3.5 h-3.5' : 'w-4 h-4';
+  const buttonPadding = size === 'sm' ? 'p-1' : 'p-1.5';
 
   return (
     <div className="relative" ref={menuRef}>
@@ -49,10 +49,10 @@ export function NewsCardMenu({
           setIsOpen(!isOpen);
         }}
         className={`
-          ${buttonPadding} rounded-lg transition-all
+          ${buttonPadding} rounded-md transition-all
           ${isOpen 
-            ? 'bg-os-surface-dark text-os-text-primary-dark' 
-            : 'text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-surface-dark/50'
+            ? 'text-os-text-primary-dark' 
+            : 'text-os-text-secondary-dark hover:text-os-text-primary-dark'
           }
         `}
         aria-label="More options"
@@ -62,18 +62,18 @@ export function NewsCardMenu({
 
       {isOpen && (
         <div 
-          className="absolute right-0 bottom-full mb-2 w-52 bg-os-surface-dark rounded-xl border border-os-border-dark shadow-2xl z-50 overflow-hidden"
+          className="absolute right-0 bottom-full mb-2 w-44 bg-os-surface-dark rounded-lg border border-os-border-dark shadow-2xl z-50 overflow-hidden"
           onClick={(e) => e.preventDefault()}
         >
-          <div className="py-1.5">
+          <div className="py-1">
             <button
               onClick={(e) => {
                 e.stopPropagation();
                 handleAction(onBookmark);
               }}
-              className="w-full flex items-center gap-3 px-4 py-2.5 text-sm text-os-text-primary-dark hover:bg-os-bg-dark transition-colors"
+              className="w-full flex items-center gap-2.5 px-3 py-2 text-sm text-os-text-primary-dark hover:bg-os-bg-dark transition-colors"
             >
-              <Bookmark className="w-4 h-4" />
+              <Bookmark className="w-3.5 h-3.5" />
               <span>Bookmark</span>
             </button>
             
@@ -82,22 +82,22 @@ export function NewsCardMenu({
                 e.stopPropagation();
                 handleAction(onAddToSpace);
               }}
-              className="w-full flex items-center gap-3 px-4 py-2.5 text-sm text-os-text-primary-dark hover:bg-os-bg-dark transition-colors"
+              className="w-full flex items-center gap-2.5 px-3 py-2 text-sm text-os-text-primary-dark hover:bg-os-bg-dark transition-colors"
             >
-              <FolderPlus className="w-4 h-4" />
+              <FolderPlus className="w-3.5 h-3.5" />
               <span>Add to Space</span>
             </button>
             
-            <div className="my-1.5 border-t border-os-border-dark" />
+            <div className="my-1 border-t border-os-border-dark" />
             
             <button
               onClick={(e) => {
                 e.stopPropagation();
                 handleAction(onDislike);
               }}
-              className="w-full flex items-center gap-3 px-4 py-2.5 text-sm text-os-text-secondary-dark hover:text-red-400 hover:bg-os-bg-dark transition-colors"
+              className="w-full flex items-center gap-2.5 px-3 py-2 text-sm text-os-text-secondary-dark hover:text-red-400 hover:bg-os-bg-dark transition-colors"
             >
-              <ThumbsDown className="w-4 h-4" />
+              <ThumbsDown className="w-3.5 h-3.5" />
               <span>Dislike</span>
             </button>
           </div>

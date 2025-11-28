@@ -261,20 +261,21 @@ export function NewsCard({ item, variant = 'compact', priority = false, onOpenSo
     );
   };
 
-  // Stacked Source Icons Component - Perplexity style
+  // Stacked Source Icons Component - Perplexity style (minimal, no background)
   const SourceIcons = () => {
     const maxIcons = 3;
     const visibleSources = displaySources.slice(0, maxIcons);
-    const iconSize = isFeatured ? 'w-6 h-6' : 'w-5 h-5';
-    const innerIconSize = isFeatured ? 'w-4 h-4' : 'w-3.5 h-3.5';
+    // Smaller icon sizes to match Perplexity
+    const iconSize = isFeatured ? 'w-5 h-5' : 'w-4 h-4';
+    const innerIconSize = isFeatured ? 'w-3 h-3' : 'w-2.5 h-2.5';
     
     return (
       <button 
-        className="flex items-center gap-2 px-2 py-1.5 rounded-full bg-os-surface-dark/80 hover:bg-os-surface-dark border border-os-border-dark/50 transition-all cursor-pointer group/sources"
+        className="flex items-center gap-1.5 hover:opacity-80 transition-opacity cursor-pointer group/sources"
         onClick={handleSourcesClick}
       >
-        {/* Stacked circular favicon icons */}
-        <div className="flex -space-x-1.5">
+        {/* Stacked circular favicon icons - smaller and tighter */}
+        <div className="flex -space-x-1">
           {visibleSources.map((source, idx) => {
             const logoData = SOURCE_LOGOS[source.name];
             const bgColor = logoData?.color || '#333';
@@ -284,10 +285,8 @@ export function NewsCard({ item, variant = 'compact', priority = false, onOpenSo
                 key={source.id || idx} 
                 className={`
                   relative ${iconSize} rounded-full overflow-hidden
-                  border-2 border-os-bg-dark
+                  border border-os-bg-dark
                   flex items-center justify-center
-                  transition-transform duration-150
-                  hover:scale-110 hover:z-10
                 `}
                 style={{ backgroundColor: bgColor }}
                 title={source.name}
@@ -298,19 +297,17 @@ export function NewsCard({ item, variant = 'compact', priority = false, onOpenSo
                     alt={source.name}
                     className={`${innerIconSize} object-contain`}
                     onError={(e) => {
-                      // Hide image and show fallback letter
                       e.currentTarget.style.display = 'none';
                       const fallback = e.currentTarget.nextElementSibling as HTMLElement;
                       if (fallback) fallback.style.display = 'flex';
                     }}
                   />
                 ) : null}
-                {/* Fallback letter - always rendered but hidden if image loads */}
                 <span 
                   className={`
                     absolute inset-0 flex items-center justify-center
                     text-white font-bold
-                    ${isFeatured ? 'text-[10px]' : 'text-[9px]'}
+                    ${isFeatured ? 'text-[8px]' : 'text-[7px]'}
                   `}
                   style={{ display: source.favicon ? 'none' : 'flex' }}
                 >
@@ -321,26 +318,26 @@ export function NewsCard({ item, variant = 'compact', priority = false, onOpenSo
           })}
         </div>
         
-        {/* Source count */}
+        {/* Source count - smaller text */}
         <span className={`
-          font-medium text-os-text-secondary-dark group-hover/sources:text-os-text-primary-dark transition-colors
-          ${isFeatured ? 'text-sm' : 'text-xs'}
+          text-os-text-secondary-dark group-hover/sources:text-os-text-primary-dark transition-colors
+          ${isFeatured ? 'text-xs' : 'text-[11px]'}
         `}>
-          {displaySources.length} sources
+          {displaySources.length} s...
         </span>
       </button>
     );
   };
 
-  // Action buttons - always visible like Perplexity
+  // Action buttons - minimal style like Perplexity
   const ActionButtons = () => (
-    <div className="flex items-center gap-1">
+    <div className="flex items-center gap-0.5">
       <button 
         className={`
-          p-2 rounded-lg transition-all
+          p-1.5 rounded-md transition-all
           ${isLiked 
-            ? 'text-brand-aperol bg-brand-aperol/10' 
-            : 'text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-surface-dark/50'
+            ? 'text-brand-aperol' 
+            : 'text-os-text-secondary-dark hover:text-os-text-primary-dark'
           }
         `}
         onClick={(e) => {
@@ -350,13 +347,14 @@ export function NewsCard({ item, variant = 'compact', priority = false, onOpenSo
         }}
         title={isLiked ? 'Unlike' : 'Like'}
       >
-        <Heart className={`${isFeatured ? 'w-5 h-5' : 'w-4 h-4'} ${isLiked ? 'fill-current' : ''}`} />
+        <Heart className={`${isFeatured ? 'w-4 h-4' : 'w-3.5 h-3.5'} ${isLiked ? 'fill-current' : ''}`} />
       </button>
       
       <NewsCardMenu 
         onBookmark={() => console.log('Bookmark:', item.title)}
         onAddToSpace={() => console.log('Add to Space:', item.title)}
         onDislike={() => console.log('Dislike:', item.title)}
+        size={isFeatured ? 'md' : 'sm'}
       />
     </div>
   );
@@ -366,7 +364,7 @@ export function NewsCard({ item, variant = 'compact', priority = false, onOpenSo
       <Link 
         ref={cardRef}
         href={`/discover/${item.slug}`}
-        className="group flex flex-col md:flex-row gap-6 p-4 rounded-xl bg-transparent hover:bg-os-surface-dark/30 transition-colors"
+        className="group flex flex-col md:flex-row gap-6 p-4 rounded-xl bg-transparent hover:bg-os-surface-dark/20 transition-colors"
       >
         {/* Text Content - LEFT */}
         <div className="flex-1 flex flex-col justify-between min-w-0">
@@ -405,12 +403,12 @@ export function NewsCard({ item, variant = 'compact', priority = false, onOpenSo
     );
   }
 
-  // Compact variant
+  // Compact variant - lighter hover background
   return (
     <Link 
       ref={cardRef}
       href={`/discover/${item.slug}`}
-      className="group flex flex-col gap-3 p-3 rounded-xl bg-transparent hover:bg-os-surface-dark/30 transition-colors"
+      className="group flex flex-col gap-2 p-2 rounded-lg bg-transparent hover:bg-os-surface-dark/10 transition-colors"
     >
       {/* Image */}
       <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-os-surface-dark">
@@ -418,7 +416,7 @@ export function NewsCard({ item, variant = 'compact', priority = false, onOpenSo
       </div>
 
       {/* Content */}
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-1.5 px-1">
         {/* Title */}
         <h3 className="text-sm font-medium text-brand-vanilla group-hover:text-brand-aperol transition-colors leading-snug line-clamp-2">
           {item.title}
