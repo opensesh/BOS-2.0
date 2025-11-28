@@ -293,6 +293,19 @@ export function ChatInterface() {
 
   // Check if we have messages (chat mode) or not (landing mode)
   const hasMessages = messages.length > 0;
+  
+  // Debug: log messages to see their structure
+  useEffect(() => {
+    console.log('Messages updated:', messages);
+    messages.forEach((m, i) => {
+      console.log(`Message ${i}:`, {
+        id: m.id,
+        role: m.role,
+        content: (m as any).content,
+        parts: (m as any).parts,
+      });
+    });
+  }, [messages]);
 
   return (
     <>
