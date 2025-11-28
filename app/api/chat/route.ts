@@ -82,8 +82,8 @@ Guidelines:
     });
 
     // Return streaming response in format useChat expects (AI SDK 5.x)
-    // Must use toDataStreamResponse() for useChat hook to parse correctly
-    return result.toDataStreamResponse({
+    // Must use toUIMessageStreamResponse() for useChat hook to parse correctly
+    return result.toUIMessageStreamResponse({
       headers: {
         'X-Model-Used': selectedModel,
       },
