@@ -7,6 +7,8 @@ import { CardGrid } from '@/components/discover/CardGrid';
 import { WidgetPanel } from '@/components/discover/WidgetPanel';
 import { useDiscoverData } from '@/hooks/useDiscoverData';
 import { Sidebar } from '@/components/Sidebar';
+import { SourcesDrawer } from '@/components/chat/SourcesDrawer';
+import { SourceInfo } from '@/components/chat/AnswerView';
 
 type MainTabType = 'News' | 'Inspiration';
 type NewsTypeOption = 'all' | 'ai' | 'design' | 'tech' | 'finance';
@@ -16,6 +18,10 @@ export default function DiscoverPage() {
   const [activeTab, setActiveTab] = useState<MainTabType>('News');
   const [activeNewsType, setActiveNewsType] = useState<NewsTypeOption>('all');
   const [activeInspirationType, setActiveInspirationType] = useState<InspirationTypeOption>('all');
+  
+  // Source Drawer State
+  const [isSourcesDrawerOpen, setIsSourcesDrawerOpen] = useState(false);
+  const [activeSources, setActiveSources] = useState<SourceInfo[]>([]);
   
   const { newsData, inspirationData, loading, error } = useDiscoverData();
 
@@ -56,6 +62,11 @@ export default function DiscoverPage() {
     }
   };
 
+  const handleOpenSources = (sources: SourceInfo[]) => {
+    setActiveSources(sources);
+    setIsSourcesDrawerOpen(true);
+  };
+
   const currentCards = getCurrentCards();
 
   return (
@@ -91,6 +102,7 @@ export default function DiscoverPage() {
               <CardGrid 
                 cards={currentCards} 
                 type={activeTab === 'News' ? 'news' : 'inspiration'}
+                onOpenSources={handleOpenSources}
               />
             )}
           </div>
@@ -101,6 +113,13 @@ export default function DiscoverPage() {
           </div>
         </div>
       </DiscoverLayout>
+      
+      {/* Sources Drawer */}
+      <SourcesDrawer 
+        isOpen={isSourcesDrawerOpen}
+        onClose={() => setIsSourcesDrawerOpen(false)}
+        sources={activeSources}
+      />
     </div>
   );
 }

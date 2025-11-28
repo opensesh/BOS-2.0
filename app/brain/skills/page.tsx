@@ -2,25 +2,52 @@
 
 import React, { useState, useEffect, Suspense } from 'react';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import { Sidebar } from '@/components/Sidebar';
 import { MarkdownCodeViewer } from '@/components/brain/MarkdownCodeViewer';
+import { TabSelector } from '@/components/brain/TabSelector';
 import { BrainSettingsModal } from '@/components/brain/BrainSettingsModal';
 import { ArrowLeft, Settings, Loader2 } from 'lucide-react';
 
+// Define the available skills files
 const skillFiles = [
-  { id: 'claude', label: 'System Configuration', file: 'claude.md', path: '/claude-data/claude.md' },
+  { id: 'system', label: 'System Configuration', file: 'claude.md', path: '/claude-data/claude.md' },
+  { id: 'architecture', label: 'Architecture', file: 'architecture.md', path: '/claude-data/system/architecture.md' },
 ];
 
 function SkillsContent() {
+  const searchParams = useSearchParams();
+  const tabParam = searchParams.get('tab');
+  const [activeTab, setActiveTab] = useState(skillFiles[0].id);
   const [content, setContent] = useState('');
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
+  // Set active tab from URL param on mount or when changed
   useEffect(() => {
-    fetch(skillFiles[0].path)
-      .then(res => res.text())
-      .then(text => setContent(text))
-      .catch(err => console.error('Failed to load content:', err));
-  }, []);
+    if (tabParam && skillFiles.some(s => s.id === tabParam)) {
+      setActiveTab(tabParam);
+    }
+  }, [tabParam]);
+
+  // Fetch content when active tab changes
+  useEffect(() => {
+    const activeFile = skillFiles.find(s => s.id === activeTab);
+    if (activeFile) {
+      setContent('Loading...');
+      fetch(activeFile.path)
+        .then(res => {
+          if (!res.ok) throw new Error('Failed to load content');
+          return res.text();
+        })
+        .then(text => setContent(text))
+        .catch(err => {
+          console.error('Failed to load content:', err);
+          setContent('Error loading content. Please check if the file exists.');
+        });
+    }
+  }, [activeTab]);
+
+  const activeFile = skillFiles.find(s => s.id === activeTab);
 
   return (
     <div className="flex h-screen bg-os-bg-dark text-os-text-primary-dark font-sans">
@@ -56,10 +83,18 @@ function SkillsContent() {
             </p>
           </div>
 
+          {/* Tab Selector */}
+          <TabSelector
+            tabs={skillFiles.map(s => ({ id: s.id, label: s.label }))}
+            activeTab={activeTab}
+            onChange={setActiveTab}
+            className="mb-6"
+          />
+
           {/* Content */}
           <MarkdownCodeViewer
-            filename={skillFiles[0].file}
-            content={content || 'Loading...'}
+            filename={activeFile?.file || 'loading...'}
+            content={content}
             maxLines={100}
           />
         </div>
@@ -88,4 +123,3 @@ export default function SkillsPage() {
     </Suspense>
   );
 }
-

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { Sidebar } from '@/components/Sidebar';
 import { BrainSettingsModal } from '@/components/brain/BrainSettingsModal';
-import { AddBrainResourceModal, BrainResourceIcon } from '@/components/brain/AddBrainResourceModal';
+import { AddBrainResourceModal } from '@/components/brain/AddBrainResourceModal';
 import { useBrainResources, BrainResource } from '@/hooks/useBrainResources';
 import { 
   Settings, 
@@ -72,9 +72,6 @@ function ResourceCard({
       onMouseEnter={() => setShowActions(true)}
       onMouseLeave={() => setShowActions(false)}
     >
-      <div className="p-2 rounded-lg bg-os-bg-dark/50 border border-os-border-dark flex-shrink-0">
-        <BrainResourceIcon type={resource.icon} size="md" />
-      </div>
       <div className="min-w-0 flex-1">
         <h4 className="text-sm font-display font-medium text-brand-vanilla group-hover:text-brand-aperol transition-colors">
           {resource.name}

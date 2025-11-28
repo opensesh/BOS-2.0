@@ -2,13 +2,15 @@ import React from 'react';
 import { NewsCard } from './NewsCard';
 import { InspirationCard } from './InspirationCard';
 import { NewsCardData, InspirationCardData } from '@/types';
+import { SourceInfo } from '@/components/chat/AnswerView';
 
 interface CardGridProps {
   cards: (NewsCardData | InspirationCardData)[];
   type: 'news' | 'inspiration';
+  onOpenSources?: (sources: SourceInfo[]) => void;
 }
 
-export function CardGrid({ cards, type }: CardGridProps) {
+export function CardGrid({ cards, type, onOpenSources }: CardGridProps) {
   if (cards.length === 0) {
     return (
       <div className="text-center py-20 text-os-text-secondary-dark">
@@ -36,9 +38,17 @@ export function CardGrid({ cards, type }: CardGridProps) {
           {/* Featured card - horizontal layout */}
           <div className="w-full">
             {type === 'news' ? (
-              <NewsCard item={group.featured as NewsCardData} variant="featured" />
+              <NewsCard 
+                item={group.featured as NewsCardData} 
+                variant="featured" 
+                onOpenSources={onOpenSources}
+              />
             ) : (
-              <InspirationCard item={group.featured as InspirationCardData} variant="featured" />
+              <InspirationCard 
+                item={group.featured as InspirationCardData} 
+                variant="featured" 
+                // InspirationCard doesn't support sources drawer yet, but could in future
+              />
             )}
           </div>
           
@@ -48,9 +58,16 @@ export function CardGrid({ cards, type }: CardGridProps) {
               {group.compact.map((card, cardIndex) => (
                 <div key={cardIndex}>
                   {type === 'news' ? (
-                    <NewsCard item={card as NewsCardData} variant="compact" />
+                    <NewsCard 
+                      item={card as NewsCardData} 
+                      variant="compact" 
+                      onOpenSources={onOpenSources}
+                    />
                   ) : (
-                    <InspirationCard item={card as InspirationCardData} variant="compact" />
+                    <InspirationCard 
+                      item={card as InspirationCardData} 
+                      variant="compact" 
+                    />
                   )}
                 </div>
               ))}

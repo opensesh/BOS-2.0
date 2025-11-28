@@ -3,8 +3,6 @@
 import { useState, useEffect } from 'react';
 import { Modal } from '@/components/ui/Modal';
 import { BrandResource } from '@/types';
-import { IconPickerModal } from './IconPickerModal';
-import { Plus } from 'lucide-react';
 
 interface AddResourceModalProps {
   isOpen: boolean;
@@ -14,12 +12,6 @@ interface AddResourceModalProps {
   onUpdateResource?: (id: string, updates: Partial<BrandResource>) => void;
 }
 
-const RESOURCE_ICONS = [
-  { id: 'google-drive', label: 'Google Drive', tooltip: 'Google Drive' },
-  { id: 'figma', label: 'Figma', tooltip: 'Figma' },
-  { id: 'notion', label: 'Notion', tooltip: 'Notion' },
-  { id: 'custom', label: 'Custom', tooltip: 'Custom Icon' },
-] as const;
 
 export function AddResourceModal({
   isOpen,
@@ -31,27 +23,17 @@ export function AddResourceModal({
   const isEditMode = !!editResource;
   const [name, setName] = useState('');
   const [url, setUrl] = useState('');
-  const [icon, setIcon] = useState<BrandResource['icon']>('custom');
-  const [lucideIconName, setLucideIconName] = useState<string | undefined>();
-  const [customIconUrl, setCustomIconUrl] = useState<string | undefined>();
   const [error, setError] = useState('');
-  const [isIconPickerOpen, setIsIconPickerOpen] = useState(false);
 
   // Pre-populate form when editing
   useEffect(() => {
     if (editResource && isOpen) {
       setName(editResource.name);
       setUrl(editResource.url);
-      setIcon(editResource.icon);
-      setLucideIconName(editResource.lucideIconName);
-      setCustomIconUrl(editResource.customIconUrl);
     } else if (!editResource && isOpen) {
       // Reset form when opening in add mode
       setName('');
       setUrl('');
-      setIcon('custom');
-      setLucideIconName(undefined);
-      setCustomIconUrl(undefined);
       setError('');
     }
   }, [editResource, isOpen]);
@@ -88,50 +70,27 @@ export function AddResourceModal({
       onUpdateResource(editResource.id, {
         name: name.trim(),
         url: urlToAdd,
-        icon,
-        lucideIconName,
-        customIconUrl,
       });
     } else {
       // Add new resource
       onAddResource({
         name: name.trim(),
         url: urlToAdd,
-        icon,
-        lucideIconName,
-        customIconUrl,
+        icon: 'custom',
       });
     }
 
     // Reset form and close
     setName('');
     setUrl('');
-    setIcon('custom');
-    setLucideIconName(undefined);
-    setCustomIconUrl(undefined);
     setError('');
     onClose();
-  };
-
-  const handleSelectLucideIcon = (iconName: string) => {
-    setIcon('lucide');
-    setLucideIconName(iconName);
-    setCustomIconUrl(undefined);
-  };
-
-  const handleUploadCustomIcon = (file: File) => {
-    // Create a local URL for the uploaded file
-    const url = URL.createObjectURL(file);
-    setIcon('custom');
-    setCustomIconUrl(url);
-    setLucideIconName(undefined);
   };
 
   const handleClose = () => {
     if (!isEditMode) {
       setName('');
       setUrl('');
-      setIcon('custom');
     }
     setError('');
     onClose();
@@ -184,54 +143,6 @@ export function AddResourceModal({
           />
           {error && <p className="mt-1 text-sm text-red-500">{error}</p>}
         </div>
-
-        <div>
-          <label className="block text-sm font-medium text-os-text-primary-dark mb-2">
-            Icon
-          </label>
-          <div className="flex flex-wrap gap-2">
-            {RESOURCE_ICONS.filter(ico => ico.id !== 'custom').map((iconOption) => (
-              <button
-                key={iconOption.id}
-                type="button"
-                onClick={() => setIcon(iconOption.id)}
-                title={iconOption.tooltip}
-                className={`
-                  p-3 rounded-lg transition-all
-                  ${
-                    icon === iconOption.id && !lucideIconName && !customIconUrl
-                      ? 'bg-brand-aperol text-white ring-2 ring-brand-aperol ring-offset-2 ring-offset-os-bg-dark'
-                      : 'bg-os-border-dark text-os-text-primary-dark hover:bg-os-border-dark/80'
-                  }
-                `}
-              >
-                <ResourceIconPreview type={iconOption.id} size="md" />
-              </button>
-            ))}
-            
-            {/* Lucide Icon or Custom Upload Display */}
-            {(icon === 'lucide' && lucideIconName) || (icon === 'custom' && customIconUrl) ? (
-              <button
-                type="button"
-                onClick={() => setIsIconPickerOpen(true)}
-                title="Change icon"
-                className="p-3 rounded-lg transition-all bg-brand-aperol text-white ring-2 ring-brand-aperol ring-offset-2 ring-offset-os-bg-dark"
-              >
-                <ResourceIconPreview type={icon} lucideIconName={lucideIconName} customIconUrl={customIconUrl} size="md" />
-              </button>
-            ) : null}
-            
-            {/* Add Icon Button */}
-            <button
-              type="button"
-              onClick={() => setIsIconPickerOpen(true)}
-              title="Choose from library or upload"
-              className="p-3 rounded-lg transition-all bg-os-border-dark text-os-text-primary-dark hover:bg-brand-aperol/20 hover:border-brand-aperol border-2 border-dashed border-transparent"
-            >
-              <Plus className="w-5 h-5" />
-            </button>
-          </div>
-        </div>
       </div>
 
       {/* Actions */}
@@ -250,13 +161,6 @@ export function AddResourceModal({
         </button>
       </div>
 
-      {/* Icon Picker Modal */}
-      <IconPickerModal
-        isOpen={isIconPickerOpen}
-        onClose={() => setIsIconPickerOpen(false)}
-        onSelectIcon={handleSelectLucideIcon}
-        onUploadIcon={handleUploadCustomIcon}
-      />
     </Modal>
   );
 }

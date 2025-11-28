@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import { Modal } from '@/components/ui/Modal';
 import { BrainResource } from '@/hooks/useBrainResources';
-import { Zap, FolderOpen, FileCode, Terminal, PenTool, Link } from 'lucide-react';
 
 interface AddBrainResourceModalProps {
   isOpen: boolean;
@@ -13,14 +12,6 @@ interface AddBrainResourceModalProps {
   onUpdateResource?: (id: string, updates: Partial<BrainResource>) => void;
 }
 
-const RESOURCE_ICONS = [
-  { id: 'skills', label: 'Skills', icon: Zap },
-  { id: 'projects', label: 'Projects', icon: FolderOpen },
-  { id: 'claude-md', label: 'Claude.md', icon: FileCode },
-  { id: 'commands', label: 'Commands', icon: Terminal },
-  { id: 'writing-styles', label: 'Styles', icon: PenTool },
-  { id: 'custom', label: 'Custom', icon: Link },
-] as const;
 
 export function AddBrainResourceModal({
   isOpen,
@@ -32,7 +23,6 @@ export function AddBrainResourceModal({
   const isEditMode = !!editResource;
   const [name, setName] = useState('');
   const [url, setUrl] = useState('');
-  const [icon, setIcon] = useState<BrainResource['icon']>('custom');
   const [error, setError] = useState('');
 
   // Pre-populate form when editing
@@ -40,7 +30,6 @@ export function AddBrainResourceModal({
     if (editResource) {
       setName(editResource.name);
       setUrl(editResource.url);
-      setIcon(editResource.icon);
     }
   }, [editResource]);
 
@@ -75,19 +64,17 @@ export function AddBrainResourceModal({
       onUpdateResource(editResource.id, {
         name: name.trim(),
         url: urlToAdd,
-        icon,
       });
     } else {
       onAddResource({
         name: name.trim(),
         url: urlToAdd,
-        icon,
+        icon: 'custom',
       });
     }
 
     setName('');
     setUrl('');
-    setIcon('custom');
     setError('');
     onClose();
   };
@@ -95,7 +82,6 @@ export function AddBrainResourceModal({
   const handleClose = () => {
     setName('');
     setUrl('');
-    setIcon('custom');
     setError('');
     onClose();
   };
@@ -146,35 +132,6 @@ export function AddBrainResourceModal({
             "
           />
           {error && <p className="mt-1 text-sm text-red-500">{error}</p>}
-        </div>
-
-        <div>
-          <label className="block text-sm font-medium text-os-text-primary-dark mb-2">
-            Icon
-          </label>
-          <div className="grid grid-cols-3 gap-2">
-            {RESOURCE_ICONS.map((iconOption) => {
-              const IconComponent = iconOption.icon;
-              return (
-                <button
-                  key={iconOption.id}
-                  type="button"
-                  onClick={() => setIcon(iconOption.id as BrainResource['icon'])}
-                  className={`
-                    flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors
-                    ${
-                      icon === iconOption.id
-                        ? 'bg-brand-aperol text-white'
-                        : 'bg-os-border-dark text-os-text-primary-dark hover:bg-os-border-dark/80'
-                    }
-                  `}
-                >
-                  <IconComponent className="w-4 h-4" />
-                  {iconOption.label}
-                </button>
-              );
-            })}
-          </div>
         </div>
       </div>
 
