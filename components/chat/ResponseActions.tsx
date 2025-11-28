@@ -15,13 +15,16 @@ import {
   FileCode,
   FileDown,
   Globe,
+  Hexagon,
 } from 'lucide-react';
 import { SourceInfo } from './AnswerView';
+import { BrandResourceCardProps } from './BrandResourceCard';
 import { ShortcutModal } from './ShortcutModal';
 import { SourcesDrawer } from './SourcesDrawer';
 
 interface ResponseActionsProps {
   sources?: SourceInfo[];
+  resourceCards?: BrandResourceCardProps[];
   content?: string;
   onShare?: () => void;
   onRegenerate?: () => void;
@@ -43,6 +46,7 @@ function Tooltip({ children, label }: { children: React.ReactNode; label: string
 
 export function ResponseActions({
   sources = [],
+  resourceCards = [],
   content = '',
   onShare,
   onRegenerate,
@@ -137,7 +141,10 @@ export function ResponseActions({
 
   // Check if Perplexity model is used
   const isPerplexityModel = modelUsed?.includes('sonar') || modelUsed?.includes('perplexity');
-  const hasSourcesData = sources.length > 0;
+  const hasExternalSources = sources.length > 0;
+  const hasBrandResources = resourceCards.length > 0;
+  const totalSourcesCount = sources.length + resourceCards.length;
+  const hasAnySourcesData = hasExternalSources || hasBrandResources;
 
   return (
     <>
@@ -224,15 +231,16 @@ export function ResponseActions({
             </button>
           </Tooltip>
 
-          {/* Sources button - shows for any sources available */}
-          {hasSourcesData && (
+          {/* Sources button - shows for any sources available (external or brand) */}
+          {hasAnySourcesData && (
             <button
               onClick={() => setShowSourcesDrawer(true)}
               className="flex items-center gap-2 ml-2 px-2.5 py-1.5 rounded-full bg-os-surface-dark/80 hover:bg-os-surface-dark border border-os-border-dark/50 transition-colors group"
             >
-              {/* Stacked source favicons */}
+              {/* Stacked source icons */}
               <div className="flex -space-x-1">
-                {sources.slice(0, 3).map((source, idx) => (
+                {/* Show external source favicons first */}
+                {sources.slice(0, hasBrandResources ? 2 : 3).map((source, idx) => (
                   <div
                     key={source.id || idx}
                     className="w-5 h-5 rounded-full bg-os-bg-dark border border-os-border-dark flex items-center justify-center"
@@ -244,9 +252,15 @@ export function ResponseActions({
                     )}
                   </div>
                 ))}
+                {/* Show brand icon if we have brand resources */}
+                {hasBrandResources && (
+                  <div className="w-5 h-5 rounded-full bg-brand-aperol/20 border border-brand-aperol/30 flex items-center justify-center">
+                    <Hexagon className="w-2.5 h-2.5 text-brand-aperol" />
+                  </div>
+                )}
               </div>
               <span className="text-[13px] text-os-text-secondary-dark group-hover:text-os-text-primary-dark transition-colors">
-                {sources.length} sources
+                {totalSourcesCount} {totalSourcesCount === 1 ? 'source' : 'sources'}
               </span>
             </button>
           )}
@@ -329,6 +343,7 @@ export function ResponseActions({
         isOpen={showSourcesDrawer}
         onClose={() => setShowSourcesDrawer(false)}
         sources={sources}
+        resourceCards={resourceCards}
       />
     </>
   );

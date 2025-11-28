@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo } from 'react';
 import { ChatTabNav, ChatTab } from './ChatTabNav';
-import { AnswerView, parseContentToSections, SourceInfo } from './AnswerView';
+import { AnswerView, parseContentToSections, extractResourceCards, SourceInfo } from './AnswerView';
 import { LinksView } from './LinksView';
 import { ImagesView, ImageResult } from './ImagesView';
 import { ResponseActions } from './ResponseActions';
@@ -43,6 +43,11 @@ export function ChatResponse({
     return parseContentToSections(content, sources);
   }, [content, sources]);
 
+  // Extract resource cards from content
+  const resourceCards = useMemo(() => {
+    return extractResourceCards(content);
+  }, [content]);
+
   const hasLinks = sources.length > 0;
   const hasImages = images.length > 0;
 
@@ -80,12 +85,14 @@ export function ChatResponse({
                 sources={sources}
                 isStreaming={isStreaming}
                 showCitations={showCitations}
+                resourceCards={resourceCards}
               />
 
               {/* Response actions */}
               {!isStreaming && content && (
                 <ResponseActions
                   sources={sources}
+                  resourceCards={resourceCards}
                   content={content}
                   onRegenerate={onRegenerate}
                   showSources={showCitations && hasLinks}

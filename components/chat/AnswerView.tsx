@@ -65,20 +65,18 @@ export function AnswerView({
       <div className="space-y-3">
         {sections.map((section, idx) => {
           if (section.type === 'heading') {
-            const HeadingTag = `h${section.level || 2}` as keyof JSX.IntrinsicElements;
-            return (
-              <HeadingTag
-                key={idx}
-                className={`
-                  font-bold text-os-text-primary-dark
-                  ${section.level === 1 ? 'text-[18px] mt-5 mb-1' : ''}
-                  ${section.level === 2 ? 'text-[17px] mt-4 mb-1' : ''}
-                  ${section.level === 3 ? 'text-[16px] mt-3 mb-0.5' : ''}
-                `}
-              >
-                {section.content}
-              </HeadingTag>
-            );
+            const level = section.level || 2;
+            const className = `font-bold text-os-text-primary-dark ${
+              level === 1 ? 'text-[18px] mt-5 mb-1' : ''
+            } ${
+              level === 2 ? 'text-[17px] mt-4 mb-1' : ''
+            } ${
+              level === 3 ? 'text-[16px] mt-3 mb-0.5' : ''
+            }`.trim();
+            
+            if (level === 1) return <h1 key={idx} className={className}>{section.content}</h1>;
+            if (level === 2) return <h2 key={idx} className={className}>{section.content}</h2>;
+            return <h3 key={idx} className={className}>{section.content}</h3>;
           }
 
           if (section.type === 'list' && section.items) {
@@ -187,10 +185,12 @@ export function parseContentToSections(
         });
       }
 
-      // Clean content of all citation markers
+      // Clean content of all citation and resource markers
+      const resourceMarkerRegex = /\[resource:\w+(?:-\w+)?\]/g;
       const cleanContent = currentParagraph
         .replace(numberedCitationRegex, '')
         .replace(brandCitationRegex, '')
+        .replace(resourceMarkerRegex, '')
         .trim();
 
       sections.push({
@@ -204,11 +204,23 @@ export function parseContentToSections(
 
   const flushList = () => {
     if (currentList.length > 0) {
-      sections.push({
-        type: 'list',
-        content: '',
-        items: [...currentList],
-      });
+      // Convert bullet lists with 4+ items into prose paragraphs
+      // This creates more readable, flowing text
+      if (currentList.length >= 4 && !containsCodeOrPaths(currentList)) {
+        // Join list items into a flowing paragraph
+        const proseContent = convertListToProse(currentList);
+        sections.push({
+          type: 'paragraph',
+          content: proseContent,
+        });
+      } else {
+        // Keep as list for short lists or technical content
+        sections.push({
+          type: 'list',
+          content: '',
+          items: [...currentList],
+        });
+      }
       currentList = [];
       inList = false;
     }
@@ -224,22 +236,29 @@ export function parseContentToSections(
     const listMatch = line.match(/^[-*]\s+(.+)$/);
     const numberedListMatch = line.match(/^\d+\.\s+(.+)$/);
 
+    // Helper to clean markers from any content
+    const cleanMarkers = (text: string) => text
+      .replace(/\[\d+\]/g, '')
+      .replace(/\[source:\w+\]/g, '')
+      .replace(/\[resource:\w+(?:-\w+)?\]/g, '')
+      .trim();
+
     if (h1Match) {
       flushParagraph();
       flushList();
-      sections.push({ type: 'heading', content: h1Match[1], level: 1 });
+      sections.push({ type: 'heading', content: cleanMarkers(h1Match[1]), level: 1 });
     } else if (h2Match) {
       flushParagraph();
       flushList();
-      sections.push({ type: 'heading', content: h2Match[1], level: 2 });
+      sections.push({ type: 'heading', content: cleanMarkers(h2Match[1]), level: 2 });
     } else if (h3Match) {
       flushParagraph();
       flushList();
-      sections.push({ type: 'heading', content: h3Match[1], level: 3 });
+      sections.push({ type: 'heading', content: cleanMarkers(h3Match[1]), level: 3 });
     } else if (listMatch || numberedListMatch) {
       flushParagraph();
       inList = true;
-      currentList.push((listMatch || numberedListMatch)![1]);
+      currentList.push(cleanMarkers((listMatch || numberedListMatch)![1]));
     } else if (line.trim() === '') {
       flushParagraph();
       flushList();
@@ -254,6 +273,85 @@ export function parseContentToSections(
   flushParagraph();
   flushList();
   return sections;
+}
+
+/**
+ * Check if list items contain code, paths, or technical content that should remain as bullets
+ */
+function containsCodeOrPaths(items: string[]): boolean {
+  const technicalPatterns = [
+    /^\/[\w-]+/, // File paths starting with /
+    /\.(svg|png|jpg|woff2?|ttf|css|js|tsx?)/, // File extensions
+    /#[0-9A-Fa-f]{3,8}/, // Hex colors
+    /^\d+(\.\d+)?px/, // Pixel values
+    /^[A-Z][a-z]+:/, // Label: value format
+    /`[^`]+`/, // Inline code
+    /^\d+\.\s/, // Numbered steps
+  ];
+  
+  return items.some(item => 
+    technicalPatterns.some(pattern => pattern.test(item))
+  );
+}
+
+/**
+ * Convert a list of bullet points into flowing prose
+ */
+function convertListToProse(items: string[]): string {
+  // Clean up items and join with appropriate connectors
+  const cleaned = items.map(item => {
+    // Remove leading bullet-like characters and clean up
+    let text = item.trim();
+    // Ensure first letter is lowercase for joining (unless it's a proper noun)
+    if (text.length > 0 && text[0] === text[0].toUpperCase() && !isProperNoun(text)) {
+      text = text[0].toLowerCase() + text.slice(1);
+    }
+    // Remove trailing periods for joining
+    text = text.replace(/\.$/, '');
+    return text;
+  });
+
+  // Build prose with varied connectors
+  if (cleaned.length === 0) return '';
+  if (cleaned.length === 1) return cleaned[0] + '.';
+  if (cleaned.length === 2) return `${capitalizeFirst(cleaned[0])} and ${cleaned[1]}.`;
+  
+  // For 3+ items, create flowing prose
+  const connectors = ['Additionally,', 'Furthermore,', 'Also,', 'This includes', 'Moreover,'];
+  let result = capitalizeFirst(cleaned[0]);
+  
+  for (let i = 1; i < cleaned.length; i++) {
+    if (i === cleaned.length - 1) {
+      // Last item
+      result += `, and ${cleaned[i]}`;
+    } else if (i % 3 === 0 && i < cleaned.length - 1) {
+      // Every 3rd item, start a new sentence for readability
+      result += `. ${connectors[i % connectors.length]} ${cleaned[i]}`;
+    } else {
+      result += `, ${cleaned[i]}`;
+    }
+  }
+  
+  return result + '.';
+}
+
+/**
+ * Check if text starts with a proper noun (simple heuristic)
+ */
+function isProperNoun(text: string): boolean {
+  const properNounPatterns = [
+    /^(Open Session|OPEN SESSION|Neue Haas|OffBit|Brand OS|BOS)/i,
+    /^[A-Z][a-z]+\s+[A-Z]/, // Two capitalized words
+  ];
+  return properNounPatterns.some(p => p.test(text));
+}
+
+/**
+ * Capitalize the first letter of a string
+ */
+function capitalizeFirst(text: string): string {
+  if (!text) return '';
+  return text[0].toUpperCase() + text.slice(1);
 }
 
 /**
