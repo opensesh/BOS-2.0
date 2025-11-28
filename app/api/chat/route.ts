@@ -1,4 +1,4 @@
-import { streamText } from 'ai';
+import { streamText, convertToModelMessages } from 'ai';
 import { ModelId, getModelInstance, models } from '@/lib/ai/providers';
 import { autoSelectModel } from '@/lib/ai/auto-router';
 
@@ -61,10 +61,13 @@ export async function POST(req: Request) {
     // Get the model instance
     const modelInstance = getModelInstance(selectedModel);
 
+    // Convert UI messages to model messages (AI SDK 5.x requirement)
+    const modelMessages = convertToModelMessages(messages);
+
     // Stream the response
     const result = streamText({
       model: modelInstance,
-      messages,
+      messages: modelMessages,
       // System prompt for brand context
       system: `You are the Brand Operating System (BOS), an AI assistant designed to help with brand strategy, creative direction, and business operations.
 
