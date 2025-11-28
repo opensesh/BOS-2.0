@@ -1,6 +1,7 @@
 import { streamText, convertToModelMessages } from 'ai';
 import { ModelId, getModelInstance, models } from '@/lib/ai/providers';
 import { autoSelectModel } from '@/lib/ai/auto-router';
+import { buildBrandSystemPrompt, shouldIncludeFullDocs, BRAND_SOURCES } from '@/lib/brand-knowledge';
 
 export const maxDuration = 30; // Allow streaming responses up to 30 seconds
 
@@ -64,31 +65,25 @@ export async function POST(req: Request) {
     // Convert UI messages to model messages (AI SDK 5.x requirement)
     const modelMessages = convertToModelMessages(messages);
 
+    // Build brand-aware system prompt
+    const systemPrompt = buildBrandSystemPrompt({
+      includeFullDocs: shouldIncludeFullDocs(messages),
+    });
+
     // Stream the response
     const result = streamText({
       model: modelInstance,
       messages: modelMessages,
-      // System prompt for brand context
-      system: `You are the Brand Operating System (BOS), an AI assistant designed to help with brand strategy, creative direction, and business operations.
-
-Personality:
-- Friendly: Warm, approachable, never condescending
-- Creative: Experimental, curious, innovative  
-- Visionary: Forward-thinking but realistic
-
-Guidelines:
-- Use first person plural (we, us, our)
-- Active voice, present tense
-- Balance expertise with accessibility
-- Never gatekeep knowledge
-- Be concise but thorough`,
+      system: systemPrompt,
     });
 
     // Return streaming response in format useChat expects (AI SDK 5.x)
     // Must use toUIMessageStreamResponse() for useChat hook to parse correctly
+    // Include brand sources in headers for client-side citation rendering
     return result.toUIMessageStreamResponse({
       headers: {
         'X-Model-Used': selectedModel,
+        'X-Brand-Sources': JSON.stringify(BRAND_SOURCES),
       },
     });
   } catch (error) {

@@ -52,7 +52,7 @@ export function ChatContent({
           sources={sources}
           content={content}
           onRegenerate={onRegenerate}
-          showSources={showCitations && hasLinks}
+          showSources={hasLinks}
           modelUsed={modelUsed}
         />
       )}

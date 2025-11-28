@@ -1,6 +1,6 @@
 // Chat components barrel export
 export { ChatTabNav, type ChatTab } from './ChatTabNav';
-export { AnswerView, parseContentToSections, type SourceInfo, type ContentSection } from './AnswerView';
+export { AnswerView, parseContentToSections, extractResourceCards, cleanResourceMarkers, type SourceInfo, type ContentSection } from './AnswerView';
 export { LinksView } from './LinksView';
 export { ImagesView, type ImageResult } from './ImagesView';
 export { OverflowMenu } from './OverflowMenu';
@@ -14,4 +14,5 @@ export { FollowUpInput } from './FollowUpInput';
 export { ShortcutModal } from './ShortcutModal';
 export { ChatHeader } from './ChatHeader';
 export { ChatContent } from './ChatContent';
+export { SourcesDrawer } from './SourcesDrawer';
 

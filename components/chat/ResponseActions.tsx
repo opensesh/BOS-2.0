@@ -10,7 +10,7 @@ import {
   Copy,
   MoreHorizontal,
   Check,
-  Command,
+  SquareSlash,
   FileText,
   FileCode,
   FileDown,
@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import { SourceInfo } from './AnswerView';
 import { ShortcutModal } from './ShortcutModal';
+import { SourcesDrawer } from './SourcesDrawer';
 
 interface ResponseActionsProps {
   sources?: SourceInfo[];
@@ -26,6 +27,18 @@ interface ResponseActionsProps {
   onRegenerate?: () => void;
   showSources?: boolean;
   modelUsed?: string;
+}
+
+// Custom Tooltip component
+function Tooltip({ children, label }: { children: React.ReactNode; label: string }) {
+  return (
+    <div className="relative group/tooltip">
+      {children}
+      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-os-surface-dark border border-os-border-dark rounded text-xs text-os-text-primary-dark whitespace-nowrap opacity-0 invisible group-hover/tooltip:opacity-100 group-hover/tooltip:visible transition-all pointer-events-none z-50 shadow-lg">
+        {label}
+      </div>
+    </div>
+  );
 }
 
 export function ResponseActions({
@@ -41,6 +54,7 @@ export function ResponseActions({
   const [shared, setShared] = useState(false);
   const [showExportMenu, setShowExportMenu] = useState(false);
   const [showShortcutModal, setShowShortcutModal] = useState(false);
+  const [showSourcesDrawer, setShowSourcesDrawer] = useState(false);
   const exportMenuRef = useRef<HTMLDivElement>(null);
 
   // Close export menu when clicking outside
@@ -123,42 +137,45 @@ export function ResponseActions({
 
   // Check if Perplexity model is used
   const isPerplexityModel = modelUsed?.includes('sonar') || modelUsed?.includes('perplexity');
+  const hasSourcesData = sources.length > 0;
 
   return (
     <>
-      <div className="flex items-center justify-between py-3 border-t border-os-border-dark/50 mt-6">
+      <div className="flex items-center justify-between py-3 mt-4">
         {/* Left side - action buttons */}
-        <div className="flex items-center gap-1">
-          {/* Share button with checkmark state */}
-          <button
-            onClick={handleShare}
-            className={`
-              p-2 rounded-lg transition-colors
-              ${shared 
-                ? 'text-green-400' 
-                : 'text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-surface-dark'
-              }
-            `}
-            title={shared ? 'Link copied!' : 'Share'}
-          >
-            {shared ? <Check className="w-4 h-4" /> : <Share2 className="w-4 h-4" />}
-          </button>
-
-          {/* Export dropdown */}
-          <div className="relative" ref={exportMenuRef}>
+        <div className="flex items-center gap-0.5">
+          {/* Share button */}
+          <Tooltip label={shared ? 'Link copied!' : 'Share'}>
             <button
-              onClick={() => setShowExportMenu(!showExportMenu)}
+              onClick={handleShare}
               className={`
                 p-2 rounded-lg transition-colors
-                ${showExportMenu 
-                  ? 'text-os-text-primary-dark bg-os-surface-dark' 
+                ${shared 
+                  ? 'text-green-400' 
                   : 'text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-surface-dark'
                 }
               `}
-              title="Export"
             >
-              <Download className="w-4 h-4" />
+              {shared ? <Check className="w-4 h-4" /> : <Share2 className="w-4 h-4" />}
             </button>
+          </Tooltip>
+
+          {/* Export dropdown */}
+          <div className="relative" ref={exportMenuRef}>
+            <Tooltip label="Export">
+              <button
+                onClick={() => setShowExportMenu(!showExportMenu)}
+                className={`
+                  p-2 rounded-lg transition-colors
+                  ${showExportMenu 
+                    ? 'text-os-text-primary-dark bg-os-surface-dark' 
+                    : 'text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-surface-dark'
+                  }
+                `}
+              >
+                <Download className="w-4 h-4" />
+              </button>
+            </Tooltip>
 
             {showExportMenu && (
               <div className="absolute left-0 top-full mt-1 w-40 bg-os-surface-dark rounded-lg border border-os-border-dark shadow-xl z-50 py-1">
@@ -188,76 +205,107 @@ export function ResponseActions({
           </div>
 
           {/* Regenerate */}
-          <button
-            onClick={onRegenerate}
-            className="p-2 text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-surface-dark rounded-lg transition-colors"
-            title="Regenerate"
-          >
-            <RefreshCw className="w-4 h-4" />
-          </button>
+          <Tooltip label="Regenerate">
+            <button
+              onClick={onRegenerate}
+              className="p-2 text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-surface-dark rounded-lg transition-colors"
+            >
+              <RefreshCw className="w-4 h-4" />
+            </button>
+          </Tooltip>
 
-          {/* Command/Shortcut button */}
-          <button
-            onClick={() => setShowShortcutModal(true)}
-            className="p-2 text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-surface-dark rounded-lg transition-colors"
-            title="Save as shortcut"
-          >
-            <Command className="w-4 h-4" />
-          </button>
+          {/* Shortcut button - SquareSlash icon */}
+          <Tooltip label="Save as shortcut">
+            <button
+              onClick={() => setShowShortcutModal(true)}
+              className="p-2 text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-surface-dark rounded-lg transition-colors"
+            >
+              <SquareSlash className="w-4 h-4" />
+            </button>
+          </Tooltip>
 
-          {/* Sources indicator - only for Perplexity */}
-          {showSources && isPerplexityModel && sources.length > 0 && (
-            <SourcesChips sources={sources} />
+          {/* Sources button - shows for any sources available */}
+          {hasSourcesData && (
+            <button
+              onClick={() => setShowSourcesDrawer(true)}
+              className="flex items-center gap-2 ml-2 px-2.5 py-1.5 rounded-full bg-os-surface-dark/80 hover:bg-os-surface-dark border border-os-border-dark/50 transition-colors group"
+            >
+              {/* Stacked source favicons */}
+              <div className="flex -space-x-1">
+                {sources.slice(0, 3).map((source, idx) => (
+                  <div
+                    key={source.id || idx}
+                    className="w-5 h-5 rounded-full bg-os-bg-dark border border-os-border-dark flex items-center justify-center"
+                  >
+                    {source.favicon ? (
+                      <img src={source.favicon} alt="" className="w-3 h-3 rounded" />
+                    ) : (
+                      <Globe className="w-2.5 h-2.5 text-os-text-secondary-dark" />
+                    )}
+                  </div>
+                ))}
+              </div>
+              <span className="text-[13px] text-os-text-secondary-dark group-hover:text-os-text-primary-dark transition-colors">
+                {sources.length} sources
+              </span>
+            </button>
           )}
         </div>
 
         {/* Right side - feedback and copy */}
-        <div className="flex items-center gap-1">
-          <button
-            onClick={() => setFeedback(feedback === 'up' ? null : 'up')}
-            className={`
-              p-2 rounded-lg transition-colors
-              ${
-                feedback === 'up'
-                  ? 'text-brand-aperol bg-brand-aperol/10'
-                  : 'text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-surface-dark'
-              }
-            `}
-            title="Good response"
-          >
-            <ThumbsUp className="w-4 h-4" />
-          </button>
-          <button
-            onClick={() => setFeedback(feedback === 'down' ? null : 'down')}
-            className={`
-              p-2 rounded-lg transition-colors
-              ${
-                feedback === 'down'
-                  ? 'text-red-400 bg-red-400/10'
-                  : 'text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-surface-dark'
-              }
-            `}
-            title="Poor response"
-          >
-            <ThumbsDown className="w-4 h-4" />
-          </button>
-          <button
-            onClick={handleCopy}
-            className="p-2 text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-surface-dark rounded-lg transition-colors"
-            title={copied ? 'Copied!' : 'Copy response'}
-          >
-            {copied ? (
-              <Check className="w-4 h-4 text-green-400" />
-            ) : (
-              <Copy className="w-4 h-4" />
-            )}
-          </button>
-          <button
-            className="p-2 text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-surface-dark rounded-lg transition-colors"
-            title="More options"
-          >
-            <MoreHorizontal className="w-4 h-4" />
-          </button>
+        <div className="flex items-center gap-0.5">
+          <Tooltip label="Good response">
+            <button
+              onClick={() => setFeedback(feedback === 'up' ? null : 'up')}
+              className={`
+                p-2 rounded-lg transition-colors
+                ${
+                  feedback === 'up'
+                    ? 'text-brand-aperol bg-brand-aperol/10'
+                    : 'text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-surface-dark'
+                }
+              `}
+            >
+              <ThumbsUp className="w-4 h-4" />
+            </button>
+          </Tooltip>
+
+          <Tooltip label="Poor response">
+            <button
+              onClick={() => setFeedback(feedback === 'down' ? null : 'down')}
+              className={`
+                p-2 rounded-lg transition-colors
+                ${
+                  feedback === 'down'
+                    ? 'text-red-400 bg-red-400/10'
+                    : 'text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-surface-dark'
+                }
+              `}
+            >
+              <ThumbsDown className="w-4 h-4" />
+            </button>
+          </Tooltip>
+
+          <Tooltip label={copied ? 'Copied!' : 'Copy'}>
+            <button
+              onClick={handleCopy}
+              className="p-2 text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-surface-dark rounded-lg transition-colors"
+            >
+              {copied ? (
+                <Check className="w-4 h-4 text-green-400" />
+              ) : (
+                <Copy className="w-4 h-4" />
+              )}
+            </button>
+          </Tooltip>
+
+          <Tooltip label="More options">
+            <button
+              className="p-2 text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-surface-dark rounded-lg transition-colors"
+            >
+              <MoreHorizontal className="w-4 h-4" />
+            </button>
+          </Tooltip>
         </div>
       </div>
 
@@ -275,43 +323,13 @@ export function ResponseActions({
         onClose={() => setShowShortcutModal(false)}
         defaultInstructions={content.slice(0, 200)}
       />
+
+      {/* Sources Drawer */}
+      <SourcesDrawer
+        isOpen={showSourcesDrawer}
+        onClose={() => setShowSourcesDrawer(false)}
+        sources={sources}
+      />
     </>
-  );
-}
-
-function SourcesChips({ sources }: { sources: SourceInfo[] }) {
-  const [showAll, setShowAll] = useState(false);
-  const displaySources = showAll ? sources : sources.slice(0, 3);
-
-  return (
-    <div className="flex items-center gap-2 ml-2">
-      {/* Source favicon chips */}
-      <div className="flex items-center">
-        <div className="flex -space-x-1.5">
-          {displaySources.map((source, idx) => (
-            <a
-              key={source.id || idx}
-              href={source.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-6 h-6 rounded-full bg-os-surface-dark border-2 border-os-bg-dark flex items-center justify-center hover:z-10 hover:scale-110 transition-transform"
-              title={source.name}
-            >
-              {source.favicon ? (
-                <img src={source.favicon} alt="" className="w-3.5 h-3.5 rounded" />
-              ) : (
-                <Globe className="w-3 h-3 text-os-text-secondary-dark" />
-              )}
-            </a>
-          ))}
-        </div>
-        <button
-          onClick={() => setShowAll(!showAll)}
-          className="ml-2 text-xs text-os-text-secondary-dark hover:text-os-text-primary-dark transition-colors"
-        >
-          {sources.length} sources
-        </button>
-      </div>
-    </div>
   );
 }

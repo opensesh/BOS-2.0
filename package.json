@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate:brand-index": "npx tsx lib/brand-knowledge/generate.ts",
+    "prebuild": "npm run generate:brand-index"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^2.0.50",

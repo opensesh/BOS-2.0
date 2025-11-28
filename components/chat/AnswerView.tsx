@@ -2,6 +2,11 @@
 
 import React from 'react';
 import { InlineCitation } from './InlineCitation';
+import { BrandResourceCards, BrandResourceCardProps } from './BrandResourceCard';
+import {
+  BRAND_PAGE_ROUTES,
+  BRAND_SOURCES,
+} from '@/lib/brand-knowledge';
 
 export interface SourceInfo {
   id: string;
@@ -10,6 +15,10 @@ export interface SourceInfo {
   favicon?: string;
   title?: string;
   snippet?: string;
+  // Extended for brand sources
+  type?: 'external' | 'brand-doc' | 'asset';
+  path?: string;
+  thumbnail?: string;
 }
 
 export interface ContentSection {
@@ -26,6 +35,7 @@ interface AnswerViewProps {
   sources: SourceInfo[];
   isStreaming?: boolean;
   showCitations?: boolean;
+  resourceCards?: BrandResourceCardProps[];
 }
 
 export function AnswerView({
@@ -34,6 +44,7 @@ export function AnswerView({
   sources,
   isStreaming = false,
   showCitations = true,
+  resourceCards = [],
 }: AnswerViewProps) {
   // Group sources by index for citation display
   const getSourcesForCitation = (citations?: SourceInfo[]): SourceInfo[] => {
@@ -44,14 +55,14 @@ export function AnswerView({
   return (
     <div>
       {/* User Query Display - Right aligned bubble */}
-      <div className="flex justify-end mb-8">
+      <div className="flex justify-end mb-6">
         <div className="bg-os-surface-dark/50 rounded-2xl px-4 py-2.5 max-w-[85%]">
           <p className="text-[15px] text-os-text-primary-dark">{query}</p>
         </div>
       </div>
 
-      {/* Answer Content */}
-      <div className="space-y-4">
+      {/* Answer Content - Tighter spacing like Perplexity */}
+      <div className="space-y-3">
         {sections.map((section, idx) => {
           if (section.type === 'heading') {
             const HeadingTag = `h${section.level || 2}` as keyof JSX.IntrinsicElements;
@@ -59,10 +70,10 @@ export function AnswerView({
               <HeadingTag
                 key={idx}
                 className={`
-                  font-semibold text-os-text-primary-dark leading-tight
-                  ${section.level === 1 ? 'text-lg mt-6 mb-2' : ''}
-                  ${section.level === 2 ? 'text-base mt-5 mb-2' : ''}
-                  ${section.level === 3 ? 'text-[15px] mt-4 mb-1.5' : ''}
+                  font-bold text-os-text-primary-dark
+                  ${section.level === 1 ? 'text-[18px] mt-5 mb-1' : ''}
+                  ${section.level === 2 ? 'text-[17px] mt-4 mb-1' : ''}
+                  ${section.level === 3 ? 'text-[16px] mt-3 mb-0.5' : ''}
                 `}
               >
                 {section.content}
@@ -72,9 +83,9 @@ export function AnswerView({
 
           if (section.type === 'list' && section.items) {
             return (
-              <ul key={idx} className="space-y-1.5 pl-5 list-disc">
+              <ul key={idx} className="space-y-0.5 pl-5 list-disc marker:text-os-text-secondary-dark">
                 {section.items.map((item, itemIdx) => (
-                  <li key={itemIdx} className="text-[15px] leading-relaxed text-os-text-primary-dark/90">
+                  <li key={itemIdx} className="text-[15px] leading-[1.6] text-os-text-primary-dark/90 pl-1">
                     {item}
                   </li>
                 ))}
@@ -88,7 +99,7 @@ export function AnswerView({
           return (
             <p
               key={idx}
-              className="text-[15px] leading-[1.75] text-os-text-primary-dark/90"
+              className="text-[15px] leading-[1.6] text-os-text-primary-dark/90"
             >
               {section.content}
               {showCitations && sectionSources.length > 0 && (
@@ -107,13 +118,18 @@ export function AnswerView({
 
         {/* Streaming indicator */}
         {isStreaming && (
-          <div className="flex items-center gap-2 text-os-text-secondary-dark py-2">
+          <div className="flex items-center gap-2 text-os-text-secondary-dark py-1">
             <div className="flex gap-1">
               <span className="w-1.5 h-1.5 bg-brand-aperol rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
               <span className="w-1.5 h-1.5 bg-brand-aperol rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
               <span className="w-1.5 h-1.5 bg-brand-aperol rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
             </div>
           </div>
+        )}
+
+        {/* Brand Resource Cards */}
+        {!isStreaming && resourceCards.length > 0 && (
+          <BrandResourceCards cards={resourceCards} />
         )}
       </div>
     </div>
@@ -133,23 +149,53 @@ export function parseContentToSections(
 
   const flushParagraph = () => {
     if (currentParagraph.trim()) {
-      // Find any citation markers in the paragraph (e.g., [1], [2])
-      const citationRegex = /\[(\d+)\]/g;
-      const matches = currentParagraph.match(citationRegex);
+      // Find numbered citation markers (e.g., [1], [2])
+      const numberedCitationRegex = /\[(\d+)\]/g;
+      // Find brand source citation markers (e.g., [source:brand_identity])
+      const brandCitationRegex = /\[source:(\w+)\]/g;
+
       const citations: SourceInfo[] = [];
-      
-      if (matches) {
-        matches.forEach((match) => {
+
+      // Process numbered citations
+      const numberedMatches = currentParagraph.match(numberedCitationRegex);
+      if (numberedMatches) {
+        numberedMatches.forEach((match) => {
           const index = parseInt(match.replace(/[\[\]]/g, ''), 10) - 1;
           if (sources[index]) {
-            citations.push(sources[index]);
+            citations.push({ ...sources[index], type: 'external' });
           }
         });
       }
 
+      // Process brand source citations
+      const brandMatches = currentParagraph.match(brandCitationRegex);
+      if (brandMatches) {
+        brandMatches.forEach((match) => {
+          const sourceId = match.replace(/\[source:|]/g, '');
+          const brandSource = BRAND_SOURCES[sourceId];
+          if (brandSource) {
+            citations.push({
+              id: brandSource.id,
+              name: brandSource.name,
+              url: brandSource.path,
+              title: brandSource.title,
+              snippet: brandSource.snippet,
+              type: 'brand-doc',
+              path: brandSource.path,
+            });
+          }
+        });
+      }
+
+      // Clean content of all citation markers
+      const cleanContent = currentParagraph
+        .replace(numberedCitationRegex, '')
+        .replace(brandCitationRegex, '')
+        .trim();
+
       sections.push({
         type: 'paragraph',
-        content: currentParagraph.replace(citationRegex, '').trim(),
+        content: cleanContent,
         citations: citations.length > 0 ? citations : undefined,
       });
       currentParagraph = '';
@@ -208,4 +254,40 @@ export function parseContentToSections(
   flushParagraph();
   flushList();
   return sections;
+}
+
+/**
+ * Extract resource cards from AI response content
+ * Parses [resource:topic] markers and returns card props
+ */
+export function extractResourceCards(content: string): BrandResourceCardProps[] {
+  const resourceRegex = /\[resource:(\w+(?:-\w+)?)\]/g;
+  const cards: BrandResourceCardProps[] = [];
+  const seenHrefs = new Set<string>();
+  let match;
+
+  while ((match = resourceRegex.exec(content)) !== null) {
+    const topic = match[1];
+    const route = BRAND_PAGE_ROUTES[topic];
+
+    if (route && !seenHrefs.has(route.href)) {
+      seenHrefs.add(route.href);
+      cards.push({
+        title: route.title,
+        description: route.description,
+        href: route.href,
+        icon: route.icon,
+        thumbnail: route.thumbnail,
+      });
+    }
+  }
+
+  return cards;
+}
+
+/**
+ * Remove resource markers from content for display
+ */
+export function cleanResourceMarkers(content: string): string {
+  return content.replace(/\[resource:\w+(?:-\w+)?\]/g, '').trim();
 }
