@@ -50,18 +50,14 @@ export function ChatInterface() {
   const globeButtonRef = useRef<HTMLButtonElement>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  // Memoize transport to prevent recreation on every render
-  const transport = useMemo(
-    () => new DefaultChatTransport({
-      api: '/api/chat',
-      body: { model: selectedModel },
-    }),
-    [selectedModel]
-  );
+  // Create transport once - stable reference
+  const chatTransport = useRef(new DefaultChatTransport({
+    api: '/api/chat',
+  })).current;
 
-  // AI SDK useChat hook (v5 API) - using DefaultChatTransport for API configuration
+  // AI SDK useChat hook (v5 API)
   const { messages, sendMessage, status, error } = useChat({
-    transport,
+    transport: chatTransport,
     onError: (err) => {
       console.error('Chat error:', err);
       setSubmitError(err.message || 'An error occurred while sending your message');
@@ -222,8 +218,9 @@ export function ChatInterface() {
     setShowSuggestions(false);
     
     try {
-      // Use sendMessage with role and content (AI SDK 5.x pattern)
-      await sendMessage({ role: 'user', content: userMessage });
+      // Use sendMessage with text (AI SDK 5.x pattern)
+      // Pass model selection in body options
+      await sendMessage({ text: userMessage }, { body: { model: selectedModel } });
     } catch (err) {
       console.error('Failed to send message:', err);
       setSubmitError(err instanceof Error ? err.message : 'Failed to send message');
