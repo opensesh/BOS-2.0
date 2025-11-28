@@ -50,7 +50,7 @@ export function ChatInterface() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   // AI SDK useChat hook (v5 API) - using sendMessage for programmatic message submission
-  const { messages, sendMessage, status, error, isLoading: chatLoading } = useChat({
+  const { messages, sendMessage, status, error } = useChat({
     api: '/api/chat',
     body: { model: selectedModel },
     onError: (err) => {
@@ -59,7 +59,8 @@ export function ChatInterface() {
     },
   });
 
-  const isLoading = chatLoading || status === 'submitted' || status === 'streaming';
+  // status can be: 'submitted' | 'streaming' | 'ready' | 'error'
+  const isLoading = status === 'submitted' || status === 'streaming';
   
   // Clear submit error when user starts typing
   useEffect(() => {
@@ -212,8 +213,8 @@ export function ChatInterface() {
     setShowSuggestions(false);
     
     try {
-      // Use sendMessage with content (AI SDK 5.x pattern)
-      await sendMessage({ content: userMessage });
+      // Use sendMessage with text (AI SDK 5.x pattern)
+      await sendMessage({ text: userMessage });
     } catch (err) {
       console.error('Failed to send message:', err);
       setSubmitError(err instanceof Error ? err.message : 'Failed to send message');
