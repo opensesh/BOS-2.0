@@ -8,9 +8,17 @@ interface CardGridProps {
   cards: (NewsCardData | InspirationCardData)[];
   type: 'news' | 'inspiration';
   onOpenSources?: (sources: SourceInfo[]) => void;
+  onSaveArticle?: (item: NewsCardData, isSaved: boolean) => void;
+  savedArticleIds?: Set<string>;
 }
 
-export function CardGrid({ cards, type, onOpenSources }: CardGridProps) {
+export function CardGrid({ 
+  cards, 
+  type, 
+  onOpenSources,
+  onSaveArticle,
+  savedArticleIds = new Set(),
+}: CardGridProps) {
   if (cards.length === 0) {
     return (
       <div className="text-center py-20 text-os-text-secondary-dark">
@@ -42,6 +50,8 @@ export function CardGrid({ cards, type, onOpenSources }: CardGridProps) {
                 item={group.featured as NewsCardData} 
                 variant="featured" 
                 onOpenSources={onOpenSources}
+                onSave={onSaveArticle}
+                isSaved={savedArticleIds.has((group.featured as NewsCardData).id)}
               />
             ) : (
               <InspirationCard 
@@ -62,6 +72,8 @@ export function CardGrid({ cards, type, onOpenSources }: CardGridProps) {
                       item={card as NewsCardData} 
                       variant="compact" 
                       onOpenSources={onOpenSources}
+                      onSave={onSaveArticle}
+                      isSaved={savedArticleIds.has((card as NewsCardData).id)}
                     />
                   ) : (
                     <InspirationCard 

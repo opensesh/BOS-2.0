@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
-import { ChevronDown, Settings } from 'lucide-react';
+import { ChevronDown, Settings, Bookmark } from 'lucide-react';
 import { SourcesSettings } from './SourcesSettings';
 
 type MainTabType = 'News' | 'Inspiration';
@@ -13,6 +13,8 @@ interface DiscoverHeaderProps {
   activeType: NewsTypeOption | InspirationTypeOption;
   onTabChange: (tab: MainTabType) => void;
   onTypeChange: (type: NewsTypeOption | InspirationTypeOption) => void;
+  savedCount?: number;
+  onOpenSaved?: () => void;
 }
 
 const NEWS_TYPES: { id: NewsTypeOption; label: string }[] = [
@@ -34,7 +36,9 @@ export function DiscoverHeader({
   activeTab, 
   activeType, 
   onTabChange, 
-  onTypeChange 
+  onTypeChange,
+  savedCount = 0,
+  onOpenSaved,
 }: DiscoverHeaderProps) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSourcesOpen, setIsSourcesOpen] = useState(false);
@@ -130,14 +134,31 @@ export function DiscoverHeader({
           </div>
         </div>
 
-        {/* Settings Gear Icon */}
-        <button
-          onClick={() => setIsSourcesOpen(true)}
-          className="p-2.5 rounded-lg hover:bg-os-surface-dark transition-colors group"
-          title="Manage Sources"
-        >
-          <Settings className="w-5 h-5 text-os-text-secondary-dark group-hover:text-brand-vanilla transition-colors" />
-        </button>
+        {/* Right Side Actions */}
+        <div className="flex items-center gap-1">
+          {/* Saved Button */}
+          <button
+            onClick={onOpenSaved}
+            className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-os-surface-dark transition-colors group"
+            title="Saved Articles"
+          >
+            <Bookmark className="w-5 h-5 text-os-text-secondary-dark group-hover:text-brand-vanilla transition-colors" />
+            {savedCount > 0 && (
+              <span className="text-xs font-medium text-os-text-secondary-dark group-hover:text-brand-vanilla transition-colors">
+                {savedCount}
+              </span>
+            )}
+          </button>
+
+          {/* Settings Gear Icon */}
+          <button
+            onClick={() => setIsSourcesOpen(true)}
+            className="p-2.5 rounded-lg hover:bg-os-surface-dark transition-colors group"
+            title="Manage Sources"
+          >
+            <Settings className="w-5 h-5 text-os-text-secondary-dark group-hover:text-brand-vanilla transition-colors" />
+          </button>
+        </div>
       </div>
 
       {/* Sources Settings Modal */}

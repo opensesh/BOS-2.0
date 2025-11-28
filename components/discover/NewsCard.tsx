@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Heart, Clock } from 'lucide-react';
+import { Bookmark, Clock } from 'lucide-react';
 import { NewsCardData } from '@/types';
 import { SourceInfo } from '@/components/chat/AnswerView';
 import { NewsCardMenu } from './NewsCardMenu';
@@ -13,6 +13,8 @@ interface NewsCardProps {
   variant?: 'featured' | 'compact';
   priority?: boolean;
   onOpenSources?: (sources: SourceInfo[]) => void;
+  onSave?: (item: NewsCardData, isSaved: boolean) => void;
+  isSaved?: boolean;
 }
 
 interface OGData {
@@ -122,7 +124,14 @@ function enrichSources(originalSources: NewsCardData['sources']): SourceInfo[] {
   return [...realSources, ...dummySources];
 }
 
-export function NewsCard({ item, variant = 'compact', priority = false, onOpenSources }: NewsCardProps) {
+export function NewsCard({ 
+  item, 
+  variant = 'compact', 
+  priority = false, 
+  onOpenSources,
+  onSave,
+  isSaved: isSavedProp = false,
+}: NewsCardProps) {
   const [ogImage, setOgImage] = useState<string | null>(() => {
     if (item.imageUrl) return item.imageUrl;
     const cachedImage = item.sources.length > 0 ? ogImageCache.get(item.sources[0].url) : undefined;
@@ -135,9 +144,14 @@ export function NewsCard({ item, variant = 'compact', priority = false, onOpenSo
   });
   const [imageError, setImageError] = useState(false);
   const [isVisible, setIsVisible] = useState(priority);
-  const [isLiked, setIsLiked] = useState(false);
+  const [isSaved, setIsSaved] = useState(isSavedProp);
   
   const cardRef = useRef<HTMLAnchorElement>(null);
+
+  // Sync with prop
+  useEffect(() => {
+    setIsSaved(isSavedProp);
+  }, [isSavedProp]);
 
   // Memoize enriched sources to avoid regeneration on re-renders
   const displaySources = useMemo(() => enrichSources(item.sources), [item.sources]);
@@ -219,6 +233,14 @@ export function NewsCard({ item, variant = 'compact', priority = false, onOpenSo
     e.preventDefault();
     e.stopPropagation();
     onOpenSources?.(displaySources);
+  };
+
+  const handleSaveClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const newSavedState = !isSaved;
+    setIsSaved(newSavedState);
+    onSave?.(item, newSavedState);
   };
 
   const isFeatured = variant === 'featured';
@@ -318,40 +340,36 @@ export function NewsCard({ item, variant = 'compact', priority = false, onOpenSo
           })}
         </div>
         
-        {/* Source count - smaller text */}
+        {/* Source count - full text */}
         <span className={`
           text-os-text-secondary-dark group-hover/sources:text-os-text-primary-dark transition-colors
           ${isFeatured ? 'text-xs' : 'text-[11px]'}
         `}>
-          {displaySources.length} s...
+          {displaySources.length} sources
         </span>
       </button>
     );
   };
 
-  // Action buttons - minimal style like Perplexity
+  // Action buttons - Save (bookmark) and More options
   const ActionButtons = () => (
     <div className="flex items-center gap-0.5">
       <button 
         className={`
           p-1.5 rounded-md transition-all
-          ${isLiked 
+          ${isSaved 
             ? 'text-brand-aperol' 
             : 'text-os-text-secondary-dark hover:text-os-text-primary-dark'
           }
         `}
-        onClick={(e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          setIsLiked(!isLiked);
-        }}
-        title={isLiked ? 'Unlike' : 'Like'}
+        onClick={handleSaveClick}
+        title={isSaved ? 'Unsave' : 'Save'}
       >
-        <Heart className={`${isFeatured ? 'w-4 h-4' : 'w-3.5 h-3.5'} ${isLiked ? 'fill-current' : ''}`} />
+        <Bookmark className={`${isFeatured ? 'w-4 h-4' : 'w-3.5 h-3.5'} ${isSaved ? 'fill-current' : ''}`} />
       </button>
       
       <NewsCardMenu 
-        onBookmark={() => console.log('Bookmark:', item.title)}
+        onBookmark={handleSaveClick}
         onAddToSpace={() => console.log('Add to Space:', item.title)}
         onDislike={() => console.log('Dislike:', item.title)}
         size={isFeatured ? 'md' : 'sm'}
