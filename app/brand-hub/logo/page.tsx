@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
+import JSZip from 'jszip';
 import { Sidebar } from '@/components/Sidebar';
 import { BrandHubLayout } from '@/components/brand-hub/BrandHubLayout';
 import { RefreshCw, Download, Palette, ChevronDown } from 'lucide-react';
@@ -349,32 +350,43 @@ export default function LogoPage() {
           <div className="flex items-center gap-2">
             <button
               onClick={async () => {
-                // Download all logos with their current color variants
-                for (const logo of allLogos) {
-                  const colorVariant = allColors[logo.id];
-                  let imagePath: string;
-                  if (colorVariant === 'charcoal') {
-                    imagePath = logo.charcoalPath || logo.vanillaPath;
-                  } else {
-                    imagePath = colorVariant === 'vanilla' ? logo.vanillaPath : logo.glassPath;
-                  }
+                try {
+                  const zip = new JSZip();
                   
-                  try {
-                    const response = await fetch(imagePath);
-                    const blob = await response.blob();
-                    const url = URL.createObjectURL(blob);
-                    const a = document.createElement('a');
-                    a.href = url;
-                    a.download = `${logo.id}-${colorVariant}.svg`;
-                    document.body.appendChild(a);
-                    a.click();
-                    URL.revokeObjectURL(url);
-                    document.body.removeChild(a);
-                    // Small delay between downloads
-                    await new Promise(resolve => setTimeout(resolve, 100));
-                  } catch (error) {
-                    console.error(`Failed to download ${logo.name}:`, error);
-                  }
+                  // Create an array of promises to fetch all images
+                  const promises = allLogos.map(async (logo) => {
+                    const colorVariant = allColors[logo.id];
+                    let imagePath: string;
+                    if (colorVariant === 'charcoal') {
+                      imagePath = logo.charcoalPath || logo.vanillaPath;
+                    } else {
+                      imagePath = colorVariant === 'vanilla' ? logo.vanillaPath : logo.glassPath;
+                    }
+                    
+                    try {
+                      const response = await fetch(imagePath);
+                      const blob = await response.blob();
+                      zip.file(`${logo.id}-${colorVariant}.svg`, blob);
+                    } catch (error) {
+                      console.error(`Failed to download ${logo.name}:`, error);
+                    }
+                  });
+
+                  // Wait for all fetches to complete
+                  await Promise.all(promises);
+
+                  // Generate and download the zip file
+                  const content = await zip.generateAsync({ type: "blob" });
+                  const url = URL.createObjectURL(content);
+                  const a = document.createElement('a');
+                  a.href = url;
+                  a.download = "brand-logos.zip";
+                  document.body.appendChild(a);
+                  a.click();
+                  URL.revokeObjectURL(url);
+                  document.body.removeChild(a);
+                } catch (error) {
+                  console.error('Failed to create zip file:', error);
                 }
               }}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-os-surface-dark border border-os-border-dark hover:border-brand-aperol/50 transition-colors text-xs text-os-text-secondary-dark"
