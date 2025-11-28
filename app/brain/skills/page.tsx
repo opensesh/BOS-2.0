@@ -8,11 +8,20 @@ import { MarkdownCodeViewer } from '@/components/brain/MarkdownCodeViewer';
 import { TabSelector } from '@/components/brain/TabSelector';
 import { BrainSettingsModal } from '@/components/brain/BrainSettingsModal';
 import { ArrowLeft, Settings, Loader2 } from 'lucide-react';
+import { getSkillContent } from './actions';
 
-// Define the available skills files
+// Define the available skills files matching the .claude/skills directory
 const skillFiles = [
-  { id: 'system', label: 'System Configuration', file: 'claude.md', path: '/claude-data/claude.md' },
-  { id: 'architecture', label: 'Architecture', file: 'architecture.md', path: '/claude-data/system/architecture.md' },
+  { id: 'algorithmic-art', label: 'Algorithmic Art', file: 'SKILL.md' },
+  { id: 'artifacts-builder', label: 'Artifacts Builder', file: 'SKILL.md' },
+  { id: 'brand-guidelines', label: 'Brand Guidelines', file: 'SKILL.md' },
+  { id: 'canvas-design', label: 'Canvas Design', file: 'SKILL.md' },
+  { id: 'gif-creator', label: 'GIF Creator', file: 'SKILL.md' },
+  { id: 'internal-comms', label: 'Internal Comms', file: 'SKILL.md' },
+  { id: 'mcp-builder', label: 'MCP Builder', file: 'SKILL.md' },
+  { id: 'single-cell-rna-qc', label: 'Single Cell RNA QC', file: 'SKILL.md' },
+  { id: 'skill-creator', label: 'Skill Creator', file: 'SKILL.md' },
+  { id: 'theme-factory', label: 'Theme Factory', file: 'SKILL.md' },
 ];
 
 function SkillsContent() {
@@ -29,22 +38,23 @@ function SkillsContent() {
     }
   }, [tabParam]);
 
-  // Fetch content when active tab changes
+  // Fetch content when active tab changes using Server Action
   useEffect(() => {
-    const activeFile = skillFiles.find(s => s.id === activeTab);
-    if (activeFile) {
-      setContent('Loading...');
-      fetch(activeFile.path)
-        .then(res => {
-          if (!res.ok) throw new Error('Failed to load content');
-          return res.text();
-        })
-        .then(text => setContent(text))
-        .catch(err => {
+    const fetchContent = async () => {
+      const activeFile = skillFiles.find(s => s.id === activeTab);
+      if (activeFile) {
+        setContent('Loading...');
+        try {
+          const text = await getSkillContent(activeTab);
+          setContent(text);
+        } catch (err) {
           console.error('Failed to load content:', err);
           setContent('Error loading content. Please check if the file exists.');
-        });
-    }
+        }
+      }
+    };
+
+    fetchContent();
   }, [activeTab]);
 
   const activeFile = skillFiles.find(s => s.id === activeTab);
@@ -79,7 +89,7 @@ function SkillsContent() {
               Skills
             </h1>
             <p className="text-base md:text-lg text-os-text-secondary-dark max-w-2xl">
-              Review the core system configuration and capabilities defined in the system prompts.
+              Review the specific capabilities and skills available to the AI system.
             </p>
           </div>
 
