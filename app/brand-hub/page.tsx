@@ -146,7 +146,7 @@ function BentoCard({ item }: { item: typeof brandHubItems[0] }) {
   return (
     <Link
       href={item.href}
-      className="group relative h-full flex flex-col justify-between p-6 md:p-8 rounded-2xl bg-os-surface-dark border border-os-border-dark hover:border-brand-aperol/50 hover:bg-os-surface-dark/80 transition-all duration-300 ease-out min-h-[200px]"
+      className="group relative h-[260px] flex flex-col justify-between p-6 md:p-8 rounded-2xl bg-os-surface-dark border border-os-border-dark hover:border-brand-aperol/50 hover:bg-os-surface-dark/80 transition-all duration-300 ease-out"
     >
       {/* Top Section: Icon and Arrow */}
       <div className="flex items-start justify-between mb-auto">
@@ -161,9 +161,11 @@ function BentoCard({ item }: { item: typeof brandHubItems[0] }) {
         <h3 className="text-xl md:text-2xl font-display font-bold text-brand-vanilla group-hover:text-brand-aperol transition-colors">
           {item.title}
         </h3>
-        <p className="text-sm md:text-base text-os-text-secondary-dark line-clamp-2">
-          {item.description}
-        </p>
+        <div className="h-10">
+          <p className="text-sm md:text-base text-os-text-secondary-dark line-clamp-2">
+            {item.description}
+          </p>
+        </div>
       </div>
     </Link>
   );
