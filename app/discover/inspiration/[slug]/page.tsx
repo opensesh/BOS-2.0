@@ -6,7 +6,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
-  ArrowLeft,
   Video,
   FileText,
   Pen,
@@ -17,6 +16,7 @@ import {
   Clock
 } from 'lucide-react';
 import { Sidebar } from '@/components/Sidebar';
+import { StickyArticleHeader } from '@/components/discover/article/StickyArticleHeader';
 import { InspirationCardData } from '@/types';
 
 // Generation option types
@@ -136,6 +136,51 @@ const FALLBACK_IMAGES = {
   'blog': 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop',
 };
 
+// Generate concept brief (static, non-streaming)
+async function generateConceptBrief(item: InspirationCardData): Promise<string> {
+  try {
+    const response = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        messages: [{
+          role: 'user',
+          content: `Generate a brief 2-3 paragraph explanation of this content idea for a creative professional. Be concise and actionable.
+
+Title: ${item.title}
+Description: ${item.description}
+Category: ${item.category}
+Sources: ${item.sources.map(s => s.name).join(', ')}
+
+Write about:
+1. Why this topic is relevant and timely
+2. The key angle or hook that makes it interesting
+3. Potential approaches to explore this idea
+
+Keep it under 150 words total. Do not use markdown formatting, just plain text paragraphs.`
+        }]
+      })
+    });
+    
+    if (response.ok) {
+      const text = await response.text();
+      // Try to parse as JSON first
+      try {
+        const parsed = JSON.parse(text);
+        if (parsed.content) return parsed.content;
+        return text;
+      } catch {
+        return text;
+      }
+    }
+  } catch (error) {
+    console.error('Error generating concept brief:', error);
+  }
+  
+  // Fallback brief
+  return `This content idea explores "${item.title}" - a timely topic that offers creative potential across multiple formats. The concept draws from ${item.sources.length} source${item.sources.length > 1 ? 's' : ''}, providing a solid foundation for research and development. Consider the unique angles this topic offers and how it might resonate with your target audience.`;
+}
+
 export default function InspirationDetailPage() {
   const params = useParams();
   const searchParams = useSearchParams();
@@ -147,7 +192,6 @@ export default function InspirationDetailPage() {
   const [generatingType, setGeneratingType] = useState<GenerationType | null>(null);
   const [conceptBrief, setConceptBrief] = useState<string | null>(null);
   const [loadingBrief, setLoadingBrief] = useState(false);
-  const [showStickyHeader, setShowStickyHeader] = useState(false);
 
   const id = searchParams.get('id');
   const slug = params.slug as string;
@@ -165,121 +209,44 @@ export default function InspirationDetailPage() {
 
   // Fetch OG image with fallback
   useEffect(() => {
-    if (item && item.sources && item.sources.length > 0) {
-      let isMounted = true;
+    if (item) {
+      // Set fallback immediately
+      setOgImage(FALLBACK_IMAGES[item.category] || FALLBACK_IMAGES['short-form']);
       
-      const fetchImages = async () => {
-        // Try each source
-        for (const source of item.sources) {
-          try {
-            const response = await fetch(`/api/og-image?url=${encodeURIComponent(source.url)}`);
-            if (response.ok) {
-              const data = await response.json();
-              if (data.image && isMounted) {
-                setOgImage(data.image);
-                return;
+      if (item.sources && item.sources.length > 0) {
+        // Try to fetch OG image
+        const fetchImages = async () => {
+          for (const source of item.sources.slice(0, 3)) {
+            try {
+              const response = await fetch(`/api/og-image?url=${encodeURIComponent(source.url)}`);
+              if (response.ok) {
+                const data = await response.json();
+                if (data.image) {
+                  setOgImage(data.image);
+                  return;
+                }
               }
+            } catch (error) {
+              // Continue to next source
             }
-          } catch (error) {
-            console.error('Error fetching OG image:', error);
           }
-        }
+        };
         
-        // Use fallback if no image found
-        if (isMounted) {
-          setOgImage(FALLBACK_IMAGES[item.category] || FALLBACK_IMAGES['short-form']);
-        }
-      };
-      
-      fetchImages();
-      
-      return () => {
-        isMounted = false;
-      };
+        fetchImages();
+      }
     }
   }, [item]);
 
-  // Generate concept brief using AI
+  // Generate concept brief (non-streaming)
   useEffect(() => {
     if (item && !conceptBrief && !loadingBrief) {
       setLoadingBrief(true);
-      
-      // Generate a concept brief based on the item
-      const generateBrief = async () => {
-        try {
-          const response = await fetch('/api/chat', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              messages: [{
-                role: 'user',
-                content: `Generate a brief 2-3 paragraph explanation of this content idea for a creative professional. Be concise and actionable.
-
-Title: ${item.title}
-Description: ${item.description}
-Category: ${item.category}
-Sources: ${item.sources.map(s => s.name).join(', ')}
-
-Write about:
-1. Why this topic is relevant and timely
-2. The key angle or hook that makes it interesting
-3. Potential approaches to explore this idea
-
-Keep it under 150 words total. Do not use markdown formatting, just plain text paragraphs.`
-              }]
-            })
-          });
-          
-          if (response.ok) {
-            const reader = response.body?.getReader();
-            if (reader) {
-              let text = '';
-              const decoder = new TextDecoder();
-              
-              while (true) {
-                const { done, value } = await reader.read();
-                if (done) break;
-                text += decoder.decode(value, { stream: true });
-              }
-              
-              // Extract text content (remove any JSON wrapper if present)
-              let cleanText = text;
-              try {
-                const parsed = JSON.parse(text);
-                if (parsed.content) cleanText = parsed.content;
-              } catch {
-                // Already plain text
-              }
-              
-              setConceptBrief(cleanText);
-            }
-          }
-        } catch (error) {
-          console.error('Error generating concept brief:', error);
-          // Set a fallback brief
-          setConceptBrief(`This content idea explores "${item.title}" - a timely topic that offers creative potential across multiple formats. The concept draws from ${item.sources.length} source${item.sources.length > 1 ? 's' : ''}, providing a solid foundation for research and development. Consider the unique angles this topic offers and how it might resonate with your target audience.`);
-        } finally {
-          setLoadingBrief(false);
-        }
-      };
-      
-      generateBrief();
+      generateConceptBrief(item).then(brief => {
+        setConceptBrief(brief);
+        setLoadingBrief(false);
+      });
     }
   }, [item, conceptBrief, loadingBrief]);
-
-  // Sticky header scroll detection
-  useEffect(() => {
-    const handleScroll = () => {
-      if (titleRef.current) {
-        const rect = titleRef.current.getBoundingClientRect();
-        setShowStickyHeader(rect.bottom < 0);
-      }
-    };
-
-    const scrollContainer = document.querySelector('.custom-scrollbar');
-    scrollContainer?.addEventListener('scroll', handleScroll);
-    return () => scrollContainer?.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const handleGenerate = (option: GenerationOption) => {
     if (!item) return;
@@ -371,179 +338,144 @@ Please provide a comprehensive creative brief with:
       <Sidebar />
       
       <main className="flex-1 flex flex-col overflow-hidden pt-14 lg:pt-0">
-        {/* Sticky Header */}
-        <div 
-          className={`sticky top-0 z-20 bg-os-bg-dark/95 backdrop-blur-sm border-b border-os-border-dark/50 px-6 py-3 transition-all duration-200 ${
-            showStickyHeader ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
-          }`}
-        >
-          <div className="max-w-4xl mx-auto flex items-center gap-4">
-            <Link
-              href="/discover?tab=Inspiration"
-              className="p-2 rounded-lg hover:bg-os-surface-dark transition-colors"
-            >
-              <ArrowLeft className="w-5 h-5 text-os-text-secondary-dark" />
-            </Link>
-            <h2 className="text-sm font-medium text-brand-vanilla truncate">
-              {item.title}
-            </h2>
-          </div>
-        </div>
+        {/* Sticky Header - same as discover articles */}
+        <StickyArticleHeader 
+          title={item.title} 
+          titleRef={titleRef}
+          backLink="/discover?tab=Inspiration"
+          backLabel="Inspiration"
+        />
 
         <div className="flex-1 overflow-y-auto custom-scrollbar">
-          {/* Back button row */}
-          <div className="max-w-4xl mx-auto px-6 pt-6">
-            <Link
-              href="/discover?tab=Inspiration"
-              className="inline-flex items-center gap-2 text-os-text-secondary-dark hover:text-brand-vanilla transition-colors text-sm mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Inspiration
-            </Link>
-          </div>
-
-          {/* Content */}
-          <div className="max-w-4xl mx-auto px-6 pb-12">
-            {/* Category and sources count */}
-            <div className="flex items-center gap-3 mb-4">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-os-surface-dark text-os-text-secondary-dark text-sm">
-                <CategoryIcon className="w-4 h-4" />
-                {getCategoryLabel()}
-              </span>
-              <span className="text-sm text-os-text-secondary-dark">
-                {item.sources.length} reference sources
-              </span>
-            </div>
-
-            {/* Title */}
-            <h1 
-              ref={titleRef}
-              className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-brand-vanilla mb-4"
-            >
-              {item.title}
-            </h1>
-
-            {/* Hero Image */}
-            <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden bg-os-surface-dark mb-6">
-              {ogImage ? (
-                <Image
-                  src={ogImage}
-                  alt={item.title}
-                  fill
-                  className="object-cover"
-                  unoptimized
-                  priority
-                />
-              ) : (
-                <div className="w-full h-full bg-gradient-to-br from-brand-aperol/20 to-os-surface-dark" />
-              )}
-            </div>
-
-            {/* Original Description */}
-            <p className="text-lg text-os-text-secondary-dark leading-relaxed mb-6">
-              {item.description}
-            </p>
-
-            {/* AI-Generated Concept Brief */}
-            <div className="mb-8">
-              <h2 className="text-lg font-semibold text-brand-vanilla mb-3">
-                Concept Overview
-              </h2>
-              {loadingBrief ? (
-                <div className="flex items-center gap-3 text-os-text-secondary-dark">
-                  <div className="w-4 h-4 border-2 border-os-text-secondary-dark border-t-transparent rounded-full animate-spin" />
-                  Generating overview...
+          <div className="w-full max-w-5xl mx-auto px-6 py-8 md:px-12 md:py-12">
+            <div className="flex flex-col lg:flex-row gap-10">
+              {/* Main Content */}
+              <div className="flex-1 min-w-0">
+                {/* Category and sources count */}
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-os-surface-dark text-os-text-secondary-dark text-sm">
+                    <CategoryIcon className="w-4 h-4" />
+                    {getCategoryLabel()}
+                  </span>
+                  <span className="text-sm text-os-text-secondary-dark flex items-center gap-1.5">
+                    <Clock className="w-3.5 h-3.5" />
+                    {item.sources.length} reference sources
+                  </span>
                 </div>
-              ) : (
-                <div className="text-[15px] leading-relaxed text-os-text-primary-dark/90 space-y-4">
-                  {conceptBrief?.split('\n\n').map((paragraph, idx) => (
-                    <p key={idx}>{paragraph}</p>
-                  ))}
+
+                {/* Title */}
+                <h1 
+                  ref={titleRef}
+                  className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-brand-vanilla mb-6"
+                >
+                  {item.title}
+                </h1>
+
+                {/* Hero Image - smaller, like discover articles */}
+                <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden bg-os-surface-dark mb-6">
+                  {ogImage && (
+                    <Image
+                      src={ogImage}
+                      alt={item.title}
+                      fill
+                      className="object-cover"
+                      unoptimized
+                      priority
+                    />
+                  )}
                 </div>
-              )}
-            </div>
 
-            {/* Source Links */}
-            <div className="mb-10">
-              <h2 className="text-sm font-semibold text-brand-vanilla mb-3 uppercase tracking-wide">
-                Reference Sources
-              </h2>
-              <div className="flex flex-wrap gap-2">
-                {item.sources.map((source, idx) => (
-                  <a
-                    key={source.id || idx}
-                    href={source.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-os-surface-dark/60 border border-os-border-dark/50 hover:border-brand-aperol/30 text-sm text-os-text-secondary-dark hover:text-brand-vanilla transition-all group"
-                  >
-                    {source.name}
-                    <ExternalLink className="w-3.5 h-3.5 opacity-50 group-hover:opacity-100 transition-opacity" />
-                  </a>
-                ))}
-              </div>
-            </div>
+                {/* Original Description */}
+                <p className="text-[15px] leading-[1.75] text-os-text-primary-dark/90 mb-8">
+                  {item.description}
+                </p>
 
-            {/* Generation Options */}
-            <div className="mb-10">
-              <h2 className="text-xl font-semibold text-brand-vanilla mb-2">
-                Generate Content
-              </h2>
-              <p className="text-sm text-os-text-secondary-dark mb-6">
-                Choose a content format to generate a creative brief with AI assistance
-              </p>
+                {/* AI-Generated Concept Brief */}
+                <div className="mb-8">
+                  <h2 className="text-lg font-display font-semibold text-brand-vanilla mb-4">
+                    Concept Overview
+                  </h2>
+                  {loadingBrief ? (
+                    <div className="flex items-center gap-3 text-os-text-secondary-dark py-4">
+                      <div className="w-4 h-4 border-2 border-os-text-secondary-dark border-t-brand-aperol rounded-full animate-spin" />
+                      <span className="text-sm">Generating overview...</span>
+                    </div>
+                  ) : conceptBrief ? (
+                    <div className="text-[15px] leading-[1.75] text-os-text-primary-dark/90 space-y-4">
+                      {conceptBrief.split('\n\n').filter(p => p.trim()).map((paragraph, idx) => (
+                        <p key={idx}>{paragraph}</p>
+                      ))}
+                    </div>
+                  ) : null}
+                </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {GENERATION_OPTIONS.map((option) => {
-                  const Icon = option.icon;
-                  const isGenerating = generatingType === option.id;
-                  
-                  return (
-                    <motion.button
-                      key={option.id}
-                      onClick={() => handleGenerate(option)}
-                      disabled={isGenerating}
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                      className={`
-                        flex items-start gap-4 p-5 rounded-2xl border transition-all text-left
-                        ${isGenerating 
-                          ? 'bg-brand-aperol/10 border-brand-aperol/30 cursor-wait' 
-                          : 'bg-os-surface-dark/50 border-os-border-dark/50 hover:border-brand-aperol/30 hover:bg-os-surface-dark'
-                        }
-                      `}
-                    >
-                      {/* Icon */}
-                      <div 
-                        className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
-                        style={{ backgroundColor: `${option.color}20` }}
+                {/* Source Links */}
+                <div className="mb-10">
+                  <h2 className="text-sm font-semibold text-brand-vanilla mb-3 uppercase tracking-wide">
+                    Reference Sources
+                  </h2>
+                  <div className="flex flex-wrap gap-2">
+                    {item.sources.map((source, idx) => (
+                      <a
+                        key={source.id || idx}
+                        href={source.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-os-surface-dark/60 border border-os-border-dark/50 hover:border-brand-aperol/30 text-sm text-os-text-secondary-dark hover:text-brand-vanilla transition-all group"
                       >
-                        <span style={{ color: option.color }}>
-                          <Icon className="w-6 h-6" />
-                        </span>
-                      </div>
+                        {source.name}
+                        <ExternalLink className="w-3.5 h-3.5 opacity-50 group-hover:opacity-100 transition-opacity" />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
 
-                      {/* Content */}
-                      <div className="flex-1">
-                        <h3 className="text-base font-semibold text-brand-vanilla mb-1">
-                          {option.title}
-                        </h3>
-                        <p className="text-sm text-os-text-secondary-dark">
-                          {option.description}
-                        </p>
-                      </div>
-
-                      {/* Arrow / Loading */}
-                      <div className="flex-shrink-0 mt-1">
-                        {isGenerating ? (
-                          <div className="w-5 h-5 border-2 border-brand-aperol/30 border-t-brand-aperol rounded-full animate-spin" />
-                        ) : (
-                          <Sparkles className="w-5 h-5 text-os-text-secondary-dark" />
-                        )}
-                      </div>
-                    </motion.button>
-                  );
-                })}
+              {/* Right Sidebar - Generation Options */}
+              <div className="lg:w-72 shrink-0">
+                <div className="sticky top-8">
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-os-text-secondary-dark mb-4">
+                    Generate Content
+                  </h3>
+                  
+                  <div className="flex flex-col gap-3">
+                    {GENERATION_OPTIONS.map((option) => {
+                      const Icon = option.icon;
+                      const isGenerating = generatingType === option.id;
+                      
+                      return (
+                        <button
+                          key={option.id}
+                          onClick={() => handleGenerate(option)}
+                          disabled={isGenerating}
+                          className="group flex flex-col gap-2 p-3 bg-os-surface-dark/60 hover:bg-os-surface-dark rounded-xl border border-os-border-dark/50 hover:border-brand-aperol/30 transition-all text-left"
+                        >
+                          <div className="flex items-center gap-3">
+                            <div 
+                              className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+                              style={{ backgroundColor: `${option.color}20` }}
+                            >
+                              <Icon className="w-4 h-4" style={{ color: option.color }} />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <h4 className="text-sm font-medium text-brand-vanilla truncate">
+                                {option.title}
+                              </h4>
+                            </div>
+                            {isGenerating ? (
+                              <div className="w-4 h-4 border-2 border-brand-aperol/30 border-t-brand-aperol rounded-full animate-spin" />
+                            ) : (
+                              <Sparkles className="w-4 h-4 text-os-text-secondary-dark group-hover:text-brand-aperol transition-colors" />
+                            )}
+                          </div>
+                          <p className="text-xs text-os-text-secondary-dark line-clamp-2">
+                            {option.description}
+                          </p>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
             </div>
           </div>

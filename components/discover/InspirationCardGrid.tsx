@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Video, FileText, Pen } from 'lucide-react';
 import { InspirationCardData } from '@/types';
 
 interface InspirationCardGridProps {
@@ -28,14 +28,14 @@ const FALLBACK_IMAGES = {
   'blog': 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop',
 };
 
-// Hook for fetching OG image with fallback
+// Hook for fetching OG image with fallback - uses fallback immediately if OG fails
 function useOgImage(item: InspirationCardData) {
-  const [imageUrl, setImageUrl] = useState<string | null>(null);
+  const [imageUrl, setImageUrl] = useState<string>(FALLBACK_IMAGES[item.category] || FALLBACK_IMAGES['short-form']);
   const [isLoading, setIsLoading] = useState(true);
-  const [attemptedSources, setAttemptedSources] = useState<number>(0);
 
   useEffect(() => {
     let isMounted = true;
+    setIsLoading(true);
     
     const fetchImage = async () => {
       if (!item.sources || item.sources.length === 0) {
@@ -45,7 +45,7 @@ function useOgImage(item: InspirationCardData) {
       }
 
       // Try each source URL until we get an image
-      for (let i = attemptedSources; i < item.sources.length; i++) {
+      for (let i = 0; i < Math.min(item.sources.length, 3); i++) {
         try {
           const response = await fetch(`/api/og-image?url=${encodeURIComponent(item.sources[i].url)}`);
           if (response.ok) {
@@ -57,17 +57,12 @@ function useOgImage(item: InspirationCardData) {
             }
           }
         } catch (error) {
-          console.error('Error fetching OG image:', error);
-        }
-        
-        if (isMounted) {
-          setAttemptedSources(i + 1);
+          // Continue to next source
         }
       }
 
-      // All sources failed, use fallback
+      // Keep fallback if no OG image found
       if (isMounted) {
-        setImageUrl(FALLBACK_IMAGES[item.category] || FALLBACK_IMAGES['short-form']);
         setIsLoading(false);
       }
     };
@@ -77,78 +72,74 @@ function useOgImage(item: InspirationCardData) {
     return () => {
       isMounted = false;
     };
-  }, [item.sources, item.category, attemptedSources]);
+  }, [item.sources, item.category]);
 
   return { imageUrl, isLoading };
 }
 
-// Featured card (large, spans 2 columns)
-function FeaturedCard({ item }: { item: InspirationCardData }) {
+// Card component (used for both featured and compact)
+function InspirationCard({ item, featured = false }: { item: InspirationCardData; featured?: boolean }) {
   const { imageUrl, isLoading } = useOgImage(item);
   const slug = item.slug || generateSlug(item.title);
 
-  return (
-    <Link
-      href={`/discover/inspiration/${slug}?id=${item.id}`}
-      className="group relative rounded-2xl overflow-hidden bg-os-surface-dark border border-os-border-dark/50 hover:border-brand-aperol/30 transition-all h-full min-h-[280px]"
-    >
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        {isLoading ? (
-          <div className="w-full h-full bg-os-surface-dark flex items-center justify-center">
-            <div className="w-6 h-6 border-2 border-os-text-secondary-dark border-t-transparent rounded-full animate-spin" />
-          </div>
-        ) : imageUrl ? (
-          <Image
-            src={imageUrl}
-            alt={item.title}
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-            unoptimized
-          />
-        ) : (
-          <div className="w-full h-full bg-gradient-to-br from-brand-aperol/20 to-os-surface-dark" />
-        )}
-        {/* Overlay gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-os-bg-dark via-os-bg-dark/60 to-transparent" />
-      </div>
-
-      {/* Content */}
-      <div className="relative h-full flex flex-col justify-end p-5">
-        <h3 className="text-lg md:text-xl font-semibold text-brand-vanilla line-clamp-2 mb-2">
-          {item.title}
-        </h3>
-        
-        <p className="text-sm text-os-text-secondary-dark line-clamp-2 mb-3">
-          {item.description}
-        </p>
-
-        {/* Sources */}
-        <div className="flex items-center gap-2 flex-wrap">
-          {item.sources.slice(0, 2).map((source, idx) => (
-            <span
-              key={source.id || idx}
-              className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full border border-os-border-dark/50 bg-os-surface-dark/60 text-[10px] text-os-text-secondary-dark"
-            >
-              {source.name}
-            </span>
-          ))}
-          {item.sources.length > 2 && (
-            <span className="text-[10px] text-os-text-secondary-dark">
-              +{item.sources.length - 2}
-            </span>
+  if (featured) {
+    return (
+      <Link
+        href={`/discover/inspiration/${slug}?id=${item.id}`}
+        className="group flex flex-col rounded-2xl overflow-hidden bg-os-surface-dark border border-os-border-dark/50 hover:border-brand-aperol/30 transition-all h-full"
+      >
+        {/* Image */}
+        <div className="relative aspect-[16/9] overflow-hidden bg-os-surface-dark flex-shrink-0">
+          {isLoading ? (
+            <div className="w-full h-full flex items-center justify-center">
+              <div className="w-6 h-6 border-2 border-os-text-secondary-dark border-t-transparent rounded-full animate-spin" />
+            </div>
+          ) : (
+            <Image
+              src={imageUrl}
+              alt={item.title}
+              fill
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              unoptimized
+            />
           )}
         </div>
-      </div>
-    </Link>
-  );
-}
 
-// Compact card (smaller, for grid positions)
-function CompactCard({ item }: { item: InspirationCardData }) {
-  const { imageUrl, isLoading } = useOgImage(item);
-  const slug = item.slug || generateSlug(item.title);
+        {/* Content */}
+        <div className="p-4 flex-1 flex flex-col">
+          <h3 className="text-base md:text-lg font-semibold text-brand-vanilla line-clamp-2 mb-2">
+            {item.title}
+          </h3>
+          
+          <p className="text-sm text-os-text-secondary-dark line-clamp-2 mb-3 flex-1">
+            {item.description}
+          </p>
 
+          {/* Sources */}
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2 flex-wrap">
+              {item.sources.slice(0, 2).map((source, idx) => (
+                <span
+                  key={source.id || idx}
+                  className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full border border-os-border-dark/50 bg-os-bg-dark/60 text-[10px] text-os-text-secondary-dark"
+                >
+                  {source.name}
+                </span>
+              ))}
+              {item.sources.length > 2 && (
+                <span className="text-[10px] text-os-text-secondary-dark">
+                  +{item.sources.length - 2}
+                </span>
+              )}
+            </div>
+            <ChevronRight className="w-4 h-4 text-os-text-secondary-dark group-hover:text-brand-aperol transition-colors" />
+          </div>
+        </div>
+      </Link>
+    );
+  }
+
+  // Compact card
   return (
     <Link
       href={`/discover/inspiration/${slug}?id=${item.id}`}
@@ -160,7 +151,7 @@ function CompactCard({ item }: { item: InspirationCardData }) {
           <div className="w-full h-full flex items-center justify-center">
             <div className="w-5 h-5 border-2 border-os-text-secondary-dark border-t-transparent rounded-full animate-spin" />
           </div>
-        ) : imageUrl ? (
+        ) : (
           <Image
             src={imageUrl}
             alt={item.title}
@@ -168,8 +159,6 @@ function CompactCard({ item }: { item: InspirationCardData }) {
             className="object-cover transition-transform duration-500 group-hover:scale-105"
             unoptimized
           />
-        ) : (
-          <div className="w-full h-full bg-gradient-to-br from-brand-aperol/10 to-os-surface-dark" />
         )}
       </div>
 
@@ -192,25 +181,21 @@ function CompactCard({ item }: { item: InspirationCardData }) {
   );
 }
 
-export function InspirationCardGrid({ items, activeFilter }: InspirationCardGridProps) {
-  // Filter items based on activeFilter
-  const filteredItems = activeFilter === 'all' 
-    ? items 
-    : items.filter(item => item.category === activeFilter);
+// Section component for organized display
+function InspirationSection({ 
+  title, 
+  icon: Icon, 
+  items 
+}: { 
+  title: string; 
+  icon: React.ComponentType<{ className?: string }>; 
+  items: InspirationCardData[];
+}) {
+  if (items.length === 0) return null;
 
-  if (filteredItems.length === 0) {
-    return (
-      <div className="text-center py-20 text-os-text-secondary-dark">
-        No inspiration items found for this filter.
-      </div>
-    );
-  }
-
-  // Layout: Featured (2 cols) + 1 card on right in first row, then 3 cards on bottom
-  const featuredItem = filteredItems[0];
-  const rightItem = filteredItems[1];
-  const bottomItems = filteredItems.slice(2, 5);
-  const remainingItems = filteredItems.slice(5);
+  const featuredItem = items[0];
+  const rightItem = items[1];
+  const bottomItems = items.slice(2, 5);
 
   return (
     <motion.div
@@ -220,19 +205,30 @@ export function InspirationCardGrid({ items, activeFilter }: InspirationCardGrid
         duration: 0.4, 
         ease: [0.25, 0.46, 0.45, 0.94] 
       }}
-      className="space-y-4"
+      className="mb-10"
     >
+      {/* Section Header */}
+      <div className="flex items-center gap-3 mb-4">
+        <div className="w-8 h-8 rounded-lg bg-brand-aperol/10 flex items-center justify-center">
+          <Icon className="w-4 h-4 text-brand-aperol" />
+        </div>
+        <h2 className="text-lg font-semibold text-brand-vanilla">{title}</h2>
+        <span className="px-2 py-0.5 rounded-full bg-os-surface-dark text-xs text-os-text-secondary-dark">
+          {items.length}
+        </span>
+      </div>
+
       {/* First Row: Featured (2 cols) + Right card (1 col) */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
         {/* Featured card - spans 2 columns */}
-        <div className="md:col-span-2 min-h-[280px]">
-          <FeaturedCard item={featuredItem} />
+        <div className="md:col-span-2">
+          <InspirationCard item={featuredItem} featured />
         </div>
 
         {/* Right card */}
         {rightItem && (
-          <div className="min-h-[280px]">
-            <CompactCard item={rightItem} />
+          <div>
+            <InspirationCard item={rightItem} />
           </div>
         )}
       </div>
@@ -241,19 +237,97 @@ export function InspirationCardGrid({ items, activeFilter }: InspirationCardGrid
       {bottomItems.length > 0 && (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {bottomItems.map((item, idx) => (
-            <CompactCard key={item.id || idx} item={item} />
-          ))}
-        </div>
-      )}
-
-      {/* Remaining items in grid */}
-      {remainingItems.length > 0 && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6">
-          {remainingItems.map((item, idx) => (
-            <CompactCard key={item.id || idx} item={item} />
+            <InspirationCard key={item.id || idx} item={item} />
           ))}
         </div>
       )}
     </motion.div>
+  );
+}
+
+export function InspirationCardGrid({ items, activeFilter }: InspirationCardGridProps) {
+  // Group items by category
+  const shortFormItems = items.filter(item => item.category === 'short-form');
+  const longFormItems = items.filter(item => item.category === 'long-form');
+  const blogItems = items.filter(item => item.category === 'blog');
+
+  // If filter is active, show only that category in a flat layout
+  if (activeFilter !== 'all') {
+    const filteredItems = items.filter(item => item.category === activeFilter);
+    
+    if (filteredItems.length === 0) {
+      return (
+        <div className="text-center py-20 text-os-text-secondary-dark">
+          No inspiration items found for this filter.
+        </div>
+      );
+    }
+
+    const featuredItem = filteredItems[0];
+    const rightItem = filteredItems[1];
+    const bottomItems = filteredItems.slice(2, 5);
+    const remainingItems = filteredItems.slice(5);
+
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+        className="space-y-4"
+      >
+        {/* First Row */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="md:col-span-2">
+            <InspirationCard item={featuredItem} featured />
+          </div>
+          {rightItem && (
+            <div>
+              <InspirationCard item={rightItem} />
+            </div>
+          )}
+        </div>
+
+        {/* Second Row */}
+        {bottomItems.length > 0 && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {bottomItems.map((item, idx) => (
+              <InspirationCard key={item.id || idx} item={item} />
+            ))}
+          </div>
+        )}
+
+        {/* Remaining items */}
+        {remainingItems.length > 0 && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6">
+            {remainingItems.map((item, idx) => (
+              <InspirationCard key={item.id || idx} item={item} />
+            ))}
+          </div>
+        )}
+      </motion.div>
+    );
+  }
+
+  // Default: Show organized by sections
+  return (
+    <div>
+      <InspirationSection
+        title="Short-Form"
+        icon={Video}
+        items={shortFormItems}
+      />
+
+      <InspirationSection
+        title="Long-Form"
+        icon={FileText}
+        items={longFormItems}
+      />
+
+      <InspirationSection
+        title="Blogging"
+        icon={Pen}
+        items={blogItems}
+      />
+    </div>
   );
 }

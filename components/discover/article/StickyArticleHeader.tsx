@@ -19,9 +19,11 @@ import {
 interface StickyArticleHeaderProps {
   title: string;
   titleRef?: React.RefObject<HTMLElement | null>;
+  backLink?: string;
+  backLabel?: string;
 }
 
-export function StickyArticleHeader({ title, titleRef }: StickyArticleHeaderProps) {
+export function StickyArticleHeader({ title, titleRef, backLink = '/discover', backLabel = 'Discover' }: StickyArticleHeaderProps) {
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [showOverflowMenu, setShowOverflowMenu] = useState(false);
   const [showShareModal, setShowShareModal] = useState(false);
@@ -77,11 +79,11 @@ export function StickyArticleHeader({ title, titleRef }: StickyArticleHeaderProp
       <div className="flex items-center justify-between h-full px-4 max-w-6xl mx-auto">
         {/* Left: Back button */}
         <Link
-          href="/discover"
+          href={backLink}
           className="group flex items-center gap-2 text-os-text-secondary-dark hover:text-brand-vanilla transition-colors"
         >
           <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
-          <span className="text-sm font-medium hidden sm:inline">Discover</span>
+          <span className="text-sm font-medium hidden sm:inline">{backLabel}</span>
         </Link>
 
         {/* Center: Title (animated fade in/out) */}
