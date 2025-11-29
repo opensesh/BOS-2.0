@@ -520,8 +520,8 @@ export function ChatInterface() {
                   </div>
                 )}
 
-                {/* Error display */}
-                {(error || submitError) && (
+                {/* Error display - only show if no successful content was generated */}
+                {(error || submitError) && !parsedMessages.some(m => m.role === 'assistant' && m.content.length > 50) && (
                   <div className="py-4">
                     <div className="bg-red-500/10 border border-red-500/20 rounded-xl px-4 py-3 text-red-400 text-sm flex items-start gap-3">
                       <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
