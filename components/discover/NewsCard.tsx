@@ -8,27 +8,28 @@ import { NewsCardData, ContentTier } from '@/types';
 import { SourceInfo } from '@/components/chat/AnswerView';
 import { NewsCardMenu } from './NewsCardMenu';
 
-// Tier badge component for visual hierarchy
-function TierBadge({ tier, variant }: { tier?: ContentTier; variant: 'featured' | 'compact' }) {
+// Tier badge component for visual hierarchy - subtle, neutral styling
+function TierBadge({ tier }: { tier?: ContentTier }) {
   if (!tier) return null;
   
-  const isCompact = variant === 'compact';
+  // All badges use consistent neutral styling with subtle differentiation
+  const baseStyles = "inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-bold uppercase tracking-wider text-[9px] backdrop-blur-sm";
   
-  // Featured: Deep research articles with 40+ sources
+  // Featured: Deep research articles
   if (tier === 'featured') {
     return (
-      <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-brand-aperol text-white font-bold uppercase tracking-wider ${isCompact ? 'text-[9px]' : 'text-[10px]'}`}>
-        <Zap className={isCompact ? 'w-2.5 h-2.5' : 'w-3 h-3'} />
+      <span className={`${baseStyles} bg-os-bg-dark/80 text-brand-vanilla border border-os-border-dark/50`}>
+        <Zap className="w-2.5 h-2.5" />
         Deep Dive
       </span>
     );
   }
   
-  // Summary: AI-generated summary, expandable inline
+  // Summary: AI-generated summary
   if (tier === 'summary') {
     return (
-      <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-brand-aperol/20 text-brand-aperol font-bold uppercase tracking-wider ${isCompact ? 'text-[9px]' : 'text-[10px]'}`}>
-        <Sparkles className={isCompact ? 'w-2.5 h-2.5' : 'w-3 h-3'} />
+      <span className={`${baseStyles} bg-os-bg-dark/80 text-os-text-secondary-dark border border-os-border-dark/50`}>
+        <Sparkles className="w-2.5 h-2.5" />
         AI Summary
       </span>
     );
@@ -37,8 +38,8 @@ function TierBadge({ tier, variant }: { tier?: ContentTier; variant: 'featured' 
   // Quick: External link to source
   if (tier === 'quick') {
     return (
-      <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-os-surface-dark text-os-text-secondary-dark font-bold uppercase tracking-wider ${isCompact ? 'text-[9px]' : 'text-[10px]'}`}>
-        <ExternalLink className={isCompact ? 'w-2.5 h-2.5' : 'w-3 h-3'} />
+      <span className={`${baseStyles} bg-os-bg-dark/80 text-os-text-secondary-dark border border-os-border-dark/50`}>
+        <ExternalLink className="w-2.5 h-2.5" />
         Headline
       </span>
     );
@@ -115,10 +116,9 @@ const SOURCE_LOGOS: Record<string, { favicon: string; color: string }> = {
   'Houston Chronicle': { favicon: 'https://www.houstonchronicle.com/favicon.ico', color: '#000' },
 };
 
-// Helper to enrich sources with dummy data for visual demo (requested feature: 40-50 sources)
-function enrichSources(originalSources: NewsCardData['sources']): SourceInfo[] {
-  // Convert original sources with favicon data
-  const realSources: SourceInfo[] = originalSources.map(s => {
+// Convert sources to SourceInfo format with favicon data (no fake sources)
+function convertSources(originalSources: NewsCardData['sources']): SourceInfo[] {
+  return originalSources.map(s => {
     const logoData = SOURCE_LOGOS[s.name];
     return {
       id: s.id,
@@ -129,38 +129,6 @@ function enrichSources(originalSources: NewsCardData['sources']): SourceInfo[] {
       favicon: logoData?.favicon,
     };
   });
-
-  // If we already have many sources, just return them
-  if (originalSources.length > 10) {
-    return realSources;
-  }
-
-  // Generate dummy sources to reach ~40-50 count
-  const dummySourceNames = Object.keys(SOURCE_LOGOS).filter(
-    name => !originalSources.some(s => s.name === name)
-  );
-  
-  // Pick random number of dummies to reach 40-50 total
-  const targetCount = Math.floor(Math.random() * 11) + 40; // 40 to 50
-  const needed = targetCount - realSources.length;
-  
-  const dummySources: SourceInfo[] = dummySourceNames
-    .sort(() => 0.5 - Math.random())
-    .slice(0, needed)
-    .map((name, idx) => {
-      const logoData = SOURCE_LOGOS[name];
-      return {
-        id: `dummy-${idx}`,
-        name,
-        url: '#',
-        title: `${name} Report`,
-        type: 'external',
-        snippet: 'Coverage from this source.',
-        favicon: logoData?.favicon,
-      };
-    });
-
-  return [...realSources, ...dummySources];
 }
 
 export function NewsCard({ 
@@ -192,8 +160,11 @@ export function NewsCard({
     setIsSaved(isSavedProp);
   }, [isSavedProp]);
 
-  // Memoize enriched sources to avoid regeneration on re-renders
-  const displaySources = useMemo(() => enrichSources(item.sources), [item.sources]);
+  // Memoize sources with favicon data
+  const displaySources = useMemo(() => convertSources(item.sources), [item.sources]);
+  
+  // Accurate source count from actual data
+  const actualSourceCount = item.sources.length;
 
   // Intersection Observer for lazy loading OG images
   useEffect(() => {
@@ -219,48 +190,67 @@ export function NewsCard({
     return () => observer.disconnect();
   }, [priority, item.imageUrl]);
 
-  // Fetch OG image from first source if no imageUrl
+  // Fetch OG image from sources - try multiple sources as fallback
   useEffect(() => {
     if (!isVisible || item.imageUrl || item.sources.length === 0) return;
     
-    const sourceUrl = item.sources[0].url;
-    
-    if (ogImageCache.has(sourceUrl)) {
-      const cached = ogImageCache.get(sourceUrl);
-      setOgImage(cached || null);
-      setIsLoadingImage(false);
-      return;
-    }
-
     const controller = new AbortController();
+    let cancelled = false;
 
-    const fetchOgImage = async () => {
-      try {
-        const response = await fetch(
-          `/api/og-image?url=${encodeURIComponent(sourceUrl)}`,
-          { signal: controller.signal }
-        );
-        if (response.ok) {
-          const data: OGData = await response.json();
-          const image = data.image || null;
-          ogImageCache.set(sourceUrl, image);
-          setOgImage(image);
-        } else {
-          ogImageCache.set(sourceUrl, null);
+    const fetchOgImageFromSources = async () => {
+      // Try each source in order until we find an image
+      for (let i = 0; i < item.sources.length && !cancelled; i++) {
+        const sourceUrl = item.sources[i].url;
+        
+        // Check cache first
+        if (ogImageCache.has(sourceUrl)) {
+          const cached = ogImageCache.get(sourceUrl);
+          if (cached) {
+            setOgImage(cached);
+            setIsLoadingImage(false);
+            return;
+          }
+          // If cached as null, continue to next source
+          continue;
         }
-      } catch (error) {
-        if (error instanceof Error && error.name !== 'AbortError') {
-          console.error('Error fetching OG image:', error);
+
+        try {
+          const response = await fetch(
+            `/api/og-image?url=${encodeURIComponent(sourceUrl)}`,
+            { signal: controller.signal }
+          );
+          if (response.ok) {
+            const data: OGData = await response.json();
+            if (data.image) {
+              ogImageCache.set(sourceUrl, data.image);
+              if (!cancelled) {
+                setOgImage(data.image);
+                setIsLoadingImage(false);
+              }
+              return;
+            }
+          }
+          // Cache as null to avoid retrying this source
           ogImageCache.set(sourceUrl, null);
+        } catch (error) {
+          if (error instanceof Error && error.name !== 'AbortError') {
+            ogImageCache.set(sourceUrl, null);
+          }
         }
-      } finally {
+      }
+      
+      // No image found from any source
+      if (!cancelled) {
         setIsLoadingImage(false);
       }
     };
     
-    fetchOgImage();
+    fetchOgImageFromSources();
 
-    return () => controller.abort();
+    return () => {
+      cancelled = true;
+      controller.abort();
+    };
   }, [isVisible, item.imageUrl, item.sources]);
 
   const handleImageError = () => {
@@ -274,9 +264,9 @@ export function NewsCard({
     onOpenSources?.(displaySources);
   };
 
-  const handleSaveClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
+  const handleSaveClick = (e?: React.MouseEvent) => {
+    e?.preventDefault();
+    e?.stopPropagation();
     const newSavedState = !isSaved;
     setIsSaved(newSavedState);
     onSave?.(item, newSavedState);
@@ -379,12 +369,12 @@ export function NewsCard({
           })}
         </div>
         
-        {/* Source count - full text */}
+        {/* Source count - accurate count */}
         <span className={`
           text-os-text-secondary-dark group-hover/sources:text-os-text-primary-dark transition-colors
           ${isFeatured ? 'text-xs' : 'text-[11px]'}
         `}>
-          {displaySources.length} sources
+          {actualSourceCount} {actualSourceCount === 1 ? 'source' : 'sources'}
         </span>
       </button>
     );
@@ -408,7 +398,7 @@ export function NewsCard({
       </button>
       
       <NewsCardMenu 
-        onBookmark={handleSaveClick}
+        onBookmark={() => handleSaveClick()}
         onAddToSpace={() => console.log('Add to Space:', item.title)}
         onDislike={() => console.log('Dislike:', item.title)}
         size={isFeatured ? 'md' : 'sm'}
@@ -426,16 +416,6 @@ export function NewsCard({
         {/* Text Content - LEFT */}
         <div className="flex-1 flex flex-col justify-between min-w-0">
           <div className="flex flex-col gap-3">
-            {/* Tier Badge - all tiers show badges */}
-            {item.tier && (
-              <div className="flex items-center gap-2">
-                <TierBadge tier={item.tier} variant="featured" />
-                {item.tier === 'featured' && (
-                  <span className="text-xs text-os-text-secondary-dark">{displaySources.length}+ sources</span>
-                )}
-              </div>
-            )}
-            
             {/* Title */}
             <h3 className="text-xl md:text-2xl font-display font-bold text-brand-vanilla group-hover:text-brand-aperol transition-colors leading-tight">
               {item.title}
@@ -464,6 +444,12 @@ export function NewsCard({
         <div className="w-full md:w-[360px] shrink-0">
           <div className="relative aspect-[16/10] overflow-hidden rounded-xl bg-os-surface-dark">
             {renderImage()}
+            {/* Tier badge on image - top right */}
+            {item.tier && (
+              <div className="absolute top-3 right-3">
+                <TierBadge tier={item.tier} />
+              </div>
+            )}
           </div>
         </div>
       </Link>
@@ -480,10 +466,10 @@ export function NewsCard({
       {/* Image */}
       <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-os-surface-dark">
         {renderImage()}
-        {/* Tier badge on image - all tiers show badges */}
+        {/* Tier badge on image - top right */}
         {item.tier && (
-          <div className="absolute top-2 left-2">
-            <TierBadge tier={item.tier} variant="compact" />
+          <div className="absolute top-2 right-2">
+            <TierBadge tier={item.tier} />
           </div>
         )}
       </div>

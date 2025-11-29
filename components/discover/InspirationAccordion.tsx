@@ -2,16 +2,15 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { 
-  Video, 
-  FileText, 
-  Pen, 
-  ChevronDown, 
+import {
+  Video,
+  FileText,
+  Pen,
+  ChevronDown,
   ChevronUp,
   Star,
   ExternalLink,
-  Sparkles,
-  Calendar
+  Sparkles
 } from 'lucide-react';
 import { InspirationCardData } from '@/types';
 
@@ -19,7 +18,6 @@ interface InspirationAccordionProps {
   shortForm: InspirationCardData[];
   longForm: InspirationCardData[];
   blog: InspirationCardData[];
-  lastUpdated?: string;
 }
 
 interface AccordionSectionProps {
@@ -172,7 +170,7 @@ function AccordionSection({ title, icon: Icon, items, isOpen, onToggle }: Accord
   );
 }
 
-export function InspirationAccordion({ shortForm, longForm, blog, lastUpdated }: InspirationAccordionProps) {
+export function InspirationAccordion({ shortForm, longForm, blog }: InspirationAccordionProps) {
   const [openSections, setOpenSections] = useState<Set<string>>(new Set(['short-form']));
 
   const toggleSection = (section: string) => {
@@ -187,78 +185,31 @@ export function InspirationAccordion({ shortForm, longForm, blog, lastUpdated }:
     });
   };
 
-  // Format last updated time
-  const formatLastUpdated = () => {
-    if (!lastUpdated) return 'Today at 8:00 AM';
-    try {
-      const date = new Date(lastUpdated);
-      return date.toLocaleDateString('en-US', { 
-        month: 'short', 
-        day: 'numeric', 
-        year: 'numeric',
-        hour: 'numeric',
-        minute: '2-digit',
-        hour12: true
-      });
-    } catch {
-      return lastUpdated;
-    }
-  };
-
   return (
-    <div className="flex flex-col gap-6">
-      {/* Header */}
-      <div className="flex flex-col gap-4">
-        <h1 className="text-3xl md:text-4xl font-display font-bold text-brand-vanilla">
-          Inspiration
-        </h1>
-        <p className="text-os-text-secondary-dark text-lg">
-          Daily content ideas generated and filtered by category
-        </p>
-        
-        {/* Last updated + date picker */}
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2 text-sm">
-            <span className="w-2 h-2 rounded-full bg-brand-aperol" />
-            <span className="text-os-text-secondary-dark">
-              Last updated: {formatLastUpdated()}
-            </span>
-          </div>
-          
-          <button className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-os-border-dark/50 bg-os-surface-dark/30 text-brand-vanilla text-sm hover:bg-os-surface-dark/50 transition-colors">
-            <Calendar className="w-4 h-4" />
-            Today
-            <ChevronDown className="w-4 h-4" />
-          </button>
-        </div>
-      </div>
+    <div className="flex flex-col gap-4">
+      <AccordionSection
+        title="Short-Form"
+        icon={Video}
+        items={shortForm}
+        isOpen={openSections.has('short-form')}
+        onToggle={() => toggleSection('short-form')}
+      />
 
-      {/* Accordion sections */}
-      <div className="flex flex-col gap-4">
-        <AccordionSection
-          title="Short-Form"
-          icon={Video}
-          items={shortForm}
-          isOpen={openSections.has('short-form')}
-          onToggle={() => toggleSection('short-form')}
-        />
-        
-        <AccordionSection
-          title="Long-Form"
-          icon={FileText}
-          items={longForm}
-          isOpen={openSections.has('long-form')}
-          onToggle={() => toggleSection('long-form')}
-        />
-        
-        <AccordionSection
-          title="Blogging"
-          icon={Pen}
-          items={blog}
-          isOpen={openSections.has('blog')}
-          onToggle={() => toggleSection('blog')}
-        />
-      </div>
+      <AccordionSection
+        title="Long-Form"
+        icon={FileText}
+        items={longForm}
+        isOpen={openSections.has('long-form')}
+        onToggle={() => toggleSection('long-form')}
+      />
+
+      <AccordionSection
+        title="Blogging"
+        icon={Pen}
+        items={blog}
+        isOpen={openSections.has('blog')}
+        onToggle={() => toggleSection('blog')}
+      />
     </div>
   );
 }

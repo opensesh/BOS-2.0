@@ -233,9 +233,9 @@ export function TieredNewsCard({
     onOpenSources?.(displaySources);
   };
 
-  const handleSaveClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
+  const handleSaveClick = (e?: React.MouseEvent) => {
+    e?.preventDefault();
+    e?.stopPropagation();
     const newSavedState = !isSaved;
     setIsSaved(newSavedState);
     onSave?.(item, newSavedState);
@@ -371,7 +371,7 @@ export function TieredNewsCard({
       </button>
       
       <NewsCardMenu 
-        onBookmark={handleSaveClick}
+        onBookmark={() => handleSaveClick()}
         onAddToSpace={() => console.log('Add to Space:', item.title)}
         onDislike={() => console.log('Dislike:', item.title)}
         size={isFeatured ? 'md' : 'sm'}

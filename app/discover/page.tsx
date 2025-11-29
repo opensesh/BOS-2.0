@@ -4,6 +4,7 @@ import React, { useState, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { DiscoverLayout } from '@/components/discover/DiscoverLayout';
 import { DiscoverHeader } from '@/components/discover/DiscoverHeader';
+import { ContentSubHeader } from '@/components/discover/ContentSubHeader';
 import { CardGrid } from '@/components/discover/CardGrid';
 import { InspirationAccordion } from '@/components/discover/InspirationAccordion';
 import { WidgetPanel } from '@/components/discover/WidgetPanel';
@@ -17,12 +18,14 @@ import { NewsCardData } from '@/types';
 type MainTabType = 'News' | 'Inspiration';
 type NewsTypeOption = 'all' | 'ai' | 'design' | 'tech' | 'finance';
 type InspirationTypeOption = 'all' | 'short-form' | 'long-form' | 'blog';
+type DateFilterOption = 'today' | 'yesterday' | 'this-week' | 'this-month';
 
 export default function DiscoverPage() {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState<MainTabType>('News');
   const [activeNewsType, setActiveNewsType] = useState<NewsTypeOption>('all');
   const [activeInspirationType, setActiveInspirationType] = useState<InspirationTypeOption>('all');
+  const [selectedDate, setSelectedDate] = useState<DateFilterOption>('today');
   
   // Source Drawer State
   const [isSourcesDrawerOpen, setIsSourcesDrawerOpen] = useState(false);
@@ -142,6 +145,13 @@ export default function DiscoverPage() {
           onOpenSaved={() => setIsSavedDrawerOpen(true)}
         />
 
+        {/* Shared sub-header with last updated + date filter */}
+        <ContentSubHeader
+          lastUpdated={new Date().toISOString()}
+          selectedDate={selectedDate}
+          onDateChange={(date) => setSelectedDate(date as DateFilterOption)}
+        />
+
         {/* Main content with widgets */}
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Cards section */}
@@ -160,8 +170,8 @@ export default function DiscoverPage() {
             )}
 
             {!loading && !error && activeTab === 'News' && (
-              <CardGrid 
-                cards={currentCards} 
+              <CardGrid
+                cards={currentCards}
                 type="news"
                 onOpenSources={handleOpenSources}
                 onSaveArticle={handleSaveArticle}
@@ -174,7 +184,6 @@ export default function DiscoverPage() {
                 shortForm={inspirationData.shortForm}
                 longForm={inspirationData.longForm}
                 blog={inspirationData.blog}
-                lastUpdated={new Date().toISOString()}
               />
             )}
           </div>

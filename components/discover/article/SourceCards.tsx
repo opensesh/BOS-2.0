@@ -16,7 +16,8 @@ export function SourceCards({ sources, totalCount, onViewAllSources }: SourceCar
   const visibleSources = sources.slice(0, 3);
   const remainingCount = displayCount - visibleSources.length;
 
-  if (sources.length === 0) return null;
+  // Don't show source cards for limited sources - just use the sources button
+  if (sources.length <= 4) return null;
 
   return (
     <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-3 mb-1">

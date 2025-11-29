@@ -8,7 +8,7 @@ import { ArrowLeft, Clock } from 'lucide-react';
 import { Sidebar } from '@/components/Sidebar';
 import { StickyArticleHeader } from '@/components/discover/article/StickyArticleHeader';
 import { SourceCards } from '@/components/discover/article/SourceCards';
-import { ArticleSidebar } from '@/components/discover/article/ArticleSidebar';
+import { ArticleSidebar, generateSectionId } from '@/components/discover/article/ArticleSidebar';
 import { AskFollowUp } from '@/components/discover/article/AskFollowUp';
 import { DiscoverMore } from '@/components/discover/article/DiscoverMore';
 import { InlineSourceChips, SourceGroup } from '@/components/discover/article/InlineSourceBadge';
@@ -37,20 +37,18 @@ function createSimplifiedArticle(
     }
   };
   
-  return {
-    id: `fallback-${slug}`,
-    slug,
-    title: item.title,
-    publishedAt: item.timestamp || new Date().toISOString(),
-    generatedAt: new Date().toISOString(),
-    totalSources: sources.length,
-    sections: [{
-      id: 'section-0',
-      paragraphs: item.description
-        ? item.description.split('\n\n').map((para: string, idx: number) => ({
-            id: `para-0-${idx}`,
-            content: para,
-            citations: idx === 0 && sources.length > 0 ? [{
+  // Generate structured sections from the description or create placeholder content
+  const generateSections = () => {
+    if (!item.description || item.description.trim().length < 50) {
+      // For sparse content, create structured placeholder sections
+      return [
+        {
+          id: 'section-overview',
+          title: 'Overview',
+          paragraphs: [{
+            id: 'para-overview-0',
+            content: item.description || `This article covers ${item.title}. Click on the source links below to read the full coverage from the original publishers.`,
+            citations: sources.length > 0 ? [{
               primarySource: {
                 id: 'source-0',
                 name: sources[0].name,
@@ -58,7 +56,7 @@ function createSimplifiedArticle(
                 favicon: getFavicon(sources[0].url),
                 title: item.title,
               },
-              additionalCount: sources.length - 1,
+              additionalCount: Math.max(0, sources.length - 1),
               additionalSources: sources.slice(1).map((s, i) => ({
                 id: `source-${i + 1}`,
                 name: s.name,
@@ -67,13 +65,112 @@ function createSimplifiedArticle(
                 title: item.title,
               })),
             }] : [],
-          }))
-        : [{
-            id: 'para-0-0',
-            content: item.title,
+          }],
+        },
+        {
+          id: 'section-sources',
+          title: 'Read More',
+          paragraphs: [{
+            id: 'para-sources-0',
+            content: `For full coverage of this story, visit the original sources listed below. Each source provides additional context and perspective on ${item.title.toLowerCase()}.`,
             citations: [],
           }],
-    }],
+        },
+      ];
+    }
+    
+    // Parse description paragraphs into sections
+    const paragraphs = item.description.split('\n\n').filter(p => p.trim().length > 0);
+    
+    if (paragraphs.length <= 2) {
+      // Short content - single section with title
+      return [{
+        id: 'section-0',
+        title: 'Summary',
+        paragraphs: paragraphs.map((para: string, idx: number) => ({
+          id: `para-0-${idx}`,
+          content: para,
+          citations: idx === 0 && sources.length > 0 ? [{
+            primarySource: {
+              id: 'source-0',
+              name: sources[0].name,
+              url: sources[0].url,
+              favicon: getFavicon(sources[0].url),
+              title: item.title,
+            },
+            additionalCount: Math.max(0, sources.length - 1),
+            additionalSources: sources.slice(1).map((s, i) => ({
+              id: `source-${i + 1}`,
+              name: s.name,
+              url: s.url,
+              favicon: getFavicon(s.url),
+              title: item.title,
+            })),
+          }] : [],
+        })),
+      }];
+    }
+    
+    // Multiple paragraphs - create structured sections
+    const sections = [];
+    const midPoint = Math.ceil(paragraphs.length / 2);
+    
+    // First section: Key Details
+    sections.push({
+      id: 'section-key-details',
+      title: 'Key Details',
+      paragraphs: paragraphs.slice(0, midPoint).map((para: string, idx: number) => ({
+        id: `para-key-${idx}`,
+        content: para,
+        citations: idx === 0 && sources.length > 0 ? [{
+          primarySource: {
+            id: 'source-0',
+            name: sources[0].name,
+            url: sources[0].url,
+            favicon: getFavicon(sources[0].url),
+            title: item.title,
+          },
+          additionalCount: Math.max(0, sources.length - 1),
+          additionalSources: sources.slice(1).map((s, i) => ({
+            id: `source-${i + 1}`,
+            name: s.name,
+            url: s.url,
+            favicon: getFavicon(s.url),
+            title: item.title,
+          })),
+        }] : [],
+      })),
+    });
+    
+    // Second section: Analysis
+    if (paragraphs.length > midPoint) {
+      sections.push({
+        id: 'section-analysis',
+        title: 'Analysis',
+        paragraphs: paragraphs.slice(midPoint).map((para: string, idx: number) => ({
+          id: `para-analysis-${idx}`,
+          content: para,
+          citations: [],
+        })),
+      });
+    }
+    
+    return sections;
+  };
+  
+  const sections = generateSections();
+  const sidebarSections = sections
+    .filter((s): s is typeof s & { title: string } => Boolean(s.title))
+    .map(s => s.title);
+  
+  return {
+    id: `fallback-${slug}`,
+    slug,
+    title: item.title,
+    publishedAt: item.timestamp || new Date().toISOString(),
+    generatedAt: new Date().toISOString(),
+    totalSources: sources.length,
+    sections,
     sourceCards: sources.slice(0, 4).map((s, i) => ({
       id: `card-${i}`,
       name: s.name,
@@ -88,7 +185,7 @@ function createSimplifiedArticle(
       favicon: getFavicon(s.url),
       title: item.title,
     })),
-    sidebarSections: [],
+    sidebarSections,
     relatedArticles: [],
   };
 }
@@ -290,9 +387,12 @@ export default function ArticlePage() {
                     
                     return (
                       <section key={section.id} className="flex flex-col gap-4">
-                        {/* Section sub-heading (h3, smaller size) */}
+                        {/* Section sub-heading (h3, smaller size) with anchor ID */}
                         {section.title && (
-                          <h3 className="text-lg md:text-xl font-display font-semibold text-brand-vanilla mt-4">
+                          <h3 
+                            id={generateSectionId(section.title)}
+                            className="text-lg md:text-xl font-display font-semibold text-brand-vanilla mt-4 scroll-mt-20"
+                          >
                             {section.title}
                           </h3>
                         )}
