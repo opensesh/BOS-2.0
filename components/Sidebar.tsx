@@ -65,35 +65,26 @@ export function Sidebar() {
         />
       )}
 
-      {/* Desktop Navigation Rail - Supabase-inspired compact design */}
+      {/* Desktop Navigation Rail - Fixed width, text reveals on hover */}
       <aside
         ref={railRef}
         onMouseEnter={() => setIsSidebarHovered(true)}
         onMouseLeave={() => setIsSidebarHovered(false)}
-        className={`
+        className="
           hidden lg:flex
           relative z-40
+          w-[56px]
           bg-os-bg-darker border-r border-os-border-dark
           flex-col h-screen
-          transition-all duration-300 ease-out
-          ${isSidebarHovered ? 'w-[72px]' : 'w-[52px]'}
-        `}
+        "
       >
         {/* Brand Selector - Top Left */}
-        <div className={`
-          flex items-center justify-center border-b border-os-border-dark relative z-[70]
-          transition-all duration-300 ease-out
-          ${isSidebarHovered ? 'h-14 py-3' : 'h-11 py-2'}
-        `}>
-          <BrandSelector size={isSidebarHovered ? 26 : 22} href="/" onClick={handleHomeClick} />
+        <div className="h-12 flex items-center justify-center border-b border-os-border-dark relative z-[70]">
+          <BrandSelector size={24} href="/" onClick={handleHomeClick} />
         </div>
 
         {/* Navigation Items - Compact at top */}
-        <nav className={`
-          flex flex-col items-center
-          transition-all duration-300 ease-out
-          ${isSidebarHovered ? 'pt-2 gap-0.5' : 'pt-1.5 gap-0'}
-        `}>
+        <nav className="flex flex-col items-center pt-1">
           {navItems.map((item, index) => {
             const Icon = item.icon;
             const isActive = pathname === item.href || (item.href === '/spaces' && pathname.startsWith('/spaces'));
@@ -104,9 +95,6 @@ export function Sidebar() {
                 className="relative w-full flex justify-center"
                 onMouseEnter={() => setHoveredItem(item.label)}
                 onMouseLeave={() => {}}
-                style={{
-                  animationDelay: isSidebarHovered ? `${index * 30}ms` : '0ms',
-                }}
               >
                 <Link
                   data-nav-item={item.label}
@@ -114,48 +102,44 @@ export function Sidebar() {
                   onClick={item.href === '/' ? handleHomeClick : closeMobileMenu}
                   className={`
                     flex flex-col items-center justify-center
-                    rounded-lg
-                    transition-all duration-200 ease-out
+                    py-2 px-2 min-h-[52px]
+                    transition-colors duration-150
                     group relative
-                    ${isSidebarHovered ? 'py-2 px-2 min-h-[56px]' : 'py-1.5 px-1.5 min-h-[36px]'}
                     ${isActive ? 'text-brand-aperol' : 'text-os-text-secondary-dark hover:text-os-text-primary-dark'}
                   `}
                 >
                   {/* Active indicator - left bar */}
                   <div className={`
                     absolute left-0 top-1/2 -translate-y-1/2 w-[2px] rounded-r-full
-                    transition-all duration-200 ease-out
+                    transition-all duration-150
                     ${isActive ? 'h-5 bg-brand-aperol' : 'h-0 bg-transparent'}
                   `} />
                   
                   {/* Icon container */}
                   <div className={`
-                    flex items-center justify-center rounded-lg
-                    transition-all duration-200 ease-out
-                    ${isSidebarHovered ? 'w-9 h-9' : 'w-7 h-7'}
+                    w-8 h-8 flex items-center justify-center rounded-lg
+                    transition-all duration-150
                     ${isActive 
                       ? 'bg-brand-aperol/10' 
-                      : 'hover:bg-os-surface-dark group-hover:scale-105'
+                      : 'group-hover:bg-os-surface-dark'
                     }
                   `}>
-                    <Icon className={`
-                      flex-shrink-0
-                      transition-all duration-200 ease-out
-                      ${isSidebarHovered ? 'w-5 h-5' : 'w-4 h-4'}
-                      ${isActive ? 'text-brand-aperol' : ''}
-                    `} />
+                    <Icon className={`w-[18px] h-[18px] ${isActive ? 'text-brand-aperol' : ''}`} />
                   </div>
                   
-                  {/* Label - appears on hover */}
-                  <span className={`
-                    text-[9px] font-medium text-center leading-tight mt-0.5
-                    transition-all duration-200 ease-out
-                    ${isSidebarHovered 
-                      ? 'opacity-100 max-h-4 translate-y-0' 
-                      : 'opacity-0 max-h-0 -translate-y-1 pointer-events-none'
-                    }
-                    ${isActive ? 'text-brand-aperol' : 'text-os-text-secondary-dark group-hover:text-os-text-primary-dark'}
-                  `}>
+                  {/* Label - fades in on sidebar hover */}
+                  <span 
+                    className={`
+                      text-[9px] font-medium text-center leading-tight mt-1
+                      transition-all duration-200 ease-out
+                      ${isActive ? 'text-brand-aperol' : 'text-os-text-secondary-dark group-hover:text-os-text-primary-dark'}
+                    `}
+                    style={{
+                      opacity: isSidebarHovered ? 1 : 0,
+                      transform: isSidebarHovered ? 'translateY(0)' : 'translateY(-2px)',
+                      transitionDelay: isSidebarHovered ? `${index * 25}ms` : '0ms',
+                    }}
+                  >
                     {item.label}
                   </span>
                 </Link>
@@ -167,112 +151,78 @@ export function Sidebar() {
         {/* Spacer */}
         <div className="flex-1" />
 
-        {/* Bottom Section - Compact */}
-        <div className={`
-          flex flex-col items-center border-t border-os-border-dark
-          transition-all duration-300 ease-out
-          ${isSidebarHovered ? 'pt-2 pb-2 gap-0.5' : 'pt-1.5 pb-1.5 gap-0'}
-        `}>
+        {/* Bottom Section */}
+        <div className="flex flex-col items-center border-t border-os-border-dark py-1">
           <button
-            className={`
-              flex flex-col items-center justify-center rounded-lg
+            className="
+              flex flex-col items-center justify-center
+              py-2 px-2 min-h-[52px]
               text-os-text-secondary-dark hover:text-os-text-primary-dark
-              transition-all duration-200 ease-out group
-              ${isSidebarHovered ? 'py-2 px-2 min-h-[56px]' : 'py-1.5 px-1.5 min-h-[36px]'}
-            `}
+              transition-colors duration-150 group
+            "
             title="Notifications"
           >
-            <div className={`
-              flex items-center justify-center rounded-lg
-              hover:bg-os-surface-dark group-hover:scale-105
-              transition-all duration-200 ease-out
-              ${isSidebarHovered ? 'w-9 h-9' : 'w-7 h-7'}
-            `}>
-              <Bell className={`
-                transition-all duration-200 ease-out
-                ${isSidebarHovered ? 'w-5 h-5' : 'w-4 h-4'}
-              `} />
+            <div className="w-8 h-8 flex items-center justify-center rounded-lg group-hover:bg-os-surface-dark transition-colors duration-150">
+              <Bell className="w-[18px] h-[18px]" />
             </div>
-            <span className={`
-              text-[9px] font-medium text-center mt-0.5
-              transition-all duration-200 ease-out
-              ${isSidebarHovered 
-                ? 'opacity-100 max-h-4 translate-y-0' 
-                : 'opacity-0 max-h-0 -translate-y-1 pointer-events-none'
-              }
-            `}>
+            <span 
+              className="text-[9px] font-medium text-center mt-1 transition-all duration-200 ease-out"
+              style={{
+                opacity: isSidebarHovered ? 1 : 0,
+                transform: isSidebarHovered ? 'translateY(0)' : 'translateY(-2px)',
+                transitionDelay: isSidebarHovered ? '125ms' : '0ms',
+              }}
+            >
               Alerts
             </span>
           </button>
 
           <button
-            className={`
-              flex flex-col items-center justify-center rounded-lg
+            className="
+              flex flex-col items-center justify-center
+              py-2 px-2 min-h-[52px]
               text-os-text-secondary-dark hover:text-os-text-primary-dark
-              transition-all duration-200 ease-out group
-              ${isSidebarHovered ? 'py-2 px-2 min-h-[56px]' : 'py-1.5 px-1.5 min-h-[36px]'}
-            `}
+              transition-colors duration-150 group
+            "
             title="Account"
           >
-            <div className={`
-              flex items-center justify-center rounded-lg
-              hover:bg-os-surface-dark group-hover:scale-105
-              transition-all duration-200 ease-out
-              ${isSidebarHovered ? 'w-9 h-9' : 'w-7 h-7'}
-            `}>
-              <div className={`
-                bg-gradient-to-br from-brand-charcoal to-black border border-os-border-dark rounded-full 
-                flex items-center justify-center flex-shrink-0
-                transition-all duration-200 ease-out
-                ${isSidebarHovered ? 'w-6 h-6' : 'w-5 h-5'}
-              `}>
-                <span className={`
-                  text-white font-mono
-                  transition-all duration-200 ease-out
-                  ${isSidebarHovered ? 'text-[10px]' : 'text-[8px]'}
-                `}>A</span>
+            <div className="w-8 h-8 flex items-center justify-center rounded-lg group-hover:bg-os-surface-dark transition-colors duration-150">
+              <div className="w-5 h-5 bg-gradient-to-br from-brand-charcoal to-black border border-os-border-dark rounded-full flex items-center justify-center">
+                <span className="text-white text-[8px] font-mono">A</span>
               </div>
             </div>
-            <span className={`
-              text-[9px] font-medium text-center mt-0.5
-              transition-all duration-200 ease-out
-              ${isSidebarHovered 
-                ? 'opacity-100 max-h-4 translate-y-0' 
-                : 'opacity-0 max-h-0 -translate-y-1 pointer-events-none'
-              }
-            `}>
+            <span 
+              className="text-[9px] font-medium text-center mt-1 transition-all duration-200 ease-out"
+              style={{
+                opacity: isSidebarHovered ? 1 : 0,
+                transform: isSidebarHovered ? 'translateY(0)' : 'translateY(-2px)',
+                transitionDelay: isSidebarHovered ? '150ms' : '0ms',
+              }}
+            >
               Account
             </span>
           </button>
 
           <button
-            className={`
-              flex flex-col items-center justify-center rounded-lg
+            className="
+              flex flex-col items-center justify-center
+              py-2 px-2 min-h-[52px]
               text-os-text-secondary-dark hover:text-os-text-primary-dark
-              transition-all duration-200 ease-out group
-              ${isSidebarHovered ? 'py-2 px-2 min-h-[56px]' : 'py-1.5 px-1.5 min-h-[36px]'}
-            `}
+              transition-colors duration-150 group
+            "
             title="Upgrade"
           >
-            <div className={`
-              flex items-center justify-center rounded-lg
-              hover:bg-os-surface-dark group-hover:scale-105
-              transition-all duration-200 ease-out
-              ${isSidebarHovered ? 'w-9 h-9' : 'w-7 h-7'}
-            `}>
-              <ArrowUpRight className={`
-                transition-all duration-200 ease-out
-                ${isSidebarHovered ? 'w-5 h-5' : 'w-4 h-4'}
-              `} />
+            <div className="w-8 h-8 flex items-center justify-center rounded-lg group-hover:bg-os-surface-dark transition-colors duration-150">
+              <ArrowUpRight className="w-[18px] h-[18px]" />
             </div>
-            <span className={`
-              text-[9px] font-medium text-center mt-0.5
-              transition-all duration-200 ease-out
-              ${isSidebarHovered 
-                ? 'opacity-100 max-h-4 translate-y-0' 
-                : 'opacity-0 max-h-0 -translate-y-1 pointer-events-none'
-              }
-            `}>
+            <span 
+              className="text-[9px] font-medium text-center mt-1 transition-all duration-200 ease-out"
+              style={{
+                opacity: isSidebarHovered ? 1 : 0,
+                transform: isSidebarHovered ? 'translateY(0)' : 'translateY(-2px)',
+                transitionDelay: isSidebarHovered ? '175ms' : '0ms',
+              }}
+            >
               Upgrade
             </span>
           </button>

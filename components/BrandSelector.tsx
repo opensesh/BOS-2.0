@@ -193,10 +193,10 @@ export function BrandSelector({ size = 32, className = '', href = '/', onClick }
             relative z-[70]
             flex items-center justify-center
             w-full h-full p-2
-            border border-os-border-dark
+            border border-transparent
             rounded-lg
-            bg-os-surface-dark/50
-            hover:border-brand-aperol/50
+            hover:bg-os-surface-dark/50
+            hover:border-brand-aperol/30
             transition-all duration-200
             cursor-pointer
           "
