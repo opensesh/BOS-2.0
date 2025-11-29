@@ -3,7 +3,7 @@ import { ModelId, getModelInstance, models } from '@/lib/ai/providers';
 import { autoSelectModel } from '@/lib/ai/auto-router';
 import { buildBrandSystemPrompt, shouldIncludeFullDocs, BRAND_SOURCES } from '@/lib/brand-knowledge';
 
-export const maxDuration = 30; // Allow streaming responses up to 30 seconds
+export const maxDuration = 60; // Allow streaming responses up to 60 seconds
 
 // Check if required API key is available for a model
 function hasRequiredApiKey(modelId: ModelId): { valid: boolean; error?: string } {

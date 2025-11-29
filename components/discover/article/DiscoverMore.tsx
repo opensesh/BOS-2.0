@@ -233,13 +233,13 @@ function DiscoverMoreCard({ article }: { article: RelatedArticle }) {
   return (
     <Link
       href={`/discover/${article.slug}`}
-      className="group flex flex-col gap-3 rounded-xl bg-transparent hover:bg-os-surface-dark/30 p-2 transition-colors"
+      className="group flex flex-col gap-2.5 p-2.5 bg-os-surface-dark/60 hover:bg-os-surface-dark rounded-xl border border-os-border-dark/50 hover:border-os-border-dark transition-all"
     >
       {/* Image */}
-      <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-os-surface-dark">
+      <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-os-bg-dark">
         {isLoadingImage ? (
           <div className="w-full h-full flex items-center justify-center">
-            <div className="w-6 h-6 border-2 border-os-text-secondary-dark border-t-brand-aperol rounded-full animate-spin" />
+            <div className="w-5 h-5 border-2 border-os-text-secondary-dark border-t-brand-aperol rounded-full animate-spin" />
           </div>
         ) : ogImage ? (
           <Image
@@ -251,57 +251,24 @@ function DiscoverMoreCard({ article }: { article: RelatedArticle }) {
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-os-surface-dark to-os-bg-dark">
-            <div className="text-2xl">📰</div>
+            <div className="text-xl">📰</div>
           </div>
         )}
       </div>
 
       {/* Content */}
-      <div className="flex flex-col gap-2 px-1">
+      <div className="flex flex-col gap-1.5">
         {/* Title */}
-        <h4 className="text-sm font-medium text-brand-vanilla group-hover:text-brand-aperol transition-colors leading-snug line-clamp-2">
+        <h4 className="text-xs font-medium text-brand-vanilla group-hover:text-brand-aperol transition-colors leading-snug line-clamp-2">
           {article.title}
         </h4>
 
-        {/* Description (truncated) */}
-        {article.description && (
-          <p className="text-xs text-os-text-secondary-dark line-clamp-2">
-            {article.description}
-          </p>
-        )}
-
-        {/* Source icons and count */}
-        <div className="flex items-center gap-1.5">
-          {article.sources.length > 0 && (
-            <div className="flex -space-x-1.5">
-              {article.sources.slice(0, 3).map((source, idx) => (
-                <div
-                  key={source.id || idx}
-                  className="w-5 h-5 rounded-full bg-os-surface-dark border border-os-bg-dark flex items-center justify-center"
-                  title={source.name}
-                >
-                  {source.favicon ? (
-                    <Image
-                      src={source.favicon}
-                      alt=""
-                      width={12}
-                      height={12}
-                      className="w-3 h-3 rounded-sm"
-                      unoptimized
-                    />
-                  ) : (
-                    <span className="text-[8px] text-os-text-secondary-dark font-bold">
-                      {source.name.charAt(0)}
-                    </span>
-                  )}
-                </div>
-              ))}
-            </div>
-          )}
-          <span className="text-xs text-os-text-secondary-dark">
-            {article.sourceCount > 0 ? `${article.sourceCount} sources` : ''}
+        {/* Source count - single line, compact */}
+        {article.sourceCount > 0 && (
+          <span className="text-[10px] text-os-text-secondary-dark">
+            {article.sourceCount} {article.sourceCount === 1 ? 'source' : 'sources'}
           </span>
-        </div>
+        )}
       </div>
     </Link>
   );

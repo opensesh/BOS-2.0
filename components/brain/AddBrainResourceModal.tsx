@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { Zap, FolderOpen, FileCode, Terminal, PenTool, Link } from 'lucide-react';
 import { Modal } from '@/components/ui/Modal';
 import { BrainResource } from '@/hooks/useBrainResources';
 

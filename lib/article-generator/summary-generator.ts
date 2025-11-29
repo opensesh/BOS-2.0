@@ -72,7 +72,7 @@ Write a 2-3 paragraph summary that explains what happened and why it matters for
       model: anthropic('claude-3-5-haiku-20241022'),
       system: SUMMARY_SYSTEM_PROMPT,
       prompt: userPrompt,
-      maxTokens: 500,
+      maxOutputTokens: 500,
       temperature: 0.7,
     });
 
@@ -80,9 +80,9 @@ Write a 2-3 paragraph summary that explains what happened and why it matters for
       summary: result.text.trim(),
       generatedAt: new Date().toISOString(),
       model: 'claude-3-5-haiku-20241022',
-      tokenUsage: result.usage ? {
-        promptTokens: result.usage.promptTokens,
-        completionTokens: result.usage.completionTokens,
+      tokenUsage: result.usage?.inputTokens && result.usage?.outputTokens ? {
+        promptTokens: result.usage.inputTokens,
+        completionTokens: result.usage.outputTokens,
       } : undefined,
     };
   } catch (error) {

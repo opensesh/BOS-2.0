@@ -1,7 +1,9 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   Video,
   FileText,
@@ -32,6 +34,33 @@ interface AccordionSectionProps {
 function InspirationItem({ item }: { item: InspirationCardData }) {
   const router = useRouter();
   const [isGenerating, setIsGenerating] = useState(false);
+  const [ogImage, setOgImage] = useState<string | null>(null);
+  const [imageLoading, setImageLoading] = useState(true);
+
+  // Fetch OG image from first source
+  useEffect(() => {
+    if (item.sources.length > 0) {
+      const fetchOgImage = async () => {
+        try {
+          const sourceUrl = item.sources[0].url;
+          const response = await fetch(`/api/og-image?url=${encodeURIComponent(sourceUrl)}`);
+          if (response.ok) {
+            const data = await response.json();
+            if (data.image) {
+              setOgImage(data.image);
+            }
+          }
+        } catch (error) {
+          console.error('Error fetching OG image:', error);
+        } finally {
+          setImageLoading(false);
+        }
+      };
+      fetchOgImage();
+    } else {
+      setImageLoading(false);
+    }
+  }, [item.sources]);
 
   const handleGenerateIdeas = () => {
     setIsGenerating(true);
@@ -66,57 +95,83 @@ Please provide:
 
   return (
     <div className="group px-4 py-4 border-b border-os-border-dark/30 last:border-b-0 hover:bg-os-surface-dark/30 transition-colors">
-      <div className="flex items-start justify-between gap-4">
+      <div className="flex items-start gap-4">
+        {/* Thumbnail */}
+        <div className="relative w-20 h-14 md:w-24 md:h-16 rounded-lg overflow-hidden bg-os-surface-dark shrink-0">
+          {imageLoading ? (
+            <div className="w-full h-full flex items-center justify-center">
+              <div className="w-4 h-4 border-2 border-os-text-secondary-dark/30 border-t-os-text-secondary-dark rounded-full animate-spin" />
+            </div>
+          ) : ogImage ? (
+            <Image
+              src={ogImage}
+              alt={item.title}
+              fill
+              className="object-cover"
+              unoptimized
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-os-surface-dark to-os-bg-dark">
+              <span className="text-xl">💡</span>
+            </div>
+          )}
+          {/* Star badge overlay */}
+          {item.starred && (
+            <div className="absolute top-1 right-1 p-0.5 rounded bg-brand-aperol/90">
+              <Star className="w-3 h-3 text-white fill-white" />
+            </div>
+          )}
+        </div>
+
         {/* Title and description */}
         <div className="flex-1 min-w-0">
-          <h4 className="text-base font-medium text-brand-vanilla group-hover:text-brand-aperol transition-colors">
+          <h4 className="text-sm font-medium text-brand-vanilla group-hover:text-brand-aperol transition-colors line-clamp-1">
             {item.title}
           </h4>
-          <p className="mt-1 text-sm text-os-text-secondary-dark leading-relaxed">
+          <p className="mt-0.5 text-xs text-os-text-secondary-dark leading-relaxed line-clamp-2">
             {item.description}
           </p>
           
-          {/* Source chips */}
-          <div className="mt-3 flex flex-wrap gap-2">
-            {item.sources.map((source, idx) => (
+          {/* Source chips - inline */}
+          <div className="mt-2 flex items-center gap-2 flex-wrap">
+            {item.sources.slice(0, 2).map((source, idx) => (
               <a
                 key={source.id || idx}
                 href={source.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-os-border-dark/50 bg-os-surface-dark/30 text-xs text-os-text-secondary-dark hover:text-brand-vanilla hover:border-os-border-dark transition-all"
+                className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full border border-os-border-dark/30 bg-os-surface-dark/20 text-[10px] text-os-text-secondary-dark hover:text-brand-vanilla transition-all"
                 onClick={(e) => e.stopPropagation()}
               >
                 {source.name}
-                <ExternalLink className="w-3 h-3" />
               </a>
             ))}
+            {item.sources.length > 2 && (
+              <span className="text-[10px] text-os-text-secondary-dark">
+                +{item.sources.length - 2} more
+              </span>
+            )}
           </div>
         </div>
 
-        {/* Right side: Star + Generate button */}
-        <div className="flex items-center gap-3 shrink-0">
-          {item.starred && (
-            <Star className="w-5 h-5 text-brand-aperol fill-brand-aperol" />
+        {/* Generate button - always visible on mobile, hover on desktop */}
+        <button
+          onClick={handleGenerateIdeas}
+          disabled={isGenerating}
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brand-aperol/10 text-brand-aperol text-xs font-medium hover:bg-brand-aperol/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed shrink-0 md:opacity-0 md:group-hover:opacity-100"
+        >
+          {isGenerating ? (
+            <>
+              <div className="w-3 h-3 border-2 border-brand-aperol/30 border-t-brand-aperol rounded-full animate-spin" />
+              <span className="hidden sm:inline">Generating...</span>
+            </>
+          ) : (
+            <>
+              <Sparkles className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">Generate</span>
+            </>
           )}
-          <button
-            onClick={handleGenerateIdeas}
-            disabled={isGenerating}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brand-aperol/10 text-brand-aperol text-sm font-medium hover:bg-brand-aperol/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed opacity-0 group-hover:opacity-100"
-          >
-            {isGenerating ? (
-              <>
-                <div className="w-3 h-3 border-2 border-brand-aperol/30 border-t-brand-aperol rounded-full animate-spin" />
-                Generating...
-              </>
-            ) : (
-              <>
-                <Sparkles className="w-3.5 h-3.5" />
-                Generate Ideas
-              </>
-            )}
-          </button>
-        </div>
+        </button>
       </div>
     </div>
   );
@@ -125,48 +180,64 @@ Please provide:
 // Accordion section component
 function AccordionSection({ title, icon: Icon, items, isOpen, onToggle }: AccordionSectionProps) {
   return (
-    <div className="rounded-xl border border-os-border-dark/50 bg-os-surface-dark/20 overflow-hidden">
+    <motion.div 
+      className="rounded-xl border border-os-border-dark/50 bg-os-surface-dark/20 overflow-hidden"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
+    >
       {/* Section header */}
       <button
         onClick={onToggle}
-        className="w-full flex items-center justify-between px-5 py-4 hover:bg-os-surface-dark/30 transition-colors"
+        className="w-full flex items-center justify-between px-4 py-3 hover:bg-os-surface-dark/30 transition-colors"
       >
         <div className="flex items-center gap-3">
-          <Icon className="w-5 h-5 text-brand-vanilla" />
-          <span className="text-lg font-semibold text-brand-vanilla">{title}</span>
+          <Icon className="w-5 h-5 text-brand-aperol" />
+          <span className="text-base font-semibold text-brand-vanilla">{title}</span>
           <span className="px-2 py-0.5 rounded-full bg-os-surface-dark text-xs text-os-text-secondary-dark">
             {items.length}
           </span>
         </div>
-        {isOpen ? (
-          <ChevronUp className="w-5 h-5 text-os-text-secondary-dark" />
-        ) : (
+        <motion.div
+          animate={{ rotate: isOpen ? 180 : 0 }}
+          transition={{ duration: 0.2 }}
+        >
           <ChevronDown className="w-5 h-5 text-os-text-secondary-dark" />
-        )}
+        </motion.div>
       </button>
 
-      {/* Expandable content */}
-      <div 
-        className={`
-          grid transition-all duration-300 ease-in-out
-          ${isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}
-        `}
-      >
-        <div className="overflow-hidden">
-          <div className="border-t border-os-border-dark/30">
-            {items.length > 0 ? (
-              items.map((item) => (
-                <InspirationItem key={item.id} item={item} />
-              ))
-            ) : (
-              <div className="px-4 py-8 text-center text-os-text-secondary-dark">
-                No items in this category
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-    </div>
+      {/* Expandable content with AnimatePresence */}
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            className="overflow-hidden"
+          >
+            <div className="border-t border-os-border-dark/30">
+              {items.length > 0 ? (
+                items.map((item, idx) => (
+                  <motion.div
+                    key={item.id}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: idx * 0.05 }}
+                  >
+                    <InspirationItem item={item} />
+                  </motion.div>
+                ))
+              ) : (
+                <div className="px-4 py-8 text-center text-os-text-secondary-dark">
+                  No items in this category
+                </div>
+              )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
   );
 }
 

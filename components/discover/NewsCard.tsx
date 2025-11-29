@@ -408,10 +408,10 @@ export function NewsCard({
 
   if (isFeatured) {
     return (
-      <Link 
+      <Link
         ref={cardRef}
         href={`/discover/${item.slug}`}
-        className="group flex flex-col md:flex-row gap-6 p-4 rounded-xl bg-transparent hover:bg-os-surface-dark/20 transition-colors"
+        className="group flex flex-col md:flex-row gap-6 py-4 rounded-xl bg-transparent hover:bg-os-surface-dark/20 transition-colors"
       >
         {/* Text Content - LEFT */}
         <div className="flex-1 flex flex-col justify-between min-w-0">
@@ -458,10 +458,10 @@ export function NewsCard({
 
   // Compact variant - lighter hover background
   return (
-    <Link 
+    <Link
       ref={cardRef}
       href={`/discover/${item.slug}`}
-      className="group flex flex-col gap-2 p-2 rounded-lg bg-transparent hover:bg-os-surface-dark/10 transition-colors"
+      className="group flex flex-col gap-2 py-2 rounded-lg bg-transparent hover:bg-os-surface-dark/10 transition-colors"
     >
       {/* Image */}
       <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-os-surface-dark">

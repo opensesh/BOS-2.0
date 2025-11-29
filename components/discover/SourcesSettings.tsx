@@ -61,7 +61,7 @@ interface SourcesSettingsProps {
 export function SourcesSettings({ isOpen, onClose }: SourcesSettingsProps) {
   const [sources, setSources] = useState<SourceItem[]>(DEFAULT_SOURCES);
   const [showAddForm, setShowAddForm] = useState(false);
-  const [newSource, setNewSource] = useState({ name: '', url: '', category: 'tech' as const });
+  const [newSource, setNewSource] = useState<{ name: string; url: string; category: SourceItem['category'] }>({ name: '', url: '', category: 'tech' });
 
   if (!isOpen) return null;
 

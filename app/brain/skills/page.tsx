@@ -110,7 +110,7 @@ function SkillsContent() {
       <BrainSettingsModal
         isOpen={isSettingsOpen}
         onClose={() => setIsSettingsOpen(false)}
-        defaultSection="personality"
+        defaultSection="guidelines"
       />
     </div>
   );

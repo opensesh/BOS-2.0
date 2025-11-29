@@ -2,9 +2,9 @@
 
 import React, { useState, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
+import { motion, AnimatePresence } from 'framer-motion';
 import { DiscoverLayout } from '@/components/discover/DiscoverLayout';
 import { DiscoverHeader } from '@/components/discover/DiscoverHeader';
-import { ContentSubHeader } from '@/components/discover/ContentSubHeader';
 import { CardGrid } from '@/components/discover/CardGrid';
 import { InspirationAccordion } from '@/components/discover/InspirationAccordion';
 import { WidgetPanel } from '@/components/discover/WidgetPanel';
@@ -18,7 +18,7 @@ import { NewsCardData } from '@/types';
 type MainTabType = 'News' | 'Inspiration';
 type NewsTypeOption = 'all' | 'ai' | 'design' | 'tech' | 'finance';
 type InspirationTypeOption = 'all' | 'short-form' | 'long-form' | 'blog';
-type DateFilterOption = 'today' | 'yesterday' | 'this-week' | 'this-month';
+type DateFilterOption = 'today' | 'week' | 'month';
 
 export default function DiscoverPage() {
   const router = useRouter();
@@ -135,7 +135,7 @@ export default function DiscoverPage() {
     <div className="flex h-screen bg-os-bg-dark dark:bg-os-bg-dark text-os-text-primary-dark font-sans">
       <Sidebar />
       <DiscoverLayout>
-        {/* Header with tabs - RESTORED ORIGINAL */}
+        {/* Header with tabs, last updated, and date filter */}
         <DiscoverHeader 
           activeTab={activeTab} 
           activeType={currentType}
@@ -143,10 +143,6 @@ export default function DiscoverPage() {
           onTypeChange={handleTypeChange}
           savedCount={savedArticles.length}
           onOpenSaved={() => setIsSavedDrawerOpen(true)}
-        />
-
-        {/* Shared sub-header with last updated + date filter */}
-        <ContentSubHeader
           lastUpdated={new Date().toISOString()}
           selectedDate={selectedDate}
           onDateChange={(date) => setSelectedDate(date as DateFilterOption)}
@@ -188,10 +184,21 @@ export default function DiscoverPage() {
             )}
           </div>
 
-          {/* Widget panel - integrated into content */}
-          <div className="hidden lg:block">
-            <WidgetPanel />
-          </div>
+          {/* Widget panel - animated based on active tab */}
+          <AnimatePresence mode="wait">
+            {activeTab === 'News' && (
+              <motion.div 
+                key="widget-panel"
+                className="hidden lg:block"
+                initial={{ opacity: 0, x: 40 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 40 }}
+                transition={{ duration: 0.3, ease: 'easeOut' }}
+              >
+                <WidgetPanel />
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </DiscoverLayout>
       
