@@ -12,15 +12,15 @@ interface SourceCardsProps {
 
 export function SourceCards({ sources, totalCount, onViewAllSources }: SourceCardsProps) {
   const displayCount = totalCount || sources.length;
-  // Show only first 3-4 sources, then the "+X sources" card
-  const visibleSources = sources.slice(0, 4);
+  // Show first 3 sources on mobile, 4 on desktop, plus the "+X sources" button
+  const visibleSources = sources.slice(0, 3);
   const remainingCount = displayCount - visibleSources.length;
 
   if (sources.length === 0) return null;
 
   return (
-    <div className="flex gap-2 my-4 overflow-x-auto pb-2 scrollbar-hide -mx-2 px-2">
-      {/* Source cards - horizontal scroll */}
+    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-3 mb-1">
+      {/* Source cards - responsive grid, no scroll */}
       {visibleSources.map((source, idx) => (
         <SourceCardItem key={source.id || idx} source={source} />
       ))}
@@ -29,34 +29,34 @@ export function SourceCards({ sources, totalCount, onViewAllSources }: SourceCar
       {remainingCount > 0 && (
         <button
           onClick={onViewAllSources}
-          className="flex-shrink-0 flex items-center gap-2 px-4 py-2.5 bg-os-surface-dark/60 hover:bg-os-surface-dark rounded-xl border border-os-border-dark/50 hover:border-brand-aperol/30 transition-all"
+          className="flex items-center justify-center gap-2 p-3 bg-os-surface-dark/60 hover:bg-os-surface-dark rounded-xl border border-os-border-dark/50 hover:border-os-border-dark transition-all min-h-[76px]"
         >
           {/* Favicon stack */}
-          <div className="flex -space-x-1.5">
-            {sources.slice(4, 7).map((source, i) => (
+          <div className="flex -space-x-2">
+            {sources.slice(3, 6).map((source, i) => (
               <div
                 key={i}
-                className="w-5 h-5 rounded-full bg-os-bg-dark border-2 border-os-surface-dark flex items-center justify-center overflow-hidden"
+                className="w-6 h-6 rounded-full bg-os-bg-dark border-2 border-os-surface-dark flex items-center justify-center overflow-hidden"
               >
                 {source.favicon ? (
                   <Image
                     src={source.favicon}
                     alt=""
-                    width={12}
-                    height={12}
-                    className="w-3 h-3"
+                    width={14}
+                    height={14}
+                    className="w-3.5 h-3.5"
                     unoptimized
                   />
                 ) : (
-                  <span className="text-[7px] font-bold text-os-text-secondary-dark">
+                  <span className="text-[8px] font-bold text-os-text-secondary-dark">
                     {source.name.charAt(0).toUpperCase()}
                   </span>
                 )}
               </div>
             ))}
           </div>
-          <span className="text-sm text-brand-aperol whitespace-nowrap font-medium">
-            +{remainingCount}
+          <span className="text-sm text-brand-vanilla whitespace-nowrap font-medium">
+            +{remainingCount} sources
           </span>
         </button>
       )}
@@ -70,46 +70,49 @@ function SourceCardItem({ source }: { source: SourceCard }) {
       href={source.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex-shrink-0 flex items-center gap-2.5 px-3 py-2 bg-os-surface-dark/60 hover:bg-os-surface-dark rounded-xl border border-os-border-dark/50 hover:border-brand-aperol/30 transition-all group max-w-[260px]"
+      className="flex gap-2.5 p-2.5 bg-os-surface-dark/60 hover:bg-os-surface-dark rounded-xl border border-os-border-dark/50 hover:border-os-border-dark transition-all group"
     >
-      {/* Favicon */}
-      <div className="flex-shrink-0 w-5 h-5 rounded overflow-hidden">
-        {source.favicon ? (
-          <Image
-            src={source.favicon}
-            alt=""
-            width={20}
-            height={20}
-            className="w-5 h-5"
-            unoptimized
-          />
-        ) : (
-          <div className="w-5 h-5 bg-os-bg-dark flex items-center justify-center">
-            <span className="text-[9px] font-bold text-os-text-secondary-dark">
-              {source.name.charAt(0).toUpperCase()}
-            </span>
+      {/* Left: Source info */}
+      <div className="flex flex-col min-w-0 flex-1 gap-1">
+        {/* Favicon + Source name inline */}
+        <div className="flex items-center gap-1.5">
+          <div className="flex-shrink-0 w-4 h-4 rounded overflow-hidden">
+            {source.favicon ? (
+              <Image
+                src={source.favicon}
+                alt=""
+                width={16}
+                height={16}
+                className="w-4 h-4"
+                unoptimized
+              />
+            ) : (
+              <div className="w-4 h-4 bg-os-bg-dark flex items-center justify-center rounded">
+                <span className="text-[8px] font-bold text-os-text-secondary-dark">
+                  {source.name.charAt(0).toUpperCase()}
+                </span>
+              </div>
+            )}
           </div>
-        )}
-      </div>
-
-      {/* Source name + Article title */}
-      <div className="flex flex-col min-w-0 flex-1">
-        <span className="text-[10px] text-os-text-secondary-dark lowercase font-mono">
-          {source.name}
-        </span>
-        <p className="text-xs font-medium text-os-text-primary-dark line-clamp-1 leading-tight group-hover:text-brand-aperol transition-colors">
+          <span className="text-[11px] text-os-text-secondary-dark lowercase truncate">
+            {source.name}
+          </span>
+        </div>
+        
+        {/* Article title - 2 lines max */}
+        <p className="text-xs font-medium text-os-text-primary-dark line-clamp-2 leading-snug group-hover:text-brand-aperol transition-colors">
           {source.title}
         </p>
       </div>
 
-      {/* Optional thumbnail on right - only if provided and unique */}
+      {/* Right: Thumbnail */}
       {source.imageUrl && (
-        <div className="flex-shrink-0 w-10 h-10 rounded-lg overflow-hidden bg-os-bg-dark">
+        <div className="flex-shrink-0 w-12 h-12 rounded-lg overflow-hidden bg-os-bg-dark">
           <Image
             src={source.imageUrl}
             alt=""
-            width={40}
-            height={40}
+            width={48}
+            height={48}
             className="w-full h-full object-cover"
             unoptimized
           />

@@ -344,7 +344,7 @@ export default function ArticlePage() {
                         {/* Source Cards + Hero image after intro section */}
                         {sectionIdx === 0 && (
                           <>
-                            {/* Source Cards - horizontal scroll */}
+                            {/* Source Cards - responsive grid */}
                             <SourceCards
                               sources={article.sourceCards}
                               totalCount={article.totalSources}
@@ -353,7 +353,7 @@ export default function ArticlePage() {
 
                             {/* Hero image */}
                             {article.heroImage && (
-                              <div className="relative w-full my-2">
+                              <div className="relative w-full mt-1">
                                 <div className="relative aspect-[16/9] overflow-hidden rounded-xl bg-os-surface-dark">
                                   <Image 
                                     src={article.heroImage.url} 
