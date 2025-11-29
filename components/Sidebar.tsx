@@ -83,8 +83,28 @@ export function Sidebar() {
           <BrandSelector size={24} href="/" onClick={handleHomeClick} />
         </div>
 
+        {/* New Chat Button */}
+        <div className="flex justify-center pt-2 pb-1">
+          <Link
+            href="/"
+            onClick={handleNewChat}
+            className="
+              flex flex-col items-center justify-center
+              py-1.5 px-2
+              transition-colors duration-150
+              group
+              text-os-text-secondary-dark hover:text-os-text-primary-dark
+            "
+            title="New Chat"
+          >
+            <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-os-surface-dark group-hover:bg-os-border-dark border border-os-border-dark transition-all duration-150">
+              <Plus className="w-[18px] h-[18px] text-brand-aperol" />
+            </div>
+          </Link>
+        </div>
+
         {/* Navigation Items - Compact at top */}
-        <nav className="flex flex-col items-center pt-1">
+        <nav className="flex flex-col items-center">
           {navItems.map((item, index) => {
             const Icon = item.icon;
             const isActive = pathname === item.href || (item.href === '/spaces' && pathname.startsWith('/spaces'));
@@ -101,30 +121,32 @@ export function Sidebar() {
                   href={item.href}
                   onClick={item.href === '/' ? handleHomeClick : closeMobileMenu}
                   className={`
-                    flex flex-col items-center justify-center
+                    flex flex-col items-center
                     py-2 px-2 min-h-[52px]
                     transition-colors duration-150
                     group relative
                     ${isActive ? 'text-brand-aperol' : 'text-os-text-secondary-dark hover:text-os-text-primary-dark'}
                   `}
                 >
-                  {/* Active indicator - left bar */}
-                  <div className={`
-                    absolute left-0 top-1/2 -translate-y-1/2 w-[2px] rounded-r-full
-                    transition-all duration-150
-                    ${isActive ? 'h-5 bg-brand-aperol' : 'h-0 bg-transparent'}
-                  `} />
-                  
-                  {/* Icon container */}
-                  <div className={`
-                    w-8 h-8 flex items-center justify-center rounded-lg
-                    transition-all duration-150
-                    ${isActive 
-                      ? 'bg-brand-aperol/10' 
-                      : 'group-hover:bg-os-surface-dark'
-                    }
-                  `}>
-                    <Icon className={`w-[18px] h-[18px] ${isActive ? 'text-brand-aperol' : ''}`} />
+                  {/* Icon container with active indicator */}
+                  <div className="relative">
+                    {/* Active indicator - left bar, centered with icon */}
+                    <div className={`
+                      absolute -left-2 top-1/2 -translate-y-1/2 w-[2px] rounded-r-full
+                      transition-all duration-150
+                      ${isActive ? 'h-5 bg-brand-aperol' : 'h-0 bg-transparent'}
+                    `} />
+                    
+                    <div className={`
+                      w-8 h-8 flex items-center justify-center rounded-lg
+                      transition-all duration-150
+                      ${isActive 
+                        ? 'bg-brand-aperol/10' 
+                        : 'group-hover:bg-os-surface-dark'
+                      }
+                    `}>
+                      <Icon className={`w-[18px] h-[18px] ${isActive ? 'text-brand-aperol' : ''}`} />
+                    </div>
                   </div>
                   
                   {/* Label - fades in on sidebar hover */}
@@ -244,7 +266,8 @@ export function Sidebar() {
         <div className="flex-1 overflow-y-auto">
           {/* New Chat Button */}
           <div className="p-4">
-            <button
+            <Link
+              href="/"
               onClick={handleNewChat}
               className="
                 w-full flex items-center space-x-3
@@ -255,7 +278,7 @@ export function Sidebar() {
             >
               <Plus className="w-5 h-5 text-brand-aperol" />
               <span>New Chat</span>
-            </button>
+            </Link>
           </div>
 
           {/* Recent Chats */}

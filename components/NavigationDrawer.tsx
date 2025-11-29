@@ -22,9 +22,11 @@ import {
   PenTool,
   MessageSquare,
   Zap,
+  Plus,
 } from 'lucide-react';
 import { SPACES } from '@/lib/mock-data';
 import { useChatContext } from '@/lib/chat-context';
+import { useRouter } from 'next/navigation';
 
 interface NavigationDrawerProps {
   isOpen: boolean;
@@ -43,11 +45,18 @@ const brandHubNavItems = [
 
 export function NavigationDrawer({ isOpen, item, onClose, railRef }: NavigationDrawerProps) {
   const pathname = usePathname();
+  const router = useRouter();
   const drawerRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ top: 0, left: 0, height: 0 });
   const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const onCloseRef = useRef(onClose);
-  const { chatHistory } = useChatContext();
+  const { chatHistory, triggerChatReset } = useChatContext();
+
+  const handleNewChat = () => {
+    triggerChatReset();
+    router.push('/');
+    onClose();
+  };
 
   // Keep onClose ref up to date without triggering re-renders
   useEffect(() => {
@@ -185,6 +194,15 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef }: NavigationD
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-lg font-semibold text-brand-vanilla">Home</h3>
               </div>
+              
+              {/* New Chat Button */}
+              <button
+                onClick={handleNewChat}
+                className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-brand-vanilla transition-colors mb-4 border border-os-border-dark"
+              >
+                <Plus className="w-5 h-5 text-brand-aperol" />
+                <span className="text-sm">New Chat</span>
+              </button>
               
               <div className="mb-4">
                 <div className="flex items-center justify-between mb-2">
