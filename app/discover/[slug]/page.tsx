@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Clock } from 'lucide-react';
 import { Sidebar } from '@/components/Sidebar';
 import { StickyArticleHeader } from '@/components/discover/article/StickyArticleHeader';
 import { SourceCards } from '@/components/discover/article/SourceCards';
@@ -12,7 +12,9 @@ import { ArticleSidebar } from '@/components/discover/article/ArticleSidebar';
 import { AskFollowUp } from '@/components/discover/article/AskFollowUp';
 import { DiscoverMore } from '@/components/discover/article/DiscoverMore';
 import { InlineSourceChips, SourceGroup } from '@/components/discover/article/InlineSourceBadge';
-import type { DiscoverArticle, Source } from '@/types';
+import { SectionSourceBar } from '@/components/discover/article/SectionSourceBar';
+import { SourcesDrawer } from '@/components/discover/article/SourcesDrawer';
+import type { DiscoverArticle, DiscoverSection, Source, CitationChip } from '@/types';
 
 export default function ArticlePage() {
   const params = useParams();
@@ -22,6 +24,10 @@ export default function ArticlePage() {
   const [isLoading, setIsLoading] = useState(true);
   const [article, setArticle] = useState<DiscoverArticle | null>(null);
   const [notFound, setNotFound] = useState(false);
+  
+  // Drawer state
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [drawerSection, setDrawerSection] = useState<{ title?: string; citations: CitationChip[] } | null>(null);
 
   // Load article from pre-generated JSON (instant load)
   useEffect(() => {
@@ -50,6 +56,13 @@ export default function ArticlePage() {
 
     loadArticle();
   }, [slug]);
+
+  // Open drawer for a specific section
+  const openSourcesDrawer = (section: DiscoverSection) => {
+    const allCitations = section.paragraphs.flatMap(p => p.citations);
+    setDrawerSection({ title: section.title, citations: allCitations });
+    setDrawerOpen(true);
+  };
 
   // Get sources for SourceCards component
   const getSourcesForCards = (): Source[] => {
@@ -124,6 +137,7 @@ export default function ArticlePage() {
                   </h1>
                   <div className="flex items-center gap-4 text-sm text-os-text-secondary-dark">
                     <span className="flex items-center gap-1.5">
+                      <Clock className="w-3.5 h-3.5" />
                       Published {formatTimestamp(article.publishedAt)}
                     </span>
                     <span className="text-os-border-dark">•</span>
@@ -132,70 +146,86 @@ export default function ArticlePage() {
                 </div>
 
                 {/* Article Sections */}
-                <div className="flex flex-col gap-8">
-                  {article.sections.map((section, sectionIdx) => (
-                    <section key={section.id} className="flex flex-col gap-5">
-                      {/* Section sub-heading (h3, smaller size) */}
-                      {section.title && (
-                        <h3 className="text-lg md:text-xl font-display font-semibold text-brand-vanilla mt-4">
-                          {section.title}
-                        </h3>
-                      )}
+                <div className="flex flex-col gap-6">
+                  {article.sections.map((section, sectionIdx) => {
+                    // Collect all citations for this section
+                    const sectionCitations = section.paragraphs.flatMap(p => p.citations);
+                    
+                    return (
+                      <section key={section.id} className="flex flex-col gap-4">
+                        {/* Section sub-heading (h3, smaller size) */}
+                        {section.title && (
+                          <h3 className="text-lg md:text-xl font-display font-semibold text-brand-vanilla mt-4">
+                            {section.title}
+                          </h3>
+                        )}
 
-                      {/* Paragraphs with inline citations */}
-                      {section.paragraphs.map((paragraph) => {
-                        // Convert citations to SourceGroup format
-                        const sourceGroups: SourceGroup[] = paragraph.citations.map(citation => ({
-                          primarySource: {
-                            id: citation.primarySource.id,
-                            name: citation.primarySource.name,
-                            url: citation.primarySource.url,
-                            favicon: citation.primarySource.favicon,
-                          },
-                          additionalSources: citation.additionalSources.map(s => ({
-                            id: s.id,
-                            name: s.name,
-                            url: s.url,
-                            favicon: s.favicon,
-                          })),
-                          isVideo: citation.primarySource.url.includes('youtube.com') || 
-                                   citation.primarySource.url.includes('youtu.be'),
-                        }));
+                        {/* Paragraphs with inline citations */}
+                        {section.paragraphs.map((paragraph) => {
+                          // Convert citations to SourceGroup format
+                          const sourceGroups: SourceGroup[] = paragraph.citations.map(citation => ({
+                            primarySource: {
+                              id: citation.primarySource.id,
+                              name: citation.primarySource.name,
+                              url: citation.primarySource.url,
+                              favicon: citation.primarySource.favicon,
+                              title: citation.primarySource.title,
+                            },
+                            additionalSources: citation.additionalSources.map(s => ({
+                              id: s.id,
+                              name: s.name,
+                              url: s.url,
+                              favicon: s.favicon,
+                              title: s.title,
+                            })),
+                            isVideo: citation.primarySource.url.includes('youtube.com') || 
+                                     citation.primarySource.url.includes('youtu.be'),
+                          }));
 
-                        return (
-                          <p 
-                            key={paragraph.id} 
-                            className="text-sm md:text-base leading-relaxed text-os-text-primary-dark/90"
-                          >
-                            {paragraph.content}
-                            {sourceGroups.length > 0 && (
-                              <InlineSourceChips sourceGroups={sourceGroups} />
-                            )}
-                          </p>
-                        );
-                      })}
-
-                      {/* Hero image after intro section */}
-                      {sectionIdx === 0 && article.heroImage && (
-                        <div className="relative w-full my-4">
-                          <div className="relative aspect-[16/9] overflow-hidden rounded-xl bg-os-surface-dark">
-                            <Image 
-                              src={article.heroImage.url} 
-                              alt={article.title}
-                              fill 
-                              className="object-cover" 
-                              unoptimized 
-                            />
-                          </div>
-                          {article.heroImage.attribution && (
-                            <p className="text-xs text-os-text-secondary-dark mt-2 text-right font-mono">
-                              {article.heroImage.attribution}
+                          return (
+                            <p 
+                              key={paragraph.id} 
+                              className="text-[15px] leading-[1.75] text-os-text-primary-dark/90"
+                            >
+                              {paragraph.content}
+                              {sourceGroups.length > 0 && (
+                                <InlineSourceChips sourceGroups={sourceGroups} />
+                              )}
                             </p>
-                          )}
-                        </div>
-                      )}
-                    </section>
-                  ))}
+                          );
+                        })}
+
+                        {/* Section Source Bar - at end of each section */}
+                        {sectionCitations.length > 0 && (
+                          <SectionSourceBar
+                            citations={sectionCitations}
+                            sectionTitle={section.title}
+                            onOpenDrawer={() => openSourcesDrawer(section)}
+                          />
+                        )}
+
+                        {/* Hero image after intro section */}
+                        {sectionIdx === 0 && article.heroImage && (
+                          <div className="relative w-full my-4">
+                            <div className="relative aspect-[16/9] overflow-hidden rounded-xl bg-os-surface-dark">
+                              <Image 
+                                src={article.heroImage.url} 
+                                alt={article.title}
+                                fill 
+                                className="object-cover" 
+                                unoptimized 
+                              />
+                            </div>
+                            {article.heroImage.attribution && (
+                              <p className="text-xs text-os-text-secondary-dark mt-2 text-right font-mono">
+                                {article.heroImage.attribution}
+                              </p>
+                            )}
+                          </div>
+                        )}
+                      </section>
+                    );
+                  })}
                 </div>
 
                 {/* Source Cards */}
@@ -231,6 +261,14 @@ export default function ArticlePage() {
           articleImage={article.heroImage?.url}
         />
       </main>
+
+      {/* Sources Drawer */}
+      <SourcesDrawer
+        isOpen={drawerOpen}
+        onClose={() => setDrawerOpen(false)}
+        sectionTitle={drawerSection?.title}
+        citations={drawerSection?.citations || []}
+      />
     </div>
   );
 }

@@ -224,6 +224,7 @@ export interface CitationChip {
     name: string;
     url: string;
     favicon: string;
+    title?: string;
   };
   additionalCount: number;
   additionalSources: Array<{
@@ -231,6 +232,7 @@ export interface CitationChip {
     name: string;
     url: string;
     favicon: string;
+    title?: string;
   }>;
 }
 

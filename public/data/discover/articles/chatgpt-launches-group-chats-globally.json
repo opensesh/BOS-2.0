@@ -18,7 +18,8 @@
                 "id": "source-1",
                 "name": "techcrunch",
                 "url": "https://techcrunch.com/2025/11/20/chatgpt-launches-group-chats-globally/",
-                "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32"
+                "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
+                "title": "ChatGPT now lets you add friends to group chats with AI"
               },
               "additionalCount": 2,
               "additionalSources": [
@@ -26,13 +27,15 @@
                   "id": "source-2",
                   "name": "theverge",
                   "url": "https://www.theverge.com/2025/11/20/openai-chatgpt-group-chats",
-                  "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=32"
+                  "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=32",
+                  "title": "OpenAI's ChatGPT now supports group conversations with up to 20 people"
                 },
                 {
                   "id": "source-3",
                   "name": "engadget",
                   "url": "https://www.engadget.com/ai/chatgpt-group-chats-launch/",
-                  "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32"
+                  "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32",
+                  "title": "ChatGPT group chats are rolling out worldwide today"
                 }
               ]
             },
@@ -41,7 +44,8 @@
                 "id": "source-4",
                 "name": "youtube",
                 "url": "https://youtube.com/watch?v=openai-demo",
-                "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32"
+                "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
+                "title": "OpenAI Announces ChatGPT Group Chats - Official Demo"
               },
               "additionalCount": 0,
               "additionalSources": []
@@ -57,7 +61,8 @@
                 "id": "source-5",
                 "name": "wired",
                 "url": "https://www.wired.com/story/chatgpt-group-chat-feature/",
-                "favicon": "https://www.google.com/s2/favicons?domain=wired.com&sz=32"
+                "favicon": "https://www.google.com/s2/favicons?domain=wired.com&sz=32",
+                "title": "ChatGPT's New Group Chat Feature Changes Everything About AI Collaboration"
               },
               "additionalCount": 3,
               "additionalSources": [
@@ -65,19 +70,22 @@
                   "id": "source-6",
                   "name": "arstechnica",
                   "url": "https://arstechnica.com/ai/2025/11/chatgpt-group-chats/",
-                  "favicon": "https://www.google.com/s2/favicons?domain=arstechnica.com&sz=32"
+                  "favicon": "https://www.google.com/s2/favicons?domain=arstechnica.com&sz=32",
+                  "title": "ChatGPT adds group chat feature, supports up to 20 participants"
                 },
                 {
                   "id": "source-7",
                   "name": "zdnet",
                   "url": "https://www.zdnet.com/article/chatgpt-group-conversations/",
-                  "favicon": "https://www.google.com/s2/favicons?domain=zdnet.com&sz=32"
+                  "favicon": "https://www.google.com/s2/favicons?domain=zdnet.com&sz=32",
+                  "title": "How to use ChatGPT's new group chat feature for team collaboration"
                 },
                 {
                   "id": "source-8",
                   "name": "cnet",
                   "url": "https://www.cnet.com/tech/chatgpt-group-feature/",
-                  "favicon": "https://www.google.com/s2/favicons?domain=cnet.com&sz=32"
+                  "favicon": "https://www.google.com/s2/favicons?domain=cnet.com&sz=32",
+                  "title": "ChatGPT Group Chats: What You Need to Know About the New Feature"
                 }
               ]
             }
@@ -98,7 +106,8 @@
                 "id": "source-9",
                 "name": "bloomberg",
                 "url": "https://www.bloomberg.com/news/articles/chatgpt-privacy-group-chats",
-                "favicon": "https://www.google.com/s2/favicons?domain=bloomberg.com&sz=32"
+                "favicon": "https://www.google.com/s2/favicons?domain=bloomberg.com&sz=32",
+                "title": "OpenAI Addresses Privacy Concerns With New Group Chat Feature"
               },
               "additionalCount": 2,
               "additionalSources": [
@@ -106,13 +115,15 @@
                   "id": "source-10",
                   "name": "reuters",
                   "url": "https://www.reuters.com/technology/openai-chatgpt-groups/",
-                  "favicon": "https://www.google.com/s2/favicons?domain=reuters.com&sz=32"
+                  "favicon": "https://www.google.com/s2/favicons?domain=reuters.com&sz=32",
+                  "title": "OpenAI launches ChatGPT group chats with privacy-first approach"
                 },
                 {
                   "id": "source-11",
                   "name": "venturebeat",
                   "url": "https://venturebeat.com/ai/chatgpt-group-privacy/",
-                  "favicon": "https://www.google.com/s2/favicons?domain=venturebeat.com&sz=32"
+                  "favicon": "https://www.google.com/s2/favicons?domain=venturebeat.com&sz=32",
+                  "title": "ChatGPT group chats keep your personal AI memory private"
                 }
               ]
             }
@@ -127,7 +138,8 @@
                 "id": "source-12",
                 "name": "9to5mac",
                 "url": "https://9to5mac.com/2025/11/20/chatgpt-group-chat-privacy/",
-                "favicon": "https://www.google.com/s2/favicons?domain=9to5mac.com&sz=32"
+                "favicon": "https://www.google.com/s2/favicons?domain=9to5mac.com&sz=32",
+                "title": "ChatGPT's group chats only respond when you tag the AI"
               },
               "additionalCount": 2,
               "additionalSources": [
@@ -135,13 +147,15 @@
                   "id": "source-13",
                   "name": "macrumors",
                   "url": "https://www.macrumors.com/2025/11/20/chatgpt-groups-launch/",
-                  "favicon": "https://www.google.com/s2/favicons?domain=macrumors.com&sz=32"
+                  "favicon": "https://www.google.com/s2/favicons?domain=macrumors.com&sz=32",
+                  "title": "ChatGPT Group Chats Now Available to All Users Worldwide"
                 },
                 {
                   "id": "source-14",
                   "name": "tomsguide",
                   "url": "https://www.tomsguide.com/ai/chatgpt-group-chats",
-                  "favicon": "https://www.google.com/s2/favicons?domain=tomsguide.com&sz=32"
+                  "favicon": "https://www.google.com/s2/favicons?domain=tomsguide.com&sz=32",
+                  "title": "I tested ChatGPT's new group chat feature — here's how it works"
                 }
               ]
             },
@@ -150,7 +164,8 @@
                 "id": "source-15",
                 "name": "youtube",
                 "url": "https://youtube.com/watch?v=chatgpt-groups-demo",
-                "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32"
+                "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
+                "title": "How ChatGPT Group Chats Work - Hands-On Demo"
               },
               "additionalCount": 0,
               "additionalSources": []
@@ -172,7 +187,8 @@
                 "id": "source-16",
                 "name": "forbes",
                 "url": "https://www.forbes.com/sites/chatgpt-enterprise-groups/",
-                "favicon": "https://www.google.com/s2/favicons?domain=forbes.com&sz=32"
+                "favicon": "https://www.google.com/s2/favicons?domain=forbes.com&sz=32",
+                "title": "How Businesses Are Already Using ChatGPT's New Group Chat Feature"
               },
               "additionalCount": 3,
               "additionalSources": [
@@ -180,19 +196,22 @@
                   "id": "source-17",
                   "name": "businessinsider",
                   "url": "https://www.businessinsider.com/chatgpt-group-chat-business/",
-                  "favicon": "https://www.google.com/s2/favicons?domain=businessinsider.com&sz=32"
+                  "favicon": "https://www.google.com/s2/favicons?domain=businessinsider.com&sz=32",
+                  "title": "ChatGPT group chats could transform team meetings forever"
                 },
                 {
                   "id": "source-18",
                   "name": "fastcompany",
                   "url": "https://www.fastcompany.com/chatgpt-collaboration/",
-                  "favicon": "https://www.google.com/s2/favicons?domain=fastcompany.com&sz=32"
+                  "favicon": "https://www.google.com/s2/favicons?domain=fastcompany.com&sz=32",
+                  "title": "ChatGPT's group chat feature is a game-changer for remote teams"
                 },
                 {
                   "id": "source-19",
                   "name": "hbr",
                   "url": "https://hbr.org/2025/11/ai-collaboration-tools",
-                  "favicon": "https://www.google.com/s2/favicons?domain=hbr.org&sz=32"
+                  "favicon": "https://www.google.com/s2/favicons?domain=hbr.org&sz=32",
+                  "title": "The Rise of AI-Powered Team Collaboration Tools"
                 }
               ]
             }
@@ -207,7 +226,8 @@
                 "id": "source-20",
                 "name": "wsj",
                 "url": "https://www.wsj.com/tech/ai/chatgpt-enterprise-collaboration/",
-                "favicon": "https://www.google.com/s2/favicons?domain=wsj.com&sz=32"
+                "favicon": "https://www.google.com/s2/favicons?domain=wsj.com&sz=32",
+                "title": "OpenAI's ChatGPT Moves Into Enterprise Collaboration Market"
               },
               "additionalCount": 4,
               "additionalSources": [
@@ -215,25 +235,29 @@
                   "id": "source-21",
                   "name": "ft",
                   "url": "https://www.ft.com/content/openai-group-chats",
-                  "favicon": "https://www.google.com/s2/favicons?domain=ft.com&sz=32"
+                  "favicon": "https://www.google.com/s2/favicons?domain=ft.com&sz=32",
+                  "title": "ChatGPT group chats signal OpenAI's enterprise ambitions"
                 },
                 {
                   "id": "source-22",
                   "name": "economist",
                   "url": "https://www.economist.com/ai-collaboration/",
-                  "favicon": "https://www.google.com/s2/favicons?domain=economist.com&sz=32"
+                  "favicon": "https://www.google.com/s2/favicons?domain=economist.com&sz=32",
+                  "title": "AI chatbots are learning to work in groups"
                 },
                 {
                   "id": "source-23",
                   "name": "nytimes",
                   "url": "https://www.nytimes.com/2025/11/20/technology/chatgpt-group.html",
-                  "favicon": "https://www.google.com/s2/favicons?domain=nytimes.com&sz=32"
+                  "favicon": "https://www.google.com/s2/favicons?domain=nytimes.com&sz=32",
+                  "title": "ChatGPT Can Now Join Your Group Chat"
                 },
                 {
                   "id": "source-24",
                   "name": "theguardian",
                   "url": "https://www.theguardian.com/technology/chatgpt-groups",
-                  "favicon": "https://www.google.com/s2/favicons?domain=theguardian.com&sz=32"
+                  "favicon": "https://www.google.com/s2/favicons?domain=theguardian.com&sz=32",
+                  "title": "OpenAI launches ChatGPT group chats amid growing competition"
                 }
               ]
             }
@@ -248,92 +272,78 @@
       "name": "TechCrunch",
       "url": "https://techcrunch.com/2025/11/20/chatgpt-launches-group-chats-globally/",
       "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
-      "title": "ChatGPT launches group chats globally | TechCrunch"
+      "title": "ChatGPT now lets you add friends to group chats with AI",
+      "imageUrl": "https://techcrunch.com/wp-content/uploads/2025/11/chatgpt-group.jpg"
     },
     {
       "id": "source-2",
       "name": "The Verge",
       "url": "https://www.theverge.com/2025/11/20/openai-chatgpt-group-chats",
       "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=32",
-      "title": "OpenAI's ChatGPT now supports group conversations"
+      "title": "OpenAI's ChatGPT now supports group conversations",
+      "imageUrl": "https://cdn.vox-cdn.com/thumbor/chatgpt-group-hero.jpg"
     },
     {
       "id": "source-5",
       "name": "Wired",
       "url": "https://www.wired.com/story/chatgpt-group-chat-feature/",
       "favicon": "https://www.google.com/s2/favicons?domain=wired.com&sz=32",
-      "title": "ChatGPT's Group Chat Feature: What You Need to Know"
+      "title": "ChatGPT's Group Chat Changes Everything",
+      "imageUrl": "https://media.wired.com/photos/chatgpt-collab.jpg"
     },
     {
       "id": "source-9",
       "name": "Bloomberg",
       "url": "https://www.bloomberg.com/news/articles/chatgpt-privacy-group-chats",
       "favicon": "https://www.google.com/s2/favicons?domain=bloomberg.com&sz=32",
-      "title": "OpenAI Addresses Privacy in New Group Chat Feature"
+      "title": "OpenAI Addresses Privacy in Group Chats"
     },
     {
       "id": "source-16",
       "name": "Forbes",
       "url": "https://www.forbes.com/sites/chatgpt-enterprise-groups/",
       "favicon": "https://www.google.com/s2/favicons?domain=forbes.com&sz=32",
-      "title": "How Businesses Are Using ChatGPT Group Chats"
+      "title": "How Businesses Are Using ChatGPT Groups"
     },
     {
       "id": "source-20",
       "name": "Wall Street Journal",
       "url": "https://www.wsj.com/tech/ai/chatgpt-enterprise-collaboration/",
       "favicon": "https://www.google.com/s2/favicons?domain=wsj.com&sz=32",
-      "title": "ChatGPT Enters Enterprise Collaboration Space"
+      "title": "ChatGPT Enters Enterprise Collaboration"
     }
   ],
   "allSources": [
-    {"id": "source-1", "name": "techcrunch", "url": "https://techcrunch.com/2025/11/20/chatgpt-launches-group-chats-globally/", "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32", "title": "ChatGPT launches group chats globally"},
-    {"id": "source-2", "name": "theverge", "url": "https://www.theverge.com/2025/11/20/openai-chatgpt-group-chats", "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=32"},
-    {"id": "source-3", "name": "engadget", "url": "https://www.engadget.com/ai/chatgpt-group-chats-launch/", "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32"},
-    {"id": "source-4", "name": "youtube", "url": "https://youtube.com/watch?v=openai-demo", "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32"},
-    {"id": "source-5", "name": "wired", "url": "https://www.wired.com/story/chatgpt-group-chat-feature/", "favicon": "https://www.google.com/s2/favicons?domain=wired.com&sz=32"},
-    {"id": "source-6", "name": "arstechnica", "url": "https://arstechnica.com/ai/2025/11/chatgpt-group-chats/", "favicon": "https://www.google.com/s2/favicons?domain=arstechnica.com&sz=32"},
-    {"id": "source-7", "name": "zdnet", "url": "https://www.zdnet.com/article/chatgpt-group-conversations/", "favicon": "https://www.google.com/s2/favicons?domain=zdnet.com&sz=32"},
-    {"id": "source-8", "name": "cnet", "url": "https://www.cnet.com/tech/chatgpt-group-feature/", "favicon": "https://www.google.com/s2/favicons?domain=cnet.com&sz=32"},
-    {"id": "source-9", "name": "bloomberg", "url": "https://www.bloomberg.com/news/articles/chatgpt-privacy-group-chats", "favicon": "https://www.google.com/s2/favicons?domain=bloomberg.com&sz=32"},
-    {"id": "source-10", "name": "reuters", "url": "https://www.reuters.com/technology/openai-chatgpt-groups/", "favicon": "https://www.google.com/s2/favicons?domain=reuters.com&sz=32"},
-    {"id": "source-11", "name": "venturebeat", "url": "https://venturebeat.com/ai/chatgpt-group-privacy/", "favicon": "https://www.google.com/s2/favicons?domain=venturebeat.com&sz=32"},
-    {"id": "source-12", "name": "9to5mac", "url": "https://9to5mac.com/2025/11/20/chatgpt-group-chat-privacy/", "favicon": "https://www.google.com/s2/favicons?domain=9to5mac.com&sz=32"},
-    {"id": "source-13", "name": "macrumors", "url": "https://www.macrumors.com/2025/11/20/chatgpt-groups-launch/", "favicon": "https://www.google.com/s2/favicons?domain=macrumors.com&sz=32"},
-    {"id": "source-14", "name": "tomsguide", "url": "https://www.tomsguide.com/ai/chatgpt-group-chats", "favicon": "https://www.google.com/s2/favicons?domain=tomsguide.com&sz=32"},
-    {"id": "source-15", "name": "youtube", "url": "https://youtube.com/watch?v=chatgpt-groups-demo", "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32"},
-    {"id": "source-16", "name": "forbes", "url": "https://www.forbes.com/sites/chatgpt-enterprise-groups/", "favicon": "https://www.google.com/s2/favicons?domain=forbes.com&sz=32"},
-    {"id": "source-17", "name": "businessinsider", "url": "https://www.businessinsider.com/chatgpt-group-chat-business/", "favicon": "https://www.google.com/s2/favicons?domain=businessinsider.com&sz=32"},
-    {"id": "source-18", "name": "fastcompany", "url": "https://www.fastcompany.com/chatgpt-collaboration/", "favicon": "https://www.google.com/s2/favicons?domain=fastcompany.com&sz=32"},
-    {"id": "source-19", "name": "hbr", "url": "https://hbr.org/2025/11/ai-collaboration-tools", "favicon": "https://www.google.com/s2/favicons?domain=hbr.org&sz=32"},
-    {"id": "source-20", "name": "wsj", "url": "https://www.wsj.com/tech/ai/chatgpt-enterprise-collaboration/", "favicon": "https://www.google.com/s2/favicons?domain=wsj.com&sz=32"},
-    {"id": "source-21", "name": "ft", "url": "https://www.ft.com/content/openai-group-chats", "favicon": "https://www.google.com/s2/favicons?domain=ft.com&sz=32"},
-    {"id": "source-22", "name": "economist", "url": "https://www.economist.com/ai-collaboration/", "favicon": "https://www.google.com/s2/favicons?domain=economist.com&sz=32"},
-    {"id": "source-23", "name": "nytimes", "url": "https://www.nytimes.com/2025/11/20/technology/chatgpt-group.html", "favicon": "https://www.google.com/s2/favicons?domain=nytimes.com&sz=32"},
-    {"id": "source-24", "name": "theguardian", "url": "https://www.theguardian.com/technology/chatgpt-groups", "favicon": "https://www.google.com/s2/favicons?domain=theguardian.com&sz=32"},
-    {"id": "source-25", "name": "bbc", "url": "https://www.bbc.com/news/technology-chatgpt", "favicon": "https://www.google.com/s2/favicons?domain=bbc.com&sz=32"},
-    {"id": "source-26", "name": "cnbc", "url": "https://www.cnbc.com/2025/11/20/openai-chatgpt-groups.html", "favicon": "https://www.google.com/s2/favicons?domain=cnbc.com&sz=32"},
-    {"id": "source-27", "name": "axios", "url": "https://www.axios.com/2025/11/20/chatgpt-group-chats", "favicon": "https://www.google.com/s2/favicons?domain=axios.com&sz=32"},
-    {"id": "source-28", "name": "protocol", "url": "https://www.protocol.com/chatgpt-collaboration", "favicon": "https://www.google.com/s2/favicons?domain=protocol.com&sz=32"},
-    {"id": "source-29", "name": "mashable", "url": "https://mashable.com/article/chatgpt-group-chat-launch", "favicon": "https://www.google.com/s2/favicons?domain=mashable.com&sz=32"},
-    {"id": "source-30", "name": "gizmodo", "url": "https://gizmodo.com/chatgpt-group-conversations", "favicon": "https://www.google.com/s2/favicons?domain=gizmodo.com&sz=32"},
-    {"id": "source-31", "name": "digitaltrends", "url": "https://www.digitaltrends.com/computing/chatgpt-groups/", "favicon": "https://www.google.com/s2/favicons?domain=digitaltrends.com&sz=32"},
-    {"id": "source-32", "name": "theinformation", "url": "https://www.theinformation.com/articles/chatgpt-groups", "favicon": "https://www.google.com/s2/favicons?domain=theinformation.com&sz=32"},
-    {"id": "source-33", "name": "semafor", "url": "https://www.semafor.com/article/chatgpt-collaboration", "favicon": "https://www.google.com/s2/favicons?domain=semafor.com&sz=32"},
-    {"id": "source-34", "name": "techradar", "url": "https://www.techradar.com/news/chatgpt-group-chat", "favicon": "https://www.google.com/s2/favicons?domain=techradar.com&sz=32"},
-    {"id": "source-35", "name": "pcmag", "url": "https://www.pcmag.com/news/chatgpt-launches-group-chats", "favicon": "https://www.google.com/s2/favicons?domain=pcmag.com&sz=32"},
-    {"id": "source-36", "name": "androidcentral", "url": "https://www.androidcentral.com/apps-software/chatgpt-group-chat", "favicon": "https://www.google.com/s2/favicons?domain=androidcentral.com&sz=32"},
-    {"id": "source-37", "name": "imore", "url": "https://www.imore.com/apps/chatgpt-group-conversations", "favicon": "https://www.google.com/s2/favicons?domain=imore.com&sz=32"},
-    {"id": "source-38", "name": "appleinsider", "url": "https://appleinsider.com/articles/chatgpt-groups", "favicon": "https://www.google.com/s2/favicons?domain=appleinsider.com&sz=32"},
-    {"id": "source-39", "name": "howtogeek", "url": "https://www.howtogeek.com/chatgpt-group-chat-guide/", "favicon": "https://www.google.com/s2/favicons?domain=howtogeek.com&sz=32"},
-    {"id": "source-40", "name": "lifehacker", "url": "https://lifehacker.com/tech/chatgpt-group-chats", "favicon": "https://www.google.com/s2/favicons?domain=lifehacker.com&sz=32"},
-    {"id": "source-41", "name": "makeuseof", "url": "https://www.makeuseof.com/chatgpt-group-chat-features/", "favicon": "https://www.google.com/s2/favicons?domain=makeuseof.com&sz=32"},
-    {"id": "source-42", "name": "slashgear", "url": "https://www.slashgear.com/chatgpt-group-chat-launch", "favicon": "https://www.google.com/s2/favicons?domain=slashgear.com&sz=32"},
-    {"id": "source-43", "name": "bgr", "url": "https://bgr.com/tech/chatgpt-groups-feature/", "favicon": "https://www.google.com/s2/favicons?domain=bgr.com&sz=32"},
-    {"id": "source-44", "name": "xda", "url": "https://www.xda-developers.com/chatgpt-group-chat/", "favicon": "https://www.google.com/s2/favicons?domain=xda-developers.com&sz=32"},
-    {"id": "source-45", "name": "inputmag", "url": "https://www.inputmag.com/tech/chatgpt-groups", "favicon": "https://www.google.com/s2/favicons?domain=inputmag.com&sz=32"},
-    {"id": "source-46", "name": "inverse", "url": "https://www.inverse.com/tech/chatgpt-group-conversations", "favicon": "https://www.google.com/s2/favicons?domain=inverse.com&sz=32"},
-    {"id": "source-47", "name": "futurism", "url": "https://futurism.com/chatgpt-group-chat-launch", "favicon": "https://www.google.com/s2/favicons?domain=futurism.com&sz=32"}
+    {"id": "source-1", "name": "techcrunch", "url": "https://techcrunch.com/2025/11/20/chatgpt-launches-group-chats-globally/", "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32", "title": "ChatGPT now lets you add friends to group chats with AI"},
+    {"id": "source-2", "name": "theverge", "url": "https://www.theverge.com/2025/11/20/openai-chatgpt-group-chats", "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=32", "title": "OpenAI's ChatGPT now supports group conversations with up to 20 people"},
+    {"id": "source-3", "name": "engadget", "url": "https://www.engadget.com/ai/chatgpt-group-chats-launch/", "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32", "title": "ChatGPT group chats are rolling out worldwide today"},
+    {"id": "source-4", "name": "youtube", "url": "https://youtube.com/watch?v=openai-demo", "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32", "title": "OpenAI Announces ChatGPT Group Chats - Official Demo"},
+    {"id": "source-5", "name": "wired", "url": "https://www.wired.com/story/chatgpt-group-chat-feature/", "favicon": "https://www.google.com/s2/favicons?domain=wired.com&sz=32", "title": "ChatGPT's New Group Chat Feature Changes Everything About AI Collaboration"},
+    {"id": "source-6", "name": "arstechnica", "url": "https://arstechnica.com/ai/2025/11/chatgpt-group-chats/", "favicon": "https://www.google.com/s2/favicons?domain=arstechnica.com&sz=32", "title": "ChatGPT adds group chat feature, supports up to 20 participants"},
+    {"id": "source-7", "name": "zdnet", "url": "https://www.zdnet.com/article/chatgpt-group-conversations/", "favicon": "https://www.google.com/s2/favicons?domain=zdnet.com&sz=32", "title": "How to use ChatGPT's new group chat feature for team collaboration"},
+    {"id": "source-8", "name": "cnet", "url": "https://www.cnet.com/tech/chatgpt-group-feature/", "favicon": "https://www.google.com/s2/favicons?domain=cnet.com&sz=32", "title": "ChatGPT Group Chats: What You Need to Know"},
+    {"id": "source-9", "name": "bloomberg", "url": "https://www.bloomberg.com/news/articles/chatgpt-privacy-group-chats", "favicon": "https://www.google.com/s2/favicons?domain=bloomberg.com&sz=32", "title": "OpenAI Addresses Privacy Concerns With New Group Chat Feature"},
+    {"id": "source-10", "name": "reuters", "url": "https://www.reuters.com/technology/openai-chatgpt-groups/", "favicon": "https://www.google.com/s2/favicons?domain=reuters.com&sz=32", "title": "OpenAI launches ChatGPT group chats with privacy-first approach"},
+    {"id": "source-11", "name": "venturebeat", "url": "https://venturebeat.com/ai/chatgpt-group-privacy/", "favicon": "https://www.google.com/s2/favicons?domain=venturebeat.com&sz=32", "title": "ChatGPT group chats keep your personal AI memory private"},
+    {"id": "source-12", "name": "9to5mac", "url": "https://9to5mac.com/2025/11/20/chatgpt-group-chat-privacy/", "favicon": "https://www.google.com/s2/favicons?domain=9to5mac.com&sz=32", "title": "ChatGPT's group chats only respond when you tag the AI"},
+    {"id": "source-13", "name": "macrumors", "url": "https://www.macrumors.com/2025/11/20/chatgpt-groups-launch/", "favicon": "https://www.google.com/s2/favicons?domain=macrumors.com&sz=32", "title": "ChatGPT Group Chats Now Available to All Users Worldwide"},
+    {"id": "source-14", "name": "tomsguide", "url": "https://www.tomsguide.com/ai/chatgpt-group-chats", "favicon": "https://www.google.com/s2/favicons?domain=tomsguide.com&sz=32", "title": "I tested ChatGPT's new group chat feature — here's how it works"},
+    {"id": "source-15", "name": "youtube", "url": "https://youtube.com/watch?v=chatgpt-groups-demo", "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32", "title": "How ChatGPT Group Chats Work - Hands-On Demo"},
+    {"id": "source-16", "name": "forbes", "url": "https://www.forbes.com/sites/chatgpt-enterprise-groups/", "favicon": "https://www.google.com/s2/favicons?domain=forbes.com&sz=32", "title": "How Businesses Are Already Using ChatGPT's New Group Chat Feature"},
+    {"id": "source-17", "name": "businessinsider", "url": "https://www.businessinsider.com/chatgpt-group-chat-business/", "favicon": "https://www.google.com/s2/favicons?domain=businessinsider.com&sz=32", "title": "ChatGPT group chats could transform team meetings forever"},
+    {"id": "source-18", "name": "fastcompany", "url": "https://www.fastcompany.com/chatgpt-collaboration/", "favicon": "https://www.google.com/s2/favicons?domain=fastcompany.com&sz=32", "title": "ChatGPT's group chat feature is a game-changer for remote teams"},
+    {"id": "source-19", "name": "hbr", "url": "https://hbr.org/2025/11/ai-collaboration-tools", "favicon": "https://www.google.com/s2/favicons?domain=hbr.org&sz=32", "title": "The Rise of AI-Powered Team Collaboration Tools"},
+    {"id": "source-20", "name": "wsj", "url": "https://www.wsj.com/tech/ai/chatgpt-enterprise-collaboration/", "favicon": "https://www.google.com/s2/favicons?domain=wsj.com&sz=32", "title": "OpenAI's ChatGPT Moves Into Enterprise Collaboration Market"},
+    {"id": "source-21", "name": "ft", "url": "https://www.ft.com/content/openai-group-chats", "favicon": "https://www.google.com/s2/favicons?domain=ft.com&sz=32", "title": "ChatGPT group chats signal OpenAI's enterprise ambitions"},
+    {"id": "source-22", "name": "economist", "url": "https://www.economist.com/ai-collaboration/", "favicon": "https://www.google.com/s2/favicons?domain=economist.com&sz=32", "title": "AI chatbots are learning to work in groups"},
+    {"id": "source-23", "name": "nytimes", "url": "https://www.nytimes.com/2025/11/20/technology/chatgpt-group.html", "favicon": "https://www.google.com/s2/favicons?domain=nytimes.com&sz=32", "title": "ChatGPT Can Now Join Your Group Chat"},
+    {"id": "source-24", "name": "theguardian", "url": "https://www.theguardian.com/technology/chatgpt-groups", "favicon": "https://www.google.com/s2/favicons?domain=theguardian.com&sz=32", "title": "OpenAI launches ChatGPT group chats amid growing competition"},
+    {"id": "source-25", "name": "bbc", "url": "https://www.bbc.com/news/technology-chatgpt", "favicon": "https://www.google.com/s2/favicons?domain=bbc.com&sz=32", "title": "ChatGPT gets group chat feature"},
+    {"id": "source-26", "name": "cnbc", "url": "https://www.cnbc.com/2025/11/20/openai-chatgpt-groups.html", "favicon": "https://www.google.com/s2/favicons?domain=cnbc.com&sz=32", "title": "OpenAI rolls out ChatGPT group chats globally"},
+    {"id": "source-27", "name": "axios", "url": "https://www.axios.com/2025/11/20/chatgpt-group-chats", "favicon": "https://www.google.com/s2/favicons?domain=axios.com&sz=32", "title": "ChatGPT's new group feature explained"},
+    {"id": "source-28", "name": "protocol", "url": "https://www.protocol.com/chatgpt-collaboration", "favicon": "https://www.google.com/s2/favicons?domain=protocol.com&sz=32", "title": "ChatGPT wants to be your team's new AI assistant"},
+    {"id": "source-29", "name": "mashable", "url": "https://mashable.com/article/chatgpt-group-chat-launch", "favicon": "https://www.google.com/s2/favicons?domain=mashable.com&sz=32", "title": "ChatGPT group chats let you collaborate with friends and AI"},
+    {"id": "source-30", "name": "gizmodo", "url": "https://gizmodo.com/chatgpt-group-conversations", "favicon": "https://www.google.com/s2/favicons?domain=gizmodo.com&sz=32", "title": "ChatGPT now supports group conversations"}
   ],
   "heroImage": {
     "url": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200",
@@ -354,4 +364,3 @@
     }
   ]
 }
-
