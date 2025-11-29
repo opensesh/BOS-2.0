@@ -3,8 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Sparkles } from 'lucide-react';
-import { InspirationCardData, NewsCardData, ParagraphSource } from '@/types';
+import type { DiscoverArticle, DiscoverArticleManifest, ParagraphSource } from '@/types';
 
 interface RelatedArticle {
   id: string;
@@ -12,6 +11,7 @@ interface RelatedArticle {
   title: string;
   description?: string;
   imageUrl?: string;
+  sourceCount: number;
   sources: ParagraphSource[];
 }
 
@@ -19,14 +19,6 @@ interface DiscoverMoreProps {
   currentSlug: string;
   relatedQueries?: string[];
   relatedArticles?: Array<{ slug: string; title: string }>;
-}
-
-interface OGData {
-  image: string | null;
-  title: string | null;
-  description: string | null;
-  siteName: string | null;
-  favicon: string | null;
 }
 
 export function DiscoverMore({ currentSlug, relatedQueries = [], relatedArticles = [] }: DiscoverMoreProps) {
@@ -38,20 +30,49 @@ export function DiscoverMore({ currentSlug, relatedQueries = [], relatedArticles
       setLoading(true);
       const foundArticles: RelatedArticle[] = [];
 
-      // If relatedArticles provided from pre-generated data, use those first
-      if (relatedArticles.length > 0) {
-        for (const ra of relatedArticles) {
-          foundArticles.push({
-            id: `related-${ra.slug}`,
-            slug: ra.slug,
-            title: ra.title,
-            sources: [],
-          });
-        }
-      }
-
       try {
-        // Load from inspiration data (weekly ideas)
+        // First, try to load from pre-generated discover articles manifest
+        const manifestResponse = await fetch('/data/discover/articles/manifest.json');
+        if (manifestResponse.ok) {
+          const manifest: DiscoverArticleManifest = await manifestResponse.json();
+          
+          // Load full article data for each article in manifest
+          for (const articleMeta of manifest.articles) {
+            if (articleMeta.slug !== currentSlug) {
+              try {
+                const articleResponse = await fetch(`/data/discover/articles/${articleMeta.slug}.json`);
+                if (articleResponse.ok) {
+                  const articleData: DiscoverArticle = await articleResponse.json();
+                  foundArticles.push({
+                    id: `discover-${articleMeta.slug}`,
+                    slug: articleMeta.slug,
+                    title: articleMeta.title,
+                    imageUrl: articleData.heroImage?.url,
+                    sourceCount: articleData.totalSources,
+                    sources: articleData.allSources.slice(0, 3).map(s => ({
+                      id: s.id,
+                      name: s.name,
+                      url: s.url,
+                      favicon: s.favicon,
+                    })),
+                  });
+                }
+              } catch (e) {
+                // If full article load fails, use manifest data
+                foundArticles.push({
+                  id: `discover-${articleMeta.slug}`,
+                  slug: articleMeta.slug,
+                  title: articleMeta.title,
+                  imageUrl: articleMeta.heroImageUrl,
+                  sourceCount: articleMeta.totalSources,
+                  sources: [],
+                });
+              }
+            }
+          }
+        }
+
+        // Also load from legacy weekly-ideas data
         const inspirationTypes = ['short-form', 'long-form', 'blog'];
         for (const type of inspirationTypes) {
           try {
@@ -66,14 +87,14 @@ export function DiscoverMore({ currentSlug, relatedQueries = [], relatedArticles
                     .replace(/^-+|-+$/g, '')
                     .substring(0, 50);
 
-                  // Don't include current article
-                  if (itemSlug !== currentSlug) {
+                  if (itemSlug !== currentSlug && !foundArticles.find(a => a.slug === itemSlug)) {
                     foundArticles.push({
                       id: `${type}-${itemSlug}`,
                       slug: itemSlug,
                       title: idea.title,
                       description: idea.description,
-                      sources: idea.sources.map((s: { name: string; url: string }, idx: number) => ({
+                      sourceCount: idea.sources?.length || 0,
+                      sources: (idea.sources || []).map((s: { name: string; url: string }, idx: number) => ({
                         id: `source-${idx}`,
                         name: s.name,
                         url: s.url,
@@ -104,13 +125,14 @@ export function DiscoverMore({ currentSlug, relatedQueries = [], relatedArticles
                     .replace(/^-+|-+$/g, '')
                     .substring(0, 50);
 
-                  if (itemSlug !== currentSlug) {
+                  if (itemSlug !== currentSlug && !foundArticles.find(a => a.slug === itemSlug)) {
                     foundArticles.push({
                       id: `${type}-${itemSlug}`,
                       slug: itemSlug,
                       title: update.title,
                       description: update.description,
-                      sources: update.sources.map((s: { name: string; url: string }, idx: number) => ({
+                      sourceCount: update.sources?.length || 0,
+                      sources: (update.sources || []).map((s: { name: string; url: string }, idx: number) => ({
                         id: `source-${idx}`,
                         name: s.name,
                         url: s.url,
@@ -126,12 +148,12 @@ export function DiscoverMore({ currentSlug, relatedQueries = [], relatedArticles
           }
         }
 
-        // Shuffle and take first 4 (but prioritize related articles if pre-loaded)
-        const shuffled = foundArticles.sort(() => Math.random() - 0.5);
-        // If we have pre-generated related articles, put them first
-        const preGenerated = shuffled.filter(a => a.id.startsWith('related-'));
-        const others = shuffled.filter(a => !a.id.startsWith('related-'));
-        const combined = [...preGenerated, ...others];
+        // Prioritize discover articles (they have proper images and source counts)
+        const discoverArticles = foundArticles.filter(a => a.id.startsWith('discover-'));
+        const others = foundArticles.filter(a => !a.id.startsWith('discover-'));
+        const shuffledOthers = others.sort(() => Math.random() - 0.5);
+        const combined = [...discoverArticles, ...shuffledOthers];
+        
         setArticles(combined.slice(0, 4));
       } catch (error) {
         console.error('Error loading related articles:', error);
@@ -146,10 +168,7 @@ export function DiscoverMore({ currentSlug, relatedQueries = [], relatedArticles
   if (loading) {
     return (
       <div className="mt-12 pt-8 border-t border-os-border-dark/50">
-        <div className="flex items-center gap-2 mb-6">
-          <Sparkles className="w-5 h-5 text-brand-aperol" />
-          <h3 className="text-lg font-display font-bold text-brand-vanilla">Discover more</h3>
-        </div>
+        <h3 className="text-lg font-display font-bold text-brand-aperol mb-6">Discover more</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[1, 2, 3, 4].map((i) => (
             <div key={i} className="animate-pulse">
@@ -169,11 +188,8 @@ export function DiscoverMore({ currentSlug, relatedQueries = [], relatedArticles
 
   return (
     <div className="mt-12 pt-8 border-t border-os-border-dark/50">
-      {/* Header */}
-      <div className="flex items-center gap-2 mb-6">
-        <Sparkles className="w-5 h-5 text-brand-aperol" />
-        <h3 className="text-lg font-display font-bold text-brand-vanilla">Discover more</h3>
-      </div>
+      {/* Header - no icon */}
+      <h3 className="text-lg font-display font-bold text-brand-aperol mb-6">Discover more</h3>
 
       {/* Cards grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -187,7 +203,7 @@ export function DiscoverMore({ currentSlug, relatedQueries = [], relatedArticles
 
 function DiscoverMoreCard({ article }: { article: RelatedArticle }) {
   const [ogImage, setOgImage] = useState<string | null>(article.imageUrl || null);
-  const [isLoadingImage, setIsLoadingImage] = useState(!article.imageUrl);
+  const [isLoadingImage, setIsLoadingImage] = useState(!article.imageUrl && article.sources.length > 0);
 
   // Fetch OG image from first source if no imageUrl
   useEffect(() => {
@@ -197,7 +213,7 @@ function DiscoverMoreCard({ article }: { article: RelatedArticle }) {
           const sourceUrl = article.sources[0].url;
           const response = await fetch(`/api/og-image?url=${encodeURIComponent(sourceUrl)}`);
           if (response.ok) {
-            const data: OGData = await response.json();
+            const data = await response.json();
             if (data.image) {
               setOgImage(data.image);
             }
@@ -223,7 +239,7 @@ function DiscoverMoreCard({ article }: { article: RelatedArticle }) {
       <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-os-surface-dark">
         {isLoadingImage ? (
           <div className="w-full h-full flex items-center justify-center">
-            <div className="w-6 h-6 border-2 border-os-text-secondary-dark border-t-transparent rounded-full animate-spin" />
+            <div className="w-6 h-6 border-2 border-os-text-secondary-dark border-t-brand-aperol rounded-full animate-spin" />
           </div>
         ) : ogImage ? (
           <Image
@@ -254,34 +270,36 @@ function DiscoverMoreCard({ article }: { article: RelatedArticle }) {
           </p>
         )}
 
-        {/* Source icons */}
+        {/* Source icons and count */}
         <div className="flex items-center gap-1.5">
-          <div className="flex -space-x-1.5">
-            {article.sources.slice(0, 3).map((source, idx) => (
-              <div
-                key={source.id || idx}
-                className="w-5 h-5 rounded-full bg-os-surface-dark border border-os-bg-dark flex items-center justify-center"
-                title={source.name}
-              >
-                {source.favicon ? (
-                  <Image
-                    src={source.favicon}
-                    alt=""
-                    width={12}
-                    height={12}
-                    className="w-3 h-3 rounded-sm"
-                    unoptimized
-                  />
-                ) : (
-                  <span className="text-[8px] text-os-text-secondary-dark font-bold">
-                    {source.name.charAt(0)}
-                  </span>
-                )}
-              </div>
-            ))}
-          </div>
+          {article.sources.length > 0 && (
+            <div className="flex -space-x-1.5">
+              {article.sources.slice(0, 3).map((source, idx) => (
+                <div
+                  key={source.id || idx}
+                  className="w-5 h-5 rounded-full bg-os-surface-dark border border-os-bg-dark flex items-center justify-center"
+                  title={source.name}
+                >
+                  {source.favicon ? (
+                    <Image
+                      src={source.favicon}
+                      alt=""
+                      width={12}
+                      height={12}
+                      className="w-3 h-3 rounded-sm"
+                      unoptimized
+                    />
+                  ) : (
+                    <span className="text-[8px] text-os-text-secondary-dark font-bold">
+                      {source.name.charAt(0)}
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
           <span className="text-xs text-os-text-secondary-dark">
-            {article.sources.length} {article.sources.length === 1 ? 'source' : 'sources'}
+            {article.sourceCount > 0 ? `${article.sourceCount} sources` : ''}
           </span>
         </div>
       </div>
@@ -298,4 +316,3 @@ function getFaviconUrl(url: string): string {
     return '';
   }
 }
-

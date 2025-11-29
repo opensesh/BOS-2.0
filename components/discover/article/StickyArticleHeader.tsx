@@ -73,8 +73,8 @@ export function StickyArticleHeader({ title, titleRef }: StickyArticleHeaderProp
   const truncatedTitle = title.length > 50 ? title.substring(0, 50) + '...' : title;
 
   return (
-    <header className="sticky top-14 lg:top-0 z-30 bg-os-bg-dark/95 backdrop-blur-sm border-b border-os-border-dark/50">
-      <div className="flex items-center justify-between px-4 py-3 max-w-6xl mx-auto">
+    <header className="sticky top-0 z-30 h-12 bg-os-bg-dark backdrop-blur-sm border-b border-os-border-dark/50">
+      <div className="flex items-center justify-between h-full px-4 max-w-6xl mx-auto">
         {/* Left: Back button */}
         <Link
           href="/discover"

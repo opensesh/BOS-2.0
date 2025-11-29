@@ -14,7 +14,8 @@ import { DiscoverMore } from '@/components/discover/article/DiscoverMore';
 import { InlineSourceChips, SourceGroup } from '@/components/discover/article/InlineSourceBadge';
 import { SectionSourceBar } from '@/components/discover/article/SectionSourceBar';
 import { SourcesDrawer } from '@/components/discover/article/SourcesDrawer';
-import type { DiscoverArticle, DiscoverSection, Source, CitationChip } from '@/types';
+import { AllSourcesDrawer } from '@/components/discover/article/AllSourcesDrawer';
+import type { DiscoverArticle, DiscoverSection, CitationChip } from '@/types';
 
 export default function ArticlePage() {
   const params = useParams();
@@ -25,9 +26,10 @@ export default function ArticlePage() {
   const [article, setArticle] = useState<DiscoverArticle | null>(null);
   const [notFound, setNotFound] = useState(false);
   
-  // Drawer state
-  const [drawerOpen, setDrawerOpen] = useState(false);
+  // Drawer states
+  const [sectionDrawerOpen, setSectionDrawerOpen] = useState(false);
   const [drawerSection, setDrawerSection] = useState<{ title?: string; citations: CitationChip[] } | null>(null);
+  const [allSourcesDrawerOpen, setAllSourcesDrawerOpen] = useState(false);
 
   // Load article from pre-generated JSON (instant load)
   useEffect(() => {
@@ -58,21 +60,10 @@ export default function ArticlePage() {
   }, [slug]);
 
   // Open drawer for a specific section
-  const openSourcesDrawer = (section: DiscoverSection) => {
+  const openSectionDrawer = (section: DiscoverSection) => {
     const allCitations = section.paragraphs.flatMap(p => p.citations);
     setDrawerSection({ title: section.title, citations: allCitations });
-    setDrawerOpen(true);
-  };
-
-  // Get sources for SourceCards component
-  const getSourcesForCards = (): Source[] => {
-    if (!article) return [];
-    return article.sourceCards.map(sc => ({
-      id: sc.id,
-      name: sc.name,
-      url: sc.url,
-      logo: sc.favicon,
-    }));
+    setSectionDrawerOpen(true);
   };
 
   // Loading state
@@ -80,7 +71,7 @@ export default function ArticlePage() {
     return (
       <div className="flex h-screen bg-os-bg-dark text-os-text-primary-dark">
         <Sidebar />
-        <main className="flex-1 flex items-center justify-center">
+        <main className="flex-1 flex items-center justify-center pt-14 lg:pt-0">
           <div className="flex flex-col items-center gap-4">
             <div className="w-10 h-10 border-2 border-os-text-secondary-dark border-t-brand-aperol rounded-full animate-spin" />
             <p className="text-sm text-os-text-secondary-dark">Loading article...</p>
@@ -117,7 +108,7 @@ export default function ArticlePage() {
     <div className="flex h-screen bg-os-bg-dark dark:bg-os-bg-dark text-os-text-primary-dark font-sans overflow-hidden">
       <Sidebar />
 
-      <main className="flex-1 flex flex-col overflow-hidden">
+      <main className="flex-1 flex flex-col overflow-hidden pt-14 lg:pt-0">
         {/* Sticky Header */}
         <StickyArticleHeader title={article.title} titleRef={titleRef} />
 
@@ -128,7 +119,7 @@ export default function ArticlePage() {
               {/* Main Content */}
               <div className="flex-1 min-w-0">
                 {/* Article Header */}
-                <div className="flex flex-col gap-4 mb-8">
+                <div className="flex flex-col gap-4 mb-6">
                   <h1 
                     ref={titleRef}
                     className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-brand-vanilla leading-tight"
@@ -200,36 +191,45 @@ export default function ArticlePage() {
                           <SectionSourceBar
                             citations={sectionCitations}
                             sectionTitle={section.title}
-                            onOpenDrawer={() => openSourcesDrawer(section)}
+                            onOpenDrawer={() => openSectionDrawer(section)}
                           />
                         )}
 
-                        {/* Hero image after intro section */}
-                        {sectionIdx === 0 && article.heroImage && (
-                          <div className="relative w-full my-4">
-                            <div className="relative aspect-[16/9] overflow-hidden rounded-xl bg-os-surface-dark">
-                              <Image 
-                                src={article.heroImage.url} 
-                                alt={article.title}
-                                fill 
-                                className="object-cover" 
-                                unoptimized 
-                              />
-                            </div>
-                            {article.heroImage.attribution && (
-                              <p className="text-xs text-os-text-secondary-dark mt-2 text-right font-mono">
-                                {article.heroImage.attribution}
-                              </p>
+                        {/* Source Cards + Hero image after intro section */}
+                        {sectionIdx === 0 && (
+                          <>
+                            {/* Source Cards - horizontal scroll */}
+                            <SourceCards
+                              sources={article.sourceCards}
+                              totalCount={article.totalSources}
+                              onViewAllSources={() => setAllSourcesDrawerOpen(true)}
+                            />
+
+                            {/* Hero image */}
+                            {article.heroImage && (
+                              <div className="relative w-full my-2">
+                                <div className="relative aspect-[16/9] overflow-hidden rounded-xl bg-os-surface-dark">
+                                  <Image 
+                                    src={article.heroImage.url} 
+                                    alt={article.title}
+                                    fill 
+                                    className="object-cover" 
+                                    unoptimized 
+                                  />
+                                </div>
+                                {article.heroImage.attribution && (
+                                  <p className="text-xs text-os-text-secondary-dark mt-2 text-right font-mono">
+                                    {article.heroImage.attribution}
+                                  </p>
+                                )}
+                              </div>
                             )}
-                          </div>
+                          </>
                         )}
                       </section>
                     );
                   })}
                 </div>
-
-                {/* Source Cards */}
-                <SourceCards sources={getSourcesForCards()} totalCount={article.totalSources} />
 
                 {/* Discover More Section */}
                 <DiscoverMore 
@@ -262,12 +262,20 @@ export default function ArticlePage() {
         />
       </main>
 
-      {/* Sources Drawer */}
+      {/* Section Sources Drawer */}
       <SourcesDrawer
-        isOpen={drawerOpen}
-        onClose={() => setDrawerOpen(false)}
+        isOpen={sectionDrawerOpen}
+        onClose={() => setSectionDrawerOpen(false)}
         sectionTitle={drawerSection?.title}
         citations={drawerSection?.citations || []}
+      />
+
+      {/* All Sources Drawer */}
+      <AllSourcesDrawer
+        isOpen={allSourcesDrawerOpen}
+        onClose={() => setAllSourcesDrawerOpen(false)}
+        sources={article.allSources}
+        totalCount={article.totalSources}
       />
     </div>
   );
