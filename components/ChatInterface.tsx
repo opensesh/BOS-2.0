@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback, useMemo } from 'react';
 import { useChat } from '@ai-sdk/react';
+import { useSearchParams, useRouter } from 'next/navigation';
 import { DefaultChatTransport } from 'ai';
 import {
   Mic,
@@ -32,6 +33,14 @@ import {
   ChatHeader,
   ChatContent,
 } from './chat';
+import { ArticleReferenceCard } from './discover/article/AskFollowUp';
+
+// Article reference context from discover page
+interface ArticleContext {
+  title: string;
+  slug: string;
+  imageUrl?: string;
+}
 
 interface Connector {
   id: string;
@@ -52,6 +61,8 @@ interface ParsedMessage {
 }
 
 export function ChatInterface() {
+  const searchParams = useSearchParams();
+  const router = useRouter();
   const [selectedModel, setSelectedModel] = useState<ModelId>('auto');
   const [localInput, setLocalInput] = useState('');
   const [isFocused, setIsFocused] = useState(false);
@@ -63,6 +74,8 @@ export function ChatInterface() {
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [modelUsed, setModelUsed] = useState<string | undefined>();
   const [activeTab, setActiveTab] = useState<'answer' | 'links' | 'images'>('answer');
+  const [articleContext, setArticleContext] = useState<ArticleContext | null>(null);
+  const [hasProcessedUrlParams, setHasProcessedUrlParams] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const globeButtonRef = useRef<HTMLButtonElement>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -122,9 +135,39 @@ export function ChatInterface() {
         }
       }
       resetChat();
+      setArticleContext(null);
       acknowledgeChatReset();
     }
   }, [shouldResetChat, acknowledgeChatReset, resetChat, messages, addToHistory, getMessageContent]);
+
+  // Process URL search params for article follow-up queries
+  useEffect(() => {
+    if (hasProcessedUrlParams) return;
+
+    const query = searchParams.get('q');
+    const articleRef = searchParams.get('articleRef');
+    const articleTitle = searchParams.get('articleTitle');
+    const articleImage = searchParams.get('articleImage');
+
+    if (query && articleRef && articleTitle) {
+      // Set the article context
+      setArticleContext({
+        title: articleTitle,
+        slug: articleRef,
+        imageUrl: articleImage || undefined,
+      });
+
+      // Clear URL params without reload
+      router.replace('/', { scroll: false });
+
+      // Auto-submit the query
+      setTimeout(() => {
+        sendMessage({ content: query });
+      }, 100);
+
+      setHasProcessedUrlParams(true);
+    }
+  }, [searchParams, router, sendMessage, hasProcessedUrlParams]);
 
   // status can be: 'submitted' | 'streaming' | 'ready' | 'error'
   const isLoading = status === 'submitted' || status === 'streaming';
@@ -349,6 +392,17 @@ export function ChatInterface() {
               <div className="max-w-3xl mx-auto px-4">
                 {activeTab === 'answer' && (
                   <>
+                    {/* Article Reference Card - shown when following up from an article */}
+                    {articleContext && parsedMessages.length > 0 && (
+                      <div className="pt-6">
+                        <ArticleReferenceCard
+                          title={articleContext.title}
+                          slug={articleContext.slug}
+                          imageUrl={articleContext.imageUrl}
+                        />
+                      </div>
+                    )}
+
                     {parsedMessages.map((message, idx) => {
                       if (message.role === 'user') {
                         const nextMessage = parsedMessages[idx + 1];

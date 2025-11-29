@@ -44,7 +44,7 @@ function InlineSourceChip({ group }: { group: SourceGroup }) {
         onMouseEnter={() => setShowPopover(true)}
         onMouseLeave={() => setShowPopover(false)}
       >
-        <span className="inline-flex items-center gap-1 px-1.5 py-0.5 bg-os-surface-dark/80 border border-os-border-dark/50 rounded text-xs text-os-text-secondary-dark hover:text-[#20B2AA] cursor-pointer transition-colors">
+        <span className="inline-flex items-center gap-1 px-1.5 py-0.5 bg-os-surface-dark/80 border border-os-border-dark/50 rounded text-xs text-os-text-secondary-dark hover:text-brand-aperol cursor-pointer transition-colors">
           <Youtube className="w-3.5 h-3.5" />
           {additionalCount > 0 && (
             <span className="text-[10px] opacity-70">+{additionalCount}</span>
@@ -61,10 +61,10 @@ function InlineSourceChip({ group }: { group: SourceGroup }) {
       onMouseEnter={() => setShowPopover(true)}
       onMouseLeave={() => setShowPopover(false)}
     >
-      <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-[#20B2AA]/10 border border-[#20B2AA]/30 rounded text-xs text-[#20B2AA] hover:bg-[#20B2AA]/20 cursor-pointer transition-colors font-mono">
+      <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-brand-aperol/10 border border-brand-aperol/30 rounded text-xs text-brand-aperol hover:bg-brand-aperol/20 cursor-pointer transition-colors font-mono">
         <span className="lowercase">{group.primarySource.name}</span>
         {additionalCount > 0 && (
-          <span className="text-[10px] text-[#20B2AA]/70">+{additionalCount}</span>
+          <span className="text-[10px] text-brand-aperol/70">+{additionalCount}</span>
         )}
       </span>
       {showPopover && <SourcePopover sources={allSources} />}
@@ -93,10 +93,10 @@ export function InlineSourceBadge({ sources, primarySourceName }: InlineSourceBa
       onMouseEnter={() => setShowPopover(true)}
       onMouseLeave={() => setShowPopover(false)}
     >
-      <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-[#20B2AA]/10 border border-[#20B2AA]/30 rounded text-xs text-[#20B2AA] hover:bg-[#20B2AA]/20 cursor-pointer transition-colors font-mono">
+      <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-brand-aperol/10 border border-brand-aperol/30 rounded text-xs text-brand-aperol hover:bg-brand-aperol/20 cursor-pointer transition-colors font-mono">
         <span className="lowercase">{displayName}</span>
         {additionalCount > 0 && (
-          <span className="text-[10px] text-[#20B2AA]/70">+{additionalCount}</span>
+          <span className="text-[10px] text-brand-aperol/70">+{additionalCount}</span>
         )}
       </span>
 
@@ -155,7 +155,7 @@ function SourceItem({ source }: { source: ParagraphSource }) {
 
       {/* Content */}
       <div className="flex-1 min-w-0">
-        <p className="text-sm font-medium text-os-text-primary-dark group-hover:text-[#20B2AA] transition-colors line-clamp-2">
+        <p className="text-sm font-medium text-os-text-primary-dark group-hover:text-brand-aperol transition-colors line-clamp-2">
           {source.title || source.name}
         </p>
         <p className="text-xs text-os-text-secondary-dark mt-0.5 font-mono">{domain}</p>

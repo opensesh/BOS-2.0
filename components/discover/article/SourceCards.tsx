@@ -68,7 +68,7 @@ export function SourceCards({ sources }: SourceCardsProps) {
           </span>
         </div>
         {sources.length > 4 && (
-          <button className="text-sm text-[#20B2AA] hover:underline">
+          <button className="text-sm text-brand-aperol hover:underline">
             +{sources.length - 4} sources
           </button>
         )}
@@ -84,7 +84,7 @@ export function SourceCards({ sources }: SourceCardsProps) {
               href={source.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-shrink-0 w-[200px] rounded-lg bg-os-surface-dark hover:bg-os-surface-dark/80 border border-os-border-dark/50 transition-all hover:border-[#20B2AA]/30 group overflow-hidden"
+              className="flex-shrink-0 w-[200px] rounded-lg bg-os-surface-dark hover:bg-os-surface-dark/80 border border-os-border-dark/50 transition-all hover:border-brand-aperol/30 group overflow-hidden"
             >
               {/* Thumbnail */}
               {ogData?.image && (
@@ -109,7 +109,7 @@ export function SourceCards({ sources }: SourceCardsProps) {
                       {source.name}
                     </span>
                   </div>
-                  <ArrowUpRight className="w-3 h-3 text-os-text-secondary-dark group-hover:text-[#20B2AA] transition-colors flex-shrink-0" />
+                  <ArrowUpRight className="w-3 h-3 text-os-text-secondary-dark group-hover:text-brand-aperol transition-colors flex-shrink-0" />
                 </div>
                 <p className="text-sm font-medium text-os-text-primary-dark line-clamp-2 group-hover:text-brand-vanilla transition-colors">
                   {ogData?.title || source.name}

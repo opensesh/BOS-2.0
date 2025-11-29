@@ -137,7 +137,7 @@ export default function ArticlePage() {
         <Sidebar />
         <main className="flex-1 flex items-center justify-center">
           <div className="flex flex-col items-center gap-4">
-            <div className="w-10 h-10 border-2 border-os-text-secondary-dark border-t-[#20B2AA] rounded-full animate-spin" />
+            <div className="w-10 h-10 border-2 border-os-text-secondary-dark border-t-brand-aperol rounded-full animate-spin" />
             <p className="text-sm text-os-text-secondary-dark">Loading article...</p>
           </div>
         </main>
@@ -211,11 +211,11 @@ export default function ArticlePage() {
                 {/* Source Cards */}
                 <SourceCards sources={getAllSources()} />
 
-                {/* Follow-up Input */}
-                <AskFollowUp articleTitle={articleData.title} />
-
                 {/* Discover More Section */}
                 <DiscoverMore currentSlug={slug} relatedQueries={relatedQueries} />
+
+                {/* Bottom padding for pinned chat input */}
+                <div className="h-32" />
               </div>
 
               {/* Right Sidebar - Summary Points */}
@@ -230,6 +230,13 @@ export default function ArticlePage() {
             </div>
           </div>
         </div>
+
+        {/* Pinned Follow-up Chat Input */}
+        <AskFollowUp 
+          articleTitle={articleData.title} 
+          articleSlug={slug}
+          articleImage={ogImage || undefined}
+        />
       </main>
     </div>
   );

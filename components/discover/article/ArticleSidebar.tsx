@@ -12,7 +12,7 @@ export function ArticleSidebar({ summaryPoints }: ArticleSidebarProps) {
       {summaryPoints.map((point, idx) => (
         <div 
           key={idx} 
-          className="text-sm text-os-text-secondary-dark leading-relaxed border-l-2 border-os-border-dark pl-4 hover:border-[#20B2AA] hover:text-brand-vanilla transition-colors cursor-pointer"
+          className="text-sm text-os-text-secondary-dark leading-relaxed border-l-2 border-os-border-dark pl-4 hover:border-brand-aperol hover:text-brand-vanilla transition-colors cursor-pointer"
         >
           {point}
         </div>
