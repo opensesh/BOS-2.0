@@ -17,6 +17,82 @@ import { SourcesDrawer } from '@/components/discover/article/SourcesDrawer';
 import { AllSourcesDrawer } from '@/components/discover/article/AllSourcesDrawer';
 import type { DiscoverArticle, DiscoverSection, CitationChip } from '@/types';
 
+// Helper to create a simplified article from news/ideas data
+function createSimplifiedArticle(
+  slug: string,
+  item: { 
+    title: string; 
+    description?: string; 
+    timestamp?: string; 
+    sources?: Array<{ name: string; url: string }>;
+  }
+): DiscoverArticle {
+  const sources = item.sources || [];
+  
+  const getFavicon = (url: string) => {
+    try {
+      return `https://www.google.com/s2/favicons?domain=${new URL(url).hostname}&sz=32`;
+    } catch {
+      return '';
+    }
+  };
+  
+  return {
+    id: `fallback-${slug}`,
+    slug,
+    title: item.title,
+    publishedAt: item.timestamp || new Date().toISOString(),
+    generatedAt: new Date().toISOString(),
+    totalSources: sources.length,
+    sections: [{
+      id: 'section-0',
+      paragraphs: item.description
+        ? item.description.split('\n\n').map((para: string, idx: number) => ({
+            id: `para-0-${idx}`,
+            content: para,
+            citations: idx === 0 && sources.length > 0 ? [{
+              primarySource: {
+                id: 'source-0',
+                name: sources[0].name,
+                url: sources[0].url,
+                favicon: getFavicon(sources[0].url),
+                title: item.title,
+              },
+              additionalCount: sources.length - 1,
+              additionalSources: sources.slice(1).map((s, i) => ({
+                id: `source-${i + 1}`,
+                name: s.name,
+                url: s.url,
+                favicon: getFavicon(s.url),
+                title: item.title,
+              })),
+            }] : [],
+          }))
+        : [{
+            id: 'para-0-0',
+            content: item.title,
+            citations: [],
+          }],
+    }],
+    sourceCards: sources.slice(0, 4).map((s, i) => ({
+      id: `card-${i}`,
+      name: s.name,
+      url: s.url,
+      favicon: getFavicon(s.url),
+      title: item.title,
+    })),
+    allSources: sources.map((s, i) => ({
+      id: `source-${i}`,
+      name: s.name,
+      url: s.url,
+      favicon: getFavicon(s.url),
+      title: item.title,
+    })),
+    sidebarSections: [],
+    relatedArticles: [],
+  };
+}
+
 export default function ArticlePage() {
   const params = useParams();
   const slug = params.slug as string;
@@ -31,14 +107,14 @@ export default function ArticlePage() {
   const [drawerSection, setDrawerSection] = useState<{ title?: string; citations: CitationChip[] } | null>(null);
   const [allSourcesDrawerOpen, setAllSourcesDrawerOpen] = useState(false);
 
-  // Load article from pre-generated JSON (instant load)
+  // Load article from pre-generated JSON or fallback to news data
   useEffect(() => {
     const loadArticle = async () => {
       setIsLoading(true);
       setNotFound(false);
 
       try {
-        // Try to load pre-generated article JSON
+        // Try to load pre-generated article JSON first
         const response = await fetch(`/data/discover/articles/${slug}.json`);
         
         if (response.ok) {
@@ -48,10 +124,80 @@ export default function ArticlePage() {
           return;
         }
       } catch (error) {
-        console.log('Pre-generated article not found, trying legacy sources...');
+        console.log('Pre-generated article not found, trying news data fallback...');
       }
 
-      // Article not found in pre-generated data
+      // Fallback: Try to find article in news data
+      try {
+        const newsUrls = [
+          '/data/news/weekly-update/latest.json',
+          '/data/news/monthly-outlook/latest.json',
+        ];
+        
+        for (const url of newsUrls) {
+          const newsResponse = await fetch(url);
+          if (newsResponse.ok) {
+            const newsData = await newsResponse.json();
+            const foundUpdate = newsData.updates?.find((update: { title: string }) => {
+              const updateSlug = update.title
+                .toLowerCase()
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/^-+|-+$/g, '')
+                .substring(0, 50);
+              return updateSlug === slug;
+            });
+            
+            if (foundUpdate) {
+              // Create a simplified article from news data
+              const simplifiedArticle: DiscoverArticle = createSimplifiedArticle(slug, foundUpdate);
+              setArticle(simplifiedArticle);
+              setIsLoading(false);
+              return;
+            }
+          }
+        }
+      } catch (error) {
+        console.log('News data fallback failed:', error);
+      }
+
+      // Fallback: Try to find article in inspiration/ideas data
+      try {
+        const ideasUrls = [
+          '/data/weekly-ideas/short-form/latest.json',
+          '/data/weekly-ideas/long-form/latest.json',
+          '/data/weekly-ideas/blog/latest.json',
+        ];
+        
+        for (const url of ideasUrls) {
+          const ideasResponse = await fetch(url);
+          if (ideasResponse.ok) {
+            const ideasData = await ideasResponse.json();
+            const foundIdea = ideasData.ideas?.find((idea: { title: string }) => {
+              const ideaSlug = idea.title
+                .toLowerCase()
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/^-+|-+$/g, '')
+                .substring(0, 50);
+              return ideaSlug === slug;
+            });
+            
+            if (foundIdea) {
+              // Create a simplified article from ideas data
+              const simplifiedArticle: DiscoverArticle = createSimplifiedArticle(slug, {
+                ...foundIdea,
+                timestamp: ideasData.date,
+              });
+              setArticle(simplifiedArticle);
+              setIsLoading(false);
+              return;
+            }
+          }
+        }
+      } catch (error) {
+        console.log('Ideas data fallback failed:', error);
+      }
+
+      // Article not found anywhere
       setNotFound(true);
       setIsLoading(false);
     };
