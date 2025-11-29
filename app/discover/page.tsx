@@ -195,9 +195,8 @@ export default function DiscoverPage() {
 
             {!loading && !error && activeTab === 'Inspiration' && (
               <InspirationCardGrid
-                shortForm={inspirationData.shortForm}
-                longForm={inspirationData.longForm}
-                blog={inspirationData.blog}
+                items={[...inspirationData.shortForm, ...inspirationData.longForm, ...inspirationData.blog]}
+                activeFilter={activeInspirationType}
               />
             )}
           </div>

@@ -49,7 +49,6 @@ export function DiscoverHeader({
   onTypeChange,
   savedCount = 0,
   onOpenSaved,
-  lastUpdated,
   selectedDate = 'today',
   onDateChange,
 }: DiscoverHeaderProps) {
@@ -59,27 +58,9 @@ export function DiscoverHeader({
   const dropdownRef = useRef<HTMLDivElement>(null);
   const dateDropdownRef = useRef<HTMLDivElement>(null);
 
-  // Format last updated time
-  const formatLastUpdated = () => {
-    if (!lastUpdated) return 'Just now';
-    try {
-      const date = new Date(lastUpdated);
-      const now = new Date();
-      const diffMs = now.getTime() - date.getTime();
-      const diffMins = Math.floor(diffMs / (1000 * 60));
-      const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
-      
-      if (diffMins < 1) return 'Just now';
-      if (diffMins < 60) return `${diffMins}m ago`;
-      if (diffHours < 24) return `${diffHours}h ago`;
-      return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-    } catch {
-      return 'Just now';
-    }
-  };
-
   const typeOptions = activeTab === 'News' ? NEWS_TYPES : INSPIRATION_TYPES;
   const currentTypeLabel = typeOptions.find(t => t.id === activeType)?.label || 'All';
+  const currentDateLabel = DATE_OPTIONS.find(d => d.id === selectedDate)?.label || 'Today';
 
   // Close dropdowns when clicking outside
   useEffect(() => {
@@ -101,47 +82,41 @@ export function DiscoverHeader({
     onTypeChange('all');
   };
 
-  const currentDateLabel = DATE_OPTIONS.find(d => d.id === selectedDate)?.label || 'Today';
-
   return (
     <>
-      {/* Row 1: Title and Tabs */}
-      <div className="flex items-center justify-between mb-4">
-        <h1 className="text-2xl md:text-3xl font-display font-bold text-brand-vanilla">
-          Discover
-        </h1>
-        
-        {/* Tabs */}
-        <div className="flex items-center gap-1">
-          <button
-            onClick={() => handleTabChange('News')}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-              activeTab === 'News'
-                ? 'bg-brand-aperol/15 text-brand-aperol border border-brand-aperol/30'
-                : 'text-os-text-secondary-dark hover:text-brand-vanilla hover:bg-os-surface-dark border border-transparent'
-            }`}
-          >
-            News
-          </button>
-          <button
-            onClick={() => handleTabChange('Inspiration')}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-              activeTab === 'Inspiration'
-                ? 'bg-brand-aperol/15 text-brand-aperol border border-brand-aperol/30'
-                : 'text-os-text-secondary-dark hover:text-brand-vanilla hover:bg-os-surface-dark border border-transparent'
-            }`}
-          >
-            Inspiration
-          </button>
+      {/* Single responsive row */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+        {/* Left: Title and Tabs */}
+        <div className="flex items-center gap-2 sm:gap-4 flex-wrap">
+          {/* Title */}
+          <h1 className="text-xl md:text-2xl font-display font-bold text-brand-vanilla">
+            Discover
+          </h1>
+          
+          {/* Tabs - inline with title */}
+          <div className="flex items-center gap-1">
+            <button
+              onClick={() => handleTabChange('News')}
+              className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+                activeTab === 'News'
+                  ? 'bg-brand-aperol/15 text-brand-aperol border border-brand-aperol/30'
+                  : 'text-os-text-secondary-dark hover:text-brand-vanilla hover:bg-os-surface-dark border border-transparent'
+              }`}
+            >
+              News
+            </button>
+            <button
+              onClick={() => handleTabChange('Inspiration')}
+              className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+                activeTab === 'Inspiration'
+                  ? 'bg-brand-aperol/15 text-brand-aperol border border-brand-aperol/30'
+                  : 'text-os-text-secondary-dark hover:text-brand-vanilla hover:bg-os-surface-dark border border-transparent'
+              }`}
+            >
+              Inspiration
+            </button>
+          </div>
         </div>
-      </div>
-
-      {/* Row 2: Updated time + Filters */}
-      <div className="flex items-center justify-between mb-6">
-        {/* Left: Updated time */}
-        <p className="text-sm text-os-text-secondary-dark">
-          Updated: {formatLastUpdated()}
-        </p>
 
         {/* Right: Filter actions */}
         <div className="flex items-center gap-1">
@@ -149,7 +124,7 @@ export function DiscoverHeader({
           <div className="relative" ref={dropdownRef}>
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className={`p-2.5 rounded-lg transition-colors group ${
+              className={`p-2 rounded-lg transition-colors group ${
                 isDropdownOpen ? 'bg-os-surface-dark' : 'hover:bg-os-surface-dark'
               }`}
               title={`Filter: ${currentTypeLabel}`}
@@ -185,7 +160,7 @@ export function DiscoverHeader({
           <div className="relative" ref={dateDropdownRef}>
             <button
               onClick={() => setIsDateDropdownOpen(!isDateDropdownOpen)}
-              className={`p-2.5 rounded-lg transition-colors group ${
+              className={`p-2 rounded-lg transition-colors group ${
                 isDateDropdownOpen ? 'bg-os-surface-dark' : 'hover:bg-os-surface-dark'
               }`}
               title={`Date: ${currentDateLabel}`}
@@ -220,7 +195,7 @@ export function DiscoverHeader({
           {/* Saved Button */}
           <button
             onClick={onOpenSaved}
-            className="p-2.5 rounded-lg hover:bg-os-surface-dark transition-colors group relative"
+            className="p-2 rounded-lg hover:bg-os-surface-dark transition-colors group relative"
             title="Saved Articles"
           >
             <Bookmark className="w-5 h-5 text-os-text-secondary-dark group-hover:text-brand-vanilla transition-colors" />
@@ -234,7 +209,7 @@ export function DiscoverHeader({
           {/* Settings Gear Icon */}
           <button
             onClick={() => setIsSourcesOpen(true)}
-            className="p-2.5 rounded-lg hover:bg-os-surface-dark transition-colors group"
+            className="p-2 rounded-lg hover:bg-os-surface-dark transition-colors group"
             title="Manage Sources"
           >
             <Settings className="w-5 h-5 text-os-text-secondary-dark group-hover:text-brand-vanilla transition-colors" />

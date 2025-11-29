@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useParams, useSearchParams, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -10,11 +10,8 @@ import {
   Video,
   FileText,
   Pen,
-  Image as ImageIcon,
   Sparkles,
   ExternalLink,
-  ChevronRight,
-  Play,
   BookOpen,
   Palette,
   Clock
@@ -132,14 +129,25 @@ async function fetchInspirationItem(id: string | null, slug: string): Promise<In
   return null;
 }
 
+// Fallback placeholder images based on category
+const FALLBACK_IMAGES = {
+  'short-form': 'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=800&h=600&fit=crop',
+  'long-form': 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=600&fit=crop',
+  'blog': 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop',
+};
+
 export default function InspirationDetailPage() {
   const params = useParams();
   const searchParams = useSearchParams();
   const router = useRouter();
+  const titleRef = useRef<HTMLHeadingElement>(null);
   const [item, setItem] = useState<InspirationCardData | null>(null);
   const [ogImage, setOgImage] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [generatingType, setGeneratingType] = useState<GenerationType | null>(null);
+  const [conceptBrief, setConceptBrief] = useState<string | null>(null);
+  const [loadingBrief, setLoadingBrief] = useState(false);
+  const [showStickyHeader, setShowStickyHeader] = useState(false);
 
   const id = searchParams.get('id');
   const slug = params.slug as string;
@@ -155,24 +163,123 @@ export default function InspirationDetailPage() {
     }
   }, [id, slug]);
 
-  // Fetch OG image
+  // Fetch OG image with fallback
   useEffect(() => {
     if (item && item.sources && item.sources.length > 0) {
-      const firstSourceUrl = item.sources[0].url;
-      const fetchOgImage = async () => {
-        try {
-          const response = await fetch(`/api/og-image?url=${encodeURIComponent(firstSourceUrl)}`);
-          if (response.ok) {
-            const data = await response.json();
-            if (data.image) setOgImage(data.image);
+      let isMounted = true;
+      
+      const fetchImages = async () => {
+        // Try each source
+        for (const source of item.sources) {
+          try {
+            const response = await fetch(`/api/og-image?url=${encodeURIComponent(source.url)}`);
+            if (response.ok) {
+              const data = await response.json();
+              if (data.image && isMounted) {
+                setOgImage(data.image);
+                return;
+              }
+            }
+          } catch (error) {
+            console.error('Error fetching OG image:', error);
           }
-        } catch (error) {
-          console.error('Error fetching OG image:', error);
+        }
+        
+        // Use fallback if no image found
+        if (isMounted) {
+          setOgImage(FALLBACK_IMAGES[item.category] || FALLBACK_IMAGES['short-form']);
         }
       };
-      fetchOgImage();
+      
+      fetchImages();
+      
+      return () => {
+        isMounted = false;
+      };
     }
   }, [item]);
+
+  // Generate concept brief using AI
+  useEffect(() => {
+    if (item && !conceptBrief && !loadingBrief) {
+      setLoadingBrief(true);
+      
+      // Generate a concept brief based on the item
+      const generateBrief = async () => {
+        try {
+          const response = await fetch('/api/chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              messages: [{
+                role: 'user',
+                content: `Generate a brief 2-3 paragraph explanation of this content idea for a creative professional. Be concise and actionable.
+
+Title: ${item.title}
+Description: ${item.description}
+Category: ${item.category}
+Sources: ${item.sources.map(s => s.name).join(', ')}
+
+Write about:
+1. Why this topic is relevant and timely
+2. The key angle or hook that makes it interesting
+3. Potential approaches to explore this idea
+
+Keep it under 150 words total. Do not use markdown formatting, just plain text paragraphs.`
+              }]
+            })
+          });
+          
+          if (response.ok) {
+            const reader = response.body?.getReader();
+            if (reader) {
+              let text = '';
+              const decoder = new TextDecoder();
+              
+              while (true) {
+                const { done, value } = await reader.read();
+                if (done) break;
+                text += decoder.decode(value, { stream: true });
+              }
+              
+              // Extract text content (remove any JSON wrapper if present)
+              let cleanText = text;
+              try {
+                const parsed = JSON.parse(text);
+                if (parsed.content) cleanText = parsed.content;
+              } catch {
+                // Already plain text
+              }
+              
+              setConceptBrief(cleanText);
+            }
+          }
+        } catch (error) {
+          console.error('Error generating concept brief:', error);
+          // Set a fallback brief
+          setConceptBrief(`This content idea explores "${item.title}" - a timely topic that offers creative potential across multiple formats. The concept draws from ${item.sources.length} source${item.sources.length > 1 ? 's' : ''}, providing a solid foundation for research and development. Consider the unique angles this topic offers and how it might resonate with your target audience.`);
+        } finally {
+          setLoadingBrief(false);
+        }
+      };
+      
+      generateBrief();
+    }
+  }, [item, conceptBrief, loadingBrief]);
+
+  // Sticky header scroll detection
+  useEffect(() => {
+    const handleScroll = () => {
+      if (titleRef.current) {
+        const rect = titleRef.current.getBoundingClientRect();
+        setShowStickyHeader(rect.bottom < 0);
+      }
+    };
+
+    const scrollContainer = document.querySelector('.custom-scrollbar');
+    scrollContainer?.addEventListener('scroll', handleScroll);
+    return () => scrollContainer?.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleGenerate = (option: GenerationOption) => {
     if (!item) return;
@@ -200,13 +307,13 @@ Please provide a comprehensive creative brief with:
 4. Call-to-action suggestions`;
 
     // Navigate to chat with context
-    const params = new URLSearchParams({
+    const urlParams = new URLSearchParams({
       q: prompt,
       inspirationTitle: item.title,
       inspirationCategory: item.category,
       inspirationDescription: item.description,
     });
-    router.push(`/?${params.toString()}`);
+    router.push(`/?${urlParams.toString()}`);
   };
 
   const getCategoryIcon = () => {
@@ -235,7 +342,7 @@ Please provide a comprehensive creative brief with:
     return (
       <div className="flex h-screen bg-os-bg-dark">
         <Sidebar />
-        <main className="flex-1 flex items-center justify-center">
+        <main className="flex-1 flex items-center justify-center pt-14 lg:pt-0">
           <div className="w-8 h-8 border-2 border-brand-aperol/30 border-t-brand-aperol rounded-full animate-spin" />
         </main>
       </div>
@@ -246,7 +353,7 @@ Please provide a comprehensive creative brief with:
     return (
       <div className="flex h-screen bg-os-bg-dark">
         <Sidebar />
-        <main className="flex-1 flex flex-col items-center justify-center">
+        <main className="flex-1 flex flex-col items-center justify-center pt-14 lg:pt-0">
           <p className="text-os-text-secondary-dark mb-4">Inspiration item not found</p>
           <Link
             href="/discover?tab=Inspiration"
@@ -264,38 +371,40 @@ Please provide a comprehensive creative brief with:
       <Sidebar />
       
       <main className="flex-1 flex flex-col overflow-hidden pt-14 lg:pt-0">
-        <div className="flex-1 overflow-y-auto custom-scrollbar">
-          {/* Hero Section */}
-          <div className="relative h-64 md:h-80 overflow-hidden">
-            {ogImage ? (
-              <Image
-                src={ogImage}
-                alt={item.title}
-                fill
-                className="object-cover"
-                unoptimized
-                priority
-              />
-            ) : (
-              <div className="w-full h-full bg-gradient-to-br from-brand-aperol/20 to-os-surface-dark" />
-            )}
-            <div className="absolute inset-0 bg-gradient-to-t from-os-bg-dark via-os-bg-dark/60 to-transparent" />
+        {/* Sticky Header */}
+        <div 
+          className={`sticky top-0 z-20 bg-os-bg-dark/95 backdrop-blur-sm border-b border-os-border-dark/50 px-6 py-3 transition-all duration-200 ${
+            showStickyHeader ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
+          }`}
+        >
+          <div className="max-w-4xl mx-auto flex items-center gap-4">
+            <Link
+              href="/discover?tab=Inspiration"
+              className="p-2 rounded-lg hover:bg-os-surface-dark transition-colors"
+            >
+              <ArrowLeft className="w-5 h-5 text-os-text-secondary-dark" />
+            </Link>
+            <h2 className="text-sm font-medium text-brand-vanilla truncate">
+              {item.title}
+            </h2>
+          </div>
+        </div>
 
-            {/* Back button */}
-            <div className="absolute top-4 left-4 z-10">
-              <Link
-                href="/discover?tab=Inspiration"
-                className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-os-bg-dark/80 backdrop-blur-sm text-brand-vanilla text-sm hover:bg-os-surface-dark transition-colors"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                Back
-              </Link>
-            </div>
+        <div className="flex-1 overflow-y-auto custom-scrollbar">
+          {/* Back button row */}
+          <div className="max-w-4xl mx-auto px-6 pt-6">
+            <Link
+              href="/discover?tab=Inspiration"
+              className="inline-flex items-center gap-2 text-os-text-secondary-dark hover:text-brand-vanilla transition-colors text-sm mb-6"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Back to Inspiration
+            </Link>
           </div>
 
           {/* Content */}
-          <div className="max-w-4xl mx-auto px-6 -mt-20 relative z-10 pb-12">
-            {/* Category badge */}
+          <div className="max-w-4xl mx-auto px-6 pb-12">
+            {/* Category and sources count */}
             <div className="flex items-center gap-3 mb-4">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-os-surface-dark text-os-text-secondary-dark text-sm">
                 <CategoryIcon className="w-4 h-4" />
@@ -307,14 +416,52 @@ Please provide a comprehensive creative brief with:
             </div>
 
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl font-display font-bold text-brand-vanilla mb-4">
+            <h1 
+              ref={titleRef}
+              className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-brand-vanilla mb-4"
+            >
               {item.title}
             </h1>
 
-            {/* Description */}
-            <p className="text-lg text-os-text-secondary-dark leading-relaxed mb-8">
+            {/* Hero Image */}
+            <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden bg-os-surface-dark mb-6">
+              {ogImage ? (
+                <Image
+                  src={ogImage}
+                  alt={item.title}
+                  fill
+                  className="object-cover"
+                  unoptimized
+                  priority
+                />
+              ) : (
+                <div className="w-full h-full bg-gradient-to-br from-brand-aperol/20 to-os-surface-dark" />
+              )}
+            </div>
+
+            {/* Original Description */}
+            <p className="text-lg text-os-text-secondary-dark leading-relaxed mb-6">
               {item.description}
             </p>
+
+            {/* AI-Generated Concept Brief */}
+            <div className="mb-8">
+              <h2 className="text-lg font-semibold text-brand-vanilla mb-3">
+                Concept Overview
+              </h2>
+              {loadingBrief ? (
+                <div className="flex items-center gap-3 text-os-text-secondary-dark">
+                  <div className="w-4 h-4 border-2 border-os-text-secondary-dark border-t-transparent rounded-full animate-spin" />
+                  Generating overview...
+                </div>
+              ) : (
+                <div className="text-[15px] leading-relaxed text-os-text-primary-dark/90 space-y-4">
+                  {conceptBrief?.split('\n\n').map((paragraph, idx) => (
+                    <p key={idx}>{paragraph}</p>
+                  ))}
+                </div>
+              )}
+            </div>
 
             {/* Source Links */}
             <div className="mb-10">
@@ -399,71 +546,9 @@ Please provide a comprehensive creative brief with:
                 })}
               </div>
             </div>
-
-            {/* Quick Generate - all formats at once */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-brand-aperol/10 to-transparent border border-brand-aperol/20">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-brand-aperol/20 flex items-center justify-center flex-shrink-0">
-                  <Sparkles className="w-6 h-6 text-brand-aperol" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-base font-semibold text-brand-vanilla mb-1">
-                    Need all formats?
-                  </h3>
-                  <p className="text-sm text-os-text-secondary-dark">
-                    Generate a comprehensive brief covering all content types at once
-                  </p>
-                </div>
-                <button
-                  onClick={() => {
-                    if (!item) return;
-                    const sourceUrls = item.sources.map(s => `- ${s.name}: ${s.url}`).join('\n');
-                    const prompt = `Create a comprehensive content strategy for the following idea, covering all formats:
-
-**Title:** ${item.title}
-
-**Description:** ${item.description}
-
-**Reference Sources:**
-${sourceUrls}
-
-Please provide:
-
-## Short-Form Video Script
-- Hook and core message (30-60 seconds)
-- Key visual moments
-
-## Long-Form Content Outline  
-- Chapter breakdown
-- Key talking points
-
-## Blog Article Structure
-- SEO-optimized outline
-- Key takeaways
-
-## Visual/Creative Concepts
-- Design recommendations
-- Brand alignment notes`;
-
-                    const params = new URLSearchParams({
-                      q: prompt,
-                      inspirationTitle: item.title,
-                      inspirationCategory: item.category,
-                      inspirationDescription: item.description,
-                    });
-                    router.push(`/?${params.toString()}`);
-                  }}
-                  className="px-5 py-2.5 rounded-xl bg-brand-aperol text-white text-sm font-medium hover:bg-brand-aperol/90 transition-colors flex items-center gap-2"
-                >
-                  <Sparkles className="w-4 h-4" />
-                  Generate All
-                </button>
-              </div>
-            </div>
           </div>
         </div>
       </main>
     </div>
   );
 }
-
