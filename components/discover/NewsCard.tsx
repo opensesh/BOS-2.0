@@ -3,10 +3,49 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Bookmark, Clock } from 'lucide-react';
-import { NewsCardData } from '@/types';
+import { Bookmark, Clock, Zap, Sparkles, ExternalLink } from 'lucide-react';
+import { NewsCardData, ContentTier } from '@/types';
 import { SourceInfo } from '@/components/chat/AnswerView';
 import { NewsCardMenu } from './NewsCardMenu';
+
+// Tier badge component for visual hierarchy
+function TierBadge({ tier, variant }: { tier?: ContentTier; variant: 'featured' | 'compact' }) {
+  if (!tier) return null;
+  
+  const isCompact = variant === 'compact';
+  
+  // Featured: Deep research articles with 40+ sources
+  if (tier === 'featured') {
+    return (
+      <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-brand-aperol text-white font-bold uppercase tracking-wider ${isCompact ? 'text-[9px]' : 'text-[10px]'}`}>
+        <Zap className={isCompact ? 'w-2.5 h-2.5' : 'w-3 h-3'} />
+        Deep Dive
+      </span>
+    );
+  }
+  
+  // Summary: AI-generated summary, expandable inline
+  if (tier === 'summary') {
+    return (
+      <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-brand-aperol/20 text-brand-aperol font-bold uppercase tracking-wider ${isCompact ? 'text-[9px]' : 'text-[10px]'}`}>
+        <Sparkles className={isCompact ? 'w-2.5 h-2.5' : 'w-3 h-3'} />
+        AI Summary
+      </span>
+    );
+  }
+  
+  // Quick: External link to source
+  if (tier === 'quick') {
+    return (
+      <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-os-surface-dark text-os-text-secondary-dark font-bold uppercase tracking-wider ${isCompact ? 'text-[9px]' : 'text-[10px]'}`}>
+        <ExternalLink className={isCompact ? 'w-2.5 h-2.5' : 'w-3 h-3'} />
+        Headline
+      </span>
+    );
+  }
+  
+  return null;
+}
 
 interface NewsCardProps {
   item: NewsCardData;
@@ -387,6 +426,16 @@ export function NewsCard({
         {/* Text Content - LEFT */}
         <div className="flex-1 flex flex-col justify-between min-w-0">
           <div className="flex flex-col gap-3">
+            {/* Tier Badge - all tiers show badges */}
+            {item.tier && (
+              <div className="flex items-center gap-2">
+                <TierBadge tier={item.tier} variant="featured" />
+                {item.tier === 'featured' && (
+                  <span className="text-xs text-os-text-secondary-dark">{displaySources.length}+ sources</span>
+                )}
+              </div>
+            )}
+            
             {/* Title */}
             <h3 className="text-xl md:text-2xl font-display font-bold text-brand-vanilla group-hover:text-brand-aperol transition-colors leading-tight">
               {item.title}
@@ -431,6 +480,12 @@ export function NewsCard({
       {/* Image */}
       <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-os-surface-dark">
         {renderImage()}
+        {/* Tier badge on image - all tiers show badges */}
+        {item.tier && (
+          <div className="absolute top-2 left-2">
+            <TierBadge tier={item.tier} variant="compact" />
+          </div>
+        )}
       </div>
 
       {/* Content */}

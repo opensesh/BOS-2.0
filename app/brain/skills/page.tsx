@@ -16,12 +16,8 @@ const skillFiles = [
   { id: 'artifacts-builder', label: 'Artifacts Builder', file: 'SKILL.md' },
   { id: 'brand-guidelines', label: 'Brand Guidelines', file: 'SKILL.md' },
   { id: 'canvas-design', label: 'Canvas Design', file: 'SKILL.md' },
-  { id: 'gif-creator', label: 'GIF Creator', file: 'SKILL.md' },
-  { id: 'internal-comms', label: 'Internal Comms', file: 'SKILL.md' },
   { id: 'mcp-builder', label: 'MCP Builder', file: 'SKILL.md' },
-  { id: 'single-cell-rna-qc', label: 'Single Cell RNA QC', file: 'SKILL.md' },
   { id: 'skill-creator', label: 'Skill Creator', file: 'SKILL.md' },
-  { id: 'theme-factory', label: 'Theme Factory', file: 'SKILL.md' },
 ];
 
 function SkillsContent() {

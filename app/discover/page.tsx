@@ -3,7 +3,8 @@
 import React, { useState, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { DiscoverLayout } from '@/components/discover/DiscoverLayout';
-import { TieredNewsDisplay } from '@/components/discover/TieredNewsDisplay';
+import { DiscoverHeader } from '@/components/discover/DiscoverHeader';
+import { CardGrid } from '@/components/discover/CardGrid';
 import { InspirationAccordion } from '@/components/discover/InspirationAccordion';
 import { WidgetPanel } from '@/components/discover/WidgetPanel';
 import { useDiscoverData } from '@/hooks/useDiscoverData';
@@ -12,13 +13,16 @@ import { SourcesDrawer } from '@/components/chat/SourcesDrawer';
 import { SavedArticlesDrawer, SavedArticle } from '@/components/discover/SavedArticlesDrawer';
 import { SourceInfo } from '@/components/chat/AnswerView';
 import { NewsCardData } from '@/types';
-import { Newspaper, Lightbulb, Bookmark } from 'lucide-react';
 
 type MainTabType = 'News' | 'Inspiration';
+type NewsTypeOption = 'all' | 'ai' | 'design' | 'tech' | 'finance';
+type InspirationTypeOption = 'all' | 'short-form' | 'long-form' | 'blog';
 
 export default function DiscoverPage() {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState<MainTabType>('News');
+  const [activeNewsType, setActiveNewsType] = useState<NewsTypeOption>('all');
+  const [activeInspirationType, setActiveInspirationType] = useState<InspirationTypeOption>('all');
   
   // Source Drawer State
   const [isSourcesDrawerOpen, setIsSourcesDrawerOpen] = useState(false);
@@ -31,8 +35,48 @@ export default function DiscoverPage() {
   
   const { newsData, inspirationData, loading, error } = useDiscoverData();
 
-  // Combine all news data
-  const allNewsItems = [...newsData.weeklyUpdate, ...newsData.monthlyOutlook];
+  // Get current type based on main tab
+  const currentType = activeTab === 'News' 
+    ? activeNewsType 
+    : activeInspirationType;
+
+  // Get cards based on active tab and type
+  const getCurrentCards = () => {
+    if (activeTab === 'News') {
+      // Combine all news data and sort by published date (newest first)
+      const allNews = [...newsData.weeklyUpdate, ...newsData.monthlyOutlook];
+      // Sort by timestamp (most recent first)
+      allNews.sort((a, b) => {
+        const dateA = new Date(a.publishedAt).getTime();
+        const dateB = new Date(b.publishedAt).getTime();
+        return dateB - dateA;
+      });
+      // In the future, filter by topic (ai, design, tech, finance)
+      // For now, return all
+      return allNews;
+    } else {
+      // Filter inspiration by type
+      switch (activeInspirationType) {
+        case 'short-form':
+          return inspirationData.shortForm;
+        case 'long-form':
+          return inspirationData.longForm;
+        case 'blog':
+          return inspirationData.blog;
+        case 'all':
+        default:
+          return [...inspirationData.shortForm, ...inspirationData.longForm, ...inspirationData.blog];
+      }
+    }
+  };
+
+  const handleTypeChange = (type: NewsTypeOption | InspirationTypeOption) => {
+    if (activeTab === 'News') {
+      setActiveNewsType(type as NewsTypeOption);
+    } else {
+      setActiveInspirationType(type as InspirationTypeOption);
+    }
+  };
 
   const handleOpenSources = (sources: SourceInfo[]) => {
     setActiveSources(sources);
@@ -42,6 +86,7 @@ export default function DiscoverPage() {
   // Handle saving/unsaving articles
   const handleSaveArticle = useCallback((item: NewsCardData, isSaved: boolean) => {
     if (isSaved) {
+      // Add to saved
       const savedArticle: SavedArticle = {
         id: item.id,
         title: item.title,
@@ -57,6 +102,7 @@ export default function DiscoverPage() {
       setSavedArticles(prev => [savedArticle, ...prev]);
       setSavedArticleIds(prev => new Set([...prev, item.id]));
     } else {
+      // Remove from saved
       setSavedArticles(prev => prev.filter(a => a.id !== item.id));
       setSavedArticleIds(prev => {
         const newSet = new Set(prev);
@@ -80,58 +126,21 @@ export default function DiscoverPage() {
     router.push(`/discover/${slug}`);
   }, [router]);
 
+  const currentCards = getCurrentCards();
+
   return (
     <div className="flex h-screen bg-os-bg-dark dark:bg-os-bg-dark text-os-text-primary-dark font-sans">
       <Sidebar />
       <DiscoverLayout>
-        {/* Header with tabs */}
-        <div className="flex flex-col gap-6 mb-8">
-          {/* Tab navigation */}
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-1 p-1 bg-os-surface-dark/30 rounded-xl">
-              <button
-                onClick={() => setActiveTab('News')}
-                className={`
-                  flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm transition-all
-                  ${activeTab === 'News' 
-                    ? 'bg-brand-vanilla text-brand-charcoal' 
-                    : 'text-os-text-secondary-dark hover:text-brand-vanilla'
-                  }
-                `}
-              >
-                <Newspaper className="w-4 h-4" />
-                News
-              </button>
-              <button
-                onClick={() => setActiveTab('Inspiration')}
-                className={`
-                  flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm transition-all
-                  ${activeTab === 'Inspiration' 
-                    ? 'bg-brand-vanilla text-brand-charcoal' 
-                    : 'text-os-text-secondary-dark hover:text-brand-vanilla'
-                  }
-                `}
-              >
-                <Lightbulb className="w-4 h-4" />
-                Inspiration
-              </button>
-            </div>
-
-            {/* Saved articles button */}
-            <button
-              onClick={() => setIsSavedDrawerOpen(true)}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg border border-os-border-dark/50 text-os-text-secondary-dark hover:text-brand-vanilla hover:border-os-border-dark transition-colors"
-            >
-              <Bookmark className="w-4 h-4" />
-              <span className="text-sm">Saved</span>
-              {savedArticles.length > 0 && (
-                <span className="px-1.5 py-0.5 rounded-full bg-brand-aperol text-white text-xs font-medium">
-                  {savedArticles.length}
-                </span>
-              )}
-            </button>
-          </div>
-        </div>
+        {/* Header with tabs - RESTORED ORIGINAL */}
+        <DiscoverHeader 
+          activeTab={activeTab} 
+          activeType={currentType}
+          onTabChange={setActiveTab}
+          onTypeChange={handleTypeChange}
+          savedCount={savedArticles.length}
+          onOpenSaved={() => setIsSavedDrawerOpen(true)}
+        />
 
         {/* Main content with widgets */}
         <div className="flex flex-col lg:flex-row gap-8">
@@ -139,7 +148,7 @@ export default function DiscoverPage() {
           <div className="flex-1 min-w-0">
             {loading && (
               <div className="text-center py-20 text-os-text-secondary-dark">
-                <div className="w-8 h-8 border-2 border-os-text-secondary-dark border-t-brand-aperol rounded-full animate-spin mx-auto mb-4" />
+                <div className="w-8 h-8 border-2 border-os-text-secondary-dark border-t-transparent rounded-full animate-spin mx-auto mb-4" />
                 Loading...
               </div>
             )}
@@ -151,12 +160,12 @@ export default function DiscoverPage() {
             )}
 
             {!loading && !error && activeTab === 'News' && (
-              <TieredNewsDisplay
-                items={allNewsItems}
+              <CardGrid 
+                cards={currentCards} 
+                type="news"
                 onOpenSources={handleOpenSources}
                 onSaveArticle={handleSaveArticle}
                 savedArticleIds={savedArticleIds}
-                lastUpdated={new Date().toISOString()}
               />
             )}
 

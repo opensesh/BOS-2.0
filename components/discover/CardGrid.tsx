@@ -1,5 +1,5 @@
 import React from 'react';
-import { TieredNewsCard } from './TieredNewsCard';
+import { NewsCard } from './NewsCard';
 import { InspirationPromptCard } from './InspirationPromptCard';
 import { NewsCardData, InspirationCardData } from '@/types';
 import { SourceInfo } from '@/components/chat/AnswerView';
@@ -10,13 +10,6 @@ interface CardGridProps {
   onOpenSources?: (sources: SourceInfo[]) => void;
   onSaveArticle?: (item: NewsCardData, isSaved: boolean) => void;
   savedArticleIds?: Set<string>;
-}
-
-/**
- * Helper to check if a card is a NewsCardData (has tier field)
- */
-function isNewsCard(card: NewsCardData | InspirationCardData): card is NewsCardData {
-  return 'tier' in card;
 }
 
 export function CardGrid({ 
@@ -53,7 +46,7 @@ export function CardGrid({
           {/* Featured card - horizontal layout */}
           <div className="w-full">
             {type === 'news' ? (
-              <TieredNewsCard 
+              <NewsCard 
                 item={group.featured as NewsCardData} 
                 variant="featured" 
                 onOpenSources={onOpenSources}
@@ -74,7 +67,7 @@ export function CardGrid({
               {group.compact.map((card, cardIndex) => (
                 <div key={cardIndex}>
                   {type === 'news' ? (
-                    <TieredNewsCard 
+                    <NewsCard 
                       item={card as NewsCardData} 
                       variant="compact" 
                       onOpenSources={onOpenSources}

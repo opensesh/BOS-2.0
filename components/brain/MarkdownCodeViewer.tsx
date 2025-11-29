@@ -43,7 +43,7 @@ export function MarkdownCodeViewer({ filename, content, className = '', maxLines
     <div className={`rounded-xl overflow-hidden bg-brand-charcoal border border-os-border-dark ${className}`}>
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-3 bg-os-surface-dark/50 border-b border-os-border-dark">
-        <span className="text-sm font-mono text-os-text-secondary-dark">
+        <span className="text-sm font-sans text-os-text-secondary-dark">
           {filename}
         </span>
         <div className="flex items-center gap-2">
@@ -73,7 +73,7 @@ export function MarkdownCodeViewer({ filename, content, className = '', maxLines
         className="overflow-auto custom-scrollbar"
         style={{ maxHeight: `${maxHeight}px` }}
       >
-        <div className="p-4 font-mono text-sm">
+        <div className="p-4 font-sans text-sm">
           {lines.map((line, index) => (
             <div key={index} className="flex leading-6">
               <span className="w-10 flex-shrink-0 text-right pr-4 text-os-text-secondary-dark/50 select-none">
