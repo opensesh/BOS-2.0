@@ -62,10 +62,9 @@ Design agency that delivers world-class work at a fraction of typical agency cos
 3. Modern Craft meets Nostalgia - Vintage-meets-modern aesthetic
 
 **Revenue Model:**
-- Client projects: $5K-$50K
-- Monthly retainers: $1K-$4K
-- Digital assets: Free + premium ($1-$25)
-- Building toward $157K revenue in first year
+- Client projects
+- Monthly retainers
+- Digital assets: Free + premium
 
 ---
 
