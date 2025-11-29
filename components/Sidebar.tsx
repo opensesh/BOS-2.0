@@ -10,17 +10,15 @@ import {
   ScanFace,
   BrainCog,
   Bell,
-  Menu,
-  X,
   Plus,
   ArrowUpRight,
   MessageSquare,
 } from 'lucide-react';
 import { NavigationDrawer } from './NavigationDrawer';
-import { Brandmark } from './Brandmark';
 import { BrandSelector } from './BrandSelector';
-import { MobileBrandSelector } from './MobileBrandSelector';
+import { MobileHeader } from './MobileHeader';
 import { useChatContext } from '@/lib/chat-context';
+import { useMobileMenu } from '@/lib/mobile-menu-context';
 
 const navItems = [
   { label: 'Home', href: '/', icon: Home },
@@ -32,7 +30,7 @@ const navItems = [
 
 export function Sidebar() {
   const pathname = usePathname();
-  const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const { isMobileMenuOpen, closeMobileMenu } = useMobileMenu();
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const railRef = useRef<HTMLElement>(null);
   const { chatHistory, triggerChatReset } = useChatContext();
@@ -43,36 +41,26 @@ export function Sidebar() {
 
   const handleNewChat = useCallback(() => {
     triggerChatReset();
-    setIsMobileOpen(false);
-  }, [triggerChatReset]);
+    closeMobileMenu();
+  }, [triggerChatReset, closeMobileMenu]);
 
   const handleHomeClick = useCallback(() => {
     if (pathname === '/') {
       triggerChatReset();
     }
-    setIsMobileOpen(false);
-  }, [pathname, triggerChatReset]);
+    closeMobileMenu();
+  }, [pathname, triggerChatReset, closeMobileMenu]);
 
   return (
     <>
-      {/* Mobile Menu Button - Right Side */}
-      <button
-        onClick={() => setIsMobileOpen(!isMobileOpen)}
-        className="fixed top-4 right-4 z-50 lg:hidden p-2 rounded-lg bg-os-surface-dark hover:bg-os-border-dark transition-colors"
-        aria-label="Toggle menu"
-      >
-        {isMobileOpen ? (
-          <X className="w-6 h-6 text-os-text-primary-dark" />
-        ) : (
-          <Menu className="w-6 h-6 text-os-text-primary-dark" />
-        )}
-      </button>
+      {/* Global Mobile Header - sticky header with brand selector and hamburger */}
+      <MobileHeader onBrandClick={handleHomeClick} />
 
-      {/* Mobile Overlay */}
-      {isMobileOpen && (
+      {/* Mobile Overlay - starts below the header */}
+      {isMobileMenuOpen && (
         <div
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
-          onClick={() => setIsMobileOpen(false)}
+          className="fixed inset-0 top-14 bg-black/50 z-40 lg:hidden"
+          onClick={closeMobileMenu}
         />
       )}
 
@@ -127,7 +115,7 @@ export function Sidebar() {
                 <Link
                   data-nav-item={item.label}
                   href={item.href}
-                  onClick={item.href === '/' ? handleHomeClick : () => setIsMobileOpen(false)}
+                  onClick={item.href === '/' ? handleHomeClick : closeMobileMenu}
                   className={`
                     w-full flex flex-col items-center justify-center
                     py-2 px-2
@@ -193,22 +181,17 @@ export function Sidebar() {
         </div>
       </aside>
 
-      {/* Mobile Drawer - Opens from Right */}
+      {/* Mobile Drawer - Opens from Right, positioned below sticky header */}
       <aside
         className={`
-          fixed lg:hidden inset-y-0 right-0 z-40
+          fixed lg:hidden top-14 bottom-0 right-0 z-40
           w-80 max-w-[85vw]
           bg-os-bg-darker border-l border-os-border-dark
           flex flex-col
           transition-transform duration-300 ease-in-out
-          ${isMobileOpen ? 'translate-x-0' : 'translate-x-full'}
+          ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}
         `}
       >
-        {/* Mobile Header with Brand Selector */}
-        <div className="h-12 flex items-center justify-between px-4 border-b border-os-border-dark">
-          <MobileBrandSelector onClose={() => setIsMobileOpen(false)} />
-        </div>
-
         {/* Mobile Navigation Content */}
         <div className="flex-1 overflow-y-auto">
           {/* New Chat Button */}
@@ -257,7 +240,7 @@ export function Sidebar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  onClick={item.href === '/' ? handleHomeClick : () => setIsMobileOpen(false)}
+                  onClick={item.href === '/' ? handleHomeClick : closeMobileMenu}
                   className={`
                     flex items-center space-x-3 px-3 py-3 rounded-lg
                     transition-all duration-200

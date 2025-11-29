@@ -18,7 +18,7 @@ export function BrandHubLayout({
   showBackButton = true 
 }: BrandHubLayoutProps) {
   return (
-    <div className="flex-1 flex flex-col min-w-0 overflow-y-auto custom-scrollbar bg-os-bg-dark">
+    <div className="flex-1 flex flex-col min-w-0 overflow-y-auto custom-scrollbar bg-os-bg-dark pt-14 lg:pt-0">
       <div className="w-full max-w-6xl mx-auto px-6 py-8 md:px-12 md:py-12">
         {/* Back Button */}
         {showBackButton && (

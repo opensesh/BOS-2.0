@@ -178,7 +178,7 @@ export default function BrainPage() {
     <div className="flex h-screen bg-os-bg-dark text-os-text-primary-dark font-sans">
       <Sidebar />
       
-      <main className="flex-1 flex flex-col overflow-hidden">
+      <main className="flex-1 flex flex-col overflow-hidden pt-14 lg:pt-0">
         <div className="flex-1 overflow-y-auto custom-scrollbar">
           <div className="w-full max-w-6xl mx-auto px-6 py-8 md:px-12 md:py-12">
             {/* Page Header */}

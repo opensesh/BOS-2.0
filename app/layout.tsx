@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/lib/theme-provider';
 import { ChatProvider } from '@/lib/chat-context';
+import { MobileMenuProvider } from '@/lib/mobile-menu-context';
 import { VercelAnalytics } from '@/components/VercelAnalytics';
 
 const inter = Inter({
@@ -30,7 +31,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <ChatProvider>
-            {children}
+            <MobileMenuProvider>
+              {children}
+            </MobileMenuProvider>
           </ChatProvider>
         </ThemeProvider>
         <VercelAnalytics />

@@ -18,6 +18,7 @@ interface RelatedArticle {
 interface DiscoverMoreProps {
   currentSlug: string;
   relatedQueries?: string[];
+  relatedArticles?: Array<{ slug: string; title: string }>;
 }
 
 interface OGData {
@@ -28,7 +29,7 @@ interface OGData {
   favicon: string | null;
 }
 
-export function DiscoverMore({ currentSlug, relatedQueries = [] }: DiscoverMoreProps) {
+export function DiscoverMore({ currentSlug, relatedQueries = [], relatedArticles = [] }: DiscoverMoreProps) {
   const [articles, setArticles] = useState<RelatedArticle[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -36,6 +37,18 @@ export function DiscoverMore({ currentSlug, relatedQueries = [] }: DiscoverMoreP
     const loadRelatedArticles = async () => {
       setLoading(true);
       const foundArticles: RelatedArticle[] = [];
+
+      // If relatedArticles provided from pre-generated data, use those first
+      if (relatedArticles.length > 0) {
+        for (const ra of relatedArticles) {
+          foundArticles.push({
+            id: `related-${ra.slug}`,
+            slug: ra.slug,
+            title: ra.title,
+            sources: [],
+          });
+        }
+      }
 
       try {
         // Load from inspiration data (weekly ideas)
@@ -113,9 +126,13 @@ export function DiscoverMore({ currentSlug, relatedQueries = [] }: DiscoverMoreP
           }
         }
 
-        // Shuffle and take first 4
+        // Shuffle and take first 4 (but prioritize related articles if pre-loaded)
         const shuffled = foundArticles.sort(() => Math.random() - 0.5);
-        setArticles(shuffled.slice(0, 4));
+        // If we have pre-generated related articles, put them first
+        const preGenerated = shuffled.filter(a => a.id.startsWith('related-'));
+        const others = shuffled.filter(a => !a.id.startsWith('related-'));
+        const combined = [...preGenerated, ...others];
+        setArticles(combined.slice(0, 4));
       } catch (error) {
         console.error('Error loading related articles:', error);
       }
@@ -124,7 +141,7 @@ export function DiscoverMore({ currentSlug, relatedQueries = [] }: DiscoverMoreP
     };
 
     loadRelatedArticles();
-  }, [currentSlug]);
+  }, [currentSlug, relatedArticles]);
 
   if (loading) {
     return (

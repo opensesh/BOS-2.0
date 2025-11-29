@@ -73,7 +73,7 @@ export function StickyArticleHeader({ title, titleRef }: StickyArticleHeaderProp
   const truncatedTitle = title.length > 50 ? title.substring(0, 50) + '...' : title;
 
   return (
-    <header className="sticky top-0 z-40 bg-os-bg-dark/95 backdrop-blur-sm border-b border-os-border-dark/50">
+    <header className="sticky top-14 lg:top-0 z-30 bg-os-bg-dark/95 backdrop-blur-sm border-b border-os-border-dark/50">
       <div className="flex items-center justify-between px-4 py-3 max-w-6xl mx-auto">
         {/* Left: Back button */}
         <Link
@@ -103,8 +103,8 @@ export function StickyArticleHeader({ title, titleRef }: StickyArticleHeaderProp
 
         {/* Right: Actions */}
         <div className="flex items-center gap-1">
-          {/* Overflow menu */}
-          <div className="relative" ref={overflowRef}>
+          {/* Overflow menu - hidden on mobile to save space */}
+          <div className="relative hidden sm:block" ref={overflowRef}>
             <button
               onClick={() => setShowOverflowMenu(!showOverflowMenu)}
               className="p-2 rounded-lg text-os-text-secondary-dark hover:text-brand-vanilla hover:bg-os-surface-dark transition-colors"

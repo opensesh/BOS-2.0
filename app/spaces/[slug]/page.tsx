@@ -95,7 +95,7 @@ export default function SpacePage() {
     <div className="flex h-screen bg-os-bg-dark dark:bg-os-bg-dark text-os-text-primary-dark font-sans overflow-hidden">
       <Sidebar />
       
-      <main className="flex-1 flex overflow-hidden relative">
+      <main className="flex-1 flex overflow-hidden relative pt-14 lg:pt-0">
         <div className="flex-1 overflow-y-auto custom-scrollbar">
           <div className="w-full max-w-6xl mx-auto px-6 py-8 md:px-12 md:py-12">
             {/* Back Button */}

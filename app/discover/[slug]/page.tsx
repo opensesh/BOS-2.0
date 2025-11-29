@@ -5,132 +5,64 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import { ArrowLeft } from 'lucide-react';
-import { NEWS_ITEMS } from '@/lib/mock-data';
 import { Sidebar } from '@/components/Sidebar';
 import { StickyArticleHeader } from '@/components/discover/article/StickyArticleHeader';
-import { ArticleHeader } from '@/components/discover/article/ArticleHeader';
-import { ArticleSummary } from '@/components/discover/article/ArticleSummary';
 import { SourceCards } from '@/components/discover/article/SourceCards';
 import { ArticleSidebar } from '@/components/discover/article/ArticleSidebar';
 import { AskFollowUp } from '@/components/discover/article/AskFollowUp';
 import { DiscoverMore } from '@/components/discover/article/DiscoverMore';
-import {
-  Source,
-  NewsData,
-  InspirationData,
-  ArticleSection,
-  ParagraphSource,
-  EnrichedArticleData,
-} from '@/types';
-
-interface ArticleData {
-  title: string;
-  summary: string;
-  content: string[];
-  sources: Source[];
-  publishedAt: string;
-  imageUrl?: string;
-  summaryPoints?: string[];
-  category?: string;
-}
+import { InlineSourceChips, SourceGroup } from '@/components/discover/article/InlineSourceBadge';
+import type { DiscoverArticle, Source } from '@/types';
 
 export default function ArticlePage() {
   const params = useParams();
   const slug = params.slug as string;
   const titleRef = useRef<HTMLHeadingElement>(null);
   
-  // Single loading state - page shows loading until ALL content is ready
   const [isLoading, setIsLoading] = useState(true);
-  const [articleData, setArticleData] = useState<ArticleData | null>(null);
-  const [enrichedSections, setEnrichedSections] = useState<ArticleSection[] | null>(null);
-  const [enrichedSources, setEnrichedSources] = useState<ParagraphSource[]>([]);
-  const [relatedQueries, setRelatedQueries] = useState<string[]>([]);
-  const [ogImage, setOgImage] = useState<string | null>(null);
+  const [article, setArticle] = useState<DiscoverArticle | null>(null);
+  const [notFound, setNotFound] = useState(false);
 
-  // Load everything at once
+  // Load article from pre-generated JSON (instant load)
   useEffect(() => {
-    const loadAllContent = async () => {
+    const loadArticle = async () => {
       setIsLoading(true);
+      setNotFound(false);
 
-      // Step 1: Load base article data
-      const baseData = await loadBaseArticleData(slug);
-      
-      if (!baseData) {
-        setArticleData(null);
-        setIsLoading(false);
-        return;
+      try {
+        // Try to load pre-generated article JSON
+        const response = await fetch(`/data/discover/articles/${slug}.json`);
+        
+        if (response.ok) {
+          const data: DiscoverArticle = await response.json();
+          setArticle(data);
+          setIsLoading(false);
+          return;
+        }
+      } catch (error) {
+        console.log('Pre-generated article not found, trying legacy sources...');
       }
 
-      setArticleData(baseData.article);
-      setOgImage(baseData.article.imageUrl || null);
-
-      // Step 2: Fetch OG image if needed (in parallel with enrichment)
-      const ogImagePromise = baseData.article.imageUrl 
-        ? Promise.resolve(baseData.article.imageUrl)
-        : fetchOgImage(baseData.article.sources[0]?.url);
-
-      // Step 3: Enrich with Perplexity (in parallel)
-      const enrichPromise = enrichArticle(baseData.article.title, baseData.article.sources);
-
-      // Wait for both to complete
-      const [fetchedOgImage, enrichedData] = await Promise.all([
-        ogImagePromise,
-        enrichPromise,
-      ]);
-
-      if (fetchedOgImage) {
-        setOgImage(fetchedOgImage);
-      }
-
-      if (enrichedData) {
-        setEnrichedSections(enrichedData.sections);
-        // Merge enriched sources with existing sources for more coverage
-        const mergedSources = [...enrichedData.allSources];
-        baseData.article.sources.forEach((s) => {
-          if (!mergedSources.find((ms) => ms.url === s.url)) {
-            mergedSources.push({
-              id: s.id,
-              name: s.name,
-              url: s.url,
-              favicon: `https://www.google.com/s2/favicons?domain=${new URL(s.url).hostname}&sz=32`,
-            });
-          }
-        });
-        setEnrichedSources(mergedSources);
-        setRelatedQueries(enrichedData.relatedQueries);
-      }
-
+      // Article not found in pre-generated data
+      setNotFound(true);
       setIsLoading(false);
     };
 
-    loadAllContent();
+    loadArticle();
   }, [slug]);
 
-  // Generate summary points from enriched sections
-  const getSummaryPoints = (): string[] => {
-    if (enrichedSections && enrichedSections.length > 0) {
-      return enrichedSections
-        .filter((s) => s.title)
-        .map((s) => s.title!)
-        .slice(0, 4);
-    }
-    return articleData?.summaryPoints || [];
+  // Get sources for SourceCards component
+  const getSourcesForCards = (): Source[] => {
+    if (!article) return [];
+    return article.sourceCards.map(sc => ({
+      id: sc.id,
+      name: sc.name,
+      url: sc.url,
+      logo: sc.favicon,
+    }));
   };
 
-  // Get all sources for SourceCards
-  const getAllSources = (): Source[] => {
-    if (enrichedSources.length > 0) {
-      return enrichedSources.map((s) => ({
-        id: s.id,
-        name: s.name,
-        url: s.url,
-        logo: s.favicon,
-      }));
-    }
-    return articleData?.sources || [];
-  };
-
-  // Loading state - single loading screen
+  // Loading state
   if (isLoading) {
     return (
       <div className="flex h-screen bg-os-bg-dark text-os-text-primary-dark">
@@ -146,7 +78,7 @@ export default function ArticlePage() {
   }
 
   // Not found state
-  if (!articleData) {
+  if (notFound || !article) {
     return (
       <div className="flex h-screen bg-os-bg-dark text-os-text-primary-dark items-center justify-center">
         <div className="text-center">
@@ -173,8 +105,8 @@ export default function ArticlePage() {
       <Sidebar />
 
       <main className="flex-1 flex flex-col overflow-hidden">
-        {/* Sticky Header - Title fades in when scrolled past main title */}
-        <StickyArticleHeader title={articleData.title} titleRef={titleRef} />
+        {/* Sticky Header */}
+        <StickyArticleHeader title={article.title} titleRef={titleRef} />
 
         {/* Scrollable content */}
         <div className="flex-1 overflow-y-auto custom-scrollbar">
@@ -182,49 +114,110 @@ export default function ArticlePage() {
             <div className="flex flex-col lg:flex-row gap-12">
               {/* Main Content */}
               <div className="flex-1 min-w-0">
-                {/* Article Header with ref for scroll tracking */}
+                {/* Article Header */}
                 <div className="flex flex-col gap-4 mb-8">
                   <h1 
                     ref={titleRef}
                     className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-brand-vanilla leading-tight"
                   >
-                    {articleData.title}
+                    {article.title}
                   </h1>
                   <div className="flex items-center gap-4 text-sm text-os-text-secondary-dark">
                     <span className="flex items-center gap-1.5">
-                      Published {articleData.publishedAt}
+                      Published {formatTimestamp(article.publishedAt)}
                     </span>
                     <span className="text-os-border-dark">•</span>
-                    <span>{getAllSources().length} {getAllSources().length === 1 ? 'source' : 'sources'}</span>
+                    <span>{article.totalSources} sources</span>
                   </div>
                 </div>
 
-                {/* Article Content */}
-                <ArticleSummary
-                  sections={enrichedSections || undefined}
-                  content={!enrichedSections ? articleData.content : undefined}
-                  sources={!enrichedSections ? articleData.sources : undefined}
-                  dividerImageUrl={ogImage || undefined}
-                  imageAttribution={ogImage ? getDomainFromUrl(articleData.sources[0]?.url) : undefined}
-                />
+                {/* Article Sections */}
+                <div className="flex flex-col gap-8">
+                  {article.sections.map((section, sectionIdx) => (
+                    <section key={section.id} className="flex flex-col gap-5">
+                      {/* Section sub-heading (h3, smaller size) */}
+                      {section.title && (
+                        <h3 className="text-lg md:text-xl font-display font-semibold text-brand-vanilla mt-4">
+                          {section.title}
+                        </h3>
+                      )}
+
+                      {/* Paragraphs with inline citations */}
+                      {section.paragraphs.map((paragraph) => {
+                        // Convert citations to SourceGroup format
+                        const sourceGroups: SourceGroup[] = paragraph.citations.map(citation => ({
+                          primarySource: {
+                            id: citation.primarySource.id,
+                            name: citation.primarySource.name,
+                            url: citation.primarySource.url,
+                            favicon: citation.primarySource.favicon,
+                          },
+                          additionalSources: citation.additionalSources.map(s => ({
+                            id: s.id,
+                            name: s.name,
+                            url: s.url,
+                            favicon: s.favicon,
+                          })),
+                          isVideo: citation.primarySource.url.includes('youtube.com') || 
+                                   citation.primarySource.url.includes('youtu.be'),
+                        }));
+
+                        return (
+                          <p 
+                            key={paragraph.id} 
+                            className="text-sm md:text-base leading-relaxed text-os-text-primary-dark/90"
+                          >
+                            {paragraph.content}
+                            {sourceGroups.length > 0 && (
+                              <InlineSourceChips sourceGroups={sourceGroups} />
+                            )}
+                          </p>
+                        );
+                      })}
+
+                      {/* Hero image after intro section */}
+                      {sectionIdx === 0 && article.heroImage && (
+                        <div className="relative w-full my-4">
+                          <div className="relative aspect-[16/9] overflow-hidden rounded-xl bg-os-surface-dark">
+                            <Image 
+                              src={article.heroImage.url} 
+                              alt={article.title}
+                              fill 
+                              className="object-cover" 
+                              unoptimized 
+                            />
+                          </div>
+                          {article.heroImage.attribution && (
+                            <p className="text-xs text-os-text-secondary-dark mt-2 text-right font-mono">
+                              {article.heroImage.attribution}
+                            </p>
+                          )}
+                        </div>
+                      )}
+                    </section>
+                  ))}
+                </div>
 
                 {/* Source Cards */}
-                <SourceCards sources={getAllSources()} />
+                <SourceCards sources={getSourcesForCards()} totalCount={article.totalSources} />
 
                 {/* Discover More Section */}
-                <DiscoverMore currentSlug={slug} relatedQueries={relatedQueries} />
+                <DiscoverMore 
+                  currentSlug={slug} 
+                  relatedArticles={article.relatedArticles} 
+                />
 
                 {/* Bottom padding for pinned chat input */}
                 <div className="h-32" />
               </div>
 
-              {/* Right Sidebar - Summary Points */}
+              {/* Right Sidebar - Section Navigation */}
               <div className="hidden lg:block w-64 shrink-0">
                 <div className="sticky top-8">
                   <h3 className="text-xs font-bold uppercase tracking-wider text-os-text-secondary-dark mb-4">
-                    {enrichedSections ? 'Sections' : 'Quick Summary'}
+                    Sections
                   </h3>
-                  <ArticleSidebar summaryPoints={getSummaryPoints()} />
+                  <ArticleSidebar summaryPoints={article.sidebarSections} />
                 </div>
               </div>
             </div>
@@ -233,215 +226,13 @@ export default function ArticlePage() {
 
         {/* Pinned Follow-up Chat Input */}
         <AskFollowUp 
-          articleTitle={articleData.title} 
+          articleTitle={article.title} 
           articleSlug={slug}
-          articleImage={ogImage || undefined}
+          articleImage={article.heroImage?.url}
         />
       </main>
     </div>
   );
-}
-
-// Helper: Load base article data from mock/JSON files
-async function loadBaseArticleData(slug: string): Promise<{ article: ArticleData } | null> {
-  // First check mock data
-  const mockItem = NEWS_ITEMS.find((i) => i.slug === slug);
-
-  if (mockItem) {
-    const sources: Source[] = mockItem.sources.map((s, idx) => ({
-      id: s.id || `source-${idx}`,
-      name: s.name,
-      url: s.url,
-      logo: s.logo,
-    }));
-
-    const summaryPoints = mockItem.content.slice(0, 3).map((p) => {
-      const firstSentence = p.split('.')[0];
-      return firstSentence.length > 100
-        ? firstSentence.substring(0, 100) + '...'
-        : firstSentence + '.';
-    });
-
-    return {
-      article: {
-        title: mockItem.title,
-        summary: mockItem.summary,
-        content: mockItem.content,
-        sources,
-        publishedAt: mockItem.publishedAt,
-        imageUrl: mockItem.imageUrl,
-        summaryPoints,
-      },
-    };
-  }
-
-  // Try JSON data files
-  const newsTypes = ['weekly-update', 'monthly-outlook'];
-  const inspirationTypes = ['short-form', 'long-form', 'blog'];
-
-  // Try news data
-  for (const type of newsTypes) {
-    try {
-      const response = await fetch(`/data/news/${type}/latest.json`);
-      if (response.ok) {
-        const data: NewsData = await response.json();
-        if (data.updates) {
-          for (const update of data.updates) {
-            const itemSlug = update.title
-              .toLowerCase()
-              .replace(/[^a-z0-9]+/g, '-')
-              .replace(/^-+|-+$/g, '')
-              .substring(0, 50);
-
-            if (itemSlug === slug) {
-              const sources: Source[] = update.sources.map((s, idx) => ({
-                id: `source-${idx}`,
-                name: s.name,
-                url: s.url,
-              }));
-
-              const content = generateContentFromTitle(update.title);
-              const summaryPoints = content.slice(0, 3).map((p) => {
-                const firstSentence = p.split('.')[0];
-                return firstSentence.length > 80
-                  ? firstSentence.substring(0, 80) + '...'
-                  : firstSentence + '.';
-              });
-
-              return {
-                article: {
-                  title: update.title,
-                  summary: update.title.substring(0, 200),
-                  content,
-                  sources,
-                  publishedAt: formatTimestamp(update.timestamp),
-                  summaryPoints,
-                  category: type,
-                },
-              };
-            }
-          }
-        }
-      }
-    } catch (e) {
-      console.error(`Error loading ${type} data:`, e);
-    }
-  }
-
-  // Try inspiration data
-  for (const type of inspirationTypes) {
-    try {
-      const response = await fetch(`/data/weekly-ideas/${type}/latest.json`);
-      if (response.ok) {
-        const data: InspirationData = await response.json();
-        if (data.ideas) {
-          for (const idea of data.ideas) {
-            const itemSlug = idea.title
-              .toLowerCase()
-              .replace(/[^a-z0-9]+/g, '-')
-              .replace(/^-+|-+$/g, '')
-              .substring(0, 50);
-
-            if (itemSlug === slug) {
-              const sources: Source[] = idea.sources.map((s, idx) => ({
-                id: `source-${idx}`,
-                name: s.name,
-                url: s.url,
-              }));
-
-              const content = generateContentFromTitle(idea.title, idea.description);
-              const summaryPoints = content.slice(0, 3).map((p) => {
-                const firstSentence = p.split('.')[0];
-                return firstSentence.length > 80
-                  ? firstSentence.substring(0, 80) + '...'
-                  : firstSentence + '.';
-              });
-
-              return {
-                article: {
-                  title: idea.title,
-                  summary: idea.description,
-                  content,
-                  sources,
-                  publishedAt: formatTimestamp(data.date),
-                  summaryPoints,
-                  category: type,
-                },
-              };
-            }
-          }
-        }
-      }
-    } catch (e) {
-      console.error(`Error loading ${type} data:`, e);
-    }
-  }
-
-  return null;
-}
-
-// Helper: Fetch OG image from source URL
-async function fetchOgImage(sourceUrl?: string): Promise<string | null> {
-  if (!sourceUrl || sourceUrl === '#') return null;
-
-  try {
-    const response = await fetch(`/api/og-image?url=${encodeURIComponent(sourceUrl)}`);
-    if (response.ok) {
-      const data = await response.json();
-      return data.image || null;
-    }
-  } catch (error) {
-    console.error('Error fetching OG image:', error);
-  }
-  return null;
-}
-
-// Helper: Enrich article with Perplexity
-async function enrichArticle(
-  title: string,
-  sources: Source[]
-): Promise<EnrichedArticleData | null> {
-  try {
-    const response = await fetch('/api/article-enrich', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        title,
-        existingSources: sources.map((s) => ({ name: s.name, url: s.url })),
-      }),
-    });
-
-    if (response.ok) {
-      const data: EnrichedArticleData = await response.json();
-      if (data.sections && data.sections.length > 0) {
-        return data;
-      }
-    }
-  } catch (error) {
-    console.error('Error enriching article:', error);
-  }
-  return null;
-}
-
-// Helper: Generate content from title
-function generateContentFromTitle(title: string, description?: string): string[] {
-  const content: string[] = [];
-
-  content.push(
-    title +
-      '. ' +
-      (description || 'This article explores the latest developments and insights in this area.')
-  );
-
-  content.push(
-    'Industry experts have been closely monitoring these developments, noting the potential implications for businesses and consumers alike. The trend reflects broader changes in how technology and design intersect with everyday experiences.'
-  );
-
-  content.push(
-    "As this space continues to evolve, we can expect to see more innovations that push the boundaries of what's possible. Stay tuned for more updates as we continue to track these developments."
-  );
-
-  return content;
 }
 
 // Helper: Format timestamps
@@ -464,15 +255,5 @@ function formatTimestamp(timestamp: string): string {
     }
   } catch {
     return timestamp;
-  }
-}
-
-// Helper: Extract domain from URL
-function getDomainFromUrl(url?: string): string | undefined {
-  if (!url) return undefined;
-  try {
-    return new URL(url).hostname.replace('www.', '');
-  } catch {
-    return undefined;
   }
 }

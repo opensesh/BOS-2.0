@@ -183,7 +183,7 @@ export interface BrandResource {
   createdAt: string;
 }
 
-// Article Enrichment Types
+// Article Enrichment Types (legacy - for backwards compatibility)
 export interface ParagraphSource {
   id: string;
   name: string;
@@ -208,4 +208,120 @@ export interface EnrichedArticleData {
   sections: ArticleSection[];
   relatedQueries: string[];
   allSources: ParagraphSource[];
+}
+
+// ===========================================
+// NEW: Pre-Generated Discover Article Types
+// ===========================================
+
+/**
+ * A single citation chip shown at the end of a paragraph
+ * Displays primary source + additional count (e.g., "techcrunch +2")
+ */
+export interface CitationChip {
+  primarySource: {
+    id: string;
+    name: string;
+    url: string;
+    favicon: string;
+  };
+  additionalCount: number;
+  additionalSources: Array<{
+    id: string;
+    name: string;
+    url: string;
+    favicon: string;
+  }>;
+}
+
+/**
+ * A paragraph with its unique citation chips (2-5 per paragraph)
+ * Each paragraph's sources should be unique across the article
+ */
+export interface DiscoverParagraph {
+  id: string;
+  content: string;
+  citations: CitationChip[];
+}
+
+/**
+ * A section within a discover article
+ * - First section has no title (intro paragraphs)
+ * - Subsequent sections have h3 sub-headings (dynamically generated based on topic)
+ */
+export interface DiscoverSection {
+  id: string;
+  title?: string; // Only for sub-sections (displayed as smaller h3)
+  paragraphs: DiscoverParagraph[];
+}
+
+/**
+ * Source card for the horizontal scroll display
+ */
+export interface SourceCard {
+  id: string;
+  name: string;
+  url: string;
+  favicon: string;
+  title: string;
+  imageUrl?: string;
+}
+
+/**
+ * Complete pre-generated discover article
+ * Loaded directly from JSON - no API calls needed
+ */
+export interface DiscoverArticle {
+  id: string;
+  slug: string;
+  title: string;
+  publishedAt: string;
+  generatedAt: string;
+  totalSources: number;
+  
+  // Content structure: 6+ paragraphs with dynamic sub-headings
+  sections: DiscoverSection[];
+  
+  // Top 5-6 sources for horizontal source cards
+  sourceCards: SourceCard[];
+  
+  // All 40+ sources used in the article
+  allSources: Array<{
+    id: string;
+    name: string;
+    url: string;
+    favicon: string;
+    title?: string;
+  }>;
+  
+  // Hero image (from sources or generated)
+  heroImage?: {
+    url: string;
+    attribution?: string;
+  };
+  
+  // Sub-heading titles for sidebar navigation
+  sidebarSections: string[];
+  
+  // Related article suggestions
+  relatedArticles?: Array<{
+    slug: string;
+    title: string;
+  }>;
+}
+
+/**
+ * Manifest of all available discover articles
+ * Used for listing and navigation
+ */
+export interface DiscoverArticleManifest {
+  generatedAt: string;
+  articles: Array<{
+    slug: string;
+    title: string;
+    publishedAt: string;
+    totalSources: number;
+    heroImageUrl?: string;
+    sidebarSections: string[];
+  }>;
 }

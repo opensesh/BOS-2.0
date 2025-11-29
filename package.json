@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "generate:brand-index": "npx tsx lib/brand-knowledge/generate.ts",
+    "generate:articles": "npx tsx scripts/generate-discover-articles.ts",
     "prebuild": "npm run generate:brand-index"
   },
   "dependencies": {

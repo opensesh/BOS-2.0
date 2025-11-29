@@ -7,6 +7,7 @@ import Image from 'next/image';
 
 interface SourceCardsProps {
   sources: Source[];
+  totalCount?: number; // Total sources (for pre-generated articles with 40+ sources)
 }
 
 interface OGData {
@@ -17,7 +18,8 @@ interface OGData {
   favicon: string | null;
 }
 
-export function SourceCards({ sources }: SourceCardsProps) {
+export function SourceCards({ sources, totalCount }: SourceCardsProps) {
+  const displayCount = totalCount || sources.length;
   const [ogDataMap, setOgDataMap] = useState<Record<string, OGData>>({});
 
   useEffect(() => {
@@ -64,12 +66,12 @@ export function SourceCards({ sources }: SourceCardsProps) {
             ))}
           </div>
           <span className="text-sm text-os-text-secondary-dark">
-            {sources.length} {sources.length === 1 ? 'source' : 'sources'}
+            {displayCount} {displayCount === 1 ? 'source' : 'sources'}
           </span>
         </div>
-        {sources.length > 4 && (
+        {displayCount > sources.length && (
           <button className="text-sm text-brand-aperol hover:underline">
-            +{sources.length - 4} sources
+            +{displayCount - sources.length} more
           </button>
         )}
       </div>
