@@ -26,22 +26,22 @@ interface OGData {
   favicon: string | null;
 }
 
-// Category icons and colors
+// Category icons and colors - using brand colors
 const CATEGORY_CONFIG = {
   'short-form': { 
     icon: Video, 
     label: 'Short Form',
-    color: 'text-pink-400 bg-pink-500/20'
+    color: 'text-brand-aperol bg-brand-aperol/10'
   },
   'long-form': { 
     icon: FileText, 
     label: 'Long Form',
-    color: 'text-blue-400 bg-blue-500/20'
+    color: 'text-brand-vanilla bg-brand-charcoal/50'
   },
   'blog': { 
     icon: Pen, 
     label: 'Blog',
-    color: 'text-green-400 bg-green-500/20'
+    color: 'text-brand-vanilla bg-os-surface-dark'
   },
 };
 
@@ -199,7 +199,7 @@ Please provide:
             </div>
           </div>
 
-          {/* Generate Brief button */}
+          {/* Generate Ideas button */}
           <div className="mt-6">
             <button
               onClick={handleGenerateBrief}
@@ -214,7 +214,7 @@ Please provide:
               ) : (
                 <>
                   <Sparkles className="w-4 h-4" />
-                  Generate Brief
+                  Generate Ideas
                 </>
               )}
             </button>
@@ -322,21 +322,21 @@ Please provide:
           <span>{item.sources.length} sources</span>
         </div>
 
-        {/* Generate Brief button - compact */}
+        {/* Generate Ideas button - compact */}
         <button
           onClick={handleGenerateBrief}
           disabled={isGenerating}
-          className="mt-1 inline-flex items-center justify-center gap-1.5 w-full px-3 py-2 rounded-lg bg-purple-500/20 text-purple-400 text-xs font-medium hover:bg-purple-500/30 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+          className="mt-1 inline-flex items-center justify-center gap-1.5 w-full px-3 py-2 rounded-lg bg-brand-aperol/10 text-brand-aperol text-xs font-medium hover:bg-brand-aperol/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isGenerating ? (
             <>
-              <div className="w-3 h-3 border-2 border-purple-400/30 border-t-purple-400 rounded-full animate-spin" />
+              <div className="w-3 h-3 border-2 border-brand-aperol/30 border-t-brand-aperol rounded-full animate-spin" />
               Generating...
             </>
           ) : (
             <>
               <Sparkles className="w-3 h-3" />
-              Generate Brief
+              Generate Ideas
             </>
           )}
         </button>

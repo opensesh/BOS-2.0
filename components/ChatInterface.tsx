@@ -161,21 +161,21 @@ export function ChatInterface() {
       // Clear URL params without reload
       router.replace('/', { scroll: false });
 
-      // Auto-submit the query
+      // Auto-submit the query (using 'text' format for AI SDK 5.x)
       setTimeout(() => {
-        sendMessage({ content: query });
+        sendMessage({ text: query });
       }, 100);
 
       setHasProcessedUrlParams(true);
     }
-    // Handle standalone query (from inspiration prompts / generate brief)
+    // Handle standalone query (from inspiration prompts / generate ideas)
     else if (query && !articleRef) {
       // Clear URL params without reload
       router.replace('/', { scroll: false });
 
-      // Auto-submit the query
+      // Auto-submit the query (using 'text' format for AI SDK 5.x)
       setTimeout(() => {
-        sendMessage({ content: query });
+        sendMessage({ text: query });
       }, 100);
 
       setHasProcessedUrlParams(true);
