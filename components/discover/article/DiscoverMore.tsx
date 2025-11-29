@@ -168,7 +168,7 @@ export function DiscoverMore({ currentSlug, relatedQueries = [], relatedArticles
   if (loading) {
     return (
       <div className="mt-12 pt-8 border-t border-os-border-dark/50">
-        <h3 className="text-lg font-display font-bold text-brand-aperol mb-6">Discover more</h3>
+        <h3 className="text-lg font-display font-bold text-brand-vanilla mb-6">Discover more</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[1, 2, 3, 4].map((i) => (
             <div key={i} className="animate-pulse">
@@ -189,7 +189,7 @@ export function DiscoverMore({ currentSlug, relatedQueries = [], relatedArticles
   return (
     <div className="mt-12 pt-8 border-t border-os-border-dark/50">
       {/* Header - no icon */}
-      <h3 className="text-lg font-display font-bold text-brand-aperol mb-6">Discover more</h3>
+      <h3 className="text-lg font-display font-bold text-brand-vanilla mb-6">Discover more</h3>
 
       {/* Cards grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

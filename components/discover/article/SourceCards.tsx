@@ -29,33 +29,34 @@ export function SourceCards({ sources, totalCount, onViewAllSources }: SourceCar
       {remainingCount > 0 && (
         <button
           onClick={onViewAllSources}
-          className="flex items-center justify-center gap-2 p-3 bg-os-surface-dark/60 hover:bg-os-surface-dark rounded-xl border border-os-border-dark/50 hover:border-os-border-dark transition-all min-h-[76px]"
+          className="flex flex-col items-center justify-center gap-1.5 p-2.5 bg-os-surface-dark/60 hover:bg-os-surface-dark rounded-xl border border-os-border-dark/50 hover:border-os-border-dark transition-all"
         >
-          {/* Favicon stack */}
-          <div className="flex -space-x-2">
+          {/* Favicon stack - horizontal row */}
+          <div className="flex -space-x-1.5">
             {sources.slice(3, 6).map((source, i) => (
               <div
                 key={i}
-                className="w-6 h-6 rounded-full bg-os-bg-dark border-2 border-os-surface-dark flex items-center justify-center overflow-hidden"
+                className="w-5 h-5 rounded-full bg-os-bg-dark border-2 border-os-surface-dark/80 flex items-center justify-center overflow-hidden"
               >
                 {source.favicon ? (
                   <Image
                     src={source.favicon}
                     alt=""
-                    width={14}
-                    height={14}
-                    className="w-3.5 h-3.5"
+                    width={12}
+                    height={12}
+                    className="w-3 h-3"
                     unoptimized
                   />
                 ) : (
-                  <span className="text-[8px] font-bold text-os-text-secondary-dark">
+                  <span className="text-[7px] font-bold text-os-text-secondary-dark">
                     {source.name.charAt(0).toUpperCase()}
                   </span>
                 )}
               </div>
             ))}
           </div>
-          <span className="text-sm text-brand-vanilla whitespace-nowrap font-medium">
+          {/* Text below icons */}
+          <span className="text-xs text-brand-vanilla whitespace-nowrap font-medium">
             +{remainingCount} sources
           </span>
         </button>
