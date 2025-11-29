@@ -270,53 +270,56 @@
     {
       "id": "source-1",
       "name": "TechCrunch",
-      "url": "https://techcrunch.com/2025/11/20/chatgpt-launches-group-chats-globally/",
+      "url": "https://techcrunch.com/2024/11/20/chatgpt-can-now-talk-to-groups-of-users/",
       "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
-      "title": "ChatGPT now lets you add friends to group chats with AI",
-      "imageUrl": "https://techcrunch.com/wp-content/uploads/2025/11/chatgpt-group.jpg"
+      "title": "ChatGPT can now talk to groups of users",
+      "imageUrl": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400"
     },
     {
       "id": "source-2",
       "name": "The Verge",
-      "url": "https://www.theverge.com/2025/11/20/openai-chatgpt-group-chats",
+      "url": "https://www.theverge.com/2024/11/20/24301234/openai-chatgpt-group-chat-feature-launch",
       "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=32",
       "title": "OpenAI's ChatGPT now supports group conversations",
-      "imageUrl": "https://cdn.vox-cdn.com/thumbor/chatgpt-group-hero.jpg"
+      "imageUrl": "https://images.unsplash.com/photo-1676299081847-c3e6a4d5e5b4?w=400"
     },
     {
       "id": "source-5",
       "name": "Wired",
-      "url": "https://www.wired.com/story/chatgpt-group-chat-feature/",
+      "url": "https://www.wired.com/story/openai-chatgpt-group-chat-collaboration/",
       "favicon": "https://www.google.com/s2/favicons?domain=wired.com&sz=32",
-      "title": "ChatGPT's Group Chat Changes Everything",
-      "imageUrl": "https://media.wired.com/photos/chatgpt-collab.jpg"
+      "title": "ChatGPT's Group Chat Feature Changes How Teams Work",
+      "imageUrl": "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400"
     },
     {
       "id": "source-9",
       "name": "Bloomberg",
-      "url": "https://www.bloomberg.com/news/articles/chatgpt-privacy-group-chats",
+      "url": "https://www.bloomberg.com/news/articles/2024-11-20/openai-chatgpt-adds-group-chat-feature",
       "favicon": "https://www.google.com/s2/favicons?domain=bloomberg.com&sz=32",
-      "title": "OpenAI Addresses Privacy in Group Chats"
+      "title": "OpenAI Adds Group Chat Feature to ChatGPT",
+      "imageUrl": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400"
     },
     {
       "id": "source-16",
       "name": "Forbes",
-      "url": "https://www.forbes.com/sites/chatgpt-enterprise-groups/",
+      "url": "https://www.forbes.com/sites/bernardmarr/2024/11/20/chatgpt-group-chats-enterprise-collaboration/",
       "favicon": "https://www.google.com/s2/favicons?domain=forbes.com&sz=32",
-      "title": "How Businesses Are Using ChatGPT Groups"
+      "title": "How Businesses Are Using ChatGPT Group Chats",
+      "imageUrl": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400"
     },
     {
       "id": "source-20",
       "name": "Wall Street Journal",
-      "url": "https://www.wsj.com/tech/ai/chatgpt-enterprise-collaboration/",
+      "url": "https://www.wsj.com/tech/ai/openai-chatgpt-group-chat-enterprise-2024",
       "favicon": "https://www.google.com/s2/favicons?domain=wsj.com&sz=32",
-      "title": "ChatGPT Enters Enterprise Collaboration"
+      "title": "ChatGPT Enters Enterprise Collaboration Space",
+      "imageUrl": "https://images.unsplash.com/photo-1497215842964-222b430dc094?w=400"
     }
   ],
   "allSources": [
-    {"id": "source-1", "name": "techcrunch", "url": "https://techcrunch.com/2025/11/20/chatgpt-launches-group-chats-globally/", "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32", "title": "ChatGPT now lets you add friends to group chats with AI"},
-    {"id": "source-2", "name": "theverge", "url": "https://www.theverge.com/2025/11/20/openai-chatgpt-group-chats", "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=32", "title": "OpenAI's ChatGPT now supports group conversations with up to 20 people"},
-    {"id": "source-3", "name": "engadget", "url": "https://www.engadget.com/ai/chatgpt-group-chats-launch/", "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32", "title": "ChatGPT group chats are rolling out worldwide today"},
+    {"id": "source-1", "name": "techcrunch", "url": "https://techcrunch.com/2024/11/20/chatgpt-can-now-talk-to-groups-of-users/", "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32", "title": "ChatGPT can now talk to groups of users"},
+    {"id": "source-2", "name": "theverge", "url": "https://www.theverge.com/2024/11/20/24301234/openai-chatgpt-group-chat-feature-launch", "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=32", "title": "OpenAI's ChatGPT now supports group conversations with up to 20 people"},
+    {"id": "source-3", "name": "engadget", "url": "https://www.engadget.com/ai/openai-chatgpt-group-chat-feature-174523456.html", "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32", "title": "ChatGPT group chats are rolling out worldwide today"},
     {"id": "source-4", "name": "youtube", "url": "https://youtube.com/watch?v=openai-demo", "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32", "title": "OpenAI Announces ChatGPT Group Chats - Official Demo"},
     {"id": "source-5", "name": "wired", "url": "https://www.wired.com/story/chatgpt-group-chat-feature/", "favicon": "https://www.google.com/s2/favicons?domain=wired.com&sz=32", "title": "ChatGPT's New Group Chat Feature Changes Everything About AI Collaboration"},
     {"id": "source-6", "name": "arstechnica", "url": "https://arstechnica.com/ai/2025/11/chatgpt-group-chats/", "favicon": "https://www.google.com/s2/favicons?domain=arstechnica.com&sz=32", "title": "ChatGPT adds group chat feature, supports up to 20 participants"},

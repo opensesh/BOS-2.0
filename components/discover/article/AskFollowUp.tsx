@@ -59,8 +59,8 @@ export function AskFollowUp({ articleTitle, articleSlug, articleImage }: AskFoll
   };
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-30 bg-gradient-to-t from-os-bg-dark via-os-bg-dark to-transparent pt-8 pb-4 px-4 md:pl-[70px]">
-      <div className="max-w-3xl mx-auto">
+    <div className="fixed bottom-0 left-0 right-0 z-30 bg-gradient-to-t from-os-bg-dark via-os-bg-dark to-transparent pt-8 pb-4 lg:pl-[70px]">
+      <div className="max-w-4xl mx-auto px-6 md:px-12">
         <form onSubmit={handleSubmit}>
           <div
             className={`
