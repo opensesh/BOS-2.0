@@ -16,6 +16,7 @@ export function Brandmark({ className = '', size = 32 }: BrandmarkProps) {
         width={size}
         height={size}
         className="object-contain"
+        style={{ width: 'auto', height: 'auto' }}
       />
     </div>
   );

@@ -33,13 +33,20 @@ import {
   ChatHeader,
   ChatContent,
 } from './chat';
-import { ArticleReferenceCard } from './discover/article/AskFollowUp';
+import { ArticleReferenceCard, InspirationReferenceCard } from './discover/article/AskFollowUp';
 
 // Article reference context from discover page
 interface ArticleContext {
   title: string;
   slug: string;
   imageUrl?: string;
+}
+
+// Inspiration reference context from generate ideas
+interface InspirationContext {
+  title: string;
+  category: string;
+  description: string;
 }
 
 interface Connector {
@@ -75,6 +82,7 @@ export function ChatInterface() {
   const [modelUsed, setModelUsed] = useState<string | undefined>();
   const [activeTab, setActiveTab] = useState<'answer' | 'links' | 'images'>('answer');
   const [articleContext, setArticleContext] = useState<ArticleContext | null>(null);
+  const [inspirationContext, setInspirationContext] = useState<InspirationContext | null>(null);
   const [hasProcessedUrlParams, setHasProcessedUrlParams] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const globeButtonRef = useRef<HTMLButtonElement>(null);
@@ -136,6 +144,7 @@ export function ChatInterface() {
       }
       resetChat();
       setArticleContext(null);
+      setInspirationContext(null);
       acknowledgeChatReset();
     }
   }, [shouldResetChat, acknowledgeChatReset, resetChat, messages, addToHistory, getMessageContent]);
@@ -151,6 +160,9 @@ export function ChatInterface() {
 
     // Handle article context queries (from article pages)
     if (query && articleRef && articleTitle) {
+      // Reset existing messages to ensure proper message alternation
+      setMessages([]);
+      
       // Set the article context
       setArticleContext({
         title: articleTitle,
@@ -162,25 +174,46 @@ export function ChatInterface() {
       router.replace('/', { scroll: false });
 
       // Auto-submit the query (using 'text' format for AI SDK 5.x)
+      // Delay to ensure messages are cleared first
       setTimeout(() => {
         sendMessage({ text: query });
-      }, 100);
+      }, 150);
 
       setHasProcessedUrlParams(true);
     }
     // Handle standalone query (from inspiration prompts / generate ideas)
     else if (query && !articleRef) {
+      // Reset existing messages to ensure proper message alternation
+      setMessages([]);
+      setArticleContext(null);
+      
+      // Check for inspiration context in URL params
+      const inspirationTitle = searchParams.get('inspirationTitle');
+      const inspirationCategory = searchParams.get('inspirationCategory');
+      const inspirationDescription = searchParams.get('inspirationDescription');
+      
+      if (inspirationTitle && inspirationCategory) {
+        setInspirationContext({
+          title: inspirationTitle,
+          category: inspirationCategory,
+          description: inspirationDescription || '',
+        });
+      } else {
+        setInspirationContext(null);
+      }
+      
       // Clear URL params without reload
       router.replace('/', { scroll: false });
 
       // Auto-submit the query (using 'text' format for AI SDK 5.x)
+      // Delay to ensure messages are cleared first
       setTimeout(() => {
         sendMessage({ text: query });
-      }, 100);
+      }, 150);
 
       setHasProcessedUrlParams(true);
     }
-  }, [searchParams, router, sendMessage, hasProcessedUrlParams]);
+  }, [searchParams, router, sendMessage, setMessages, hasProcessedUrlParams]);
 
   // status can be: 'submitted' | 'streaming' | 'ready' | 'error'
   const isLoading = status === 'submitted' || status === 'streaming';
@@ -412,6 +445,17 @@ export function ChatInterface() {
                           title={articleContext.title}
                           slug={articleContext.slug}
                           imageUrl={articleContext.imageUrl}
+                        />
+                      </div>
+                    )}
+
+                    {/* Inspiration Reference Card - shown when generating ideas */}
+                    {inspirationContext && parsedMessages.length > 0 && !articleContext && (
+                      <div className="pt-6">
+                        <InspirationReferenceCard
+                          title={inspirationContext.title}
+                          category={inspirationContext.category}
+                          description={inspirationContext.description}
                         />
                       </div>
                     )}

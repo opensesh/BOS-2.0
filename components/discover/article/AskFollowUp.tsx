@@ -217,3 +217,54 @@ export function ArticleReferenceCard({
     </button>
   );
 }
+
+// Inspiration reference card shown at top of generate ideas chat responses
+export function InspirationReferenceCard({
+  title,
+  category,
+  description,
+}: {
+  title: string;
+  category: string;
+  description?: string;
+}) {
+  const getCategoryLabel = (cat: string) => {
+    switch (cat) {
+      case 'short-form':
+        return 'Short Form';
+      case 'long-form':
+        return 'Long Form';
+      case 'blog':
+        return 'Blog';
+      default:
+        return cat;
+    }
+  };
+
+  return (
+    <div className="w-full flex items-start gap-3 p-3 mb-4 bg-os-surface-dark/50 rounded-xl border border-os-border-dark/50">
+      {/* Icon */}
+      <div className="w-10 h-10 rounded-lg bg-brand-aperol/10 flex items-center justify-center flex-shrink-0">
+        <Sparkles className="w-5 h-5 text-brand-aperol" />
+      </div>
+
+      {/* Content */}
+      <div className="flex-1 min-w-0">
+        <div className="flex items-center gap-2 mb-0.5">
+          <p className="text-xs text-os-text-secondary-dark">Generating ideas for</p>
+          <span className="px-1.5 py-0.5 rounded text-[10px] font-medium bg-brand-aperol/10 text-brand-aperol">
+            {getCategoryLabel(category)}
+          </span>
+        </div>
+        <p className="text-sm font-medium text-brand-vanilla line-clamp-1">
+          {title}
+        </p>
+        {description && (
+          <p className="text-xs text-os-text-secondary-dark mt-1 line-clamp-2">
+            {description}
+          </p>
+        )}
+      </div>
+    </div>
+  );
+}

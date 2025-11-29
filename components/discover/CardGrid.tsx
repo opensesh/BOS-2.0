@@ -61,28 +61,58 @@ export function CardGrid({
             )}
           </div>
           
-          {/* Compact cards - 3 in a row */}
+          {/* Compact cards - horizontal scroll on mobile/tablet, 3-col grid on desktop */}
           {group.compact.length > 0 && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {group.compact.map((card, cardIndex) => (
-                <div key={cardIndex}>
-                  {type === 'news' ? (
-                    <NewsCard 
-                      item={card as NewsCardData} 
-                      variant="compact" 
-                      onOpenSources={onOpenSources}
-                      onSave={onSaveArticle}
-                      isSaved={savedArticleIds.has((card as NewsCardData).id)}
-                    />
-                  ) : (
-                    <InspirationPromptCard 
-                      item={card as InspirationCardData} 
-                      variant="compact" 
-                    />
-                  )}
+            <>
+              {/* Mobile/Tablet: Horizontal scrollable carousel */}
+              <div className="lg:hidden -mx-4 px-4">
+                <div className="flex gap-3 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-2">
+                  {group.compact.map((card, cardIndex) => (
+                    <div
+                      key={cardIndex}
+                      className="flex-shrink-0 w-[calc(33.333%-8px)] min-w-[140px] snap-start"
+                    >
+                      {type === 'news' ? (
+                        <NewsCard
+                          item={card as NewsCardData}
+                          variant="compact"
+                          onOpenSources={onOpenSources}
+                          onSave={onSaveArticle}
+                          isSaved={savedArticleIds.has((card as NewsCardData).id)}
+                        />
+                      ) : (
+                        <InspirationPromptCard
+                          item={card as InspirationCardData}
+                          variant="compact"
+                        />
+                      )}
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </div>
+
+              {/* Desktop: 3-column grid */}
+              <div className="hidden lg:grid lg:grid-cols-3 gap-4">
+                {group.compact.map((card, cardIndex) => (
+                  <div key={cardIndex}>
+                    {type === 'news' ? (
+                      <NewsCard
+                        item={card as NewsCardData}
+                        variant="compact"
+                        onOpenSources={onOpenSources}
+                        onSave={onSaveArticle}
+                        isSaved={savedArticleIds.has((card as NewsCardData).id)}
+                      />
+                    ) : (
+                      <InspirationPromptCard
+                        item={card as InspirationCardData}
+                        variant="compact"
+                      />
+                    )}
+                  </div>
+                ))}
+              </div>
+            </>
           )}
 
           {/* Divider between groups */}

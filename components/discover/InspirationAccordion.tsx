@@ -88,16 +88,28 @@ Please provide:
 4. Visual/aesthetic recommendations
 5. Call-to-action suggestions`;
 
-    // Navigate to home with the prompt
-    const encodedPrompt = encodeURIComponent(prompt);
-    router.push(`/?q=${encodedPrompt}`);
+    // Navigate to home with the prompt and inspiration context
+    const params = new URLSearchParams({
+      q: prompt,
+      inspirationTitle: item.title,
+      inspirationCategory: item.category,
+      inspirationDescription: item.description,
+    });
+    router.push(`/?${params.toString()}`);
   };
 
   return (
-    <div className="group px-4 py-4 border-b border-os-border-dark/30 last:border-b-0 hover:bg-os-surface-dark/30 transition-colors">
-      <div className="flex items-start gap-4">
-        {/* Thumbnail */}
-        <div className="relative w-20 h-14 md:w-24 md:h-16 rounded-lg overflow-hidden bg-os-surface-dark shrink-0">
+    <div className="group px-4 py-3 border-b border-os-border-dark/30 last:border-b-0 hover:bg-os-surface-dark/30 transition-colors">
+      <div className="flex items-center gap-4">
+        {/* Star icon - shown for starred items */}
+        <div className="w-5 flex items-center justify-center shrink-0">
+          {item.starred && (
+            <Star className="w-4 h-4 text-brand-aperol fill-brand-aperol" />
+          )}
+        </div>
+
+        {/* Thumbnail - bigger size */}
+        <div className="relative w-28 h-20 md:w-32 md:h-20 rounded-lg overflow-hidden bg-os-surface-dark shrink-0">
           {imageLoading ? (
             <div className="w-full h-full flex items-center justify-center">
               <div className="w-4 h-4 border-2 border-os-text-secondary-dark/30 border-t-os-text-secondary-dark rounded-full animate-spin" />
@@ -115,15 +127,9 @@ Please provide:
               <span className="text-xl">💡</span>
             </div>
           )}
-          {/* Star badge overlay */}
-          {item.starred && (
-            <div className="absolute top-1 right-1 p-0.5 rounded bg-brand-aperol/90">
-              <Star className="w-3 h-3 text-white fill-white" />
-            </div>
-          )}
         </div>
 
-        {/* Title and description */}
+        {/* Title, description, and sources */}
         <div className="flex-1 min-w-0">
           <h4 className="text-sm font-medium text-brand-vanilla group-hover:text-brand-aperol transition-colors line-clamp-1">
             {item.title}
@@ -133,8 +139,8 @@ Please provide:
           </p>
           
           {/* Source chips - inline */}
-          <div className="mt-2 flex items-center gap-2 flex-wrap">
-            {item.sources.slice(0, 2).map((source, idx) => (
+          <div className="mt-1.5 flex items-center gap-2 flex-wrap">
+            {item.sources.slice(0, 3).map((source, idx) => (
               <a
                 key={source.id || idx}
                 href={source.url}
@@ -146,29 +152,29 @@ Please provide:
                 {source.name}
               </a>
             ))}
-            {item.sources.length > 2 && (
+            {item.sources.length > 3 && (
               <span className="text-[10px] text-os-text-secondary-dark">
-                +{item.sources.length - 2} more
+                +{item.sources.length - 3}
               </span>
             )}
           </div>
         </div>
 
-        {/* Generate button - always visible on mobile, hover on desktop */}
+        {/* Generate button */}
         <button
           onClick={handleGenerateIdeas}
           disabled={isGenerating}
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brand-aperol/10 text-brand-aperol text-xs font-medium hover:bg-brand-aperol/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed shrink-0 md:opacity-0 md:group-hover:opacity-100"
+          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-brand-aperol/10 text-brand-aperol text-sm font-medium hover:bg-brand-aperol/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed shrink-0"
         >
           {isGenerating ? (
             <>
-              <div className="w-3 h-3 border-2 border-brand-aperol/30 border-t-brand-aperol rounded-full animate-spin" />
+              <div className="w-4 h-4 border-2 border-brand-aperol/30 border-t-brand-aperol rounded-full animate-spin" />
               <span className="hidden sm:inline">Generating...</span>
             </>
           ) : (
             <>
-              <Sparkles className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">Generate</span>
+              <Sparkles className="w-4 h-4" />
+              <span>Generate</span>
             </>
           )}
         </button>
