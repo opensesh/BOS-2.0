@@ -54,7 +54,7 @@ function getDomainName(url: string): string {
   }
 }
 
-// Parse the AI response into structured sections
+// Parse the AI response into structured sections and distribute sources
 function parseEnrichedContent(
   text: string,
   citations: Array<{ url: string; title?: string }> = []
@@ -78,87 +78,138 @@ function parseEnrichedContent(
   });
 
   let currentSection: ArticleSection | null = null;
+  const rawParagraphs: { content: string; citedSources: ParagraphSource[] }[] = [];
+
+  const flushParagraph = (paragraph: string) => {
+    if (!paragraph.trim()) return;
+
+    // Extract citation numbers from paragraph and remove them
+    const citationPattern = /\[(\d+)\]/g;
+    const matches = paragraph.match(citationPattern);
+    const cleanedContent = paragraph.replace(citationPattern, '').trim();
+    const citedSources: ParagraphSource[] = [];
+
+    if (matches) {
+      matches.forEach((match) => {
+        const num = parseInt(match.slice(1, -1));
+        const source = sourceMap.get(num);
+        if (source && !citedSources.find((s) => s.id === source.id)) {
+          citedSources.push(source);
+        }
+      });
+    }
+
+    if (cleanedContent) {
+      rawParagraphs.push({ content: cleanedContent, citedSources });
+    }
+  };
+
+  // First pass: extract all paragraphs
   let currentParagraph = '';
-  let paragraphSources: ParagraphSource[] = [];
-
-  const flushParagraph = () => {
-    if (currentParagraph.trim() && currentSection) {
-      // Extract citation numbers from paragraph and remove them
-      const citationPattern = /\[(\d+)\]/g;
-      const matches = currentParagraph.match(citationPattern);
-      const cleanedContent = currentParagraph.replace(citationPattern, '').trim();
-
-      if (matches) {
-        matches.forEach((match) => {
-          const num = parseInt(match.slice(1, -1));
-          const source = sourceMap.get(num);
-          if (source && !paragraphSources.find((s) => s.id === source.id)) {
-            paragraphSources.push(source);
-          }
-        });
-      }
-
-      if (cleanedContent) {
-        currentSection.paragraphs.push({
-          content: cleanedContent,
-          sources: paragraphSources.length > 0 ? [...paragraphSources] : [],
-        });
-      }
-      currentParagraph = '';
-      paragraphSources = [];
-    }
-  };
-
-  const flushSection = () => {
-    flushParagraph();
-    if (currentSection && currentSection.paragraphs.length > 0) {
-      sections.push(currentSection);
-    }
-  };
+  let currentSectionTitle: string | undefined;
+  const sectionBreaks: number[] = []; // Indices where sections start
 
   for (const line of lines) {
-    // Check for section headers (## or ###)
     if (line.startsWith('## ') || line.startsWith('### ')) {
-      flushSection();
-      currentSection = {
-        id: `section-${sections.length + 1}`,
-        title: line.replace(/^#+\s*/, '').trim(),
-        paragraphs: [],
-      };
+      // Flush current paragraph before section break
+      if (currentParagraph) {
+        flushParagraph(currentParagraph);
+        currentParagraph = '';
+      }
+      sectionBreaks.push(rawParagraphs.length);
+      currentSectionTitle = line.replace(/^#+\s*/, '').trim();
+      // Mark section title
+      rawParagraphs.push({ content: `__SECTION__${currentSectionTitle}`, citedSources: [] });
     } else if (line.startsWith('# ')) {
       // Skip main title
       continue;
     } else if (line.trim()) {
-      // Regular paragraph content
+      if (line.startsWith('-') || line.startsWith('*')) {
+        // Flush current paragraph
+        if (currentParagraph) {
+          flushParagraph(currentParagraph);
+          currentParagraph = '';
+        }
+        // Bullet point as separate paragraph
+        flushParagraph(line.replace(/^[-*]\s*/, ''));
+      } else {
+        // Continue building paragraph
+        if (currentParagraph && currentParagraph.length > 200) {
+          flushParagraph(currentParagraph);
+          currentParagraph = line;
+        } else {
+          currentParagraph = currentParagraph ? currentParagraph + ' ' + line : line;
+        }
+      }
+    } else {
+      // Empty line - flush paragraph
+      if (currentParagraph) {
+        flushParagraph(currentParagraph);
+        currentParagraph = '';
+      }
+    }
+  }
+
+  // Flush final paragraph
+  if (currentParagraph) {
+    flushParagraph(currentParagraph);
+  }
+
+  // Second pass: distribute sources to paragraphs that don't have any
+  // Each paragraph should have 2-4 unique sources
+  const contentParagraphs = rawParagraphs.filter((p) => !p.content.startsWith('__SECTION__'));
+  const sourcesPerParagraph = Math.max(2, Math.ceil(allSources.length / Math.max(contentParagraphs.length, 1)));
+
+  let sourceIndex = 0;
+  rawParagraphs.forEach((para) => {
+    if (para.content.startsWith('__SECTION__')) return;
+
+    // If paragraph has no cited sources, assign some
+    if (para.citedSources.length === 0 && allSources.length > 0) {
+      const assignedSources: ParagraphSource[] = [];
+      for (let i = 0; i < sourcesPerParagraph && i < allSources.length; i++) {
+        const source = allSources[(sourceIndex + i) % allSources.length];
+        if (!assignedSources.find((s) => s.id === source.id)) {
+          assignedSources.push(source);
+        }
+      }
+      para.citedSources = assignedSources;
+      sourceIndex = (sourceIndex + sourcesPerParagraph) % allSources.length;
+    }
+  });
+
+  // Third pass: build sections
+  currentSection = null;
+  for (const para of rawParagraphs) {
+    if (para.content.startsWith('__SECTION__')) {
+      // Start new section
+      if (currentSection && currentSection.paragraphs.length > 0) {
+        sections.push(currentSection);
+      }
+      currentSection = {
+        id: `section-${sections.length + 1}`,
+        title: para.content.replace('__SECTION__', ''),
+        paragraphs: [],
+      };
+    } else {
+      // Add paragraph to current section
       if (!currentSection) {
         currentSection = {
           id: 'section-intro',
           paragraphs: [],
         };
       }
-
-      // Check if this continues the current paragraph or starts a new one
-      if (currentParagraph && !line.startsWith('-') && !line.startsWith('*')) {
-        // If line is short, likely a new paragraph
-        if (currentParagraph.length > 200) {
-          flushParagraph();
-        }
-        currentParagraph += ' ' + line;
-      } else if (line.startsWith('-') || line.startsWith('*')) {
-        // Bullet points - treat each as a mini-paragraph
-        flushParagraph();
-        currentParagraph = line.replace(/^[-*]\s*/, '');
-        flushParagraph();
-      } else {
-        currentParagraph = line;
-      }
-    } else {
-      // Empty line - flush current paragraph
-      flushParagraph();
+      currentSection.paragraphs.push({
+        content: para.content,
+        sources: para.citedSources,
+      });
     }
   }
 
-  flushSection();
+  // Add final section
+  if (currentSection && currentSection.paragraphs.length > 0) {
+    sections.push(currentSection);
+  }
 
   // Ensure we have at least one section
   if (sections.length === 0) {
@@ -167,7 +218,7 @@ function parseEnrichedContent(
       paragraphs: [
         {
           content: text.replace(/\[(\d+)\]/g, '').trim(),
-          sources: allSources.slice(0, 3),
+          sources: allSources.slice(0, Math.min(4, allSources.length)),
         },
       ],
     });
@@ -194,6 +245,13 @@ export async function POST(req: Request) {
     const apiKey = process.env.PERPLEXITY_API_KEY?.trim();
     if (!apiKey) {
       console.log('Perplexity API key not configured, returning fallback');
+      const fallbackSources = existingSources.map((s, idx) => ({
+        id: `source-${idx}`,
+        name: getDomainName(s.url),
+        url: s.url,
+        favicon: getFaviconUrl(s.url),
+      }));
+      
       return new Response(
         JSON.stringify({
           sections: [
@@ -202,23 +260,17 @@ export async function POST(req: Request) {
               paragraphs: [
                 {
                   content: `${title}. This article explores the latest developments and insights in this area.`,
-                  sources: existingSources.map((s, idx) => ({
-                    id: `source-${idx}`,
-                    name: getDomainName(s.url),
-                    url: s.url,
-                    favicon: getFaviconUrl(s.url),
-                  })),
+                  sources: fallbackSources.slice(0, 3),
+                },
+                {
+                  content: 'Industry experts have been closely monitoring these developments, noting the potential implications for businesses and consumers alike.',
+                  sources: fallbackSources.slice(0, 2),
                 },
               ],
             },
           ],
           relatedQueries: [],
-          allSources: existingSources.map((s, idx) => ({
-            id: `source-${idx}`,
-            name: getDomainName(s.url),
-            url: s.url,
-            favicon: getFaviconUrl(s.url),
-          })),
+          allSources: fallbackSources,
         }),
         { status: 200, headers: { 'Content-Type': 'application/json' } }
       );
@@ -245,12 +297,19 @@ Requirements:
     });
 
     // Extract citations from the experimental provider metadata
-    // Perplexity returns sources in the response metadata
     const providerMetadata = result.experimental_providerMetadata;
     const perplexityData = providerMetadata?.perplexity as {
       citations?: string[];
     } | undefined;
-    const citationUrls = perplexityData?.citations || [];
+    let citationUrls = perplexityData?.citations || [];
+
+    console.log('Perplexity citations from metadata:', citationUrls.length);
+
+    // If no citations from Perplexity, use existing sources
+    if (citationUrls.length === 0 && existingSources.length > 0) {
+      citationUrls = existingSources.map((s) => s.url);
+      console.log('Using existing sources as citations:', citationUrls.length);
+    }
 
     // Build citations array
     const citations = citationUrls.map((url: string) => ({
@@ -260,6 +319,9 @@ Requirements:
 
     // Parse the response into structured sections
     const { sections, allSources } = parseEnrichedContent(result.text, citations);
+
+    console.log('Parsed sections:', sections.length);
+    console.log('Total sources:', allSources.length);
 
     // Generate related queries
     const relatedQueries = [
@@ -290,4 +352,3 @@ Requirements:
     );
   }
 }
-

@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   ArrowLeft,
   MoreHorizontal,
@@ -17,15 +18,41 @@ import {
 
 interface StickyArticleHeaderProps {
   title: string;
-  showTitle?: boolean;
+  titleRef?: React.RefObject<HTMLElement | null>;
 }
 
-export function StickyArticleHeader({ title, showTitle = true }: StickyArticleHeaderProps) {
+export function StickyArticleHeader({ title, titleRef }: StickyArticleHeaderProps) {
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [showOverflowMenu, setShowOverflowMenu] = useState(false);
   const [showShareModal, setShowShareModal] = useState(false);
+  const [showTitle, setShowTitle] = useState(false);
   const overflowRef = useRef<HTMLDivElement>(null);
   const shareRef = useRef<HTMLDivElement>(null);
+
+  // Track scroll position to show/hide title
+  useEffect(() => {
+    const handleScroll = () => {
+      if (titleRef?.current) {
+        const titleRect = titleRef.current.getBoundingClientRect();
+        // Show title in header when the main title is scrolled out of view
+        // Use a threshold of 80px (header height + some buffer)
+        setShowTitle(titleRect.bottom < 80);
+      }
+    };
+
+    // Find the scrollable container - try multiple selectors
+    const scrollContainer = 
+      document.querySelector('.custom-scrollbar') ||
+      document.querySelector('[class*="overflow-y-auto"]') ||
+      document.querySelector('main > div');
+    
+    if (scrollContainer) {
+      scrollContainer.addEventListener('scroll', handleScroll, { passive: true });
+      // Initial check
+      handleScroll();
+      return () => scrollContainer.removeEventListener('scroll', handleScroll);
+    }
+  }, [titleRef]);
 
   // Close overflow menu when clicking outside
   useEffect(() => {
@@ -57,12 +84,22 @@ export function StickyArticleHeader({ title, showTitle = true }: StickyArticleHe
           <span className="text-sm font-medium hidden sm:inline">Discover</span>
         </Link>
 
-        {/* Center: Title (truncated) */}
-        {showTitle && (
-          <h2 className="text-sm font-medium text-brand-vanilla truncate max-w-[40%] md:max-w-[50%] text-center">
-            {truncatedTitle}
-          </h2>
-        )}
+        {/* Center: Title (animated fade in/out) */}
+        <div className="flex-1 flex justify-center px-4 overflow-hidden">
+          <AnimatePresence mode="wait">
+            {showTitle && (
+              <motion.h2
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.2, ease: 'easeOut' }}
+                className="text-sm font-medium text-brand-vanilla truncate max-w-[300px] md:max-w-[400px] text-center"
+              >
+                {truncatedTitle}
+              </motion.h2>
+            )}
+          </AnimatePresence>
+        </div>
 
         {/* Right: Actions */}
         <div className="flex items-center gap-1">
@@ -181,4 +218,3 @@ function ShareModalContent({ onClose }: { onClose: () => void }) {
     </div>
   );
 }
-

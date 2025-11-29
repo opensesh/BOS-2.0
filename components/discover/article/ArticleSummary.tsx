@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { InlineSourceBadge } from './InlineSourceBadge';
+import { InlineSourceChips, groupSourcesForParagraph, SourceGroup } from './InlineSourceBadge';
 import { ArticleSection, ParagraphSource, Source } from '@/types';
 
 interface ArticleSummaryProps {
@@ -25,7 +25,13 @@ export function ArticleSummary({
 }: ArticleSummaryProps) {
   // If we have enriched sections, render them
   if (sections && sections.length > 0) {
-    return <EnrichedArticleSummary sections={sections} dividerImageUrl={dividerImageUrl} imageAttribution={imageAttribution} />;
+    return (
+      <EnrichedArticleSummary
+        sections={sections}
+        dividerImageUrl={dividerImageUrl}
+        imageAttribution={imageAttribution}
+      />
+    );
   }
 
   // Fallback to legacy content rendering
@@ -59,17 +65,20 @@ function EnrichedArticleSummary({
             )}
 
             {/* Paragraphs */}
-            {section.paragraphs.map((paragraph, paraIdx) => (
-              <p key={`${section.id}-p-${paraIdx}`} className="text-base md:text-lg leading-relaxed">
-                {paragraph.content}
-                {paragraph.sources.length > 0 && (
-                  <>
-                    {' '}
-                    <InlineSourceBadge sources={paragraph.sources} />
-                  </>
-                )}
-              </p>
-            ))}
+            {section.paragraphs.map((paragraph, paraIdx) => {
+              // Group sources into multiple chips
+              const sourceGroups = groupSourcesForParagraph(paragraph.sources);
+
+              return (
+                <p
+                  key={`${section.id}-p-${paraIdx}`}
+                  className="text-base md:text-lg leading-relaxed"
+                >
+                  {paragraph.content}
+                  {sourceGroups.length > 0 && <InlineSourceChips sourceGroups={sourceGroups} />}
+                </p>
+              );
+            })}
           </section>
 
           {/* Insert divider image after the designated section */}
@@ -87,13 +96,7 @@ function DividerImage({ imageUrl, attribution }: { imageUrl: string; attribution
   return (
     <div className="relative w-full my-4">
       <div className="relative aspect-[16/9] overflow-hidden rounded-xl bg-os-surface-dark">
-        <Image
-          src={imageUrl}
-          alt="Article illustration"
-          fill
-          className="object-cover"
-          unoptimized
-        />
+        <Image src={imageUrl} alt="Article illustration" fill className="object-cover" unoptimized />
       </div>
       {attribution && (
         <p className="text-xs text-os-text-secondary-dark mt-2 text-right font-mono">
@@ -105,13 +108,7 @@ function DividerImage({ imageUrl, attribution }: { imageUrl: string; attribution
 }
 
 // Legacy content rendering for backwards compatibility
-function LegacyArticleSummary({
-  content,
-  sources,
-}: {
-  content: string[];
-  sources: Source[];
-}) {
+function LegacyArticleSummary({ content, sources }: { content: string[]; sources: Source[] }) {
   // Convert legacy sources to ParagraphSource format
   const convertedSources: ParagraphSource[] = sources.map((s, idx) => ({
     id: s.id || `source-${idx}`,
@@ -120,24 +117,22 @@ function LegacyArticleSummary({
     favicon: getFaviconUrl(s.url),
   }));
 
-  // Distribute sources across paragraphs
+  // Distribute sources across paragraphs with multiple chips per paragraph
   const getSourcesForParagraph = (idx: number): ParagraphSource[] => {
     if (convertedSources.length === 0) return [];
-    
-    // First paragraph gets first source + some additional
-    if (idx === 0) {
-      return convertedSources.slice(0, Math.min(3, convertedSources.length));
+
+    // Each paragraph gets 2-4 unique sources
+    const sourcesPerParagraph = Math.max(2, Math.ceil(convertedSources.length / content.length));
+    const startIdx = (idx * sourcesPerParagraph) % convertedSources.length;
+
+    const result: ParagraphSource[] = [];
+    for (let i = 0; i < sourcesPerParagraph && result.length < 4; i++) {
+      const sourceIdx = (startIdx + i) % convertedSources.length;
+      if (!result.find((s) => s.id === convertedSources[sourceIdx].id)) {
+        result.push(convertedSources[sourceIdx]);
+      }
     }
-    
-    // Distribute remaining sources
-    const sourceIdx = idx % convertedSources.length;
-    const additionalIdx = (idx + 1) % convertedSources.length;
-    
-    const result = [convertedSources[sourceIdx]];
-    if (additionalIdx !== sourceIdx && convertedSources[additionalIdx]) {
-      result.push(convertedSources[additionalIdx]);
-    }
-    
+
     return result;
   };
 
@@ -145,16 +140,12 @@ function LegacyArticleSummary({
     <div className="flex flex-col gap-6 text-base leading-relaxed text-os-text-primary-dark/90 font-sans">
       {content.map((paragraph, idx) => {
         const paragraphSources = getSourcesForParagraph(idx);
+        const sourceGroups = groupSourcesForParagraph(paragraphSources);
 
         return (
           <p key={idx} className="text-base md:text-lg leading-relaxed">
             {paragraph}
-            {paragraphSources.length > 0 && (
-              <>
-                {' '}
-                <InlineSourceBadge sources={paragraphSources} />
-              </>
-            )}
+            {sourceGroups.length > 0 && <InlineSourceChips sourceGroups={sourceGroups} />}
           </p>
         );
       })}
