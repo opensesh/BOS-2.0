@@ -140,7 +140,7 @@ export function ChatInterface() {
     }
   }, [shouldResetChat, acknowledgeChatReset, resetChat, messages, addToHistory, getMessageContent]);
 
-  // Process URL search params for article follow-up queries
+  // Process URL search params for article follow-up queries or prompt pre-fill
   useEffect(() => {
     if (hasProcessedUrlParams) return;
 
@@ -149,6 +149,7 @@ export function ChatInterface() {
     const articleTitle = searchParams.get('articleTitle');
     const articleImage = searchParams.get('articleImage');
 
+    // Handle article context queries (from article pages)
     if (query && articleRef && articleTitle) {
       // Set the article context
       setArticleContext({
@@ -157,6 +158,18 @@ export function ChatInterface() {
         imageUrl: articleImage || undefined,
       });
 
+      // Clear URL params without reload
+      router.replace('/', { scroll: false });
+
+      // Auto-submit the query
+      setTimeout(() => {
+        sendMessage({ content: query });
+      }, 100);
+
+      setHasProcessedUrlParams(true);
+    }
+    // Handle standalone query (from inspiration prompts / generate brief)
+    else if (query && !articleRef) {
       // Clear URL params without reload
       router.replace('/', { scroll: false });
 

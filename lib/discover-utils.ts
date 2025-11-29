@@ -1,4 +1,4 @@
-import { NewsCardData, InspirationCardData, Source, NewsData, InspirationData } from '@/types';
+import { NewsCardData, InspirationCardData, Source, NewsData, InspirationData, ContentTier } from '@/types';
 
 /**
  * Aggregate sources from multiple items, removing duplicates
@@ -98,6 +98,26 @@ function generateUnifiedSummary(items: Array<{ title: string; description?: stri
 }
 
 /**
+ * Determine content tier based on available data
+ * - Items with articlePath = 'featured' (full Perplexity research)
+ * - Items with aiSummary = 'summary' (AI-generated summary)
+ * - Everything else = 'quick' (RSS description + external link)
+ */
+function determineTier(update: {
+  tier?: ContentTier;
+  articlePath?: string;
+  aiSummary?: string;
+}): ContentTier {
+  // If tier is explicitly set in JSON, use it
+  if (update.tier) return update.tier;
+  
+  // Auto-assign based on available fields
+  if (update.articlePath) return 'featured';
+  if (update.aiSummary) return 'summary';
+  return 'quick';
+}
+
+/**
  * Process news data from JSON files
  */
 export function processNewsData(data: NewsData): NewsCardData[] {
@@ -119,6 +139,14 @@ export function processNewsData(data: NewsData): NewsCardData[] {
       ? update.description.split('\n')[0] // Use first paragraph as summary
       : update.title.substring(0, 200);
     
+    // Determine tier based on available data
+    const tier = determineTier(update);
+    
+    // For quick tier, use first source URL as the external link
+    const sourceUrl = tier === 'quick' && sources.length > 0 
+      ? sources[0].url 
+      : update.sourceUrl;
+    
     const card: NewsCardData = {
       id: `news-${data.type}-${index}`,
       slug: generateSlug(update.title),
@@ -128,6 +156,11 @@ export function processNewsData(data: NewsData): NewsCardData[] {
       sources,
       publishedAt: formatTimestamp(update.timestamp),
       category: data.type,
+      // Tiered content fields
+      tier,
+      articlePath: update.articlePath,
+      aiSummary: update.aiSummary,
+      sourceUrl,
     };
     
     cards.push(card);
@@ -138,6 +171,8 @@ export function processNewsData(data: NewsData): NewsCardData[] {
 
 /**
  * Process inspiration data from JSON files
+ * Inspiration items are content PROMPTS - they display as non-clickable cards
+ * with a "Generate Brief" action that sends to the chat interface
  */
 export function processInspirationData(data: InspirationData): InspirationCardData[] {
   if (!data.ideas || data.ideas.length === 0) return [];
@@ -158,6 +193,7 @@ export function processInspirationData(data: InspirationData): InspirationCardDa
       publishedAt: formatTimestamp(data.date),
       category: data.type,
       starred: idea.starred,
+      isPrompt: true as const, // Always true - inspiration items are content prompts
     };
   });
 }

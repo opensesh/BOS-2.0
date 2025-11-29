@@ -1,6 +1,6 @@
 import React from 'react';
-import { NewsCard } from './NewsCard';
-import { InspirationCard } from './InspirationCard';
+import { TieredNewsCard } from './TieredNewsCard';
+import { InspirationPromptCard } from './InspirationPromptCard';
 import { NewsCardData, InspirationCardData } from '@/types';
 import { SourceInfo } from '@/components/chat/AnswerView';
 
@@ -10,6 +10,13 @@ interface CardGridProps {
   onOpenSources?: (sources: SourceInfo[]) => void;
   onSaveArticle?: (item: NewsCardData, isSaved: boolean) => void;
   savedArticleIds?: Set<string>;
+}
+
+/**
+ * Helper to check if a card is a NewsCardData (has tier field)
+ */
+function isNewsCard(card: NewsCardData | InspirationCardData): card is NewsCardData {
+  return 'tier' in card;
 }
 
 export function CardGrid({ 
@@ -46,7 +53,7 @@ export function CardGrid({
           {/* Featured card - horizontal layout */}
           <div className="w-full">
             {type === 'news' ? (
-              <NewsCard 
+              <TieredNewsCard 
                 item={group.featured as NewsCardData} 
                 variant="featured" 
                 onOpenSources={onOpenSources}
@@ -54,10 +61,9 @@ export function CardGrid({
                 isSaved={savedArticleIds.has((group.featured as NewsCardData).id)}
               />
             ) : (
-              <InspirationCard 
+              <InspirationPromptCard 
                 item={group.featured as InspirationCardData} 
                 variant="featured" 
-                // InspirationCard doesn't support sources drawer yet, but could in future
               />
             )}
           </div>
@@ -68,7 +74,7 @@ export function CardGrid({
               {group.compact.map((card, cardIndex) => (
                 <div key={cardIndex}>
                   {type === 'news' ? (
-                    <NewsCard 
+                    <TieredNewsCard 
                       item={card as NewsCardData} 
                       variant="compact" 
                       onOpenSources={onOpenSources}
@@ -76,7 +82,7 @@ export function CardGrid({
                       isSaved={savedArticleIds.has((card as NewsCardData).id)}
                     />
                   ) : (
-                    <InspirationCard 
+                    <InspirationPromptCard 
                       item={card as InspirationCardData} 
                       variant="compact" 
                     />

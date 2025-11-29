@@ -86,6 +86,18 @@ export interface Source {
   logo?: string;
 }
 
+// ===========================================
+// Tiered Content System Types
+// ===========================================
+
+/**
+ * Content tier levels for the discover feed
+ * - featured: Full Perplexity research articles (40+ sources)
+ * - summary: AI-generated 2-3 paragraph summaries
+ * - quick: RSS description + external link
+ */
+export type ContentTier = 'featured' | 'summary' | 'quick';
+
 export interface NewsCardData {
   id: string;
   slug: string;
@@ -97,8 +109,17 @@ export interface NewsCardData {
   imageUrl?: string;
   category: 'weekly-update' | 'monthly-outlook';
   relatedImages?: string[];
+  // Tiered content fields
+  tier: ContentTier;
+  articlePath?: string;    // For featured: path to full JSON article
+  aiSummary?: string;      // For summary: pre-generated AI summary
+  sourceUrl?: string;      // For quick: external link to original source
 }
 
+/**
+ * Inspiration items are content PROMPTS, not articles to read
+ * They display as non-clickable cards with a "Generate Brief" action
+ */
 export interface InspirationCardData {
   id: string;
   slug: string;
@@ -109,6 +130,7 @@ export interface InspirationCardData {
   imageUrl?: string;
   category: 'short-form' | 'long-form' | 'blog';
   starred?: boolean;
+  isPrompt: true; // Always true - inspiration items are content prompts
 }
 
 export interface WeatherData {
@@ -151,6 +173,11 @@ export interface NewsUpdateItem {
   description?: string;
   timestamp: string;
   sources: Array<{ name: string; url: string }>;
+  // Tiered content fields (optional - assigned during processing if not present)
+  tier?: ContentTier;
+  articlePath?: string;    // For featured: path to full JSON article
+  aiSummary?: string;      // For summary: pre-generated AI summary
+  sourceUrl?: string;      // For quick: external link to original source
 }
 
 export interface NewsData {
