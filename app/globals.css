@@ -305,3 +305,32 @@ button,
   animation: slideOutRight 0.2s ease-in forwards;
 }
 
+/* Sidebar hover reveal animation */
+@keyframes sidebarExpand {
+  0% {
+    width: 52px;
+  }
+  100% {
+    width: 72px;
+  }
+}
+
+@keyframes labelReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sidebar-expand {
+  animation: sidebarExpand 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.label-reveal {
+  animation: labelReveal 0.2s ease-out forwards;
+}
+

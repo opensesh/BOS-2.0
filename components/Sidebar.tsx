@@ -10,9 +10,9 @@ import {
   ScanFace,
   BrainCog,
   Bell,
-  Plus,
   ArrowUpRight,
   MessageSquare,
+  Plus,
 } from 'lucide-react';
 import { NavigationDrawer } from './NavigationDrawer';
 import { BrandSelector } from './BrandSelector';
@@ -32,6 +32,7 @@ export function Sidebar() {
   const pathname = usePathname();
   const { isMobileMenuOpen, closeMobileMenu } = useMobileMenu();
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+  const [isSidebarHovered, setIsSidebarHovered] = useState(false);
   const railRef = useRef<HTMLElement>(null);
   const { chatHistory, triggerChatReset } = useChatContext();
 
@@ -64,76 +65,97 @@ export function Sidebar() {
         />
       )}
 
-      {/* Desktop Navigation Rail */}
+      {/* Desktop Navigation Rail - Supabase-inspired compact design */}
       <aside
         ref={railRef}
+        onMouseEnter={() => setIsSidebarHovered(true)}
+        onMouseLeave={() => setIsSidebarHovered(false)}
         className={`
           hidden lg:flex
-          relative inset-y-0 left-0 z-40
-          w-16
+          relative z-40
           bg-os-bg-darker border-r border-os-border-dark
-          flex flex-col
+          flex-col h-screen
+          transition-all duration-300 ease-out
+          ${isSidebarHovered ? 'w-[72px]' : 'w-[52px]'}
         `}
       >
-        {/* Brand Selector - Desktop Only */}
-        <div className="h-12 flex items-center justify-center border-b border-os-border-dark px-2 relative z-[70]">
-          <BrandSelector size={24} href="/" onClick={handleHomeClick} />
+        {/* Brand Selector - Top Left */}
+        <div className={`
+          flex items-center justify-center border-b border-os-border-dark relative z-[70]
+          transition-all duration-300 ease-out
+          ${isSidebarHovered ? 'h-14 py-3' : 'h-11 py-2'}
+        `}>
+          <BrandSelector size={isSidebarHovered ? 26 : 22} href="/" onClick={handleHomeClick} />
         </div>
 
-        {/* New Chat Button */}
-        <div className="p-2">
-          <button
-            onClick={handleNewChat}
-            className="
-              w-full flex flex-col items-center justify-center
-              py-2 px-2 font-medium
-              transition-all hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]
-              group
-            "
-            title="New Chat"
-          >
-            <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-os-surface-dark hover:bg-os-border-dark border border-os-border-dark transition-all duration-200">
-              <Plus className="w-4 h-4 text-brand-aperol group-hover:text-brand-aperol/80 transition-colors" />
-            </div>
-          </button>
-        </div>
-
-        {/* Navigation Items */}
-        <nav className="flex-1 px-2 space-y-0 overflow-y-auto">
-          {navItems.map((item) => {
+        {/* Navigation Items - Compact at top */}
+        <nav className={`
+          flex flex-col items-center
+          transition-all duration-300 ease-out
+          ${isSidebarHovered ? 'pt-2 gap-0.5' : 'pt-1.5 gap-0'}
+        `}>
+          {navItems.map((item, index) => {
             const Icon = item.icon;
             const isActive = pathname === item.href || (item.href === '/spaces' && pathname.startsWith('/spaces'));
-            const isHovered = hoveredItem === item.label;
             
             return (
               <div
                 key={item.href}
-                className="relative"
+                className="relative w-full flex justify-center"
                 onMouseEnter={() => setHoveredItem(item.label)}
                 onMouseLeave={() => {}}
+                style={{
+                  animationDelay: isSidebarHovered ? `${index * 30}ms` : '0ms',
+                }}
               >
                 <Link
                   data-nav-item={item.label}
                   href={item.href}
                   onClick={item.href === '/' ? handleHomeClick : closeMobileMenu}
                   className={`
-                    w-full flex flex-col items-center justify-center
-                    py-2 px-2
-                    transition-all duration-200
-                    group
-                    ${isHovered ? 'font-semibold' : 'font-medium'}
+                    flex flex-col items-center justify-center
+                    rounded-lg
+                    transition-all duration-200 ease-out
+                    group relative
+                    ${isSidebarHovered ? 'py-2 px-2 min-h-[56px]' : 'py-1.5 px-1.5 min-h-[36px]'}
+                    ${isActive ? 'text-brand-aperol' : 'text-os-text-secondary-dark hover:text-os-text-primary-dark'}
                   `}
                 >
+                  {/* Active indicator - left bar */}
                   <div className={`
-                    w-8 h-8 flex items-center justify-center rounded-lg mb-1
-                    transition-all duration-200
-                    ${isActive ? 'bg-os-surface-dark' : 'hover:bg-os-surface-dark'}
+                    absolute left-0 top-1/2 -translate-y-1/2 w-[2px] rounded-r-full
+                    transition-all duration-200 ease-out
+                    ${isActive ? 'h-5 bg-brand-aperol' : 'h-0 bg-transparent'}
+                  `} />
+                  
+                  {/* Icon container */}
+                  <div className={`
+                    flex items-center justify-center rounded-lg
+                    transition-all duration-200 ease-out
+                    ${isSidebarHovered ? 'w-9 h-9' : 'w-7 h-7'}
+                    ${isActive 
+                      ? 'bg-brand-aperol/10' 
+                      : 'hover:bg-os-surface-dark group-hover:scale-105'
+                    }
                   `}>
-                    <Icon className={`w-5 h-5 flex-shrink-0 ${isActive ? 'text-brand-aperol' : 'text-os-text-secondary-dark group-hover:text-os-text-primary-dark'}`} />
+                    <Icon className={`
+                      flex-shrink-0
+                      transition-all duration-200 ease-out
+                      ${isSidebarHovered ? 'w-5 h-5' : 'w-4 h-4'}
+                      ${isActive ? 'text-brand-aperol' : ''}
+                    `} />
                   </div>
-                  <span className={`text-[10px] text-center leading-tight ${
-                    isActive ? 'text-brand-aperol' : 'text-os-text-secondary-dark hover:text-os-text-primary-dark'
-                  }`}>
+                  
+                  {/* Label - appears on hover */}
+                  <span className={`
+                    text-[9px] font-medium text-center leading-tight mt-0.5
+                    transition-all duration-200 ease-out
+                    ${isSidebarHovered 
+                      ? 'opacity-100 max-h-4 translate-y-0' 
+                      : 'opacity-0 max-h-0 -translate-y-1 pointer-events-none'
+                    }
+                    ${isActive ? 'text-brand-aperol' : 'text-os-text-secondary-dark group-hover:text-os-text-primary-dark'}
+                  `}>
                     {item.label}
                   </span>
                 </Link>
@@ -142,41 +164,117 @@ export function Sidebar() {
           })}
         </nav>
 
-        {/* Divider */}
-        <div className="border-t border-os-border-dark" />
+        {/* Spacer */}
+        <div className="flex-1" />
 
-        {/* Bottom Section */}
-        <div className="p-2 space-y-0.5">
+        {/* Bottom Section - Compact */}
+        <div className={`
+          flex flex-col items-center border-t border-os-border-dark
+          transition-all duration-300 ease-out
+          ${isSidebarHovered ? 'pt-2 pb-2 gap-0.5' : 'pt-1.5 pb-1.5 gap-0'}
+        `}>
           <button
-            className="w-full flex flex-col items-center justify-center py-2 px-2 text-os-text-secondary-dark hover:text-os-text-primary-dark transition-all duration-200 group"
+            className={`
+              flex flex-col items-center justify-center rounded-lg
+              text-os-text-secondary-dark hover:text-os-text-primary-dark
+              transition-all duration-200 ease-out group
+              ${isSidebarHovered ? 'py-2 px-2 min-h-[56px]' : 'py-1.5 px-1.5 min-h-[36px]'}
+            `}
             title="Notifications"
           >
-            <div className="w-8 h-8 flex items-center justify-center rounded-lg mb-1 hover:bg-os-surface-dark transition-all duration-200">
-              <Bell className="w-5 h-5" />
+            <div className={`
+              flex items-center justify-center rounded-lg
+              hover:bg-os-surface-dark group-hover:scale-105
+              transition-all duration-200 ease-out
+              ${isSidebarHovered ? 'w-9 h-9' : 'w-7 h-7'}
+            `}>
+              <Bell className={`
+                transition-all duration-200 ease-out
+                ${isSidebarHovered ? 'w-5 h-5' : 'w-4 h-4'}
+              `} />
             </div>
-            <span className="text-[10px] text-center">Alerts</span>
+            <span className={`
+              text-[9px] font-medium text-center mt-0.5
+              transition-all duration-200 ease-out
+              ${isSidebarHovered 
+                ? 'opacity-100 max-h-4 translate-y-0' 
+                : 'opacity-0 max-h-0 -translate-y-1 pointer-events-none'
+              }
+            `}>
+              Alerts
+            </span>
           </button>
 
           <button
-            className="w-full flex flex-col items-center justify-center py-2 px-2 text-os-text-secondary-dark hover:text-os-text-primary-dark transition-all duration-200 group"
+            className={`
+              flex flex-col items-center justify-center rounded-lg
+              text-os-text-secondary-dark hover:text-os-text-primary-dark
+              transition-all duration-200 ease-out group
+              ${isSidebarHovered ? 'py-2 px-2 min-h-[56px]' : 'py-1.5 px-1.5 min-h-[36px]'}
+            `}
             title="Account"
           >
-            <div className="w-8 h-8 flex items-center justify-center rounded-lg mb-1 hover:bg-os-surface-dark transition-all duration-200">
-              <div className="w-6 h-6 bg-gradient-to-br from-brand-charcoal to-black border border-os-border-dark rounded-full flex items-center justify-center flex-shrink-0">
-                <span className="text-white text-[10px] font-mono">A</span>
+            <div className={`
+              flex items-center justify-center rounded-lg
+              hover:bg-os-surface-dark group-hover:scale-105
+              transition-all duration-200 ease-out
+              ${isSidebarHovered ? 'w-9 h-9' : 'w-7 h-7'}
+            `}>
+              <div className={`
+                bg-gradient-to-br from-brand-charcoal to-black border border-os-border-dark rounded-full 
+                flex items-center justify-center flex-shrink-0
+                transition-all duration-200 ease-out
+                ${isSidebarHovered ? 'w-6 h-6' : 'w-5 h-5'}
+              `}>
+                <span className={`
+                  text-white font-mono
+                  transition-all duration-200 ease-out
+                  ${isSidebarHovered ? 'text-[10px]' : 'text-[8px]'}
+                `}>A</span>
               </div>
             </div>
-            <span className="text-[10px] text-center">Account</span>
+            <span className={`
+              text-[9px] font-medium text-center mt-0.5
+              transition-all duration-200 ease-out
+              ${isSidebarHovered 
+                ? 'opacity-100 max-h-4 translate-y-0' 
+                : 'opacity-0 max-h-0 -translate-y-1 pointer-events-none'
+              }
+            `}>
+              Account
+            </span>
           </button>
 
           <button
-            className="w-full flex flex-col items-center justify-center py-2 px-2 text-os-text-secondary-dark hover:text-os-text-primary-dark transition-all duration-200 group"
+            className={`
+              flex flex-col items-center justify-center rounded-lg
+              text-os-text-secondary-dark hover:text-os-text-primary-dark
+              transition-all duration-200 ease-out group
+              ${isSidebarHovered ? 'py-2 px-2 min-h-[56px]' : 'py-1.5 px-1.5 min-h-[36px]'}
+            `}
             title="Upgrade"
           >
-            <div className="w-8 h-8 flex items-center justify-center rounded-lg mb-1 hover:bg-os-surface-dark transition-all duration-200">
-              <ArrowUpRight className="w-5 h-5" />
+            <div className={`
+              flex items-center justify-center rounded-lg
+              hover:bg-os-surface-dark group-hover:scale-105
+              transition-all duration-200 ease-out
+              ${isSidebarHovered ? 'w-9 h-9' : 'w-7 h-7'}
+            `}>
+              <ArrowUpRight className={`
+                transition-all duration-200 ease-out
+                ${isSidebarHovered ? 'w-5 h-5' : 'w-4 h-4'}
+              `} />
             </div>
-            <span className="text-[10px] text-center">Upgrade</span>
+            <span className={`
+              text-[9px] font-medium text-center mt-0.5
+              transition-all duration-200 ease-out
+              ${isSidebarHovered 
+                ? 'opacity-100 max-h-4 translate-y-0' 
+                : 'opacity-0 max-h-0 -translate-y-1 pointer-events-none'
+              }
+            `}>
+              Upgrade
+            </span>
           </button>
         </div>
       </aside>

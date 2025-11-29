@@ -30,7 +30,7 @@ interface NavigationDrawerProps {
   isOpen: boolean;
   item: string | null;
   onClose: () => void;
-  railRef: React.RefObject<HTMLElement>;
+  railRef: React.RefObject<HTMLElement | null>;
 }
 
 const brandHubNavItems = [
