@@ -55,6 +55,7 @@ interface NewsCardProps {
   onOpenSources?: (sources: SourceInfo[]) => void;
   onSave?: (item: NewsCardData, isSaved: boolean) => void;
   isSaved?: boolean;
+  onAddToSpace?: (item: NewsCardData) => void;
 }
 
 interface OGData {
@@ -138,6 +139,7 @@ export function NewsCard({
   onOpenSources,
   onSave,
   isSaved: isSavedProp = false,
+  onAddToSpace,
 }: NewsCardProps) {
   const [ogImage, setOgImage] = useState<string | null>(() => {
     if (item.imageUrl) return item.imageUrl;
@@ -399,7 +401,7 @@ export function NewsCard({
       
       <NewsCardMenu 
         onBookmark={() => handleSaveClick()}
-        onAddToSpace={() => console.log('Add to Space:', item.title)}
+        onAddToSpace={() => onAddToSpace?.(item)}
         onDislike={() => console.log('Dislike:', item.title)}
         size={isFeatured ? 'md' : 'sm'}
       />

@@ -6,8 +6,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { DiscoverLayout } from '@/components/discover/DiscoverLayout';
 import { DiscoverHeader } from '@/components/discover/DiscoverHeader';
 import { CardGrid } from '@/components/discover/CardGrid';
-import { InspirationAccordion } from '@/components/discover/InspirationAccordion';
+import { InspirationCardGrid } from '@/components/discover/InspirationCardGrid';
 import { WidgetPanel } from '@/components/discover/WidgetPanel';
+import { AddToSpaceModal } from '@/components/discover/AddToSpaceModal';
 import { useDiscoverData } from '@/hooks/useDiscoverData';
 import { Sidebar } from '@/components/Sidebar';
 import { SourcesDrawer } from '@/components/chat/SourcesDrawer';
@@ -35,6 +36,10 @@ export default function DiscoverPage() {
   const [isSavedDrawerOpen, setIsSavedDrawerOpen] = useState(false);
   const [savedArticles, setSavedArticles] = useState<SavedArticle[]>([]);
   const [savedArticleIds, setSavedArticleIds] = useState<Set<string>>(new Set());
+  
+  // Add to Space Modal State
+  const [isAddToSpaceOpen, setIsAddToSpaceOpen] = useState(false);
+  const [articleToAdd, setArticleToAdd] = useState<NewsCardData | null>(null);
   
   const { newsData, inspirationData, loading, error } = useDiscoverData();
 
@@ -129,6 +134,18 @@ export default function DiscoverPage() {
     router.push(`/discover/${slug}`);
   }, [router]);
 
+  // Handle Add to Space
+  const handleAddToSpace = useCallback((article: NewsCardData) => {
+    setArticleToAdd(article);
+    setIsAddToSpaceOpen(true);
+  }, []);
+
+  const handleConfirmAddToSpace = useCallback((spaceId: string, article: NewsCardData) => {
+    // In production, this would save to the database
+    console.log(`Added article "${article.title}" to space ${spaceId}`);
+    // You could show a toast notification here
+  }, []);
+
   const currentCards = getCurrentCards();
 
   return (
@@ -172,11 +189,12 @@ export default function DiscoverPage() {
                 onOpenSources={handleOpenSources}
                 onSaveArticle={handleSaveArticle}
                 savedArticleIds={savedArticleIds}
+                onAddToSpace={handleAddToSpace}
               />
             )}
 
             {!loading && !error && activeTab === 'Inspiration' && (
-              <InspirationAccordion
+              <InspirationCardGrid
                 shortForm={inspirationData.shortForm}
                 longForm={inspirationData.longForm}
                 blog={inspirationData.blog}
@@ -216,6 +234,17 @@ export default function DiscoverPage() {
         savedArticles={savedArticles}
         onRemove={handleRemoveSavedArticle}
         onArticleClick={handleSavedArticleClick}
+      />
+
+      {/* Add to Space Modal */}
+      <AddToSpaceModal
+        isOpen={isAddToSpaceOpen}
+        onClose={() => {
+          setIsAddToSpaceOpen(false);
+          setArticleToAdd(null);
+        }}
+        article={articleToAdd}
+        onAddToSpace={handleConfirmAddToSpace}
       />
     </div>
   );

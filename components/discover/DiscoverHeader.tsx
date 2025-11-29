@@ -105,19 +105,19 @@ export function DiscoverHeader({
 
   return (
     <>
+      {/* Title and Updated time */}
+      <div className="mb-4">
+        <h1 className="text-2xl md:text-3xl font-display font-bold text-brand-vanilla">
+          Discover
+        </h1>
+        <p className="mt-1 text-sm text-os-text-secondary-dark">
+          Updated: {formatLastUpdated()}
+        </p>
+      </div>
+
+      {/* Tabs and Actions Row */}
       <div className="flex items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-4 flex-wrap">
-          {/* Discover Title with Last Updated */}
-          <div className="flex items-center gap-3">
-            <h1 className="text-2xl md:text-3xl font-display font-bold text-brand-vanilla">
-              Discover
-            </h1>
-            <span className="flex items-center gap-1.5 text-xs text-os-text-secondary-dark">
-              <span className="w-1.5 h-1.5 rounded-full bg-brand-aperol animate-pulse" />
-              {formatLastUpdated()}
-            </span>
-          </div>
-
           {/* Tabs */}
           <div className="flex items-center gap-1">
             <button

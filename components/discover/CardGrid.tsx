@@ -10,6 +10,7 @@ interface CardGridProps {
   onOpenSources?: (sources: SourceInfo[]) => void;
   onSaveArticle?: (item: NewsCardData, isSaved: boolean) => void;
   savedArticleIds?: Set<string>;
+  onAddToSpace?: (item: NewsCardData) => void;
 }
 
 export function CardGrid({ 
@@ -18,6 +19,7 @@ export function CardGrid({
   onOpenSources,
   onSaveArticle,
   savedArticleIds = new Set(),
+  onAddToSpace,
 }: CardGridProps) {
   if (cards.length === 0) {
     return (
@@ -52,6 +54,7 @@ export function CardGrid({
                 onOpenSources={onOpenSources}
                 onSave={onSaveArticle}
                 isSaved={savedArticleIds.has((group.featured as NewsCardData).id)}
+                onAddToSpace={onAddToSpace}
               />
             ) : (
               <InspirationPromptCard 
@@ -79,6 +82,7 @@ export function CardGrid({
                           onOpenSources={onOpenSources}
                           onSave={onSaveArticle}
                           isSaved={savedArticleIds.has((card as NewsCardData).id)}
+                          onAddToSpace={onAddToSpace}
                         />
                       ) : (
                         <InspirationPromptCard
@@ -102,6 +106,7 @@ export function CardGrid({
                         onOpenSources={onOpenSources}
                         onSave={onSaveArticle}
                         isSaved={savedArticleIds.has((card as NewsCardData).id)}
+                        onAddToSpace={onAddToSpace}
                       />
                     ) : (
                       <InspirationPromptCard
