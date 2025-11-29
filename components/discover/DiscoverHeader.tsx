@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
-import { ChevronDown, Settings, Bookmark, Calendar } from 'lucide-react';
+import { Settings, Bookmark, Calendar, SlidersHorizontal } from 'lucide-react';
 import { SourcesSettings } from './SourcesSettings';
 
 type MainTabType = 'News' | 'Inspiration';
@@ -105,82 +105,82 @@ export function DiscoverHeader({
 
   return (
     <>
-      {/* Title and Updated time */}
-      <div className="mb-4">
+      {/* Row 1: Title and Tabs */}
+      <div className="flex items-center justify-between mb-4">
         <h1 className="text-2xl md:text-3xl font-display font-bold text-brand-vanilla">
           Discover
         </h1>
-        <p className="mt-1 text-sm text-os-text-secondary-dark">
-          Updated: {formatLastUpdated()}
-        </p>
+        
+        {/* Tabs */}
+        <div className="flex items-center gap-1">
+          <button
+            onClick={() => handleTabChange('News')}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+              activeTab === 'News'
+                ? 'bg-brand-aperol/15 text-brand-aperol border border-brand-aperol/30'
+                : 'text-os-text-secondary-dark hover:text-brand-vanilla hover:bg-os-surface-dark border border-transparent'
+            }`}
+          >
+            News
+          </button>
+          <button
+            onClick={() => handleTabChange('Inspiration')}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+              activeTab === 'Inspiration'
+                ? 'bg-brand-aperol/15 text-brand-aperol border border-brand-aperol/30'
+                : 'text-os-text-secondary-dark hover:text-brand-vanilla hover:bg-os-surface-dark border border-transparent'
+            }`}
+          >
+            Inspiration
+          </button>
+        </div>
       </div>
 
-      {/* Tabs and Actions Row */}
-      <div className="flex items-center justify-between gap-4 mb-6">
-        <div className="flex items-center gap-4 flex-wrap">
-          {/* Tabs */}
-          <div className="flex items-center gap-1">
-            <button
-              onClick={() => handleTabChange('News')}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                activeTab === 'News'
-                  ? 'bg-brand-aperol/15 text-brand-aperol border border-brand-aperol/30'
-                  : 'text-os-text-secondary-dark hover:text-brand-vanilla hover:bg-os-surface-dark border border-transparent'
-              }`}
-            >
-              News
-            </button>
-            <button
-              onClick={() => handleTabChange('Inspiration')}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                activeTab === 'Inspiration'
-                  ? 'bg-brand-aperol/15 text-brand-aperol border border-brand-aperol/30'
-                  : 'text-os-text-secondary-dark hover:text-brand-vanilla hover:bg-os-surface-dark border border-transparent'
-              }`}
-            >
-              Inspiration
-            </button>
+      {/* Row 2: Updated time + Filters */}
+      <div className="flex items-center justify-between mb-6">
+        {/* Left: Updated time */}
+        <p className="text-sm text-os-text-secondary-dark">
+          Updated: {formatLastUpdated()}
+        </p>
 
-            {/* Type Dropdown */}
-            <div className="relative" ref={dropdownRef}>
-              <button
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-sm font-medium transition-all duration-200 border ${
-                  activeType !== 'all'
-                    ? 'bg-os-surface-dark text-brand-vanilla border-os-border-dark'
-                    : 'text-os-text-secondary-dark hover:text-brand-vanilla hover:bg-os-surface-dark border-transparent'
-                }`}
-              >
-                {currentTypeLabel}
-                <ChevronDown className={`w-3.5 h-3.5 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
-              </button>
-
-              {isDropdownOpen && (
-                <div className="absolute top-full left-0 mt-2 py-1.5 bg-os-surface-dark border border-os-border-dark rounded-lg shadow-lg min-w-[140px] z-50">
-                  {typeOptions.map((option) => (
-                    <button
-                      key={option.id}
-                      onClick={() => {
-                        onTypeChange(option.id);
-                        setIsDropdownOpen(false);
-                      }}
-                      className={`w-full text-left px-3 py-1.5 text-sm transition-colors ${
-                        activeType === option.id
-                          ? 'text-brand-aperol bg-brand-aperol/10'
-                          : 'text-os-text-secondary-dark hover:text-brand-vanilla hover:bg-os-bg-dark'
-                      }`}
-                    >
-                      {option.label}
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-
-        {/* Right Side Actions */}
+        {/* Right: Filter actions */}
         <div className="flex items-center gap-1">
+          {/* Category Filter Icon */}
+          <div className="relative" ref={dropdownRef}>
+            <button
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className={`p-2.5 rounded-lg transition-colors group ${
+                isDropdownOpen ? 'bg-os-surface-dark' : 'hover:bg-os-surface-dark'
+              }`}
+              title={`Filter: ${currentTypeLabel}`}
+            >
+              <SlidersHorizontal className={`w-5 h-5 transition-colors ${
+                activeType !== 'all' ? 'text-brand-aperol' : 'text-os-text-secondary-dark group-hover:text-brand-vanilla'
+              }`} />
+            </button>
+
+            {isDropdownOpen && (
+              <div className="absolute top-full right-0 mt-2 py-1.5 bg-os-surface-dark border border-os-border-dark rounded-lg shadow-lg min-w-[140px] z-50">
+                {typeOptions.map((option) => (
+                  <button
+                    key={option.id}
+                    onClick={() => {
+                      onTypeChange(option.id);
+                      setIsDropdownOpen(false);
+                    }}
+                    className={`w-full text-left px-3 py-1.5 text-sm transition-colors ${
+                      activeType === option.id
+                        ? 'text-brand-aperol bg-brand-aperol/10'
+                        : 'text-os-text-secondary-dark hover:text-brand-vanilla hover:bg-os-bg-dark'
+                    }`}
+                  >
+                    {option.label}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
           {/* Date Filter Icon */}
           <div className="relative" ref={dateDropdownRef}>
             <button
@@ -188,7 +188,7 @@ export function DiscoverHeader({
               className={`p-2.5 rounded-lg transition-colors group ${
                 isDateDropdownOpen ? 'bg-os-surface-dark' : 'hover:bg-os-surface-dark'
               }`}
-              title={`Filter: ${currentDateLabel}`}
+              title={`Date: ${currentDateLabel}`}
             >
               <Calendar className={`w-5 h-5 transition-colors ${
                 selectedDate !== 'today' ? 'text-brand-aperol' : 'text-os-text-secondary-dark group-hover:text-brand-vanilla'

@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -9,8 +8,6 @@ import {
   Video,
   FileText,
   Pen,
-  Sparkles,
-  ExternalLink,
   ChevronRight
 } from 'lucide-react';
 import { InspirationCardData } from '@/types';
@@ -30,13 +27,8 @@ function generateSlug(title: string): string {
     .substring(0, 50);
 }
 
-// Generate consistent ID that matches the detail page
-function generateItemId(title: string, category: string, index: number): string {
-  return `${category}-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-').substring(0, 30)}-${index}`;
-}
-
 // Featured card (large, top-left position)
-function FeaturedInspirationCard({ item, index }: { item: InspirationCardData; index: number }) {
+function FeaturedInspirationCard({ item }: { item: InspirationCardData }) {
   const [ogImage, setOgImage] = useState<string | null>(null);
 
   useEffect(() => {
@@ -56,12 +48,12 @@ function FeaturedInspirationCard({ item, index }: { item: InspirationCardData; i
     }
   }, [item.sources]);
 
-  const slug = generateSlug(item.title);
-  const itemId = item.id || generateItemId(item.title, item.category, index);
+  // Use item.slug if available, otherwise generate from title
+  const slug = item.slug || generateSlug(item.title);
 
   return (
     <Link
-      href={`/discover/inspiration/${slug}?id=${itemId}`}
+      href={`/discover/inspiration/${slug}?id=${item.id}`}
       className="group relative col-span-2 row-span-2 rounded-2xl overflow-hidden bg-os-surface-dark border border-os-border-dark/50 hover:border-brand-aperol/30 transition-all"
     >
       {/* Background Image */}
@@ -83,14 +75,6 @@ function FeaturedInspirationCard({ item, index }: { item: InspirationCardData; i
 
       {/* Content */}
       <div className="relative h-full flex flex-col justify-end p-6">
-        {/* Featured badge */}
-        <div className="absolute top-4 left-4">
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-brand-aperol/90 text-white text-xs font-semibold">
-            <Sparkles className="w-3 h-3" />
-            Featured
-          </span>
-        </div>
-
         {/* Category badge */}
         <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-os-surface-dark/80 text-os-text-secondary-dark text-xs w-fit mb-3">
           {item.category === 'short-form' && <Video className="w-3 h-3" />}
@@ -99,7 +83,7 @@ function FeaturedInspirationCard({ item, index }: { item: InspirationCardData; i
           {item.category === 'short-form' ? 'Short Form' : item.category === 'long-form' ? 'Long Form' : 'Blog'}
         </span>
 
-        <h3 className="text-xl font-semibold text-brand-vanilla group-hover:text-brand-aperol transition-colors line-clamp-2 mb-2">
+        <h3 className="text-xl font-semibold text-brand-vanilla line-clamp-2 mb-2">
           {item.title}
         </h3>
         
@@ -129,7 +113,7 @@ function FeaturedInspirationCard({ item, index }: { item: InspirationCardData; i
 }
 
 // Compact card (smaller, grid position)
-function CompactInspirationCard({ item, index }: { item: InspirationCardData; index: number }) {
+function CompactInspirationCard({ item }: { item: InspirationCardData }) {
   const [ogImage, setOgImage] = useState<string | null>(null);
 
   useEffect(() => {
@@ -149,13 +133,13 @@ function CompactInspirationCard({ item, index }: { item: InspirationCardData; in
     }
   }, [item.sources]);
 
-  const slug = generateSlug(item.title);
-  const itemId = item.id || generateItemId(item.title, item.category, index);
+  // Use item.slug if available, otherwise generate from title
+  const slug = item.slug || generateSlug(item.title);
 
   return (
     <Link
-      href={`/discover/inspiration/${slug}?id=${itemId}`}
-      className="group flex flex-col rounded-xl overflow-hidden bg-os-surface-dark/50 border border-os-border-dark/30 hover:border-brand-aperol/30 hover:bg-os-surface-dark transition-all"
+      href={`/discover/inspiration/${slug}?id=${item.id}`}
+      className="group flex flex-col rounded-2xl overflow-hidden bg-os-surface-dark border border-os-border-dark/50 hover:border-brand-aperol/30 transition-all"
     >
       {/* Image */}
       <div className="relative aspect-[16/10] overflow-hidden bg-os-surface-dark">
@@ -176,7 +160,7 @@ function CompactInspirationCard({ item, index }: { item: InspirationCardData; in
 
       {/* Content */}
       <div className="p-3 flex-1 flex flex-col">
-        <h4 className="text-sm font-medium text-brand-vanilla group-hover:text-brand-aperol transition-colors line-clamp-2 mb-1">
+        <h4 className="text-sm font-medium text-brand-vanilla line-clamp-2 mb-1">
           {item.title}
         </h4>
         <p className="text-xs text-os-text-secondary-dark line-clamp-2 mb-2 flex-1">
@@ -214,7 +198,11 @@ function InspirationSection({
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
+      transition={{ 
+        duration: 0.4, 
+        ease: [0.25, 0.46, 0.45, 0.94] 
+      }}
+      layout="position"
       className="mb-10"
     >
       {/* Section Header */}
@@ -242,12 +230,12 @@ function InspirationSection({
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-fr">
         {/* Featured card - spans 2 cols and 2 rows */}
         <div className="col-span-2 row-span-2" style={{ minHeight: '320px' }}>
-          <FeaturedInspirationCard item={featuredItem} index={0} />
+          <FeaturedInspirationCard item={featuredItem} />
         </div>
 
         {/* Compact cards */}
         {compactItems.map((item, idx) => (
-          <CompactInspirationCard key={item.id || idx} item={item} index={idx + 1} />
+          <CompactInspirationCard key={item.id || idx} item={item} />
         ))}
       </div>
     </motion.div>

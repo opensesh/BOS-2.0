@@ -69,9 +69,9 @@ const GENERATION_OPTIONS: GenerationOption[] = [
   },
 ];
 
-// Helper to generate consistent IDs
-function generateId(title: string, category: string, index: number): string {
-  return `${category}-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-').substring(0, 30)}-${index}`;
+// Helper to generate consistent IDs - matches discover-utils.ts format
+function generateId(category: string, index: number): string {
+  return `inspiration-${category}-${index}`;
 }
 
 // Generate slug from title
@@ -83,20 +83,20 @@ function generateSlugFromTitle(title: string): string {
     .substring(0, 50);
 }
 
-// Process raw inspiration data and add IDs
+// Process raw inspiration data and add IDs - matches discover-utils.ts format
 function processInspirationData(
   data: { ideas: Array<{ title: string; description: string; starred?: boolean; sources: Array<{ name: string; url: string }> }> },
   category: string
 ): InspirationCardData[] {
   return data.ideas.map((idea, index) => ({
-    id: generateId(idea.title, category, index),
+    id: generateId(category, index),
     title: idea.title,
     description: idea.description,
     slug: generateSlugFromTitle(idea.title),
     category: category as 'short-form' | 'long-form' | 'blog',
     starred: idea.starred || false,
     sources: idea.sources.map((source, sourceIndex) => ({
-      id: `${category}-source-${index}-${sourceIndex}`,
+      id: `source-${index}-${sourceIndex}`,
       name: source.name,
       url: source.url,
     })),
@@ -104,8 +104,8 @@ function processInspirationData(
   }));
 }
 
-// Fetch inspiration item from all categories
-async function fetchInspirationItem(id: string): Promise<InspirationCardData | null> {
+// Fetch inspiration item from all categories - with ID and slug fallback
+async function fetchInspirationItem(id: string | null, slug: string): Promise<InspirationCardData | null> {
   try {
     const categories = ['short-form', 'long-form', 'blog'] as const;
     
@@ -114,8 +114,16 @@ async function fetchInspirationItem(id: string): Promise<InspirationCardData | n
       if (response.ok) {
         const data = await response.json();
         const processedItems = processInspirationData(data, category);
-        const found = processedItems.find(item => item.id === id);
-        if (found) return found;
+        
+        // First try to find by ID
+        if (id) {
+          const foundById = processedItems.find(item => item.id === id);
+          if (foundById) return foundById;
+        }
+        
+        // Fallback: find by slug
+        const foundBySlug = processedItems.find(item => item.slug === slug);
+        if (foundBySlug) return foundBySlug;
       }
     }
   } catch (error) {
@@ -136,16 +144,16 @@ export default function InspirationDetailPage() {
   const id = searchParams.get('id');
   const slug = params.slug as string;
 
-  // Fetch inspiration item
+  // Fetch inspiration item - by ID or slug fallback
   useEffect(() => {
-    if (id) {
+    if (slug) {
       setLoading(true);
-      fetchInspirationItem(id).then(data => {
+      fetchInspirationItem(id, slug).then(data => {
         setItem(data);
         setLoading(false);
       });
     }
-  }, [id]);
+  }, [id, slug]);
 
   // Fetch OG image
   useEffect(() => {
