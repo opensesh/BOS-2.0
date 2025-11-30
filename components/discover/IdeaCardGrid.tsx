@@ -142,11 +142,11 @@ function IdeaCard({ item }: { item: IdeaCardData }) {
       href={`/discover/ideas/${slug}?id=${item.id}`}
       className="group relative flex flex-col rounded-2xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl h-full"
     >
-      {/* TOP: Hero Image */}
-      <div className="relative w-full aspect-[4/3] overflow-hidden">
+      {/* TOP: Hero Image - 1/3 of card */}
+      <div className="relative w-full aspect-[3/1] overflow-hidden">
         {isLoading ? (
           <div className="w-full h-full flex items-center justify-center bg-os-charcoal">
-            <div className="w-6 h-6 border-2 border-brand-vanilla/30 border-t-brand-vanilla rounded-full animate-spin" />
+            <div className="w-5 h-5 border-2 border-brand-vanilla/30 border-t-brand-vanilla rounded-full animate-spin" />
           </div>
         ) : (
           <Image
@@ -159,8 +159,8 @@ function IdeaCard({ item }: { item: IdeaCardData }) {
         )}
       </div>
 
-      {/* BOTTOM: Texture background with content */}
-      <div className="relative flex-1 min-h-[180px]">
+      {/* BOTTOM: Texture background with content - 2/3 of card */}
+      <div className="relative flex-1 min-h-[140px]">
         {/* Texture Background */}
         <div className="absolute inset-0">
           <Image
@@ -172,31 +172,31 @@ function IdeaCard({ item }: { item: IdeaCardData }) {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 flex flex-col h-full p-5">
+        <div className="relative z-10 flex flex-col h-full p-4">
           {/* Format Label */}
-          <div className="mb-2">
-            <span className="inline-flex items-center gap-1.5 text-brand-vanilla text-sm font-medium">
-              <Sparkles className="w-3.5 h-3.5" />
+          <div className="mb-1.5">
+            <span className="inline-flex items-center gap-1 text-brand-vanilla text-xs font-medium">
+              <Sparkles className="w-3 h-3" />
               <span className="underline underline-offset-2 decoration-brand-vanilla/50">{formatLabel}</span>
             </span>
           </div>
 
           {/* Title */}
-          <h3 className="font-display font-bold text-brand-vanilla text-xl md:text-2xl leading-tight line-clamp-2 mb-auto">
+          <h3 className="font-display font-bold text-brand-vanilla text-base leading-snug line-clamp-2 mb-auto">
             {cleanTitle}
           </h3>
 
           {/* Footer Chips */}
-          <div className="flex items-center justify-between mt-4">
+          <div className="flex items-center justify-between mt-3">
             {/* Sources Chip */}
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-os-charcoal/90 text-brand-vanilla text-sm font-medium">
-              <Clock className="w-3.5 h-3.5 opacity-80" />
+            <span className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-os-charcoal/90 text-brand-vanilla text-xs font-medium">
+              <Clock className="w-3 h-3 opacity-80" />
               {item.sources.length} {item.sources.length === 1 ? 'source' : 'sources'}
             </span>
 
             {/* Category Chip */}
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-os-charcoal/90 text-brand-vanilla text-sm font-medium">
-              <CategoryIcon className="w-3.5 h-3.5 opacity-80" />
+            <span className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-os-charcoal/90 text-brand-vanilla text-xs font-medium">
+              <CategoryIcon className="w-3 h-3 opacity-80" />
               {categoryInfo.label}
             </span>
           </div>

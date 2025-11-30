@@ -70,6 +70,34 @@ const DESIGN_UX_SOURCES: RSSSource[] = [
     priority: 1,
     keywords: ['design', 'links', 'curated', 'ux'],
   },
+  {
+    name: 'Figma Blog',
+    url: 'https://figma.com/blog/feed/atom.xml',
+    category: 'design-ux',
+    priority: 1,
+    keywords: ['figma', 'design', 'product design', 'collaboration'],
+  },
+  {
+    name: 'Freethink',
+    url: 'https://www.freethink.com/feed/all',
+    category: 'design-ux',
+    priority: 2,
+    keywords: ['innovation', 'technology', 'future', 'design'],
+  },
+  {
+    name: 'Design Better',
+    url: 'https://designbetterpodcast.com/feed',
+    category: 'design-ux',
+    priority: 1,
+    keywords: ['design', 'podcast', 'product design', 'teams'],
+  },
+  {
+    name: 'AI Patterns (Tommy Geoco)',
+    url: 'https://aipatterns.substack.com/feed',
+    category: 'design-ux',
+    priority: 1,
+    keywords: ['ai', 'design patterns', 'ux', 'ai design'],
+  },
 ];
 
 /**
@@ -97,6 +125,20 @@ const BRANDING_SOURCES: RSSSource[] = [
     category: 'branding',
     priority: 1,
     keywords: ['branding', 'identity', 'logo', 'visual identity'],
+  },
+  {
+    name: 'Oren Meets World',
+    url: 'https://www.productworld.xyz/feed',
+    category: 'branding',
+    priority: 1,
+    keywords: ['product', 'strategy', 'branding', 'business'],
+  },
+  {
+    name: 'Marcus on AI (Gary Marcus)',
+    url: 'https://garymarcus.substack.com/feed',
+    category: 'branding',
+    priority: 2,
+    keywords: ['ai', 'criticism', 'technology', 'analysis'],
   },
 ];
 
@@ -139,6 +181,27 @@ const AI_CREATIVE_SOURCES: RSSSource[] = [
     category: 'ai-creative',
     priority: 2,
     keywords: ['ai', 'research', 'technology'],
+  },
+  {
+    name: 'Love + Money',
+    url: 'https://loveandmoney.substack.com/feed',
+    category: 'ai-creative',
+    priority: 1,
+    keywords: ['ai', 'creative', 'business', 'design'],
+  },
+  {
+    name: 'Awwwards',
+    url: 'https://www.awwwards.com/blog/feed',
+    category: 'ai-creative',
+    priority: 1,
+    keywords: ['web design', 'awards', 'creative', 'inspiration'],
+  },
+  {
+    name: 'Dribbble',
+    url: 'https://dribbble.com/stories.rss',
+    category: 'ai-creative',
+    priority: 1,
+    keywords: ['design', 'creative', 'portfolio', 'inspiration'],
   },
 ];
 
@@ -202,6 +265,48 @@ const GENERAL_TECH_SOURCES: RSSSource[] = [
     priority: 3,
     keywords: ['technology', 'science', 'culture'],
   },
+  {
+    name: 'Naval Ravikant',
+    url: 'https://nav.al/podcast/feed',
+    category: 'general-tech',
+    priority: 1,
+    keywords: ['startup', 'philosophy', 'wealth', 'entrepreneurship'],
+  },
+  {
+    name: 'Peter Yang (Creator Economy)',
+    url: 'https://creatoreconomy.so/feed',
+    category: 'general-tech',
+    priority: 1,
+    keywords: ['creator', 'economy', 'product', 'growth'],
+  },
+  {
+    name: 'Sequoia Capital',
+    url: 'https://medium.com/feed/sequoia-capital',
+    category: 'general-tech',
+    priority: 1,
+    keywords: ['venture', 'startup', 'investing', 'growth'],
+  },
+  {
+    name: 'a16z',
+    url: 'https://a16z.com/news-content/feed',
+    category: 'general-tech',
+    priority: 1,
+    keywords: ['venture', 'crypto', 'ai', 'startup'],
+  },
+  {
+    name: 'SemiAnalysis',
+    url: 'https://semianalysis.substack.com/feed',
+    category: 'general-tech',
+    priority: 1,
+    keywords: ['semiconductors', 'ai', 'chips', 'hardware'],
+  },
+  {
+    name: 'Hacker News',
+    url: 'https://news.ycombinator.com/rss',
+    category: 'general-tech',
+    priority: 2,
+    keywords: ['tech', 'startup', 'programming', 'news'],
+  },
 ];
 
 /**
@@ -236,6 +341,27 @@ const STARTUP_BUSINESS_SOURCES: RSSSource[] = [
     category: 'startup-business',
     priority: 2,
     keywords: ['tech', 'strategy', 'business', 'analysis'],
+  },
+  {
+    name: 'Derek Thompson',
+    url: 'https://derekthompson.substack.com/feed',
+    category: 'startup-business',
+    priority: 1,
+    keywords: ['culture', 'economics', 'media', 'trends'],
+  },
+  {
+    name: 'Greg Isenberg (Late Checkout)',
+    url: 'https://latecheckout.substack.com/feed',
+    category: 'startup-business',
+    priority: 1,
+    keywords: ['startup', 'community', 'business', 'ideas'],
+  },
+  {
+    name: "Lenny's Newsletter",
+    url: 'https://lennysnewsletter.com/feed',
+    category: 'startup-business',
+    priority: 1,
+    keywords: ['product', 'growth', 'startup', 'advice'],
   },
 ];
 
