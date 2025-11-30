@@ -222,14 +222,18 @@ export function ArticleReferenceCard({
 export function InspirationReferenceCard({
   title,
   category,
+  slug,
   generationType,
   generationLabel,
 }: {
   title: string;
   category: string;
+  slug?: string;
   generationType?: string;
   generationLabel?: string;
 }) {
+  const router = useRouter();
+  
   const getCategoryLabel = (cat: string) => {
     switch (cat) {
       case 'short-form':
@@ -296,8 +300,20 @@ export function InspirationReferenceCard({
     }
   };
 
+  const handleClick = () => {
+    if (slug) {
+      router.push(`/discover/inspiration/${slug}`);
+    }
+  };
+
   return (
-    <div className="w-full flex items-start gap-3 p-3 mb-4 bg-os-surface-dark/50 rounded-xl border border-os-border-dark/50">
+    <button
+      onClick={handleClick}
+      disabled={!slug}
+      className={`w-full flex items-center gap-3 p-3 mb-4 bg-os-surface-dark/50 rounded-xl border border-os-border-dark/50 text-left ${
+        slug ? 'hover:border-brand-aperol/30 cursor-pointer group' : ''
+      } transition-all`}
+    >
       {/* Icon */}
       <div className="w-10 h-10 rounded-lg bg-brand-aperol/10 flex items-center justify-center flex-shrink-0">
         {getIcon()}
@@ -305,16 +321,21 @@ export function InspirationReferenceCard({
 
       {/* Content */}
       <div className="flex-1 min-w-0">
-        <div className="flex items-center gap-2 mb-0.5">
-          <p className="text-xs text-os-text-secondary-dark">{getActionLabel()}</p>
-          <span className="px-1.5 py-0.5 rounded text-[10px] font-medium bg-brand-aperol/10 text-brand-aperol">
-            {getCategoryLabel(category)}
-          </span>
-        </div>
-        <p className="text-sm font-medium text-brand-vanilla line-clamp-1">
+        <p className="text-xs text-os-text-secondary-dark mb-0.5">{getActionLabel()}</p>
+        <p className={`text-sm font-medium text-brand-vanilla line-clamp-1 ${slug ? 'group-hover:text-brand-aperol' : ''} transition-colors`}>
           {title}
         </p>
       </div>
-    </div>
+
+      {/* Category tag - subtle, on the right */}
+      <span className="px-2 py-1 rounded text-[10px] font-medium bg-os-bg-dark/60 text-os-text-secondary-dark border border-os-border-dark/30 flex-shrink-0">
+        {getCategoryLabel(category)}
+      </span>
+
+      {/* Arrow indicator if clickable */}
+      {slug && (
+        <ArrowUpRight className="w-4 h-4 text-os-text-secondary-dark group-hover:text-brand-aperol transition-colors flex-shrink-0" />
+      )}
+    </button>
   );
 }

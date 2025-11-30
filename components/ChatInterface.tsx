@@ -46,6 +46,7 @@ interface ArticleContext {
 interface InspirationContext {
   title: string;
   category: string;
+  slug?: string;
   generationType?: string;
   generationLabel?: string;
 }
@@ -194,6 +195,7 @@ export function ChatInterface() {
       // Check for inspiration context in URL params
       const inspirationTitle = searchParams.get('inspirationTitle');
       const inspirationCategory = searchParams.get('inspirationCategory');
+      const inspirationSlug = searchParams.get('inspirationSlug');
       const generationType = searchParams.get('generationType');
       const generationLabel = searchParams.get('generationLabel');
       
@@ -201,6 +203,7 @@ export function ChatInterface() {
         setInspirationContext({
           title: inspirationTitle,
           category: inspirationCategory,
+          slug: inspirationSlug || undefined,
           generationType: generationType || undefined,
           generationLabel: generationLabel || undefined,
         });
@@ -458,6 +461,7 @@ export function ChatInterface() {
                         <InspirationReferenceCard
                           title={inspirationContext.title}
                           category={inspirationContext.category}
+                          slug={inspirationContext.slug}
                           generationType={inspirationContext.generationType}
                           generationLabel={inspirationContext.generationLabel}
                         />

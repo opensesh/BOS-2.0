@@ -91,11 +91,12 @@ export async function POST(req: Request) {
       includeFullDocs: shouldIncludeFullDocs(messages),
     });
 
-    // Stream the response
+    // Stream the response with generous max tokens
     const result = streamText({
       model: modelInstance,
       messages: modelMessages,
       system: systemPrompt,
+      maxTokens: 4096, // Allow longer responses
     });
 
     // Return streaming response in format useChat expects (AI SDK 5.x)

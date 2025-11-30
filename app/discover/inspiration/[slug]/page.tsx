@@ -17,11 +17,18 @@ import {
   Layers,
   ListTree,
   FileSearch,
-  Clock
+  Clock,
+  Sparkles,
+  Copy,
+  Check,
+  ChevronRight,
+  Hash,
+  Target,
+  Eye
 } from 'lucide-react';
 import { Sidebar } from '@/components/Sidebar';
 import { StickyArticleHeader } from '@/components/discover/article/StickyArticleHeader';
-import { InspirationCardData } from '@/types';
+import { InspirationCardData, PlatformTip } from '@/types';
 
 // Content-type specific generation options
 interface GenerationOption {
@@ -141,7 +148,18 @@ function generateSlugFromTitle(title: string): string {
 
 // Process raw inspiration data and add IDs - matches discover-utils.ts format
 function processInspirationData(
-  data: { ideas: Array<{ title: string; description: string; starred?: boolean; sources: Array<{ name: string; url: string }> }> },
+  data: { ideas: Array<{ 
+    title: string; 
+    description: string; 
+    starred?: boolean; 
+    sources: Array<{ name: string; url: string }>;
+    // Rich creative brief fields
+    hooks?: string[];
+    platformTips?: Array<{ platform: string; tips: string[] }>;
+    visualDirection?: { rating: number; description: string };
+    exampleOutline?: string[];
+    hashtags?: string;
+  }> },
   category: string
 ): InspirationCardData[] {
   return data.ideas.map((idea, index) => ({
@@ -157,6 +175,12 @@ function processInspirationData(
       url: source.url,
     })),
     isPrompt: true,
+    // Rich creative brief fields
+    hooks: idea.hooks,
+    platformTips: idea.platformTips as PlatformTip[] | undefined,
+    visualDirection: idea.visualDirection,
+    exampleOutline: idea.exampleOutline,
+    hashtags: idea.hashtags,
   }));
 }
 
@@ -236,6 +260,21 @@ Keep it under 150 words total. Do not use markdown formatting, just plain text p
   return `This content idea explores "${item.title}" - a timely topic that offers creative potential across multiple formats. The concept draws from ${item.sources.length} source${item.sources.length > 1 ? 's' : ''}, providing a solid foundation for research and development. Consider the unique angles this topic offers and how it might resonate with your target audience.`;
 }
 
+// Visual direction rating colors
+const getRatingColor = (rating: number) => {
+  if (rating <= 3) return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30';
+  if (rating <= 6) return 'bg-amber-500/20 text-amber-400 border-amber-500/30';
+  return 'bg-rose-500/20 text-rose-400 border-rose-500/30';
+};
+
+const getRatingLabel = (rating: number) => {
+  if (rating <= 2) return 'Basic';
+  if (rating <= 4) return 'Conservative';
+  if (rating <= 6) return 'Modern';
+  if (rating <= 8) return 'Bold';
+  return 'Radical';
+};
+
 export default function InspirationDetailPage() {
   const params = useParams();
   const searchParams = useSearchParams();
@@ -247,9 +286,39 @@ export default function InspirationDetailPage() {
   const [generatingId, setGeneratingId] = useState<string | null>(null);
   const [conceptBrief, setConceptBrief] = useState<string | null>(null);
   const [loadingBrief, setLoadingBrief] = useState(false);
+  const [activePlatform, setActivePlatform] = useState<string | null>(null);
+  const [hashtagsCopied, setHashtagsCopied] = useState(false);
 
   const id = searchParams.get('id');
   const slug = params.slug as string;
+
+  // Set initial active platform when item loads
+  useEffect(() => {
+    if (item?.platformTips && item.platformTips.length > 0 && !activePlatform) {
+      setActivePlatform(item.platformTips[0].platform);
+    }
+  }, [item, activePlatform]);
+
+  // Copy hashtags to clipboard
+  const copyHashtags = async () => {
+    if (item?.hashtags) {
+      try {
+        await navigator.clipboard.writeText(item.hashtags);
+        setHashtagsCopied(true);
+        setTimeout(() => setHashtagsCopied(false), 2000);
+      } catch {
+        // Fallback for older browsers
+        const textarea = document.createElement('textarea');
+        textarea.value = item.hashtags;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        setHashtagsCopied(true);
+        setTimeout(() => setHashtagsCopied(false), 2000);
+      }
+    }
+  };
 
   // Fetch inspiration item
   useEffect(() => {
@@ -315,6 +384,7 @@ export default function InspirationDetailPage() {
       q: prompt,
       inspirationTitle: item.title,
       inspirationCategory: item.category,
+      inspirationSlug: slug,
       generationType: option.id,
       generationLabel: option.title,
     });
