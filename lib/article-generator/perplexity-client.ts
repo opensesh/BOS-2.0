@@ -1,10 +1,9 @@
 /**
  * Perplexity API Client for Article Generation
  * Gathers sources and generates content for discover articles
+ * 
+ * Uses direct Perplexity API calls for reliability in script environments.
  */
-
-import { generateText } from 'ai';
-import { perplexity } from '@ai-sdk/perplexity';
 
 interface SourceInfo {
   id: string;
@@ -27,6 +26,15 @@ interface ArticleGenerationResult {
   sections: GeneratedSection[];
   allSources: SourceInfo[];
   heroImageUrl?: string;
+}
+
+interface PerplexityResponse {
+  choices: Array<{
+    message: {
+      content: string;
+    };
+  }>;
+  citations?: string[];
 }
 
 /**
@@ -54,6 +62,52 @@ function getFaviconUrl(url: string): string {
 }
 
 /**
+ * Call Perplexity API directly
+ */
+async function callPerplexity(
+  prompt: string,
+  systemPrompt?: string,
+  model: string = 'sonar-pro'
+): Promise<{ text: string; citations: string[] }> {
+  const apiKey = process.env.PERPLEXITY_API_KEY;
+  
+  if (!apiKey) {
+    throw new Error('PERPLEXITY_API_KEY not set');
+  }
+  
+  const messages = [];
+  if (systemPrompt) {
+    messages.push({ role: 'system', content: systemPrompt });
+  }
+  messages.push({ role: 'user', content: prompt });
+  
+  const response = await fetch('https://api.perplexity.ai/chat/completions', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${apiKey}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model,
+      messages,
+      max_tokens: 2000,
+      return_citations: true,
+    }),
+  });
+  
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`Perplexity API error: ${response.status} - ${errorText.substring(0, 200)}`);
+  }
+  
+  const data: PerplexityResponse = await response.json();
+  const text = data.choices?.[0]?.message?.content || '';
+  const citations = data.citations || [];
+  
+  return { text, citations };
+}
+
+/**
  * Search Perplexity for sources on a topic
  * Returns citations from the search
  */
@@ -61,25 +115,16 @@ async function searchForSources(
   topic: string,
   existingUrls: Set<string>
 ): Promise<{ text: string; sources: SourceInfo[] }> {
-  const result = await generateText({
-    model: perplexity('sonar-pro'),
-    prompt: `Search for the latest comprehensive news and analysis about: "${topic}"
+  const { text, citations } = await callPerplexity(
+    `Search for the latest comprehensive news and analysis about: "${topic}"
     
     Provide detailed information with specific facts, quotes, and data points.
     Include multiple perspectives and viewpoints from different sources.
-    Focus on recent developments and breaking news.`,
-  });
-
-  // Extract citations from Perplexity response
-  // Access provider metadata (type assertion for Perplexity-specific fields)
-  const providerMetadata = (result as { experimental_providerMetadata?: Record<string, unknown> }).experimental_providerMetadata;
-  const perplexityData = providerMetadata?.perplexity as {
-    citations?: string[];
-  } | undefined;
-  const citationUrls = perplexityData?.citations || [];
+    Focus on recent developments and breaking news.`
+  );
 
   const sources: SourceInfo[] = [];
-  for (const url of citationUrls) {
+  for (const url of citations) {
     if (!existingUrls.has(url)) {
       existingUrls.add(url);
       sources.push({
@@ -91,7 +136,7 @@ async function searchForSources(
     }
   }
 
-  return { text: result.text, sources };
+  return { text, sources };
 }
 
 /**
@@ -111,9 +156,8 @@ async function generateArticleContent(
     .map((s, i) => `[${i + 1}] ${s.name}: ${s.url}`)
     .join('\n');
 
-  const result = await generateText({
-    model: perplexity('sonar-pro'),
-    prompt: `You are a news synthesizer creating a comprehensive article about: "${topic}"
+  const { text } = await callPerplexity(
+    `You are a news synthesizer creating a comprehensive article about: "${topic}"
 
 Based on the following research:
 ${context}
@@ -148,10 +192,10 @@ IMPORTANT:
 - Each paragraph should have UNIQUE sources
 - Write in professional news style
 - Be factual and specific`,
-  });
+    'You are a professional news writer who creates well-researched articles with proper citations.'
+  );
 
   // Parse the generated content
-  const text = result.text;
   const sections: GeneratedSection[] = [];
   const sidebarSections: string[] = [];
 
@@ -313,12 +357,20 @@ export async function generateDiscoverArticle(
 
   console.log(`  Total sources gathered: ${allSources.length}`);
 
+  if (allSources.length < 5) {
+    throw new Error(`Only gathered ${allSources.length} sources - not enough for a rich article`);
+  }
+
   // Generate article content
   const { sections, sidebarSections } = await generateArticleContent(
     topic,
     allSources,
     searchResults
   );
+
+  if (sections.length === 0) {
+    throw new Error('Failed to generate article sections');
+  }
 
   // Extract title from topic or generate one
   const titleMatch = searchResults[0]?.match(/^#\s*(.+)$/m);
@@ -331,4 +383,3 @@ export async function generateDiscoverArticle(
     heroImageUrl: undefined, // Could be enhanced to find images
   };
 }
-

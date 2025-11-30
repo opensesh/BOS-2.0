@@ -644,10 +644,22 @@ async function generateFeaturedArticles(
     
     try {
       // Use the Perplexity article generator to create rich content
+      console.log(`    📡 Calling Perplexity API...`);
       const result = await generateDiscoverArticle(
         cluster.title,
         cluster.sources
       );
+      
+      // Validate we got actual content
+      if (!result.sections || result.sections.length === 0) {
+        console.error(`    ❌ No sections generated - Perplexity may have failed`);
+        continue; // Skip this article, don't save empty content
+      }
+      
+      if (!result.allSources || result.allSources.length < 5) {
+        console.error(`    ❌ Too few sources (${result.allSources?.length || 0}) - skipping`);
+        continue;
+      }
       
       // Convert to DiscoverArticle format
       const slug = generateSlug(cluster.title);
@@ -689,6 +701,13 @@ async function generateFeaturedArticles(
         }),
       }));
       
+      // Validate sections have content
+      const totalParagraphs = sections.reduce((sum, s) => sum + s.paragraphs.length, 0);
+      if (totalParagraphs < 3) {
+        console.error(`    ❌ Too few paragraphs (${totalParagraphs}) - skipping`);
+        continue;
+      }
+      
       // Generate sidebar from section titles
       const sidebarSections = sections
         .filter(s => s.title)
@@ -708,7 +727,7 @@ async function generateFeaturedArticles(
       };
       
       articles.push(article);
-      console.log(`    ✓ Generated with ${allSources.length} sources, ${sections.length} sections`);
+      console.log(`    ✓ Generated with ${allSources.length} sources, ${sections.length} sections, ${totalParagraphs} paragraphs`);
       
       // Rate limit to avoid hitting API limits
       if (i < topClusters.length - 1) {
@@ -716,6 +735,7 @@ async function generateFeaturedArticles(
       }
     } catch (error) {
       console.error(`    ❌ Failed to generate article:`, error);
+      // Don't save empty articles - continue to next
     }
   }
   
