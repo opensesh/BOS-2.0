@@ -4,6 +4,7 @@ import { useState, useRef, useEffect, useCallback, useMemo } from 'react';
 import { useChat } from '@ai-sdk/react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { DefaultChatTransport } from 'ai';
+import { motion } from 'framer-motion';
 import {
   Mic,
   Paperclip,
@@ -26,6 +27,7 @@ import { ModelSelector } from './ui/model-selector';
 import { useVoiceRecognition } from '@/hooks/useVoiceRecognition';
 import { ModelId } from '@/lib/ai/providers';
 import { useChatContext } from '@/lib/chat-context';
+import { fadeIn, fadeInUp, staggerContainer } from '@/lib/motion';
 import {
   FollowUpInput,
   SourceInfo,
@@ -563,8 +565,16 @@ export function ChatInterface() {
 
         {/* Landing Mode */}
         {!hasMessages && (
-          <>
-            <div className="w-full max-w-3xl px-4 mb-8 text-center">
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            animate="visible"
+            className="contents"
+          >
+            <motion.div 
+              className="w-full max-w-3xl px-4 mb-8 text-center"
+              variants={fadeInUp}
+            >
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-vanilla mb-2 tracking-tight font-display">
                 Brand Operating System
               </h1>
@@ -579,9 +589,9 @@ export function ChatInterface() {
                   </div>
                 </div>
               )}
-            </div>
+            </motion.div>
 
-            <div className="w-full">
+            <motion.div className="w-full" variants={fadeInUp}>
               <div className="max-w-3xl mx-auto px-4">
                 <form onSubmit={handleSubmit} className="relative">
                   <div
@@ -744,14 +754,17 @@ export function ChatInterface() {
                   </div>
                 </form>
               </div>
-            </div>
+            </motion.div>
 
             {showSuggestions && (
-              <div className="w-full max-w-3xl mx-auto px-4 mt-4">
+              <motion.div 
+                className="w-full max-w-3xl mx-auto px-4 mt-4"
+                variants={fadeIn}
+              >
                 <SearchResearchSuggestions mode={suggestionsMode} onQueryClick={handleQueryClick} />
-              </div>
+              </motion.div>
             )}
-          </>
+          </motion.div>
         )}
       </div>
     </>

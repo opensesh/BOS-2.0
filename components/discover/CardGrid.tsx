@@ -1,8 +1,12 @@
+'use client';
+
 import React from 'react';
+import { motion } from 'framer-motion';
 import { NewsCard } from './NewsCard';
 import { IdeaPromptCard } from './IdeaPromptCard';
 import { NewsCardData, IdeaCardData } from '@/types';
 import { SourceInfo } from '@/components/chat/AnswerView';
+import { staggerContainerFast, fadeInUp } from '@/lib/motion';
 
 interface CardGridProps {
   cards: (NewsCardData | IdeaCardData)[];
@@ -42,11 +46,23 @@ export function CardGrid({
   }
 
   return (
-    <div className="flex flex-col gap-6">
+    <motion.div 
+      className="flex flex-col gap-6"
+      variants={staggerContainerFast}
+      initial="hidden"
+      animate="visible"
+    >
       {groups.map((group, groupIndex) => (
-        <div key={groupIndex} className="flex flex-col gap-4">
+        <motion.div 
+          key={groupIndex} 
+          className="flex flex-col gap-4"
+          variants={fadeInUp}
+        >
           {/* Featured card - horizontal layout */}
-          <div className="w-full">
+          <motion.div 
+            className="w-full"
+            variants={fadeInUp}
+          >
             {type === 'news' ? (
               <NewsCard 
                 item={group.featured as NewsCardData} 
@@ -62,18 +78,22 @@ export function CardGrid({
                 variant="featured" 
               />
             )}
-          </div>
+          </motion.div>
           
           {/* Compact cards - horizontal scroll on mobile/tablet, 3-col grid on desktop */}
           {group.compact.length > 0 && (
             <>
               {/* Mobile/Tablet: Horizontal scrollable carousel */}
               <div className="lg:hidden -mx-4 px-4">
-                <div className="flex gap-3 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-2">
+                <motion.div 
+                  className="flex gap-3 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-2"
+                  variants={staggerContainerFast}
+                >
                   {group.compact.map((card, cardIndex) => (
-                    <div
+                    <motion.div
                       key={cardIndex}
                       className="flex-shrink-0 w-[calc(33.333%-8px)] min-w-[140px] snap-start"
+                      variants={fadeInUp}
                     >
                       {type === 'news' ? (
                         <NewsCard
@@ -90,15 +110,18 @@ export function CardGrid({
                           variant="compact"
                         />
                       )}
-                    </div>
+                    </motion.div>
                   ))}
-                </div>
+                </motion.div>
               </div>
 
               {/* Desktop: 3-column grid */}
-              <div className="hidden lg:grid lg:grid-cols-3 gap-4">
+              <motion.div 
+                className="hidden lg:grid lg:grid-cols-3 gap-4"
+                variants={staggerContainerFast}
+              >
                 {group.compact.map((card, cardIndex) => (
-                  <div key={cardIndex}>
+                  <motion.div key={cardIndex} variants={fadeInUp}>
                     {type === 'news' ? (
                       <NewsCard
                         item={card as NewsCardData}
@@ -109,23 +132,26 @@ export function CardGrid({
                         onAddToSpace={onAddToSpace}
                       />
                     ) : (
-                      <InspirationPromptCard
-                        item={card as InspirationCardData}
+                      <IdeaPromptCard
+                        item={card as IdeaCardData}
                         variant="compact"
                       />
                     )}
-                  </div>
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
             </>
           )}
 
           {/* Divider between groups */}
           {groupIndex < groups.length - 1 && (
-            <div className="border-t border-os-border-dark/30 my-4" />
+            <motion.div 
+              className="border-t border-os-border-dark/30 my-4"
+              variants={fadeInUp}
+            />
           )}
-        </div>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 }

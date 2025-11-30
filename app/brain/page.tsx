@@ -2,10 +2,12 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { Sidebar } from '@/components/Sidebar';
 import { BrainSettingsModal } from '@/components/brain/BrainSettingsModal';
 import { AddBrainResourceModal } from '@/components/brain/AddBrainResourceModal';
 import { useBrainResources, BrainResource } from '@/hooks/useBrainResources';
+import { PageTransition, MotionItem, staggerContainer, fadeInUp } from '@/lib/motion';
 import { 
   Settings, 
   ExternalLink, 
@@ -130,30 +132,36 @@ function BentoCard({ item }: { item: typeof brainPages[0] }) {
   const Icon = item.icon;
   
   return (
-    <Link
-      href={item.href}
-      className="group relative h-full flex flex-col p-6 md:p-8 gap-6 md:gap-8 rounded-2xl bg-os-surface-dark border border-os-border-dark hover:border-brand-aperol/50 hover:bg-os-surface-dark/80 transition-all duration-300 ease-out"
+    <motion.div
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+      transition={{ duration: 0.15 }}
     >
-      {/* Top Section: Icon and Arrow */}
-      <div className="flex items-start justify-between">
-        <div className="p-3 rounded-xl bg-os-bg-dark/50 border border-os-border-dark">
-          <Icon className="w-6 h-6 text-brand-vanilla" />
+      <Link
+        href={item.href}
+        className="group relative h-full flex flex-col p-6 md:p-8 gap-6 md:gap-8 rounded-2xl bg-os-surface-dark border border-os-border-dark hover:border-brand-aperol/50 hover:bg-os-surface-dark/80 transition-all duration-300 ease-out"
+      >
+        {/* Top Section: Icon and Arrow */}
+        <div className="flex items-start justify-between">
+          <div className="p-3 rounded-xl bg-os-bg-dark/50 border border-os-border-dark">
+            <Icon className="w-6 h-6 text-brand-vanilla" />
+          </div>
+          <ArrowUpRight className="w-5 h-5 text-os-text-secondary-dark opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-y-2 translate-x-2 group-hover:translate-y-0 group-hover:translate-x-0" />
         </div>
-        <ArrowUpRight className="w-5 h-5 text-os-text-secondary-dark opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-y-2 translate-x-2 group-hover:translate-y-0 group-hover:translate-x-0" />
-      </div>
-      
-      {/* Bottom Section: Text */}
-      <div className="space-y-2">
-        <h3 className="text-xl md:text-2xl font-display font-bold text-brand-vanilla group-hover:text-brand-aperol transition-colors">
-          {item.title}
-        </h3>
-        <div className="h-10">
-          <p className="text-sm md:text-base text-os-text-secondary-dark line-clamp-2">
-            {item.description}
-          </p>
+        
+        {/* Bottom Section: Text */}
+        <div className="space-y-2">
+          <h3 className="text-xl md:text-2xl font-display font-bold text-brand-vanilla group-hover:text-brand-aperol transition-colors">
+            {item.title}
+          </h3>
+          <div className="h-10">
+            <p className="text-sm md:text-base text-os-text-secondary-dark line-clamp-2">
+              {item.description}
+            </p>
+          </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </motion.div>
   );
 }
 
@@ -180,52 +188,71 @@ export default function BrainPage() {
       
       <main className="flex-1 flex flex-col overflow-hidden pt-14 lg:pt-0">
         <div className="flex-1 overflow-y-auto custom-scrollbar">
-          <div className="w-full max-w-6xl mx-auto px-6 py-8 md:px-12 md:py-12">
+          <PageTransition className="w-full max-w-6xl mx-auto px-6 py-8 md:px-12 md:py-12">
             {/* Page Header */}
-            <div className="flex flex-col gap-2 mb-10">
+            <MotionItem className="flex flex-col gap-2 mb-10">
               <div className="flex items-start justify-between w-full">
                 <h1 className="text-4xl md:text-5xl font-display font-bold text-brand-vanilla">
                   Brain
                 </h1>
-                <button
+                <motion.button
                   onClick={() => setIsSettingsOpen(true)}
                   className="p-3 rounded-xl bg-os-surface-dark hover:bg-os-border-dark border border-os-border-dark transition-colors group"
                   title="Brain Settings"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   <Settings className="w-5 h-5 text-os-text-secondary-dark group-hover:text-brand-vanilla transition-colors" />
-                </button>
+                </motion.button>
               </div>
               <p className="text-base md:text-lg text-os-text-secondary-dark max-w-2xl">
                 Your brand&apos;s AI knowledge center. Configure Claude with your brand identity, 
                 messaging, and writing styles for consistent, on-brand content generation.
               </p>
-            </div>
+            </MotionItem>
 
             {/* Bento Cards for Subpages */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-10">
-              {brainPages.map((page) => (
-                <BentoCard key={page.id} item={page} />
+            <motion.div 
+              className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-10"
+              variants={staggerContainer}
+              initial="hidden"
+              animate="visible"
+            >
+              {brainPages.map((page, index) => (
+                <motion.div key={page.id} variants={fadeInUp} custom={index}>
+                  <BentoCard item={page} />
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
 
             {/* Claude Resources Section */}
-            <section>
-              <h2 className="text-xl font-display font-semibold text-brand-vanilla mb-4">
-                Resources
-              </h2>
-              <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-3">
-                {isLoaded && resources.map((resource) => (
-                  <ResourceCard 
-                    key={resource.id} 
-                    resource={resource} 
-                    onDelete={deleteResource}
-                    onEdit={handleEditResource}
-                  />
-                ))}
-                <AddResourceCard onClick={() => setIsAddResourceOpen(true)} />
-              </div>
-            </section>
-          </div>
+            <MotionItem>
+              <section>
+                <h2 className="text-xl font-display font-semibold text-brand-vanilla mb-4">
+                  Resources
+                </h2>
+                <motion.div 
+                  className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-3"
+                  variants={staggerContainer}
+                  initial="hidden"
+                  animate="visible"
+                >
+                  {isLoaded && resources.map((resource, index) => (
+                    <motion.div key={resource.id} variants={fadeInUp} custom={index}>
+                      <ResourceCard 
+                        resource={resource} 
+                        onDelete={deleteResource}
+                        onEdit={handleEditResource}
+                      />
+                    </motion.div>
+                  ))}
+                  <motion.div variants={fadeInUp}>
+                    <AddResourceCard onClick={() => setIsAddResourceOpen(true)} />
+                  </motion.div>
+                </motion.div>
+              </section>
+            </MotionItem>
+          </PageTransition>
         </div>
       </main>
 

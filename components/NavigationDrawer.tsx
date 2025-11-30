@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   FileText,
   FolderPlus,
@@ -25,6 +26,7 @@ import {
 } from 'lucide-react';
 import { SPACES } from '@/lib/mock-data';
 import { useChatContext } from '@/lib/chat-context';
+import { slideFromLeft, staggerContainerFast, fadeInUp } from '@/lib/motion';
 
 interface NavigationDrawerProps {
   isOpen: boolean;
@@ -121,72 +123,91 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef }: NavigationD
     }
   }, [isOpen, item, railRef]); // Removed onClose from dependencies
 
-  if (!isOpen || !item) return null;
-
   const renderContent = () => {
     switch (item) {
       case 'Spaces':
         return (
-          <div className="py-2">
+          <motion.div 
+            className="py-2"
+            variants={staggerContainerFast}
+            initial="hidden"
+            animate="visible"
+          >
             <div className="px-4 py-2 mb-2">
-              <div className="flex items-center gap-2 mb-4">
+              <motion.div variants={fadeInUp} className="flex items-center gap-2 mb-4">
                 <h3 className="text-lg font-semibold text-brand-vanilla">Spaces</h3>
-              </div>
+              </motion.div>
               
-              <button className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-brand-vanilla transition-colors mb-2">
+              <motion.button 
+                variants={fadeInUp}
+                className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-brand-vanilla transition-colors mb-2"
+              >
                 <FileText className="w-5 h-5" />
                 <span className="text-sm">Templates</span>
-              </button>
+              </motion.button>
               
-              <button className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-brand-vanilla transition-colors mb-4">
+              <motion.button 
+                variants={fadeInUp}
+                className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-brand-vanilla transition-colors mb-4"
+              >
                 <FolderPlus className="w-5 h-5" />
                 <span className="text-sm">Create new Space</span>
-              </button>
+              </motion.button>
 
-              <div className="border-t border-os-border-dark pt-2">
+              <motion.div variants={fadeInUp} className="border-t border-os-border-dark pt-2">
                 <div className="px-3 py-1 text-xs text-os-text-secondary-dark mb-2">Private</div>
-                {SPACES.map((space) => {
+                {SPACES.map((space, index) => {
                   const isSpaceActive = pathname === `/spaces/${space.slug}`;
                   return (
-                    <Link
+                    <motion.div
                       key={space.id}
-                      href={`/spaces/${space.slug}`}
-                      className={`
-                        w-full flex items-center gap-3 px-3 py-2 rounded-lg mb-1
-                        transition-colors
-                        ${
-                          isSpaceActive
-                            ? 'bg-os-surface-dark text-brand-aperol'
-                            : 'text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-brand-vanilla'
-                        }
-                      `}
+                      variants={fadeInUp}
+                      custom={index}
                     >
-                      <LayoutGrid className={`w-5 h-5 ${isSpaceActive ? 'text-brand-aperol' : ''}`} />
-                      <div className="flex-1 min-w-0">
-                        <div className="text-sm font-medium truncate">{space.title}</div>
-                        {space.description && (
-                          <div className="text-xs text-os-text-secondary-dark truncate">
-                            {space.description}
-                          </div>
-                        )}
-                      </div>
-                    </Link>
+                      <Link
+                        href={`/spaces/${space.slug}`}
+                        className={`
+                          w-full flex items-center gap-3 px-3 py-2 rounded-lg mb-1
+                          transition-colors
+                          ${
+                            isSpaceActive
+                              ? 'bg-os-surface-dark text-brand-aperol'
+                              : 'text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-brand-vanilla'
+                          }
+                        `}
+                      >
+                        <LayoutGrid className={`w-5 h-5 ${isSpaceActive ? 'text-brand-aperol' : ''}`} />
+                        <div className="flex-1 min-w-0">
+                          <div className="text-sm font-medium truncate">{space.title}</div>
+                          {space.description && (
+                            <div className="text-xs text-os-text-secondary-dark truncate">
+                              {space.description}
+                            </div>
+                          )}
+                        </div>
+                      </Link>
+                    </motion.div>
                   );
                 })}
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         );
       
       case 'Home':
         return (
-          <div className="py-2">
+          <motion.div 
+            className="py-2"
+            variants={staggerContainerFast}
+            initial="hidden"
+            animate="visible"
+          >
             <div className="px-4 py-2">
-              <div className="flex items-center justify-between mb-4">
+              <motion.div variants={fadeInUp} className="flex items-center justify-between mb-4">
                 <h3 className="text-lg font-semibold text-brand-vanilla">Home</h3>
-              </div>
+              </motion.div>
               
-              <div className="mb-4">
+              <motion.div variants={fadeInUp} className="mb-4">
                 <div className="flex items-center justify-between mb-2">
                   <h4 className="text-sm font-medium text-brand-vanilla">Recent Chats</h4>
                   <button className="p-1 rounded hover:bg-os-surface-dark transition-colors">
@@ -195,14 +216,16 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef }: NavigationD
                 </div>
                 <div className="space-y-1">
                   {chatHistory.length > 0 ? (
-                    chatHistory.map((chat) => (
-                      <button
+                    chatHistory.map((chat, index) => (
+                      <motion.button
                         key={chat.id}
+                        variants={fadeInUp}
+                        custom={index}
                         className="w-full text-left px-3 py-2 rounded-lg text-sm text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-brand-vanilla transition-colors flex items-center gap-2"
                       >
                         <MessageSquare className="w-4 h-4 flex-shrink-0" />
                         <span className="truncate">{chat.title}</span>
-                      </button>
+                      </motion.button>
                     ))
                   ) : (
                     <p className="text-xs text-os-text-secondary-dark/60 px-3 py-2">
@@ -215,20 +238,25 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef }: NavigationD
                     View All
                   </button>
                 )}
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         );
       
       case 'Discover':
         return (
-          <div className="py-2">
+          <motion.div 
+            className="py-2"
+            variants={staggerContainerFast}
+            initial="hidden"
+            animate="visible"
+          >
             <div className="px-4 py-2">
-              <div className="flex items-center justify-between mb-4">
+              <motion.div variants={fadeInUp} className="flex items-center justify-between mb-4">
                 <h3 className="text-lg font-semibold text-brand-vanilla">Discover</h3>
-              </div>
+              </motion.div>
               
-              <div className="space-y-1 mb-4">
+              <motion.div variants={fadeInUp} className="space-y-1 mb-4">
                 <Link
                   href="/discover"
                   className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg transition-colors ${
@@ -251,9 +279,9 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef }: NavigationD
                   <Lightbulb className="w-5 h-5" />
                   <span className="text-sm">Ideas</span>
                 </Link>
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         );
 
       case 'Brand':
@@ -261,50 +289,56 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef }: NavigationD
         const isOnSubpage = pathname.startsWith('/brand-hub/');
         
         return (
-          <div className="py-2">
+          <motion.div 
+            className="py-2"
+            variants={staggerContainerFast}
+            initial="hidden"
+            animate="visible"
+          >
             <div className="px-4 py-2">
-              <div className="flex items-center gap-2 mb-4">
+              <motion.div variants={fadeInUp} className="flex items-center gap-2 mb-4">
                 <h3 className="text-lg font-semibold text-brand-vanilla">Brand</h3>
-              </div>
+              </motion.div>
               
               <div className="space-y-1">
-                {brandHubNavItems.map((navItem) => {
+                {brandHubNavItems.map((navItem, index) => {
                   const Icon = navItem.icon;
                   const isActive = pathname === navItem.href;
                   return (
-                    <Link
-                      key={navItem.href}
-                      href={navItem.href}
-                      className={`
-                        w-full flex items-center gap-3 px-3 py-2 rounded-lg
-                        transition-colors
-                        ${
-                          isActive
-                            ? 'bg-brand-aperol/10 text-brand-aperol'
-                            : 'text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-brand-vanilla'
-                        }
-                      `}
-                    >
-                      <Icon className={`w-5 h-5 ${isActive ? 'text-brand-aperol' : ''}`} />
-                      <span className="text-sm">{navItem.label}</span>
-                    </Link>
+                    <motion.div key={navItem.href} variants={fadeInUp} custom={index}>
+                      <Link
+                        href={navItem.href}
+                        className={`
+                          w-full flex items-center gap-3 px-3 py-2 rounded-lg
+                          transition-colors
+                          ${
+                            isActive
+                              ? 'bg-brand-aperol/10 text-brand-aperol'
+                              : 'text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-brand-vanilla'
+                          }
+                        `}
+                      >
+                        <Icon className={`w-5 h-5 ${isActive ? 'text-brand-aperol' : ''}`} />
+                        <span className="text-sm">{navItem.label}</span>
+                      </Link>
+                    </motion.div>
                   );
                 })}
               </div>
 
               {/* Only show View All Assets when on a subpage */}
               {isOnSubpage && (
-                <div className="mt-4 pt-4 border-t border-os-border-dark">
+                <motion.div variants={fadeInUp} className="mt-4 pt-4 border-t border-os-border-dark">
                   <Link
                     href="/brand-hub"
                     className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-lg text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-brand-vanilla transition-colors text-sm"
                   >
                     View All Assets
                   </Link>
-                </div>
+                </motion.div>
               )}
             </div>
-          </div>
+          </motion.div>
         );
       
       case 'Brain':
@@ -317,65 +351,76 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef }: NavigationD
         const isOnBrainSubpage = pathname.startsWith('/brain/');
         
         return (
-          <div className="py-2">
+          <motion.div 
+            className="py-2"
+            variants={staggerContainerFast}
+            initial="hidden"
+            animate="visible"
+          >
             <div className="px-4 py-2">
-              <div className="flex items-center gap-2 mb-4">
+              <motion.div variants={fadeInUp} className="flex items-center gap-2 mb-4">
                 <h3 className="text-lg font-semibold text-brand-vanilla">Brain</h3>
-              </div>
+              </motion.div>
               
               <div className="space-y-1">
-                {brainNavItems.map((navItem) => {
+                {brainNavItems.map((navItem, index) => {
                   const Icon = navItem.icon;
                   const isActive = pathname === navItem.href;
                   return (
-                    <Link
-                      key={navItem.href}
-                      href={navItem.href}
-                      className={`
-                        w-full flex items-center gap-3 px-3 py-2 rounded-lg
-                        transition-colors
-                        ${
-                          isActive
-                            ? 'bg-brand-aperol/10 text-brand-aperol'
-                            : 'text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-brand-vanilla'
-                        }
-                      `}
-                    >
-                      <Icon className={`w-5 h-5 ${isActive ? 'text-brand-aperol' : ''}`} />
-                      <span className="text-sm">{navItem.label}</span>
-                    </Link>
+                    <motion.div key={navItem.href} variants={fadeInUp} custom={index}>
+                      <Link
+                        href={navItem.href}
+                        className={`
+                          w-full flex items-center gap-3 px-3 py-2 rounded-lg
+                          transition-colors
+                          ${
+                            isActive
+                              ? 'bg-brand-aperol/10 text-brand-aperol'
+                              : 'text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-brand-vanilla'
+                          }
+                        `}
+                      >
+                        <Icon className={`w-5 h-5 ${isActive ? 'text-brand-aperol' : ''}`} />
+                        <span className="text-sm">{navItem.label}</span>
+                      </Link>
+                    </motion.div>
                   );
                 })}
               </div>
 
               {/* Only show View Brain Overview when on a subpage */}
               {isOnBrainSubpage && (
-                <div className="mt-4 pt-4 border-t border-os-border-dark">
+                <motion.div variants={fadeInUp} className="mt-4 pt-4 border-t border-os-border-dark">
                   <Link
                     href="/brain"
                     className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-lg text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-brand-vanilla transition-colors text-sm"
                   >
                     View Brain Overview
                   </Link>
-                </div>
+                </motion.div>
               )}
             </div>
-          </div>
+          </motion.div>
         );
       
       case 'Resources':
         return (
-          <div className="py-2">
+          <motion.div 
+            className="py-2"
+            variants={staggerContainerFast}
+            initial="hidden"
+            animate="visible"
+          >
             <div className="px-4 py-2">
-              <div className="flex items-center gap-2 mb-4">
+              <motion.div variants={fadeInUp} className="flex items-center gap-2 mb-4">
                 <h3 className="text-lg font-semibold text-brand-vanilla">Resources</h3>
-              </div>
+              </motion.div>
               
-              <div className="text-sm text-os-text-secondary-dark">
+              <motion.div variants={fadeInUp} className="text-sm text-os-text-secondary-dark">
                 Resources and documentation coming soon
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         );
       
       default:
@@ -384,32 +429,32 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef }: NavigationD
   };
 
   return (
-    <div
-      ref={drawerRef}
-      data-navigation-drawer
-      className={`
-        hidden lg:block
-        fixed z-50
-        w-[220px] bg-os-bg-darker border-r border-os-border-dark
-        shadow-xl
-        transition-all duration-200 ease-out
-        overflow-y-auto
-        ${isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4 pointer-events-none'}
-      `}
-      style={{
-        top: `${position.top}px`,
-        left: `${position.left}px`,
-        height: `${position.height}px`,
-      }}
-      onMouseEnter={() => {
-        // Clear any pending close when entering drawer
-        if (closeTimeoutRef.current) {
-          clearTimeout(closeTimeoutRef.current);
-          closeTimeoutRef.current = null;
-        }
-      }}
-    >
-      {renderContent()}
-    </div>
+    <AnimatePresence>
+      {isOpen && item && (
+        <motion.div
+          ref={drawerRef}
+          data-navigation-drawer
+          className="hidden lg:block fixed z-50 w-[220px] bg-os-bg-darker border-r border-os-border-dark shadow-xl overflow-y-auto"
+          style={{
+            top: `${position.top}px`,
+            left: `${position.left}px`,
+            height: `${position.height}px`,
+          }}
+          variants={slideFromLeft}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          onMouseEnter={() => {
+            // Clear any pending close when entering drawer
+            if (closeTimeoutRef.current) {
+              clearTimeout(closeTimeoutRef.current);
+              closeTimeoutRef.current = null;
+            }
+          }}
+        >
+          {renderContent()}
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 }

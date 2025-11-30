@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ChevronRight, Video, FileText, Pen } from 'lucide-react';
 import { IdeaCardData } from '@/types';
+import { staggerContainerFast, fadeInUp } from '@/lib/motion';
 
 interface IdeaCardGridProps {
   items: IdeaCardData[];
@@ -199,12 +200,7 @@ function IdeaSection({
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ 
-        duration: 0.3, 
-        ease: [0.25, 0.46, 0.45, 0.94] 
-      }}
+      variants={fadeInUp}
       className="mb-6"
     >
       {/* Section Header - compact */}
@@ -219,27 +215,39 @@ function IdeaSection({
       </div>
 
       {/* First Row: Featured (2 cols) + Right card (1 col) */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-2.5 mb-2.5">
+      <motion.div 
+        className="grid grid-cols-1 md:grid-cols-3 gap-2.5 mb-2.5"
+        variants={staggerContainerFast}
+        initial="hidden"
+        animate="visible"
+      >
         {/* Featured card - spans 2 columns */}
-        <div className="md:col-span-2">
+        <motion.div className="md:col-span-2" variants={fadeInUp}>
           <IdeaCard item={featuredItem} featured />
-        </div>
+        </motion.div>
 
         {/* Right card */}
         {rightItem && (
-          <div>
+          <motion.div variants={fadeInUp}>
             <IdeaCard item={rightItem} />
-          </div>
+          </motion.div>
         )}
-      </div>
+      </motion.div>
 
       {/* Second Row: 3 compact cards */}
       {bottomItems.length > 0 && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5">
+        <motion.div 
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5"
+          variants={staggerContainerFast}
+          initial="hidden"
+          animate="visible"
+        >
           {bottomItems.map((item, idx) => (
-            <IdeaCard key={item.id || idx} item={item} />
+            <motion.div key={item.id || idx} variants={fadeInUp}>
+              <IdeaCard item={item} />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       )}
     </motion.div>
   );
@@ -270,39 +278,52 @@ export function IdeaCardGrid({ items, activeFilter }: IdeaCardGridProps) {
 
     return (
       <motion.div
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
         className="space-y-2.5"
+        variants={staggerContainerFast}
+        initial="hidden"
+        animate="visible"
       >
         {/* First Row */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-2.5">
-          <div className="md:col-span-2">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-3 gap-2.5"
+          variants={staggerContainerFast}
+        >
+          <motion.div className="md:col-span-2" variants={fadeInUp}>
             <IdeaCard item={featuredItem} featured />
-          </div>
+          </motion.div>
           {rightItem && (
-            <div>
+            <motion.div variants={fadeInUp}>
               <IdeaCard item={rightItem} />
-            </div>
+            </motion.div>
           )}
-        </div>
+        </motion.div>
 
         {/* Second Row */}
         {bottomItems.length > 0 && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5">
+          <motion.div 
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5"
+            variants={staggerContainerFast}
+          >
             {bottomItems.map((item, idx) => (
-              <IdeaCard key={item.id || idx} item={item} />
+              <motion.div key={item.id || idx} variants={fadeInUp}>
+                <IdeaCard item={item} />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         )}
 
         {/* Remaining items */}
         {remainingItems.length > 0 && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 mt-3">
+          <motion.div 
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 mt-3"
+            variants={staggerContainerFast}
+          >
             {remainingItems.map((item, idx) => (
-              <IdeaCard key={item.id || idx} item={item} />
+              <motion.div key={item.id || idx} variants={fadeInUp}>
+                <IdeaCard item={item} />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         )}
       </motion.div>
     );
@@ -310,7 +331,11 @@ export function IdeaCardGrid({ items, activeFilter }: IdeaCardGridProps) {
 
   // Default: Show organized by sections
   return (
-    <div>
+    <motion.div
+      variants={staggerContainerFast}
+      initial="hidden"
+      animate="visible"
+    >
       <IdeaSection
         title="Short-Form"
         icon={Video}
@@ -328,7 +353,6 @@ export function IdeaCardGrid({ items, activeFilter }: IdeaCardGridProps) {
         icon={Pen}
         items={blogItems}
       />
-    </div>
+    </motion.div>
   );
 }
-

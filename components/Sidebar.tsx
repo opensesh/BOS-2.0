@@ -3,6 +3,7 @@
 import { useState, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   Home,
   Compass,
@@ -19,6 +20,7 @@ import { BrandSelector } from './BrandSelector';
 import { MobileHeader } from './MobileHeader';
 import { useChatContext } from '@/lib/chat-context';
 import { useMobileMenu } from '@/lib/mobile-menu-context';
+import { overlayFade, slideFromRight, staggerContainerFast, fadeInUp } from '@/lib/motion';
 
 const navItems = [
   { label: 'Home', href: '/', icon: Home },
@@ -58,12 +60,18 @@ export function Sidebar() {
       <MobileHeader onBrandClick={handleHomeClick} />
 
       {/* Mobile Overlay - starts below the header */}
-      {isMobileMenuOpen && (
-        <div
-          className="fixed inset-0 top-14 bg-black/50 z-40 lg:hidden"
-          onClick={closeMobileMenu}
-        />
-      )}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            className="fixed inset-0 top-14 bg-black/50 z-40 lg:hidden"
+            onClick={closeMobileMenu}
+            variants={overlayFade}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+          />
+        )}
+      </AnimatePresence>
 
       {/* Desktop Navigation Rail - Fixed width, text reveals on hover */}
       <aside
@@ -252,107 +260,114 @@ export function Sidebar() {
       </aside>
 
       {/* Mobile Drawer - Opens from Right, positioned below sticky header */}
-      <aside
-        className={`
-          fixed lg:hidden top-14 bottom-0 right-0 z-40
-          w-80 max-w-[85vw]
-          bg-os-bg-darker border-l border-os-border-dark
-          flex flex-col
-          transition-transform duration-300 ease-in-out
-          ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}
-        `}
-      >
-        {/* Mobile Navigation Content */}
-        <div className="flex-1 overflow-y-auto">
-          {/* New Chat Button */}
-          <div className="p-4">
-            <Link
-              href="/"
-              onClick={handleNewChat}
-              className="
-                w-full flex items-center space-x-3
-                py-3 px-4 bg-os-surface-dark hover:bg-os-border-dark 
-                text-os-text-primary-dark rounded-lg font-medium border border-os-border-dark
-                transition-all hover:shadow-lg
-              "
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.aside
+            className="fixed lg:hidden top-14 bottom-0 right-0 z-40 w-80 max-w-[85vw] bg-os-bg-darker border-l border-os-border-dark flex flex-col"
+            variants={slideFromRight}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+          >
+            {/* Mobile Navigation Content */}
+            <motion.div 
+              className="flex-1 overflow-y-auto"
+              variants={staggerContainerFast}
+              initial="hidden"
+              animate="visible"
             >
-              <Plus className="w-5 h-5 text-brand-aperol" />
-              <span>New Chat</span>
-            </Link>
-          </div>
-
-          {/* Recent Chats */}
-          {chatHistory.length > 0 && (
-            <div className="px-4 pb-4">
-              <p className="text-xs font-medium text-os-text-secondary-dark uppercase tracking-wider mb-2">
-                Recent
-              </p>
-              <div className="space-y-1">
-                {chatHistory.map((chat) => (
-                  <button
-                    key={chat.id}
-                    className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-left text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-os-text-primary-dark transition-colors"
-                  >
-                    <MessageSquare className="w-4 h-4 flex-shrink-0" />
-                    <span className="text-sm truncate">{chat.title}</span>
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Navigation Items */}
-          <nav className="px-3 space-y-1">
-            {navItems.map((item) => {
-              const Icon = item.icon;
-              const isActive = pathname === item.href || (item.href === '/spaces' && pathname.startsWith('/spaces'));
-              
-              return (
+              {/* New Chat Button */}
+              <motion.div variants={fadeInUp} className="p-4">
                 <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={item.href === '/' ? handleHomeClick : closeMobileMenu}
-                  className={`
-                    flex items-center space-x-3 px-3 py-3 rounded-lg
-                    transition-all duration-200
-                    ${isActive
-                      ? 'bg-os-surface-dark text-brand-aperol'
-                      : 'text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-os-text-primary-dark'
-                    }
-                  `}
+                  href="/"
+                  onClick={handleNewChat}
+                  className="
+                    w-full flex items-center space-x-3
+                    py-3 px-4 bg-os-surface-dark hover:bg-os-border-dark 
+                    text-os-text-primary-dark rounded-lg font-medium border border-os-border-dark
+                    transition-all hover:shadow-lg
+                  "
                 >
-                  <Icon className={`w-5 h-5 flex-shrink-0 ${isActive ? 'text-brand-aperol' : ''}`} />
-                  <span className="font-medium">{item.label}</span>
+                  <Plus className="w-5 h-5 text-brand-aperol" />
+                  <span>New Chat</span>
                 </Link>
-              );
-            })}
-          </nav>
+              </motion.div>
 
-          <div className="border-t border-os-border-dark my-4" />
+              {/* Recent Chats */}
+              {chatHistory.length > 0 && (
+                <motion.div variants={fadeInUp} className="px-4 pb-4">
+                  <p className="text-xs font-medium text-os-text-secondary-dark uppercase tracking-wider mb-2">
+                    Recent
+                  </p>
+                  <div className="space-y-1">
+                    {chatHistory.map((chat) => (
+                      <button
+                        key={chat.id}
+                        className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-left text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-os-text-primary-dark transition-colors"
+                      >
+                        <MessageSquare className="w-4 h-4 flex-shrink-0" />
+                        <span className="text-sm truncate">{chat.title}</span>
+                      </button>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
 
-          <div className="px-3 space-y-1">
-            <button className="w-full flex items-center space-x-3 px-3 py-3 rounded-lg text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-os-text-primary-dark transition-all duration-200">
-              <Bell className="w-5 h-5" />
-              <span className="font-medium">Notifications</span>
-            </button>
+              {/* Navigation Items */}
+              <nav className="px-3 space-y-1">
+                {navItems.map((item, index) => {
+                  const Icon = item.icon;
+                  const isActive = pathname === item.href || (item.href === '/spaces' && pathname.startsWith('/spaces'));
+                  
+                  return (
+                    <motion.div key={item.href} variants={fadeInUp} custom={index}>
+                      <Link
+                        href={item.href}
+                        onClick={item.href === '/' ? handleHomeClick : closeMobileMenu}
+                        className={`
+                          flex items-center space-x-3 px-3 py-3 rounded-lg
+                          transition-all duration-200
+                          ${isActive
+                            ? 'bg-os-surface-dark text-brand-aperol'
+                            : 'text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-os-text-primary-dark'
+                          }
+                        `}
+                      >
+                        <Icon className={`w-5 h-5 flex-shrink-0 ${isActive ? 'text-brand-aperol' : ''}`} />
+                        <span className="font-medium">{item.label}</span>
+                      </Link>
+                    </motion.div>
+                  );
+                })}
+              </nav>
 
-            <button className="w-full flex items-center space-x-3 px-3 py-3 rounded-lg text-os-text-secondary-dark hover:bg-os-surface-dark transition-all duration-200">
-              <div className="w-8 h-8 bg-gradient-to-br from-brand-charcoal to-black border border-os-border-dark rounded-full flex items-center justify-center flex-shrink-0">
-                <span className="text-white text-xs font-mono">A</span>
-              </div>
-              <div className="text-left">
-                <p className="text-os-text-primary-dark font-medium text-sm">Account</p>
-                <p className="text-os-text-secondary-dark text-xs">Manage settings</p>
-              </div>
-            </button>
+              <motion.div variants={fadeInUp} className="border-t border-os-border-dark my-4" />
 
-            <button className="w-full flex items-center space-x-3 px-3 py-3 rounded-lg text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-os-text-primary-dark transition-all duration-200">
-              <ArrowUpRight className="w-5 h-5" />
-              <span className="font-medium">Upgrade</span>
-            </button>
-          </div>
-        </div>
-      </aside>
+              <motion.div variants={fadeInUp} className="px-3 space-y-1">
+                <button className="w-full flex items-center space-x-3 px-3 py-3 rounded-lg text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-os-text-primary-dark transition-all duration-200">
+                  <Bell className="w-5 h-5" />
+                  <span className="font-medium">Notifications</span>
+                </button>
+
+                <button className="w-full flex items-center space-x-3 px-3 py-3 rounded-lg text-os-text-secondary-dark hover:bg-os-surface-dark transition-all duration-200">
+                  <div className="w-8 h-8 bg-gradient-to-br from-brand-charcoal to-black border border-os-border-dark rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white text-xs font-mono">A</span>
+                  </div>
+                  <div className="text-left">
+                    <p className="text-os-text-primary-dark font-medium text-sm">Account</p>
+                    <p className="text-os-text-secondary-dark text-xs">Manage settings</p>
+                  </div>
+                </button>
+
+                <button className="w-full flex items-center space-x-3 px-3 py-3 rounded-lg text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-os-text-primary-dark transition-all duration-200">
+                  <ArrowUpRight className="w-5 h-5" />
+                  <span className="font-medium">Upgrade</span>
+                </button>
+              </motion.div>
+            </motion.div>
+          </motion.aside>
+        )}
+      </AnimatePresence>
 
       {/* Navigation Drawer - Desktop Only */}
       <NavigationDrawer
