@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { DiscoverLayout } from '@/components/discover/DiscoverLayout';
@@ -20,6 +20,42 @@ type MainTabType = 'News' | 'Ideas';
 type NewsTypeOption = 'all' | NewsTopicCategory;
 type IdeasTypeOption = 'all' | 'short-form' | 'long-form' | 'blog';
 type DateFilterOption = 'today' | 'week' | 'month';
+type SortOption = 'newest' | 'oldest' | 'sources';
+
+// Keywords for fallback category classification when topicCategory is missing
+const CATEGORY_KEYWORDS: Record<NewsTopicCategory, string[]> = {
+  'design-ux': ['design', 'ux', 'ui', 'figma', 'sketch', 'prototype', 'interface', 'usability', 'accessibility', 'wireframe'],
+  'branding': ['brand', 'logo', 'identity', 'rebrand', 'visual identity', 'packaging', 'brand strategy'],
+  'ai-creative': ['ai', 'gpt', 'claude', 'gemini', 'midjourney', 'dall-e', 'generative', 'llm', 'chatgpt', 'copilot', 'anthropic', 'openai', 'firefly', 'runway'],
+  'social-trends': ['instagram', 'tiktok', 'linkedin', 'youtube', 'social media', 'viral', 'influencer', 'reels', 'shorts', 'creator'],
+  'general-tech': ['tech', 'technology', 'apple', 'google', 'microsoft', 'software', 'hardware', 'app', 'launch', 'android', 'ios'],
+  'startup-business': ['startup', 'funding', 'venture', 'entrepreneur', 'arr', 'revenue', 'growth', 'business', 'raise', 'series'],
+};
+
+// Classify an article by keywords (fallback when topicCategory is missing)
+function classifyArticle(article: NewsCardData): NewsTopicCategory {
+  // Use existing category if available
+  if (article.topicCategory) return article.topicCategory;
+  
+  const text = `${article.title} ${article.summary}`.toLowerCase();
+  let bestCategory: NewsTopicCategory = 'general-tech';
+  let highestScore = 0;
+  
+  for (const [category, keywords] of Object.entries(CATEGORY_KEYWORDS)) {
+    let score = 0;
+    for (const keyword of keywords) {
+      if (text.includes(keyword.toLowerCase())) {
+        score += keyword.length > 5 ? 2 : 1;
+      }
+    }
+    if (score > highestScore) {
+      highestScore = score;
+      bestCategory = category as NewsTopicCategory;
+    }
+  }
+  
+  return bestCategory;
+}
 
 export default function DiscoverPage() {
   const router = useRouter();
@@ -28,6 +64,7 @@ export default function DiscoverPage() {
   const [activeNewsType, setActiveNewsType] = useState<NewsTypeOption>('all');
   const [activeIdeasType, setActiveIdeasType] = useState<IdeasTypeOption>('all');
   const [selectedDate, setSelectedDate] = useState<DateFilterOption>('today');
+  const [sortOption, setSortOption] = useState<SortOption>('newest');
   
   // Source Drawer State
   const [isSourcesDrawerOpen, setIsSourcesDrawerOpen] = useState(false);
@@ -59,20 +96,38 @@ export default function DiscoverPage() {
     ? activeNewsType
     : activeIdeasType;
 
+  // Get filtered and sorted news cards
+  const filteredNewsCards = useMemo(() => {
+    // Combine all news data
+    let allNews = [...newsData.weeklyUpdate, ...newsData.monthlyOutlook];
+    
+    // Filter by category if not "all"
+    if (activeNewsType !== 'all') {
+      allNews = allNews.filter(article => {
+        const category = classifyArticle(article);
+        return category === activeNewsType;
+      });
+    }
+    
+    // Sort based on sortOption
+    allNews.sort((a, b) => {
+      if (sortOption === 'newest' || sortOption === 'oldest') {
+        const dateA = new Date(a.publishedAt).getTime();
+        const dateB = new Date(b.publishedAt).getTime();
+        return sortOption === 'newest' ? dateB - dateA : dateA - dateB;
+      } else if (sortOption === 'sources') {
+        return b.sources.length - a.sources.length;
+      }
+      return 0;
+    });
+    
+    return allNews;
+  }, [newsData, activeNewsType, sortOption]);
+
   // Get cards based on active tab and type
   const getCurrentCards = () => {
     if (activeTab === 'News') {
-      // Combine all news data and sort by published date (newest first)
-      const allNews = [...newsData.weeklyUpdate, ...newsData.monthlyOutlook];
-      // Sort by timestamp (most recent first)
-      allNews.sort((a, b) => {
-        const dateA = new Date(a.publishedAt).getTime();
-        const dateB = new Date(b.publishedAt).getTime();
-        return dateB - dateA;
-      });
-      // In the future, filter by topic (ai, design, tech, finance)
-      // For now, return all
-      return allNews;
+      return filteredNewsCards;
     } else {
       // Filter ideas by type
       switch (activeIdeasType) {
@@ -163,7 +218,7 @@ export default function DiscoverPage() {
     <div className="flex h-screen bg-os-bg-dark dark:bg-os-bg-dark text-os-text-primary-dark font-sans">
       <Sidebar />
       <DiscoverLayout>
-        {/* Header with tabs, last updated, and date filter */}
+        {/* Header with tabs and filters */}
         <DiscoverHeader 
           activeTab={activeTab} 
           activeType={currentType}
@@ -171,9 +226,8 @@ export default function DiscoverPage() {
           onTypeChange={handleTypeChange}
           savedCount={savedArticles.length}
           onOpenSaved={() => setIsSavedDrawerOpen(true)}
-          lastUpdated={new Date().toISOString()}
-          selectedDate={selectedDate}
-          onDateChange={(date) => setSelectedDate(date as DateFilterOption)}
+          sortOption={sortOption}
+          onSortChange={setSortOption}
         />
 
         {/* Main content with widgets */}

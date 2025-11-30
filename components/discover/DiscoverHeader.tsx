@@ -1,15 +1,14 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Settings, Bookmark, Calendar, SlidersHorizontal, X, Check } from 'lucide-react';
+import { Settings, Bookmark, ChevronDown, ArrowUpDown, Check, X, Filter, SlidersHorizontal } from 'lucide-react';
 import { SourcesSettings } from './SourcesSettings';
 import { NewsTopicCategory, NEWS_TOPIC_LABELS } from '@/types';
 
 type MainTabType = 'News' | 'Ideas';
 type NewsTypeOption = 'all' | NewsTopicCategory;
 type IdeasTypeOption = 'all' | 'short-form' | 'long-form' | 'blog';
-type DateOption = 'today' | 'week' | 'month';
+type SortOption = 'newest' | 'oldest' | 'sources';
 
 interface DiscoverHeaderProps {
   activeTab: MainTabType;
@@ -18,38 +17,32 @@ interface DiscoverHeaderProps {
   onTypeChange: (type: NewsTypeOption | IdeasTypeOption) => void;
   savedCount?: number;
   onOpenSaved?: () => void;
-  lastUpdated?: string;
-  selectedDate?: DateOption;
-  onDateChange?: (date: DateOption) => void;
+  sortOption?: SortOption;
+  onSortChange?: (sort: SortOption) => void;
 }
 
 // All available news categories
 const ALL_NEWS_CATEGORIES: { id: NewsTypeOption; label: string }[] = [
-  { id: 'all', label: 'All' },
+  { id: 'all', label: 'All Topics' },
+  { id: 'ai-creative', label: NEWS_TOPIC_LABELS['ai-creative'] },
   { id: 'design-ux', label: NEWS_TOPIC_LABELS['design-ux'] },
   { id: 'branding', label: NEWS_TOPIC_LABELS['branding'] },
-  { id: 'ai-creative', label: NEWS_TOPIC_LABELS['ai-creative'] },
   { id: 'social-trends', label: NEWS_TOPIC_LABELS['social-trends'] },
   { id: 'general-tech', label: NEWS_TOPIC_LABELS['general-tech'] },
   { id: 'startup-business', label: NEWS_TOPIC_LABELS['startup-business'] },
 ];
 
-// Default visible categories (user can customize)
-const DEFAULT_VISIBLE_CATEGORIES: NewsTypeOption[] = [
-  'all', 'design-ux', 'ai-creative', 'social-trends'
-];
-
 const IDEAS_TYPES: { id: IdeasTypeOption; label: string }[] = [
-  { id: 'all', label: 'All' },
+  { id: 'all', label: 'All Types' },
   { id: 'short-form', label: 'Short Form' },
   { id: 'long-form', label: 'Long Form' },
   { id: 'blog', label: 'Blog' },
 ];
 
-const DATE_OPTIONS: { id: DateOption; label: string }[] = [
-  { id: 'today', label: 'Today' },
-  { id: 'week', label: 'This Week' },
-  { id: 'month', label: 'This Month' },
+const SORT_OPTIONS: { id: SortOption; label: string }[] = [
+  { id: 'newest', label: 'Newest First' },
+  { id: 'oldest', label: 'Oldest First' },
+  { id: 'sources', label: 'Most Sources' },
 ];
 
 // LocalStorage key for category preferences
@@ -62,14 +55,16 @@ export function DiscoverHeader({
   onTypeChange,
   savedCount = 0,
   onOpenSaved,
-  selectedDate = 'today',
-  onDateChange,
+  sortOption = 'newest',
+  onSortChange,
 }: DiscoverHeaderProps) {
-  const [isDateDropdownOpen, setIsDateDropdownOpen] = useState(false);
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const [isSortOpen, setIsSortOpen] = useState(false);
   const [isSourcesOpen, setIsSourcesOpen] = useState(false);
   const [isManageCategoriesOpen, setIsManageCategoriesOpen] = useState(false);
-  const [visibleCategories, setVisibleCategories] = useState<NewsTypeOption[]>(DEFAULT_VISIBLE_CATEGORIES);
-  const dateDropdownRef = useRef<HTMLDivElement>(null);
+  const [visibleCategories, setVisibleCategories] = useState<NewsTypeOption[]>(['all', ...Object.keys(NEWS_TOPIC_LABELS) as NewsTopicCategory[]]);
+  const filterRef = useRef<HTMLDivElement>(null);
+  const sortRef = useRef<HTMLDivElement>(null);
 
   // Load category preferences from localStorage
   useEffect(() => {
@@ -77,14 +72,13 @@ export function DiscoverHeader({
       const saved = localStorage.getItem(CATEGORY_PREFS_KEY);
       if (saved) {
         const parsed = JSON.parse(saved) as NewsTypeOption[];
-        // Ensure 'all' is always included
         if (!parsed.includes('all')) {
           parsed.unshift('all');
         }
         setVisibleCategories(parsed);
       }
     } catch {
-      // Use defaults if parsing fails
+      // Use defaults
     }
   }, []);
 
@@ -94,26 +88,18 @@ export function DiscoverHeader({
     try {
       localStorage.setItem(CATEGORY_PREFS_KEY, JSON.stringify(categories));
     } catch {
-      // Silently fail if localStorage is unavailable
+      // Silently fail
     }
-  };
-
-  const currentDateLabel = DATE_OPTIONS.find(d => d.id === selectedDate)?.label || 'Today';
-
-  // Get visible filter options based on tab
-  const getFilterOptions = () => {
-    if (activeTab === 'Ideas') {
-      return IDEAS_TYPES;
-    }
-    // For News, filter to only visible categories
-    return ALL_NEWS_CATEGORIES.filter(cat => visibleCategories.includes(cat.id));
   };
 
   // Close dropdowns when clicking outside
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (dateDropdownRef.current && !dateDropdownRef.current.contains(event.target as Node)) {
-        setIsDateDropdownOpen(false);
+      if (filterRef.current && !filterRef.current.contains(event.target as Node)) {
+        setIsFilterOpen(false);
+      }
+      if (sortRef.current && !sortRef.current.contains(event.target as Node)) {
+        setIsSortOpen(false);
       }
     }
     document.addEventListener('mousedown', handleClickOutside);
@@ -128,7 +114,7 @@ export function DiscoverHeader({
 
   // Toggle category visibility
   const toggleCategory = (categoryId: NewsTypeOption) => {
-    if (categoryId === 'all') return; // Can't remove 'all'
+    if (categoryId === 'all') return;
     
     const newCategories = visibleCategories.includes(categoryId)
       ? visibleCategories.filter(c => c !== categoryId)
@@ -137,149 +123,181 @@ export function DiscoverHeader({
     saveCategories(newCategories);
   };
 
-  const filterOptions = getFilterOptions();
+  // Get filter options based on tab
+  const filterOptions = activeTab === 'Ideas' 
+    ? IDEAS_TYPES 
+    : ALL_NEWS_CATEGORIES.filter(cat => visibleCategories.includes(cat.id));
+
+  const currentFilterLabel = filterOptions.find(f => f.id === activeType)?.label || 'All';
+  const currentSortLabel = SORT_OPTIONS.find(s => s.id === sortOption)?.label || 'Newest';
+  const hasActiveFilter = activeType !== 'all';
 
   return (
     <>
-      {/* Header row */}
-      <div className="flex flex-col gap-4 mb-6">
-        {/* Top row: Title, Tabs, and Actions */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          {/* Left: Title and Tabs */}
-          <div className="flex items-center gap-2 sm:gap-4 flex-wrap">
-            {/* Title */}
-            <h1 className="text-xl md:text-2xl font-display font-bold text-brand-vanilla">
-              Discover
-            </h1>
-            
-            {/* Tabs - inline with title, with animated indicator */}
-            <div className="flex items-center gap-1 relative">
-              <button
-                onClick={() => handleTabChange('News')}
-                className={`relative px-3 py-1.5 rounded-full text-sm font-medium transition-colors duration-200 ${
-                  activeTab === 'News'
-                    ? 'text-brand-aperol'
-                    : 'text-os-text-secondary-dark hover:text-brand-vanilla'
-                }`}
-              >
+      {/* Compact Header */}
+      <div className="flex items-center justify-between gap-4 mb-6">
+        {/* Left: Title and Tabs */}
+        <div className="flex items-center gap-3">
+          <h1 className="text-xl md:text-2xl font-display font-bold text-brand-vanilla">
+            Discover
+          </h1>
+          
+          {/* Tab Pills */}
+          <div className="flex items-center bg-os-surface-dark/50 rounded-full p-1">
+            <button
+              onClick={() => handleTabChange('News')}
+              className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+                activeTab === 'News'
+                  ? 'bg-brand-aperol text-white'
+                  : 'text-os-text-secondary-dark hover:text-brand-vanilla'
+              }`}
+            >
+              News
+            </button>
+            <button
+              onClick={() => handleTabChange('Ideas')}
+              className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+                activeTab === 'Ideas'
+                  ? 'bg-brand-aperol text-white'
+                  : 'text-os-text-secondary-dark hover:text-brand-vanilla'
+              }`}
+            >
+              Ideas
+            </button>
+          </div>
+        </div>
+
+        {/* Right: Actions */}
+        <div className="flex items-center gap-2">
+          {/* Filter Dropdown */}
+          <div className="relative" ref={filterRef}>
+            <button
+              onClick={() => {
+                setIsFilterOpen(!isFilterOpen);
+                setIsSortOpen(false);
+              }}
+              className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-all ${
+                hasActiveFilter
+                  ? 'bg-brand-aperol/15 text-brand-aperol border border-brand-aperol/30'
+                  : 'bg-os-surface-dark/60 text-os-text-secondary-dark hover:text-brand-vanilla border border-os-border-dark/30 hover:border-os-border-dark'
+              }`}
+            >
+              <Filter className="w-4 h-4" />
+              <span className="hidden sm:inline">{currentFilterLabel}</span>
+              <ChevronDown className={`w-4 h-4 transition-transform ${isFilterOpen ? 'rotate-180' : ''}`} />
+            </button>
+
+            {isFilterOpen && (
+              <div className="absolute top-full right-0 mt-2 py-2 bg-os-surface-dark border border-os-border-dark rounded-xl shadow-xl min-w-[200px] z-50">
+                <div className="px-3 pb-2 mb-2 border-b border-os-border-dark">
+                  <span className="text-xs font-semibold text-os-text-secondary-dark uppercase tracking-wide">
+                    {activeTab === 'News' ? 'Topic' : 'Format'}
+                  </span>
+                </div>
+                {filterOptions.map((option) => (
+                  <button
+                    key={option.id}
+                    onClick={() => {
+                      onTypeChange(option.id);
+                      setIsFilterOpen(false);
+                    }}
+                    className={`w-full flex items-center justify-between px-3 py-2 text-sm transition-colors ${
+                      activeType === option.id
+                        ? 'text-brand-aperol bg-brand-aperol/10'
+                        : 'text-os-text-secondary-dark hover:text-brand-vanilla hover:bg-os-bg-dark'
+                    }`}
+                  >
+                    <span>{option.label}</span>
+                    {activeType === option.id && <Check className="w-4 h-4" />}
+                  </button>
+                ))}
+                
+                {/* Manage Categories (News only) */}
                 {activeTab === 'News' && (
-                  <motion.span
-                    layoutId="tab-indicator"
-                    className="absolute inset-0 bg-brand-aperol/15 border border-brand-aperol/30 rounded-full"
-                    transition={{ type: "spring", bounce: 0.2, duration: 0.4 }}
-                  />
+                  <>
+                    <div className="border-t border-os-border-dark my-2" />
+                    <button
+                      onClick={() => {
+                        setIsFilterOpen(false);
+                        setIsManageCategoriesOpen(true);
+                      }}
+                      className="w-full flex items-center gap-2 px-3 py-2 text-sm text-os-text-secondary-dark hover:text-brand-vanilla hover:bg-os-bg-dark transition-colors"
+                    >
+                      <SlidersHorizontal className="w-4 h-4" />
+                      <span>Manage Categories</span>
+                    </button>
+                  </>
                 )}
-                <span className="relative z-10">News</span>
-              </button>
-              <button
-                onClick={() => handleTabChange('Ideas')}
-                className={`relative px-3 py-1.5 rounded-full text-sm font-medium transition-colors duration-200 ${
-                  activeTab === 'Ideas'
-                    ? 'text-brand-aperol'
-                    : 'text-os-text-secondary-dark hover:text-brand-vanilla'
-                }`}
-              >
-                {activeTab === 'Ideas' && (
-                  <motion.span
-                    layoutId="tab-indicator"
-                    className="absolute inset-0 bg-brand-aperol/15 border border-brand-aperol/30 rounded-full"
-                    transition={{ type: "spring", bounce: 0.2, duration: 0.4 }}
-                  />
-                )}
-                <span className="relative z-10">Ideas</span>
-              </button>
-            </div>
+              </div>
+            )}
           </div>
 
-          {/* Right: Action icons */}
-          <div className="flex items-center gap-1">
-            {/* Date Filter Icon */}
-            <div className="relative" ref={dateDropdownRef}>
+          {/* Sort Dropdown (News only) */}
+          {activeTab === 'News' && (
+            <div className="relative" ref={sortRef}>
               <button
-                onClick={() => setIsDateDropdownOpen(!isDateDropdownOpen)}
-                className={`p-2 rounded-lg transition-colors group ${
-                  isDateDropdownOpen ? 'bg-os-surface-dark' : 'hover:bg-os-surface-dark'
-                }`}
-                title={`Date: ${currentDateLabel}`}
+                onClick={() => {
+                  setIsSortOpen(!isSortOpen);
+                  setIsFilterOpen(false);
+                }}
+                className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium bg-os-surface-dark/60 text-os-text-secondary-dark hover:text-brand-vanilla border border-os-border-dark/30 hover:border-os-border-dark transition-all"
               >
-                <Calendar className={`w-5 h-5 transition-colors ${
-                  selectedDate !== 'today' ? 'text-brand-aperol' : 'text-os-text-secondary-dark group-hover:text-brand-vanilla'
-                }`} />
+                <ArrowUpDown className="w-4 h-4" />
+                <span className="hidden sm:inline">{currentSortLabel}</span>
+                <ChevronDown className={`w-4 h-4 transition-transform ${isSortOpen ? 'rotate-180' : ''}`} />
               </button>
 
-              {isDateDropdownOpen && (
-                <div className="absolute top-full right-0 mt-2 py-1.5 bg-os-surface-dark border border-os-border-dark rounded-lg shadow-lg min-w-[120px] z-50">
-                  {DATE_OPTIONS.map((option) => (
+              {isSortOpen && (
+                <div className="absolute top-full right-0 mt-2 py-2 bg-os-surface-dark border border-os-border-dark rounded-xl shadow-xl min-w-[160px] z-50">
+                  <div className="px-3 pb-2 mb-2 border-b border-os-border-dark">
+                    <span className="text-xs font-semibold text-os-text-secondary-dark uppercase tracking-wide">
+                      Sort By
+                    </span>
+                  </div>
+                  {SORT_OPTIONS.map((option) => (
                     <button
                       key={option.id}
                       onClick={() => {
-                        onDateChange?.(option.id);
-                        setIsDateDropdownOpen(false);
+                        onSortChange?.(option.id);
+                        setIsSortOpen(false);
                       }}
-                      className={`w-full text-left px-3 py-1.5 text-sm transition-colors ${
-                        selectedDate === option.id
+                      className={`w-full flex items-center justify-between px-3 py-2 text-sm transition-colors ${
+                        sortOption === option.id
                           ? 'text-brand-aperol bg-brand-aperol/10'
                           : 'text-os-text-secondary-dark hover:text-brand-vanilla hover:bg-os-bg-dark'
                       }`}
                     >
-                      {option.label}
+                      <span>{option.label}</span>
+                      {sortOption === option.id && <Check className="w-4 h-4" />}
                     </button>
                   ))}
                 </div>
               )}
             </div>
+          )}
 
-            {/* Saved Button */}
-            <button
-              onClick={onOpenSaved}
-              className="p-2 rounded-lg hover:bg-os-surface-dark transition-colors group relative"
-              title="Saved Articles"
-            >
-              <Bookmark className="w-5 h-5 text-os-text-secondary-dark group-hover:text-brand-vanilla transition-colors" />
-              {savedCount > 0 && (
-                <span className="absolute -top-0.5 -right-0.5 w-4 h-4 flex items-center justify-center bg-brand-aperol text-white text-[10px] font-bold rounded-full">
-                  {savedCount > 9 ? '9+' : savedCount}
-                </span>
-              )}
-            </button>
-
-            {/* Manage Categories (News only) */}
-            {activeTab === 'News' && (
-              <button
-                onClick={() => setIsManageCategoriesOpen(true)}
-                className="p-2 rounded-lg hover:bg-os-surface-dark transition-colors group"
-                title="Manage Categories"
-              >
-                <SlidersHorizontal className="w-5 h-5 text-os-text-secondary-dark group-hover:text-brand-vanilla transition-colors" />
-              </button>
+          {/* Saved Button */}
+          <button
+            onClick={onOpenSaved}
+            className="p-2 rounded-lg hover:bg-os-surface-dark transition-colors group relative"
+            title="Saved Articles"
+          >
+            <Bookmark className="w-5 h-5 text-os-text-secondary-dark group-hover:text-brand-vanilla transition-colors" />
+            {savedCount > 0 && (
+              <span className="absolute -top-0.5 -right-0.5 w-4 h-4 flex items-center justify-center bg-brand-aperol text-white text-[10px] font-bold rounded-full">
+                {savedCount > 9 ? '9+' : savedCount}
+              </span>
             )}
+          </button>
 
-            {/* Settings Gear Icon */}
-            <button
-              onClick={() => setIsSourcesOpen(true)}
-              className="p-2 rounded-lg hover:bg-os-surface-dark transition-colors group"
-              title="Manage Sources"
-            >
-              <Settings className="w-5 h-5 text-os-text-secondary-dark group-hover:text-brand-vanilla transition-colors" />
-            </button>
-          </div>
-        </div>
-
-        {/* Category Filter Pills */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-hide">
-          {filterOptions.map((option) => (
-            <button
-              key={option.id}
-              onClick={() => onTypeChange(option.id)}
-              className={`px-3 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 ${
-                activeType === option.id
-                  ? 'bg-brand-aperol/15 text-brand-aperol border border-brand-aperol/30'
-                  : 'bg-os-surface-dark/60 text-os-text-secondary-dark hover:text-brand-vanilla hover:bg-os-surface-dark border border-os-border-dark/30'
-              }`}
-            >
-              {option.label}
-            </button>
-          ))}
+          {/* Settings */}
+          <button
+            onClick={() => setIsSourcesOpen(true)}
+            className="p-2 rounded-lg hover:bg-os-surface-dark transition-colors group"
+            title="Settings"
+          >
+            <Settings className="w-5 h-5 text-os-text-secondary-dark group-hover:text-brand-vanilla transition-colors" />
+          </button>
         </div>
       </div>
 
@@ -287,7 +305,6 @@ export function DiscoverHeader({
       {isManageCategoriesOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
           <div className="bg-os-surface-dark border border-os-border-dark rounded-2xl w-full max-w-md shadow-2xl">
-            {/* Modal Header */}
             <div className="flex items-center justify-between p-4 border-b border-os-border-dark">
               <h2 className="text-lg font-display font-semibold text-brand-vanilla">
                 Manage Categories
@@ -300,10 +317,9 @@ export function DiscoverHeader({
               </button>
             </div>
 
-            {/* Modal Body */}
             <div className="p-4">
               <p className="text-sm text-os-text-secondary-dark mb-4">
-                Choose which categories to show in your filter bar.
+                Choose which categories appear in your filter menu.
               </p>
               
               <div className="space-y-2">
@@ -338,7 +354,6 @@ export function DiscoverHeader({
               </div>
             </div>
 
-            {/* Modal Footer */}
             <div className="p-4 border-t border-os-border-dark">
               <button
                 onClick={() => setIsManageCategoriesOpen(false)}
