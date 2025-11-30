@@ -140,10 +140,10 @@ function IdeaCard({ item }: { item: IdeaCardData }) {
   return (
     <Link
       href={`/discover/ideas/${slug}?id=${item.id}`}
-      className="group relative flex flex-col rounded-2xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl h-full"
+      className="group relative flex flex-col rounded-2xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl h-full min-h-[320px] sm:min-h-[360px]"
     >
       {/* TOP: Hero Image - 1/3 of card */}
-      <div className="relative w-full aspect-[3/1] overflow-hidden">
+      <div className="relative w-full aspect-[2.5/1] sm:aspect-[3/1] overflow-hidden">
         {isLoading ? (
           <div className="w-full h-full flex items-center justify-center bg-os-charcoal">
             <div className="w-5 h-5 border-2 border-brand-vanilla/30 border-t-brand-vanilla rounded-full animate-spin" />
@@ -160,7 +160,7 @@ function IdeaCard({ item }: { item: IdeaCardData }) {
       </div>
 
       {/* BOTTOM: Texture background with content - 2/3 of card */}
-      <div className="relative flex-1 min-h-[140px]">
+      <div className="relative flex-1 min-h-[200px] sm:min-h-[220px]">
         {/* Texture Background */}
         <div className="absolute inset-0">
           <Image
@@ -172,31 +172,31 @@ function IdeaCard({ item }: { item: IdeaCardData }) {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 flex flex-col h-full p-4">
-          {/* Format Label */}
-          <div className="mb-1.5">
-            <span className="inline-flex items-center gap-1 text-brand-vanilla text-xs font-medium">
-              <Sparkles className="w-3 h-3" />
-              <span className="underline underline-offset-2 decoration-brand-vanilla/50">{formatLabel}</span>
+        <div className="relative z-10 flex flex-col h-full p-4 sm:p-5">
+          {/* Format Label - Small, subtle */}
+          <div className="mb-2 sm:mb-3">
+            <span className="inline-flex items-center gap-1.5 text-brand-vanilla/90 text-[11px] sm:text-xs font-medium tracking-wide">
+              <Sparkles className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
+              <span className="underline underline-offset-2 decoration-brand-vanilla/40">{formatLabel}</span>
             </span>
           </div>
 
-          {/* Title */}
-          <h3 className="font-display font-bold text-brand-vanilla text-base leading-snug line-clamp-2 mb-auto">
+          {/* Title - Large, prominent */}
+          <h3 className="font-display font-bold text-brand-vanilla text-lg sm:text-xl lg:text-[22px] leading-tight line-clamp-2 mb-auto">
             {cleanTitle}
           </h3>
 
-          {/* Footer Chips */}
-          <div className="flex items-center justify-between mt-3">
+          {/* Footer Chips - Small, secondary */}
+          <div className="flex items-center justify-between mt-4 sm:mt-5 gap-2">
             {/* Sources Chip */}
-            <span className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-os-charcoal/90 text-brand-vanilla text-xs font-medium">
-              <Clock className="w-3 h-3 opacity-80" />
-              {item.sources.length} {item.sources.length === 1 ? 'source' : 'sources'}
+            <span className="inline-flex items-center gap-1 px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-full bg-os-charcoal/90 text-brand-vanilla/90 text-[10px] sm:text-[11px] font-medium">
+              <Clock className="w-2.5 h-2.5 sm:w-3 sm:h-3 opacity-70" />
+              {item.sources.length} sources
             </span>
 
             {/* Category Chip */}
-            <span className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-os-charcoal/90 text-brand-vanilla text-xs font-medium">
-              <CategoryIcon className="w-3 h-3 opacity-80" />
+            <span className="inline-flex items-center gap-1 px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-full bg-os-charcoal/90 text-brand-vanilla/90 text-[10px] sm:text-[11px] font-medium">
+              <CategoryIcon className="w-2.5 h-2.5 sm:w-3 sm:h-3 opacity-70" />
               {categoryInfo.label}
             </span>
           </div>
