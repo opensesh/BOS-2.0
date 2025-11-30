@@ -51,7 +51,7 @@ const isDryRun = args.includes('--dry-run');
 function decodeHTMLEntities(text: string): string {
   if (!text) return text;
   
-  // Named entities
+  // Named entities (using unicode escapes to avoid syntax issues with curly quotes)
   const namedEntities: Record<string, string> = {
     '&amp;': '&',
     '&lt;': '<',
@@ -59,16 +59,16 @@ function decodeHTMLEntities(text: string): string {
     '&quot;': '"',
     '&apos;': "'",
     '&nbsp;': ' ',
-    '&mdash;': '—',
-    '&ndash;': '–',
-    '&ldquo;': '"',
-    '&rdquo;': '"',
-    '&lsquo;': ''',
-    '&rsquo;': ''',
-    '&hellip;': '…',
-    '&copy;': '©',
-    '&reg;': '®',
-    '&trade;': '™',
+    '&mdash;': '\u2014', // —
+    '&ndash;': '\u2013', // –
+    '&ldquo;': '\u201C', // "
+    '&rdquo;': '\u201D', // "
+    '&lsquo;': '\u2018', // '
+    '&rsquo;': '\u2019', // '
+    '&hellip;': '\u2026', // …
+    '&copy;': '\u00A9', // ©
+    '&reg;': '\u00AE', // ®
+    '&trade;': '\u2122', // ™
   };
   
   let decoded = text;
