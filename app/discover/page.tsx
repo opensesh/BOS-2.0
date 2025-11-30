@@ -14,10 +14,10 @@ import { Sidebar } from '@/components/Sidebar';
 import { SourcesDrawer } from '@/components/chat/SourcesDrawer';
 import { SavedArticlesDrawer, SavedArticle } from '@/components/discover/SavedArticlesDrawer';
 import { SourceInfo } from '@/components/chat/AnswerView';
-import { NewsCardData } from '@/types';
+import { NewsCardData, NewsTopicCategory } from '@/types';
 
 type MainTabType = 'News' | 'Ideas';
-type NewsTypeOption = 'all' | 'ai' | 'design' | 'tech' | 'finance';
+type NewsTypeOption = 'all' | NewsTopicCategory;
 type IdeasTypeOption = 'all' | 'short-form' | 'long-form' | 'blog';
 type DateFilterOption = 'today' | 'week' | 'month';
 
@@ -178,7 +178,7 @@ export default function DiscoverPage() {
 
         {/* Main content with widgets */}
         <div className="flex flex-col lg:flex-row gap-8">
-          {/* Cards section */}
+          {/* Cards section with animated tab content */}
           <div className="flex-1 min-w-0">
             {loading && (
               <div className="text-center py-20 text-os-text-secondary-dark">
@@ -193,23 +193,48 @@ export default function DiscoverPage() {
               </div>
             )}
 
-            {!loading && !error && activeTab === 'News' && (
-              <CardGrid
-                cards={currentCards}
-                type="news"
-                onOpenSources={handleOpenSources}
-                onSaveArticle={handleSaveArticle}
-                savedArticleIds={savedArticleIds}
-                onAddToSpace={handleAddToSpace}
-              />
-            )}
+            {/* Animated tab content transition */}
+            <AnimatePresence mode="wait">
+              {!loading && !error && activeTab === 'News' && (
+                <motion.div
+                  key="news-content"
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  transition={{ 
+                    duration: 0.25, 
+                    ease: [0.4, 0, 0.2, 1]
+                  }}
+                >
+                  <CardGrid
+                    cards={currentCards}
+                    type="news"
+                    onOpenSources={handleOpenSources}
+                    onSaveArticle={handleSaveArticle}
+                    savedArticleIds={savedArticleIds}
+                    onAddToSpace={handleAddToSpace}
+                  />
+                </motion.div>
+              )}
 
-            {!loading && !error && activeTab === 'Ideas' && (
-              <IdeaCardGrid
-                items={[...ideaData.shortForm, ...ideaData.longForm, ...ideaData.blog]}
-                activeFilter={activeIdeasType}
-              />
-            )}
+              {!loading && !error && activeTab === 'Ideas' && (
+                <motion.div
+                  key="ideas-content"
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  transition={{ 
+                    duration: 0.25, 
+                    ease: [0.4, 0, 0.2, 1]
+                  }}
+                >
+                  <IdeaCardGrid
+                    items={[...ideaData.shortForm, ...ideaData.longForm, ...ideaData.blog]}
+                    activeFilter={activeIdeasType}
+                  />
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
 
           {/* Widget panel - animated based on active tab */}
@@ -218,10 +243,10 @@ export default function DiscoverPage() {
               <motion.div 
                 key="widget-panel"
                 className="hidden lg:block"
-                initial={{ opacity: 0, x: 40 }}
+                initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 40 }}
-                transition={{ duration: 0.3, ease: 'easeOut' }}
+                exit={{ opacity: 0, x: 20 }}
+                transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
               >
                 <WidgetPanel />
               </motion.div>

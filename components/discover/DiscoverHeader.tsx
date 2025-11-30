@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Settings, Bookmark, Calendar, SlidersHorizontal, X, Check } from 'lucide-react';
 import { SourcesSettings } from './SourcesSettings';
 import { NewsTopicCategory, NEWS_TOPIC_LABELS } from '@/types';
@@ -151,27 +152,41 @@ export function DiscoverHeader({
               Discover
             </h1>
             
-            {/* Tabs - inline with title */}
-            <div className="flex items-center gap-1">
+            {/* Tabs - inline with title, with animated indicator */}
+            <div className="flex items-center gap-1 relative">
               <button
                 onClick={() => handleTabChange('News')}
-                className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+                className={`relative px-3 py-1.5 rounded-full text-sm font-medium transition-colors duration-200 ${
                   activeTab === 'News'
-                    ? 'bg-brand-aperol/15 text-brand-aperol border border-brand-aperol/30'
-                    : 'text-os-text-secondary-dark hover:text-brand-vanilla hover:bg-os-surface-dark border border-transparent'
+                    ? 'text-brand-aperol'
+                    : 'text-os-text-secondary-dark hover:text-brand-vanilla'
                 }`}
               >
-                News
+                {activeTab === 'News' && (
+                  <motion.span
+                    layoutId="tab-indicator"
+                    className="absolute inset-0 bg-brand-aperol/15 border border-brand-aperol/30 rounded-full"
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.4 }}
+                  />
+                )}
+                <span className="relative z-10">News</span>
               </button>
               <button
                 onClick={() => handleTabChange('Ideas')}
-                className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+                className={`relative px-3 py-1.5 rounded-full text-sm font-medium transition-colors duration-200 ${
                   activeTab === 'Ideas'
-                    ? 'bg-brand-aperol/15 text-brand-aperol border border-brand-aperol/30'
-                    : 'text-os-text-secondary-dark hover:text-brand-vanilla hover:bg-os-surface-dark border border-transparent'
+                    ? 'text-brand-aperol'
+                    : 'text-os-text-secondary-dark hover:text-brand-vanilla'
                 }`}
               >
-                Ideas
+                {activeTab === 'Ideas' && (
+                  <motion.span
+                    layoutId="tab-indicator"
+                    className="absolute inset-0 bg-brand-aperol/15 border border-brand-aperol/30 rounded-full"
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.4 }}
+                  />
+                )}
+                <span className="relative z-10">Ideas</span>
               </button>
             </div>
           </div>
