@@ -218,15 +218,17 @@ export function ArticleReferenceCard({
   );
 }
 
-// Inspiration reference card shown at top of generate ideas chat responses
+// Ideas reference card shown at top of generate ideas chat responses
 export function InspirationReferenceCard({
   title,
   category,
-  description,
+  generationType,
+  generationLabel,
 }: {
   title: string;
   category: string;
-  description?: string;
+  generationType?: string;
+  generationLabel?: string;
 }) {
   const getCategoryLabel = (cat: string) => {
     switch (cat) {
@@ -241,17 +243,70 @@ export function InspirationReferenceCard({
     }
   };
 
+  // Get action label based on generation type
+  const getActionLabel = () => {
+    if (generationLabel) return `Generating ${generationLabel.toLowerCase()}`;
+    if (!generationType) return 'Generating content';
+    
+    // Map generation types to friendly labels
+    const typeLabels: Record<string, string> = {
+      'image': 'Generating image concepts',
+      'copy': 'Generating copy & captions',
+      'art-direction': 'Generating art direction',
+      'resources': 'Generating resources',
+      'script': 'Generating script outline',
+      'hooks': 'Generating hooks & intros',
+      'storyboard': 'Generating storyboard',
+      'outline': 'Generating table of contents',
+      'titles': 'Generating title ideas',
+      'similar': 'Analyzing similar content',
+    };
+    
+    return typeLabels[generationType] || 'Generating content';
+  };
+
+  // Get icon based on generation type
+  const getIcon = () => {
+    if (!generationType) return <Lightbulb className="w-5 h-5 text-brand-aperol" />;
+    
+    // Icons mapped to types
+    switch (generationType) {
+      case 'image':
+        return <span className="text-lg">🖼️</span>;
+      case 'copy':
+        return <span className="text-lg">✏️</span>;
+      case 'art-direction':
+        return <span className="text-lg">🎨</span>;
+      case 'resources':
+        return <span className="text-lg">📁</span>;
+      case 'script':
+        return <span className="text-lg">📜</span>;
+      case 'hooks':
+        return <span className="text-lg">💡</span>;
+      case 'storyboard':
+        return <span className="text-lg">🎬</span>;
+      case 'outline':
+        return <span className="text-lg">📋</span>;
+      case 'titles':
+        return <span className="text-lg">📝</span>;
+      case 'similar':
+        return <span className="text-lg">🔍</span>;
+      default:
+        return <Lightbulb className="w-5 h-5 text-brand-aperol" />;
+    }
+  };
+
   return (
     <div className="w-full flex items-start gap-3 p-3 mb-4 bg-os-surface-dark/50 rounded-xl border border-os-border-dark/50">
       {/* Icon */}
       <div className="w-10 h-10 rounded-lg bg-brand-aperol/10 flex items-center justify-center flex-shrink-0">
-        <Sparkles className="w-5 h-5 text-brand-aperol" />
+        {getIcon()}
       </div>
 
       {/* Content */}
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2 mb-0.5">
-          <p className="text-xs text-os-text-secondary-dark">Generating ideas for</p>
+          <p className="text-xs text-os-text-secondary-dark">{getActionLabel()}</p>
           <span className="px-1.5 py-0.5 rounded text-[10px] font-medium bg-brand-aperol/10 text-brand-aperol">
             {getCategoryLabel(category)}
           </span>
@@ -259,11 +314,6 @@ export function InspirationReferenceCard({
         <p className="text-sm font-medium text-brand-vanilla line-clamp-1">
           {title}
         </p>
-        {description && (
-          <p className="text-xs text-os-text-secondary-dark mt-1 line-clamp-2">
-            {description}
-          </p>
-        )}
       </div>
     </div>
   );

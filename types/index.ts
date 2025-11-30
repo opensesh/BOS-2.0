@@ -87,6 +87,73 @@ export interface Source {
 }
 
 // ===========================================
+// News Topic Categories
+// ===========================================
+
+/**
+ * Topic categories for news filtering
+ * Users can filter by these and manage which ones they see
+ */
+export type NewsTopicCategory = 
+  | 'design-ux'        // Design & UX/UI
+  | 'branding'         // Branding & Strategy
+  | 'ai-creative'      // AI for Creatives (Midjourney, Runway, Figma AI)
+  | 'social-trends'    // Social Media Trends
+  | 'general-tech'     // General Tech
+  | 'startup-business'; // Startup/Agency Business
+
+export const NEWS_TOPIC_LABELS: Record<NewsTopicCategory, string> = {
+  'design-ux': 'Design & UX/UI',
+  'branding': 'Branding & Strategy',
+  'ai-creative': 'AI for Creatives',
+  'social-trends': 'Social Media Trends',
+  'general-tech': 'General Tech',
+  'startup-business': 'Startup/Agency Business',
+};
+
+// ===========================================
+// Rich Ideas System Types
+// ===========================================
+
+/**
+ * Platform-specific execution tips for an idea
+ */
+export interface PlatformTip {
+  platform: 'Instagram Reel' | 'Instagram Carousel' | 'Instagram Story' | 'YouTube Short' | 'YouTube' | 'LinkedIn' | 'LinkedIn Article' | 'Substack' | 'Medium' | 'TikTok';
+  tips: string[];
+}
+
+/**
+ * Visual direction guidance with creativity rating
+ */
+export interface VisualDirection {
+  rating: number;       // 1 (basic/safe) to 10 (radical/experimental)
+  description: string;  // Color mood, composition style, aesthetic notes
+}
+
+/**
+ * Rich inspiration idea with full creative brief
+ */
+export interface RichInspirationIdea {
+  id: string;
+  title: string;
+  description: string;
+  category: 'short-form' | 'long-form' | 'blog';
+  
+  // Creative brief fields
+  hooks: string[];                    // 2-3 attention-grabbing hook ideas
+  platformTips: PlatformTip[];        // Platform-specific execution guidance
+  visualDirection: VisualDirection;   // Visual/aesthetic direction with rating
+  exampleOutline: string[];           // Section-by-section content outline
+  hashtags: string;                   // Copy-paste ready hashtag string
+  
+  // Metadata
+  sources: Array<{ name: string; url: string }>;
+  starred: boolean;
+  generatedAt?: string;
+}
+
+// ===========================================
 // Tiered Content System Types
 // ===========================================
 
@@ -114,11 +181,14 @@ export interface NewsCardData {
   articlePath?: string;    // For featured: path to full JSON article
   aiSummary?: string;      // For summary: pre-generated AI summary
   sourceUrl?: string;      // For quick: external link to original source
+  // Topic categorization for filtering
+  topicCategory?: NewsTopicCategory;
 }
 
 /**
  * Inspiration items are content PROMPTS, not articles to read
  * They display as non-clickable cards with a "Generate Brief" action
+ * Rich fields (hooks, platformTips, etc.) are optional for backwards compatibility
  */
 export interface InspirationCardData {
   id: string;
@@ -131,6 +201,13 @@ export interface InspirationCardData {
   category: 'short-form' | 'long-form' | 'blog';
   starred?: boolean;
   isPrompt: true; // Always true - inspiration items are content prompts
+  
+  // Rich creative brief fields (optional for backwards compatibility)
+  hooks?: string[];                    // 2-3 attention-grabbing hook ideas
+  platformTips?: PlatformTip[];        // Platform-specific execution guidance
+  visualDirection?: VisualDirection;   // Visual/aesthetic direction with rating
+  exampleOutline?: string[];           // Section-by-section content outline
+  hashtags?: string;                   // Copy-paste ready hashtag string
 }
 
 export interface WeatherData {
@@ -178,6 +255,8 @@ export interface NewsUpdateItem {
   articlePath?: string;    // For featured: path to full JSON article
   aiSummary?: string;      // For summary: pre-generated AI summary
   sourceUrl?: string;      // For quick: external link to original source
+  // Topic categorization
+  topicCategory?: NewsTopicCategory;
 }
 
 export interface NewsData {
@@ -186,11 +265,27 @@ export interface NewsData {
   updates: NewsUpdateItem[];
 }
 
+/**
+ * Rich inspiration item with full creative brief for JSON storage
+ */
 export interface InspirationItem {
   title: string;
   description: string;
   starred?: boolean;
   sources: Array<{ name: string; url: string }>;
+  
+  // Rich creative brief fields (optional for backwards compatibility)
+  hooks?: string[];
+  platformTips?: Array<{
+    platform: string;
+    tips: string[];
+  }>;
+  visualDirection?: {
+    rating: number;
+    description: string;
+  };
+  exampleOutline?: string[];
+  hashtags?: string;
 }
 
 export interface InspirationData {

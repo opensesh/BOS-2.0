@@ -46,8 +46,29 @@ export async function POST(req: Request) {
       });
     }
 
+    // Ensure messages alternate properly (filter out consecutive messages of same role)
+    const validatedMessages = messages.reduce((acc: typeof messages, msg, idx) => {
+      if (idx === 0) {
+        acc.push(msg);
+      } else {
+        const prevRole = acc[acc.length - 1]?.role;
+        // Only add if role alternates or it's a different type
+        if (msg.role !== prevRole) {
+          acc.push(msg);
+        } else if (msg.role === 'user') {
+          // Merge consecutive user messages into one
+          const prev = acc[acc.length - 1];
+          const prevContent = typeof prev.content === 'string' ? prev.content : '';
+          const msgContent = typeof msg.content === 'string' ? msg.content : '';
+          acc[acc.length - 1] = { ...prev, content: `${prevContent}\n\n${msgContent}` };
+        }
+        // Skip consecutive assistant messages
+      }
+      return acc;
+    }, []);
+
     // Select model (auto-route if needed)
-    const selectedModel: ModelId = model === 'auto' ? autoSelectModel(messages) : model;
+    const selectedModel: ModelId = model === 'auto' ? autoSelectModel(validatedMessages) : model;
 
     // Validate API key is available for selected model
     const keyCheck = hasRequiredApiKey(selectedModel);
@@ -63,7 +84,7 @@ export async function POST(req: Request) {
     const modelInstance = getModelInstance(selectedModel);
 
     // Convert UI messages to model messages (AI SDK 5.x requirement)
-    const modelMessages = convertToModelMessages(messages);
+    const modelMessages = convertToModelMessages(validatedMessages);
 
     // Build brand-aware system prompt
     const systemPrompt = buildBrandSystemPrompt({

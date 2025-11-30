@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useState, useCallback } from 'react';
-import { useRouter } from 'next/navigation';
+import React, { useState, useCallback, useEffect } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { DiscoverLayout } from '@/components/discover/DiscoverLayout';
 import { DiscoverHeader } from '@/components/discover/DiscoverHeader';
@@ -23,6 +23,7 @@ type DateFilterOption = 'today' | 'week' | 'month';
 
 export default function DiscoverPage() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [activeTab, setActiveTab] = useState<MainTabType>('News');
   const [activeNewsType, setActiveNewsType] = useState<NewsTypeOption>('all');
   const [activeIdeasType, setActiveIdeasType] = useState<IdeasTypeOption>('all');
@@ -42,6 +43,16 @@ export default function DiscoverPage() {
   const [articleToAdd, setArticleToAdd] = useState<NewsCardData | null>(null);
   
   const { newsData, inspirationData, loading, error } = useDiscoverData();
+
+  // Read tab from URL params on mount and when searchParams change
+  useEffect(() => {
+    const tabParam = searchParams.get('tab');
+    if (tabParam === 'Ideas' || tabParam === 'Inspiration') {
+      setActiveTab('Ideas');
+    } else if (tabParam === 'News') {
+      setActiveTab('News');
+    }
+  }, [searchParams]);
 
   // Get current type based on main tab
   const currentType = activeTab === 'News'

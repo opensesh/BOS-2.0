@@ -42,11 +42,12 @@ interface ArticleContext {
   imageUrl?: string;
 }
 
-// Inspiration reference context from generate ideas
+// Ideas reference context from generate ideas
 interface InspirationContext {
   title: string;
   category: string;
-  description: string;
+  generationType?: string;
+  generationLabel?: string;
 }
 
 interface Connector {
@@ -160,6 +161,9 @@ export function ChatInterface() {
 
     // Handle article context queries (from article pages)
     if (query && articleRef && articleTitle) {
+      // Mark as processed immediately to prevent re-runs
+      setHasProcessedUrlParams(true);
+      
       // Reset existing messages to ensure proper message alternation
       setMessages([]);
       
@@ -173,16 +177,16 @@ export function ChatInterface() {
       // Clear URL params without reload
       router.replace('/', { scroll: false });
 
-      // Auto-submit the query (using 'text' format for AI SDK 5.x)
-      // Delay to ensure messages are cleared first
+      // Auto-submit the query with longer delay to ensure state is cleared
       setTimeout(() => {
         sendMessage({ text: query });
-      }, 150);
-
-      setHasProcessedUrlParams(true);
+      }, 250);
     }
-    // Handle standalone query (from inspiration prompts / generate ideas)
+    // Handle standalone query (from ideas prompts / generate ideas)
     else if (query && !articleRef) {
+      // Mark as processed immediately to prevent re-runs
+      setHasProcessedUrlParams(true);
+      
       // Reset existing messages to ensure proper message alternation
       setMessages([]);
       setArticleContext(null);
@@ -190,13 +194,15 @@ export function ChatInterface() {
       // Check for inspiration context in URL params
       const inspirationTitle = searchParams.get('inspirationTitle');
       const inspirationCategory = searchParams.get('inspirationCategory');
-      const inspirationDescription = searchParams.get('inspirationDescription');
+      const generationType = searchParams.get('generationType');
+      const generationLabel = searchParams.get('generationLabel');
       
       if (inspirationTitle && inspirationCategory) {
         setInspirationContext({
           title: inspirationTitle,
           category: inspirationCategory,
-          description: inspirationDescription || '',
+          generationType: generationType || undefined,
+          generationLabel: generationLabel || undefined,
         });
       } else {
         setInspirationContext(null);
@@ -205,13 +211,10 @@ export function ChatInterface() {
       // Clear URL params without reload
       router.replace('/', { scroll: false });
 
-      // Auto-submit the query (using 'text' format for AI SDK 5.x)
-      // Delay to ensure messages are cleared first
+      // Auto-submit the query with longer delay to ensure state is cleared
       setTimeout(() => {
         sendMessage({ text: query });
-      }, 150);
-
-      setHasProcessedUrlParams(true);
+      }, 250);
     }
   }, [searchParams, router, sendMessage, setMessages, hasProcessedUrlParams]);
 
@@ -449,13 +452,14 @@ export function ChatInterface() {
                       </div>
                     )}
 
-                    {/* Inspiration Reference Card - shown when generating ideas */}
+                    {/* Ideas Reference Card - shown when generating ideas */}
                     {inspirationContext && parsedMessages.length > 0 && !articleContext && (
                       <div className="pt-6">
                         <InspirationReferenceCard
                           title={inspirationContext.title}
                           category={inspirationContext.category}
-                          description={inspirationContext.description}
+                          generationType={inspirationContext.generationType}
+                          generationLabel={inspirationContext.generationLabel}
                         />
                       </div>
                     )}

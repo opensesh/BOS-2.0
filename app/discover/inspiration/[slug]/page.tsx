@@ -304,26 +304,19 @@ export default function InspirationDetailPage() {
     if (!item) return;
     setGeneratingId(option.id);
 
-    const sourceUrls = item.sources.map(s => `- ${s.name}: ${s.url}`).join('\n');
     const categoryLabel = item.category === 'short-form' ? 'Short Form' : 
                           item.category === 'long-form' ? 'Long Form' : 'Blog';
-
-    const prompt = `${option.prompt}
-
-**Content Idea:**
-Title: ${item.title}
-Format: ${categoryLabel}
-Description: ${item.description}
-
-**Reference Sources:**
-${sourceUrls}
-
-Please provide comprehensive, actionable recommendations aligned with the OPEN SESSION brand voice.`;
+    
+    // Create a simpler, cleaner prompt without full URLs
+    const sourceNames = item.sources.map(s => s.name).join(', ');
+    const prompt = `${option.prompt} for "${item.title}" (${categoryLabel}). ${item.description} Reference sources: ${sourceNames}.`;
 
     const urlParams = new URLSearchParams({
       q: prompt,
       inspirationTitle: item.title,
       inspirationCategory: item.category,
+      generationType: option.id,
+      generationLabel: option.title,
     });
     router.push(`/?${urlParams.toString()}`);
   };
@@ -398,8 +391,8 @@ Please provide comprehensive, actionable recommendations aligned with the OPEN S
         <StickyArticleHeader 
           title={item.title} 
           titleRef={titleRef}
-          backLink="/discover?tab=Inspiration"
-          backLabel="Inspiration"
+          backLink="/discover?tab=Ideas"
+          backLabel="Ideas"
         />
 
         <div className="flex-1 overflow-y-auto custom-scrollbar">
