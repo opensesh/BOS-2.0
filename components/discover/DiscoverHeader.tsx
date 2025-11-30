@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
+import Link from 'next/link';
 import { Settings, Bookmark, ChevronDown, ArrowUpDown, Check, X, Filter, SlidersHorizontal } from 'lucide-react';
 import { SourcesSettings } from './SourcesSettings';
 import { NewsTopicCategory, NEWS_TOPIC_LABELS } from '@/types';
@@ -164,6 +165,12 @@ export function DiscoverHeader({
             >
               Ideas
             </button>
+            <Link
+              href="/discover/inspo"
+              className="px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 text-os-text-secondary-dark hover:text-brand-vanilla"
+            >
+              Inspo
+            </Link>
           </div>
         </div>
 
