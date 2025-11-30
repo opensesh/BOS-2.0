@@ -142,8 +142,8 @@ function IdeaCard({ item }: { item: IdeaCardData }) {
       href={`/discover/ideas/${slug}?id=${item.id}`}
       className="group relative flex flex-col rounded-2xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl h-full min-h-[320px] sm:min-h-[360px]"
     >
-      {/* TOP: Hero Image - 1/3 of card */}
-      <div className="relative w-full aspect-[2.5/1] sm:aspect-[3/1] overflow-hidden">
+      {/* TOP: Hero Image */}
+      <div className="relative w-full aspect-[2.2/1] sm:aspect-[2.7/1] overflow-hidden">
         {isLoading ? (
           <div className="w-full h-full flex items-center justify-center bg-os-charcoal">
             <div className="w-5 h-5 border-2 border-brand-vanilla/30 border-t-brand-vanilla rounded-full animate-spin" />
