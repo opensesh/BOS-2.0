@@ -89,7 +89,7 @@ function InspirationCard({ item, featured = false }: { item: InspirationCardData
         className="group flex flex-col rounded-2xl overflow-hidden bg-os-surface-dark border border-os-border-dark/50 hover:border-brand-aperol/30 transition-all h-full"
       >
         {/* Image */}
-        <div className="relative aspect-[16/9] overflow-hidden bg-os-surface-dark flex-shrink-0">
+        <div className="relative aspect-[2/1] overflow-hidden bg-os-surface-dark flex-shrink-0">
           {isLoading ? (
             <div className="w-full h-full flex items-center justify-center">
               <div className="w-6 h-6 border-2 border-os-text-secondary-dark border-t-transparent rounded-full animate-spin" />
@@ -106,12 +106,12 @@ function InspirationCard({ item, featured = false }: { item: InspirationCardData
         </div>
 
         {/* Content */}
-        <div className="p-4 flex-1 flex flex-col">
-          <h3 className="text-base md:text-lg font-semibold text-brand-vanilla line-clamp-2 mb-2">
+        <div className="p-3 flex-1 flex flex-col">
+          <h3 className="text-sm md:text-base font-semibold text-brand-vanilla line-clamp-2 mb-1">
             {item.title}
           </h3>
           
-          <p className="text-sm text-os-text-secondary-dark line-clamp-2 mb-3 flex-1">
+          <p className="text-xs text-os-text-secondary-dark line-clamp-2 mb-2 flex-1">
             {item.description}
           </p>
 
@@ -142,11 +142,11 @@ function InspirationCard({ item, featured = false }: { item: InspirationCardData
   // Compact card
   return (
     <Link
-      href={`/discover/inspiration/${slug}?id=${item.id}`}
+      href={`/discover/ideas/${slug}?id=${item.id}`}
       className="group flex flex-col rounded-2xl overflow-hidden bg-os-surface-dark border border-os-border-dark/50 hover:border-brand-aperol/30 transition-all h-full"
     >
       {/* Image */}
-      <div className="relative aspect-[16/10] overflow-hidden bg-os-surface-dark flex-shrink-0">
+      <div className="relative aspect-[2/1] overflow-hidden bg-os-surface-dark flex-shrink-0">
         {isLoading ? (
           <div className="w-full h-full flex items-center justify-center">
             <div className="w-5 h-5 border-2 border-os-text-secondary-dark border-t-transparent rounded-full animate-spin" />
@@ -258,7 +258,7 @@ export function InspirationCardGrid({ items, activeFilter }: InspirationCardGrid
     if (filteredItems.length === 0) {
       return (
         <div className="text-center py-20 text-os-text-secondary-dark">
-          No inspiration items found for this filter.
+          No ideas found for this filter.
         </div>
       );
     }

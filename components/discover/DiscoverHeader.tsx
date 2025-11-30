@@ -4,16 +4,16 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Settings, Bookmark, Calendar, SlidersHorizontal } from 'lucide-react';
 import { SourcesSettings } from './SourcesSettings';
 
-type MainTabType = 'News' | 'Inspiration';
+type MainTabType = 'News' | 'Ideas';
 type NewsTypeOption = 'all' | 'ai' | 'design' | 'tech' | 'finance';
-type InspirationTypeOption = 'all' | 'short-form' | 'long-form' | 'blog';
+type IdeasTypeOption = 'all' | 'short-form' | 'long-form' | 'blog';
 type DateOption = 'today' | 'week' | 'month';
 
 interface DiscoverHeaderProps {
   activeTab: MainTabType;
-  activeType: NewsTypeOption | InspirationTypeOption;
+  activeType: NewsTypeOption | IdeasTypeOption;
   onTabChange: (tab: MainTabType) => void;
-  onTypeChange: (type: NewsTypeOption | InspirationTypeOption) => void;
+  onTypeChange: (type: NewsTypeOption | IdeasTypeOption) => void;
   savedCount?: number;
   onOpenSaved?: () => void;
   lastUpdated?: string;
@@ -29,7 +29,7 @@ const NEWS_TYPES: { id: NewsTypeOption; label: string }[] = [
   { id: 'finance', label: 'Finance' },
 ];
 
-const INSPIRATION_TYPES: { id: InspirationTypeOption; label: string }[] = [
+const IDEAS_TYPES: { id: IdeasTypeOption; label: string }[] = [
   { id: 'all', label: 'All' },
   { id: 'short-form', label: 'Short Form' },
   { id: 'long-form', label: 'Long Form' },
@@ -58,7 +58,7 @@ export function DiscoverHeader({
   const dropdownRef = useRef<HTMLDivElement>(null);
   const dateDropdownRef = useRef<HTMLDivElement>(null);
 
-  const typeOptions = activeTab === 'News' ? NEWS_TYPES : INSPIRATION_TYPES;
+  const typeOptions = activeTab === 'News' ? NEWS_TYPES : IDEAS_TYPES;
   const currentTypeLabel = typeOptions.find(t => t.id === activeType)?.label || 'All';
   const currentDateLabel = DATE_OPTIONS.find(d => d.id === selectedDate)?.label || 'Today';
 
@@ -106,14 +106,14 @@ export function DiscoverHeader({
               News
             </button>
             <button
-              onClick={() => handleTabChange('Inspiration')}
+              onClick={() => handleTabChange('Ideas')}
               className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
-                activeTab === 'Inspiration'
+                activeTab === 'Ideas'
                   ? 'bg-brand-aperol/15 text-brand-aperol border border-brand-aperol/30'
                   : 'text-os-text-secondary-dark hover:text-brand-vanilla hover:bg-os-surface-dark border border-transparent'
               }`}
             >
-              Inspiration
+              Ideas
             </button>
           </div>
         </div>

@@ -16,16 +16,16 @@ import { SavedArticlesDrawer, SavedArticle } from '@/components/discover/SavedAr
 import { SourceInfo } from '@/components/chat/AnswerView';
 import { NewsCardData } from '@/types';
 
-type MainTabType = 'News' | 'Inspiration';
+type MainTabType = 'News' | 'Ideas';
 type NewsTypeOption = 'all' | 'ai' | 'design' | 'tech' | 'finance';
-type InspirationTypeOption = 'all' | 'short-form' | 'long-form' | 'blog';
+type IdeasTypeOption = 'all' | 'short-form' | 'long-form' | 'blog';
 type DateFilterOption = 'today' | 'week' | 'month';
 
 export default function DiscoverPage() {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState<MainTabType>('News');
   const [activeNewsType, setActiveNewsType] = useState<NewsTypeOption>('all');
-  const [activeInspirationType, setActiveInspirationType] = useState<InspirationTypeOption>('all');
+  const [activeIdeasType, setActiveIdeasType] = useState<IdeasTypeOption>('all');
   const [selectedDate, setSelectedDate] = useState<DateFilterOption>('today');
   
   // Source Drawer State
@@ -44,9 +44,9 @@ export default function DiscoverPage() {
   const { newsData, inspirationData, loading, error } = useDiscoverData();
 
   // Get current type based on main tab
-  const currentType = activeTab === 'News' 
-    ? activeNewsType 
-    : activeInspirationType;
+  const currentType = activeTab === 'News'
+    ? activeNewsType
+    : activeIdeasType;
 
   // Get cards based on active tab and type
   const getCurrentCards = () => {
@@ -63,8 +63,8 @@ export default function DiscoverPage() {
       // For now, return all
       return allNews;
     } else {
-      // Filter inspiration by type
-      switch (activeInspirationType) {
+      // Filter ideas by type
+      switch (activeIdeasType) {
         case 'short-form':
           return inspirationData.shortForm;
         case 'long-form':
@@ -78,11 +78,11 @@ export default function DiscoverPage() {
     }
   };
 
-  const handleTypeChange = (type: NewsTypeOption | InspirationTypeOption) => {
+  const handleTypeChange = (type: NewsTypeOption | IdeasTypeOption) => {
     if (activeTab === 'News') {
       setActiveNewsType(type as NewsTypeOption);
     } else {
-      setActiveInspirationType(type as InspirationTypeOption);
+      setActiveIdeasType(type as IdeasTypeOption);
     }
   };
 
@@ -193,10 +193,10 @@ export default function DiscoverPage() {
               />
             )}
 
-            {!loading && !error && activeTab === 'Inspiration' && (
+            {!loading && !error && activeTab === 'Ideas' && (
               <InspirationCardGrid
                 items={[...inspirationData.shortForm, ...inspirationData.longForm, ...inspirationData.blog]}
-                activeFilter={activeInspirationType}
+                activeFilter={activeIdeasType}
               />
             )}
           </div>

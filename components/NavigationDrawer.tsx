@@ -249,7 +249,7 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef }: NavigationD
                   }`}
                 >
                   <Lightbulb className="w-5 h-5" />
-                  <span className="text-sm">Inspiration</span>
+                  <span className="text-sm">Ideas</span>
                 </Link>
               </div>
             </div>

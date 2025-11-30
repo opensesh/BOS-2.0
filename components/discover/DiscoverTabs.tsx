@@ -1,15 +1,15 @@
 import React from 'react';
 import { Compass, Lightbulb } from 'lucide-react';
 
-type MainTabType = 'News' | 'Inspiration';
+type MainTabType = 'News' | 'Ideas';
 type NewsSubTabType = 'weekly-update' | 'monthly-outlook';
-type InspirationSubTabType = 'short-form' | 'long-form' | 'blog';
+type IdeasSubTabType = 'short-form' | 'long-form' | 'blog';
 
 interface DiscoverTabsProps {
   activeTab: MainTabType;
-  activeSubTab?: NewsSubTabType | InspirationSubTabType;
+  activeSubTab?: NewsSubTabType | IdeasSubTabType;
   onTabChange: (tab: MainTabType) => void;
-  onSubTabChange?: (subTab: NewsSubTabType | InspirationSubTabType) => void;
+  onSubTabChange?: (subTab: NewsSubTabType | IdeasSubTabType) => void;
 }
 
 export function DiscoverTabs({ 
@@ -20,7 +20,7 @@ export function DiscoverTabs({
 }: DiscoverTabsProps) {
   const mainTabs: { id: MainTabType; icon: React.ReactNode; label: string }[] = [
     { id: 'News', icon: <Compass className="w-4 h-4" />, label: 'News' },
-    { id: 'Inspiration', icon: <Lightbulb className="w-4 h-4" />, label: 'Inspiration' },
+    { id: 'Ideas', icon: <Lightbulb className="w-4 h-4" />, label: 'Ideas' },
   ];
 
   const newsSubTabs: { id: NewsSubTabType; label: string }[] = [
@@ -28,13 +28,13 @@ export function DiscoverTabs({
     { id: 'monthly-outlook', label: 'Monthly Outlook' },
   ];
 
-  const inspirationSubTabs: { id: InspirationSubTabType; label: string }[] = [
+  const ideasSubTabs: { id: IdeasSubTabType; label: string }[] = [
     { id: 'short-form', label: 'Short Form' },
     { id: 'long-form', label: 'Long Form' },
     { id: 'blog', label: 'Blog' },
   ];
 
-  const currentSubTabs = activeTab === 'News' ? newsSubTabs : inspirationSubTabs;
+  const currentSubTabs = activeTab === 'News' ? newsSubTabs : ideasSubTabs;
 
   return (
     <div className="flex flex-col gap-4 mb-8">
