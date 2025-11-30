@@ -123,7 +123,7 @@ function useIdeaImage(item: IdeaCardData) {
   return { imageUrl, isLoading };
 }
 
-// Redesigned IdeaCard matching Figma design exactly
+// Redesigned IdeaCard - Hero image top, texture bottom
 function IdeaCard({ item }: { item: IdeaCardData }) {
   const { imageUrl, isLoading } = useIdeaImage(item);
   const slug = item.slug || generateSlug(item.title);
@@ -141,70 +141,66 @@ function IdeaCard({ item }: { item: IdeaCardData }) {
     <Link
       href={`/discover/ideas/${slug}?id=${item.id}`}
       className="group relative flex flex-col rounded-2xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl h-full"
-      style={{ minHeight: '420px' }}
     >
-      {/* Background Texture */}
-      <div className="absolute inset-0">
-        <Image
-          src={textureUrl}
-          alt=""
-          fill
-          className="object-cover"
-          priority
-        />
-        {/* Subtle dark overlay for text legibility */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/20" />
+      {/* TOP: Hero Image */}
+      <div className="relative w-full aspect-[4/3] overflow-hidden">
+        {isLoading ? (
+          <div className="w-full h-full flex items-center justify-center bg-os-charcoal">
+            <div className="w-6 h-6 border-2 border-brand-vanilla/30 border-t-brand-vanilla rounded-full animate-spin" />
+          </div>
+        ) : (
+          <Image
+            src={imageUrl}
+            alt={cleanTitle}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            unoptimized
+          />
+        )}
       </div>
 
-      {/* Card Content */}
-      <div className="relative z-10 flex flex-col h-full p-5 md:p-6">
-        {/* TOP ROW: Format chip (left) + Category chip (right) */}
-        <div className="flex items-center justify-between mb-auto">
-          {/* Format Chip - Left */}
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full border border-brand-vanilla/50 text-brand-vanilla text-sm font-medium backdrop-blur-sm">
-            <Sparkles className="w-3.5 h-3.5" />
-            {formatLabel}
-          </span>
-
-          {/* Category Chip - Right */}
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-os-charcoal/90 text-brand-vanilla text-sm font-medium">
-            <CategoryIcon className="w-3.5 h-3.5 opacity-80" />
-            {categoryInfo.label}
-          </span>
+      {/* BOTTOM: Texture background with content */}
+      <div className="relative flex-1 min-h-[180px]">
+        {/* Texture Background */}
+        <div className="absolute inset-0">
+          <Image
+            src={textureUrl}
+            alt=""
+            fill
+            className="object-cover"
+          />
         </div>
 
-        {/* MIDDLE: Thumbnail + Sources chip */}
-        <div className="flex items-end justify-between my-6">
-          {/* Thumbnail Image */}
-          <div 
-            className="relative w-32 h-32 md:w-36 md:h-36 rounded-2xl overflow-hidden border-[4px] border-brand-vanilla shadow-xl"
-          >
-            {isLoading ? (
-              <div className="w-full h-full flex items-center justify-center bg-os-charcoal/80">
-                <div className="w-5 h-5 border-2 border-brand-vanilla/30 border-t-brand-vanilla rounded-full animate-spin" />
-              </div>
-            ) : (
-              <Image
-                src={imageUrl}
-                alt={cleanTitle}
-                fill
-                className="object-cover"
-                unoptimized
-              />
-            )}
+        {/* Content */}
+        <div className="relative z-10 flex flex-col h-full p-5">
+          {/* Format Label */}
+          <div className="mb-2">
+            <span className="inline-flex items-center gap-1.5 text-brand-vanilla text-sm font-medium">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span className="underline underline-offset-2 decoration-brand-vanilla/50">{formatLabel}</span>
+            </span>
           </div>
 
-          {/* Sources Chip - positioned to the right of thumbnail */}
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-os-charcoal/90 text-brand-vanilla text-sm font-medium">
-            <Clock className="w-3.5 h-3.5 opacity-80" />
-            {item.sources.length} {item.sources.length === 1 ? 'source' : 'sources'}
-          </span>
-        </div>
+          {/* Title */}
+          <h3 className="font-display font-bold text-brand-vanilla text-xl md:text-2xl leading-tight line-clamp-2 mb-auto">
+            {cleanTitle}
+          </h3>
 
-        {/* BOTTOM: Title */}
-        <h3 className="font-display font-bold text-brand-vanilla text-xl md:text-2xl leading-tight line-clamp-2">
-          {cleanTitle}
-        </h3>
+          {/* Footer Chips */}
+          <div className="flex items-center justify-between mt-4">
+            {/* Sources Chip */}
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-os-charcoal/90 text-brand-vanilla text-sm font-medium">
+              <Clock className="w-3.5 h-3.5 opacity-80" />
+              {item.sources.length} {item.sources.length === 1 ? 'source' : 'sources'}
+            </span>
+
+            {/* Category Chip */}
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-os-charcoal/90 text-brand-vanilla text-sm font-medium">
+              <CategoryIcon className="w-3.5 h-3.5 opacity-80" />
+              {categoryInfo.label}
+            </span>
+          </div>
+        </div>
       </div>
     </Link>
   );
