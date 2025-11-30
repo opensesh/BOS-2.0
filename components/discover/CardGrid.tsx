@@ -1,11 +1,11 @@
 import React from 'react';
 import { NewsCard } from './NewsCard';
-import { InspirationPromptCard } from './InspirationPromptCard';
-import { NewsCardData, InspirationCardData } from '@/types';
+import { IdeaPromptCard } from './IdeaPromptCard';
+import { NewsCardData, IdeaCardData } from '@/types';
 import { SourceInfo } from '@/components/chat/AnswerView';
 
 interface CardGridProps {
-  cards: (NewsCardData | InspirationCardData)[];
+  cards: (NewsCardData | IdeaCardData)[];
   type: 'news' | 'inspiration';
   onOpenSources?: (sources: SourceInfo[]) => void;
   onSaveArticle?: (item: NewsCardData, isSaved: boolean) => void;
@@ -30,7 +30,7 @@ export function CardGrid({
   }
 
   // Group cards into layout pattern: 1 featured + 3 compact per group
-  const groups: Array<{ featured: NewsCardData | InspirationCardData; compact: (NewsCardData | InspirationCardData)[] }> = [];
+  const groups: Array<{ featured: NewsCardData | IdeaCardData; compact: (NewsCardData | IdeaCardData)[] }> = [];
   
   for (let i = 0; i < cards.length; i += 4) {
     const featured = cards[i];
@@ -57,8 +57,8 @@ export function CardGrid({
                 onAddToSpace={onAddToSpace}
               />
             ) : (
-              <InspirationPromptCard 
-                item={group.featured as InspirationCardData} 
+              <IdeaPromptCard 
+                item={group.featured as IdeaCardData} 
                 variant="featured" 
               />
             )}
@@ -85,8 +85,8 @@ export function CardGrid({
                           onAddToSpace={onAddToSpace}
                         />
                       ) : (
-                        <InspirationPromptCard
-                          item={card as InspirationCardData}
+                        <IdeaPromptCard
+                          item={card as IdeaCardData}
                           variant="compact"
                         />
                       )}

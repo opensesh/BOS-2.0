@@ -28,7 +28,7 @@ import {
 } from 'lucide-react';
 import { Sidebar } from '@/components/Sidebar';
 import { StickyArticleHeader } from '@/components/discover/article/StickyArticleHeader';
-import { InspirationCardData, PlatformTip } from '@/types';
+import { IdeaCardData, PlatformTip } from '@/types';
 
 // Content-type specific generation options
 interface GenerationOption {
@@ -134,7 +134,7 @@ const BLOG_OPTIONS: GenerationOption[] = [
 
 // Helper to generate consistent IDs - matches discover-utils.ts format
 function generateId(category: string, index: number): string {
-  return `inspiration-${category}-${index}`;
+  return `idea-${category}-${index}`;
 }
 
 // Generate slug from title
@@ -146,8 +146,8 @@ function generateSlugFromTitle(title: string): string {
     .substring(0, 50);
 }
 
-// Process raw inspiration data and add IDs - matches discover-utils.ts format
-function processInspirationData(
+// Process raw idea data and add IDs - matches discover-utils.ts format
+function processIdeaData(
   data: { ideas: Array<{ 
     title: string; 
     description: string; 
@@ -161,7 +161,7 @@ function processInspirationData(
     hashtags?: string;
   }> },
   category: string
-): InspirationCardData[] {
+): IdeaCardData[] {
   return data.ideas.map((idea, index) => ({
     id: generateId(category, index),
     title: idea.title,
@@ -184,8 +184,8 @@ function processInspirationData(
   }));
 }
 
-// Fetch inspiration item from all categories - with ID and slug fallback
-async function fetchInspirationItem(id: string | null, slug: string): Promise<InspirationCardData | null> {
+// Fetch idea item from all categories - with ID and slug fallback
+async function fetchIdeaItem(id: string | null, slug: string): Promise<IdeaCardData | null> {
   try {
     const categories = ['short-form', 'long-form', 'blog'] as const;
     
@@ -193,7 +193,7 @@ async function fetchInspirationItem(id: string | null, slug: string): Promise<In
       const response = await fetch(`/data/weekly-ideas/${category}/latest.json`);
       if (response.ok) {
         const data = await response.json();
-        const processedItems = processInspirationData(data, category);
+        const processedItems = processIdeaData(data, category);
         
         if (id) {
           const foundById = processedItems.find(item => item.id === id);
@@ -205,7 +205,7 @@ async function fetchInspirationItem(id: string | null, slug: string): Promise<In
       }
     }
   } catch (error) {
-    console.error('Error fetching inspiration item:', error);
+    console.error('Error fetching idea item:', error);
   }
   return null;
 }
@@ -218,7 +218,7 @@ const FALLBACK_IMAGES = {
 };
 
 // Generate concept brief (static, non-streaming)
-async function generateConceptBrief(item: InspirationCardData): Promise<string> {
+async function generateConceptBrief(item: IdeaCardData): Promise<string> {
   try {
     const response = await fetch('/api/chat', {
       method: 'POST',
@@ -275,12 +275,12 @@ const getRatingLabel = (rating: number) => {
   return 'Radical';
 };
 
-export default function InspirationDetailPage() {
+export default function IdeaDetailPage() {
   const params = useParams();
   const searchParams = useSearchParams();
   const router = useRouter();
   const titleRef = useRef<HTMLHeadingElement>(null);
-  const [item, setItem] = useState<InspirationCardData | null>(null);
+  const [item, setItem] = useState<IdeaCardData | null>(null);
   const [ogImage, setOgImage] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [generatingId, setGeneratingId] = useState<string | null>(null);
@@ -320,11 +320,11 @@ export default function InspirationDetailPage() {
     }
   };
 
-  // Fetch inspiration item
+  // Fetch idea item
   useEffect(() => {
     if (slug) {
       setLoading(true);
-      fetchInspirationItem(id, slug).then(data => {
+      fetchIdeaItem(id, slug).then(data => {
         setItem(data);
         setLoading(false);
       });
@@ -382,9 +382,9 @@ export default function InspirationDetailPage() {
 
     const urlParams = new URLSearchParams({
       q: prompt,
-      inspirationTitle: item.title,
-      inspirationCategory: item.category,
-      inspirationSlug: slug,
+      ideaTitle: item.title,
+      ideaCategory: item.category,
+      ideaSlug: slug,
       generationType: option.id,
       generationLabel: option.title,
     });
@@ -440,12 +440,12 @@ export default function InspirationDetailPage() {
       <div className="flex h-screen bg-os-bg-dark">
         <Sidebar />
         <main className="flex-1 flex flex-col items-center justify-center pt-14 lg:pt-0">
-          <p className="text-os-text-secondary-dark mb-4">Inspiration item not found</p>
+          <p className="text-os-text-secondary-dark mb-4">Idea not found</p>
           <Link
-            href="/discover?tab=Inspiration"
+            href="/discover?tab=Ideas"
             className="text-brand-aperol hover:underline"
           >
-            Back to Inspiration
+            Back to Ideas
           </Link>
         </main>
       </div>

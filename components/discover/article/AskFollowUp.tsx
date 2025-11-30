@@ -219,7 +219,7 @@ export function ArticleReferenceCard({
 }
 
 // Ideas reference card shown at top of generate ideas chat responses
-export function InspirationReferenceCard({
+export function IdeaReferenceCard({
   title,
   category,
   slug,
@@ -302,7 +302,7 @@ export function InspirationReferenceCard({
 
   const handleClick = () => {
     if (slug) {
-      router.push(`/discover/inspiration/${slug}`);
+      router.push(`/discover/ideas/${slug}`);
     }
   };
 

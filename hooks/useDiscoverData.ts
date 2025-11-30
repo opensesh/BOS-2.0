@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { NewsCardData, InspirationCardData } from '@/types';
-import { loadNewsData, loadInspirationData } from '@/lib/discover-utils';
+import { NewsCardData, IdeaCardData } from '@/types';
+import { loadNewsData, loadIdeaData } from '@/lib/discover-utils';
 
 export function useDiscoverData() {
   const [newsData, setNewsData] = useState<{
@@ -11,10 +11,10 @@ export function useDiscoverData() {
     monthlyOutlook: [],
   });
   
-  const [inspirationData, setInspirationData] = useState<{
-    shortForm: InspirationCardData[];
-    longForm: InspirationCardData[];
-    blog: InspirationCardData[];
+  const [ideaData, setIdeaData] = useState<{
+    shortForm: IdeaCardData[];
+    longForm: IdeaCardData[];
+    blog: IdeaCardData[];
   }>({
     shortForm: [],
     longForm: [],
@@ -36,15 +36,15 @@ export function useDiscoverData() {
           loadNewsData('monthly-outlook'),
         ]);
         
-        // Load all inspiration data
+        // Load all idea data
         const [shortForm, longForm, blog] = await Promise.all([
-          loadInspirationData('short-form'),
-          loadInspirationData('long-form'),
-          loadInspirationData('blog'),
+          loadIdeaData('short-form'),
+          loadIdeaData('long-form'),
+          loadIdeaData('blog'),
         ]);
         
         setNewsData({ weeklyUpdate, monthlyOutlook });
-        setInspirationData({ shortForm, longForm, blog });
+        setIdeaData({ shortForm, longForm, blog });
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Failed to load data');
         console.error('Error loading discover data:', err);
@@ -58,7 +58,7 @@ export function useDiscoverData() {
   
   return {
     newsData,
-    inspirationData,
+    ideaData,
     loading,
     error,
   };

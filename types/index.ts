@@ -132,9 +132,9 @@ export interface VisualDirection {
 }
 
 /**
- * Rich inspiration idea with full creative brief
+ * Rich idea with full creative brief
  */
-export interface RichInspirationIdea {
+export interface RichIdea {
   id: string;
   title: string;
   description: string;
@@ -186,11 +186,11 @@ export interface NewsCardData {
 }
 
 /**
- * Inspiration items are content PROMPTS, not articles to read
+ * Idea items are content PROMPTS, not articles to read
  * They display as non-clickable cards with a "Generate Brief" action
  * Rich fields (hooks, platformTips, etc.) are optional for backwards compatibility
  */
-export interface InspirationCardData {
+export interface IdeaCardData {
   id: string;
   slug: string;
   title: string;
@@ -200,7 +200,7 @@ export interface InspirationCardData {
   imageUrl?: string;
   category: 'short-form' | 'long-form' | 'blog';
   starred?: boolean;
-  isPrompt: true; // Always true - inspiration items are content prompts
+  isPrompt: true; // Always true - idea items are content prompts
   
   // Rich creative brief fields (optional for backwards compatibility)
   hooks?: string[];                    // 2-3 attention-grabbing hook ideas
@@ -266,9 +266,9 @@ export interface NewsData {
 }
 
 /**
- * Rich inspiration item with full creative brief for JSON storage
+ * Rich idea item with full creative brief for JSON storage
  */
-export interface InspirationItem {
+export interface IdeaItem {
   title: string;
   description: string;
   starred?: boolean;
@@ -288,10 +288,10 @@ export interface InspirationItem {
   hashtags?: string;
 }
 
-export interface InspirationData {
+export interface IdeaData {
   type: 'short-form' | 'long-form' | 'blog';
   date: string;
-  ideas: InspirationItem[];
+  ideas: IdeaItem[];
 }
 
 // Brand Hub Resources

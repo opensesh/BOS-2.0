@@ -14,24 +14,24 @@ import {
   ExternalLink,
   Sparkles
 } from 'lucide-react';
-import { InspirationCardData } from '@/types';
+import { IdeaCardData } from '@/types';
 
-interface InspirationAccordionProps {
-  shortForm: InspirationCardData[];
-  longForm: InspirationCardData[];
-  blog: InspirationCardData[];
+interface IdeaAccordionProps {
+  shortForm: IdeaCardData[];
+  longForm: IdeaCardData[];
+  blog: IdeaCardData[];
 }
 
 interface AccordionSectionProps {
   title: string;
   icon: React.ComponentType<{ className?: string }>;
-  items: InspirationCardData[];
+  items: IdeaCardData[];
   isOpen: boolean;
   onToggle: () => void;
 }
 
 // Single item row in the accordion
-function InspirationItem({ item }: { item: InspirationCardData }) {
+function IdeaItem({ item }: { item: IdeaCardData }) {
   const router = useRouter();
   const [isGenerating, setIsGenerating] = useState(false);
   const [ogImage, setOgImage] = useState<string | null>(null);
@@ -88,12 +88,12 @@ Please provide:
 4. Visual/aesthetic recommendations
 5. Call-to-action suggestions`;
 
-    // Navigate to home with the prompt and inspiration context
+    // Navigate to home with the prompt and idea context
     const params = new URLSearchParams({
       q: prompt,
-      inspirationTitle: item.title,
-      inspirationCategory: item.category,
-      inspirationDescription: item.description,
+      ideaTitle: item.title,
+      ideaCategory: item.category,
+      ideaDescription: item.description,
     });
     router.push(`/?${params.toString()}`);
   };
@@ -231,7 +231,7 @@ function AccordionSection({ title, icon: Icon, items, isOpen, onToggle }: Accord
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: idx * 0.05 }}
                   >
-                    <InspirationItem item={item} />
+                    <IdeaItem item={item} />
                   </motion.div>
                 ))
               ) : (
@@ -247,7 +247,7 @@ function AccordionSection({ title, icon: Icon, items, isOpen, onToggle }: Accord
   );
 }
 
-export function InspirationAccordion({ shortForm, longForm, blog }: InspirationAccordionProps) {
+export function IdeaAccordion({ shortForm, longForm, blog }: IdeaAccordionProps) {
   const [openSections, setOpenSections] = useState<Set<string>>(new Set(['short-form']));
 
   const toggleSection = (section: string) => {

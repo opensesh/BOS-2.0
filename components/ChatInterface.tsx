@@ -33,7 +33,7 @@ import {
   ChatHeader,
   ChatContent,
 } from './chat';
-import { ArticleReferenceCard, InspirationReferenceCard } from './discover/article/AskFollowUp';
+import { ArticleReferenceCard, IdeaReferenceCard } from './discover/article/AskFollowUp';
 
 // Article reference context from discover page
 interface ArticleContext {
@@ -43,7 +43,7 @@ interface ArticleContext {
 }
 
 // Ideas reference context from generate ideas
-interface InspirationContext {
+interface IdeaContext {
   title: string;
   category: string;
   slug?: string;
@@ -84,7 +84,7 @@ export function ChatInterface() {
   const [modelUsed, setModelUsed] = useState<string | undefined>();
   const [activeTab, setActiveTab] = useState<'answer' | 'links' | 'images'>('answer');
   const [articleContext, setArticleContext] = useState<ArticleContext | null>(null);
-  const [inspirationContext, setInspirationContext] = useState<InspirationContext | null>(null);
+  const [ideaContext, setIdeaContext] = useState<IdeaContext | null>(null);
   const [hasProcessedUrlParams, setHasProcessedUrlParams] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const globeButtonRef = useRef<HTMLButtonElement>(null);
@@ -146,7 +146,7 @@ export function ChatInterface() {
       }
       resetChat();
       setArticleContext(null);
-      setInspirationContext(null);
+      setIdeaContext(null);
       acknowledgeChatReset();
     }
   }, [shouldResetChat, acknowledgeChatReset, resetChat, messages, addToHistory, getMessageContent]);
@@ -192,23 +192,23 @@ export function ChatInterface() {
       setMessages([]);
       setArticleContext(null);
       
-      // Check for inspiration context in URL params
-      const inspirationTitle = searchParams.get('inspirationTitle');
-      const inspirationCategory = searchParams.get('inspirationCategory');
-      const inspirationSlug = searchParams.get('inspirationSlug');
+      // Check for idea context in URL params (support both old and new param names)
+      const ideaTitle = searchParams.get('ideaTitle') || searchParams.get('inspirationTitle');
+      const ideaCategory = searchParams.get('ideaCategory') || searchParams.get('inspirationCategory');
+      const ideaSlug = searchParams.get('ideaSlug') || searchParams.get('inspirationSlug');
       const generationType = searchParams.get('generationType');
       const generationLabel = searchParams.get('generationLabel');
       
-      if (inspirationTitle && inspirationCategory) {
-        setInspirationContext({
-          title: inspirationTitle,
-          category: inspirationCategory,
-          slug: inspirationSlug || undefined,
+      if (ideaTitle && ideaCategory) {
+        setIdeaContext({
+          title: ideaTitle,
+          category: ideaCategory,
+          slug: ideaSlug || undefined,
           generationType: generationType || undefined,
           generationLabel: generationLabel || undefined,
         });
       } else {
-        setInspirationContext(null);
+        setIdeaContext(null);
       }
       
       // Clear URL params without reload
@@ -456,14 +456,14 @@ export function ChatInterface() {
                     )}
 
                     {/* Ideas Reference Card - shown when generating ideas */}
-                    {inspirationContext && parsedMessages.length > 0 && !articleContext && (
+                    {ideaContext && parsedMessages.length > 0 && !articleContext && (
                       <div className="pt-6">
-                        <InspirationReferenceCard
-                          title={inspirationContext.title}
-                          category={inspirationContext.category}
-                          slug={inspirationContext.slug}
-                          generationType={inspirationContext.generationType}
-                          generationLabel={inspirationContext.generationLabel}
+                        <IdeaReferenceCard
+                          title={ideaContext.title}
+                          category={ideaContext.category}
+                          slug={ideaContext.slug}
+                          generationType={ideaContext.generationType}
+                          generationLabel={ideaContext.generationLabel}
                         />
                       </div>
                     )}

@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { DiscoverLayout } from '@/components/discover/DiscoverLayout';
 import { DiscoverHeader } from '@/components/discover/DiscoverHeader';
 import { CardGrid } from '@/components/discover/CardGrid';
-import { InspirationCardGrid } from '@/components/discover/InspirationCardGrid';
+import { IdeaCardGrid } from '@/components/discover/IdeaCardGrid';
 import { WidgetPanel } from '@/components/discover/WidgetPanel';
 import { AddToSpaceModal } from '@/components/discover/AddToSpaceModal';
 import { useDiscoverData } from '@/hooks/useDiscoverData';
@@ -42,7 +42,7 @@ export default function DiscoverPage() {
   const [isAddToSpaceOpen, setIsAddToSpaceOpen] = useState(false);
   const [articleToAdd, setArticleToAdd] = useState<NewsCardData | null>(null);
   
-  const { newsData, inspirationData, loading, error } = useDiscoverData();
+  const { newsData, ideaData, loading, error } = useDiscoverData();
 
   // Read tab from URL params on mount and when searchParams change
   useEffect(() => {
@@ -77,14 +77,14 @@ export default function DiscoverPage() {
       // Filter ideas by type
       switch (activeIdeasType) {
         case 'short-form':
-          return inspirationData.shortForm;
+          return ideaData.shortForm;
         case 'long-form':
-          return inspirationData.longForm;
+          return ideaData.longForm;
         case 'blog':
-          return inspirationData.blog;
+          return ideaData.blog;
         case 'all':
         default:
-          return [...inspirationData.shortForm, ...inspirationData.longForm, ...inspirationData.blog];
+          return [...ideaData.shortForm, ...ideaData.longForm, ...ideaData.blog];
       }
     }
   };
@@ -205,8 +205,8 @@ export default function DiscoverPage() {
             )}
 
             {!loading && !error && activeTab === 'Ideas' && (
-              <InspirationCardGrid
-                items={[...inspirationData.shortForm, ...inspirationData.longForm, ...inspirationData.blog]}
+              <IdeaCardGrid
+                items={[...ideaData.shortForm, ...ideaData.longForm, ...ideaData.blog]}
                 activeFilter={activeIdeasType}
               />
             )}

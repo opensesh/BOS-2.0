@@ -4,10 +4,10 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Heart, MoreHorizontal, Clock, Star } from 'lucide-react';
-import { InspirationCardData } from '@/types';
+import { IdeaCardData } from '@/types';
 
-interface InspirationCardProps {
-  item: InspirationCardData;
+interface IdeaCardProps {
+  item: IdeaCardData;
   variant?: 'featured' | 'compact';
 }
 
@@ -19,7 +19,7 @@ interface OGData {
   favicon: string | null;
 }
 
-export function InspirationCard({ item, variant = 'compact' }: InspirationCardProps) {
+export function IdeaCard({ item, variant = 'compact' }: IdeaCardProps) {
   const [ogImage, setOgImage] = useState<string | null>(item.imageUrl || null);
   const [isLoadingImage, setIsLoadingImage] = useState(!item.imageUrl);
 
@@ -51,7 +51,7 @@ export function InspirationCard({ item, variant = 'compact' }: InspirationCardPr
   if (variant === 'featured') {
     return (
       <Link 
-        href={`/discover/${item.slug}`}
+        href={`/discover/ideas/${item.slug}`}
         className="group flex flex-col md:flex-row gap-6 p-4 rounded-xl bg-transparent hover:bg-os-surface-dark/30 transition-colors"
       >
         {/* Text Content - LEFT */}
@@ -153,7 +153,7 @@ export function InspirationCard({ item, variant = 'compact' }: InspirationCardPr
   // Compact variant
   return (
     <Link 
-      href={`/discover/${item.slug}`}
+      href={`/discover/ideas/${item.slug}`}
       className="group flex flex-col gap-3 p-3 rounded-xl bg-transparent hover:bg-os-surface-dark/30 transition-colors"
     >
       {/* Image */}
@@ -230,3 +230,4 @@ export function InspirationCard({ item, variant = 'compact' }: InspirationCardPr
     </Link>
   );
 }
+

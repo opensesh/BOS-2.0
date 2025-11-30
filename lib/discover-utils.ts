@@ -1,4 +1,4 @@
-import { NewsCardData, InspirationCardData, Source, NewsData, InspirationData, ContentTier, PlatformTip } from '@/types';
+import { NewsCardData, IdeaCardData, Source, NewsData, IdeaData, ContentTier, PlatformTip } from '@/types';
 
 /**
  * Aggregate sources from multiple items, removing duplicates
@@ -172,12 +172,12 @@ export function processNewsData(data: NewsData): NewsCardData[] {
 }
 
 /**
- * Process inspiration data from JSON files
- * Inspiration items are content PROMPTS - they display as non-clickable cards
+ * Process idea data from JSON files
+ * Idea items are content PROMPTS - they display as non-clickable cards
  * with a "Generate Brief" action that sends to the chat interface
  * Now supports rich creative brief fields (hooks, platformTips, etc.)
  */
-export function processInspirationData(data: InspirationData): InspirationCardData[] {
+export function processIdeaData(data: IdeaData): IdeaCardData[] {
   if (!data.ideas || data.ideas.length === 0) return [];
   
   return data.ideas.map((idea, index) => {
@@ -188,7 +188,7 @@ export function processInspirationData(data: InspirationData): InspirationCardDa
     }));
     
     return {
-      id: `inspiration-${data.type}-${index}`,
+      id: `idea-${data.type}-${index}`,
       slug: generateSlug(idea.title),
       title: idea.title,
       description: idea.description,
@@ -196,7 +196,7 @@ export function processInspirationData(data: InspirationData): InspirationCardDa
       publishedAt: formatTimestamp(data.date),
       category: data.type,
       starred: idea.starred,
-      isPrompt: true as const, // Always true - inspiration items are content prompts
+      isPrompt: true as const, // Always true - idea items are content prompts
       // Rich creative brief fields (optional for backwards compatibility)
       hooks: idea.hooks,
       platformTips: idea.platformTips as PlatformTip[] | undefined,
@@ -226,17 +226,17 @@ export async function loadNewsData(type: 'weekly-update' | 'monthly-outlook'): P
 }
 
 /**
- * Load inspiration data from JSON file
+ * Load idea data from JSON file
  */
-export async function loadInspirationData(type: 'short-form' | 'long-form' | 'blog'): Promise<InspirationCardData[]> {
+export async function loadIdeaData(type: 'short-form' | 'long-form' | 'blog'): Promise<IdeaCardData[]> {
   try {
     const response = await fetch(`/data/weekly-ideas/${type}/latest.json`);
     if (!response.ok) {
       console.error(`Failed to load ${type} data:`, response.statusText);
       return [];
     }
-    const data: InspirationData = await response.json();
-    return processInspirationData(data);
+    const data: IdeaData = await response.json();
+    return processIdeaData(data);
   } catch (error) {
     console.error(`Error loading ${type} data:`, error);
     return [];
@@ -246,7 +246,7 @@ export async function loadInspirationData(type: 'short-form' | 'long-form' | 'bl
 /**
  * Generate card data in layout pattern (1 featured + 3 compact)
  */
-export function generateCardGroups<T extends NewsCardData | InspirationCardData>(
+export function generateCardGroups<T extends NewsCardData | IdeaCardData>(
   cards: T[]
 ): Array<{ featured: T; compact: T[] }> {
   const groups: Array<{ featured: T; compact: T[] }> = [];

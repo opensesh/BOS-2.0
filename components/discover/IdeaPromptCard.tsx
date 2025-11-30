@@ -11,10 +11,10 @@ import {
   Video,
   Pen
 } from 'lucide-react';
-import { InspirationCardData } from '@/types';
+import { IdeaCardData } from '@/types';
 
-interface InspirationPromptCardProps {
-  item: InspirationCardData;
+interface IdeaPromptCardProps {
+  item: IdeaCardData;
   variant?: 'featured' | 'compact';
 }
 
@@ -54,7 +54,7 @@ const SOURCE_LOGOS: Record<string, { favicon: string; color: string }> = {
   'Ars Technica': { favicon: 'https://cdn.arstechnica.net/favicon.ico', color: '#F60' },
 };
 
-export function InspirationPromptCard({ item, variant = 'compact' }: InspirationPromptCardProps) {
+export function IdeaPromptCard({ item, variant = 'compact' }: IdeaPromptCardProps) {
   const router = useRouter();
   const [ogImage, setOgImage] = useState<string | null>(item.imageUrl || null);
   const [isLoadingImage, setIsLoadingImage] = useState(!item.imageUrl);

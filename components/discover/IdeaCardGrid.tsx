@@ -5,10 +5,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ChevronRight, Video, FileText, Pen } from 'lucide-react';
-import { InspirationCardData } from '@/types';
+import { IdeaCardData } from '@/types';
 
-interface InspirationCardGridProps {
-  items: InspirationCardData[];
+interface IdeaCardGridProps {
+  items: IdeaCardData[];
   activeFilter: 'all' | 'short-form' | 'long-form' | 'blog';
 }
 
@@ -29,7 +29,7 @@ const FALLBACK_IMAGES = {
 };
 
 // Hook for fetching OG image with fallback - uses fallback immediately if OG fails
-function useOgImage(item: InspirationCardData) {
+function useOgImage(item: IdeaCardData) {
   const [imageUrl, setImageUrl] = useState<string>(FALLBACK_IMAGES[item.category] || FALLBACK_IMAGES['short-form']);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -78,14 +78,14 @@ function useOgImage(item: InspirationCardData) {
 }
 
 // Card component (used for both featured and compact)
-function InspirationCard({ item, featured = false }: { item: InspirationCardData; featured?: boolean }) {
+function IdeaCard({ item, featured = false }: { item: IdeaCardData; featured?: boolean }) {
   const { imageUrl, isLoading } = useOgImage(item);
   const slug = item.slug || generateSlug(item.title);
 
   if (featured) {
     return (
       <Link
-        href={`/discover/inspiration/${slug}?id=${item.id}`}
+        href={`/discover/ideas/${slug}?id=${item.id}`}
         className="group flex flex-col rounded-2xl overflow-hidden bg-os-surface-dark border border-os-border-dark/50 hover:border-brand-aperol/30 transition-all h-full"
       >
         {/* Image */}
@@ -182,14 +182,14 @@ function InspirationCard({ item, featured = false }: { item: InspirationCardData
 }
 
 // Section component for organized display
-function InspirationSection({ 
+function IdeaSection({ 
   title, 
   icon: Icon, 
   items 
 }: { 
   title: string; 
   icon: React.ComponentType<{ className?: string }>; 
-  items: InspirationCardData[];
+  items: IdeaCardData[];
 }) {
   if (items.length === 0) return null;
 
@@ -222,13 +222,13 @@ function InspirationSection({
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
         {/* Featured card - spans 2 columns */}
         <div className="md:col-span-2">
-          <InspirationCard item={featuredItem} featured />
+          <IdeaCard item={featuredItem} featured />
         </div>
 
         {/* Right card */}
         {rightItem && (
           <div>
-            <InspirationCard item={rightItem} />
+            <IdeaCard item={rightItem} />
           </div>
         )}
       </div>
@@ -237,7 +237,7 @@ function InspirationSection({
       {bottomItems.length > 0 && (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {bottomItems.map((item, idx) => (
-            <InspirationCard key={item.id || idx} item={item} />
+            <IdeaCard key={item.id || idx} item={item} />
           ))}
         </div>
       )}
@@ -245,7 +245,7 @@ function InspirationSection({
   );
 }
 
-export function InspirationCardGrid({ items, activeFilter }: InspirationCardGridProps) {
+export function IdeaCardGrid({ items, activeFilter }: IdeaCardGridProps) {
   // Group items by category
   const shortFormItems = items.filter(item => item.category === 'short-form');
   const longFormItems = items.filter(item => item.category === 'long-form');
@@ -278,11 +278,11 @@ export function InspirationCardGrid({ items, activeFilter }: InspirationCardGrid
         {/* First Row */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="md:col-span-2">
-            <InspirationCard item={featuredItem} featured />
+            <IdeaCard item={featuredItem} featured />
           </div>
           {rightItem && (
             <div>
-              <InspirationCard item={rightItem} />
+              <IdeaCard item={rightItem} />
             </div>
           )}
         </div>
@@ -291,7 +291,7 @@ export function InspirationCardGrid({ items, activeFilter }: InspirationCardGrid
         {bottomItems.length > 0 && (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {bottomItems.map((item, idx) => (
-              <InspirationCard key={item.id || idx} item={item} />
+              <IdeaCard key={item.id || idx} item={item} />
             ))}
           </div>
         )}
@@ -300,7 +300,7 @@ export function InspirationCardGrid({ items, activeFilter }: InspirationCardGrid
         {remainingItems.length > 0 && (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6">
             {remainingItems.map((item, idx) => (
-              <InspirationCard key={item.id || idx} item={item} />
+              <IdeaCard key={item.id || idx} item={item} />
             ))}
           </div>
         )}
@@ -311,19 +311,19 @@ export function InspirationCardGrid({ items, activeFilter }: InspirationCardGrid
   // Default: Show organized by sections
   return (
     <div>
-      <InspirationSection
+      <IdeaSection
         title="Short-Form"
         icon={Video}
         items={shortFormItems}
       />
 
-      <InspirationSection
+      <IdeaSection
         title="Long-Form"
         icon={FileText}
         items={longFormItems}
       />
 
-      <InspirationSection
+      <IdeaSection
         title="Blogging"
         icon={Pen}
         items={blogItems}
@@ -331,3 +331,4 @@ export function InspirationCardGrid({ items, activeFilter }: InspirationCardGrid
     </div>
   );
 }
+
