@@ -45,8 +45,8 @@ function InspoContent() {
     <div className="flex h-screen bg-os-bg-dark text-os-text-primary-dark font-sans">
       <Sidebar />
       <main className="flex-1 flex flex-col min-w-0 overflow-hidden bg-os-bg-dark pt-14 lg:pt-0">
-        {/* Header */}
-        <div className="w-full max-w-6xl mx-auto px-6 pt-8 md:px-12">
+        {/* Header - matches DiscoverLayout padding */}
+        <div className="w-full max-w-6xl mx-auto px-6 py-8 md:px-12 md:py-12">
           <InspoHeader
             viewMode={viewMode}
             onViewModeChange={handleViewModeChange}
@@ -74,8 +74,8 @@ export default function InspoPage() {
       <div className="flex h-screen bg-os-bg-dark text-os-text-primary-dark font-sans">
         <Sidebar />
         <main className="flex-1 flex flex-col min-w-0 overflow-hidden bg-os-bg-dark pt-14 lg:pt-0">
-          <div className="w-full max-w-6xl mx-auto px-6 pt-8 md:px-12">
-            <div className="h-12 mb-6" />
+          <div className="w-full max-w-6xl mx-auto px-6 py-8 md:px-12 md:py-12">
+            <div className="h-12" />
           </div>
           <div className="flex-1 w-full flex items-center justify-center">
             <div className="w-8 h-8 border-2 border-brand-aperol border-t-transparent rounded-full animate-spin" />
