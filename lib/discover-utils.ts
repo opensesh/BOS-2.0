@@ -26,13 +26,13 @@ export function decodeHTMLEntities(text: string): string {
     '&quot;': '"',
     '&apos;': "'",
     '&nbsp;': ' ',
-    '&mdash;': '—',
-    '&ndash;': '–',
-    '&ldquo;': '"',
-    '&rdquo;': '"',
-    '&lsquo;': ''',
-    '&rsquo;': ''',
-    '&hellip;': '…',
+    '&mdash;': '\u2014', // —
+    '&ndash;': '\u2013', // –
+    '&ldquo;': '\u201C', // "
+    '&rdquo;': '\u201D', // "
+    '&lsquo;': '\u2018', // '
+    '&rsquo;': '\u2019', // '
+    '&hellip;': '\u2026', // …
   };
   
   let decoded = text;
