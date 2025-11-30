@@ -37,4 +37,8 @@ export {
   estimateIdeaCost,
 } from './ideas-generator';
 
-
+// Source Enricher
+export {
+  enrichWithPerplexity,
+  batchEnrichTopics,
+} from './source-enricher';

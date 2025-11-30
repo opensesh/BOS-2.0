@@ -16,6 +16,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { getSourcesForDailyFetch, RSSSource, CATEGORY_KEYWORDS } from '../lib/content-generator/rss-sources';
 import { generateIdeasBatch } from '../lib/content-generator/ideas-generator';
+import { batchEnrichTopics } from '../lib/content-generator/source-enricher';
 import type { NewsData, IdeaData, NewsUpdateItem, IdeaItem, NewsTopicCategory } from '../types';
 
 // ===========================================
@@ -189,15 +190,139 @@ async function fetchAllFeeds(): Promise<RSSItem[]> {
 }
 
 // ===========================================
+// Topic Clustering & Source Aggregation
+// ===========================================
+
+interface ClusteredTopic {
+  title: string;
+  description?: string;
+  pubDate: string;
+  sources: Array<{ name: string; url: string }>;
+  sourceCategory: NewsTopicCategory;
+  score: number;
+}
+
+/**
+ * Extract significant words from a title for clustering
+ */
+function extractSignificantWords(title: string): Set<string> {
+  const stopWords = new Set([
+    'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',
+    'of', 'with', 'by', 'from', 'as', 'is', 'was', 'are', 'were', 'been',
+    'be', 'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could',
+    'should', 'may', 'might', 'must', 'shall', 'can', 'need', 'dare', 'ought',
+    'used', 'this', 'that', 'these', 'those', 'how', 'what', 'when', 'where',
+    'why', 'who', 'whom', 'which', 'whose', 'your', 'our', 'their', 'its',
+    'new', 'first', 'last', 'just', 'now', 'more', 'most', 'other', 'into',
+    'over', 'such', 'than', 'too', 'very', 'just', 'only', 'own', 'same',
+    'so', 'also', 'no', 'not', 'about', 'out', 'up', 'down', 'off', 'after',
+    'before', 'between', 'under', 'again', 'further', 'then', 'once', 'here',
+    'there', 'all', 'each', 'few', 'both', 'any', 'some', 'one', 'two',
+  ]);
+
+  return new Set(
+    title
+      .toLowerCase()
+      .replace(/[^a-z0-9\s]/g, ' ')
+      .split(/\s+/)
+      .filter(word => word.length > 2 && !stopWords.has(word))
+  );
+}
+
+/**
+ * Calculate similarity between two sets of words (Jaccard similarity)
+ */
+function calculateSimilarity(set1: Set<string>, set2: Set<string>): number {
+  if (set1.size === 0 || set2.size === 0) return 0;
+  
+  const intersection = new Set([...set1].filter(x => set2.has(x)));
+  const union = new Set([...set1, ...set2]);
+  
+  return intersection.size / union.size;
+}
+
+/**
+ * Cluster similar RSS items by title similarity
+ * Items with 50%+ word overlap are considered the same story
+ */
+function clusterSimilarTopics(items: RSSItem[]): ClusteredTopic[] {
+  const clusters: ClusteredTopic[] = [];
+  const assigned = new Set<number>();
+  
+  // Pre-compute word sets for all items
+  const wordSets = items.map(item => extractSignificantWords(item.title));
+  
+  for (let i = 0; i < items.length; i++) {
+    if (assigned.has(i)) continue;
+    
+    const item = items[i];
+    const cluster: ClusteredTopic = {
+      title: item.title,
+      description: item.description,
+      pubDate: item.pubDate,
+      sources: [{ name: item.source, url: item.link }],
+      sourceCategory: item.sourceCategory,
+      score: 0,
+    };
+    
+    assigned.add(i);
+    
+    // Find similar items to cluster with this one
+    for (let j = i + 1; j < items.length; j++) {
+      if (assigned.has(j)) continue;
+      
+      const similarity = calculateSimilarity(wordSets[i], wordSets[j]);
+      
+      if (similarity >= 0.5) { // 50% word overlap = same story
+        const otherItem = items[j];
+        
+        // Add source if not already present
+        const sourceExists = cluster.sources.some(s => 
+          s.name === otherItem.source || s.url === otherItem.link
+        );
+        
+        if (!sourceExists) {
+          cluster.sources.push({ name: otherItem.source, url: otherItem.link });
+        }
+        
+        // Use longer description
+        if (otherItem.description && (!cluster.description || otherItem.description.length > cluster.description.length)) {
+          cluster.description = otherItem.description;
+        }
+        
+        // Use most recent date
+        try {
+          const clusterDate = new Date(cluster.pubDate).getTime();
+          const otherDate = new Date(otherItem.pubDate).getTime();
+          if (otherDate > clusterDate) {
+            cluster.pubDate = otherItem.pubDate;
+          }
+        } catch { /* ignore */ }
+        
+        assigned.add(j);
+      }
+    }
+    
+    clusters.push(cluster);
+  }
+  
+  console.log(`  📊 Clustered ${items.length} items into ${clusters.length} unique topics`);
+  const multiSourceCount = clusters.filter(c => c.sources.length > 1).length;
+  console.log(`  📰 ${multiSourceCount} topics have multiple sources`);
+  
+  return clusters;
+}
+
+// ===========================================
 // Content Scoring & Selection
 // ===========================================
 
 /**
- * Score an item for relevance to OPEN SESSION's focus areas
+ * Score a clustered topic for relevance to OPEN SESSION's focus areas
  */
-function scoreItem(item: RSSItem): number {
+function scoreCluster(cluster: ClusteredTopic): number {
   let score = 0;
-  const text = `${item.title} ${item.description || ''}`.toLowerCase();
+  const text = `${cluster.title} ${cluster.description || ''}`.toLowerCase();
   
   // High-value keywords
   const highValueKeywords = [
@@ -222,16 +347,20 @@ function scoreItem(item: RSSItem): number {
   }
   
   // Bonus for having description
-  if (item.description && item.description.length > 100) score += 15;
+  if (cluster.description && cluster.description.length > 100) score += 15;
   
   // Bonus for source category being design/brand/ai focused
-  if (['design-ux', 'branding', 'ai-creative'].includes(item.sourceCategory)) {
+  if (['design-ux', 'branding', 'ai-creative'].includes(cluster.sourceCategory)) {
     score += 20;
   }
   
+  // MAJOR BONUS: Multiple sources = significant story
+  // Stories with multiple outlets covering them are prioritized
+  score += cluster.sources.length * 15;
+  
   // Recency bonus (items from last 24 hours get bonus)
   try {
-    const itemDate = new Date(item.pubDate).getTime();
+    const itemDate = new Date(cluster.pubDate).getTime();
     const now = Date.now();
     const hoursAgo = (now - itemDate) / (1000 * 60 * 60);
     
@@ -247,12 +376,12 @@ function scoreItem(item: RSSItem): number {
 }
 
 /**
- * Classify an item into a topic category using keywords
+ * Classify a cluster into a topic category using keywords
  */
-function classifyItem(item: RSSItem): NewsTopicCategory {
-  const text = `${item.title} ${item.description || ''}`.toLowerCase();
+function classifyCluster(cluster: ClusteredTopic): NewsTopicCategory {
+  const text = `${cluster.title} ${cluster.description || ''}`.toLowerCase();
   
-  let bestCategory: NewsTopicCategory = item.sourceCategory;
+  let bestCategory: NewsTopicCategory = cluster.sourceCategory;
   let highestScore = 0;
   
   for (const [category, keywords] of Object.entries(CATEGORY_KEYWORDS)) {
@@ -272,34 +401,25 @@ function classifyItem(item: RSSItem): NewsTopicCategory {
 }
 
 /**
- * Select the best items ensuring diversity across categories
+ * Select the best clustered topics ensuring diversity across categories
  */
-function selectBestItems(items: RSSItem[], targetCount: number): RSSItem[] {
-  // Score all items
-  const scored = items.map(item => ({
-    item,
-    score: scoreItem(item),
-    category: classifyItem(item),
+function selectBestClusters(clusters: ClusteredTopic[], targetCount: number): ClusteredTopic[] {
+  // Score all clusters
+  const scored = clusters.map(cluster => ({
+    cluster,
+    score: scoreCluster(cluster),
+    category: classifyCluster(cluster),
   }));
   
-  // Sort by score
+  // Sort by score (highest first)
   scored.sort((a, b) => b.score - a.score);
   
-  // Remove duplicates (similar titles)
-  const seen = new Set<string>();
-  const unique = scored.filter(({ item }) => {
-    const normalized = item.title.toLowerCase().replace(/[^a-z0-9]/g, '').substring(0, 40);
-    if (seen.has(normalized)) return false;
-    seen.add(normalized);
-    return true;
-  });
-  
   // Select ensuring category diversity
-  const selected: typeof unique = [];
+  const selected: typeof scored = [];
   const categoryCount: Record<string, number> = {};
   const maxPerCategory = Math.ceil(targetCount / 4); // Allow some category concentration
   
-  for (const item of unique) {
+  for (const item of scored) {
     if (selected.length >= targetCount) break;
     
     const catCount = categoryCount[item.category] || 0;
@@ -311,7 +431,7 @@ function selectBestItems(items: RSSItem[], targetCount: number): RSSItem[] {
   
   // If we still need more, add remaining high-scored items
   if (selected.length < targetCount) {
-    for (const item of unique) {
+    for (const item of scored) {
       if (selected.length >= targetCount) break;
       if (!selected.includes(item)) {
         selected.push(item);
@@ -319,7 +439,7 @@ function selectBestItems(items: RSSItem[], targetCount: number): RSSItem[] {
     }
   }
   
-  return selected.map(s => s.item);
+  return selected.map(s => s.cluster);
 }
 
 // ===========================================
@@ -327,26 +447,35 @@ function selectBestItems(items: RSSItem[], targetCount: number): RSSItem[] {
 // ===========================================
 
 /**
- * Generate news updates from selected items
+ * Generate news updates from RSS items with source aggregation
  */
 async function generateNews(items: RSSItem[]): Promise<NewsUpdateItem[]> {
   console.log('\n📰 Generating news feed...');
   console.log(`  Total items to analyze: ${items.length}`);
   
-  // Select the best items
-  const selectedItems = selectBestItems(items, TARGET_NEWS_COUNT);
-  console.log(`  Selected ${selectedItems.length} top items`);
+  // Cluster similar items to aggregate sources
+  const clusters = clusterSimilarTopics(items);
   
-  // Convert to NewsUpdateItem format
-  const newsItems: NewsUpdateItem[] = selectedItems.map(item => ({
-    title: item.title,
-    description: item.description,
-    timestamp: formatDate(item.pubDate),
-    sources: [{ name: item.source, url: item.link }],
+  // Select the best clusters
+  const selectedClusters = selectBestClusters(clusters, TARGET_NEWS_COUNT);
+  console.log(`  Selected ${selectedClusters.length} top topics`);
+  
+  // Convert to NewsUpdateItem format, preserving all sources
+  const newsItems: NewsUpdateItem[] = selectedClusters.map(cluster => ({
+    title: cluster.title,
+    description: cluster.description,
+    timestamp: formatDate(cluster.pubDate),
+    sources: cluster.sources, // Now can have multiple sources!
     tier: 'quick' as const,
-    sourceUrl: item.link,
-    topicCategory: classifyItem(item),
+    sourceUrl: cluster.sources[0]?.url || '',
+    topicCategory: classifyCluster(cluster),
   }));
+  
+  // Log source distribution
+  const sourceCounts = newsItems.map(item => item.sources?.length || 0);
+  const avgSources = sourceCounts.reduce((a, b) => a + b, 0) / sourceCounts.length;
+  const multiSourceItems = sourceCounts.filter(c => c > 1).length;
+  console.log(`  📊 Source stats: avg ${avgSources.toFixed(1)} sources/topic, ${multiSourceItems} topics with multiple sources`);
   
   // Log category distribution
   const catDist: Record<string, number> = {};
@@ -354,6 +483,37 @@ async function generateNews(items: RSSItem[]): Promise<NewsUpdateItem[]> {
     catDist[item.topicCategory || 'unknown'] = (catDist[item.topicCategory || 'unknown'] || 0) + 1;
   });
   console.log(`  Category distribution:`, catDist);
+  
+  // Enrich top 3 items with additional sources via Perplexity (for starred/featured items)
+  if (!isDryRun && process.env.PERPLEXITY_API_KEY) {
+    const topicsForEnrichment = newsItems.slice(0, 3).map(item => ({
+      title: item.title,
+      existingUrls: (item.sources || []).map(s => s.url),
+    }));
+    
+    const enrichmentResults = await batchEnrichTopics(topicsForEnrichment, 3, 600);
+    
+    // Merge additional sources into news items
+    for (const [title, additionalSources] of enrichmentResults) {
+      const newsItem = newsItems.find(item => item.title === title);
+      if (newsItem && newsItem.sources) {
+        newsItem.sources = [...newsItem.sources, ...additionalSources];
+        // Deduplicate sources by URL
+        const seen = new Set<string>();
+        newsItem.sources = newsItem.sources.filter(s => {
+          const urlLower = s.url.toLowerCase();
+          if (seen.has(urlLower)) return false;
+          seen.add(urlLower);
+          return true;
+        });
+      }
+    }
+    
+    // Re-log source stats after enrichment
+    const enrichedSourceCounts = newsItems.map(item => item.sources?.length || 0);
+    const enrichedAvg = enrichedSourceCounts.reduce((a, b) => a + b, 0) / enrichedSourceCounts.length;
+    console.log(`  📊 After enrichment: avg ${enrichedAvg.toFixed(1)} sources/topic`);
+  }
   
   return newsItems;
 }
@@ -431,57 +591,167 @@ async function saveNews(newsItems: NewsUpdateItem[]): Promise<void> {
 }
 
 // ===========================================
-// Pexels Image Fetching
+// Brand-Aligned Pexels Image Fetching
 // ===========================================
 
 interface PexelsPhoto {
-  src: { large: string };
+  id: number;
+  src: { large: string; medium: string };
+  alt: string | null;
+  photographer: string;
 }
 
 interface PexelsSearchResponse {
   photos: PexelsPhoto[];
+  total_results: number;
 }
 
 /**
- * Extract keywords from a title for Pexels search
+ * Category-specific image search terms aligned with OPEN SESSION brand
+ * These produce abstract, minimal, on-brand imagery
  */
-function extractKeywords(title: string): string {
+const CATEGORY_IMAGE_KEYWORDS: Record<string, string[]> = {
+  'design-ux': ['geometric shapes minimal', 'abstract gradient design', 'clean lines architecture'],
+  'branding': ['minimal typography', 'abstract pattern design', 'clean workspace'],
+  'ai-creative': ['abstract digital art', 'futuristic minimal', 'technology abstract'],
+  'social-trends': ['colorful abstract pattern', 'modern gradient', 'vibrant geometric'],
+  'general-tech': ['technology minimal', 'abstract circuit', 'modern office minimal'],
+  'startup-business': ['minimal workspace', 'modern architecture', 'abstract success'],
+};
+
+/**
+ * Brand-aligned colors for Pexels filtering (Vanilla/Charcoal/Aperol palette)
+ */
+const BRAND_COLORS = ['orange', 'black', 'white'] as const;
+
+/**
+ * Words that indicate an image likely contains text (to be avoided)
+ */
+const TEXT_INDICATOR_WORDS = [
+  'sign', 'text', 'banner', 'poster', 'billboard', 'quote', 'typography',
+  'word', 'letter', 'message', 'slogan', 'label', 'headline', 'title',
+  'writing', 'book', 'magazine', 'newspaper', 'document', 'note',
+];
+
+/**
+ * Check if a photo's alt text suggests it contains text
+ */
+function likelyContainsText(photo: PexelsPhoto): boolean {
+  const altText = (photo.alt || '').toLowerCase();
+  return TEXT_INDICATOR_WORDS.some(word => altText.includes(word));
+}
+
+/**
+ * Extract core concept from title, removing common phrases
+ */
+function extractCoreConcept(title: string): string {
+  const removePatterns = [
+    /^how to /i, /^guide to /i, /^the complete /i, /^introduction to /i,
+    /^what is /i, /^why you should /i, /^tips for /i, /^\d+ ways to /i,
+    / launches? /i, / announces? /i, / unveils? /i, / introduces? /i,
+  ];
+  
+  let cleaned = title;
+  for (const pattern of removePatterns) {
+    cleaned = cleaned.replace(pattern, '');
+  }
+  
+  // Extract meaningful words
   const stopWords = new Set([
     'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',
     'of', 'with', 'by', 'from', 'as', 'is', 'was', 'are', 'were', 'this',
-    'that', 'how', 'what', 'when', 'where', 'why', 'your', 'our',
+    'that', 'how', 'what', 'when', 'where', 'why', 'your', 'our', 'new',
   ]);
 
-  const words = title
+  const words = cleaned
     .toLowerCase()
     .replace(/[^a-z0-9\s]/g, ' ')
     .split(/\s+/)
     .filter(word => word.length > 2 && !stopWords.has(word));
 
-  return words.slice(0, 3).join(' ') || 'creative design';
+  return words.slice(0, 2).join(' ') || 'creative';
 }
 
 /**
- * Fetch an image from Pexels API
+ * Build a brand-aligned Pexels search query
  */
-async function fetchPexelsImage(title: string): Promise<string | undefined> {
+function buildPexelsQuery(title: string, category?: string): string {
+  const coreConcept = extractCoreConcept(title);
+  
+  // Get category-specific modifiers or use defaults
+  const categoryKeywords = category && CATEGORY_IMAGE_KEYWORDS[category]
+    ? CATEGORY_IMAGE_KEYWORDS[category]
+    : ['abstract minimal design', 'geometric pattern', 'modern gradient'];
+  
+  // Randomly select one category keyword set
+  const modifier = categoryKeywords[Math.floor(Math.random() * categoryKeywords.length)];
+  
+  // Combine with core concept, always adding "abstract" to avoid stock photo look
+  return `${coreConcept} ${modifier}`;
+}
+
+/**
+ * Fetch a brand-aligned image from Pexels API
+ * Uses color filtering, text rejection, and abstract/minimal search terms
+ */
+async function fetchPexelsImage(
+  title: string, 
+  category?: string
+): Promise<string | undefined> {
   const apiKey = process.env.PEXELS_API_KEY;
   if (!apiKey) return undefined;
 
+  // Try each brand color until we find a good image
+  for (const color of BRAND_COLORS) {
+    try {
+      const query = buildPexelsQuery(title, category);
+      const url = new URL('https://api.pexels.com/v1/search');
+      url.searchParams.set('query', query);
+      url.searchParams.set('per_page', '10'); // Get more options to filter
+      url.searchParams.set('orientation', 'landscape');
+      url.searchParams.set('color', color);
+      
+      const response = await fetch(url.toString(), {
+        headers: { Authorization: apiKey },
+      });
+
+      if (!response.ok) continue;
+
+      const data: PexelsSearchResponse = await response.json();
+      
+      // Filter out images that likely contain text
+      const textFreePhotos = data.photos.filter(photo => !likelyContainsText(photo));
+      
+      if (textFreePhotos.length > 0) {
+        // Return a random one from the top 5 to add variety
+        const topPhotos = textFreePhotos.slice(0, 5);
+        const selected = topPhotos[Math.floor(Math.random() * topPhotos.length)];
+        return selected.src.large;
+      }
+    } catch {
+      // Continue to next color
+    }
+  }
+  
+  // Fallback: try a generic abstract query without color filter
   try {
-    const query = extractKeywords(title);
     const response = await fetch(
-      `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&per_page=1&orientation=landscape`,
+      `https://api.pexels.com/v1/search?query=abstract+minimal+gradient&per_page=5&orientation=landscape`,
       { headers: { Authorization: apiKey } }
     );
-
-    if (!response.ok) return undefined;
-
-    const data: PexelsSearchResponse = await response.json();
-    return data.photos[0]?.src.large;
+    
+    if (response.ok) {
+      const data: PexelsSearchResponse = await response.json();
+      const textFreePhotos = data.photos.filter(photo => !likelyContainsText(photo));
+      if (textFreePhotos.length > 0) {
+        return textFreePhotos[0].src.large;
+      }
+    }
   } catch {
-    return undefined;
+    // Give up
   }
+
+  return undefined;
 }
 
 /**
@@ -544,17 +814,22 @@ async function generateIdeas(newsItems: NewsUpdateItem[]): Promise<void> {
       });
       console.log(`    ✓ Generated ${ideas.length} ideas`);
       
-      // Enrich with images and textures
-      console.log('    🖼️ Fetching images...');
+      // Enrich with brand-aligned images and textures
+      console.log('    🖼️ Fetching brand-aligned images...');
+      // Map content categories to image search categories
+      const imageCategory = category === 'short-form' ? 'social-trends' 
+        : category === 'long-form' ? 'ai-creative' 
+        : 'design-ux';
+      
       for (let i = 0; i < ideas.length; i++) {
-        ideas[i].pexelsImageUrl = await fetchPexelsImage(ideas[i].title);
+        ideas[i].pexelsImageUrl = await fetchPexelsImage(ideas[i].title, imageCategory);
         ideas[i].textureIndex = getRandomTextureIndex();
         if (i < ideas.length - 1) {
-          await new Promise(r => setTimeout(r, 200));
+          await new Promise(r => setTimeout(r, 300)); // Slightly longer delay for more API calls per image
         }
       }
       const imageCount = ideas.filter(i => i.pexelsImageUrl).length;
-      console.log(`    ✓ Fetched ${imageCount}/${ideas.length} images`);
+      console.log(`    ✓ Fetched ${imageCount}/${ideas.length} brand-aligned images`);
     }
     
     // Mark first idea as starred
