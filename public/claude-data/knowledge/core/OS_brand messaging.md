@@ -218,7 +218,56 @@ Our voice is consistently:
 - **Why**: Human connection drives trust and loyalty
 - **Output**: Personal posts, founder stories, team content
 
-### 4.2 Content Journey Mapping
+### 4.2 Social Channel Strategy
+
+Our content is distributed across three primary content types, each with distinct platforms and purposes.
+
+#### Short-Form Content
+**Primary Platform**: Instagram (Reels, Carousels, Stories)
+**Secondary**: YouTube Shorts, LinkedIn
+
+**Focus**: Artistic abstraction of concepts, creative potential of tools and AI
+
+**Content Style**:
+- Visual-first storytelling with curiosity-sparking hooks
+- Pattern interrupts and unexpected angles
+- Bite-sized wisdom that rewards saves and shares
+- 30-90 second videos or 5-10 slide carousels
+
+**Platform-Specific Notes**:
+- **Instagram**: Primary home for short-form. Focus on aesthetic impact, artistic interpretation of design/AI concepts. Use creative emojis sparingly (🎨✨🌊🔮⚡).
+- **YouTube Shorts**: Recycle Instagram content with slight adjustments for algorithm (pattern interrupt in first 2 seconds)
+- **LinkedIn**: Recycle with professional angle and thought leadership tie-in
+
+#### Long-Form Content
+**Primary Platform**: YouTube
+
+**Focus**: Deep dives into concepts, tutorials for beginners to experts, thought leadership through careful presentations
+
+**Content Style**:
+- 6-12 minute sweet spot
+- Chapter-based structure with clear progression
+- Screen recordings with picture-in-picture
+- Hook → Context → Core Value → Technical Deep Dive → CTA
+
+**Content Types**:
+- **Deep Dives**: Comprehensive exploration of design/AI concepts
+- **Tutorials**: Step-by-step guides from beginner to advanced levels
+- **Thought Leadership**: Industry analysis and forward-looking perspectives
+
+#### Blog Content
+**Primary Platforms**: Substack, Medium, LinkedIn Articles
+
+**Focus**: Thought leadership, simplifying complex topics, demystifying creative workflows. AI is a highlight but not always the focus.
+
+**Content Style**:
+- Substack: 2-5 min reads, real-time experiments, learning-in-public ("Just tried X, here's what happened")
+- Medium: 4-10 min reads, authoritative frameworks, SEO-optimized, industry analysis
+- LinkedIn Articles: Professional reach, statistics for credibility
+
+**Structure**: Problem → Framework → Case Studies → Future Implications → CTA
+
+### 4.3 Content Journey Mapping
 
 **Awareness Stage**:
 1. See striking visual on social media
@@ -434,6 +483,6 @@ design systems, collective intelligence, AI augmentation, brand strategy, open s
 
 ---
 
-*Last Updated: Septemeber 2025*
-*Version: 1.0*
-*For AI Agent Use: This document provides comprehensive brand guidelines for Open Session. Use sections 1-3 for voice foundation, section 4 for content strategy, section 5 for AI philosophy, and sections 6-8 for practical application.*
+*Last Updated: November 2025*
+*Version: 1.1*
+*For AI Agent Use: This document provides comprehensive brand guidelines for Open Session. Use sections 1-3 for voice foundation, section 4 for content strategy (including social channel strategy in 4.2), section 5 for AI philosophy, and sections 6-8 for practical application.*

@@ -1,4 +1,4 @@
-import { NewsCardData, InspirationCardData, Source, NewsData, InspirationData, ContentTier } from '@/types';
+import { NewsCardData, InspirationCardData, Source, NewsData, InspirationData, ContentTier, PlatformTip } from '@/types';
 
 /**
  * Aggregate sources from multiple items, removing duplicates
@@ -161,6 +161,8 @@ export function processNewsData(data: NewsData): NewsCardData[] {
       articlePath: update.articlePath,
       aiSummary: update.aiSummary,
       sourceUrl,
+      // Topic categorization
+      topicCategory: update.topicCategory,
     };
     
     cards.push(card);
@@ -173,6 +175,7 @@ export function processNewsData(data: NewsData): NewsCardData[] {
  * Process inspiration data from JSON files
  * Inspiration items are content PROMPTS - they display as non-clickable cards
  * with a "Generate Brief" action that sends to the chat interface
+ * Now supports rich creative brief fields (hooks, platformTips, etc.)
  */
 export function processInspirationData(data: InspirationData): InspirationCardData[] {
   if (!data.ideas || data.ideas.length === 0) return [];
@@ -194,6 +197,12 @@ export function processInspirationData(data: InspirationData): InspirationCardDa
       category: data.type,
       starred: idea.starred,
       isPrompt: true as const, // Always true - inspiration items are content prompts
+      // Rich creative brief fields (optional for backwards compatibility)
+      hooks: idea.hooks,
+      platformTips: idea.platformTips as PlatformTip[] | undefined,
+      visualDirection: idea.visualDirection,
+      exampleOutline: idea.exampleOutline,
+      hashtags: idea.hashtags,
     };
   });
 }

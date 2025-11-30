@@ -509,24 +509,193 @@ export default function InspirationDetailPage() {
                   {item.description}
                 </p>
 
-                {/* AI-Generated Concept Brief */}
-                <div className="mb-8">
-                  <h2 className="text-lg font-display font-semibold text-brand-vanilla mb-4">
-                    Concept Overview
-                  </h2>
-                  {loadingBrief ? (
-                    <div className="flex items-center gap-3 text-os-text-secondary-dark py-4">
-                      <div className="w-4 h-4 border-2 border-os-text-secondary-dark border-t-brand-aperol rounded-full animate-spin" />
-                      <span className="text-sm">Generating overview...</span>
+                {/* Hook Ideas - Only show if available */}
+                {item.hooks && item.hooks.length > 0 && (
+                  <div className="mb-8">
+                    <div className="flex items-center gap-2 mb-4">
+                      <Sparkles className="w-5 h-5 text-brand-aperol" />
+                      <h2 className="text-lg font-display font-semibold text-brand-vanilla">
+                        Hook Ideas
+                      </h2>
                     </div>
-                  ) : conceptBrief ? (
-                    <div className="text-[15px] leading-[1.75] text-os-text-primary-dark/90 space-y-4">
-                      {conceptBrief.split('\n\n').filter(p => p.trim()).map((paragraph, idx) => (
-                        <p key={idx}>{paragraph}</p>
+                    <div className="space-y-3">
+                      {item.hooks.map((hook, idx) => (
+                        <div 
+                          key={idx}
+                          className="flex items-start gap-3 p-4 rounded-xl bg-os-surface-dark/60 border border-os-border-dark/50"
+                        >
+                          <div className="w-6 h-6 rounded-full bg-brand-aperol/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <span className="text-xs font-bold text-brand-aperol">{idx + 1}</span>
+                          </div>
+                          <p className="text-[15px] text-brand-vanilla font-medium leading-relaxed">
+                            "{hook}"
+                          </p>
+                        </div>
                       ))}
                     </div>
-                  ) : null}
-                </div>
+                  </div>
+                )}
+
+                {/* Platform Tips - Only show if available */}
+                {item.platformTips && item.platformTips.length > 0 && (
+                  <div className="mb-8">
+                    <div className="flex items-center gap-2 mb-4">
+                      <Target className="w-5 h-5 text-brand-aperol" />
+                      <h2 className="text-lg font-display font-semibold text-brand-vanilla">
+                        Platform Tips
+                      </h2>
+                    </div>
+                    
+                    {/* Platform tabs */}
+                    <div className="flex gap-2 mb-4 overflow-x-auto pb-1">
+                      {item.platformTips.map((pt) => (
+                        <button
+                          key={pt.platform}
+                          onClick={() => setActivePlatform(pt.platform)}
+                          className={`px-3 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
+                            activePlatform === pt.platform
+                              ? 'bg-brand-aperol/15 text-brand-aperol border border-brand-aperol/30'
+                              : 'bg-os-surface-dark/60 text-os-text-secondary-dark hover:text-brand-vanilla border border-os-border-dark/30'
+                          }`}
+                        >
+                          {pt.platform}
+                        </button>
+                      ))}
+                    </div>
+                    
+                    {/* Tips for active platform */}
+                    {activePlatform && (
+                      <div className="space-y-2">
+                        {item.platformTips
+                          .find(pt => pt.platform === activePlatform)
+                          ?.tips.map((tip, idx) => (
+                            <div 
+                              key={idx}
+                              className="flex items-start gap-3 p-3 rounded-lg bg-os-surface-dark/40"
+                            >
+                              <ChevronRight className="w-4 h-4 text-brand-aperol flex-shrink-0 mt-0.5" />
+                              <p className="text-sm text-os-text-primary-dark/90">{tip}</p>
+                            </div>
+                          ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* Visual Direction - Only show if available */}
+                {item.visualDirection && (
+                  <div className="mb-8">
+                    <div className="flex items-center gap-2 mb-4">
+                      <Eye className="w-5 h-5 text-brand-aperol" />
+                      <h2 className="text-lg font-display font-semibold text-brand-vanilla">
+                        Visual Direction
+                      </h2>
+                    </div>
+                    
+                    <div className="p-4 rounded-xl bg-os-surface-dark/60 border border-os-border-dark/50">
+                      {/* Rating badge */}
+                      <div className="flex items-center gap-3 mb-3">
+                        <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium border ${getRatingColor(item.visualDirection.rating)}`}>
+                          <span>{item.visualDirection.rating}/10</span>
+                          <span className="text-xs opacity-75">•</span>
+                          <span>{getRatingLabel(item.visualDirection.rating)}</span>
+                        </span>
+                      </div>
+                      
+                      {/* Description */}
+                      <p className="text-[15px] text-os-text-primary-dark/90 leading-relaxed">
+                        {item.visualDirection.description}
+                      </p>
+                    </div>
+                  </div>
+                )}
+
+                {/* Example Outline - Only show if available */}
+                {item.exampleOutline && item.exampleOutline.length > 0 && (
+                  <div className="mb-8">
+                    <div className="flex items-center gap-2 mb-4">
+                      <ListTree className="w-5 h-5 text-brand-aperol" />
+                      <h2 className="text-lg font-display font-semibold text-brand-vanilla">
+                        Example Outline
+                      </h2>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      {item.exampleOutline.map((section, idx) => (
+                        <div 
+                          key={idx}
+                          className="flex items-center gap-3 p-3 rounded-lg bg-os-surface-dark/40"
+                        >
+                          <div className="w-6 h-6 rounded bg-os-surface-dark flex items-center justify-center flex-shrink-0">
+                            <span className="text-xs font-mono text-os-text-secondary-dark">{idx + 1}</span>
+                          </div>
+                          <p className="text-sm text-os-text-primary-dark/90">{section}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Hashtags - Only show if available */}
+                {item.hashtags && (
+                  <div className="mb-8">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center gap-2">
+                        <Hash className="w-5 h-5 text-brand-aperol" />
+                        <h2 className="text-lg font-display font-semibold text-brand-vanilla">
+                          Hashtags
+                        </h2>
+                      </div>
+                      <button
+                        onClick={copyHashtags}
+                        className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
+                          hashtagsCopied
+                            ? 'bg-emerald-500/20 text-emerald-400'
+                            : 'bg-os-surface-dark/60 text-os-text-secondary-dark hover:text-brand-vanilla hover:bg-os-surface-dark'
+                        }`}
+                      >
+                        {hashtagsCopied ? (
+                          <>
+                            <Check className="w-4 h-4" />
+                            Copied!
+                          </>
+                        ) : (
+                          <>
+                            <Copy className="w-4 h-4" />
+                            Copy All
+                          </>
+                        )}
+                      </button>
+                    </div>
+                    
+                    <div className="p-4 rounded-xl bg-os-surface-dark/60 border border-os-border-dark/50">
+                      <p className="text-sm text-brand-aperol/80 leading-relaxed break-words">
+                        {item.hashtags}
+                      </p>
+                    </div>
+                  </div>
+                )}
+
+                {/* AI-Generated Concept Brief - Only show if no rich content available */}
+                {!item.hooks && !item.platformTips && (
+                  <div className="mb-8">
+                    <h2 className="text-lg font-display font-semibold text-brand-vanilla mb-4">
+                      Concept Overview
+                    </h2>
+                    {loadingBrief ? (
+                      <div className="flex items-center gap-3 text-os-text-secondary-dark py-4">
+                        <div className="w-4 h-4 border-2 border-os-text-secondary-dark border-t-brand-aperol rounded-full animate-spin" />
+                        <span className="text-sm">Generating overview...</span>
+                      </div>
+                    ) : conceptBrief ? (
+                      <div className="text-[15px] leading-[1.75] text-os-text-primary-dark/90 space-y-4">
+                        {conceptBrief.split('\n\n').filter(p => p.trim()).map((paragraph, idx) => (
+                          <p key={idx}>{paragraph}</p>
+                        ))}
+                      </div>
+                    ) : null}
+                  </div>
+                )}
 
                 {/* Source Links */}
                 <div className="mb-10">
