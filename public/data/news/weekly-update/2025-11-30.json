@@ -1,6 +1,6 @@
 {
   "type": "weekly-update",
-  "date": "2025-11-30T17:25:42.252Z",
+  "date": "2025-11-30T18:08:27.563Z",
   "updates": [
     {
       "title": "Black Forest Labs launches Flux.2 AI image models to challenge Nano Banana Pro and Midjourney",
@@ -12,10 +12,6 @@
           "url": "https://venturebeat.com/ai/black-forest-labs-launches-flux-2-ai-image-models-to-challenge-nano-banana"
         },
         {
-          "name": "Bfl",
-          "url": "https://bfl.ai/blog/flux-2"
-        },
-        {
           "name": "Blogs",
           "url": "https://blogs.nvidia.com/blog/rtx-ai-garage-flux-2-comfyui/"
         },
@@ -24,15 +20,19 @@
           "url": "https://blog.cloudflare.com/flux-2-workers-ai/"
         },
         {
-          "name": "Rundiffusion",
-          "url": "https://rundiffusion.com/blog/flux-2-coming-soon"
+          "name": "Higgsfield",
+          "url": "https://higgsfield.ai/blog/FLUX-2-is-on-Higgsfield-Full-Guide"
         },
         {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=ISRy5Skd04U"
+          "name": "Skywork",
+          "url": "https://skywork.ai/blog/ai-agent/best-flux-2-dev-features-and-updates-to-watch-in-2025/"
+        },
+        {
+          "name": "Bfl",
+          "url": "https://bfl.ai"
         }
       ],
-      "tier": "featured",
+      "tier": "quick",
       "sourceUrl": "https://venturebeat.com/ai/black-forest-labs-launches-flux-2-ai-image-models-to-challenge-nano-banana",
       "topicCategory": "ai-creative"
     },
@@ -66,7 +66,7 @@
           "url": "https://www.figma.com/blog/branding/"
         }
       ],
-      "tier": "featured",
+      "tier": "quick",
       "sourceUrl": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/",
       "topicCategory": "design-ux"
     },
@@ -92,7 +92,7 @@
           "url": "https://www.opensourcesoftwarenews.com"
         }
       ],
-      "tier": "featured",
+      "tier": "quick",
       "sourceUrl": "https://uxdesign.cc/the-product-designers-lens-8511246a7984?source=rss----138adf9c44c---4",
       "topicCategory": "design-ux"
     },
