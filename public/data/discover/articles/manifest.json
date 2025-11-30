@@ -1,41 +1,20 @@
 {
-  "generatedAt": "2025-11-29T10:00:00.000Z",
+  "generated": "2025-11-30T17:25:23.297Z",
   "articles": [
     {
-      "slug": "chatgpt-launches-group-chats-globally",
-      "title": "ChatGPT Launches Group Chats Globally",
-      "publishedAt": "2025-11-20T08:00:00.000Z",
-      "totalSources": 40,
-      "heroImageUrl": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200",
-      "sidebarSections": ["Privacy and User Control", "Enterprise and Future Outlook"]
+      "slug": "black-forest-labs-launches-flux2-ai-image-models-to-challeng",
+      "title": "# Black Forest Labs Launches FLUX.2 to Advance AI Image Generation",
+      "sourceCount": 1
     },
     {
-      "slug": "google-gemini-comes-to-android-auto",
-      "title": "Google Gemini Comes to Android Auto",
-      "publishedAt": "2025-11-20T17:00:00.000Z",
-      "totalSources": 42,
-      "sidebarSections": ["Conversational Driving Experience", "Productivity and Communication Features", "Gemini Live and Continuous Conversation", "Automotive Industry Impact", "Google Assistant Transition Timeline"]
+      "slug": "8-tips-for-designers-building-branded-templates-in-figma-buz",
+      "title": "# Key Tips for Building Branded Templates in Figma Buzz",
+      "sourceCount": 1
     },
     {
-      "slug": "mixup-mad-libs-style-ai-image-app-launches",
-      "title": "Mixup: Mad Libs-Style AI Image App Launches",
-      "publishedAt": "2025-11-20T18:49:00.000Z",
-      "totalSources": 38,
-      "sidebarSections": ["Google's Nano Banana Model Powers the Experience", "The Revolutionary Recipe System", "Social Features and Community Creativity", "User Reception and Market Impact"]
-    },
-    {
-      "slug": "sierra-hits-100m-arr-in-under-two-years",
-      "title": "Sierra Hits $100M ARR in Under Two Years",
-      "publishedAt": "2025-11-21T23:00:00.000Z",
-      "totalSources": 45,
-      "sidebarSections": ["Founding Vision and Leadership", "The Agent OS Platform", "Outcome-Based Pricing Innovation", "Enterprise Customer Success Stories", "Market Competition and Future Outlook"]
-    },
-    {
-      "slug": "lawsuits-allege-chatgpt-manipulation-tactics",
-      "title": "Lawsuits Allege ChatGPT Manipulation Tactics",
-      "publishedAt": "2025-11-23T16:00:00.000Z",
-      "totalSources": 48,
-      "sidebarSections": ["Allegations Against GPT-4o Design", "Tragic Individual Cases", "AI-Induced Delusions and Dependency", "OpenAI's Response", "Regulatory and Legal Implications"]
+      "slug": "the-product-designers-lens",
+      "title": "The Product Designer's Lens: Latest News and Analysis",
+      "sourceCount": 1
     }
   ]
 }

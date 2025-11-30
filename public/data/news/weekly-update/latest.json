@@ -1,10 +1,10 @@
 {
   "type": "weekly-update",
-  "date": "2025-11-30T16:31:13.579Z",
+  "date": "2025-11-30T17:25:42.252Z",
   "updates": [
     {
       "title": "Black Forest Labs launches Flux.2 AI image models to challenge Nano Banana Pro and Midjourney",
-      "description": "It&#x27;s not just Google&#x27;s Gemini 3, Nano Banana Pro, and Anthropic&#x27;s Claude Opus 4.5 we have to be thankful for this year around the Thanksgiving holiday here in the U.S.No, today the German AI startup Black Forest Labs released FLUX.2, a new image generation and editing system complete with four different models designed to support production-grade creative workflows.FLUX.2 introduces multi-reference conditioning, higher-fidelity outputs, and improved text rendering, and it expands ",
+      "description": "It's not just Google's Gemini 3, Nano Banana Pro, and Anthropic's Claude Opus 4.5 we have to be thankful for this year around the Thanksgiving holiday here in the U.S.No, today the German AI startup Black Forest Labs released FLUX.2, a new image generation and editing system complete with four different models designed to support production-grade creative workflows.FLUX.2 introduces multi-reference conditioning, higher-fidelity outputs, and improved text rendering, and it expands the company’s o",
       "timestamp": "11/26/2025, 3:46 AM",
       "sources": [
         {
@@ -24,15 +24,15 @@
           "url": "https://blog.cloudflare.com/flux-2-workers-ai/"
         },
         {
-          "name": "Huggingface",
-          "url": "https://huggingface.co/black-forest-labs/FLUX.2-dev"
+          "name": "Rundiffusion",
+          "url": "https://rundiffusion.com/blog/flux-2-coming-soon"
         },
         {
           "name": "Youtube",
           "url": "https://www.youtube.com/watch?v=ISRy5Skd04U"
         }
       ],
-      "tier": "quick",
+      "tier": "featured",
       "sourceUrl": "https://venturebeat.com/ai/black-forest-labs-launches-flux-2-ai-image-models-to-challenge-nano-banana",
       "topicCategory": "ai-creative"
     },
@@ -46,15 +46,27 @@
           "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
         },
         {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+          "name": "Webdesignernews",
+          "url": "https://webdesignernews.com/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
+        },
+        {
+          "name": "Ux-news",
+          "url": "https://ux-news.com/new-features-in-figma-buzz-customizable-templates-plugins-and-video-trimming/"
         },
         {
           "name": "Figmalion",
-          "url": "https://figmalion.com/issue/221"
+          "url": "https://figmalion.com/topics/figma-buzz"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/watch?v=FPpzI7z_U-o"
+        },
+        {
+          "name": "Figma",
+          "url": "https://www.figma.com/blog/branding/"
         }
       ],
-      "tier": "quick",
+      "tier": "featured",
       "sourceUrl": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/",
       "topicCategory": "design-ux"
     },
@@ -80,13 +92,13 @@
           "url": "https://www.opensourcesoftwarenews.com"
         }
       ],
-      "tier": "quick",
+      "tier": "featured",
       "sourceUrl": "https://uxdesign.cc/the-product-designers-lens-8511246a7984?source=rss----138adf9c44c---4",
       "topicCategory": "design-ux"
     },
     {
-      "title": "design/leader: Hyperfocus&#8217; Paul Watmough-Halim",
-      "description": "Paul Watmough-Halim is co-founder and digital brand director of Hyperfocus. The Hamburg-based studio works on brand and product design for clients like Whereverism, KNSK and Contentpass. Design What would your monograph be called? The Pursuit of Never Quite Making It. In life we ride this constant wave of feeling the highs, then crashing and feeling [&#8230;]What to read next: design/leader: Bwt&icirc;c creative director Paul Thomas | design/leader: Studio North&rsquo;s Holly Gleave | design/lea",
+      "title": "design/leader: Hyperfocus’ Paul Watmough-Halim",
+      "description": "Paul Watmough-Halim is co-founder and digital brand director of Hyperfocus. The Hamburg-based studio works on brand and product design for clients like Whereverism, KNSK and Contentpass. Design What would your monograph be called? The Pursuit of Never Quite Making It. In life we ride this constant wave of feeling the highs, then crashing and feeling […]What to read next: design/leader: Bwt&icirc;c creative director Paul Thomas | design/leader: Studio North’s Holly Gleave | design/leader: Zebra’s",
       "timestamp": "11/21/2025, 9:00 AM",
       "sources": [
         {
@@ -100,7 +112,7 @@
     },
     {
       "title": "Designing For Stress And Emergency",
-      "description": "Practical guidelines on designing time-critical products that prevent errors and improve accuracy. Part of the Measure UX &amp; Design Impact (use the code 🎟 IMPACT to save 20% off today). With a live UX training starting next week.",
+      "description": "Practical guidelines on designing time-critical products that prevent errors and improve accuracy. Part of the Measure UX & Design Impact (use the code 🎟 IMPACT to save 20% off today). With a live UX training starting next week.",
       "timestamp": "11/24/2025, 1:00 PM",
       "sources": [
         {
@@ -113,8 +125,8 @@
       "topicCategory": "design-ux"
     },
     {
-      "title": "The Jaguar rebrand &#8211; one year on",
-      "description": "One year ago today, I hit publish on a story about Jaguar&#8217;s rebrand. There seemed to be an interesting strategy behind it and the visuals were unusual, so I thought it might get some attention. That it did. To recap, on November 19 2024, Jaguar unveiled a new identity that ditched its growler logo and [&#8230;]What to read next: What is your earliest design memory? | &ldquo;We needed a complete reset&rdquo; &ndash; Jaguar MD defends controversial rebrand | Dusted&rsquo;s billion-dollar bra",
+      "title": "The Jaguar rebrand – one year on",
+      "description": "One year ago today, I hit publish on a story about Jaguar’s rebrand. There seemed to be an interesting strategy behind it and the visuals were unusual, so I thought it might get some attention. That it did. To recap, on November 19 2024, Jaguar unveiled a new identity that ditched its growler logo and […]What to read next: What is your earliest design memory? | “We needed a complete reset” – Jaguar MD defends controversial rebrand | Dusted’s billion-dollar brand for Mahindra’s new electric cars ",
       "timestamp": "11/19/2025, 9:56 AM",
       "sources": [
         {
@@ -128,7 +140,7 @@
     },
     {
       "title": "Beyond The Hype: What AI Can Really Do For Product Design",
-      "description": "AI tools are improving fast, but it’s still not clear how they fit into a real product design workflow. Nikita Samutin walks through four core stages &mdash; from analytics and ideation to prototyping and visual design &mdash; to show where AI fits and where it doesn’t, illustrated with real-world examples.",
+      "description": "AI tools are improving fast, but it’s still not clear how they fit into a real product design workflow. Nikita Samutin walks through four core stages — from analytics and ideation to prototyping and visual design — to show where AI fits and where it doesn’t, illustrated with real-world examples.",
       "timestamp": "08/18/2025, 1:00 PM",
       "sources": [
         {
