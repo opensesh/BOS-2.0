@@ -33,13 +33,13 @@ const FALLBACK_IMAGES = {
 function getCategoryInfo(category: IdeaCardData['category']) {
   switch (category) {
     case 'short-form':
-      return { label: 'Short Form', icon: Video, formatLabel: 'Reel' };
+      return { label: 'Short Form', icon: Video };
     case 'long-form':
-      return { label: 'Long Form', icon: FileText, formatLabel: 'Video' };
+      return { label: 'Long Form', icon: FileText };
     case 'blog':
-      return { label: 'Blog', icon: Pen, formatLabel: 'Article' };
+      return { label: 'Blog', icon: Pen };
     default:
-      return { label: 'Content', icon: Video, formatLabel: 'Content' };
+      return { label: 'Content', icon: Video };
   }
 }
 
@@ -57,7 +57,12 @@ function getFormatLabel(title: string, category: IdeaCardData['category']): stri
   if (lowerTitle.includes('listicle')) return 'Listicle';
   
   // Default based on category
-  return getCategoryInfo(category).formatLabel;
+  const defaults: Record<string, string> = {
+    'short-form': 'Reel',
+    'long-form': 'Video',
+    'blog': 'Article',
+  };
+  return defaults[category] || 'Content';
 }
 
 // Hook for fetching OG image with fallback - prefers pexelsImageUrl
@@ -118,7 +123,7 @@ function useIdeaImage(item: IdeaCardData) {
   return { imageUrl, isLoading };
 }
 
-// Redesigned IdeaCard matching Figma design
+// Redesigned IdeaCard matching Figma design exactly
 function IdeaCard({ item }: { item: IdeaCardData }) {
   const { imageUrl, isLoading } = useIdeaImage(item);
   const slug = item.slug || generateSlug(item.title);
@@ -136,7 +141,7 @@ function IdeaCard({ item }: { item: IdeaCardData }) {
     <Link
       href={`/discover/ideas/${slug}?id=${item.id}`}
       className="group relative flex flex-col rounded-2xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl h-full"
-      style={{ minHeight: '380px' }}
+      style={{ minHeight: '420px' }}
     >
       {/* Background Texture */}
       <div className="absolute inset-0">
@@ -148,15 +153,31 @@ function IdeaCard({ item }: { item: IdeaCardData }) {
           priority
         />
         {/* Subtle dark overlay for text legibility */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/20" />
       </div>
 
       {/* Card Content */}
       <div className="relative z-10 flex flex-col h-full p-5 md:p-6">
-        {/* Thumbnail Image */}
-        <div className="mb-6">
+        {/* TOP ROW: Format chip (left) + Category chip (right) */}
+        <div className="flex items-center justify-between mb-auto">
+          {/* Format Chip - Left */}
+          <span className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full border border-brand-vanilla/50 text-brand-vanilla text-sm font-medium backdrop-blur-sm">
+            <Sparkles className="w-3.5 h-3.5" />
+            {formatLabel}
+          </span>
+
+          {/* Category Chip - Right */}
+          <span className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-os-charcoal/90 text-brand-vanilla text-sm font-medium">
+            <CategoryIcon className="w-3.5 h-3.5 opacity-80" />
+            {categoryInfo.label}
+          </span>
+        </div>
+
+        {/* MIDDLE: Thumbnail + Sources chip */}
+        <div className="flex items-end justify-between my-6">
+          {/* Thumbnail Image */}
           <div 
-            className="relative w-28 h-28 md:w-32 md:h-32 rounded-2xl overflow-hidden border-[3px] border-brand-vanilla shadow-lg"
+            className="relative w-32 h-32 md:w-36 md:h-36 rounded-2xl overflow-hidden border-[4px] border-brand-vanilla shadow-xl"
           >
             {isLoading ? (
               <div className="w-full h-full flex items-center justify-center bg-os-charcoal/80">
@@ -172,154 +193,58 @@ function IdeaCard({ item }: { item: IdeaCardData }) {
               />
             )}
           </div>
-        </div>
 
-        {/* Title */}
-        <h3 className="font-display font-bold text-brand-vanilla text-xl md:text-2xl leading-tight mb-3 line-clamp-2">
-          {cleanTitle}
-        </h3>
-
-        {/* Format Chip */}
-        <div className="mb-auto">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-brand-vanilla/40 text-brand-vanilla text-sm font-medium">
-            <Sparkles className="w-3.5 h-3.5" />
-            {formatLabel}
-          </span>
-        </div>
-
-        {/* Footer Chips */}
-        <div className="flex items-center gap-3 mt-6">
-          {/* Sources Chip */}
-          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-os-charcoal/80 text-brand-vanilla text-sm font-medium">
-            <Clock className="w-3.5 h-3.5 opacity-70" />
+          {/* Sources Chip - positioned to the right of thumbnail */}
+          <span className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-os-charcoal/90 text-brand-vanilla text-sm font-medium">
+            <Clock className="w-3.5 h-3.5 opacity-80" />
             {item.sources.length} {item.sources.length === 1 ? 'source' : 'sources'}
           </span>
-
-          {/* Category Chip */}
-          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-os-charcoal/80 text-brand-vanilla text-sm font-medium">
-            <CategoryIcon className="w-3.5 h-3.5 opacity-70" />
-            {categoryInfo.label}
-          </span>
         </div>
+
+        {/* BOTTOM: Title */}
+        <h3 className="font-display font-bold text-brand-vanilla text-xl md:text-2xl leading-tight line-clamp-2">
+          {cleanTitle}
+        </h3>
       </div>
     </Link>
   );
 }
 
-// Section component for organized display
-function IdeaSection({ 
-  title, 
-  icon: Icon, 
-  items 
-}: { 
-  title: string; 
-  icon: React.ComponentType<{ className?: string }>; 
-  items: IdeaCardData[];
-}) {
-  if (items.length === 0) return null;
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 16 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-      className="mb-8"
-    >
-      {/* Section Header */}
-      <div className="flex items-center gap-2.5 mb-4">
-        <div className="w-8 h-8 rounded-lg bg-brand-aperol/10 flex items-center justify-center">
-          <Icon className="w-4 h-4 text-brand-aperol" />
-        </div>
-        <h2 className="text-base font-semibold text-brand-vanilla">{title}</h2>
-        <span className="px-2 py-0.5 rounded-full bg-os-surface-dark text-xs text-os-text-secondary-dark font-medium">
-          {items.length}
-        </span>
-      </div>
-
-      {/* Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {items.map((item, idx) => (
-          <motion.div
-            key={item.id || idx}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ 
-              duration: 0.4, 
-              delay: idx * 0.08,
-              ease: [0.25, 0.46, 0.45, 0.94] 
-            }}
-          >
-            <IdeaCard item={item} />
-          </motion.div>
-        ))}
-      </div>
-    </motion.div>
-  );
-}
-
 export function IdeaCardGrid({ items, activeFilter }: IdeaCardGridProps) {
-  // Group items by category
-  const shortFormItems = items.filter(item => item.category === 'short-form');
-  const longFormItems = items.filter(item => item.category === 'long-form');
-  const blogItems = items.filter(item => item.category === 'blog');
-
-  // If filter is active, show only that category in a flat layout
-  if (activeFilter !== 'all') {
-    const filteredItems = items.filter(item => item.category === activeFilter);
-    
-    if (filteredItems.length === 0) {
-      return (
-        <div className="text-center py-12 text-os-text-secondary-dark">
-          No ideas found for this filter.
-        </div>
-      );
-    }
-
+  // When showing all items or filtered items, use a flat grid layout (no section headers)
+  const displayItems = activeFilter === 'all' 
+    ? items 
+    : items.filter(item => item.category === activeFilter);
+  
+  if (displayItems.length === 0) {
     return (
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.3 }}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
-      >
-        {filteredItems.map((item, idx) => (
-          <motion.div
-            key={item.id || idx}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ 
-              duration: 0.4, 
-              delay: idx * 0.06,
-              ease: [0.25, 0.46, 0.45, 0.94] 
-            }}
-          >
-            <IdeaCard item={item} />
-          </motion.div>
-        ))}
-      </motion.div>
+      <div className="text-center py-12 text-os-text-secondary-dark">
+        No ideas found.
+      </div>
     );
   }
 
-  // Default: Show organized by sections
   return (
-    <div>
-      <IdeaSection
-        title="Short-Form"
-        icon={Video}
-        items={shortFormItems}
-      />
-
-      <IdeaSection
-        title="Long-Form"
-        icon={FileText}
-        items={longFormItems}
-      />
-
-      <IdeaSection
-        title="Blogging"
-        icon={Pen}
-        items={blogItems}
-      />
-    </div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.3 }}
+      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+    >
+      {displayItems.map((item, idx) => (
+        <motion.div
+          key={item.id || idx}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ 
+            duration: 0.4, 
+            delay: idx * 0.05,
+            ease: [0.25, 0.46, 0.45, 0.94] 
+          }}
+        >
+          <IdeaCard item={item} />
+        </motion.div>
+      ))}
+    </motion.div>
   );
 }
