@@ -17,7 +17,8 @@ import * as path from 'path';
 import { getSourcesForDailyFetch, RSSSource, CATEGORY_KEYWORDS } from '../lib/content-generator/rss-sources';
 import { generateIdeasBatch } from '../lib/content-generator/ideas-generator';
 import { batchEnrichTopics } from '../lib/content-generator/source-enricher';
-import type { NewsData, IdeaData, NewsUpdateItem, IdeaItem, NewsTopicCategory } from '../types';
+import { generateDiscoverArticle } from '../lib/article-generator/perplexity-client';
+import type { NewsData, IdeaData, NewsUpdateItem, IdeaItem, NewsTopicCategory, DiscoverArticle, DiscoverSection, CitationChip } from '../types';
 
 // ===========================================
 // Configuration
@@ -26,10 +27,12 @@ import type { NewsData, IdeaData, NewsUpdateItem, IdeaItem, NewsTopicCategory } 
 const DATA_DIR = path.join(process.cwd(), 'public/data');
 const NEWS_DIR = path.join(DATA_DIR, 'news');
 const IDEAS_DIR = path.join(DATA_DIR, 'weekly-ideas');
+const ARTICLES_DIR = path.join(DATA_DIR, 'discover/articles');
 
 // Target counts - these should ALWAYS be met
 const TARGET_NEWS_COUNT = 12;
 const TARGET_IDEAS_PER_CATEGORY = 5;
+const TARGET_FEATURED_ARTICLES = 3; // Rich articles with 40+ sources
 
 // Number of sonic line textures available (1-13)
 const SONIC_LINE_TEXTURE_COUNT = 13;
@@ -37,6 +40,55 @@ const SONIC_LINE_TEXTURE_COUNT = 13;
 // Parse arguments
 const args = process.argv.slice(2);
 const isDryRun = args.includes('--dry-run');
+
+// ===========================================
+// HTML Entity Decoder
+// ===========================================
+
+/**
+ * Decode HTML entities in text (e.g., &#x27; → ', &#8217; → ')
+ */
+function decodeHTMLEntities(text: string): string {
+  if (!text) return text;
+  
+  // Named entities
+  const namedEntities: Record<string, string> = {
+    '&amp;': '&',
+    '&lt;': '<',
+    '&gt;': '>',
+    '&quot;': '"',
+    '&apos;': "'",
+    '&nbsp;': ' ',
+    '&mdash;': '—',
+    '&ndash;': '–',
+    '&ldquo;': '"',
+    '&rdquo;': '"',
+    '&lsquo;': ''',
+    '&rsquo;': ''',
+    '&hellip;': '…',
+    '&copy;': '©',
+    '&reg;': '®',
+    '&trade;': '™',
+  };
+  
+  let decoded = text;
+  
+  // Replace named entities
+  for (const [entity, char] of Object.entries(namedEntities)) {
+    decoded = decoded.replace(new RegExp(entity, 'gi'), char);
+  }
+  
+  // Replace numeric entities (decimal: &#8217; and hex: &#x27;)
+  decoded = decoded.replace(/&#(\d+);/g, (_, num) => {
+    return String.fromCharCode(parseInt(num, 10));
+  });
+  
+  decoded = decoded.replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => {
+    return String.fromCharCode(parseInt(hex, 16));
+  });
+  
+  return decoded;
+}
 
 // ===========================================
 // RSS Fetching
@@ -72,10 +124,15 @@ function parseRSS(xml: string, source: RSSSource): RSSItem[] {
     const descMatch = itemXml.match(/<description[^>]*>(?:<!\[CDATA\[)?([\s\S]*?)(?:\]\]>)?<\/description>/i);
     
     if (titleMatch) {
-      const title = titleMatch[1].trim().replace(/<[^>]+>/g, '').substring(0, 200);
+      // Decode HTML entities and clean up the title
+      const rawTitle = titleMatch[1].trim().replace(/<[^>]+>/g, '');
+      const title = decodeHTMLEntities(rawTitle).substring(0, 200);
       const link = linkMatch ? (linkMatch[1] || linkMatch[0]).trim() : source.url;
-      const description = descMatch 
-        ? descMatch[1].replace(/<[^>]+>/g, '').trim().substring(0, 500)
+      const rawDescription = descMatch 
+        ? descMatch[1].replace(/<[^>]+>/g, '').trim()
+        : undefined;
+      const description = rawDescription 
+        ? decodeHTMLEntities(rawDescription).substring(0, 500)
         : undefined;
       
       if (title.length > 10) { // Skip very short/empty titles
@@ -105,10 +162,15 @@ function parseRSS(xml: string, source: RSSSource): RSSItem[] {
                            entryXml.match(/<content[^>]*>(?:<!\[CDATA\[)?([\s\S]*?)(?:\]\]>)?<\/content>/i);
       
       if (titleMatch) {
-        const title = titleMatch[1].trim().replace(/<[^>]+>/g, '').substring(0, 200);
+        // Decode HTML entities and clean up the title
+        const rawTitle = titleMatch[1].trim().replace(/<[^>]+>/g, '');
+        const title = decodeHTMLEntities(rawTitle).substring(0, 200);
         const link = linkMatch ? linkMatch[1].trim() : source.url;
-        const description = summaryMatch 
-          ? summaryMatch[1].replace(/<[^>]+>/g, '').trim().substring(0, 500)
+        const rawDescription = summaryMatch 
+          ? summaryMatch[1].replace(/<[^>]+>/g, '').trim()
+          : undefined;
+        const description = rawDescription
+          ? decodeHTMLEntities(rawDescription).substring(0, 500)
           : undefined;
         
         if (title.length > 10) {
@@ -546,6 +608,149 @@ function formatDate(dateStr: string): string {
 }
 
 /**
+ * Generate a URL-friendly slug from a title
+ */
+function generateSlug(title: string): string {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .substring(0, 60)
+    .replace(/-$/, '');
+}
+
+/**
+ * Generate rich featured articles with full sections and 40+ sources using Perplexity
+ */
+async function generateFeaturedArticles(
+  clusters: ClusteredTopic[],
+  targetCount: number = TARGET_FEATURED_ARTICLES
+): Promise<DiscoverArticle[]> {
+  console.log(`\n🌟 Generating ${targetCount} featured articles with rich content...`);
+  
+  if (!process.env.PERPLEXITY_API_KEY) {
+    console.log('  ⚠️ PERPLEXITY_API_KEY not set, skipping featured article generation');
+    return [];
+  }
+  
+  // Select top clusters for featured articles
+  const topClusters = clusters.slice(0, targetCount);
+  const articles: DiscoverArticle[] = [];
+  
+  for (let i = 0; i < topClusters.length; i++) {
+    const cluster = topClusters[i];
+    console.log(`  [${i + 1}/${targetCount}] Generating: "${cluster.title.substring(0, 50)}..."`);
+    
+    try {
+      // Use the Perplexity article generator to create rich content
+      const result = await generateDiscoverArticle(
+        cluster.title,
+        cluster.sources
+      );
+      
+      // Convert to DiscoverArticle format
+      const slug = generateSlug(cluster.title);
+      const allSources = result.allSources.map((s, idx) => ({
+        id: s.id,
+        name: s.name,
+        url: s.url,
+        favicon: s.favicon,
+        title: s.title || cluster.title,
+      }));
+      
+      // Convert sections to DiscoverSection format
+      const sections: DiscoverSection[] = result.sections.map((section, sectionIdx) => ({
+        id: `section-${sectionIdx}`,
+        title: section.title,
+        paragraphs: section.paragraphs.map((para, paraIdx) => {
+          // Convert source IDs to CitationChips
+          const citations: CitationChip[] = [];
+          if (para.sourceIds.length > 0) {
+            const primarySourceId = para.sourceIds[0];
+            const primarySource = allSources.find(s => s.id === primarySourceId);
+            
+            if (primarySource) {
+              citations.push({
+                primarySource,
+                additionalCount: Math.max(0, para.sourceIds.length - 1),
+                additionalSources: para.sourceIds.slice(1)
+                  .map(id => allSources.find(s => s.id === id))
+                  .filter((s): s is typeof primarySource => s !== undefined),
+              });
+            }
+          }
+          
+          return {
+            id: `para-${sectionIdx}-${paraIdx}`,
+            content: para.content,
+            citations,
+          };
+        }),
+      }));
+      
+      // Generate sidebar from section titles
+      const sidebarSections = sections
+        .filter(s => s.title)
+        .map(s => s.title as string);
+      
+      const article: DiscoverArticle = {
+        id: slug,
+        slug,
+        title: result.title || cluster.title,
+        summary: cluster.description || '',
+        heroImageUrl: result.heroImageUrl,
+        publishedAt: new Date().toISOString(),
+        sources: allSources,
+        sections,
+        sidebarSections,
+        relatedArticles: [], // Will be populated separately if needed
+      };
+      
+      articles.push(article);
+      console.log(`    ✓ Generated with ${allSources.length} sources, ${sections.length} sections`);
+      
+      // Rate limit to avoid hitting API limits
+      if (i < topClusters.length - 1) {
+        await new Promise(r => setTimeout(r, 2000)); // 2 second delay between articles
+      }
+    } catch (error) {
+      console.error(`    ❌ Failed to generate article:`, error);
+    }
+  }
+  
+  return articles;
+}
+
+/**
+ * Save featured articles to JSON files
+ */
+async function saveFeaturedArticles(articles: DiscoverArticle[]): Promise<void> {
+  if (articles.length === 0 || isDryRun) return;
+  
+  // Ensure directory exists
+  fs.mkdirSync(ARTICLES_DIR, { recursive: true });
+  
+  for (const article of articles) {
+    const filePath = path.join(ARTICLES_DIR, `${article.slug}.json`);
+    fs.writeFileSync(filePath, JSON.stringify(article, null, 2));
+    console.log(`  ✓ Saved article: ${article.slug}.json`);
+  }
+  
+  // Save manifest of all articles
+  const manifestPath = path.join(ARTICLES_DIR, 'manifest.json');
+  const manifest = {
+    generated: new Date().toISOString(),
+    articles: articles.map(a => ({
+      slug: a.slug,
+      title: a.title,
+      sourceCount: a.sources.length,
+    })),
+  };
+  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
+}
+
+/**
  * Save news data to JSON files
  */
 async function saveNews(newsItems: NewsUpdateItem[]): Promise<void> {
@@ -863,7 +1068,7 @@ async function main() {
   console.log('🚀 OPEN SESSION Daily Content Generation');
   console.log(`📅 ${new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' })} PST`);
   console.log(`Mode: ${isDryRun ? '🔍 DRY RUN' : '✏️ LIVE'}`);
-  console.log(`Targets: ${TARGET_NEWS_COUNT} news, ${TARGET_IDEAS_PER_CATEGORY * 3} ideas`);
+  console.log(`Targets: ${TARGET_NEWS_COUNT} news, ${TARGET_FEATURED_ARTICLES} featured, ${TARGET_IDEAS_PER_CATEGORY * 3} ideas`);
   
   try {
     // Fetch RSS feeds
@@ -874,15 +1079,41 @@ async function main() {
       process.exit(1);
     }
     
-    // Generate and save news
+    // Cluster similar items
+    const clusters = clusterSimilarTopics(rssItems);
+    
+    // Score and sort clusters
+    const scoredClusters = clusters.map(cluster => ({
+      ...cluster,
+      score: scoreCluster(cluster),
+    }));
+    scoredClusters.sort((a, b) => b.score - a.score);
+    
+    // Generate featured articles for top clusters (rich content with 40+ sources)
+    const featuredArticles = isDryRun ? [] : await generateFeaturedArticles(scoredClusters);
+    await saveFeaturedArticles(featuredArticles);
+    
+    // Get slugs of featured articles for cross-referencing
+    const featuredSlugs = new Set(featuredArticles.map(a => a.slug));
+    
+    // Generate and save news (mark top items as 'featured' if they have rich articles)
     const newsItems = await generateNews(rssItems);
+    
+    // Update news items: those with matching featured articles get 'featured' tier
+    for (const item of newsItems) {
+      const slug = generateSlug(item.title);
+      if (featuredSlugs.has(slug)) {
+        item.tier = 'featured';
+      }
+    }
+    
     await saveNews(newsItems);
     
     // Generate and save ideas
     await generateIdeas(newsItems);
     
     console.log('\n✅ Daily content generation complete!');
-    console.log(`   Generated: ${newsItems.length} news + ${TARGET_IDEAS_PER_CATEGORY * 3} ideas`);
+    console.log(`   Generated: ${newsItems.length} news + ${featuredArticles.length} featured articles + ${TARGET_IDEAS_PER_CATEGORY * 3} ideas`);
     
   } catch (error) {
     console.error('\n❌ Generation failed:', error);

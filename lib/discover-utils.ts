@@ -1,6 +1,60 @@
 import { NewsCardData, IdeaCardData, Source, NewsData, IdeaData, ContentTier, PlatformTip } from '@/types';
 
 // ===========================================
+// HTML Entity Decoder (Client-side safety net)
+// ===========================================
+
+/**
+ * Decode HTML entities in text (e.g., &#x27; → ', &#8217; → ')
+ * Used as a safety net for any content that may have slipped through
+ */
+export function decodeHTMLEntities(text: string): string {
+  if (!text || typeof text !== 'string') return text;
+  
+  // Use DOM API if available (browser)
+  if (typeof document !== 'undefined') {
+    const textarea = document.createElement('textarea');
+    textarea.innerHTML = text;
+    return textarea.value;
+  }
+  
+  // Fallback for server-side/Node.js
+  const namedEntities: Record<string, string> = {
+    '&amp;': '&',
+    '&lt;': '<',
+    '&gt;': '>',
+    '&quot;': '"',
+    '&apos;': "'",
+    '&nbsp;': ' ',
+    '&mdash;': '—',
+    '&ndash;': '–',
+    '&ldquo;': '"',
+    '&rdquo;': '"',
+    '&lsquo;': ''',
+    '&rsquo;': ''',
+    '&hellip;': '…',
+  };
+  
+  let decoded = text;
+  
+  // Replace named entities
+  for (const [entity, char] of Object.entries(namedEntities)) {
+    decoded = decoded.replace(new RegExp(entity, 'gi'), char);
+  }
+  
+  // Replace numeric entities (decimal: &#8217; and hex: &#x27;)
+  decoded = decoded.replace(/&#(\d+);/g, (_, num) => {
+    return String.fromCharCode(parseInt(num, 10));
+  });
+  
+  decoded = decoded.replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => {
+    return String.fromCharCode(parseInt(hex, 16));
+  });
+  
+  return decoded;
+}
+
+// ===========================================
 // Sonic Line Texture Utilities
 // ===========================================
 
@@ -185,14 +239,18 @@ export function processNewsData(data: NewsData): NewsCardData[] {
   data.updates.forEach((update, index) => {
     const sources: Source[] = update.sources.map((source, idx) => ({
       id: `source-${index}-${idx}`,
-      name: source.name,
+      name: decodeHTMLEntities(source.name),
       url: source.url,
     }));
     
+    // Decode HTML entities from title and description
+    const cleanTitle = decodeHTMLEntities(update.title);
+    const cleanDescription = update.description ? decodeHTMLEntities(update.description) : undefined;
+    
     // Use description if available, otherwise fall back to a truncated title
-    const summary = update.description 
-      ? update.description.split('\n')[0] // Use first paragraph as summary
-      : update.title.substring(0, 200);
+    const summary = cleanDescription 
+      ? cleanDescription.split('\n')[0] // Use first paragraph as summary
+      : cleanTitle.substring(0, 200);
     
     // Determine tier based on available data
     const tier = determineTier(update);
@@ -204,17 +262,17 @@ export function processNewsData(data: NewsData): NewsCardData[] {
     
     const card: NewsCardData = {
       id: `news-${data.type}-${index}`,
-      slug: generateSlug(update.title),
-      title: update.title,
+      slug: generateSlug(cleanTitle),
+      title: cleanTitle,
       summary,
-      content: update.description ? update.description.split('\n\n') : undefined,
+      content: cleanDescription ? cleanDescription.split('\n\n') : undefined,
       sources,
       publishedAt: formatTimestamp(update.timestamp),
       category: data.type,
       // Tiered content fields
       tier,
       articlePath: update.articlePath,
-      aiSummary: update.aiSummary,
+      aiSummary: update.aiSummary ? decodeHTMLEntities(update.aiSummary) : undefined,
       sourceUrl,
       // Topic categorization
       topicCategory: update.topicCategory,
@@ -238,29 +296,33 @@ export function processIdeaData(data: IdeaData): IdeaCardData[] {
   return data.ideas.map((idea, index) => {
     const sources: Source[] = idea.sources.map((source, idx) => ({
       id: `source-${index}-${idx}`,
-      name: source.name,
+      name: decodeHTMLEntities(source.name),
       url: source.url,
     }));
     
+    // Decode HTML entities from title and description
+    const cleanTitle = decodeHTMLEntities(idea.title);
+    const cleanDescription = decodeHTMLEntities(idea.description);
+    
     // Use pre-assigned texture index, or generate one deterministically from title
-    const textureIndex = idea.textureIndex ?? getTextureIndexFromString(idea.title);
+    const textureIndex = idea.textureIndex ?? getTextureIndexFromString(cleanTitle);
     
     return {
       id: `idea-${data.type}-${index}`,
-      slug: generateSlug(idea.title),
-      title: idea.title,
-      description: idea.description,
+      slug: generateSlug(cleanTitle),
+      title: cleanTitle,
+      description: cleanDescription,
       sources,
       publishedAt: formatTimestamp(data.date),
       category: data.type,
       starred: idea.starred,
       isPrompt: true as const, // Always true - idea items are content prompts
-      // Rich creative brief fields (optional for backwards compatibility)
-      hooks: idea.hooks,
+      // Rich creative brief fields (optional for backwards compatibility, also decode)
+      hooks: idea.hooks?.map(h => decodeHTMLEntities(h)),
       platformTips: idea.platformTips as PlatformTip[] | undefined,
       visualDirection: idea.visualDirection,
-      exampleOutline: idea.exampleOutline,
-      hashtags: idea.hashtags,
+      exampleOutline: idea.exampleOutline?.map(s => decodeHTMLEntities(s)),
+      hashtags: idea.hashtags ? decodeHTMLEntities(idea.hashtags) : undefined,
       // Visual design fields
       pexelsImageUrl: idea.pexelsImageUrl,
       textureIndex,
