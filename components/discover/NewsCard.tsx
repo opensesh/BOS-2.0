@@ -192,7 +192,7 @@ export function NewsCard({
     return () => observer.disconnect();
   }, [priority, item.imageUrl]);
 
-  // Fetch OG image from sources - try multiple sources as fallback
+  // Fetch OG image from sources - try multiple sources, then Pexels as final fallback
   useEffect(() => {
     if (!isVisible || item.imageUrl || item.sources.length === 0) return;
     
@@ -241,7 +241,35 @@ export function NewsCard({
         }
       }
       
-      // No image found from any source
+      // FINAL FALLBACK: Try Pexels API with article title
+      if (!cancelled) {
+        try {
+          const pexelsResponse = await fetch(
+            `/api/pexels?query=${encodeURIComponent(item.title)}`,
+            { signal: controller.signal }
+          );
+          if (pexelsResponse.ok) {
+            const pexelsData = await pexelsResponse.json();
+            if (pexelsData.imageUrl) {
+              // Cache the Pexels image against the first source URL
+              if (item.sources.length > 0) {
+                ogImageCache.set(item.sources[0].url, pexelsData.imageUrl);
+              }
+              if (!cancelled) {
+                setOgImage(pexelsData.imageUrl);
+                setIsLoadingImage(false);
+              }
+              return;
+            }
+          }
+        } catch (error) {
+          if (error instanceof Error && error.name !== 'AbortError') {
+            console.warn('Pexels fallback failed:', error);
+          }
+        }
+      }
+      
+      // No image found from any source or Pexels
       if (!cancelled) {
         setIsLoadingImage(false);
       }
@@ -253,7 +281,7 @@ export function NewsCard({
       cancelled = true;
       controller.abort();
     };
-  }, [isVisible, item.imageUrl, item.sources]);
+  }, [isVisible, item.imageUrl, item.sources, item.title]);
 
   const handleImageError = () => {
     setImageError(true);

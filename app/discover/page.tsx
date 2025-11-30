@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useCallback, useEffect, useMemo } from 'react';
+import React, { useState, useCallback, useEffect, useMemo, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { DiscoverLayout } from '@/components/discover/DiscoverLayout';
@@ -57,7 +57,7 @@ function classifyArticle(article: NewsCardData): NewsTopicCategory {
   return bestCategory;
 }
 
-export default function DiscoverPage() {
+function DiscoverContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [activeTab, setActiveTab] = useState<MainTabType>('News');
@@ -336,5 +336,23 @@ export default function DiscoverPage() {
         onAddToSpace={handleConfirmAddToSpace}
       />
     </div>
+  );
+}
+
+export default function DiscoverPage() {
+  return (
+    <Suspense fallback={
+      <div className="flex h-screen bg-os-bg-dark dark:bg-os-bg-dark text-os-text-primary-dark font-sans">
+        <Sidebar />
+        <DiscoverLayout>
+          <div className="text-center py-20 text-os-text-secondary-dark">
+            <div className="w-8 h-8 border-2 border-os-text-secondary-dark border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+            Loading...
+          </div>
+        </DiscoverLayout>
+      </div>
+    }>
+      <DiscoverContent />
+    </Suspense>
   );
 }

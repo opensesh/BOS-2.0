@@ -1565,6 +1565,97 @@ export const ASSET_MANIFEST: {
   ],
   "textures": [
     {
+      "path": "/assets/textures/GFX-DATABASE-SONIC-LINE-01.jpg",
+      "category": "textures",
+      "filename": "GFX-DATABASE-SONIC-LINE-01.jpg",
+      "variant": "unknown",
+      "description": "unknown texture"
+    },
+    {
+      "path": "/assets/textures/GFX-DATABASE-SONIC-LINE-010.jpg",
+      "category": "textures",
+      "filename": "GFX-DATABASE-SONIC-LINE-010.jpg",
+      "variant": "unknown",
+      "description": "unknown texture"
+    },
+    {
+      "path": "/assets/textures/GFX-DATABASE-SONIC-LINE-011.jpg",
+      "category": "textures",
+      "filename": "GFX-DATABASE-SONIC-LINE-011.jpg",
+      "variant": "unknown",
+      "description": "unknown texture"
+    },
+    {
+      "path": "/assets/textures/GFX-DATABASE-SONIC-LINE-012.jpg",
+      "category": "textures",
+      "filename": "GFX-DATABASE-SONIC-LINE-012.jpg",
+      "variant": "unknown",
+      "description": "unknown texture"
+    },
+    {
+      "path": "/assets/textures/GFX-DATABASE-SONIC-LINE-013.jpg",
+      "category": "textures",
+      "filename": "GFX-DATABASE-SONIC-LINE-013.jpg",
+      "variant": "unknown",
+      "description": "unknown texture"
+    },
+    {
+      "path": "/assets/textures/GFX-DATABASE-SONIC-LINE-02.jpg",
+      "category": "textures",
+      "filename": "GFX-DATABASE-SONIC-LINE-02.jpg",
+      "variant": "unknown",
+      "description": "unknown texture"
+    },
+    {
+      "path": "/assets/textures/GFX-DATABASE-SONIC-LINE-03.jpg",
+      "category": "textures",
+      "filename": "GFX-DATABASE-SONIC-LINE-03.jpg",
+      "variant": "unknown",
+      "description": "unknown texture"
+    },
+    {
+      "path": "/assets/textures/GFX-DATABASE-SONIC-LINE-04.jpg",
+      "category": "textures",
+      "filename": "GFX-DATABASE-SONIC-LINE-04.jpg",
+      "variant": "unknown",
+      "description": "unknown texture"
+    },
+    {
+      "path": "/assets/textures/GFX-DATABASE-SONIC-LINE-05.jpg",
+      "category": "textures",
+      "filename": "GFX-DATABASE-SONIC-LINE-05.jpg",
+      "variant": "unknown",
+      "description": "unknown texture"
+    },
+    {
+      "path": "/assets/textures/GFX-DATABASE-SONIC-LINE-06.jpg",
+      "category": "textures",
+      "filename": "GFX-DATABASE-SONIC-LINE-06.jpg",
+      "variant": "unknown",
+      "description": "unknown texture"
+    },
+    {
+      "path": "/assets/textures/GFX-DATABASE-SONIC-LINE-07.jpg",
+      "category": "textures",
+      "filename": "GFX-DATABASE-SONIC-LINE-07.jpg",
+      "variant": "unknown",
+      "description": "unknown texture"
+    },
+    {
+      "path": "/assets/textures/GFX-DATABASE-SONIC-LINE-08.jpg",
+      "category": "textures",
+      "filename": "GFX-DATABASE-SONIC-LINE-08.jpg",
+      "variant": "unknown",
+      "description": "unknown texture"
+    },
+    {
+      "path": "/assets/textures/GFX-DATABASE-SONIC-LINE-09.jpg",
+      "category": "textures",
+      "filename": "GFX-DATABASE-SONIC-LINE-09.jpg",
+      "variant": "unknown",
+      "description": "unknown texture"
+    },
+    {
       "path": "/assets/textures/texture_ascii_01_white_compressed.jpg",
       "category": "textures",
       "filename": "texture_ascii_01_white_compressed.jpg",
@@ -1750,7 +1841,7 @@ export const ASSET_COUNTS = {
   fonts: 112,
   illustrations: 35,
   images: 48,
-  textures: 12,
+  textures: 25,
   icons: 9,
-  total: 241,
+  total: 254,
 };
