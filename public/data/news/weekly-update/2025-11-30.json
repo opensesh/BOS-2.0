@@ -1,20 +1,118 @@
 {
   "type": "weekly-update",
-  "date": "2025-11-30T05:56:32.166Z",
+  "date": "2025-11-30T07:35:29.128Z",
   "updates": [
     {
-      "title": "design/leader: GentleForces&#8217; Danni Mohammed",
-      "description": "Danni Mohammed is founder and CEO of GentleForces. The London-based strategy and design studio works with clients like adidas, Jack Wolfskin and Weekday. Design What would your monograph be called? Chaos and order: Why it&#8217;s normal and how to embrace it. What recent design work made you a bit jealous? I am breaking the rules. [&#8230;]What to read next: design/leader: Hyperfocus&rsquo; Paul Watmough-Halim | design/leader: Studio North&rsquo;s Holly Gleave | design/leader: Zebra&rsquo;s Lee ",
-      "timestamp": "11/28/2025, 9:00 AM",
+      "title": "Black Forest Labs launches Flux.2 AI image models to challenge Nano Banana Pro and Midjourney",
+      "description": "It&#x27;s not just Google&#x27;s Gemini 3, Nano Banana Pro, and Anthropic&#x27;s Claude Opus 4.5 we have to be thankful for this year around the Thanksgiving holiday here in the U.S.No, today the German AI startup Black Forest Labs released FLUX.2, a new image generation and editing system complete with four different models designed to support production-grade creative workflows.FLUX.2 introduces multi-reference conditioning, higher-fidelity outputs, and improved text rendering, and it expands ",
+      "timestamp": "11/26/2025, 3:46 AM",
       "sources": [
         {
-          "name": "Design Week",
-          "url": "https://www.designweek.co.uk/design-leader-gentleforces-danni-mohammed/"
+          "name": "VentureBeat AI",
+          "url": "https://venturebeat.com/ai/black-forest-labs-launches-flux-2-ai-image-models-to-challenge-nano-banana"
         }
       ],
       "tier": "quick",
-      "sourceUrl": "https://www.designweek.co.uk/design-leader-gentleforces-danni-mohammed/",
+      "sourceUrl": "https://venturebeat.com/ai/black-forest-labs-launches-flux-2-ai-image-models-to-challenge-nano-banana",
+      "topicCategory": "ai-creative"
+    },
+    {
+      "title": "8 tips for designers building branded templates in Figma Buzz",
+      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "timestamp": "08/12/2025, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/",
       "topicCategory": "design-ux"
+    },
+    {
+      "title": "The product designer’s Lens",
+      "description": "Four tools that product designers use that have nothing to do with FigmaContinue reading on UX Collective »",
+      "timestamp": "11/29/2025, 6:44 AM",
+      "sources": [
+        {
+          "name": "UX Collective",
+          "url": "https://uxdesign.cc/the-product-designers-lens-8511246a7984?source=rss----138adf9c44c---4"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://uxdesign.cc/the-product-designers-lens-8511246a7984?source=rss----138adf9c44c---4",
+      "topicCategory": "design-ux"
+    },
+    {
+      "title": "design/leader: Hyperfocus&#8217; Paul Watmough-Halim",
+      "description": "Paul Watmough-Halim is co-founder and digital brand director of Hyperfocus. The Hamburg-based studio works on brand and product design for clients like Whereverism, KNSK and Contentpass. Design What would your monograph be called? The Pursuit of Never Quite Making It. In life we ride this constant wave of feeling the highs, then crashing and feeling [&#8230;]What to read next: design/leader: Bwt&icirc;c creative director Paul Thomas | design/leader: Studio North&rsquo;s Holly Gleave | design/lea",
+      "timestamp": "11/21/2025, 9:00 AM",
+      "sources": [
+        {
+          "name": "Design Week",
+          "url": "https://www.designweek.co.uk/design-leader-hyperfocus-paul-watmough-halim/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.designweek.co.uk/design-leader-hyperfocus-paul-watmough-halim/",
+      "topicCategory": "general-tech"
+    },
+    {
+      "title": "Designing For Stress And Emergency",
+      "description": "Practical guidelines on designing time-critical products that prevent errors and improve accuracy. Part of the Measure UX &amp; Design Impact (use the code 🎟 IMPACT to save 20% off today). With a live UX training starting next week.",
+      "timestamp": "11/24/2025, 1:00 PM",
+      "sources": [
+        {
+          "name": "Smashing Magazine",
+          "url": "https://smashingmagazine.com/2025/11/designing-for-stress-emergency/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://smashingmagazine.com/2025/11/designing-for-stress-emergency/",
+      "topicCategory": "design-ux"
+    },
+    {
+      "title": "The Jaguar rebrand &#8211; one year on",
+      "description": "One year ago today, I hit publish on a story about Jaguar&#8217;s rebrand. There seemed to be an interesting strategy behind it and the visuals were unusual, so I thought it might get some attention. That it did. To recap, on November 19 2024, Jaguar unveiled a new identity that ditched its growler logo and [&#8230;]What to read next: What is your earliest design memory? | &ldquo;We needed a complete reset&rdquo; &ndash; Jaguar MD defends controversial rebrand | Dusted&rsquo;s billion-dollar bra",
+      "timestamp": "11/19/2025, 9:56 AM",
+      "sources": [
+        {
+          "name": "Design Week",
+          "url": "https://www.designweek.co.uk/the-jaguar-rebrand-one-year-on/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.designweek.co.uk/the-jaguar-rebrand-one-year-on/",
+      "topicCategory": "branding"
+    },
+    {
+      "title": "Beyond The Hype: What AI Can Really Do For Product Design",
+      "description": "AI tools are improving fast, but it’s still not clear how they fit into a real product design workflow. Nikita Samutin walks through four core stages &mdash; from analytics and ideation to prototyping and visual design &mdash; to show where AI fits and where it doesn’t, illustrated with real-world examples.",
+      "timestamp": "08/18/2025, 1:00 PM",
+      "sources": [
+        {
+          "name": "Smashing Magazine",
+          "url": "https://smashingmagazine.com/2025/08/beyond-hype-what-ai-can-do-product-design/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://smashingmagazine.com/2025/08/beyond-hype-what-ai-can-do-product-design/",
+      "topicCategory": "ai-creative"
+    },
+    {
+      "title": "Just our type: The story of creating Figma Sans",
+      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
+      "timestamp": "09/05/2024, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/the-story-of-creating-figma-sans/",
+      "topicCategory": "branding"
     }
   ]
 }

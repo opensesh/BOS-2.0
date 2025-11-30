@@ -1,5 +1,62 @@
 {
   "type": "monthly-outlook",
-  "date": "2025-11-30T05:56:32.166Z",
-  "updates": []
+  "date": "2025-11-30T07:35:29.128Z",
+  "updates": [
+    {
+      "title": "INTL 2025 by Warriors Studio and NAM",
+      "description": "International Assembly began life as Graphic Design Festival Scotland back in 2014, founded by then-recent-ish grads Beth Wilson, James Gilchrist. The pair also helm Warriors Studio, which has been taking care of the festival&#8217;s creative direction, branding and design since its inaugural edition, too. GDFS became International Assembly, or INTL, in 2020; and when the new name and identity, also\nThe post INTL 2025 by Warriors Studio and NAM appeared first on BP&amp;O - Branding, Packaging an",
+      "timestamp": "11/27/2025, 9:15 AM",
+      "sources": [
+        {
+          "name": "BP&O",
+          "url": "https://bpando.org/2025/11/27/intl-2025-festival-identity-by-warriors-studio-and-nam/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://bpando.org/2025/11/27/intl-2025-festival-identity-by-warriors-studio-and-nam/",
+      "topicCategory": "branding"
+    },
+    {
+      "title": "Keeping creativity flowing when times are tough",
+      "description": "Building a culture where everyone feels safe and encouraged to contribute is no small task. We are always interested in the ways teams use Figma to do just that—brainstorm, ideate, team-build—and it’s one of the many reasons we launched FigJam. Here, Senior Illustrator Alek Mackie shares how he stays creative and productive.",
+      "timestamp": "07/15/2021, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/keeping-creativity-flowing/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/keeping-creativity-flowing/",
+      "topicCategory": "general-tech"
+    },
+    {
+      "title": "Behind the Plugins: Yitong Zhang, Product Designer @ Coinbase",
+      "description": "In today’s segment of “Behind the Plugins,” I’m sitting down with Yitong Zhang, Product Designer at Coinbase. Yitong joined Coinbase’s design team of 16 to help the digital currency platform create an open financial system for the world. Embarking on this big mission meant that Coinbase’s teams also had to open up their design process to be more inclusive of their partners. Find out what he is building with the Figma API and get to know the creator behind the plugin. This article is part 3 of a ",
+      "timestamp": "07/25/2019, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/behind-the-plugins-yitong-zhang-coinbase/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/behind-the-plugins-yitong-zhang-coinbase/",
+      "topicCategory": "general-tech"
+    },
+    {
+      "title": "Why observable AI is the missing SRE layer enterprises need for reliable LLMs",
+      "description": "As AI systems enter production, reliability and governance can’t depend on wishful thinking. Here’s how observability turns large language models (LLMs) into auditable, trustworthy enterprise systems.Why observability secures the future of enterprise AIThe enterprise race to deploy LLM systems mirrors the early days of cloud adoption. Executives love the promise; compliance demands accountability; engineers just want a paved road.Yet, beneath the excitement, most leaders admit they can’t trace h",
+      "timestamp": "11/29/2025, 7:00 PM",
+      "sources": [
+        {
+          "name": "VentureBeat AI",
+          "url": "https://venturebeat.com/ai/why-observable-ai-is-the-missing-sre-layer-enterprises-need-for-reliable"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://venturebeat.com/ai/why-observable-ai-is-the-missing-sre-layer-enterprises-need-for-reliable",
+      "topicCategory": "ai-creative"
+    }
+  ]
 }
