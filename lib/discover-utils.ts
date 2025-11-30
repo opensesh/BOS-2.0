@@ -1,5 +1,60 @@
 import { NewsCardData, IdeaCardData, Source, NewsData, IdeaData, ContentTier, PlatformTip } from '@/types';
 
+// ===========================================
+// Sonic Line Texture Utilities
+// ===========================================
+
+/**
+ * All available sonic line texture paths
+ * These are used as card backgrounds for IdeaCards
+ */
+export const SONIC_LINE_TEXTURES = [
+  '/assets/textures/GFX-DATABASE-SONIC-LINE-01.jpg',
+  '/assets/textures/GFX-DATABASE-SONIC-LINE-02.jpg',
+  '/assets/textures/GFX-DATABASE-SONIC-LINE-03.jpg',
+  '/assets/textures/GFX-DATABASE-SONIC-LINE-04.jpg',
+  '/assets/textures/GFX-DATABASE-SONIC-LINE-05.jpg',
+  '/assets/textures/GFX-DATABASE-SONIC-LINE-06.jpg',
+  '/assets/textures/GFX-DATABASE-SONIC-LINE-07.jpg',
+  '/assets/textures/GFX-DATABASE-SONIC-LINE-08.jpg',
+  '/assets/textures/GFX-DATABASE-SONIC-LINE-09.jpg',
+  '/assets/textures/GFX-DATABASE-SONIC-LINE-010.jpg',
+  '/assets/textures/GFX-DATABASE-SONIC-LINE-011.jpg',
+  '/assets/textures/GFX-DATABASE-SONIC-LINE-012.jpg',
+  '/assets/textures/GFX-DATABASE-SONIC-LINE-013.jpg',
+] as const;
+
+/**
+ * Get a sonic line texture path by index
+ * Wraps around if index exceeds array length
+ */
+export function getTextureByIndex(index: number): string {
+  const safeIndex = Math.abs(index) % SONIC_LINE_TEXTURES.length;
+  return SONIC_LINE_TEXTURES[safeIndex];
+}
+
+/**
+ * Get a random texture index (1-13)
+ * Used during content generation to assign textures
+ */
+export function getRandomTextureIndex(): number {
+  return Math.floor(Math.random() * SONIC_LINE_TEXTURES.length);
+}
+
+/**
+ * Get a deterministic texture index based on a string (for consistent assignment)
+ * Useful when you need the same item to always get the same texture
+ */
+export function getTextureIndexFromString(str: string): number {
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    const char = str.charCodeAt(i);
+    hash = ((hash << 5) - hash) + char;
+    hash = hash & hash; // Convert to 32bit integer
+  }
+  return Math.abs(hash) % SONIC_LINE_TEXTURES.length;
+}
+
 /**
  * Aggregate sources from multiple items, removing duplicates
  */
@@ -187,6 +242,9 @@ export function processIdeaData(data: IdeaData): IdeaCardData[] {
       url: source.url,
     }));
     
+    // Use pre-assigned texture index, or generate one deterministically from title
+    const textureIndex = idea.textureIndex ?? getTextureIndexFromString(idea.title);
+    
     return {
       id: `idea-${data.type}-${index}`,
       slug: generateSlug(idea.title),
@@ -203,6 +261,9 @@ export function processIdeaData(data: IdeaData): IdeaCardData[] {
       visualDirection: idea.visualDirection,
       exampleOutline: idea.exampleOutline,
       hashtags: idea.hashtags,
+      // Visual design fields
+      pexelsImageUrl: idea.pexelsImageUrl,
+      textureIndex,
     };
   });
 }

@@ -29,6 +29,9 @@ const DATA_DIR = path.join(process.cwd(), 'public/data');
 const NEWS_DIR = path.join(DATA_DIR, 'news');
 const IDEAS_DIR = path.join(DATA_DIR, 'weekly-ideas');
 
+// Number of sonic line textures available (1-13)
+const SONIC_LINE_TEXTURE_COUNT = 13;
+
 // Parse arguments
 const args = process.argv.slice(2);
 const isDryRun = args.includes('--dry-run');
@@ -245,6 +248,150 @@ async function generateNews(items: RSSItem[]): Promise<void> {
 }
 
 // ===========================================
+// Pexels Image Fetching
+// ===========================================
+
+interface PexelsPhoto {
+  id: number;
+  src: {
+    large: string;
+    medium: string;
+  };
+  photographer: string;
+  alt: string;
+}
+
+interface PexelsSearchResponse {
+  photos: PexelsPhoto[];
+}
+
+/**
+ * Extract keywords from a title for better Pexels search results
+ */
+function extractKeywords(title: string): string {
+  const stopWords = new Set([
+    'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',
+    'of', 'with', 'by', 'from', 'as', 'is', 'was', 'are', 'were', 'been',
+    'be', 'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could',
+    'should', 'may', 'might', 'must', 'can', 'this', 'that', 'these', 'those',
+    'it', 'its', "it's", 'how', 'what', 'when', 'where', 'why', 'which',
+    'your', 'our', 'their', 'my', 'his', 'her', 'we', 'you', 'they',
+    'reel', 'carousel', 'blog', 'post', 'video', 'article', 'content',
+  ]);
+
+  const words = title
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .split(/\s+/)
+    .filter(word => word.length > 2 && !stopWords.has(word));
+
+  return words.slice(0, 4).join(' ');
+}
+
+/**
+ * Fetch an image from Pexels API based on idea title
+ */
+async function fetchPexelsImage(title: string): Promise<string | undefined> {
+  const apiKey = process.env.PEXELS_API_KEY;
+  if (!apiKey) {
+    console.warn('    ⚠️ PEXELS_API_KEY not set, skipping image fetch');
+    return undefined;
+  }
+
+  try {
+    const query = extractKeywords(title) || 'creative design technology';
+    
+    const response = await fetch(
+      `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&per_page=1&orientation=landscape`,
+      {
+        headers: {
+          Authorization: apiKey,
+        },
+      }
+    );
+
+    if (!response.ok) {
+      console.warn(`    ⚠️ Pexels API error: ${response.status}`);
+      return undefined;
+    }
+
+    const data: PexelsSearchResponse = await response.json();
+    
+    if (data.photos.length > 0) {
+      return data.photos[0].src.large;
+    }
+
+    // Fallback search if no results
+    const fallbackResponse = await fetch(
+      `https://api.pexels.com/v1/search?query=technology abstract&per_page=1&orientation=landscape`,
+      {
+        headers: {
+          Authorization: apiKey,
+        },
+      }
+    );
+
+    if (fallbackResponse.ok) {
+      const fallbackData: PexelsSearchResponse = await fallbackResponse.json();
+      if (fallbackData.photos.length > 0) {
+        return fallbackData.photos[0].src.large;
+      }
+    }
+
+    return undefined;
+  } catch (error) {
+    console.warn('    ⚠️ Error fetching Pexels image:', error);
+    return undefined;
+  }
+}
+
+/**
+ * Get a random texture index (0-12, for 13 textures)
+ */
+function getRandomTextureIndex(): number {
+  return Math.floor(Math.random() * SONIC_LINE_TEXTURE_COUNT);
+}
+
+/**
+ * Enrich ideas with Pexels images and texture indices
+ */
+async function enrichIdeasWithVisuals(
+  ideas: InspirationItem[],
+  options: { delayMs?: number } = {}
+): Promise<InspirationItem[]> {
+  const { delayMs = 300 } = options;
+  const enrichedIdeas: InspirationItem[] = [];
+
+  console.log('    🖼️ Fetching Pexels images...');
+  
+  for (let i = 0; i < ideas.length; i++) {
+    const idea = ideas[i];
+    
+    // Fetch Pexels image
+    const pexelsImageUrl = await fetchPexelsImage(idea.title);
+    
+    // Assign random texture index
+    const textureIndex = getRandomTextureIndex();
+    
+    enrichedIdeas.push({
+      ...idea,
+      pexelsImageUrl,
+      textureIndex,
+    });
+
+    // Small delay to avoid rate limiting
+    if (i < ideas.length - 1) {
+      await new Promise(resolve => setTimeout(resolve, delayMs));
+    }
+  }
+
+  const successCount = enrichedIdeas.filter(i => i.pexelsImageUrl).length;
+  console.log(`    ✓ Fetched ${successCount}/${ideas.length} images`);
+  
+  return enrichedIdeas;
+}
+
+// ===========================================
 // Ideas Generation
 // ===========================================
 
@@ -283,11 +430,12 @@ async function generateIdeas(newsItems: NewsUpdateItem[]): Promise<void> {
     
     if (isDryRun) {
       console.log(`    Would generate ${newsTopics.length} ${category} ideas`);
-      ideas = newsTopics.map(topic => ({
+      ideas = newsTopics.map((topic, idx) => ({
         title: `[${category}] ${topic.title}`,
         description: topic.description,
         starred: false,
         sources: topic.sources,
+        textureIndex: idx % SONIC_LINE_TEXTURE_COUNT,
       }));
     } else {
       // Generate ideas with rich briefs
@@ -299,6 +447,9 @@ async function generateIdeas(newsItems: NewsUpdateItem[]): Promise<void> {
         },
       });
       console.log(`    ✓ Generated ${ideas.length} ideas`);
+      
+      // Enrich ideas with Pexels images and texture indices
+      ideas = await enrichIdeasWithVisuals(ideas);
     }
     
     // Create data object

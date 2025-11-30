@@ -38,6 +38,7 @@ env:
   # API Keys (stored in GitHub Secrets)
   ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
   PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+  PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
 
 permissions:
   contents: write

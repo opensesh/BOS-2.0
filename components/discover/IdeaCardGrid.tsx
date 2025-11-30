@@ -4,9 +4,9 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { ChevronRight, Video, FileText, Pen } from 'lucide-react';
+import { Video, FileText, Pen, Clock, Sparkles } from 'lucide-react';
 import { IdeaCardData } from '@/types';
-import { staggerContainerFast, fadeInUp } from '@/lib/motion';
+import { getTextureByIndex } from '@/lib/discover-utils';
 
 interface IdeaCardGridProps {
   items: IdeaCardData[];
@@ -29,12 +29,52 @@ const FALLBACK_IMAGES = {
   'blog': 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop',
 };
 
-// Hook for fetching OG image with fallback - uses fallback immediately if OG fails
-function useOgImage(item: IdeaCardData) {
-  const [imageUrl, setImageUrl] = useState<string>(FALLBACK_IMAGES[item.category] || FALLBACK_IMAGES['short-form']);
-  const [isLoading, setIsLoading] = useState(true);
+// Get category display info
+function getCategoryInfo(category: IdeaCardData['category']) {
+  switch (category) {
+    case 'short-form':
+      return { label: 'Short Form', icon: Video, formatLabel: 'Reel' };
+    case 'long-form':
+      return { label: 'Long Form', icon: FileText, formatLabel: 'Video' };
+    case 'blog':
+      return { label: 'Blog', icon: Pen, formatLabel: 'Article' };
+    default:
+      return { label: 'Content', icon: Video, formatLabel: 'Content' };
+  }
+}
+
+// Get format label based on title keywords
+function getFormatLabel(title: string, category: IdeaCardData['category']): string {
+  const lowerTitle = title.toLowerCase();
+  
+  if (lowerTitle.includes('carousel')) return 'Carousel';
+  if (lowerTitle.includes('reel')) return 'Reel';
+  if (lowerTitle.includes('story')) return 'Story';
+  if (lowerTitle.includes('thread')) return 'Thread';
+  if (lowerTitle.includes('video')) return 'Video';
+  if (lowerTitle.includes('tutorial')) return 'Tutorial';
+  if (lowerTitle.includes('guide')) return 'Guide';
+  if (lowerTitle.includes('listicle')) return 'Listicle';
+  
+  // Default based on category
+  return getCategoryInfo(category).formatLabel;
+}
+
+// Hook for fetching OG image with fallback - prefers pexelsImageUrl
+function useIdeaImage(item: IdeaCardData) {
+  const [imageUrl, setImageUrl] = useState<string>(
+    item.pexelsImageUrl || FALLBACK_IMAGES[item.category] || FALLBACK_IMAGES['short-form']
+  );
+  const [isLoading, setIsLoading] = useState(!item.pexelsImageUrl);
 
   useEffect(() => {
+    // If we have a pexels image, use it immediately
+    if (item.pexelsImageUrl) {
+      setImageUrl(item.pexelsImageUrl);
+      setIsLoading(false);
+      return;
+    }
+
     let isMounted = true;
     setIsLoading(true);
     
@@ -57,7 +97,7 @@ function useOgImage(item: IdeaCardData) {
               return;
             }
           }
-        } catch (error) {
+        } catch {
           // Continue to next source
         }
       }
@@ -73,116 +113,100 @@ function useOgImage(item: IdeaCardData) {
     return () => {
       isMounted = false;
     };
-  }, [item.sources, item.category]);
+  }, [item.pexelsImageUrl, item.sources, item.category]);
 
   return { imageUrl, isLoading };
 }
 
-// Card component (used for both featured and compact)
-function IdeaCard({ item, featured = false }: { item: IdeaCardData; featured?: boolean }) {
-  const { imageUrl, isLoading } = useOgImage(item);
+// Redesigned IdeaCard matching Figma design
+function IdeaCard({ item }: { item: IdeaCardData }) {
+  const { imageUrl, isLoading } = useIdeaImage(item);
   const slug = item.slug || generateSlug(item.title);
+  const categoryInfo = getCategoryInfo(item.category);
+  const formatLabel = getFormatLabel(item.title, item.category);
+  const textureUrl = getTextureByIndex(item.textureIndex ?? 0);
+  const CategoryIcon = categoryInfo.icon;
 
-  if (featured) {
-    return (
-      <Link
-        href={`/discover/ideas/${slug}?id=${item.id}`}
-        className="group flex flex-col rounded-xl overflow-hidden bg-os-surface-dark border border-os-border-dark/50 hover:border-brand-aperol/30 transition-all h-full"
-      >
-        {/* Image - more compact aspect ratio */}
-        <div className="relative aspect-[3/1] overflow-hidden bg-os-surface-dark flex-shrink-0">
-          {isLoading ? (
-            <div className="w-full h-full flex items-center justify-center">
-              <div className="w-5 h-5 border-2 border-os-text-secondary-dark border-t-transparent rounded-full animate-spin" />
-            </div>
-          ) : (
-            <Image
-              src={imageUrl}
-              alt={item.title}
-              fill
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
-              unoptimized
-            />
-          )}
-        </div>
+  // Clean title - remove format prefix if present
+  const cleanTitle = item.title
+    .replace(/^(Carousel|Reel|Story|Thread|Video|Tutorial|Guide|Listicle):\s*/i, '')
+    .trim();
 
-        {/* Content - tighter padding */}
-        <div className="p-2.5 flex-1 flex flex-col">
-          <h3 className="text-sm font-semibold text-brand-vanilla line-clamp-1 mb-0.5">
-            {item.title}
-          </h3>
-          
-          <p className="text-[11px] text-os-text-secondary-dark line-clamp-1 mb-1.5">
-            {item.description}
-          </p>
-
-          {/* Sources */}
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-1.5">
-              {item.sources.slice(0, 2).map((source, idx) => (
-                <span
-                  key={source.id || idx}
-                  className="inline-flex items-center px-1.5 py-0.5 rounded-full border border-os-border-dark/50 bg-os-bg-dark/60 text-[9px] text-os-text-secondary-dark"
-                >
-                  {source.name}
-                </span>
-              ))}
-              {item.sources.length > 2 && (
-                <span className="text-[9px] text-os-text-secondary-dark">
-                  +{item.sources.length - 2}
-                </span>
-              )}
-            </div>
-            <ChevronRight className="w-3.5 h-3.5 text-os-text-secondary-dark group-hover:text-brand-aperol transition-colors" />
-          </div>
-        </div>
-      </Link>
-    );
-  }
-
-  // Compact card - even smaller
   return (
     <Link
       href={`/discover/ideas/${slug}?id=${item.id}`}
-      className="group flex flex-col rounded-xl overflow-hidden bg-os-surface-dark border border-os-border-dark/50 hover:border-brand-aperol/30 transition-all h-full"
+      className="group relative flex flex-col rounded-2xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl h-full"
+      style={{ minHeight: '380px' }}
     >
-      {/* Image - very compact */}
-      <div className="relative aspect-[2.5/1] overflow-hidden bg-os-surface-dark flex-shrink-0">
-        {isLoading ? (
-          <div className="w-full h-full flex items-center justify-center">
-            <div className="w-4 h-4 border-2 border-os-text-secondary-dark border-t-transparent rounded-full animate-spin" />
-          </div>
-        ) : (
-          <Image
-            src={imageUrl}
-            alt={item.title}
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-            unoptimized
-          />
-        )}
+      {/* Background Texture */}
+      <div className="absolute inset-0">
+        <Image
+          src={textureUrl}
+          alt=""
+          fill
+          className="object-cover"
+          priority
+        />
+        {/* Subtle dark overlay for text legibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30" />
       </div>
 
-      {/* Content - tight padding */}
-      <div className="p-2 flex-1 flex flex-col">
-        <h4 className="text-xs font-medium text-brand-vanilla line-clamp-1 mb-0.5">
-          {item.title}
-        </h4>
-        <p className="text-[10px] text-os-text-secondary-dark line-clamp-1 mb-1">
-          {item.description}
-        </p>
-        <div className="flex items-center justify-between">
-          <span className="text-[9px] text-os-text-secondary-dark">
-            {item.sources.length} sources
+      {/* Card Content */}
+      <div className="relative z-10 flex flex-col h-full p-5 md:p-6">
+        {/* Thumbnail Image */}
+        <div className="mb-6">
+          <div 
+            className="relative w-28 h-28 md:w-32 md:h-32 rounded-2xl overflow-hidden border-[3px] border-brand-vanilla shadow-lg"
+          >
+            {isLoading ? (
+              <div className="w-full h-full flex items-center justify-center bg-os-charcoal/80">
+                <div className="w-5 h-5 border-2 border-brand-vanilla/30 border-t-brand-vanilla rounded-full animate-spin" />
+              </div>
+            ) : (
+              <Image
+                src={imageUrl}
+                alt={cleanTitle}
+                fill
+                className="object-cover"
+                unoptimized
+              />
+            )}
+          </div>
+        </div>
+
+        {/* Title */}
+        <h3 className="font-display font-bold text-brand-vanilla text-xl md:text-2xl leading-tight mb-3 line-clamp-2">
+          {cleanTitle}
+        </h3>
+
+        {/* Format Chip */}
+        <div className="mb-auto">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-brand-vanilla/40 text-brand-vanilla text-sm font-medium">
+            <Sparkles className="w-3.5 h-3.5" />
+            {formatLabel}
           </span>
-          <ChevronRight className="w-3 h-3 text-os-text-secondary-dark group-hover:text-brand-aperol transition-colors" />
+        </div>
+
+        {/* Footer Chips */}
+        <div className="flex items-center gap-3 mt-6">
+          {/* Sources Chip */}
+          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-os-charcoal/80 text-brand-vanilla text-sm font-medium">
+            <Clock className="w-3.5 h-3.5 opacity-70" />
+            {item.sources.length} {item.sources.length === 1 ? 'source' : 'sources'}
+          </span>
+
+          {/* Category Chip */}
+          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-os-charcoal/80 text-brand-vanilla text-sm font-medium">
+            <CategoryIcon className="w-3.5 h-3.5 opacity-70" />
+            {categoryInfo.label}
+          </span>
         </div>
       </div>
     </Link>
   );
 }
 
-// Section component for organized display - compact version
+// Section component for organized display
 function IdeaSection({ 
   title, 
   icon: Icon, 
@@ -194,61 +218,41 @@ function IdeaSection({
 }) {
   if (items.length === 0) return null;
 
-  const featuredItem = items[0];
-  const rightItem = items[1];
-  const bottomItems = items.slice(2, 5);
-
   return (
     <motion.div
-      variants={fadeInUp}
-      className="mb-6"
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+      className="mb-8"
     >
-      {/* Section Header - compact */}
-      <div className="flex items-center gap-2 mb-2.5">
-        <div className="w-6 h-6 rounded-md bg-brand-aperol/10 flex items-center justify-center">
-          <Icon className="w-3.5 h-3.5 text-brand-aperol" />
+      {/* Section Header */}
+      <div className="flex items-center gap-2.5 mb-4">
+        <div className="w-8 h-8 rounded-lg bg-brand-aperol/10 flex items-center justify-center">
+          <Icon className="w-4 h-4 text-brand-aperol" />
         </div>
-        <h2 className="text-sm font-semibold text-brand-vanilla">{title}</h2>
-        <span className="px-1.5 py-0.5 rounded-full bg-os-surface-dark text-[10px] text-os-text-secondary-dark">
+        <h2 className="text-base font-semibold text-brand-vanilla">{title}</h2>
+        <span className="px-2 py-0.5 rounded-full bg-os-surface-dark text-xs text-os-text-secondary-dark font-medium">
           {items.length}
         </span>
       </div>
 
-      {/* First Row: Featured (2 cols) + Right card (1 col) */}
-      <motion.div 
-        className="grid grid-cols-1 md:grid-cols-3 gap-2.5 mb-2.5"
-        variants={staggerContainerFast}
-        initial="hidden"
-        animate="visible"
-      >
-        {/* Featured card - spans 2 columns */}
-        <motion.div className="md:col-span-2" variants={fadeInUp}>
-          <IdeaCard item={featuredItem} featured />
-        </motion.div>
-
-        {/* Right card */}
-        {rightItem && (
-          <motion.div variants={fadeInUp}>
-            <IdeaCard item={rightItem} />
+      {/* Cards Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {items.map((item, idx) => (
+          <motion.div
+            key={item.id || idx}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ 
+              duration: 0.4, 
+              delay: idx * 0.08,
+              ease: [0.25, 0.46, 0.45, 0.94] 
+            }}
+          >
+            <IdeaCard item={item} />
           </motion.div>
-        )}
-      </motion.div>
-
-      {/* Second Row: 3 compact cards */}
-      {bottomItems.length > 0 && (
-        <motion.div 
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5"
-          variants={staggerContainerFast}
-          initial="hidden"
-          animate="visible"
-        >
-          {bottomItems.map((item, idx) => (
-            <motion.div key={item.id || idx} variants={fadeInUp}>
-              <IdeaCard item={item} />
-            </motion.div>
-          ))}
-        </motion.div>
-      )}
+        ))}
+      </div>
     </motion.div>
   );
 }
@@ -271,71 +275,34 @@ export function IdeaCardGrid({ items, activeFilter }: IdeaCardGridProps) {
       );
     }
 
-    const featuredItem = filteredItems[0];
-    const rightItem = filteredItems[1];
-    const bottomItems = filteredItems.slice(2, 5);
-    const remainingItems = filteredItems.slice(5);
-
     return (
       <motion.div
-        className="space-y-2.5"
-        variants={staggerContainerFast}
-        initial="hidden"
-        animate="visible"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.3 }}
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
       >
-        {/* First Row */}
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-2.5"
-          variants={staggerContainerFast}
-        >
-          <motion.div className="md:col-span-2" variants={fadeInUp}>
-            <IdeaCard item={featuredItem} featured />
-          </motion.div>
-          {rightItem && (
-            <motion.div variants={fadeInUp}>
-              <IdeaCard item={rightItem} />
-            </motion.div>
-          )}
-        </motion.div>
-
-        {/* Second Row */}
-        {bottomItems.length > 0 && (
-          <motion.div 
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5"
-            variants={staggerContainerFast}
+        {filteredItems.map((item, idx) => (
+          <motion.div
+            key={item.id || idx}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ 
+              duration: 0.4, 
+              delay: idx * 0.06,
+              ease: [0.25, 0.46, 0.45, 0.94] 
+            }}
           >
-            {bottomItems.map((item, idx) => (
-              <motion.div key={item.id || idx} variants={fadeInUp}>
-                <IdeaCard item={item} />
-              </motion.div>
-            ))}
+            <IdeaCard item={item} />
           </motion.div>
-        )}
-
-        {/* Remaining items */}
-        {remainingItems.length > 0 && (
-          <motion.div 
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 mt-3"
-            variants={staggerContainerFast}
-          >
-            {remainingItems.map((item, idx) => (
-              <motion.div key={item.id || idx} variants={fadeInUp}>
-                <IdeaCard item={item} />
-              </motion.div>
-            ))}
-          </motion.div>
-        )}
+        ))}
       </motion.div>
     );
   }
 
   // Default: Show organized by sections
   return (
-    <motion.div
-      variants={staggerContainerFast}
-      initial="hidden"
-      animate="visible"
-    >
+    <div>
       <IdeaSection
         title="Short-Form"
         icon={Video}
@@ -353,6 +320,6 @@ export function IdeaCardGrid({ items, activeFilter }: IdeaCardGridProps) {
         icon={Pen}
         items={blogItems}
       />
-    </motion.div>
+    </div>
   );
 }

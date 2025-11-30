@@ -208,6 +208,10 @@ export interface IdeaCardData {
   visualDirection?: VisualDirection;   // Visual/aesthetic direction with rating
   exampleOutline?: string[];           // Section-by-section content outline
   hashtags?: string;                   // Copy-paste ready hashtag string
+  
+  // Visual design fields (pre-generated during content creation)
+  pexelsImageUrl?: string;             // Pexels image URL for card thumbnail
+  textureIndex?: number;               // Index 1-13 for sonic line background texture
 }
 
 export interface WeatherData {
@@ -286,6 +290,10 @@ export interface IdeaItem {
   };
   exampleOutline?: string[];
   hashtags?: string;
+  
+  // Visual design fields (pre-generated during content creation)
+  pexelsImageUrl?: string;             // Pexels image URL for card thumbnail
+  textureIndex?: number;               // Index 1-13 for sonic line background texture
 }
 
 export interface IdeaData {

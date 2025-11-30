@@ -29,6 +29,7 @@ import {
 import { Sidebar } from '@/components/Sidebar';
 import { StickyArticleHeader } from '@/components/discover/article/StickyArticleHeader';
 import { IdeaCardData, PlatformTip } from '@/types';
+import { getTextureByIndex, getTextureIndexFromString } from '@/lib/discover-utils';
 
 // Content-type specific generation options
 interface GenerationOption {
@@ -159,6 +160,9 @@ function processIdeaData(
     visualDirection?: { rating: number; description: string };
     exampleOutline?: string[];
     hashtags?: string;
+    // Visual design fields
+    pexelsImageUrl?: string;
+    textureIndex?: number;
   }> },
   category: string
 ): IdeaCardData[] {
@@ -181,6 +185,9 @@ function processIdeaData(
     visualDirection: idea.visualDirection,
     exampleOutline: idea.exampleOutline,
     hashtags: idea.hashtags,
+    // Visual design fields
+    pexelsImageUrl: idea.pexelsImageUrl,
+    textureIndex: idea.textureIndex ?? getTextureIndexFromString(idea.title),
   }));
 }
 
@@ -331,9 +338,15 @@ export default function IdeaDetailPage() {
     }
   }, [id, slug]);
 
-  // Fetch OG image with fallback
+  // Fetch OG image with fallback - prefer pexelsImageUrl if available
   useEffect(() => {
     if (item) {
+      // Use pexelsImageUrl if available, otherwise use fallback
+      if (item.pexelsImageUrl) {
+        setOgImage(item.pexelsImageUrl);
+        return;
+      }
+      
       setOgImage(FALLBACK_IMAGES[item.category] || FALLBACK_IMAGES['short-form']);
       
       if (item.sources && item.sources.length > 0) {
@@ -348,7 +361,7 @@ export default function IdeaDetailPage() {
                   return;
                 }
               }
-            } catch (error) {
+            } catch {
               // Continue to next source
             }
           }
@@ -466,45 +479,81 @@ export default function IdeaDetailPage() {
         />
 
         <div className="flex-1 overflow-y-auto custom-scrollbar">
-          <div className="w-full max-w-5xl mx-auto px-6 py-8 md:px-12 md:py-12">
+          {/* Textured Hero Header */}
+          <div className="relative w-full overflow-hidden">
+            {/* Texture Background */}
+            <div className="absolute inset-0">
+              <Image
+                src={getTextureByIndex(item.textureIndex ?? 0)}
+                alt=""
+                fill
+                className="object-cover"
+                priority
+              />
+              {/* Gradient overlay for text legibility */}
+              <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40" />
+            </div>
+
+            {/* Hero Content */}
+            <div className="relative z-10 w-full max-w-5xl mx-auto px-6 py-8 md:px-12 md:py-12">
+              <div className="flex flex-col md:flex-row gap-6 md:gap-10 items-start">
+                {/* Left: Text Content */}
+                <div className="flex-1 min-w-0">
+                  {/* Category and sources count */}
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-os-charcoal/80 text-brand-vanilla text-sm font-medium">
+                      <CategoryIcon className="w-4 h-4" />
+                      {getCategoryLabel()}
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-os-charcoal/80 text-brand-vanilla text-sm">
+                      <Clock className="w-3.5 h-3.5 opacity-70" />
+                      {item.sources.length} sources
+                    </span>
+                  </div>
+
+                  {/* Title */}
+                  <h1 
+                    ref={titleRef}
+                    className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-brand-vanilla mb-4 drop-shadow-md"
+                  >
+                    {item.title}
+                  </h1>
+
+                  {/* Brief Description Preview */}
+                  <p className="text-sm md:text-base text-brand-vanilla/80 line-clamp-2 max-w-2xl">
+                    {item.description}
+                  </p>
+                </div>
+
+                {/* Right: Thumbnail Image */}
+                <div className="shrink-0">
+                  <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden border-[3px] border-brand-vanilla shadow-xl">
+                    {ogImage ? (
+                      <Image
+                        src={ogImage}
+                        alt={item.title}
+                        fill
+                        className="object-cover"
+                        unoptimized
+                        priority
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center bg-os-charcoal/80">
+                        <div className="w-6 h-6 border-2 border-brand-vanilla/30 border-t-brand-vanilla rounded-full animate-spin" />
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Article Content */}
+          <div className="w-full max-w-5xl mx-auto px-6 py-8 md:px-12 md:py-10">
             <div className="flex flex-col lg:flex-row gap-10">
               {/* Main Content */}
               <div className="flex-1 min-w-0">
-                {/* Category and sources count */}
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-os-surface-dark text-os-text-secondary-dark text-sm">
-                    <CategoryIcon className="w-4 h-4" />
-                    {getCategoryLabel()}
-                  </span>
-                  <span className="text-sm text-os-text-secondary-dark flex items-center gap-1.5">
-                    <Clock className="w-3.5 h-3.5" />
-                    {item.sources.length} sources
-                  </span>
-                </div>
-
-                {/* Title */}
-                <h1 
-                  ref={titleRef}
-                  className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-brand-vanilla mb-6"
-                >
-                  {item.title}
-                </h1>
-
-                {/* Hero Image */}
-                <div className="relative w-full aspect-[2/1] rounded-xl overflow-hidden bg-os-surface-dark mb-6">
-                  {ogImage && (
-                    <Image
-                      src={ogImage}
-                      alt={item.title}
-                      fill
-                      className="object-cover"
-                      unoptimized
-                      priority
-                    />
-                  )}
-                </div>
-
-                {/* Original Description */}
+                {/* Full Description */}
                 <p className="text-[15px] leading-[1.75] text-os-text-primary-dark/90 mb-8">
                   {item.description}
                 </p>
