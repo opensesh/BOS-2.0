@@ -18,6 +18,7 @@ export interface RSSSource {
 
 /**
  * Design & UX/UI focused sources
+ * Note: URLs verified November 2025
  */
 const DESIGN_UX_SOURCES: RSSSource[] = [
   {
@@ -33,13 +34,6 @@ const DESIGN_UX_SOURCES: RSSSource[] = [
     category: 'design-ux',
     priority: 1,
     keywords: ['design', 'creative', 'graphic design', 'illustration'],
-  },
-  {
-    name: "It's Nice That",
-    url: 'https://www.itsnicethat.com/rss/all',
-    category: 'design-ux',
-    priority: 1,
-    keywords: ['design', 'art', 'illustration', 'photography'],
   },
   {
     name: 'Abduzeedo',
@@ -59,70 +53,58 @@ const DESIGN_UX_SOURCES: RSSSource[] = [
     name: 'Smashing Magazine',
     url: 'https://www.smashingmagazine.com/feed/',
     category: 'design-ux',
-    priority: 2,
+    priority: 1,
     keywords: ['web design', 'ux', 'css', 'accessibility'],
   },
   {
-    name: 'A List Apart',
-    url: 'https://alistapart.com/main/feed/',
+    name: 'CSS-Tricks',
+    url: 'https://css-tricks.com/feed/',
     category: 'design-ux',
     priority: 2,
-    keywords: ['web design', 'development', 'accessibility'],
+    keywords: ['css', 'web design', 'frontend', 'development'],
+  },
+  {
+    name: 'Sidebar',
+    url: 'https://sidebar.io/feed.xml',
+    category: 'design-ux',
+    priority: 1,
+    keywords: ['design', 'links', 'curated', 'ux'],
   },
 ];
 
 /**
  * Branding & Strategy focused sources
+ * Note: URLs verified November 2025
  */
 const BRANDING_SOURCES: RSSSource[] = [
-  {
-    name: 'Brand New (Under Consideration)',
-    url: 'https://www.underconsideration.com/brandnew/feed',
-    category: 'branding',
-    priority: 1,
-    keywords: ['branding', 'logo', 'identity', 'rebrand'],
-  },
-  {
-    name: 'The Dieline',
-    url: 'https://thedieline.com/blog?format=rss',
-    category: 'branding',
-    priority: 1,
-    keywords: ['packaging', 'branding', 'design'],
-  },
   {
     name: 'Logo Design Love',
     url: 'https://www.logodesignlove.com/feed',
     category: 'branding',
-    priority: 2,
+    priority: 1,
     keywords: ['logo', 'identity', 'branding'],
   },
   {
     name: 'BP&O',
     url: 'https://bpando.org/feed/',
     category: 'branding',
-    priority: 2,
+    priority: 1,
     keywords: ['branding', 'packaging', 'opinion'],
+  },
+  {
+    name: 'Identity Designed',
+    url: 'https://identitydesigned.com/feed/',
+    category: 'branding',
+    priority: 1,
+    keywords: ['branding', 'identity', 'logo', 'visual identity'],
   },
 ];
 
 /**
  * AI for Creatives sources
+ * Note: URLs verified November 2025
  */
 const AI_CREATIVE_SOURCES: RSSSource[] = [
-  {
-    name: 'OpenAI Blog',
-    url: 'https://openai.com/blog/rss/',
-    category: 'ai-creative',
-    priority: 1,
-    keywords: ['ai', 'gpt', 'dall-e', 'sora', 'chatgpt'],
-  },
-  {
-    name: 'Anthropic News',
-    url: 'https://www.anthropic.com/news/rss',
-    category: 'ai-creative',
-    priority: 1,
-    keywords: ['ai', 'claude', 'anthropic'],
-  },
   {
     name: 'Google AI Blog',
     url: 'https://blog.google/technology/ai/rss/',
@@ -138,59 +120,60 @@ const AI_CREATIVE_SOURCES: RSSSource[] = [
     keywords: ['ai', 'machine learning', 'startups'],
   },
   {
-    name: 'The Verge AI',
-    url: 'https://www.theverge.com/rss/ai-artificial-intelligence/index.xml',
-    category: 'ai-creative',
-    priority: 2,
-    keywords: ['ai', 'technology'],
-  },
-  {
-    name: 'Ars Technica AI',
+    name: 'Ars Technica',
     url: 'https://feeds.arstechnica.com/arstechnica/features/',
     category: 'ai-creative',
-    priority: 2,
+    priority: 1,
     keywords: ['ai', 'technology', 'science'],
+  },
+  {
+    name: 'VentureBeat AI',
+    url: 'https://venturebeat.com/category/ai/feed/',
+    category: 'ai-creative',
+    priority: 1,
+    keywords: ['ai', 'enterprise', 'machine learning'],
+  },
+  {
+    name: 'MIT Technology Review AI',
+    url: 'https://www.technologyreview.com/topic/artificial-intelligence/feed',
+    category: 'ai-creative',
+    priority: 2,
+    keywords: ['ai', 'research', 'technology'],
   },
 ];
 
 /**
  * Social Media Trends sources
+ * Note: URLs verified November 2025
  */
 const SOCIAL_TRENDS_SOURCES: RSSSource[] = [
-  {
-    name: 'Social Media Today',
-    url: 'https://www.socialmediatoday.com/feed/',
-    category: 'social-trends',
-    priority: 1,
-    keywords: ['social media', 'marketing', 'trends'],
-  },
-  {
-    name: 'Later Blog',
-    url: 'https://later.com/blog/feed/',
-    category: 'social-trends',
-    priority: 1,
-    keywords: ['instagram', 'social media', 'marketing'],
-  },
   {
     name: 'Buffer Resources',
     url: 'https://buffer.com/resources/feed/',
     category: 'social-trends',
-    priority: 2,
+    priority: 1,
     keywords: ['social media', 'marketing', 'content'],
   },
   {
     name: 'Hootsuite Blog',
     url: 'https://blog.hootsuite.com/feed/',
     category: 'social-trends',
-    priority: 2,
+    priority: 1,
     keywords: ['social media', 'marketing', 'analytics'],
   },
   {
     name: 'Sprout Social Insights',
     url: 'https://sproutsocial.com/insights/feed/',
     category: 'social-trends',
-    priority: 2,
+    priority: 1,
     keywords: ['social media', 'marketing', 'strategy'],
+  },
+  {
+    name: 'Social Media Examiner',
+    url: 'https://www.socialmediaexaminer.com/feed/',
+    category: 'social-trends',
+    priority: 1,
+    keywords: ['social media', 'marketing', 'facebook', 'instagram'],
   },
 ];
 
@@ -223,35 +206,36 @@ const GENERAL_TECH_SOURCES: RSSSource[] = [
 
 /**
  * Startup/Agency Business sources
+ * Note: URLs verified November 2025
  */
 const STARTUP_BUSINESS_SOURCES: RSSSource[] = [
-  {
-    name: 'a]6z',
-    url: 'https://a16z.com/feed/',
-    category: 'startup-business',
-    priority: 1,
-    keywords: ['startup', 'venture capital', 'business'],
-  },
-  {
-    name: 'First Round Review',
-    url: 'https://review.firstround.com/feed.xml',
-    category: 'startup-business',
-    priority: 1,
-    keywords: ['startup', 'management', 'growth'],
-  },
   {
     name: 'Agency Post (HubSpot)',
     url: 'https://blog.hubspot.com/agency/rss.xml',
     category: 'startup-business',
-    priority: 2,
+    priority: 1,
     keywords: ['agency', 'marketing', 'business'],
   },
   {
-    name: 'Creative Mornings',
-    url: 'https://creativemornings.com/talks/feed',
+    name: 'Paul Graham Essays',
+    url: 'http://www.aaronsw.com/2002/feeds/pgessays.rss',
+    category: 'startup-business',
+    priority: 1,
+    keywords: ['startup', 'essays', 'yc', 'founder'],
+  },
+  {
+    name: 'Seth Godin',
+    url: 'https://seths.blog/feed/',
     category: 'startup-business',
     priority: 2,
-    keywords: ['creative', 'talks', 'inspiration'],
+    keywords: ['marketing', 'business', 'strategy'],
+  },
+  {
+    name: 'Stratechery',
+    url: 'https://stratechery.com/feed/',
+    category: 'startup-business',
+    priority: 2,
+    keywords: ['tech', 'strategy', 'business', 'analysis'],
   },
 ];
 

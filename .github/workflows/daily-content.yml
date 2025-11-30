@@ -39,6 +39,9 @@ env:
   ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
   PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
 
+permissions:
+  contents: write
+
 jobs:
   generate-content:
     runs-on: ubuntu-latest
@@ -50,8 +53,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          # Need write access to push changes
+          # Use default token with write permissions
           token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
       
       - name: Setup Node.js
         uses: actions/setup-node@v4
