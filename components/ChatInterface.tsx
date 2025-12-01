@@ -25,7 +25,6 @@ import { useVoiceRecognition } from '@/hooks/useVoiceRecognition';
 import { useAttachments, Attachment } from '@/hooks/useAttachments';
 import { ModelId } from '@/lib/ai/providers';
 import { useChatContext } from '@/lib/chat-context';
-import { AttachmentPreview, DragOverlay } from './chat/AttachmentPreview';
 import { fadeIn, fadeInUp, staggerContainer } from '@/lib/motion';
 import {
   FollowUpInput,
@@ -33,8 +32,10 @@ import {
   ImageResult,
   ChatHeader,
   ChatContent,
+  AttachmentPreview,
+  DragOverlay,
+  type FollowUpAttachment,
 } from './chat';
-import type { FollowUpAttachment } from './chat/FollowUpInput';
 import { ArticleReferenceCard, IdeaReferenceCard } from './discover/article/AskFollowUp';
 
 // Article reference context from discover page
@@ -344,22 +345,23 @@ export function ChatInterface() {
     setShowSuggestions(false);
 
     try {
-      // Build message with attachments
-      const messageContent: { text?: string; files?: { type: 'image'; data: string; mimeType: string }[] } = {};
-
-      if (userMessage) {
-        messageContent.text = userMessage;
-      }
-
+      // Build message with attachments using FileUIPart format for AI SDK compatibility
       if (currentAttachments.length > 0) {
-        messageContent.files = currentAttachments.map(att => ({
-          type: 'image' as const,
+        // Convert attachments to FileUIPart format
+        const files = currentAttachments.map(att => ({
+          type: 'file' as const,
           data: att.preview, // Base64 data URL
           mimeType: att.file.type,
         }));
-      }
 
-      await sendMessage(messageContent, { body: { model: selectedModel } });
+        // Use type assertion to satisfy AI SDK types
+        await sendMessage(
+          { text: userMessage || 'What do you see in this image?', files: files as unknown as FileList },
+          { body: { model: selectedModel } }
+        );
+      } else {
+        await sendMessage({ text: userMessage }, { body: { model: selectedModel } });
+      }
     } catch (err) {
       console.error('Failed to send message:', err);
       setSubmitError(err instanceof Error ? err.message : 'Failed to send message');
@@ -373,18 +375,23 @@ export function ChatInterface() {
     if (isLoading) return;
 
     try {
-      // Build message with attachments
-      const messageContent: { text?: string; files?: { type: 'image'; data: string; mimeType: string }[] } = {};
-
-      if (query.trim()) {
-        messageContent.text = query.trim();
-      }
-
+      // Build message with attachments using FileUIPart format for AI SDK compatibility
       if (followUpAttachments && followUpAttachments.length > 0) {
-        messageContent.files = followUpAttachments;
-      }
+        // Convert attachments to FileUIPart format
+        const files = followUpAttachments.map(att => ({
+          type: 'file' as const,
+          data: att.data, // Base64 data URL
+          mimeType: att.mimeType,
+        }));
 
-      await sendMessage(messageContent, { body: { model: selectedModel } });
+        // Use type assertion to satisfy AI SDK types
+        await sendMessage(
+          { text: query.trim() || 'What do you see in this image?', files: files as unknown as FileList },
+          { body: { model: selectedModel } }
+        );
+      } else {
+        await sendMessage({ text: query.trim() }, { body: { model: selectedModel } });
+      }
     } catch (err) {
       console.error('Failed to send follow-up:', err);
       setSubmitError(err instanceof Error ? err.message : 'Failed to send message');
@@ -722,7 +729,6 @@ export function ChatInterface() {
                             onClick={(e) => {
                               e.stopPropagation();
                               setShowConnectorDropdown(!showConnectorDropdown);
-                              setShowPaperclipDropdown(false);
                             }}
                             className={`p-2 rounded-lg transition-all ${
                               showConnectorDropdown

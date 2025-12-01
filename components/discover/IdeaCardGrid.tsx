@@ -56,7 +56,6 @@ function getFormatLabel(title: string, category: IdeaCardData['category']): stri
   if (lowerTitle.includes('guide')) return 'Guide';
   if (lowerTitle.includes('listicle')) return 'Listicle';
   
-  // Default based on category
   const defaults: Record<string, string> = {
     'short-form': 'Reel',
     'long-form': 'Video',
@@ -65,7 +64,7 @@ function getFormatLabel(title: string, category: IdeaCardData['category']): stri
   return defaults[category] || 'Content';
 }
 
-// Hook for fetching OG image with fallback - prefers pexelsImageUrl
+// Hook for fetching OG image with fallback
 function useIdeaImage(item: IdeaCardData) {
   const [imageUrl, setImageUrl] = useState<string>(
     item.pexelsImageUrl || FALLBACK_IMAGES[item.category] || FALLBACK_IMAGES['short-form']
@@ -73,7 +72,6 @@ function useIdeaImage(item: IdeaCardData) {
   const [isLoading, setIsLoading] = useState(!item.pexelsImageUrl);
 
   useEffect(() => {
-    // If we have a pexels image, use it immediately
     if (item.pexelsImageUrl) {
       setImageUrl(item.pexelsImageUrl);
       setIsLoading(false);
@@ -90,7 +88,6 @@ function useIdeaImage(item: IdeaCardData) {
         return;
       }
 
-      // Try each source URL until we get an image
       for (let i = 0; i < Math.min(item.sources.length, 3); i++) {
         try {
           const response = await fetch(`/api/og-image?url=${encodeURIComponent(item.sources[i].url)}`);
@@ -107,7 +104,6 @@ function useIdeaImage(item: IdeaCardData) {
         }
       }
 
-      // Keep fallback if no OG image found
       if (isMounted) {
         setIsLoading(false);
       }
@@ -123,7 +119,7 @@ function useIdeaImage(item: IdeaCardData) {
   return { imageUrl, isLoading };
 }
 
-// Redesigned IdeaCard - Hero image top, texture bottom
+// IdeaCard Component
 function IdeaCard({ item }: { item: IdeaCardData }) {
   const { imageUrl, isLoading } = useIdeaImage(item);
   const slug = item.slug || generateSlug(item.title);
@@ -140,27 +136,31 @@ function IdeaCard({ item }: { item: IdeaCardData }) {
   return (
     <Link
       href={`/discover/ideas/${slug}?id=${item.id}`}
-      className="group relative flex flex-col rounded-2xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl h-full min-h-[320px] sm:min-h-[360px]"
+      className="group relative flex flex-col rounded-2xl overflow-hidden h-full
+                 transition-all duration-300 ease-out
+                 hover:scale-[1.015] hover:shadow-xl
+                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-aperol focus-visible:ring-offset-2 focus-visible:ring-offset-os-bg-dark"
     >
-      {/* TOP: Hero Image */}
-      <div className="relative w-full aspect-[2.2/1] sm:aspect-[2.7/1] overflow-hidden">
+      {/* Hero Image */}
+      <div className="relative w-full aspect-[2.4/1] overflow-hidden bg-os-charcoal">
         {isLoading ? (
-          <div className="w-full h-full flex items-center justify-center bg-os-charcoal">
-            <div className="w-5 h-5 border-2 border-brand-vanilla/30 border-t-brand-vanilla rounded-full animate-spin" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-6 h-6 border-2 border-brand-vanilla/20 border-t-brand-vanilla rounded-full animate-spin" />
           </div>
         ) : (
           <Image
             src={imageUrl}
-            alt={cleanTitle}
+            alt=""
             fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
             unoptimized
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
         )}
       </div>
 
-      {/* BOTTOM: Texture background with content - 2/3 of card */}
-      <div className="relative flex-1 min-h-[200px] sm:min-h-[220px]">
+      {/* Content Section with Texture */}
+      <div className="relative flex-1 flex flex-col">
         {/* Texture Background */}
         <div className="absolute inset-0">
           <Image
@@ -168,35 +168,34 @@ function IdeaCard({ item }: { item: IdeaCardData }) {
             alt=""
             fill
             className="object-cover"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
         </div>
 
         {/* Content */}
-        <div className="relative z-10 flex flex-col h-full p-4 sm:p-5">
-          {/* Format Label - Small, subtle */}
-          <div className="mb-2 sm:mb-3">
-            <span className="inline-flex items-center gap-1.5 text-brand-vanilla/90 text-[11px] sm:text-xs font-medium tracking-wide">
-              <Sparkles className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
-              <span className="underline underline-offset-2 decoration-brand-vanilla/40">{formatLabel}</span>
+        <div className="relative z-10 flex flex-col flex-1 p-4 sm:p-5">
+          {/* Format Label */}
+          <span className="inline-flex items-center gap-1.5 text-brand-vanilla text-xs font-medium mb-3">
+            <Sparkles className="w-3 h-3 opacity-80" />
+            <span className="underline underline-offset-4 decoration-1 decoration-brand-vanilla/50">
+              {formatLabel}
             </span>
-          </div>
+          </span>
 
-          {/* Title - Large, prominent */}
-          <h3 className="font-display font-bold text-brand-vanilla text-lg sm:text-xl lg:text-[22px] leading-tight line-clamp-2 mb-auto">
+          {/* Title */}
+          <h3 className="font-display font-bold text-brand-vanilla text-[17px] sm:text-lg leading-snug line-clamp-2 flex-1">
             {cleanTitle}
           </h3>
 
-          {/* Footer Chips - Small, secondary */}
-          <div className="flex items-center justify-between mt-4 sm:mt-5 gap-2">
-            {/* Sources Chip */}
-            <span className="inline-flex items-center gap-1 px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-full bg-os-charcoal/90 text-brand-vanilla/90 text-[10px] sm:text-[11px] font-medium">
-              <Clock className="w-2.5 h-2.5 sm:w-3 sm:h-3 opacity-70" />
+          {/* Footer Chips */}
+          <div className="flex items-center gap-2 mt-4 pt-3 border-t border-white/10">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-os-charcoal/95 text-brand-vanilla text-[11px] font-medium">
+              <Clock className="w-3 h-3 opacity-60" />
               {item.sources.length} sources
             </span>
 
-            {/* Category Chip */}
-            <span className="inline-flex items-center gap-1 px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-full bg-os-charcoal/90 text-brand-vanilla/90 text-[10px] sm:text-[11px] font-medium">
-              <CategoryIcon className="w-2.5 h-2.5 sm:w-3 sm:h-3 opacity-70" />
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-os-charcoal/95 text-brand-vanilla text-[11px] font-medium ml-auto">
+              <CategoryIcon className="w-3 h-3 opacity-60" />
               {categoryInfo.label}
             </span>
           </div>
@@ -207,15 +206,14 @@ function IdeaCard({ item }: { item: IdeaCardData }) {
 }
 
 export function IdeaCardGrid({ items, activeFilter }: IdeaCardGridProps) {
-  // When showing all items or filtered items, use a flat grid layout (no section headers)
   const displayItems = activeFilter === 'all' 
     ? items 
     : items.filter(item => item.category === activeFilter);
   
   if (displayItems.length === 0) {
     return (
-      <div className="text-center py-12 text-os-text-secondary-dark">
-        No ideas found.
+      <div className="text-center py-16 text-os-text-secondary-dark">
+        <p className="text-sm">No ideas found.</p>
       </div>
     );
   }
@@ -225,16 +223,16 @@ export function IdeaCardGrid({ items, activeFilter }: IdeaCardGridProps) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.3 }}
-      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
+      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5"
     >
       {displayItems.map((item, idx) => (
         <motion.div
           key={item.id || idx}
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ 
-            duration: 0.4, 
-            delay: idx * 0.05,
+            duration: 0.35, 
+            delay: Math.min(idx * 0.04, 0.3),
             ease: [0.25, 0.46, 0.45, 0.94] 
           }}
         >

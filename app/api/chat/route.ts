@@ -5,6 +5,66 @@ import { buildBrandSystemPrompt, shouldIncludeFullDocs, BRAND_SOURCES } from '@/
 
 export const maxDuration = 60; // Allow streaming responses up to 60 seconds
 
+// Interface for file attachments from client
+interface FileAttachment {
+  type: 'image';
+  data: string; // Base64 data URL
+  mimeType: string;
+}
+
+// Message type from client (flexible to handle various formats)
+interface ClientMessage {
+  id?: string;
+  role: 'user' | 'assistant' | 'system';
+  content?: string;
+  parts?: Array<{ type: string; text?: string }>;
+  files?: FileAttachment[];
+  experimental_attachments?: FileAttachment[];
+}
+
+// Process messages to handle image attachments
+function processMessagesWithImages(messages: ClientMessage[]): ClientMessage[] {
+  return messages.map(msg => {
+    // Check if this message has file attachments
+    const imageFiles = msg.experimental_attachments || msg.files;
+
+    if (msg.role === 'user' && imageFiles && imageFiles.length > 0) {
+      // Convert to multimodal message format with parts
+      const parts: Array<{ type: 'text'; text: string } | { type: 'image'; image: string }> = [];
+
+      // Add text content if present
+      const textContent = typeof msg.content === 'string'
+        ? msg.content
+        : msg.parts
+          ? msg.parts.filter(p => p.type === 'text').map(p => p.text || '').join('\n')
+          : '';
+
+      if (textContent) {
+        parts.push({ type: 'text', text: textContent });
+      }
+
+      // Add image parts
+      for (const file of imageFiles) {
+        if (file.type === 'image' && file.data) {
+          parts.push({ type: 'image', image: file.data });
+        }
+      }
+
+      // Return message with parts array as content for multimodal
+      if (parts.length > 0) {
+        return {
+          ...msg,
+          content: parts as unknown as string, // Type cast for compatibility
+          files: undefined, // Remove processed files
+          experimental_attachments: undefined,
+        };
+      }
+    }
+
+    return msg;
+  });
+}
+
 // Check if required API key is available for a model
 function hasRequiredApiKey(modelId: ModelId): { valid: boolean; error?: string } {
   const model = models[modelId];
@@ -46,8 +106,11 @@ export async function POST(req: Request) {
       });
     }
 
+    // Process messages to handle image attachments
+    const processedMessages = processMessagesWithImages(messages as ClientMessage[]);
+
     // Ensure messages alternate properly (filter out consecutive messages of same role)
-    const validatedMessages = messages.reduce((acc: typeof messages, msg, idx) => {
+    const validatedMessages = processedMessages.reduce((acc: ClientMessage[], msg, idx) => {
       if (idx === 0) {
         acc.push(msg);
       } else {
@@ -84,19 +147,19 @@ export async function POST(req: Request) {
     const modelInstance = getModelInstance(selectedModel);
 
     // Convert UI messages to model messages (AI SDK 5.x requirement)
-    const modelMessages = convertToModelMessages(validatedMessages);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const modelMessages = convertToModelMessages(validatedMessages as any);
 
     // Build brand-aware system prompt
     const systemPrompt = buildBrandSystemPrompt({
       includeFullDocs: shouldIncludeFullDocs(messages),
     });
 
-    // Stream the response with generous max tokens
+    // Stream the response
     const result = streamText({
       model: modelInstance,
       messages: modelMessages,
       system: systemPrompt,
-      maxTokens: 4096, // Allow longer responses
     });
 
     // Return streaming response in format useChat expects (AI SDK 5.x)
