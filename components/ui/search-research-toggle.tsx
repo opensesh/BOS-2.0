@@ -37,6 +37,9 @@ export function SearchResearchToggle({ onQueryClick, onModeChange, showSuggestio
   const containerRef = useRef<HTMLDivElement>(null);
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
+  // Don't show tooltip when suggestions are visible
+  const shouldShowTooltip = hoveredButton && !showSuggestionsState;
+
   const searchSuggestions = mockSearchSuggestions;
   const researchSuggestions = mockResearchSuggestions;
 
@@ -203,8 +206,8 @@ export function SearchResearchToggle({ onQueryClick, onModeChange, showSuggestio
           </button>
         </div>
 
-        {/* Hover Tooltip - Fixed solid background and proper positioning */}
-        {hoveredButton && (
+        {/* Hover Tooltip - Only show when suggestions are NOT visible */}
+        {shouldShowTooltip && (
           <div
             onMouseEnter={handleTooltipMouseEnter}
             onMouseLeave={handleTooltipMouseLeave}

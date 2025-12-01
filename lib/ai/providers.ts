@@ -6,6 +6,7 @@ export type ModelId = 'auto' | 'claude-sonnet' | 'claude-haiku' | 'sonar' | 'son
 export interface ModelConfig {
   id: ModelId;
   name: string;
+  version?: string;
   description: string;
   provider: 'anthropic' | 'perplexity' | 'auto';
   tier: 'fast' | 'balanced' | 'capable' | 'search' | 'smart';
@@ -15,35 +16,37 @@ export const models: Record<ModelId, ModelConfig> = {
   auto: {
     id: 'auto',
     name: 'Auto',
-    description: 'Automatically selects the best model based on your query',
+    description: 'Automatically selects the best model',
     provider: 'auto',
     tier: 'smart',
   },
   'claude-sonnet': {
     id: 'claude-sonnet',
-    name: 'Claude Sonnet',
-    description: 'Balanced performance for most tasks',
+    name: 'Sonnet',
+    version: '4',
+    description: 'Smartest for everyday tasks',
     provider: 'anthropic',
     tier: 'balanced',
   },
   'claude-haiku': {
     id: 'claude-haiku',
-    name: 'Claude Haiku',
-    description: 'Fast responses for simple queries',
+    name: 'Haiku',
+    version: '3.5',
+    description: 'Fastest for quick answers',
     provider: 'anthropic',
     tier: 'fast',
   },
   sonar: {
     id: 'sonar',
-    name: 'Perplexity Sonar',
-    description: 'Web search for current information',
+    name: 'Sonar',
+    description: 'Web search for current info',
     provider: 'perplexity',
     tier: 'search',
   },
   'sonar-pro': {
     id: 'sonar-pro',
-    name: 'Perplexity Sonar Pro',
-    description: 'Advanced web search with more sources',
+    name: 'Sonar Pro',
+    description: 'Advanced search with more sources',
     provider: 'perplexity',
     tier: 'capable',
   },
@@ -69,4 +72,3 @@ export function getModelInstance(modelId: ModelId) {
 export function getModelOptions(): ModelConfig[] {
   return Object.values(models);
 }
-

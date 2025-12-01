@@ -56,7 +56,7 @@ export function ConnectorDropdown({
   return (
     <div
       ref={dropdownRef}
-      className="absolute bottom-full left-0 mb-2 w-72 bg-os-surface-dark rounded-lg border border-os-border-dark shadow-xl z-50"
+      className="absolute bottom-full left-0 mb-2 w-72 bg-os-surface-dark rounded-xl border border-os-border-dark shadow-xl z-50"
     >
       <div className="p-2">
         {connectors.map((connector) => {
@@ -67,25 +67,13 @@ export function ConnectorDropdown({
               key={connector.id}
               type="button"
               onClick={() => onToggleConnector(connector.id)}
-              className="w-full flex items-center gap-3 p-3 rounded-lg hover:bg-os-bg-dark transition-colors group"
+              className="w-full flex items-start gap-3 p-3 rounded-lg hover:bg-os-bg-dark transition-colors group"
             >
-              <div className="flex-shrink-0">
-                <Icon
-                  className={`w-5 h-5 transition-colors ${
-                    connector.enabled
-                      ? 'text-brand-aperol'
-                      : 'text-os-text-secondary-dark group-hover:text-os-text-primary-dark'
-                  }`}
-                />
+              <div className="flex-shrink-0 mt-0.5">
+                <Icon className="w-4 h-4 text-os-text-secondary-dark" />
               </div>
               <div className="flex-1 min-w-0 text-left">
-                <div
-                  className={`text-sm font-medium ${
-                    connector.enabled
-                      ? 'text-brand-aperol'
-                      : 'text-os-text-primary-dark'
-                  }`}
-                >
+                <div className={`text-sm font-medium text-os-text-primary-dark`}>
                   {connector.title}
                 </div>
                 {connector.description && (
@@ -94,7 +82,7 @@ export function ConnectorDropdown({
                   </div>
                 )}
               </div>
-              <div className="flex-shrink-0">
+              <div className="flex-shrink-0 mt-0.5">
                 <button
                   type="button"
                   onClick={(e) => {
@@ -102,7 +90,7 @@ export function ConnectorDropdown({
                     onToggleConnector(connector.id);
                   }}
                   className={`
-                    relative w-10 h-5 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-brand-aperol focus:ring-offset-2 focus:ring-offset-os-surface-dark
+                    relative w-9 h-5 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-brand-aperol focus:ring-offset-2 focus:ring-offset-os-surface-dark
                     ${connector.enabled ? 'bg-brand-aperol' : 'bg-os-border-dark'}
                   `}
                   aria-label={`Toggle ${connector.title}`}
@@ -110,7 +98,7 @@ export function ConnectorDropdown({
                   <span
                     className={`
                       absolute top-0.5 left-0.5 w-4 h-4 bg-white rounded-full transition-transform shadow-sm
-                      ${connector.enabled ? 'translate-x-5' : 'translate-x-0'}
+                      ${connector.enabled ? 'translate-x-4' : 'translate-x-0'}
                     `}
                   />
                 </button>
