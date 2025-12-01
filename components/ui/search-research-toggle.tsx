@@ -167,43 +167,59 @@ export function SearchResearchToggle({ onQueryClick, onModeChange, showSuggestio
             }}
           />
 
-          <button
-            data-toggle-button
-            type="button"
-            onClick={() => handleModeClick('search')}
-            onMouseEnter={() => handleButtonMouseEnter('search')}
-            onMouseLeave={handleButtonMouseLeave}
-            className={`
-              relative z-10 flex items-center justify-center w-8 h-8 rounded-md transition-colors duration-300
-              ${
-                activeMode === 'search'
-                  ? 'text-white'
-                  : 'text-os-text-secondary-dark hover:text-os-text-primary-dark'
-              }
-            `}
-            aria-label="Search mode"
-          >
-            <Search className="w-4 h-4" />
-          </button>
+          <div className="relative group/search">
+            <button
+              data-toggle-button
+              type="button"
+              onClick={() => handleModeClick('search')}
+              onMouseEnter={() => handleButtonMouseEnter('search')}
+              onMouseLeave={handleButtonMouseLeave}
+              className={`
+                relative z-10 flex items-center justify-center w-8 h-8 rounded-md transition-colors duration-300
+                ${
+                  activeMode === 'search'
+                    ? 'text-white'
+                    : 'text-os-text-secondary-dark hover:text-os-text-primary-dark'
+                }
+              `}
+              aria-label="Search mode"
+            >
+              <Search className="w-4 h-4" />
+            </button>
+            {/* Simple tooltip when suggestions are showing */}
+            {showSuggestionsState && (
+              <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs font-medium text-os-text-primary-dark bg-os-surface-dark border border-os-border-dark rounded-md opacity-0 group-hover/search:opacity-100 transition-opacity duration-150 whitespace-nowrap pointer-events-none z-50">
+                Search
+              </span>
+            )}
+          </div>
 
-          <button
-            data-toggle-button
-            type="button"
-            onClick={() => handleModeClick('research')}
-            onMouseEnter={() => handleButtonMouseEnter('research')}
-            onMouseLeave={handleButtonMouseLeave}
-            className={`
-              relative z-10 flex items-center justify-center w-8 h-8 rounded-md transition-colors duration-300
-              ${
-                activeMode === 'research'
-                  ? 'text-white'
-                  : 'text-os-text-secondary-dark hover:text-os-text-primary-dark'
-              }
-            `}
-            aria-label="Research mode"
-          >
-            <Orbit className="w-4 h-4" />
-          </button>
+          <div className="relative group/research">
+            <button
+              data-toggle-button
+              type="button"
+              onClick={() => handleModeClick('research')}
+              onMouseEnter={() => handleButtonMouseEnter('research')}
+              onMouseLeave={handleButtonMouseLeave}
+              className={`
+                relative z-10 flex items-center justify-center w-8 h-8 rounded-md transition-colors duration-300
+                ${
+                  activeMode === 'research'
+                    ? 'text-white'
+                    : 'text-os-text-secondary-dark hover:text-os-text-primary-dark'
+                }
+              `}
+              aria-label="Research mode"
+            >
+              <Orbit className="w-4 h-4" />
+            </button>
+            {/* Simple tooltip when suggestions are showing */}
+            {showSuggestionsState && (
+              <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs font-medium text-os-text-primary-dark bg-os-surface-dark border border-os-border-dark rounded-md opacity-0 group-hover/research:opacity-100 transition-opacity duration-150 whitespace-nowrap pointer-events-none z-50">
+                Research
+              </span>
+            )}
+          </div>
         </div>
 
         {/* Hover Tooltip - Only show when suggestions are NOT visible */}

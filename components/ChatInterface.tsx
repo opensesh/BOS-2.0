@@ -22,8 +22,10 @@ import { SearchResearchToggle, SearchResearchSuggestions } from './ui/search-res
 import { ConnectorDropdown } from './ui/connector-dropdown';
 import { ModelSelector } from './ui/model-selector';
 import { useVoiceRecognition } from '@/hooks/useVoiceRecognition';
+import { useAttachments, Attachment } from '@/hooks/useAttachments';
 import { ModelId } from '@/lib/ai/providers';
 import { useChatContext } from '@/lib/chat-context';
+import { AttachmentPreview, DragOverlay } from './chat/AttachmentPreview';
 import { fadeIn, fadeInUp, staggerContainer } from '@/lib/motion';
 import {
   FollowUpInput,
@@ -32,6 +34,7 @@ import {
   ChatHeader,
   ChatContent,
 } from './chat';
+import type { FollowUpAttachment } from './chat/FollowUpInput';
 import { ArticleReferenceCard, IdeaReferenceCard } from './discover/article/AskFollowUp';
 
 // Article reference context from discover page
@@ -75,7 +78,6 @@ export function ChatInterface() {
   const [localInput, setLocalInput] = useState('');
   const [isFocused, setIsFocused] = useState(false);
   const [showConnectorDropdown, setShowConnectorDropdown] = useState(false);
-  const [showPaperclipDropdown, setShowPaperclipDropdown] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [suggestionsMode, setSuggestionsMode] = useState<'search' | 'research'>('search');
   const [submitError, setSubmitError] = useState<string | null>(null);
@@ -271,6 +273,23 @@ export function ChatInterface() {
     resetTranscript();
   });
 
+  // Attachment handling
+  const {
+    attachments,
+    isDragging,
+    error: attachmentError,
+    addFiles,
+    removeAttachment,
+    clearAttachments,
+    clearError: clearAttachmentError,
+    handlePaste,
+    handleDragOver,
+    handleDragLeave,
+    handleDrop,
+    fileInputRef,
+    openFilePicker,
+  } = useAttachments();
+
   useEffect(() => {
     if (transcript && isListening) {
       setInput((prev) => {
@@ -308,20 +327,39 @@ export function ChatInterface() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitError(null);
-    
-    if (!input.trim() || isLoading) return;
-    
+
+    // Allow submission with just attachments (no text required)
+    if (!input.trim() && attachments.length === 0) return;
+    if (isLoading) return;
+
     if (typeof sendMessage !== 'function') {
       setSubmitError('Chat is not ready. Please refresh the page and try again.');
       return;
     }
-    
+
     const userMessage = input.trim();
+    const currentAttachments = [...attachments];
     setInput('');
+    clearAttachments();
     setShowSuggestions(false);
-    
+
     try {
-      await sendMessage({ text: userMessage }, { body: { model: selectedModel } });
+      // Build message with attachments
+      const messageContent: { text?: string; files?: { type: 'image'; data: string; mimeType: string }[] } = {};
+
+      if (userMessage) {
+        messageContent.text = userMessage;
+      }
+
+      if (currentAttachments.length > 0) {
+        messageContent.files = currentAttachments.map(att => ({
+          type: 'image' as const,
+          data: att.preview, // Base64 data URL
+          mimeType: att.file.type,
+        }));
+      }
+
+      await sendMessage(messageContent, { body: { model: selectedModel } });
     } catch (err) {
       console.error('Failed to send message:', err);
       setSubmitError(err instanceof Error ? err.message : 'Failed to send message');
@@ -329,11 +367,24 @@ export function ChatInterface() {
     }
   };
 
-  const handleFollowUpSubmit = async (query: string) => {
-    if (!query.trim() || isLoading) return;
-    
+  const handleFollowUpSubmit = async (query: string, followUpAttachments?: FollowUpAttachment[]) => {
+    // Allow submission with just attachments (no text required)
+    if (!query.trim() && (!followUpAttachments || followUpAttachments.length === 0)) return;
+    if (isLoading) return;
+
     try {
-      await sendMessage({ text: query }, { body: { model: selectedModel } });
+      // Build message with attachments
+      const messageContent: { text?: string; files?: { type: 'image'; data: string; mimeType: string }[] } = {};
+
+      if (query.trim()) {
+        messageContent.text = query.trim();
+      }
+
+      if (followUpAttachments && followUpAttachments.length > 0) {
+        messageContent.files = followUpAttachments;
+      }
+
+      await sendMessage(messageContent, { body: { model: selectedModel } });
     } catch (err) {
       console.error('Failed to send follow-up:', err);
       setSubmitError(err instanceof Error ? err.message : 'Failed to send message');
@@ -374,14 +425,13 @@ export function ChatInterface() {
   useEffect(() => {
     const handleClickOutside = () => {
       setShowConnectorDropdown(false);
-      setShowPaperclipDropdown(false);
     };
 
-    if (showConnectorDropdown || showPaperclipDropdown) {
+    if (showConnectorDropdown) {
       document.addEventListener('click', handleClickOutside);
       return () => document.removeEventListener('click', handleClickOutside);
     }
-  }, [showConnectorDropdown, showPaperclipDropdown]);
+  }, [showConnectorDropdown]);
 
   // Parse messages into our format
   const parsedMessages: ParsedMessage[] = useMemo(() => {
@@ -586,16 +636,51 @@ export function ChatInterface() {
             <motion.div className="w-full" variants={fadeInUp}>
               <div className="max-w-3xl mx-auto px-4">
                 <form onSubmit={handleSubmit} className="relative">
+                  {/* Hidden file input */}
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept="image/*"
+                    multiple
+                    onChange={(e) => {
+                      if (e.target.files) {
+                        addFiles(e.target.files);
+                        e.target.value = ''; // Reset to allow same file selection
+                      }
+                    }}
+                    className="hidden"
+                  />
+
                   <div
                     className={`
                       relative bg-os-surface-dark/80 backdrop-blur-xl rounded-xl
                       border transition-all duration-200
-                      ${isFocused
+                      ${isDragging
                         ? 'border-brand-aperol shadow-lg shadow-brand-aperol/20'
-                        : 'border-os-border-dark hover:border-os-border-dark/60'
+                        : isFocused
+                          ? 'border-brand-aperol shadow-lg shadow-brand-aperol/20'
+                          : 'border-os-border-dark hover:border-os-border-dark/60'
                       }
                     `}
+                    onDragOver={handleDragOver}
+                    onDragEnter={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                    }}
+                    onDragLeave={handleDragLeave}
+                    onDrop={handleDrop}
                   >
+                    {/* Drag overlay */}
+                    <DragOverlay isDragging={isDragging} />
+
+                    {/* Attachment preview */}
+                    <AttachmentPreview
+                      attachments={attachments}
+                      onRemove={removeAttachment}
+                      error={attachmentError}
+                      onClearError={clearAttachmentError}
+                    />
+
                     <div className="relative">
                       <textarea
                         ref={textareaRef}
@@ -604,7 +689,8 @@ export function ChatInterface() {
                         onKeyDown={handleKeyDown}
                         onFocus={() => setIsFocused(true)}
                         onBlur={() => setIsFocused(false)}
-                        placeholder="Ask anything. Type @ for mentions and / for shortcuts."
+                        onPaste={handlePaste}
+                        placeholder={attachments.length > 0 ? "Add a message or send with images..." : "Ask anything. Type @ for mentions and / for shortcuts."}
                         className="w-full px-4 py-4 bg-transparent text-os-text-primary-dark placeholder:text-os-text-secondary-dark resize-none focus:outline-none min-h-[60px] max-h-[300px]"
                         rows={1}
                         aria-label="Chat input"
@@ -662,24 +748,23 @@ export function ChatInterface() {
                             type="button"
                             onClick={(e) => {
                               e.stopPropagation();
-                              setShowPaperclipDropdown(!showPaperclipDropdown);
-                              setShowConnectorDropdown(false);
+                              openFilePicker();
                             }}
                             className={`p-2 rounded-lg transition-all ${
-                              showPaperclipDropdown
+                              attachments.length > 0
                                 ? 'bg-brand-aperol/20 text-brand-aperol'
                                 : 'text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-bg-dark'
                             }`}
-                            aria-label="Attach file"
-                            title="Attach file"
+                            aria-label="Attach images"
+                            title="Attach images (or paste/drag & drop)"
                           >
                             <Paperclip className="w-5 h-5" />
+                            {attachments.length > 0 && (
+                              <span className="absolute -top-1 -right-1 w-4 h-4 bg-brand-aperol text-white text-[10px] font-medium rounded-full flex items-center justify-center">
+                                {attachments.length}
+                              </span>
+                            )}
                           </button>
-                          {showPaperclipDropdown && (
-                            <div className="absolute bottom-full right-0 mb-2 w-64 bg-os-surface-dark rounded-lg border border-os-border-dark shadow-lg p-2 z-50">
-                              <p className="text-sm text-os-text-secondary-dark p-2">Attachment options coming soon</p>
-                            </div>
-                          )}
                         </div>
 
                         <div className="relative">
@@ -760,9 +845,9 @@ export function ChatInterface() {
 
                         <button
                           type="submit"
-                          disabled={!input.trim() || isLoading}
+                          disabled={(!input.trim() && attachments.length === 0) || isLoading}
                           className={`p-2 rounded-lg transition-all ${
-                            input.trim() && !isLoading
+                            (input.trim() || attachments.length > 0) && !isLoading
                               ? 'bg-brand-aperol text-white hover:bg-brand-aperol/90'
                               : 'text-os-text-secondary-dark/50 cursor-not-allowed'
                           }`}

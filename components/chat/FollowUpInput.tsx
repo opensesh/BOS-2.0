@@ -13,13 +13,19 @@ import {
   GraduationCap,
   Users,
   DollarSign,
-  Mail,
-  Share2,
 } from 'lucide-react';
 import { ModelId, models } from '@/lib/ai/providers';
+import { useAttachments, Attachment } from '@/hooks/useAttachments';
+import { AttachmentPreview, DragOverlay } from './AttachmentPreview';
+
+export interface FollowUpAttachment {
+  type: 'image';
+  data: string;
+  mimeType: string;
+}
 
 interface FollowUpInputProps {
-  onSubmit: (query: string) => void;
+  onSubmit: (query: string, attachments?: FollowUpAttachment[]) => void;
   isLoading?: boolean;
   placeholder?: string;
   selectedModel?: ModelId;
@@ -41,6 +47,23 @@ export function FollowUpInput({
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const modelSelectorRef = useRef<HTMLDivElement>(null);
   const connectorRef = useRef<HTMLDivElement>(null);
+
+  // Attachment handling
+  const {
+    attachments,
+    isDragging,
+    error: attachmentError,
+    addFiles,
+    removeAttachment,
+    clearAttachments,
+    clearError: clearAttachmentError,
+    handlePaste,
+    handleDragOver,
+    handleDragLeave,
+    handleDrop,
+    fileInputRef,
+    openFilePicker,
+  } = useAttachments();
 
   // Auto-resize textarea
   useEffect(() => {
@@ -67,9 +90,22 @@ export function FollowUpInput({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!input.trim() || isLoading) return;
-    onSubmit(input.trim());
+    // Allow submission with just attachments (no text required)
+    if (!input.trim() && attachments.length === 0) return;
+    if (isLoading) return;
+
+    const query = input.trim();
+    const currentAttachments = attachments.length > 0
+      ? attachments.map(att => ({
+          type: 'image' as const,
+          data: att.preview,
+          mimeType: att.file.type,
+        }))
+      : undefined;
+
     setInput('');
+    clearAttachments();
+    onSubmit(query, currentAttachments);
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
@@ -84,17 +120,53 @@ export function FollowUpInput({
   return (
     <div className="max-w-3xl mx-auto">
       <form onSubmit={handleSubmit}>
+        {/* Hidden file input */}
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept="image/*"
+          multiple
+          onChange={(e) => {
+            if (e.target.files) {
+              addFiles(e.target.files);
+              e.target.value = ''; // Reset to allow same file selection
+            }
+          }}
+          className="hidden"
+        />
+
         <div
           className={`
             relative bg-os-surface-dark/80 backdrop-blur-xl rounded-xl
             border transition-all duration-200
             ${
-              isFocused
+              isDragging
                 ? 'border-brand-aperol shadow-lg shadow-brand-aperol/20'
-                : 'border-os-border-dark hover:border-os-border-dark/80'
+                : isFocused
+                  ? 'border-brand-aperol shadow-lg shadow-brand-aperol/20'
+                  : 'border-os-border-dark hover:border-os-border-dark/80'
             }
           `}
+          onDragOver={handleDragOver}
+          onDragEnter={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+          }}
+          onDragLeave={handleDragLeave}
+          onDrop={handleDrop}
         >
+          {/* Drag overlay */}
+          <DragOverlay isDragging={isDragging} />
+
+          {/* Attachment preview */}
+          <AttachmentPreview
+            attachments={attachments}
+            onRemove={removeAttachment}
+            error={attachmentError}
+            onClearError={clearAttachmentError}
+            compact
+          />
+
           {/* Input area */}
           <div className="relative">
             <textarea
@@ -104,7 +176,8 @@ export function FollowUpInput({
               onKeyDown={handleKeyDown}
               onFocus={() => setIsFocused(true)}
               onBlur={() => setIsFocused(false)}
-              placeholder={placeholder}
+              onPaste={handlePaste}
+              placeholder={attachments.length > 0 ? "Add a message or send with images..." : placeholder}
               className="w-full px-4 py-4 bg-transparent text-os-text-primary-dark placeholder:text-os-text-secondary-dark resize-none focus:outline-none min-h-[60px] max-h-[150px]"
               rows={1}
               disabled={isLoading}
@@ -230,10 +303,20 @@ export function FollowUpInput({
 
               <button
                 type="button"
-                className="p-2 rounded-lg text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-bg-dark transition-colors"
-                title="Attach file"
+                onClick={openFilePicker}
+                className={`relative p-2 rounded-lg transition-colors ${
+                  attachments.length > 0
+                    ? 'bg-brand-aperol/20 text-brand-aperol'
+                    : 'text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-bg-dark'
+                }`}
+                title="Attach images (or paste/drag & drop)"
               >
                 <Paperclip className="w-5 h-5" />
+                {attachments.length > 0 && (
+                  <span className="absolute -top-1 -right-1 w-4 h-4 bg-brand-aperol text-white text-[10px] font-medium rounded-full flex items-center justify-center">
+                    {attachments.length}
+                  </span>
+                )}
               </button>
 
               <button
@@ -247,11 +330,11 @@ export function FollowUpInput({
               {/* Submit button */}
               <button
                 type="submit"
-                disabled={!input.trim() || isLoading}
+                disabled={(!input.trim() && attachments.length === 0) || isLoading}
                 className={`
                   p-2 rounded-lg transition-all
                   ${
-                    input.trim() && !isLoading
+                    (input.trim() || attachments.length > 0) && !isLoading
                       ? 'bg-brand-aperol text-white hover:bg-brand-aperol/90'
                       : 'text-os-text-secondary-dark/50 cursor-not-allowed'
                   }
