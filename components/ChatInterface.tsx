@@ -10,12 +10,9 @@ import {
   Paperclip,
   Send,
   Globe,
-  Grid3x3,
-  GraduationCap,
-  Users,
-  DollarSign,
-  Mail,
-  Share2,
+  Brain,
+  Compass,
+  Palette,
   AlertCircle,
 } from 'lucide-react';
 import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts';
@@ -78,7 +75,6 @@ export function ChatInterface() {
   const [localInput, setLocalInput] = useState('');
   const [isFocused, setIsFocused] = useState(false);
   const [showConnectorDropdown, setShowConnectorDropdown] = useState(false);
-  const [showGridDropdown, setShowGridDropdown] = useState(false);
   const [showPaperclipDropdown, setShowPaperclipDropdown] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [suggestionsMode, setSuggestionsMode] = useState<'search' | 'research'>('search');
@@ -238,18 +234,15 @@ export function ChatInterface() {
   const setInput = setLocalInput;
 
   const connectors: Connector[] = [
-    { id: 'web', icon: Globe, title: 'Web', description: 'Search across the entire Internet', enabled: true },
-    { id: 'academic', icon: GraduationCap, title: 'Academic', description: 'Search academic papers', enabled: false },
-    { id: 'social', icon: Users, title: 'Social', description: 'Discussions and opinions', enabled: false },
-    { id: 'finance', icon: DollarSign, title: 'Finance', description: 'Search SEC filings', enabled: false },
-    { id: 'gmail', icon: Mail, title: 'Gmail with Calendar', description: '', enabled: false },
-    { id: 'browse-all', icon: Share2, title: 'Browse all connectors', description: '', enabled: false },
+    { id: 'web', icon: Globe, title: 'Web', description: 'Search across the entire internet', enabled: true },
+    { id: 'brand', icon: Palette, title: 'Brand', description: 'Access brand assets and guidelines', enabled: true },
+    { id: 'brain', icon: Brain, title: 'Brain', description: 'Search brand knowledge base', enabled: true },
+    { id: 'discover', icon: Compass, title: 'Discover', description: 'Explore curated content and ideas', enabled: false },
   ];
 
-  const [activeConnectors, setActiveConnectors] = useState<Set<string>>(new Set(['web']));
+  const [activeConnectors, setActiveConnectors] = useState<Set<string>>(new Set(['web', 'brand', 'brain']));
 
   const handleToggleConnector = (id: string) => {
-    if (id === 'browse-all') return;
     setActiveConnectors((prev) => {
       const next = new Set(prev);
       if (next.has(id)) {
@@ -381,15 +374,14 @@ export function ChatInterface() {
   useEffect(() => {
     const handleClickOutside = () => {
       setShowConnectorDropdown(false);
-      setShowGridDropdown(false);
       setShowPaperclipDropdown(false);
     };
 
-    if (showConnectorDropdown || showGridDropdown || showPaperclipDropdown) {
+    if (showConnectorDropdown || showPaperclipDropdown) {
       document.addEventListener('click', handleClickOutside);
       return () => document.removeEventListener('click', handleClickOutside);
     }
-  }, [showConnectorDropdown, showGridDropdown, showPaperclipDropdown]);
+  }, [showConnectorDropdown, showPaperclipDropdown]);
 
   // Parse messages into our format
   const parsedMessages: ParsedMessage[] = useMemo(() => {
@@ -621,13 +613,7 @@ export function ChatInterface() {
                     </div>
 
                     <div className="flex items-center justify-between px-4 py-3 border-t border-os-border-dark flex-nowrap gap-4">
-                      <div className="flex items-center gap-2">
-                        <ModelSelector
-                          selectedModel={selectedModel}
-                          onModelChange={setSelectedModel}
-                          disabled={isLoading}
-                        />
-                        <div className="w-px h-6 bg-os-border-dark" />
+                      <div className="flex items-center gap-3">
                         <SearchResearchToggle
                           onQueryClick={handleQueryClick}
                           onModeChange={handleModeChange}
@@ -635,7 +621,14 @@ export function ChatInterface() {
                         />
                       </div>
 
-                      <div className="flex items-center space-x-2 flex-shrink-0">
+                      <div className="flex items-center gap-2">
+                        <ModelSelector
+                          selectedModel={selectedModel}
+                          onModelChange={setSelectedModel}
+                          disabled={isLoading}
+                        />
+
+                        <div className="w-px h-5 bg-os-border-dark" />
                         <div className="relative">
                           <button
                             ref={globeButtonRef}
@@ -643,7 +636,6 @@ export function ChatInterface() {
                             onClick={(e) => {
                               e.stopPropagation();
                               setShowConnectorDropdown(!showConnectorDropdown);
-                              setShowGridDropdown(false);
                               setShowPaperclipDropdown(false);
                             }}
                             className={`p-2 rounded-lg transition-all ${
@@ -670,35 +662,8 @@ export function ChatInterface() {
                             type="button"
                             onClick={(e) => {
                               e.stopPropagation();
-                              setShowGridDropdown(!showGridDropdown);
-                              setShowConnectorDropdown(false);
-                              setShowPaperclipDropdown(false);
-                            }}
-                            className={`p-2 rounded-lg transition-all ${
-                              showGridDropdown
-                                ? 'bg-brand-aperol/20 text-brand-aperol'
-                                : 'text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-bg-dark'
-                            }`}
-                            aria-label="More options"
-                            title="More options"
-                          >
-                            <Grid3x3 className="w-5 h-5" />
-                          </button>
-                          {showGridDropdown && (
-                            <div className="absolute bottom-full right-0 mb-2 w-64 bg-os-surface-dark rounded-lg border border-os-border-dark shadow-lg p-2 z-50">
-                              <p className="text-sm text-os-text-secondary-dark p-2">More options coming soon</p>
-                            </div>
-                          )}
-                        </div>
-
-                        <div className="relative">
-                          <button
-                            type="button"
-                            onClick={(e) => {
-                              e.stopPropagation();
                               setShowPaperclipDropdown(!showPaperclipDropdown);
                               setShowConnectorDropdown(false);
-                              setShowGridDropdown(false);
                             }}
                             className={`p-2 rounded-lg transition-all ${
                               showPaperclipDropdown
@@ -717,24 +682,81 @@ export function ChatInterface() {
                           )}
                         </div>
 
-                        <button
-                          type="button"
-                          onClick={handleMicClick}
-                          className={`p-2 rounded-lg transition-all relative ${
-                            isListening
-                              ? 'bg-brand-aperol text-white animate-pulse'
-                              : 'text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-bg-dark'
-                          }`}
-                          aria-label="Voice input"
-                          title={isListening ? 'Stop recording' : 'Start voice input'}
-                        >
-                          <Mic className="w-5 h-5" />
-                          {voiceError && (
-                            <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs text-red-400 whitespace-nowrap">
-                              {voiceError}
-                            </span>
+                        <div className="relative">
+                          {/* Pulsing rings when recording */}
+                          {isListening && (
+                            <>
+                              <motion.div
+                                className="absolute inset-0 rounded-lg bg-brand-aperol/30"
+                                initial={{ scale: 1, opacity: 0.6 }}
+                                animate={{
+                                  scale: [1, 1.8, 2.2],
+                                  opacity: [0.6, 0.3, 0],
+                                }}
+                                transition={{
+                                  duration: 1.5,
+                                  repeat: Infinity,
+                                  ease: 'easeOut',
+                                }}
+                              />
+                              <motion.div
+                                className="absolute inset-0 rounded-lg bg-brand-aperol/20"
+                                initial={{ scale: 1, opacity: 0.4 }}
+                                animate={{
+                                  scale: [1, 1.5, 1.8],
+                                  opacity: [0.4, 0.2, 0],
+                                }}
+                                transition={{
+                                  duration: 1.5,
+                                  repeat: Infinity,
+                                  ease: 'easeOut',
+                                  delay: 0.3,
+                                }}
+                              />
+                            </>
                           )}
-                        </button>
+                          <motion.button
+                            type="button"
+                            onClick={handleMicClick}
+                            className={`relative p-2 rounded-lg transition-colors ${
+                              isListening
+                                ? 'bg-brand-aperol text-white'
+                                : 'text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-bg-dark'
+                            }`}
+                            aria-label="Voice input"
+                            title={isListening ? 'Stop recording' : 'Start voice input'}
+                            whileTap={{ scale: 0.92 }}
+                            animate={isListening ? {
+                              scale: [1, 1.05, 1],
+                            } : { scale: 1 }}
+                            transition={isListening ? {
+                              duration: 0.8,
+                              repeat: Infinity,
+                              ease: 'easeInOut',
+                            } : { duration: 0.15 }}
+                          >
+                            <motion.div
+                              animate={isListening ? { rotate: [0, -8, 8, -8, 0] } : { rotate: 0 }}
+                              transition={isListening ? {
+                                duration: 0.5,
+                                repeat: Infinity,
+                                repeatDelay: 1,
+                                ease: 'easeInOut',
+                              } : { duration: 0.15 }}
+                            >
+                              <Mic className="w-5 h-5" />
+                            </motion.div>
+                          </motion.button>
+                          {voiceError && (
+                            <motion.span
+                              initial={{ opacity: 0, y: 4 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs text-red-400 whitespace-nowrap bg-os-surface-dark px-2 py-1 rounded"
+                            >
+                              {voiceError}
+                            </motion.span>
+                          )}
+                        </div>
 
                         <button
                           type="submit"

@@ -93,28 +93,22 @@ export function SearchResearchToggle({ onQueryClick, onModeChange, showSuggestio
       document.addEventListener('mousedown', handleClickOutside);
       return () => document.removeEventListener('mousedown', handleClickOutside);
     }
-  }, [showSuggestions, activeMode]); // Removed onModeChange from dependencies
+  }, [showSuggestions, activeMode]);
 
   const currentSuggestions =
     activeMode === 'search' ? searchSuggestions : researchSuggestions;
   const CurrentIcon = activeMode === 'search' ? Search : Orbit;
 
   // Calculate arrow position for tooltip
-  // Tooltip is left-aligned (left-0) relative to toggle container
-  // Toggle: 4px padding + 32px button + 32px button + 4px padding = 72px total
-  // Arrow is 16px wide (w-4), so we position from arrow's left edge
-  // Search button center: 4px + 16px = 20px, minus 8px (half arrow) = 12px
-  // Research button center: 4px + 32px + 16px = 52px, minus 8px = 44px
   const getArrowPosition = () => {
     if (hoveredButton === 'search') {
-      return 'left-[12px]'; // Arrow centered on search button
+      return 'left-[12px]';
     } else {
-      return 'left-[44px]'; // Arrow centered on research button
+      return 'left-[44px]';
     }
   };
 
   const handleButtonMouseEnter = (mode: Mode) => {
-    // Clear any pending timeout
     if (hoverTimeoutRef.current) {
       clearTimeout(hoverTimeoutRef.current);
       hoverTimeoutRef.current = null;
@@ -124,11 +118,9 @@ export function SearchResearchToggle({ onQueryClick, onModeChange, showSuggestio
   };
 
   const handleButtonMouseLeave = () => {
-    // Clear any pending timeout
     if (hoverTimeoutRef.current) {
       clearTimeout(hoverTimeoutRef.current);
     }
-    // Use a small delay to allow moving to tooltip
     hoverTimeoutRef.current = setTimeout(() => {
       if (!isTooltipHovered) {
         setHoveredButton(null);
@@ -138,7 +130,6 @@ export function SearchResearchToggle({ onQueryClick, onModeChange, showSuggestio
   };
 
   const handleTooltipMouseEnter = () => {
-    // Clear any pending timeout
     if (hoverTimeoutRef.current) {
       clearTimeout(hoverTimeoutRef.current);
       hoverTimeoutRef.current = null;
@@ -162,12 +153,12 @@ export function SearchResearchToggle({ onQueryClick, onModeChange, showSuggestio
 
   return (
     <div ref={containerRef} className="inline-block">
-      {/* Toggle Buttons with iOS-style slider - Separate positioning context */}
+      {/* Toggle Buttons with iOS-style slider */}
       <div className="relative inline-block">
         <div className="relative inline-flex items-center bg-os-bg-dark rounded-lg p-1">
           {/* Sliding pill indicator */}
           <div
-            className={`absolute top-1 h-[calc(100%-8px)] w-[32px] bg-brand-aperol rounded-md transition-all duration-300 ease-out`}
+            className="absolute top-1 h-[calc(100%-8px)] w-[32px] bg-brand-aperol rounded-md transition-all duration-300 ease-out"
             style={{
               left: activeMode === 'search' ? '4px' : '36px',
             }}
@@ -212,24 +203,21 @@ export function SearchResearchToggle({ onQueryClick, onModeChange, showSuggestio
           </button>
         </div>
 
-        {/* Hover Tooltip - Positioned Below toggle buttons only */}
+        {/* Hover Tooltip - Fixed solid background and proper positioning */}
         {hoveredButton && (
           <div
             onMouseEnter={handleTooltipMouseEnter}
             onMouseLeave={handleTooltipMouseLeave}
-            className="absolute top-full left-0 mt-2 w-80 max-w-[calc(100vw-2rem)] bg-[#2a2a2a] rounded-lg border border-os-border-dark shadow-2xl p-4"
+            className="absolute top-full left-0 mt-3 w-80 max-w-[calc(100vw-2rem)] rounded-xl border border-os-border-dark shadow-2xl p-4 z-[10001]"
             style={{
-              backgroundColor: '#2a2a2a',
-              opacity: 1,
-              zIndex: 10001,
+              backgroundColor: '#1a1a1a',
             }}
           >
-            {/* Arrow pointer */}
+            {/* Arrow pointer with solid background */}
             <div
-              className={`absolute -top-2 w-4 h-4 bg-[#2a2a2a] border-l border-t border-os-border-dark transform rotate-45 transition-all duration-200 ${getArrowPosition()}`}
+              className={`absolute -top-[9px] w-4 h-4 border-l border-t border-os-border-dark transform rotate-45 transition-all duration-200 ${getArrowPosition()}`}
               style={{ 
-                backgroundColor: '#2a2a2a',
-                opacity: 1,
+                backgroundColor: '#1a1a1a',
               }}
             />
             
@@ -254,7 +242,7 @@ export function SearchResearchToggle({ onQueryClick, onModeChange, showSuggestio
                 <p className="text-xs text-os-text-secondary-dark mb-3">
                   3 queries remaining today
                 </p>
-                <button className="w-full bg-brand-aperol hover:bg-orange-600 text-white text-sm font-medium py-2 px-4 rounded-md transition-colors">
+                <button className="w-full bg-brand-aperol hover:bg-orange-600 text-white text-sm font-medium py-2 px-4 rounded-lg transition-colors">
                   Upgrade to Pro
                 </button>
               </div>
@@ -301,5 +289,3 @@ export function SearchResearchSuggestions({
     </div>
   );
 }
-
-
