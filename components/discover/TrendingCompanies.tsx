@@ -2,10 +2,11 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { useMarketData, POPULAR_COMPANIES } from '@/hooks/useMarketData';
-import { Loader2, Plus, X, Search, TrendingUp, RotateCcw, Check } from 'lucide-react';
+import { Loader2, Plus, X, Search, TrendingUp, Settings, Check, ExternalLink } from 'lucide-react';
 import { FlipCard } from '@/components/ui/FlipCard';
+import Link from 'next/link';
 
-// Front face - Trending companies display
+// Front face - Trending companies display with clickable items
 function TrendingDisplay({
   trendingCompanies,
   onFlip,
@@ -16,30 +17,43 @@ function TrendingDisplay({
   return (
     <div className="flex flex-col gap-3">
       {/* Header with flip trigger */}
-      <button
-        onClick={onFlip}
-        className="flex items-center justify-between text-os-text-secondary-dark text-xs uppercase tracking-wider font-medium hover:text-brand-aperol transition-colors group w-full text-left"
-      >
-        <span>Trending Companies</span>
-        <RotateCcw className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-      </button>
+      <div className="flex items-center justify-between">
+        <Link 
+          href="/finance"
+          className="text-os-text-secondary-dark text-xs uppercase tracking-wider font-medium hover:text-brand-aperol transition-colors flex items-center gap-1.5"
+        >
+          Trending Companies
+          <ExternalLink className="w-3 h-3" />
+        </Link>
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            onFlip();
+          }}
+          className="p-1.5 bg-os-surface-dark/60 hover:bg-os-surface-dark rounded-lg transition-colors border border-os-border-dark/30"
+          title="Edit watchlist"
+        >
+          <Settings className="w-3.5 h-3.5 text-os-text-secondary-dark hover:text-brand-aperol" />
+        </button>
+      </div>
 
-      {/* Company List */}
+      {/* Company List - Clickable to go to finance page */}
       <div className="flex flex-col gap-2">
         {trendingCompanies.map((company) => (
-          <div 
-            key={company.id} 
-            className="group flex items-center justify-between p-2 rounded-lg hover:bg-os-surface-dark cursor-pointer transition-colors"
+          <Link
+            key={company.id}
+            href={`/finance/${company.ticker}`}
+            className="group flex items-center justify-between p-2 rounded-lg hover:bg-os-surface-dark hover:ring-1 hover:ring-brand-aperol/30 cursor-pointer transition-all"
           >
             <div className="flex items-center gap-3 min-w-0 flex-1">
               {/* Company logo placeholder */}
-              <div className="w-8 h-8 rounded bg-os-surface-dark border border-os-border-dark flex items-center justify-center shrink-0">
+              <div className="w-8 h-8 rounded bg-os-surface-dark border border-os-border-dark flex items-center justify-center shrink-0 group-hover:border-brand-aperol/30">
                 <span className="text-xs font-bold text-os-text-secondary-dark">
                   {company.ticker.charAt(0)}
                 </span>
               </div>
               <div className="min-w-0 flex-1">
-                <div className="text-sm font-medium text-brand-vanilla truncate">
+                <div className="text-sm font-medium text-brand-vanilla truncate group-hover:text-brand-aperol transition-colors">
                   {company.name}
                 </div>
                 <div className="text-xs text-os-text-secondary-dark">
@@ -58,7 +72,7 @@ function TrendingDisplay({
                 {company.change}
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
@@ -221,7 +235,7 @@ export function TrendingCompanies() {
         <div className="text-os-text-secondary-dark text-xs uppercase tracking-wider font-medium">
           Trending Companies
         </div>
-        <div className="text-xs text-red-500">{error}</div>
+        <div className="text-xs text-os-text-secondary-dark">{error}</div>
       </div>
     );
   }

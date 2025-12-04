@@ -1,12 +1,12 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { Sidebar } from '@/components/Sidebar';
-import { FinanceLayout, FinanceSearchBar, WatchlistSidebar } from '@/components/finance';
-import { useMarketMovers, useQuote, formatPrice, formatPercent, formatChange } from '@/hooks/useFinanceData';
-import { TrendingUp, TrendingDown, Loader2, Search, ArrowRight } from 'lucide-react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
 import Link from 'next/link';
+import { Sidebar } from '@/components/Sidebar';
+import { FinanceSearchBar, WatchlistSidebar } from '@/components/finance';
+import { useMarketMovers, useQuote, formatPrice, formatPercent, formatChange } from '@/hooks/useFinanceData';
+import { TrendingUp, TrendingDown, Loader2, ArrowRight, ArrowLeft } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 // Major indices to show on the landing page
 const MAJOR_INDICES = [
@@ -17,53 +17,58 @@ const MAJOR_INDICES = [
 ];
 
 const POPULAR_TICKERS = [
-  'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'NVDA', 'META', 'TSLA', 'BRK.B',
+  'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'NVDA', 'META', 'TSLA', 'BRK-B',
 ];
 
 export default function FinancePage() {
   return (
-    <div className="flex h-screen bg-os-bg-dark">
+    <div className="flex h-screen bg-os-bg-dark dark:bg-os-bg-dark text-os-text-primary-dark font-sans">
       <Sidebar />
-      <div className="flex-1 flex flex-col overflow-hidden">
-        {/* Header */}
-        <header className="sticky top-0 z-40 bg-os-bg-dark/95 backdrop-blur-sm border-b border-os-border-dark">
-          <div className="max-w-7xl mx-auto px-4 py-4">
-            <div className="flex items-center justify-between gap-4">
-              <h1 className="text-xl font-bold text-brand-vanilla">Finance</h1>
-              <FinanceSearchBar className="w-full max-w-lg" />
+      <div className="flex-1 flex flex-col min-w-0 overflow-hidden pt-14 lg:pt-0">
+        {/* Header - matches StickyArticleHeader style */}
+        <header className="shrink-0 z-30 h-12 bg-os-bg-dark border-b border-os-border-dark/50">
+          <div className="flex items-center justify-between h-full px-4 max-w-6xl mx-auto">
+            {/* Left: Back to Discover */}
+            <Link
+              href="/discover"
+              className="group flex items-center gap-2 text-os-text-secondary-dark hover:text-brand-vanilla transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
+              <span className="text-sm font-medium hidden sm:inline">Discover</span>
+            </Link>
+
+            {/* Center: Title */}
+            <h1 className="text-sm font-medium text-brand-vanilla">
+              Finance
+            </h1>
+
+            {/* Right: Search */}
+            <div className="w-64 hidden md:block">
+              <FinanceSearchBar className="w-full" />
             </div>
           </div>
         </header>
 
-        <FinanceLayout sidebar={<WatchlistSidebar />}>
-          <div className="flex-1 overflow-y-auto">
-            <div className="max-w-5xl mx-auto px-4 py-6 space-y-8">
-              {/* Hero Section */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4 }}
-                className="text-center space-y-4 py-8"
-              >
-                <h2 className="text-4xl font-bold text-brand-vanilla">
-                  Track Markets & Stocks
-                </h2>
-                <p className="text-os-text-secondary-dark max-w-xl mx-auto">
-                  Real-time quotes, charts, and news for stocks, ETFs, and market indices.
-                  Search for any symbol to get started.
-                </p>
-              </motion.div>
+        {/* Main content area */}
+        <div className="flex-1 flex overflow-hidden">
+          {/* Main content - scrollable */}
+          <div className="flex-1 overflow-y-auto custom-scrollbar">
+            <div className="w-full max-w-6xl mx-auto px-6 py-8 md:px-12 md:py-12">
+              {/* Mobile search */}
+              <div className="md:hidden mb-6">
+                <FinanceSearchBar className="w-full" />
+              </div>
 
               {/* Major Indices */}
               <motion.section
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.1 }}
-                className="space-y-4"
+                transition={{ duration: 0.3 }}
+                className="mb-8"
               >
-                <h3 className="text-sm font-medium text-os-text-secondary-dark uppercase tracking-wider">
+                <h2 className="text-xs font-medium text-os-text-secondary-dark uppercase tracking-wider mb-4">
                   Major Indices
-                </h3>
+                </h2>
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
                   {MAJOR_INDICES.map((index) => (
                     <IndexCard key={index.symbol} {...index} />
@@ -73,14 +78,14 @@ export default function FinancePage() {
 
               {/* Popular Stocks */}
               <motion.section
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.2 }}
-                className="space-y-4"
+                transition={{ duration: 0.3, delay: 0.1 }}
+                className="mb-8"
               >
-                <h3 className="text-sm font-medium text-os-text-secondary-dark uppercase tracking-wider">
+                <h2 className="text-xs font-medium text-os-text-secondary-dark uppercase tracking-wider mb-4">
                   Popular Stocks
-                </h3>
+                </h2>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                   {POPULAR_TICKERS.map((ticker) => (
                     <Link
@@ -97,33 +102,14 @@ export default function FinancePage() {
 
               {/* Market Movers Section */}
               <MarketMoversSection />
-
-              {/* Quick Search Suggestions */}
-              <motion.section
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.4 }}
-                className="space-y-4"
-              >
-                <h3 className="text-sm font-medium text-os-text-secondary-dark uppercase tracking-wider">
-                  Try Searching
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {['Apple', 'Tesla', 'Bitcoin', 'S&P 500', 'Gold', 'Oil', 'NVIDIA', 'Microsoft'].map((term) => (
-                    <Link
-                      key={term}
-                      href={`/finance/${term === 'S&P 500' ? 'SPY' : term === 'Bitcoin' ? 'BTC-USD' : term === 'Gold' ? 'GLD' : term === 'Oil' ? 'USO' : term.toUpperCase().split(' ')[0]}`}
-                      className="flex items-center gap-2 px-3 py-2 bg-os-surface-dark/30 rounded-lg text-sm text-os-text-secondary-dark hover:text-brand-vanilla hover:bg-os-surface-dark transition-colors"
-                    >
-                      <Search className="w-3 h-3" />
-                      {term}
-                    </Link>
-                  ))}
-                </div>
-              </motion.section>
             </div>
           </div>
-        </FinanceLayout>
+
+          {/* Sidebar - fixed width */}
+          <aside className="hidden xl:block w-[320px] border-l border-os-border-dark bg-os-surface-dark/30 p-4 overflow-y-auto custom-scrollbar">
+            <WatchlistSidebar />
+          </aside>
+        </div>
       </div>
     </div>
   );
@@ -144,7 +130,7 @@ function IndexCard({ symbol, name, shortName }: { symbol: string; name: string; 
       <div className="flex items-start justify-between mb-3">
         <div>
           <div className="text-xs text-os-text-secondary-dark">{shortName}</div>
-          <div className="text-xs text-os-text-secondary-dark/60 truncate">{symbol}</div>
+          <div className="text-[10px] text-os-text-secondary-dark/60 truncate">{symbol}</div>
         </div>
         {!loading && quote && (
           <div className={`p-1 rounded ${isPositive ? 'bg-green-500/10' : 'bg-red-500/10'}`}>
@@ -193,15 +179,14 @@ function MarketMoversSection() {
 
   return (
     <motion.section
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: 0.3 }}
-      className="space-y-4"
+      transition={{ duration: 0.3, delay: 0.2 }}
     >
-      <div className="flex items-center justify-between">
-        <h3 className="text-sm font-medium text-os-text-secondary-dark uppercase tracking-wider">
+      <div className="flex items-center justify-between mb-4">
+        <h2 className="text-xs font-medium text-os-text-secondary-dark uppercase tracking-wider">
           Market Movers
-        </h3>
+        </h2>
         <div className="flex gap-1">
           {(['gainers', 'losers', 'active'] as const).map((tab) => (
             <button
@@ -225,7 +210,7 @@ function MarketMoversSection() {
             <Loader2 className="w-6 h-6 text-os-text-secondary-dark animate-spin" />
           </div>
         ) : movers.length === 0 ? (
-          <div className="text-center py-12 text-os-text-secondary-dark">
+          <div className="text-center py-12 text-os-text-secondary-dark text-sm">
             No data available
           </div>
         ) : (

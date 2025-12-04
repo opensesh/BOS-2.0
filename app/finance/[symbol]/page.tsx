@@ -1,10 +1,9 @@
 'use client';
 
 import React, { useState, use } from 'react';
+import Link from 'next/link';
 import { Sidebar } from '@/components/Sidebar';
 import {
-  FinanceLayout,
-  FinanceHeader,
   FinanceTabNav,
   FinanceTab,
   StockChart,
@@ -23,7 +22,7 @@ import {
   formatChange,
   formatPercent,
 } from '@/hooks/useFinanceData';
-import { TrendingUp, TrendingDown, Clock, Loader2 } from 'lucide-react';
+import { TrendingUp, TrendingDown, Clock, Loader2, ArrowLeft } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 interface PageProps {
@@ -32,7 +31,8 @@ interface PageProps {
 
 export default function StockDetailPage({ params }: PageProps) {
   const resolvedParams = use(params);
-  const symbol = resolvedParams.symbol.toUpperCase();
+  // Decode URL-encoded symbols like %5EGSPC to ^GSPC
+  const symbol = decodeURIComponent(resolvedParams.symbol).toUpperCase();
   
   const [activeTab, setActiveTab] = useState<FinanceTab>('overview');
   const [chartRange, setChartRange] = useState<ChartRange>('1d');
@@ -46,32 +46,52 @@ export default function StockDetailPage({ params }: PageProps) {
   const isPositive = quote ? quote.regularMarketChange >= 0 : true;
 
   return (
-    <div className="flex h-screen bg-os-bg-dark">
+    <div className="flex h-screen bg-os-bg-dark dark:bg-os-bg-dark text-os-text-primary-dark font-sans">
       <Sidebar />
-      <div className="flex-1 flex flex-col overflow-hidden">
-        <FinanceHeader symbol={symbol} name={quote?.shortName} />
-        
-        <FinanceLayout
-          sidebar={<WatchlistSidebar />}
-        >
-          <div className="flex-1 overflow-y-auto">
-            <div className="max-w-5xl mx-auto px-4 py-6 space-y-6">
+      <div className="flex-1 flex flex-col min-w-0 overflow-hidden pt-14 lg:pt-0">
+        {/* Header - matches StickyArticleHeader style */}
+        <header className="shrink-0 z-30 h-12 bg-os-bg-dark border-b border-os-border-dark/50">
+          <div className="flex items-center justify-between h-full px-4 max-w-6xl mx-auto">
+            {/* Left: Back to Finance */}
+            <Link
+              href="/finance"
+              className="group flex items-center gap-2 text-os-text-secondary-dark hover:text-brand-vanilla transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
+              <span className="text-sm font-medium hidden sm:inline">Finance</span>
+            </Link>
+
+            {/* Center: Symbol */}
+            <h1 className="text-sm font-medium text-brand-vanilla">
+              {symbol}
+            </h1>
+
+            {/* Right: Actions placeholder */}
+            <div className="w-20" />
+          </div>
+        </header>
+
+        {/* Main content area */}
+        <div className="flex-1 flex overflow-hidden">
+          {/* Main content - scrollable */}
+          <div className="flex-1 overflow-y-auto custom-scrollbar">
+            <div className="w-full max-w-6xl mx-auto px-6 py-8 md:px-12 md:py-12">
               {/* Stock Header */}
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
-                className="space-y-2"
+                className="mb-6"
               >
                 {/* Symbol & Name */}
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 rounded-xl bg-os-surface-dark border border-os-border-dark flex items-center justify-center">
                     <span className="text-lg font-bold text-brand-vanilla">
-                      {symbol.slice(0, 2)}
+                      {symbol.replace('^', '').slice(0, 2)}
                     </span>
                   </div>
                   <div>
-                    <h1 className="text-2xl font-bold text-brand-vanilla">
+                    <h1 className="text-2xl font-display font-bold text-brand-vanilla">
                       {quote?.longName || quote?.shortName || symbol}
                     </h1>
                     <div className="flex items-center gap-2 text-sm text-os-text-secondary-dark">
@@ -87,7 +107,7 @@ export default function StockDetailPage({ params }: PageProps) {
                 </div>
 
                 {/* Price & Change */}
-                <div className="flex items-baseline gap-4">
+                <div className="flex items-baseline gap-4 mb-2">
                   {quoteLoading ? (
                     <div className="flex items-center gap-2">
                       <Loader2 className="w-5 h-5 text-os-text-secondary-dark animate-spin" />
@@ -135,11 +155,13 @@ export default function StockDetailPage({ params }: PageProps) {
               </motion.div>
 
               {/* Tab Navigation */}
-              <FinanceTabNav
-                activeTab={activeTab}
-                onTabChange={setActiveTab}
-                showAllTabs={!!profile}
-              />
+              <div className="mb-6">
+                <FinanceTabNav
+                  activeTab={activeTab}
+                  onTabChange={setActiveTab}
+                  showAllTabs={!!profile}
+                />
+              </div>
 
               {/* Content based on active tab */}
               {activeTab === 'overview' && (
@@ -220,9 +242,13 @@ export default function StockDetailPage({ params }: PageProps) {
               )}
             </div>
           </div>
-        </FinanceLayout>
+
+          {/* Sidebar - fixed width */}
+          <aside className="hidden xl:block w-[320px] border-l border-os-border-dark bg-os-surface-dark/30 p-4 overflow-y-auto custom-scrollbar">
+            <WatchlistSidebar />
+          </aside>
+        </div>
       </div>
     </div>
   );
 }
-

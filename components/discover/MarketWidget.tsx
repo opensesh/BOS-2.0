@@ -2,10 +2,65 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { useMarketData, searchSymbols, POPULAR_SYMBOLS } from '@/hooks/useMarketData';
-import { Loader2, Plus, X, Search, RotateCcw, Check } from 'lucide-react';
+import { Loader2, Plus, X, Search, Settings, Check, ExternalLink } from 'lucide-react';
 import { FlipCard } from '@/components/ui/FlipCard';
+import Link from 'next/link';
 
-// Front face - Market display
+// Sparkline SVG component for better visualization
+function Sparkline({ data, positive, height = 32 }: { data: number[]; positive: boolean; height?: number }) {
+  if (!data || data.length < 2) return null;
+  
+  const width = 100;
+  const padding = 2;
+  const min = Math.min(...data);
+  const max = Math.max(...data);
+  const range = max - min || 1;
+  
+  // Create path points
+  const points = data.map((value, index) => {
+    const x = padding + (index / (data.length - 1)) * (width - padding * 2);
+    const y = padding + (1 - (value - min) / range) * (height - padding * 2);
+    return `${x},${y}`;
+  });
+  
+  const pathD = `M ${points.join(' L ')}`;
+  
+  // Create area fill path
+  const areaD = `${pathD} L ${width - padding},${height - padding} L ${padding},${height - padding} Z`;
+  
+  const color = positive ? '#22c55e' : '#ef4444';
+  const fillColor = positive ? 'rgba(34, 197, 94, 0.15)' : 'rgba(239, 68, 68, 0.15)';
+  
+  return (
+    <svg 
+      viewBox={`0 0 ${width} ${height}`} 
+      className="w-full" 
+      style={{ height: `${height}px` }}
+      preserveAspectRatio="none"
+    >
+      {/* Area fill */}
+      <path d={areaD} fill={fillColor} />
+      {/* Line */}
+      <path 
+        d={pathD} 
+        fill="none" 
+        stroke={color} 
+        strokeWidth="1.5" 
+        strokeLinecap="round" 
+        strokeLinejoin="round"
+      />
+      {/* End dot */}
+      <circle 
+        cx={width - padding} 
+        cy={padding + (1 - (data[data.length - 1] - min) / range) * (height - padding * 2)} 
+        r="2" 
+        fill={color}
+      />
+    </svg>
+  );
+}
+
+// Front face - Market display with clickable cards
 function MarketDisplay({
   marketData,
   onFlip,
@@ -16,63 +71,69 @@ function MarketDisplay({
   return (
     <div className="flex flex-col gap-3">
       {/* Header with flip trigger */}
-      <button
-        onClick={onFlip}
-        className="flex items-center justify-between text-os-text-secondary-dark text-xs uppercase tracking-wider font-medium hover:text-brand-aperol transition-colors group w-full text-left"
-      >
-        <span>Market Outlook</span>
-        <RotateCcw className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-      </button>
+      <div className="flex items-center justify-between">
+        <Link 
+          href="/finance"
+          className="text-os-text-secondary-dark text-xs uppercase tracking-wider font-medium hover:text-brand-aperol transition-colors flex items-center gap-1.5"
+        >
+          Market Outlook
+          <ExternalLink className="w-3 h-3" />
+        </Link>
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            onFlip();
+          }}
+          className="p-1.5 bg-os-surface-dark/60 hover:bg-os-surface-dark rounded-lg transition-colors border border-os-border-dark/30"
+          title="Edit watchlist"
+        >
+          <Settings className="w-3.5 h-3.5 text-os-text-secondary-dark hover:text-brand-aperol" />
+        </button>
+      </div>
 
-      {/* Market Cards */}
+      {/* Market Cards - Clickable to go to finance page */}
       <div className="grid grid-cols-2 gap-3">
-        {marketData.map((item) => (
-          <div 
-            key={item.symbol} 
-            className="flex flex-col p-3 bg-os-surface-dark rounded-lg hover:bg-opacity-80 transition-colors cursor-pointer group relative"
-          >
-            <div className="flex justify-between items-start mb-2">
-              <span className="text-xs font-medium text-os-text-secondary-dark truncate">
-                {item.name}
-              </span>
-              <span className={`text-xs font-medium whitespace-nowrap ml-2 ${
-                item.positive ? 'text-green-500' : 'text-red-500'
-              }`}>
-                {item.positive ? '+' : ''}{item.changePercent.toFixed(2)}%
-              </span>
-            </div>
-            <div className="flex items-baseline gap-2">
-              <span className="text-sm font-mono font-medium text-brand-vanilla">
-                {item.symbol.includes('BTC') || item.symbol.includes('ETH') ? '$' : ''}{item.value}
-              </span>
-              <span className={`text-xs font-medium ${
-                item.positive ? 'text-green-500' : 'text-red-500'
-              }`}>
-                {item.change}
-              </span>
-            </div>
-            {/* Mini trend chart */}
-            {item.trend && item.trend.length > 0 && (
-              <div className="mt-2 h-8 flex items-end gap-0.5">
-                {item.trend.map((value, idx) => {
-                  const max = Math.max(...item.trend!);
-                  const min = Math.min(...item.trend!);
-                  const range = max - min || 1;
-                  const height = ((value - min) / range) * 100;
-                  return (
-                    <div
-                      key={idx}
-                      className={`flex-1 rounded-t ${
-                        item.positive ? 'bg-green-500/50' : 'bg-red-500/50'
-                      }`}
-                      style={{ height: `${Math.max(height, 20)}%` }}
-                    />
-                  );
-                })}
+        {marketData.map((item) => {
+          // Format symbol for URL (handle special chars like ^VIX)
+          const urlSymbol = item.symbol.startsWith('^') 
+            ? encodeURIComponent(item.symbol) 
+            : item.symbol;
+            
+          return (
+            <Link
+              key={item.symbol}
+              href={`/finance/${urlSymbol}`}
+              className="flex flex-col p-3 bg-os-surface-dark rounded-lg hover:bg-os-surface-dark/80 hover:ring-1 hover:ring-brand-aperol/30 transition-all cursor-pointer group"
+            >
+              <div className="flex justify-between items-start mb-1">
+                <span className="text-xs font-medium text-os-text-secondary-dark truncate">
+                  {item.name}
+                </span>
+                <span className={`text-xs font-medium whitespace-nowrap ml-2 ${
+                  item.positive ? 'text-green-500' : 'text-red-500'
+                }`}>
+                  {item.positive ? '+' : ''}{item.changePercent.toFixed(2)}%
+                </span>
               </div>
-            )}
-          </div>
-        ))}
+              <div className="flex items-baseline gap-2">
+                <span className="text-sm font-mono font-medium text-brand-vanilla">
+                  {item.symbol.includes('BTC') || item.symbol.includes('ETH') ? '$' : ''}{item.value}
+                </span>
+                <span className={`text-xs font-medium ${
+                  item.positive ? 'text-green-500' : 'text-red-500'
+                }`}>
+                  {item.change}
+                </span>
+              </div>
+              {/* Sparkline Chart */}
+              {item.trend && item.trend.length > 1 && (
+                <div className="mt-2">
+                  <Sparkline data={item.trend} positive={item.positive} height={28} />
+                </div>
+              )}
+            </Link>
+          );
+        })}
       </div>
     </div>
   );
@@ -243,7 +304,13 @@ export function MarketWidget() {
         <div className="text-os-text-secondary-dark text-xs uppercase tracking-wider font-medium">
           Market Outlook
         </div>
-        <div className="text-xs text-red-500">{error}</div>
+        <div className="text-xs text-os-text-secondary-dark">{error}</div>
+        <button 
+          onClick={() => window.location.reload()}
+          className="text-xs text-brand-aperol hover:underline"
+        >
+          Retry
+        </button>
       </div>
     );
   }

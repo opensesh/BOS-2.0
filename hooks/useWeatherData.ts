@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { WeatherData } from '@/types';
 
 interface Location {
@@ -7,21 +7,72 @@ interface Location {
   name: string;
 }
 
-// Mock weather data for fallback
-const MOCK_WEATHER: WeatherData = {
-  temp: '72°',
-  condition: 'Clear',
-  location: 'San Francisco, CA',
-  high: '76°',
-  low: '58°',
-  forecast: [
-    { day: 'Mon', icon: 'clear', high: '76°', low: '58°' },
-    { day: 'Tue', icon: 'clouds', high: '74°', low: '59°' },
-    { day: 'Wed', icon: 'clouds', high: '70°', low: '57°' },
-    { day: 'Thu', icon: 'rain', high: '68°', low: '55°' },
-    { day: 'Fri', icon: 'clear', high: '71°', low: '56°' },
-  ],
-};
+const STORAGE_KEY = 'bos-weather-location';
+
+// Get stored location from localStorage
+function getStoredLocation(): Location | null {
+  if (typeof window === 'undefined') return null;
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    return stored ? JSON.parse(stored) : null;
+  } catch {
+    return null;
+  }
+}
+
+// Store location to localStorage
+function storeLocation(location: Location) {
+  if (typeof window === 'undefined') return;
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(location));
+}
+
+// Get weather condition description from WMO codes
+function getWeatherCondition(code: number): string {
+  const conditions: Record<number, string> = {
+    0: 'Clear',
+    1: 'Mostly Clear',
+    2: 'Partly Cloudy',
+    3: 'Overcast',
+    45: 'Foggy',
+    48: 'Icy Fog',
+    51: 'Light Drizzle',
+    53: 'Drizzle',
+    55: 'Heavy Drizzle',
+    56: 'Freezing Drizzle',
+    57: 'Heavy Freezing Drizzle',
+    61: 'Light Rain',
+    63: 'Rain',
+    65: 'Heavy Rain',
+    66: 'Freezing Rain',
+    67: 'Heavy Freezing Rain',
+    71: 'Light Snow',
+    73: 'Snow',
+    75: 'Heavy Snow',
+    77: 'Snow Grains',
+    80: 'Light Showers',
+    81: 'Showers',
+    82: 'Heavy Showers',
+    85: 'Light Snow Showers',
+    86: 'Heavy Snow Showers',
+    95: 'Thunderstorm',
+    96: 'Thunderstorm with Hail',
+    99: 'Heavy Thunderstorm',
+  };
+  return conditions[code] || 'Unknown';
+}
+
+// Get icon string from WMO code
+function getWeatherIcon(code: number): string {
+  if (code === 0 || code === 1) return 'clear';
+  if (code === 2) return 'partly cloudy';
+  if (code === 3 || code === 45 || code === 48) return 'cloudy';
+  if (code >= 51 && code <= 67) return 'rain';
+  if (code >= 71 && code <= 77) return 'snow';
+  if (code >= 80 && code <= 82) return 'showers';
+  if (code >= 85 && code <= 86) return 'snow showers';
+  if (code >= 95) return 'thunderstorm';
+  return 'clear';
+}
 
 export function useWeatherData() {
   const [weather, setWeather] = useState<WeatherData | null>(null);
@@ -29,110 +80,40 @@ export function useWeatherData() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const apiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
-
-  // Get user's location from browser
-  useEffect(() => {
-    const initWeather = async () => {
-      // If no API key, use mock data
-      if (!apiKey) {
-        console.log('No weather API key found, using mock data');
-        setWeather(MOCK_WEATHER);
-        setLocation({ lat: 37.7749, lon: -122.4194, name: 'San Francisco, CA' });
-        setLoading(false);
-        return;
-      }
-
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-          async (position) => {
-            const { latitude, longitude } = position.coords;
-            
-            try {
-              // Reverse geocode to get location name
-              const geoResponse = await fetch(
-                `https://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=${apiKey}`
-              );
-              const geoData = await geoResponse.json();
-              const locationName = geoData[0] 
-                ? `${geoData[0].name}, ${geoData[0].state || geoData[0].country}`
-                : `${latitude.toFixed(2)}, ${longitude.toFixed(2)}`;
-              
-              setLocation({ lat: latitude, lon: longitude, name: locationName });
-              await fetchWeatherData(latitude, longitude, locationName);
-            } catch (err) {
-              console.error('Error getting location name:', err);
-              setLocation({ 
-                lat: latitude, 
-                lon: longitude, 
-                name: `${latitude.toFixed(2)}, ${longitude.toFixed(2)}` 
-              });
-              await fetchWeatherData(latitude, longitude);
-            }
-          },
-          (err) => {
-            console.warn('Geolocation error:', err);
-            // Use mock data on geolocation error
-            setWeather(MOCK_WEATHER);
-            setLocation({ lat: 37.7749, lon: -122.4194, name: 'San Francisco, CA' });
-            setLoading(false);
-          }
-        );
-      } else {
-        // Browser doesn't support geolocation, use mock data
-        setWeather(MOCK_WEATHER);
-        setLocation({ lat: 37.7749, lon: -122.4194, name: 'San Francisco, CA' });
-        setLoading(false);
-      }
-    };
-
-    initWeather();
-  }, [apiKey]);
-
-  const fetchWeatherData = async (lat: number, lon: number, locationName?: string) => {
-    if (!apiKey) {
-      setWeather({ ...MOCK_WEATHER, location: locationName || MOCK_WEATHER.location });
-      setLoading(false);
-      return;
-    }
+  // Fetch weather from Open-Meteo API (free, no key required)
+  const fetchWeatherData = useCallback(async (lat: number, lon: number, locationName: string) => {
+    setLoading(true);
+    setError(null);
 
     try {
-      setLoading(true);
-      setError(null);
-
-      // Fetch current weather
-      const currentResponse = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`
-      );
+      // Fetch current weather and 7-day forecast from Open-Meteo
+      const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min&temperature_unit=fahrenheit&timezone=auto`;
       
-      if (!currentResponse.ok) {
+      const response = await fetch(url);
+      if (!response.ok) {
         throw new Error('Failed to fetch weather data');
       }
-      const currentData = await currentResponse.json();
+      
+      const data = await response.json();
+      
+      if (!data.current || !data.daily) {
+        throw new Error('Invalid weather data received');
+      }
 
-      // Fetch 5-day forecast
-      const forecastResponse = await fetch(
-        `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`
-      );
-      const forecastData = await forecastResponse.json();
-
-      // Process forecast data (get daily forecasts)
-      const dailyForecasts = forecastData.list
-        .filter((_: unknown, index: number) => index % 8 === 0)
-        .slice(0, 5)
-        .map((item: { dt: number; weather: { main: string }[]; main: { temp_max: number; temp_min: number } }) => ({
-          day: new Date(item.dt * 1000).toLocaleDateString('en-US', { weekday: 'short' }),
-          icon: item.weather[0].main.toLowerCase(),
-          high: `${Math.round(item.main.temp_max)}°`,
-          low: `${Math.round(item.main.temp_min)}°`,
-        }));
+      // Process forecast (skip today, get next 5 days)
+      const dailyForecasts = data.daily.time.slice(1, 6).map((date: string, index: number) => ({
+        day: new Date(date).toLocaleDateString('en-US', { weekday: 'short' }),
+        icon: getWeatherIcon(data.daily.weather_code[index + 1]),
+        high: `${Math.round(data.daily.temperature_2m_max[index + 1])}°`,
+        low: `${Math.round(data.daily.temperature_2m_min[index + 1])}°`,
+      }));
 
       const weatherData: WeatherData = {
-        temp: `${Math.round(currentData.main.temp)}°`,
-        condition: currentData.weather[0].main,
-        location: locationName || location?.name || 'Unknown',
-        high: `${Math.round(currentData.main.temp_max)}°`,
-        low: `${Math.round(currentData.main.temp_min)}°`,
+        temp: `${Math.round(data.current.temperature_2m)}°`,
+        condition: getWeatherCondition(data.current.weather_code),
+        location: locationName,
+        high: `${Math.round(data.daily.temperature_2m_max[0])}°`,
+        low: `${Math.round(data.daily.temperature_2m_min[0])}°`,
         forecast: dailyForecasts,
       };
 
@@ -140,17 +121,91 @@ export function useWeatherData() {
     } catch (err) {
       console.error('Weather fetch error:', err);
       setError(err instanceof Error ? err.message : 'Failed to fetch weather');
-      // Set mock data as fallback
-      setWeather({ ...MOCK_WEATHER, location: locationName || MOCK_WEATHER.location });
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
 
-  const updateLocation = async (newLocation: Location) => {
+  // Initialize - get stored location or use geolocation
+  useEffect(() => {
+    const initWeather = async () => {
+      // Try to get stored location first
+      const storedLocation = getStoredLocation();
+      
+      if (storedLocation) {
+        setLocation(storedLocation);
+        await fetchWeatherData(storedLocation.lat, storedLocation.lon, storedLocation.name);
+        return;
+      }
+
+      // Try geolocation
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          async (position) => {
+            const { latitude, longitude } = position.coords;
+            
+            try {
+              // Reverse geocode using Open-Meteo Geocoding
+              const geoResponse = await fetch(
+                `https://geocoding-api.open-meteo.com/v1/search?name=&latitude=${latitude}&longitude=${longitude}&count=1`
+              );
+              
+              // Fallback - just use coordinates as name
+              let locationName = `${latitude.toFixed(2)}°, ${longitude.toFixed(2)}°`;
+              
+              // Try to get a better name from nominatim
+              try {
+                const nominatimResponse = await fetch(
+                  `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`
+                );
+                const nominatimData = await nominatimResponse.json();
+                if (nominatimData.address) {
+                  const { city, town, village, state, country } = nominatimData.address;
+                  const place = city || town || village || 'Unknown';
+                  locationName = state ? `${place}, ${state}` : `${place}, ${country || ''}`;
+                }
+              } catch {
+                // Use coordinate-based name
+              }
+              
+              const newLocation = { lat: latitude, lon: longitude, name: locationName };
+              setLocation(newLocation);
+              storeLocation(newLocation);
+              await fetchWeatherData(latitude, longitude, locationName);
+            } catch (err) {
+              console.error('Error getting location:', err);
+              // Use default location
+              const defaultLocation = { lat: 40.7128, lon: -74.006, name: 'New York, NY' };
+              setLocation(defaultLocation);
+              await fetchWeatherData(defaultLocation.lat, defaultLocation.lon, defaultLocation.name);
+            }
+          },
+          (err) => {
+            console.warn('Geolocation error:', err);
+            // Use default location
+            const defaultLocation = { lat: 40.7128, lon: -74.006, name: 'New York, NY' };
+            setLocation(defaultLocation);
+            fetchWeatherData(defaultLocation.lat, defaultLocation.lon, defaultLocation.name);
+          },
+          { timeout: 5000 }
+        );
+      } else {
+        // No geolocation support, use default
+        const defaultLocation = { lat: 40.7128, lon: -74.006, name: 'New York, NY' };
+        setLocation(defaultLocation);
+        await fetchWeatherData(defaultLocation.lat, defaultLocation.lon, defaultLocation.name);
+      }
+    };
+
+    initWeather();
+  }, [fetchWeatherData]);
+
+  // Update location and refetch weather
+  const updateLocation = useCallback(async (newLocation: Location) => {
     setLocation(newLocation);
+    storeLocation(newLocation);
     await fetchWeatherData(newLocation.lat, newLocation.lon, newLocation.name);
-  };
+  }, [fetchWeatherData]);
 
   return {
     weather,

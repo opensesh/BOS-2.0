@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Sun, CloudSun, Cloud, CloudRain, MapPin, Loader2, Search, RotateCcw, Check } from 'lucide-react';
+import { Sun, CloudSun, Cloud, CloudRain, CloudSnow, CloudLightning, MapPin, Loader2, Search, RotateCcw, Check, AlertCircle } from 'lucide-react';
 import { useWeatherData } from '@/hooks/useWeatherData';
 import { FlipCard } from '@/components/ui/FlipCard';
 
@@ -13,6 +13,8 @@ const POPULAR_CITIES = [
   { name: 'Tokyo, JP', lat: 35.6762, lon: 139.6503 },
   { name: 'Paris, FR', lat: 48.8566, lon: 2.3522 },
   { name: 'Sydney, AU', lat: -33.8688, lon: 151.2093 },
+  { name: 'Miami, US', lat: 25.7617, lon: -80.1918 },
+  { name: 'Chicago, US', lat: 41.8781, lon: -87.6298 },
 ];
 
 function getWeatherIcon(condition: string, size: 'sm' | 'md' = 'sm') {
@@ -23,10 +25,16 @@ function getWeatherIcon(condition: string, size: 'sm' | 'md' = 'sm') {
   
   if (conditionLower.includes('clear') || conditionLower.includes('sun')) {
     return <Sun className={className} />;
-  } else if (conditionLower.includes('cloud')) {
-    return conditionLower.includes('partly') ? <CloudSun className={className} /> : <Cloud className={className} />;
-  } else if (conditionLower.includes('rain') || conditionLower.includes('drizzle')) {
+  } else if (conditionLower.includes('partly') || conditionLower.includes('few')) {
+    return <CloudSun className={className} />;
+  } else if (conditionLower.includes('cloud') || conditionLower.includes('overcast')) {
+    return <Cloud className={className} />;
+  } else if (conditionLower.includes('rain') || conditionLower.includes('drizzle') || conditionLower.includes('shower')) {
     return <CloudRain className={className} />;
+  } else if (conditionLower.includes('snow') || conditionLower.includes('sleet')) {
+    return <CloudSnow className={className} />;
+  } else if (conditionLower.includes('thunder') || conditionLower.includes('storm')) {
+    return <CloudLightning className={className} />;
   }
   return <Sun className={className} />;
 }
@@ -34,28 +42,34 @@ function getWeatherIcon(condition: string, size: 'sm' | 'md' = 'sm') {
 // Front face component - Weather display
 function WeatherDisplay({ 
   weather, 
-  onFlip 
+  onFlip,
+  loading,
 }: { 
   weather: NonNullable<ReturnType<typeof useWeatherData>['weather']>;
   onFlip: () => void;
+  loading: boolean;
 }) {
   return (
     <div className="flex flex-col gap-3">
       {/* Location header with flip trigger */}
-      <button 
-        onClick={onFlip}
-        className="flex items-center justify-between text-os-text-secondary-dark text-xs uppercase tracking-wider font-medium hover:text-brand-aperol transition-colors group w-full text-left"
-      >
-        <div className="flex items-center gap-1.5">
-          <MapPin className="w-3 h-3" />
-          <span className="truncate max-w-[140px]">{weather.location}</span>
-          <RotateCcw className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-1.5 text-os-text-secondary-dark text-xs uppercase tracking-wider font-medium min-w-0">
+          <MapPin className="w-3 h-3 shrink-0" />
+          <span className="truncate">{weather.location}</span>
+          {loading && <Loader2 className="w-3 h-3 animate-spin shrink-0" />}
         </div>
-        <div className="flex gap-2">
-          <span>H: {weather.high}</span>
-          <span>L: {weather.low}</span>
+        <div className="flex items-center gap-2 shrink-0">
+          <span className="text-xs text-os-text-secondary-dark">H: {weather.high}</span>
+          <span className="text-xs text-os-text-secondary-dark">L: {weather.low}</span>
+          <button
+            onClick={onFlip}
+            className="p-1 hover:bg-os-surface-dark rounded transition-colors"
+            title="Change location"
+          >
+            <RotateCcw className="w-3 h-3 text-os-text-secondary-dark hover:text-brand-aperol" />
+          </button>
         </div>
-      </button>
+      </div>
       
       {/* Current conditions */}
       <div className="flex items-center justify-between">
@@ -104,6 +118,7 @@ function LocationEditor({
   const [locationInput, setLocationInput] = useState('');
   const [searchResults, setSearchResults] = useState<Array<{ name: string; lat: number; lon: number }>>([]);
   const [isSearching, setIsSearching] = useState(false);
+  const [searchError, setSearchError] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
   // Focus input when component mounts
@@ -111,29 +126,39 @@ function LocationEditor({
     setTimeout(() => inputRef.current?.focus(), 100);
   }, []);
 
-  // Search for locations as user types
+  // Search for locations as user types using Open-Meteo Geocoding (free, no API key)
   useEffect(() => {
     if (!locationInput.trim() || locationInput.length < 2) {
       setSearchResults([]);
+      setSearchError(null);
       return;
     }
 
     const searchTimeout = setTimeout(async () => {
       setIsSearching(true);
+      setSearchError(null);
+      
       try {
-        const geoUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${encodeURIComponent(locationInput)}&limit=5&appid=${process.env.NEXT_PUBLIC_WEATHER_API_KEY || ''}`;
+        // Use Open-Meteo Geocoding API (free, no key required)
+        const geoUrl = `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(locationInput)}&count=5&language=en&format=json`;
         const response = await fetch(geoUrl);
         const data = await response.json();
         
-        if (Array.isArray(data)) {
-          setSearchResults(data.map((item: { lat: number; lon: number; name: string; state?: string; country: string }) => ({
-            name: item.state ? `${item.name}, ${item.state}, ${item.country}` : `${item.name}, ${item.country}`,
-            lat: item.lat,
-            lon: item.lon,
+        if (data.results && Array.isArray(data.results)) {
+          setSearchResults(data.results.map((item: { name: string; admin1?: string; country: string; latitude: number; longitude: number }) => ({
+            name: item.admin1 
+              ? `${item.name}, ${item.admin1}, ${item.country}` 
+              : `${item.name}, ${item.country}`,
+            lat: item.latitude,
+            lon: item.longitude,
           })));
+        } else {
+          setSearchResults([]);
         }
       } catch (err) {
         console.error('Error searching locations:', err);
+        setSearchError('Search failed. Try again.');
+        setSearchResults([]);
       } finally {
         setIsSearching(false);
       }
@@ -181,6 +206,14 @@ function LocationEditor({
         )}
       </div>
 
+      {/* Search Error */}
+      {searchError && (
+        <div className="flex items-center gap-2 text-xs text-red-500">
+          <AlertCircle className="w-3 h-3" />
+          {searchError}
+        </div>
+      )}
+
       {/* Search Results */}
       {searchResults.length > 0 && (
         <div className="max-h-[120px] overflow-y-auto -mx-1 px-1">
@@ -194,6 +227,13 @@ function LocationEditor({
               <span className="truncate">{city.name}</span>
             </button>
           ))}
+        </div>
+      )}
+
+      {/* No Results Message */}
+      {locationInput.length >= 2 && !isSearching && searchResults.length === 0 && !searchError && (
+        <div className="text-xs text-os-text-secondary-dark text-center py-2">
+          No cities found. Try a different search.
         </div>
       )}
 
@@ -272,7 +312,16 @@ export function WeatherWidget() {
   if (error && !weather) {
     return (
       <div className="flex flex-col gap-3">
-        <div className="text-xs text-red-500">{error}</div>
+        <div className="flex items-center gap-2 text-xs text-os-text-secondary-dark">
+          <AlertCircle className="w-4 h-4" />
+          <span>Unable to load weather</span>
+        </div>
+        <button 
+          onClick={() => window.location.reload()}
+          className="text-xs text-brand-aperol hover:underline"
+        >
+          Retry
+        </button>
       </div>
     );
   }
@@ -285,7 +334,8 @@ export function WeatherWidget() {
       front={
         <WeatherDisplay 
           weather={weather} 
-          onFlip={() => setIsFlipped(true)} 
+          onFlip={() => setIsFlipped(true)}
+          loading={loading}
         />
       }
       back={

@@ -5,7 +5,7 @@ const STORAGE_KEY_MARKET = 'bos-market-watchlist';
 const STORAGE_KEY_TRENDING = 'bos-trending-watchlist';
 
 // Default market indices and assets
-const DEFAULT_MARKET_SYMBOLS = ['SPY', 'QQQ', 'BTC-USD', 'VIX'];
+const DEFAULT_MARKET_SYMBOLS = ['SPY', 'QQQ', 'BTC-USD', '^VIX'];
 
 // Default trending companies
 const DEFAULT_TRENDING = [
@@ -22,6 +22,7 @@ const SYMBOL_METADATA: Record<string, { name: string; isCrypto?: boolean }> = {
   'QQQ': { name: 'NASDAQ 100 ETF' },
   'BTC-USD': { name: 'Bitcoin', isCrypto: true },
   'ETH-USD': { name: 'Ethereum', isCrypto: true },
+  '^VIX': { name: 'VIX Volatility' },
   'VIX': { name: 'VIX Volatility' },
   'DIA': { name: 'Dow Jones ETF' },
   'IWM': { name: 'Russell 2000 ETF' },
@@ -38,7 +39,7 @@ export const POPULAR_SYMBOLS = [
   { symbol: 'IWM', name: 'Russell 2000 ETF' },
   { symbol: 'BTC-USD', name: 'Bitcoin' },
   { symbol: 'ETH-USD', name: 'Ethereum' },
-  { symbol: 'VIX', name: 'VIX Volatility' },
+  { symbol: '^VIX', name: 'VIX Volatility' },
   { symbol: 'GLD', name: 'Gold ETF' },
 ];
 
@@ -53,98 +54,106 @@ export const POPULAR_COMPANIES = [
   { ticker: 'AMD', name: 'Advanced Micro Devices' },
 ];
 
-// Generate realistic mock data based on symbol
-function generateMockQuote(symbol: string, existingData?: MarketData): MarketData {
-  const metadata = SYMBOL_METADATA[symbol] || { name: symbol };
-  const isCrypto = metadata.isCrypto || symbol.includes('-USD');
-  
-  // Base values for different asset types
-  let baseValue: number;
-  if (symbol === 'SPY') baseValue = 595;
-  else if (symbol === 'QQQ') baseValue = 520;
-  else if (symbol === 'BTC-USD') baseValue = 95000;
-  else if (symbol === 'ETH-USD') baseValue = 3400;
-  else if (symbol === 'VIX') baseValue = 14;
-  else if (symbol === 'GLD') baseValue = 240;
-  else baseValue = 100 + Math.random() * 400;
-
-  // Use existing value if available for continuity
-  const currentValue = existingData 
-    ? parseFloat(existingData.value.replace(/,/g, ''))
-    : baseValue;
-
-  // Generate small random change
-  const changePercent = (Math.random() - 0.5) * 2; // -1% to +1%
-  const change = currentValue * (changePercent / 100);
-  const newValue = currentValue + change;
-  const positive = change >= 0;
-
-  // Generate trend data
-  const trend = existingData?.trend?.slice(1) || [];
-  trend.push(newValue);
-  while (trend.length < 10) {
-    trend.unshift(newValue - Math.random() * newValue * 0.02);
+// Fetch real market data from our finance API
+async function fetchRealQuote(symbol: string): Promise<MarketData | null> {
+  try {
+    const response = await fetch(`/api/finance?action=quote&symbol=${encodeURIComponent(symbol)}`);
+    if (!response.ok) return null;
+    
+    const data = await response.json();
+    const metadata = SYMBOL_METADATA[symbol] || { name: data.shortName || symbol };
+    const isCrypto = metadata.isCrypto || symbol.includes('-USD');
+    
+    return {
+      name: metadata.name || data.shortName || symbol,
+      symbol,
+      value: isCrypto 
+        ? data.regularMarketPrice?.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+        : data.regularMarketPrice?.toFixed(2) || '0.00',
+      change: `${data.regularMarketChange >= 0 ? '+' : ''}${data.regularMarketChange?.toFixed(2) || '0.00'}`,
+      changePercent: Math.abs(data.regularMarketChangePercent || 0),
+      positive: (data.regularMarketChange || 0) >= 0,
+      trend: [], // Will be populated from chart data
+    };
+  } catch (error) {
+    console.error(`Error fetching quote for ${symbol}:`, error);
+    return null;
   }
-
-  return {
-    name: metadata.name,
-    symbol,
-    value: isCrypto 
-      ? newValue.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
-      : newValue.toFixed(2),
-    change: `${positive ? '+' : ''}${change.toFixed(2)}`,
-    changePercent: Math.abs(changePercent),
-    positive,
-    trend: trend.slice(-10),
-  };
 }
 
-function generateMockCompanyQuote(company: { id: string; name: string; ticker: string }, existing?: TrendingCompany): TrendingCompany {
-  // Base prices for popular companies
-  const basePrices: Record<string, number> = {
-    'AAPL': 235,
-    'MSFT': 430,
-    'GOOGL': 175,
-    'AMZN': 210,
-    'NVDA': 145,
-    'META': 580,
-    'TSLA': 350,
-    'AMD': 140,
-    'AVGO': 185,
-    'MU': 105,
-  };
-
-  const basePrice = basePrices[company.ticker] || 100 + Math.random() * 200;
-  const currentPrice = existing 
-    ? parseFloat(existing.price.replace('$', ''))
-    : basePrice;
-
-  const changePercent = (Math.random() - 0.4) * 4; // Slight upward bias
-  const newPrice = currentPrice * (1 + changePercent / 100);
-  const positive = changePercent >= 0;
-
-  return {
-    id: company.id,
-    name: company.name,
-    ticker: company.ticker,
-    price: `$${newPrice.toFixed(2)}`,
-    change: `${positive ? '+' : ''}${changePercent.toFixed(2)}%`,
-    changePercent: Math.abs(changePercent),
-  };
+// Fetch sparkline/trend data for a symbol
+async function fetchTrendData(symbol: string): Promise<number[]> {
+  try {
+    const response = await fetch(`/api/finance?action=chart&symbol=${encodeURIComponent(symbol)}&range=1d`);
+    if (!response.ok) return [];
+    
+    const data = await response.json();
+    // Get last 10-20 data points for sparkline
+    const closes = (data.close || []).filter((v: number | null) => v !== null);
+    if (closes.length === 0) return [];
+    
+    // Sample evenly to get ~10 points
+    const step = Math.max(1, Math.floor(closes.length / 10));
+    const sampled = closes.filter((_: number, i: number) => i % step === 0).slice(-10);
+    return sampled;
+  } catch {
+    return [];
+  }
 }
 
-// Search for symbols using a mock search (in production, use a real API)
+// Fetch real company quote
+async function fetchRealCompanyQuote(company: { id: string; name: string; ticker: string }): Promise<TrendingCompany | null> {
+  try {
+    const response = await fetch(`/api/finance?action=quote&symbol=${encodeURIComponent(company.ticker)}`);
+    if (!response.ok) return null;
+    
+    const data = await response.json();
+    const changePercent = data.regularMarketChangePercent || 0;
+    
+    return {
+      id: company.id,
+      name: data.shortName || company.name,
+      ticker: company.ticker,
+      price: `$${data.regularMarketPrice?.toFixed(2) || '0.00'}`,
+      change: `${changePercent >= 0 ? '+' : ''}${changePercent.toFixed(2)}%`,
+      changePercent: Math.abs(changePercent),
+    };
+  } catch (error) {
+    console.error(`Error fetching company quote for ${company.ticker}:`, error);
+    return null;
+  }
+}
+
+// Search for symbols using real API
 export async function searchSymbols(query: string): Promise<Array<{ symbol: string; name: string; type: string }>> {
   if (!query || query.length < 1) return [];
   
+  try {
+    const response = await fetch(`/api/finance?action=search&query=${encodeURIComponent(query)}`);
+    if (!response.ok) {
+      // Fallback to local search
+      return localSearchSymbols(query);
+    }
+    
+    const data = await response.json();
+    return (data || []).map((item: { symbol: string; shortName?: string; longName?: string; type?: string }) => ({
+      symbol: item.symbol,
+      name: item.shortName || item.longName || item.symbol,
+      type: item.type || 'EQUITY',
+    }));
+  } catch {
+    return localSearchSymbols(query);
+  }
+}
+
+// Local fallback search
+function localSearchSymbols(query: string): Array<{ symbol: string; name: string; type: string }> {
   const upperQuery = query.toUpperCase();
   
-  // Search in popular symbols
   const symbolMatches = POPULAR_SYMBOLS.filter(s => 
     s.symbol.includes(upperQuery) || s.name.toUpperCase().includes(upperQuery)
   ).map(s => ({ symbol: s.symbol, name: s.name, type: 'ETF/Index' }));
 
-  // Search in popular companies
   const companyMatches = POPULAR_COMPANIES.filter(c => 
     c.ticker.includes(upperQuery) || c.name.toUpperCase().includes(upperQuery)
   ).map(c => ({ symbol: c.ticker, name: c.name, type: 'Stock' }));
@@ -187,53 +196,79 @@ export function useMarketData() {
     }
   }, [trendingWatchlist]);
 
-  // Fetch market data
+  // Fetch real market data
   useEffect(() => {
     if (marketSymbols.length === 0) return;
 
-    const fetchData = () => {
-      setMarketData(prev => 
-        marketSymbols.map(symbol => {
-          const existing = prev.find(d => d.symbol === symbol);
-          return generateMockQuote(symbol, existing);
-        })
-      );
-      setLoading(false);
+    const fetchData = async () => {
+      setLoading(true);
+      setError(null);
+      
+      try {
+        // Fetch quotes and trends in parallel
+        const results = await Promise.all(
+          marketSymbols.map(async (symbol) => {
+            const [quote, trend] = await Promise.all([
+              fetchRealQuote(symbol),
+              fetchTrendData(symbol),
+            ]);
+            
+            if (quote) {
+              return { ...quote, trend };
+            }
+            return null;
+          })
+        );
+        
+        const validResults = results.filter((r): r is MarketData => r !== null);
+        
+        if (validResults.length === 0) {
+          setError('Unable to fetch market data');
+        } else {
+          setMarketData(validResults);
+        }
+      } catch (err) {
+        console.error('Error fetching market data:', err);
+        setError('Failed to load market data');
+      } finally {
+        setLoading(false);
+      }
     };
 
-    // Initial fetch
     fetchData();
 
-    // Refresh every 30 seconds
-    const interval = setInterval(fetchData, 30000);
+    // Refresh every 60 seconds
+    const interval = setInterval(fetchData, 60000);
     return () => clearInterval(interval);
   }, [marketSymbols]);
 
-  // Fetch trending company data
+  // Fetch real trending company data
   useEffect(() => {
     if (trendingWatchlist.length === 0) return;
 
-    const fetchData = () => {
-      setTrendingCompanies(prev =>
-        trendingWatchlist.map(company => {
-          const existing = prev.find(c => c.id === company.id);
-          return generateMockCompanyQuote(company, existing);
-        })
-      );
+    const fetchData = async () => {
+      try {
+        const results = await Promise.all(
+          trendingWatchlist.map(company => fetchRealCompanyQuote(company))
+        );
+        
+        const validResults = results.filter((r): r is TrendingCompany => r !== null);
+        setTrendingCompanies(validResults);
+      } catch (err) {
+        console.error('Error fetching trending companies:', err);
+      }
     };
 
-    // Initial fetch
     fetchData();
 
-    // Refresh every 30 seconds
-    const interval = setInterval(fetchData, 30000);
+    // Refresh every 60 seconds
+    const interval = setInterval(fetchData, 60000);
     return () => clearInterval(interval);
   }, [trendingWatchlist]);
 
   // Add a market symbol
   const addMarketSymbol = useCallback((symbol: string, name?: string) => {
     if (!marketSymbols.includes(symbol)) {
-      // Also add to metadata if name provided
       if (name && !SYMBOL_METADATA[symbol]) {
         SYMBOL_METADATA[symbol] = { name };
       }

@@ -138,3 +138,4 @@ export function CompanyProfileSidebar({ profile }: { profile: Profile | null }) 
   );
 }
 
+
