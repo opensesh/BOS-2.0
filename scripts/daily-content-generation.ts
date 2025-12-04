@@ -101,6 +101,57 @@ interface RSSItem {
   description?: string;
   source: string;
   sourceCategory: NewsTopicCategory;
+  thumbnailUrl?: string; // Extracted from media:content, enclosure, or media:thumbnail
+}
+
+/**
+ * Extract thumbnail URL from RSS item XML
+ * Tries multiple common formats: media:content, enclosure, media:thumbnail, og:image in content
+ */
+function extractThumbnailUrl(itemXml: string): string | undefined {
+  // Try media:content with url attribute (most common for images)
+  const mediaContentMatch = itemXml.match(/<media:content[^>]*url=["']([^"']+)["'][^>]*(?:type=["']image\/[^"']+["'])?[^>]*\/?>/i);
+  if (mediaContentMatch && isImageUrl(mediaContentMatch[1])) {
+    return mediaContentMatch[1];
+  }
+  
+  // Try media:thumbnail
+  const mediaThumbnailMatch = itemXml.match(/<media:thumbnail[^>]*url=["']([^"']+)["'][^>]*\/?>/i);
+  if (mediaThumbnailMatch) {
+    return mediaThumbnailMatch[1];
+  }
+  
+  // Try enclosure with image type
+  const enclosureMatch = itemXml.match(/<enclosure[^>]*url=["']([^"']+)["'][^>]*type=["']image\/[^"']+["'][^>]*\/?>/i);
+  if (enclosureMatch) {
+    return enclosureMatch[1];
+  }
+  
+  // Try enclosure without type (check if URL looks like an image)
+  const enclosureAnyMatch = itemXml.match(/<enclosure[^>]*url=["']([^"']+)["'][^>]*\/?>/i);
+  if (enclosureAnyMatch && isImageUrl(enclosureAnyMatch[1])) {
+    return enclosureAnyMatch[1];
+  }
+  
+  // Try to find image URL in content or description (common in some feeds)
+  const imgMatch = itemXml.match(/<img[^>]*src=["']([^"']+)["'][^>]*\/?>/i);
+  if (imgMatch && isImageUrl(imgMatch[1])) {
+    return imgMatch[1];
+  }
+  
+  return undefined;
+}
+
+/**
+ * Check if a URL looks like an image URL
+ */
+function isImageUrl(url: string): boolean {
+  const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.avif'];
+  const urlLower = url.toLowerCase();
+  return imageExtensions.some(ext => urlLower.includes(ext)) || 
+         urlLower.includes('/image') || 
+         urlLower.includes('thumbnail') ||
+         urlLower.includes('wp-content/uploads');
 }
 
 /**
@@ -123,6 +174,9 @@ function parseRSS(xml: string, source: RSSSource): RSSItem[] {
                       itemXml.match(/<dc:date[^>]*>(.*?)<\/dc:date>/i);
     const descMatch = itemXml.match(/<description[^>]*>(?:<!\[CDATA\[)?([\s\S]*?)(?:\]\]>)?<\/description>/i);
     
+    // Extract thumbnail URL from media:content, enclosure, or media:thumbnail
+    const thumbnailUrl = extractThumbnailUrl(itemXml);
+    
     if (titleMatch) {
       // Decode HTML entities and clean up the title
       const rawTitle = titleMatch[1].trim().replace(/<[^>]+>/g, '');
@@ -143,6 +197,7 @@ function parseRSS(xml: string, source: RSSSource): RSSItem[] {
           description,
           source: source.name,
           sourceCategory: source.category,
+          thumbnailUrl,
         });
       }
     }
@@ -160,6 +215,9 @@ function parseRSS(xml: string, source: RSSSource): RSSItem[] {
                         entryXml.match(/<updated[^>]*>(.*?)<\/updated>/i);
       const summaryMatch = entryXml.match(/<summary[^>]*>(?:<!\[CDATA\[)?([\s\S]*?)(?:\]\]>)?<\/summary>/i) ||
                            entryXml.match(/<content[^>]*>(?:<!\[CDATA\[)?([\s\S]*?)(?:\]\]>)?<\/content>/i);
+      
+      // Extract thumbnail URL from Atom entry
+      const thumbnailUrl = extractThumbnailUrl(entryXml);
       
       if (titleMatch) {
         // Decode HTML entities and clean up the title
@@ -181,6 +239,7 @@ function parseRSS(xml: string, source: RSSSource): RSSItem[] {
             description,
             source: source.name,
             sourceCategory: source.category,
+            thumbnailUrl,
           });
         }
       }
@@ -259,9 +318,10 @@ interface ClusteredTopic {
   title: string;
   description?: string;
   pubDate: string;
-  sources: Array<{ name: string; url: string }>;
+  sources: Array<{ name: string; url: string; thumbnailUrl?: string }>;
   sourceCategory: NewsTopicCategory;
   score: number;
+  thumbnailUrl?: string; // Best thumbnail from sources
 }
 
 /**
@@ -322,9 +382,10 @@ function clusterSimilarTopics(items: RSSItem[]): ClusteredTopic[] {
       title: item.title,
       description: item.description,
       pubDate: item.pubDate,
-      sources: [{ name: item.source, url: item.link }],
+      sources: [{ name: item.source, url: item.link, thumbnailUrl: item.thumbnailUrl }],
       sourceCategory: item.sourceCategory,
       score: 0,
+      thumbnailUrl: item.thumbnailUrl, // Use first item's thumbnail as default
     };
     
     assigned.add(i);
@@ -344,7 +405,7 @@ function clusterSimilarTopics(items: RSSItem[]): ClusteredTopic[] {
         );
         
         if (!sourceExists) {
-          cluster.sources.push({ name: otherItem.source, url: otherItem.link });
+          cluster.sources.push({ name: otherItem.source, url: otherItem.link, thumbnailUrl: otherItem.thumbnailUrl });
         }
         
         // Use longer description
@@ -360,6 +421,11 @@ function clusterSimilarTopics(items: RSSItem[]): ClusteredTopic[] {
             cluster.pubDate = otherItem.pubDate;
           }
         } catch { /* ignore */ }
+        
+        // Use thumbnail if cluster doesn't have one yet
+        if (!cluster.thumbnailUrl && otherItem.thumbnailUrl) {
+          cluster.thumbnailUrl = otherItem.thumbnailUrl;
+        }
         
         assigned.add(j);
       }
@@ -643,11 +709,15 @@ async function generateFeaturedArticles(
     console.log(`  [${i + 1}/${targetCount}] Generating: "${cluster.title.substring(0, 50)}..."`);
     
     try {
+      // Get hero image first (while waiting for Perplexity)
+      console.log(`    🖼️ Finding hero image...`);
+      const heroImageUrl = await getHeroImage(cluster, classifyCluster(cluster));
+      
       // Use the Perplexity article generator to create rich content
       console.log(`    📡 Calling Perplexity API...`);
       const result = await generateDiscoverArticle(
         cluster.title,
-        cluster.sources
+        cluster.sources.map(s => ({ name: s.name, url: s.url, thumbnailUrl: s.thumbnailUrl }))
       );
       
       // Validate we got actual content
@@ -671,26 +741,49 @@ async function generateFeaturedArticles(
         title: s.title || cluster.title,
       }));
       
-      // Convert sections to DiscoverSection format
+      // Pre-distribute sources across paragraphs for uniqueness
+      const usedSourceIds = new Set<string>();
+      const totalParagraphCount = result.sections.reduce((sum, s) => sum + s.paragraphs.length, 0);
+      const sourcesPerParagraph = Math.max(2, Math.floor(allSources.length / Math.max(1, totalParagraphCount)));
+      let globalSourceIndex = 0;
+      
+      // Convert sections to DiscoverSection format with unique source distribution
       const sections: DiscoverSection[] = result.sections.map((section, sectionIdx) => ({
         id: `section-${sectionIdx}`,
         title: section.title,
         paragraphs: section.paragraphs.map((para, paraIdx) => {
-          // Convert source IDs to CitationChips
-          const citations: CitationChip[] = [];
-          if (para.sourceIds.length > 0) {
-            const primarySourceId = para.sourceIds[0];
-            const primarySource = allSources.find(s => s.id === primarySourceId);
-            
-            if (primarySource) {
-              citations.push({
-                primarySource,
-                additionalCount: Math.max(0, para.sourceIds.length - 1),
-                additionalSources: para.sourceIds.slice(1)
-                  .map(id => allSources.find(s => s.id === id))
-                  .filter((s): s is typeof primarySource => s !== undefined),
-              });
+          // Get sources for this paragraph - prefer LLM-assigned, fallback to sequential
+          const paragraphSources: typeof allSources = [];
+          
+          // First, try to use LLM-assigned sources that haven't been used
+          for (const sourceId of para.sourceIds) {
+            if (!usedSourceIds.has(sourceId) && paragraphSources.length < sourcesPerParagraph) {
+              const source = allSources.find(s => s.id === sourceId);
+              if (source) {
+                paragraphSources.push(source);
+                usedSourceIds.add(sourceId);
+              }
             }
+          }
+          
+          // If we need more sources, grab unused ones sequentially
+          while (paragraphSources.length < Math.min(3, sourcesPerParagraph) && globalSourceIndex < allSources.length) {
+            const source = allSources[globalSourceIndex];
+            if (!usedSourceIds.has(source.id)) {
+              paragraphSources.push(source);
+              usedSourceIds.add(source.id);
+            }
+            globalSourceIndex++;
+          }
+          
+          // Build citation chip
+          const citations: CitationChip[] = [];
+          if (paragraphSources.length > 0) {
+            citations.push({
+              primarySource: paragraphSources[0],
+              additionalCount: Math.max(0, paragraphSources.length - 1),
+              additionalSources: paragraphSources.slice(1),
+            });
           }
           
           return {
@@ -718,7 +811,7 @@ async function generateFeaturedArticles(
         slug,
         title: result.title || cluster.title,
         summary: cluster.description || '',
-        heroImageUrl: result.heroImageUrl,
+        heroImageUrl: heroImageUrl || result.heroImageUrl, // Use our fetched image or fallback to result
         publishedAt: new Date().toISOString(),
         sources: allSources,
         sections,
@@ -913,6 +1006,116 @@ function buildPexelsQuery(title: string, category?: string): string {
   
   // Combine with core concept, always adding "abstract" to avoid stock photo look
   return `${coreConcept} ${modifier}`;
+}
+
+/**
+ * Fetch OG image from a URL by parsing meta tags
+ * Used as fallback when RSS doesn't provide a thumbnail
+ */
+async function fetchOgImage(url: string): Promise<string | undefined> {
+  try {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 5000); // 5s timeout
+    
+    const response = await fetch(url, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (compatible; BOSContentBot/1.0)',
+        'Accept': 'text/html',
+      },
+      signal: controller.signal,
+    });
+    
+    clearTimeout(timeout);
+    
+    if (!response.ok) return undefined;
+    
+    // Only read first 50KB to find og:image in head
+    const reader = response.body?.getReader();
+    if (!reader) return undefined;
+    
+    let html = '';
+    const decoder = new TextDecoder();
+    
+    while (html.length < 50000) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      html += decoder.decode(value, { stream: true });
+      
+      // Stop early if we've found </head>
+      if (html.includes('</head>')) break;
+    }
+    
+    reader.cancel();
+    
+    // Try various OG image meta tags
+    const ogPatterns = [
+      /<meta[^>]*property=["']og:image["'][^>]*content=["']([^"']+)["']/i,
+      /<meta[^>]*content=["']([^"']+)["'][^>]*property=["']og:image["']/i,
+      /<meta[^>]*name=["']twitter:image["'][^>]*content=["']([^"']+)["']/i,
+      /<meta[^>]*content=["']([^"']+)["'][^>]*name=["']twitter:image["']/i,
+    ];
+    
+    for (const pattern of ogPatterns) {
+      const match = html.match(pattern);
+      if (match && match[1]) {
+        const imageUrl = match[1];
+        // Make sure it's a valid image URL
+        if (imageUrl.startsWith('http') && isImageUrl(imageUrl)) {
+          return imageUrl;
+        }
+      }
+    }
+    
+    return undefined;
+  } catch {
+    return undefined;
+  }
+}
+
+/**
+ * Get hero image for an article with fallback chain:
+ * 1. RSS thumbnail from cluster
+ * 2. OG image from first source URL
+ * 3. Pexels API search
+ */
+async function getHeroImage(
+  cluster: ClusteredTopic,
+  category?: string
+): Promise<string | undefined> {
+  // 1. Try RSS thumbnail first
+  if (cluster.thumbnailUrl) {
+    console.log(`    🖼️ Using RSS thumbnail: ${cluster.thumbnailUrl.substring(0, 60)}...`);
+    return cluster.thumbnailUrl;
+  }
+  
+  // 2. Try thumbnail from any source
+  for (const source of cluster.sources) {
+    if (source.thumbnailUrl) {
+      console.log(`    🖼️ Using source thumbnail from ${source.name}`);
+      return source.thumbnailUrl;
+    }
+  }
+  
+  // 3. Try OG image from first 2 sources
+  for (const source of cluster.sources.slice(0, 2)) {
+    console.log(`    🔍 Checking OG image from ${source.name}...`);
+    const ogImage = await fetchOgImage(source.url);
+    if (ogImage) {
+      console.log(`    🖼️ Found OG image from ${source.name}`);
+      return ogImage;
+    }
+  }
+  
+  // 4. Fall back to Pexels
+  console.log(`    🎨 Fetching Pexels image as fallback...`);
+  const pexelsImage = await fetchPexelsImage(cluster.title, category);
+  if (pexelsImage) {
+    console.log(`    🖼️ Using Pexels image`);
+    return pexelsImage;
+  }
+  
+  console.log(`    ⚠️ No hero image found`);
+  return undefined;
 }
 
 /**

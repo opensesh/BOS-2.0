@@ -27,34 +27,50 @@ function generateSlug(title: string): string {
 
 /**
  * Distribute sources into citation chips for paragraphs
- * Ensures each paragraph gets unique sources not used elsewhere
+ * Creates a single chip with primary source and additional sources
  */
 function distributeSourcesToChips(
   paragraphSourceIds: string[],
-  allSources: Array<{ id: string; name: string; url: string; favicon: string }>
+  allSources: Array<{ id: string; name: string; url: string; favicon: string }>,
+  usedSourceIds: Set<string>
 ): CitationChip[] {
   const chips: CitationChip[] = [];
-  const usedSources = paragraphSourceIds
+  
+  // Find available sources for this paragraph (not used elsewhere)
+  let availableSources = paragraphSourceIds
+    .filter(id => !usedSourceIds.has(id))
     .map(id => allSources.find(s => s.id === id))
     .filter((s): s is typeof allSources[0] => s !== undefined);
 
-  if (usedSources.length === 0) {
-    // Fallback: assign some sources if none were found
-    const fallbackSources = allSources.slice(0, 3);
-    if (fallbackSources.length > 0) {
-      chips.push({
-        primarySource: fallbackSources[0],
-        additionalCount: fallbackSources.length - 1,
-        additionalSources: fallbackSources.slice(1),
-      });
+  // If no unique sources, use some that might be duplicates (better than nothing)
+  if (availableSources.length === 0) {
+    availableSources = paragraphSourceIds
+      .map(id => allSources.find(s => s.id === id))
+      .filter((s): s is typeof allSources[0] => s !== undefined);
+  }
+
+  // Still no sources? Use fallback from allSources
+  if (availableSources.length === 0) {
+    // Find sources not yet used at all
+    const unusedSources = allSources.filter(s => !usedSourceIds.has(s.id)).slice(0, 3);
+    if (unusedSources.length > 0) {
+      availableSources = unusedSources;
+    } else {
+      // Last resort: just use first few sources
+      availableSources = allSources.slice(0, 3);
     }
+  }
+
+  if (availableSources.length === 0) {
     return chips;
   }
 
-  // Group sources into 1-2 chips per paragraph
-  // Primary source + additional sources
-  const primarySource = usedSources[0];
-  const additionalSources = usedSources.slice(1);
+  // Mark these sources as used
+  availableSources.forEach(s => usedSourceIds.add(s.id));
+
+  // Create a single chip with all sources for this paragraph
+  const primarySource = availableSources[0];
+  const additionalSources = availableSources.slice(1);
 
   chips.push({
     primarySource,
@@ -62,19 +78,58 @@ function distributeSourcesToChips(
     additionalSources,
   });
 
-  // If we have many sources (5+), create a second chip
-  if (usedSources.length >= 5) {
-    const secondGroup = additionalSources.slice(2);
-    if (secondGroup.length > 0) {
-      chips.push({
-        primarySource: secondGroup[0],
-        additionalCount: secondGroup.length - 1,
-        additionalSources: secondGroup.slice(1),
-      });
-    }
-  }
-
   return chips;
+}
+
+/**
+ * Pre-distribute sources across all paragraphs to ensure uniqueness
+ * Returns a map of paragraph index to source IDs
+ */
+function preDistributeSources(
+  rawSections: Array<{ paragraphs: Array<{ sourceIds: string[] }> }>,
+  allSources: Array<{ id: string; name: string; url: string; favicon: string }>
+): Map<string, string[]> {
+  const distribution = new Map<string, string[]>();
+  const usedSourceIds = new Set<string>();
+  const totalParagraphs = rawSections.reduce((sum, s) => sum + s.paragraphs.length, 0);
+  const sourcesPerParagraph = Math.max(2, Math.floor(allSources.length / totalParagraphs));
+  
+  let sourceIndex = 0;
+  
+  rawSections.forEach((section, sectionIdx) => {
+    section.paragraphs.forEach((para, paraIdx) => {
+      const key = `${sectionIdx}-${paraIdx}`;
+      const sources: string[] = [];
+      
+      // First, try to use the sources assigned by the LLM
+      for (const sourceId of para.sourceIds) {
+        if (!usedSourceIds.has(sourceId) && sources.length < sourcesPerParagraph) {
+          sources.push(sourceId);
+          usedSourceIds.add(sourceId);
+        }
+      }
+      
+      // If we need more sources, grab unused ones sequentially
+      while (sources.length < Math.min(3, sourcesPerParagraph)) {
+        // Find next unused source
+        while (sourceIndex < allSources.length && usedSourceIds.has(allSources[sourceIndex].id)) {
+          sourceIndex++;
+        }
+        
+        if (sourceIndex < allSources.length) {
+          sources.push(allSources[sourceIndex].id);
+          usedSourceIds.add(allSources[sourceIndex].id);
+          sourceIndex++;
+        } else {
+          break; // No more sources available
+        }
+      }
+      
+      distribution.set(key, sources);
+    });
+  });
+  
+  return distribution;
 }
 
 /**
@@ -104,25 +159,22 @@ function buildDiscoverArticle(
   const slug = generateSlug(title);
   const now = new Date().toISOString();
 
-  // Track used sources to ensure uniqueness across paragraphs
+  // Pre-distribute sources across all paragraphs for uniqueness
+  const sourceDistribution = preDistributeSources(rawSections, allSources);
+  
+  // Track used sources for citation chip building
   const usedSourceIds = new Set<string>();
 
   // Transform sections
   const sections: DiscoverSection[] = rawSections.map((rawSection, sectionIdx) => {
     const paragraphs: DiscoverParagraph[] = rawSection.paragraphs.map((rawPara, paraIdx) => {
-      // Filter to only unused sources for this paragraph
-      const availableSourceIds = rawPara.sourceIds.filter(id => !usedSourceIds.has(id));
+      const key = `${sectionIdx}-${paraIdx}`;
       
-      // If no unique sources, use the original (better than nothing)
-      const sourceIdsToUse = availableSourceIds.length > 0 
-        ? availableSourceIds 
-        : rawPara.sourceIds;
+      // Get pre-distributed sources for this paragraph
+      const sourceIdsToUse = sourceDistribution.get(key) || rawPara.sourceIds;
 
-      // Mark sources as used
-      sourceIdsToUse.forEach(id => usedSourceIds.add(id));
-
-      // Build citation chips
-      const citations = distributeSourcesToChips(sourceIdsToUse, allSources);
+      // Build citation chips with tracking
+      const citations = distributeSourcesToChips(sourceIdsToUse, allSources, usedSourceIds);
 
       return {
         id: `para-${sectionIdx}-${paraIdx}`,
