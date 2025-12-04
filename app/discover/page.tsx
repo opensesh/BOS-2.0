@@ -9,6 +9,9 @@ import { CardGrid } from '@/components/discover/CardGrid';
 import { IdeaCardGrid } from '@/components/discover/IdeaCardGrid';
 import { WidgetPanel } from '@/components/discover/WidgetPanel';
 import { AddToSpaceModal } from '@/components/discover/AddToSpaceModal';
+import { SettingsDrawer } from '@/components/discover/SettingsDrawer';
+import { NewsSettingsContent } from '@/components/discover/NewsSettingsContent';
+import { IdeasSettingsContent } from '@/components/discover/IdeasSettingsContent';
 import { useDiscoverData } from '@/hooks/useDiscoverData';
 import { Sidebar } from '@/components/Sidebar';
 import { SourcesDrawer } from '@/components/chat/SourcesDrawer';
@@ -74,6 +77,9 @@ function DiscoverContent() {
   const [isSavedDrawerOpen, setIsSavedDrawerOpen] = useState(false);
   const [savedArticles, setSavedArticles] = useState<SavedArticle[]>([]);
   const [savedArticleIds, setSavedArticleIds] = useState<Set<string>>(new Set());
+  
+  // Settings Drawer State
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   
   // Add to Space Modal State
   const [isAddToSpaceOpen, setIsAddToSpaceOpen] = useState(false);
@@ -214,6 +220,9 @@ function DiscoverContent() {
 
   const currentCards = getCurrentCards();
 
+  // Get settings title based on active tab
+  const settingsTitle = activeTab === 'News' ? 'News Settings' : 'Ideas Settings';
+
   return (
     <div className="flex h-screen bg-os-bg-dark dark:bg-os-bg-dark text-os-text-primary-dark font-sans">
       <Sidebar />
@@ -226,6 +235,7 @@ function DiscoverContent() {
           onTypeChange={handleTypeChange}
           savedCount={savedArticles.length}
           onOpenSaved={() => setIsSavedDrawerOpen(true)}
+          onSettingsClick={() => setIsSettingsOpen(true)}
           sortOption={sortOption}
           onSortChange={setSortOption}
         />
@@ -324,6 +334,19 @@ function DiscoverContent() {
         onRemove={handleRemoveSavedArticle}
         onArticleClick={handleSavedArticleClick}
       />
+
+      {/* Settings Drawer - Page Specific Content */}
+      <SettingsDrawer
+        isOpen={isSettingsOpen}
+        onClose={() => setIsSettingsOpen(false)}
+        title={settingsTitle}
+      >
+        {activeTab === 'News' ? (
+          <NewsSettingsContent />
+        ) : (
+          <IdeasSettingsContent />
+        )}
+      </SettingsDrawer>
 
       {/* Add to Space Modal */}
       <AddToSpaceModal

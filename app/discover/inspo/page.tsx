@@ -32,7 +32,7 @@ const VALID_VIEW_MODES: ViewMode[] = ['sphere', 'galaxy', 'grid', 'nebula', 'sta
 function InspoContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const { viewMode, setViewMode, isTransitioning } = useInspoStore();
+  const { viewMode, setViewMode, isTransitioning, togglePanel } = useInspoStore();
 
   // Sync URL param with store on mount
   useEffect(() => {
@@ -59,6 +59,7 @@ function InspoContent() {
             viewMode={viewMode}
             onViewModeChange={handleViewModeChange}
             isTransitioning={isTransitioning}
+            onSettingsClick={togglePanel}
           />
         </div>
 
@@ -72,7 +73,7 @@ function InspoContent() {
           <InspoCanvas />
         </motion.div>
 
-        {/* Control Panel - floating */}
+        {/* Control Panel - drawer */}
         <ControlPanel />
       </main>
     </div>

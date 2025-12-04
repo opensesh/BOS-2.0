@@ -13,17 +13,13 @@ import {
 } from '@/lib/utils/particle-layouts';
 import { useInspoStore, ViewMode } from '@/lib/stores/inspo-store';
 
-// Brand colors
-const APEROL = new THREE.Color('#FE5102');
-const VANILLA = new THREE.Color('#FFFAEE');
-
 interface ParticleSystemProps {
   radius?: number;
 }
 
 export default function ParticleSystem({ radius = 15 }: ParticleSystemProps) {
   const meshRef = useRef<THREE.InstancedMesh>(null);
-  const colorsRef = useRef<THREE.InstancedBufferAttribute | null>(null);
+  const groupRef = useRef<THREE.Group>(null);
   
   // Get store values
   const viewMode = useInspoStore((state) => state.viewMode);
@@ -31,6 +27,11 @@ export default function ParticleSystem({ radius = 15 }: ParticleSystemProps) {
   const { particleCount, particleSize, animationSpeed, autoPlay } = useInspoStore(
     (state) => state.particleSettings
   );
+  const { innerColor, outerColor } = useInspoStore((state) => state.colorSettings);
+
+  // Create THREE.Color objects from hex strings
+  const innerColorObj = useMemo(() => new THREE.Color(innerColor), [innerColor]);
+  const outerColorObj = useMemo(() => new THREE.Color(outerColor), [outerColor]);
 
   // Generate all layouts with current count
   const layouts = useMemo(() => ({
@@ -77,10 +78,10 @@ export default function ParticleSystem({ radius = 15 }: ParticleSystemProps) {
       const y = positions[i * 3 + 1];
       const z = positions[i * 3 + 2];
       const distance = Math.sqrt(x * x + y * y + z * z);
-      const t = distance / maxDistance; // 0 = center (Aperol), 1 = edge (Vanilla)
+      const t = distance / maxDistance; // 0 = center (inner), 1 = edge (outer)
       
-      // Lerp between Aperol and Vanilla
-      tempColor.copy(APEROL).lerp(VANILLA, t);
+      // Lerp between inner and outer colors
+      tempColor.copy(innerColorObj).lerp(outerColorObj, t);
       
       colors[i * 3] = tempColor.r;
       colors[i * 3 + 1] = tempColor.g;
@@ -88,7 +89,7 @@ export default function ParticleSystem({ radius = 15 }: ParticleSystemProps) {
     }
     
     return colors;
-  }, []);
+  }, [innerColorObj, outerColorObj]);
 
   // Handle particle count changes - regenerate positions
   useEffect(() => {
@@ -98,6 +99,14 @@ export default function ParticleSystem({ radius = 15 }: ParticleSystemProps) {
       prevCountRef.current = particleCount;
     }
   }, [particleCount, viewMode, getTargetPositions]);
+
+  // Reset rotation and center when viewMode changes
+  useEffect(() => {
+    if (groupRef.current) {
+      // Reset rotation for clean transition
+      groupRef.current.rotation.set(0, 0, 0);
+    }
+  }, [viewMode]);
 
   // Handle viewMode changes with smooth transition
   useEffect(() => {
@@ -171,33 +180,32 @@ export default function ParticleSystem({ radius = 15 }: ParticleSystemProps) {
     if (meshRef.current.geometry) {
       const colorAttribute = new THREE.InstancedBufferAttribute(colors, 3);
       meshRef.current.geometry.setAttribute('color', colorAttribute);
-      colorsRef.current = colorAttribute;
     }
   }, [currentPositions, particleCount, calculateColors]);
 
   // Animation loop - rotation based on mode and settings
   useFrame((_, delta) => {
-    if (!meshRef.current || !autoPlay || isTransitioning) return;
+    if (!groupRef.current || !autoPlay || isTransitioning) return;
     
     const speed = animationSpeed * delta;
     
     // Different animation behaviors per mode
     switch (viewMode) {
       case 'sphere':
-        meshRef.current.rotation.y += speed * 0.5;
+        groupRef.current.rotation.y += speed * 0.5;
         break;
       case 'galaxy':
-        meshRef.current.rotation.y += speed * 0.3;
+        groupRef.current.rotation.y += speed * 0.3;
         break;
       case 'vortex':
-        meshRef.current.rotation.y += speed * 0.8;
+        groupRef.current.rotation.y += speed * 0.8;
         break;
       case 'nebula':
-        meshRef.current.rotation.y += speed * 0.1;
-        meshRef.current.rotation.x += speed * 0.05;
+        groupRef.current.rotation.y += speed * 0.1;
+        groupRef.current.rotation.x += speed * 0.05;
         break;
       case 'starfield':
-        meshRef.current.rotation.y += speed * 0.02;
+        groupRef.current.rotation.y += speed * 0.02;
         break;
       case 'grid':
         // Grid stays static by default
@@ -206,9 +214,11 @@ export default function ParticleSystem({ radius = 15 }: ParticleSystemProps) {
   });
 
   return (
-    <instancedMesh ref={meshRef} args={[undefined, undefined, particleCount]}>
-      <sphereGeometry args={[particleSize, 8, 8]} />
-      <meshBasicMaterial vertexColors />
-    </instancedMesh>
+    <group ref={groupRef} position={[0, 0, 0]}>
+      <instancedMesh ref={meshRef} args={[undefined, undefined, particleCount]}>
+        <sphereGeometry args={[particleSize, 8, 8]} />
+        <meshBasicMaterial vertexColors />
+      </instancedMesh>
+    </group>
   );
 }

@@ -11,6 +11,7 @@ interface InspoHeaderProps {
   isTransitioning: boolean;
   savedCount?: number;
   onOpenSaved?: () => void;
+  onSettingsClick?: () => void;
 }
 
 const VIEW_MODE_OPTIONS: { id: ViewMode; label: string; icon: typeof Globe }[] = [
@@ -28,6 +29,7 @@ export function InspoHeader({
   isTransitioning,
   savedCount = 0,
   onOpenSaved,
+  onSettingsClick,
 }: InspoHeaderProps) {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const filterRef = useRef<HTMLDivElement>(null);
@@ -143,6 +145,7 @@ export function InspoHeader({
 
         {/* Settings */}
         <button
+          onClick={onSettingsClick}
           className="p-2 rounded-lg hover:bg-os-surface-dark transition-colors group"
           title="Settings"
         >

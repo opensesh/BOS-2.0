@@ -3,7 +3,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { Settings, Bookmark, ChevronDown, ArrowUpDown, Check, X, Filter, SlidersHorizontal } from 'lucide-react';
-import { SourcesSettings } from './SourcesSettings';
 import { NewsTopicCategory, NEWS_TOPIC_LABELS } from '@/types';
 
 type MainTabType = 'News' | 'Ideas';
@@ -18,6 +17,7 @@ interface DiscoverHeaderProps {
   onTypeChange: (type: NewsTypeOption | IdeasTypeOption) => void;
   savedCount?: number;
   onOpenSaved?: () => void;
+  onSettingsClick?: () => void;
   sortOption?: SortOption;
   onSortChange?: (sort: SortOption) => void;
 }
@@ -56,12 +56,12 @@ export function DiscoverHeader({
   onTypeChange,
   savedCount = 0,
   onOpenSaved,
+  onSettingsClick,
   sortOption = 'newest',
   onSortChange,
 }: DiscoverHeaderProps) {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [isSortOpen, setIsSortOpen] = useState(false);
-  const [isSourcesOpen, setIsSourcesOpen] = useState(false);
   const [isManageCategoriesOpen, setIsManageCategoriesOpen] = useState(false);
   const [visibleCategories, setVisibleCategories] = useState<NewsTypeOption[]>(['all', ...Object.keys(NEWS_TOPIC_LABELS) as NewsTopicCategory[]]);
   const filterRef = useRef<HTMLDivElement>(null);
@@ -299,7 +299,7 @@ export function DiscoverHeader({
 
           {/* Settings */}
           <button
-            onClick={() => setIsSourcesOpen(true)}
+            onClick={onSettingsClick}
             className="p-2 rounded-lg hover:bg-os-surface-dark transition-colors group"
             title="Settings"
           >
@@ -372,12 +372,6 @@ export function DiscoverHeader({
           </div>
         </div>
       )}
-
-      {/* Sources Settings Modal */}
-      <SourcesSettings 
-        isOpen={isSourcesOpen} 
-        onClose={() => setIsSourcesOpen(false)} 
-      />
     </>
   );
 }

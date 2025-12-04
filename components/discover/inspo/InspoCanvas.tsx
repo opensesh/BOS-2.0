@@ -1,8 +1,67 @@
 'use client';
 
-import { Canvas } from '@react-three/fiber';
+import { useRef, useEffect } from 'react';
+import { Canvas, useThree } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
+import * as THREE from 'three';
 import ParticleSystem from './ParticleSystem';
+import { useInspoStore } from '@/lib/stores/inspo-store';
+
+// Component to handle camera reset on view mode changes
+function CameraController() {
+  const { camera } = useThree();
+  const controlsRef = useRef<any>(null);
+  const viewMode = useInspoStore((state) => state.viewMode);
+  const isTransitioning = useInspoStore((state) => state.isTransitioning);
+
+  // Reset camera position and target when view mode changes
+  useEffect(() => {
+    if (controlsRef.current) {
+      // Reset OrbitControls target to center
+      controlsRef.current.target.set(0, 0, 0);
+      controlsRef.current.update();
+    }
+    
+    // Smoothly move camera to default position
+    const targetPosition = new THREE.Vector3(0, 0, 30);
+    const currentPosition = camera.position.clone();
+    
+    if (currentPosition.distanceTo(targetPosition) > 5) {
+      // Animate camera back to center
+      const duration = 800;
+      const startTime = Date.now();
+      
+      const animateCamera = () => {
+        const elapsed = Date.now() - startTime;
+        const t = Math.min(elapsed / duration, 1);
+        const eased = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+        
+        camera.position.lerpVectors(currentPosition, targetPosition, eased);
+        
+        if (t < 1) {
+          requestAnimationFrame(animateCamera);
+        }
+      };
+      
+      animateCamera();
+    }
+  }, [viewMode, camera]);
+
+  return (
+    <OrbitControls
+      ref={controlsRef}
+      enableDamping
+      dampingFactor={0.05}
+      enablePan={false}
+      minDistance={15}
+      maxDistance={50}
+      // Disable controls during transition for smoother experience
+      enabled={!isTransitioning}
+      // Always look at center
+      target={[0, 0, 0]}
+    />
+  );
+}
 
 export default function InspoCanvas() {
   return (
@@ -14,14 +73,8 @@ export default function InspoCanvas() {
     >
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} intensity={1} />
-      <ParticleSystem count={1000} radius={15} />
-      <OrbitControls
-        enableDamping
-        dampingFactor={0.05}
-        enablePan={false}
-        minDistance={10}
-        maxDistance={50}
-      />
+      <ParticleSystem radius={15} />
+      <CameraController />
     </Canvas>
   );
 }

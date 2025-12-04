@@ -9,6 +9,11 @@ interface ParticleSettings {
   autoPlay: boolean;
 }
 
+interface ColorSettings {
+  innerColor: string;
+  outerColor: string;
+}
+
 interface InspoState {
   // View mode
   viewMode: ViewMode;
@@ -16,6 +21,9 @@ interface InspoState {
   
   // Particle settings
   particleSettings: ParticleSettings;
+  
+  // Color settings
+  colorSettings: ColorSettings;
   
   // Control panel state
   isPanelOpen: boolean;
@@ -27,6 +35,8 @@ interface InspoState {
   setParticleSize: (size: number) => void;
   setAnimationSpeed: (speed: number) => void;
   setAutoPlay: (autoPlay: boolean) => void;
+  setInnerColor: (color: string) => void;
+  setOuterColor: (color: string) => void;
   setPanelOpen: (open: boolean) => void;
   togglePanel: () => void;
 }
@@ -38,10 +48,16 @@ const DEFAULT_PARTICLE_SETTINGS: ParticleSettings = {
   autoPlay: true,
 };
 
+const DEFAULT_COLOR_SETTINGS: ColorSettings = {
+  innerColor: '#FE5102', // Aperol
+  outerColor: '#FFFAEE', // Vanilla
+};
+
 export const useInspoStore = create<InspoState>((set) => ({
   viewMode: 'sphere',
   isTransitioning: false,
   particleSettings: DEFAULT_PARTICLE_SETTINGS,
+  colorSettings: DEFAULT_COLOR_SETTINGS,
   isPanelOpen: false,
 
   setViewMode: (mode) => set({ viewMode: mode }),
@@ -65,6 +81,16 @@ export const useInspoStore = create<InspoState>((set) => ({
   setAutoPlay: (autoPlay) => 
     set((state) => ({ 
       particleSettings: { ...state.particleSettings, autoPlay } 
+    })),
+  
+  setInnerColor: (color) =>
+    set((state) => ({
+      colorSettings: { ...state.colorSettings, innerColor: color }
+    })),
+  
+  setOuterColor: (color) =>
+    set((state) => ({
+      colorSettings: { ...state.colorSettings, outerColor: color }
     })),
   
   setPanelOpen: (open) => set({ isPanelOpen: open }),
