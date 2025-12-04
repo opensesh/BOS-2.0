@@ -1,15 +1,14 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
+import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { 
-  Star, 
   Sparkles, 
   ExternalLink,
   FileText,
   Video,
-  Pen
+  Pen,
+  Clock
 } from 'lucide-react';
 import { IdeaCardData } from '@/types';
 
@@ -18,32 +17,30 @@ interface IdeaPromptCardProps {
   variant?: 'featured' | 'compact';
 }
 
-interface OGData {
-  image: string | null;
-  title: string | null;
-  description: string | null;
-  siteName: string | null;
-  favicon: string | null;
-}
-
-// Category icons and colors - using brand colors
+// Category icons and labels
 const CATEGORY_CONFIG = {
   'short-form': { 
     icon: Video, 
     label: 'Short Form',
-    color: 'text-brand-aperol bg-brand-aperol/10'
   },
   'long-form': { 
     icon: FileText, 
     label: 'Long Form',
-    color: 'text-brand-vanilla bg-brand-charcoal/50'
   },
   'blog': { 
     icon: Pen, 
     label: 'Blog',
-    color: 'text-brand-vanilla bg-os-surface-dark'
   },
 };
+
+// Gradient presets for card backgrounds - warm terracotta/aperol tones
+const GRADIENT_PRESETS = [
+  'from-orange-600/60 via-orange-500/40 to-rose-600/30',
+  'from-amber-600/50 via-orange-500/40 to-red-600/30',
+  'from-rose-600/50 via-orange-500/40 to-amber-600/30',
+  'from-orange-500/50 via-rose-500/40 to-orange-600/30',
+  'from-red-600/40 via-orange-500/50 to-amber-600/30',
+];
 
 // Source favicon/logo mappings
 const SOURCE_LOGOS: Record<string, { favicon: string; color: string }> = {
@@ -54,39 +51,19 @@ const SOURCE_LOGOS: Record<string, { favicon: string; color: string }> = {
   'Ars Technica': { favicon: 'https://cdn.arstechnica.net/favicon.ico', color: '#F60' },
 };
 
+// Get consistent gradient based on item id
+function getGradientForItem(id: string): string {
+  const hash = id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+  return GRADIENT_PRESETS[hash % GRADIENT_PRESETS.length];
+}
+
 export function IdeaPromptCard({ item, variant = 'compact' }: IdeaPromptCardProps) {
   const router = useRouter();
-  const [ogImage, setOgImage] = useState<string | null>(item.imageUrl || null);
-  const [isLoadingImage, setIsLoadingImage] = useState(!item.imageUrl);
   const [isGenerating, setIsGenerating] = useState(false);
 
   const categoryConfig = CATEGORY_CONFIG[item.category];
   const CategoryIcon = categoryConfig.icon;
-
-  // Fetch OG image from first source if no imageUrl
-  useEffect(() => {
-    if (!item.imageUrl && item.sources.length > 0) {
-      const fetchOgImage = async () => {
-        try {
-          const sourceUrl = item.sources[0].url;
-          const response = await fetch(`/api/og-image?url=${encodeURIComponent(sourceUrl)}`);
-          if (response.ok) {
-            const data: OGData = await response.json();
-            if (data.image) {
-              setOgImage(data.image);
-            }
-          }
-        } catch (error) {
-          console.error('Error fetching OG image:', error);
-        } finally {
-          setIsLoadingImage(false);
-        }
-      };
-      fetchOgImage();
-    } else {
-      setIsLoadingImage(false);
-    }
-  }, [item.imageUrl, item.sources]);
+  const gradientClass = getGradientForItem(item.id);
 
   // Generate brief prompt and navigate to chat
   const handleGenerateBrief = (e: React.MouseEvent) => {
@@ -164,30 +141,24 @@ Please provide:
 
   if (variant === 'featured') {
     return (
-      <div className="group flex flex-col md:flex-row gap-6 p-4 rounded-xl bg-os-surface-dark/30 border border-os-border-dark/30">
+      <div className="group flex flex-col md:flex-row gap-6 p-5 rounded-2xl bg-os-bg-dark border border-transparent hover:border-brand-aperol transition-all duration-200 hover:shadow-lg hover:shadow-brand-aperol/10">
         {/* Text Content - LEFT */}
         <div className="flex-1 flex flex-col justify-between min-w-0">
-          <div className="flex flex-col gap-3">
-            {/* Category badge and starred indicator */}
+          <div className="flex flex-col gap-4">
+            {/* Category label with sparkle */}
             <div className="flex items-center gap-2">
-              <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full ${categoryConfig.color} text-[10px] font-bold uppercase tracking-wider`}>
-                <CategoryIcon className="w-3 h-3" />
+              <Sparkles className="w-3.5 h-3.5 text-brand-vanilla/80" />
+              <span className="text-sm font-medium text-brand-vanilla/80 tracking-wide">
                 {categoryConfig.label}
-              </span>
-              {item.starred && (
-                <Star className="w-4 h-4 text-brand-aperol fill-brand-aperol" />
-              )}
-              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-os-surface-dark text-os-text-secondary-dark text-[10px] font-medium uppercase tracking-wider">
-                Content Prompt
               </span>
             </div>
 
             {/* Title */}
-            <h2 className="text-xl md:text-2xl font-display font-bold text-brand-vanilla leading-tight">
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-brand-vanilla leading-tight">
               {item.title}
             </h2>
 
-            {/* Description - FULL, no truncation */}
+            {/* Description */}
             <p className="text-os-text-secondary-dark text-base leading-relaxed">
               {item.description}
             </p>
@@ -221,127 +192,71 @@ Please provide:
           </div>
         </div>
 
-        {/* Image - RIGHT */}
+        {/* Gradient Cover - RIGHT */}
         <div className="w-full md:w-[360px] shrink-0">
-          <div className="relative aspect-[16/10] overflow-hidden rounded-xl bg-os-surface-dark">
-            {isLoadingImage ? (
-              <div className="w-full h-full flex items-center justify-center">
-                <div className="w-8 h-8 border-2 border-os-text-secondary-dark border-t-transparent rounded-full animate-spin" />
-              </div>
-            ) : ogImage ? (
-              <Image
-                src={ogImage}
-                alt={item.title}
-                fill
-                className="object-cover"
-                unoptimized
-              />
-            ) : (
-              <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-os-surface-dark to-os-bg-dark">
-                <div className="text-center p-4">
-                  <CategoryIcon className="w-12 h-12 text-os-text-secondary-dark/50 mx-auto mb-2" />
-                  <span className="text-sm text-os-text-secondary-dark">{categoryConfig.label}</span>
-                </div>
-              </div>
-            )}
+          <div className={`relative aspect-[16/10] overflow-hidden rounded-2xl bg-gradient-to-br ${gradientClass}`}>
+            {/* Subtle texture overlay */}
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white/5 via-transparent to-transparent" />
           </div>
         </div>
       </div>
     );
   }
 
-  // Compact variant - non-clickable card with generate button
+  // Compact variant - card matching screenshot design
   return (
-    <div className="group flex flex-col gap-3 p-3 rounded-xl bg-os-surface-dark/20 border border-os-border-dark/20 hover:border-os-border-dark/40 transition-colors">
-      {/* Image */}
-      <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-os-surface-dark">
-        {isLoadingImage ? (
-          <div className="w-full h-full flex items-center justify-center">
-            <div className="w-6 h-6 border-2 border-os-text-secondary-dark border-t-transparent rounded-full animate-spin" />
-          </div>
-        ) : ogImage ? (
-          <Image
-            src={ogImage}
-            alt={item.title}
-            fill
-            className="object-cover"
-            unoptimized
-          />
-        ) : (
-          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-os-surface-dark to-os-bg-dark">
-            <CategoryIcon className="w-8 h-8 text-os-text-secondary-dark/50" />
+    <button
+      onClick={handleGenerateBrief}
+      disabled={isGenerating}
+      className="group relative flex flex-col rounded-2xl overflow-hidden h-full bg-os-bg-dark border border-transparent hover:border-brand-aperol transition-all duration-200 hover:shadow-lg hover:shadow-brand-aperol/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-aperol focus-visible:ring-offset-2 focus-visible:ring-offset-os-bg-dark text-left"
+    >
+      {/* Gradient Cover Area */}
+      <div className={`relative aspect-[4/3] w-full bg-gradient-to-br ${gradientClass}`}>
+        {/* Subtle texture overlay */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white/5 via-transparent to-transparent" />
+        {/* Loading overlay */}
+        {isGenerating && (
+          <div className="absolute inset-0 flex items-center justify-center bg-black/40">
+            <div className="w-8 h-8 border-2 border-white/30 border-t-white rounded-full animate-spin" />
           </div>
         )}
-        
-        {/* Category badge on image */}
-        <div className="absolute top-2 left-2">
-          <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full ${categoryConfig.color} text-[9px] font-bold uppercase tracking-wider`}>
-            <CategoryIcon className="w-2.5 h-2.5" />
+      </div>
+
+      {/* Content Area */}
+      <div className="relative z-10 flex flex-col flex-1 p-4 sm:p-5">
+        {/* Category label with sparkle */}
+        <div className="flex items-center gap-1.5 mb-3">
+          <Sparkles className="w-3 h-3 text-brand-vanilla/70" />
+          <span className="text-xs font-medium text-brand-vanilla/70 tracking-wide">
             {categoryConfig.label}
           </span>
         </div>
-        
-        {/* Starred indicator */}
-        {item.starred && (
-          <div className="absolute top-2 right-2">
-            <Star className="w-4 h-4 text-brand-aperol fill-brand-aperol drop-shadow-md" />
-          </div>
-        )}
-      </div>
 
-      {/* Content */}
-      <div className="flex flex-col gap-2">
         {/* Title */}
-        <h3 className="text-sm font-medium text-brand-vanilla leading-snug line-clamp-2">
+        <h3 className="text-lg sm:text-xl font-display font-bold text-brand-vanilla leading-snug line-clamp-3 mb-auto">
           {item.title}
         </h3>
 
-        {/* Description - show first 2 lines */}
-        <p className="text-xs text-os-text-secondary-dark leading-relaxed line-clamp-2">
-          {item.description}
-        </p>
-
-        {/* Source count */}
-        <div className="flex items-center gap-2 text-xs text-os-text-secondary-dark">
-          <div className="flex -space-x-1">
-            {item.sources.slice(0, 3).map((source, idx) => {
-              const logoData = SOURCE_LOGOS[source.name];
-              return (
-                <div 
-                  key={source.id || idx} 
-                  className="w-4 h-4 rounded-full border border-os-bg-dark flex items-center justify-center"
-                  style={{ backgroundColor: logoData?.color || '#333' }}
-                >
-                  <span className="text-[7px] text-white font-bold">
-                    {source.name.charAt(0)}
-                  </span>
-                </div>
-              );
-            })}
+        {/* Bottom pills */}
+        <div className="flex items-center gap-3 mt-4 pt-4">
+          {/* Sources pill */}
+          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-os-border-dark bg-transparent">
+            <Clock className="w-3.5 h-3.5 text-os-text-secondary-dark" />
+            <span className="text-xs text-os-text-secondary-dark font-medium">
+              {item.sources.length} {item.sources.length === 1 ? 'source' : 'sources'}
+            </span>
           </div>
-          <span>{item.sources.length} sources</span>
-        </div>
 
-        {/* Generate Ideas button - compact */}
-        <button
-          onClick={handleGenerateBrief}
-          disabled={isGenerating}
-          className="mt-1 inline-flex items-center justify-center gap-1.5 w-full px-3 py-2 rounded-lg bg-brand-aperol/10 text-brand-aperol text-xs font-medium hover:bg-brand-aperol/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          {isGenerating ? (
-            <>
-              <div className="w-3 h-3 border-2 border-brand-aperol/30 border-t-brand-aperol rounded-full animate-spin" />
-              Generating...
-            </>
-          ) : (
-            <>
-              <Sparkles className="w-3 h-3" />
-              Generate Ideas
-            </>
-          )}
-        </button>
+          {/* Category format pill */}
+          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-os-border-dark bg-transparent">
+            <CategoryIcon className="w-3.5 h-3.5 text-os-text-secondary-dark" />
+            <span className="text-xs text-os-text-secondary-dark font-medium">
+              {categoryConfig.label}
+            </span>
+          </div>
+        </div>
       </div>
-    </div>
+    </button>
   );
 }
 

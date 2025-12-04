@@ -1,12 +1,10 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Video, FileText, Pen, Clock, Sparkles } from 'lucide-react';
 import { IdeaCardData } from '@/types';
-import { getTextureByIndex } from '@/lib/discover-utils';
 
 interface IdeaCardGridProps {
   items: IdeaCardData[];
@@ -22,12 +20,20 @@ function generateSlug(title: string): string {
     .substring(0, 50);
 }
 
-// Fallback placeholder images based on category
-const FALLBACK_IMAGES = {
-  'short-form': 'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=800&h=600&fit=crop',
-  'long-form': 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=600&fit=crop',
-  'blog': 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop',
-};
+// Gradient presets for card backgrounds - warm terracotta/aperol tones
+const GRADIENT_PRESETS = [
+  'from-orange-600/60 via-orange-500/40 to-rose-600/30',
+  'from-amber-600/50 via-orange-500/40 to-red-600/30',
+  'from-rose-600/50 via-orange-500/40 to-amber-600/30',
+  'from-orange-500/50 via-rose-500/40 to-orange-600/30',
+  'from-red-600/40 via-orange-500/50 to-amber-600/30',
+];
+
+// Get consistent gradient based on item id
+function getGradientForItem(id: string): string {
+  const hash = id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+  return GRADIENT_PRESETS[hash % GRADIENT_PRESETS.length];
+}
 
 // Get category display info
 function getCategoryInfo(category: IdeaCardData['category']) {
@@ -64,68 +70,12 @@ function getFormatLabel(title: string, category: IdeaCardData['category']): stri
   return defaults[category] || 'Content';
 }
 
-// Hook for fetching OG image with fallback
-function useIdeaImage(item: IdeaCardData) {
-  const [imageUrl, setImageUrl] = useState<string>(
-    item.pexelsImageUrl || FALLBACK_IMAGES[item.category] || FALLBACK_IMAGES['short-form']
-  );
-  const [isLoading, setIsLoading] = useState(!item.pexelsImageUrl);
-
-  useEffect(() => {
-    if (item.pexelsImageUrl) {
-      setImageUrl(item.pexelsImageUrl);
-      setIsLoading(false);
-      return;
-    }
-
-    let isMounted = true;
-    setIsLoading(true);
-    
-    const fetchImage = async () => {
-      if (!item.sources || item.sources.length === 0) {
-        setImageUrl(FALLBACK_IMAGES[item.category] || FALLBACK_IMAGES['short-form']);
-        setIsLoading(false);
-        return;
-      }
-
-      for (let i = 0; i < Math.min(item.sources.length, 3); i++) {
-        try {
-          const response = await fetch(`/api/og-image?url=${encodeURIComponent(item.sources[i].url)}`);
-          if (response.ok) {
-            const data = await response.json();
-            if (data.image && isMounted) {
-              setImageUrl(data.image);
-              setIsLoading(false);
-              return;
-            }
-          }
-        } catch {
-          // Continue to next source
-        }
-      }
-
-      if (isMounted) {
-        setIsLoading(false);
-      }
-    };
-
-    fetchImage();
-    
-    return () => {
-      isMounted = false;
-    };
-  }, [item.pexelsImageUrl, item.sources, item.category]);
-
-  return { imageUrl, isLoading };
-}
-
-// IdeaCard Component
+// IdeaCard Component - matches screenshot design
 function IdeaCard({ item }: { item: IdeaCardData }) {
-  const { imageUrl, isLoading } = useIdeaImage(item);
   const slug = item.slug || generateSlug(item.title);
   const categoryInfo = getCategoryInfo(item.category);
   const formatLabel = getFormatLabel(item.title, item.category);
-  const textureUrl = getTextureByIndex(item.textureIndex ?? 0);
+  const gradientClass = getGradientForItem(item.id);
   const CategoryIcon = categoryInfo.icon;
 
   // Clean title - remove format prefix if present
@@ -136,66 +86,47 @@ function IdeaCard({ item }: { item: IdeaCardData }) {
   return (
     <Link
       href={`/discover/ideas/${slug}?id=${item.id}`}
-      className="group relative flex flex-col rounded-2xl overflow-hidden h-full
-                 transition-all duration-300 ease-out
-                 hover:scale-[1.015] hover:shadow-xl
+      className="group relative flex flex-col rounded-2xl overflow-hidden h-full bg-os-bg-dark
+                 border border-transparent hover:border-brand-aperol
+                 transition-all duration-200
+                 hover:shadow-lg hover:shadow-brand-aperol/10
                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-aperol focus-visible:ring-offset-2 focus-visible:ring-offset-os-bg-dark"
     >
-      {/* Hero Image */}
-      <div className="relative w-full aspect-[2.4/1] overflow-hidden bg-os-charcoal">
-        {isLoading ? (
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-6 h-6 border-2 border-brand-vanilla/20 border-t-brand-vanilla rounded-full animate-spin" />
-          </div>
-        ) : (
-          <Image
-            src={imageUrl}
-            alt=""
-            fill
-            className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-            unoptimized
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-          />
-        )}
+      {/* Gradient Cover Area */}
+      <div className={`relative w-full aspect-[4/3] bg-gradient-to-br ${gradientClass}`}>
+        {/* Subtle texture overlay */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white/5 via-transparent to-transparent" />
       </div>
 
-      {/* Content Section with Texture */}
-      <div className="relative flex-1 flex flex-col">
-        {/* Texture Background */}
-        <div className="absolute inset-0">
-          <Image
-            src={textureUrl}
-            alt=""
-            fill
-            className="object-cover"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-          />
+      {/* Content Section */}
+      <div className="relative z-10 flex flex-col flex-1 p-4 sm:p-5">
+        {/* Format Label with sparkle */}
+        <div className="flex items-center gap-1.5 mb-3">
+          <Sparkles className="w-3 h-3 text-brand-vanilla/70" />
+          <span className="text-xs font-medium text-brand-vanilla/70 tracking-wide">
+            {formatLabel}
+          </span>
         </div>
 
-        {/* Content */}
-        <div className="relative z-10 flex flex-col flex-1 p-4 sm:p-5">
-          {/* Format Label */}
-          <span className="inline-flex items-center gap-1.5 text-brand-vanilla text-xs font-medium mb-3">
-            <Sparkles className="w-3 h-3 opacity-80" />
-            <span className="underline underline-offset-4 decoration-1 decoration-brand-vanilla/50">
-              {formatLabel}
+        {/* Title */}
+        <h3 className="font-display font-bold text-brand-vanilla text-lg sm:text-xl leading-snug line-clamp-3 flex-1">
+          {cleanTitle}
+        </h3>
+
+        {/* Footer Chips */}
+        <div className="flex items-center gap-3 mt-4 pt-4">
+          {/* Sources pill */}
+          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-os-border-dark bg-transparent">
+            <Clock className="w-3.5 h-3.5 text-os-text-secondary-dark" />
+            <span className="text-xs text-os-text-secondary-dark font-medium">
+              {item.sources.length} {item.sources.length === 1 ? 'source' : 'sources'}
             </span>
-          </span>
+          </div>
 
-          {/* Title */}
-          <h3 className="font-display font-bold text-brand-vanilla text-[17px] sm:text-lg leading-snug line-clamp-2 flex-1">
-            {cleanTitle}
-          </h3>
-
-          {/* Footer Chips */}
-          <div className="flex items-center gap-2 mt-4 pt-3 border-t border-white/10">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-os-charcoal/95 text-brand-vanilla text-[11px] font-medium">
-              <Clock className="w-3 h-3 opacity-60" />
-              {item.sources.length} sources
-            </span>
-
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-os-charcoal/95 text-brand-vanilla text-[11px] font-medium ml-auto">
-              <CategoryIcon className="w-3 h-3 opacity-60" />
+          {/* Category format pill */}
+          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-os-border-dark bg-transparent">
+            <CategoryIcon className="w-3.5 h-3.5 text-os-text-secondary-dark" />
+            <span className="text-xs text-os-text-secondary-dark font-medium">
               {categoryInfo.label}
             </span>
           </div>
