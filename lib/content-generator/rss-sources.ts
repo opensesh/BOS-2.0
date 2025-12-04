@@ -4,6 +4,8 @@
  * Design and creative-focused feeds organized by topic category.
  * These replace the generic tech news feeds with content more relevant
  * to brand designers and creative professionals.
+ * 
+ * Updated: December 2025
  */
 
 import { NewsTopicCategory } from '@/types';
@@ -18,58 +20,8 @@ export interface RSSSource {
 
 /**
  * Design & UX/UI focused sources
- * Note: URLs verified November 2025
  */
 const DESIGN_UX_SOURCES: RSSSource[] = [
-  {
-    name: 'Design Week',
-    url: 'https://www.designweek.co.uk/feed/',
-    category: 'design-ux',
-    priority: 1,
-    keywords: ['design', 'ux', 'ui', 'branding', 'typography'],
-  },
-  {
-    name: 'Creative Bloq',
-    url: 'https://www.creativebloq.com/feed',
-    category: 'design-ux',
-    priority: 1,
-    keywords: ['design', 'creative', 'graphic design', 'illustration'],
-  },
-  {
-    name: 'Abduzeedo',
-    url: 'https://abduzeedo.com/rss.xml',
-    category: 'design-ux',
-    priority: 2,
-    keywords: ['design', 'inspiration', 'tutorials'],
-  },
-  {
-    name: 'UX Collective',
-    url: 'https://uxdesign.cc/feed',
-    category: 'design-ux',
-    priority: 1,
-    keywords: ['ux', 'user experience', 'design thinking', 'product design'],
-  },
-  {
-    name: 'Smashing Magazine',
-    url: 'https://www.smashingmagazine.com/feed/',
-    category: 'design-ux',
-    priority: 1,
-    keywords: ['web design', 'ux', 'css', 'accessibility'],
-  },
-  {
-    name: 'CSS-Tricks',
-    url: 'https://css-tricks.com/feed/',
-    category: 'design-ux',
-    priority: 2,
-    keywords: ['css', 'web design', 'frontend', 'development'],
-  },
-  {
-    name: 'Sidebar',
-    url: 'https://sidebar.io/feed.xml',
-    category: 'design-ux',
-    priority: 1,
-    keywords: ['design', 'links', 'curated', 'ux'],
-  },
   {
     name: 'Figma Blog',
     url: 'https://figma.com/blog/feed/atom.xml',
@@ -81,7 +33,7 @@ const DESIGN_UX_SOURCES: RSSSource[] = [
     name: 'Freethink',
     url: 'https://www.freethink.com/feed/all',
     category: 'design-ux',
-    priority: 2,
+    priority: 1,
     keywords: ['innovation', 'technology', 'future', 'design'],
   },
   {
@@ -98,11 +50,17 @@ const DESIGN_UX_SOURCES: RSSSource[] = [
     priority: 1,
     keywords: ['ai', 'design patterns', 'ux', 'ai design'],
   },
+  {
+    name: 'Love + Money',
+    url: 'https://loveandmoney.substack.com/feed',
+    category: 'design-ux',
+    priority: 1,
+    keywords: ['ai', 'creative', 'business', 'design'],
+  },
 ];
 
 /**
  * Branding & Strategy focused sources
- * Note: URLs verified November 2025
  */
 const BRANDING_SOURCES: RSSSource[] = [
   {
@@ -126,25 +84,10 @@ const BRANDING_SOURCES: RSSSource[] = [
     priority: 1,
     keywords: ['branding', 'identity', 'logo', 'visual identity'],
   },
-  {
-    name: 'Oren Meets World',
-    url: 'https://www.productworld.xyz/feed',
-    category: 'branding',
-    priority: 1,
-    keywords: ['product', 'strategy', 'branding', 'business'],
-  },
-  {
-    name: 'Marcus on AI (Gary Marcus)',
-    url: 'https://garymarcus.substack.com/feed',
-    category: 'branding',
-    priority: 2,
-    keywords: ['ai', 'criticism', 'technology', 'analysis'],
-  },
 ];
 
 /**
  * AI for Creatives sources
- * Note: URLs verified November 2025
  */
 const AI_CREATIVE_SOURCES: RSSSource[] = [
   {
@@ -183,13 +126,6 @@ const AI_CREATIVE_SOURCES: RSSSource[] = [
     keywords: ['ai', 'research', 'technology'],
   },
   {
-    name: 'Love + Money',
-    url: 'https://loveandmoney.substack.com/feed',
-    category: 'ai-creative',
-    priority: 1,
-    keywords: ['ai', 'creative', 'business', 'design'],
-  },
-  {
     name: 'Awwwards',
     url: 'https://www.awwwards.com/blog/feed',
     category: 'ai-creative',
@@ -207,36 +143,21 @@ const AI_CREATIVE_SOURCES: RSSSource[] = [
 
 /**
  * Social Media Trends sources
- * Note: URLs verified November 2025
  */
 const SOCIAL_TRENDS_SOURCES: RSSSource[] = [
   {
-    name: 'Buffer Resources',
-    url: 'https://buffer.com/resources/feed/',
+    name: 'Oren Meets World',
+    url: 'https://www.productworld.xyz/feed',
     category: 'social-trends',
     priority: 1,
-    keywords: ['social media', 'marketing', 'content'],
+    keywords: ['product', 'strategy', 'social', 'trends'],
   },
   {
-    name: 'Hootsuite Blog',
-    url: 'https://blog.hootsuite.com/feed/',
+    name: 'Gary Vaynerchuk',
+    url: 'https://www.garyvaynerchuk.com/feed',
     category: 'social-trends',
     priority: 1,
-    keywords: ['social media', 'marketing', 'analytics'],
-  },
-  {
-    name: 'Sprout Social Insights',
-    url: 'https://sproutsocial.com/insights/feed/',
-    category: 'social-trends',
-    priority: 1,
-    keywords: ['social media', 'marketing', 'strategy'],
-  },
-  {
-    name: 'Social Media Examiner',
-    url: 'https://www.socialmediaexaminer.com/feed/',
-    category: 'social-trends',
-    priority: 1,
-    keywords: ['social media', 'marketing', 'facebook', 'instagram'],
+    keywords: ['social media', 'marketing', 'entrepreneurship', 'content'],
   },
 ];
 
@@ -311,36 +232,14 @@ const GENERAL_TECH_SOURCES: RSSSource[] = [
 
 /**
  * Startup/Agency Business sources
- * Note: URLs verified November 2025
  */
 const STARTUP_BUSINESS_SOURCES: RSSSource[] = [
   {
-    name: 'Agency Post (HubSpot)',
-    url: 'https://blog.hubspot.com/agency/rss.xml',
+    name: 'a16z',
+    url: 'https://a16z.com/news-content/feed',
     category: 'startup-business',
     priority: 1,
-    keywords: ['agency', 'marketing', 'business'],
-  },
-  {
-    name: 'Paul Graham Essays',
-    url: 'http://www.aaronsw.com/2002/feeds/pgessays.rss',
-    category: 'startup-business',
-    priority: 1,
-    keywords: ['startup', 'essays', 'yc', 'founder'],
-  },
-  {
-    name: 'Seth Godin',
-    url: 'https://seths.blog/feed/',
-    category: 'startup-business',
-    priority: 2,
-    keywords: ['marketing', 'business', 'strategy'],
-  },
-  {
-    name: 'Stratechery',
-    url: 'https://stratechery.com/feed/',
-    category: 'startup-business',
-    priority: 2,
-    keywords: ['tech', 'strategy', 'business', 'analysis'],
+    keywords: ['venture', 'crypto', 'ai', 'startup'],
   },
   {
     name: 'Derek Thompson',
@@ -350,18 +249,39 @@ const STARTUP_BUSINESS_SOURCES: RSSSource[] = [
     keywords: ['culture', 'economics', 'media', 'trends'],
   },
   {
-    name: 'Greg Isenberg (Late Checkout)',
-    url: 'https://latecheckout.substack.com/feed',
-    category: 'startup-business',
-    priority: 1,
-    keywords: ['startup', 'community', 'business', 'ideas'],
-  },
-  {
     name: "Lenny's Newsletter",
     url: 'https://lennysnewsletter.com/feed',
     category: 'startup-business',
     priority: 1,
     keywords: ['product', 'growth', 'startup', 'advice'],
+  },
+  {
+    name: 'Marcus on AI (Gary Marcus)',
+    url: 'https://garymarcus.substack.com/feed',
+    category: 'startup-business',
+    priority: 1,
+    keywords: ['ai', 'criticism', 'technology', 'analysis'],
+  },
+  {
+    name: 'Naval Ravikant',
+    url: 'https://nav.al/podcast/feed',
+    category: 'startup-business',
+    priority: 1,
+    keywords: ['startup', 'philosophy', 'wealth', 'entrepreneurship'],
+  },
+  {
+    name: 'Peter Yang (Creator Economy)',
+    url: 'https://creatoreconomy.so/feed',
+    category: 'startup-business',
+    priority: 1,
+    keywords: ['creator', 'economy', 'product', 'growth'],
+  },
+  {
+    name: 'Sequoia Capital',
+    url: 'https://medium.com/feed/sequoia-capital',
+    category: 'startup-business',
+    priority: 1,
+    keywords: ['venture', 'startup', 'investing', 'growth'],
   },
 ];
 
@@ -443,5 +363,3 @@ export const CATEGORY_KEYWORDS: Record<NewsTopicCategory, string[]> = {
 };
 
 export default ALL_RSS_SOURCES;
-
-
