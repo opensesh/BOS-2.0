@@ -21,9 +21,10 @@ interface StickyArticleHeaderProps {
   titleRef?: React.RefObject<HTMLElement | null>;
   backLink?: string;
   backLabel?: string;
+  onAddToSpace?: () => void;
 }
 
-export function StickyArticleHeader({ title, titleRef, backLink = '/discover', backLabel = 'Discover' }: StickyArticleHeaderProps) {
+export function StickyArticleHeader({ title, titleRef, backLink = '/discover', backLabel = 'Discover', onAddToSpace }: StickyArticleHeaderProps) {
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [showOverflowMenu, setShowOverflowMenu] = useState(false);
   const [showShareModal, setShowShareModal] = useState(false);
@@ -105,8 +106,8 @@ export function StickyArticleHeader({ title, titleRef, backLink = '/discover', b
 
         {/* Right: Actions */}
         <div className="flex items-center gap-1">
-          {/* Overflow menu - hidden on mobile to save space */}
-          <div className="relative hidden sm:block" ref={overflowRef}>
+          {/* Overflow menu */}
+          <div className="relative" ref={overflowRef}>
             <button
               onClick={() => setShowOverflowMenu(!showOverflowMenu)}
               className="p-2 rounded-lg text-os-text-secondary-dark hover:text-brand-vanilla hover:bg-os-surface-dark transition-colors"
@@ -119,7 +120,7 @@ export function StickyArticleHeader({ title, titleRef, backLink = '/discover', b
               <div className="absolute right-0 top-full mt-1 w-48 bg-os-surface-dark rounded-lg border border-os-border-dark shadow-xl overflow-hidden">
                 <button
                   onClick={() => {
-                    // TODO: Implement add to space
+                    onAddToSpace?.();
                     setShowOverflowMenu(false);
                   }}
                   className="w-full flex items-center gap-3 px-4 py-3 text-sm text-os-text-primary-dark hover:bg-os-bg-dark transition-colors"
