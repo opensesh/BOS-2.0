@@ -2,9 +2,11 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Video, FileText, Pen, Clock, Sparkles } from 'lucide-react';
 import { IdeaCardData } from '@/types';
+import { getTextureByIndex, getTextureIndexFromString } from '@/lib/discover-utils';
 
 interface IdeaCardGridProps {
   items: IdeaCardData[];
@@ -18,21 +20,6 @@ function generateSlug(title: string): string {
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '')
     .substring(0, 50);
-}
-
-// Gradient presets for card backgrounds - warm terracotta/aperol tones
-const GRADIENT_PRESETS = [
-  'from-orange-600/60 via-orange-500/40 to-rose-600/30',
-  'from-amber-600/50 via-orange-500/40 to-red-600/30',
-  'from-rose-600/50 via-orange-500/40 to-amber-600/30',
-  'from-orange-500/50 via-rose-500/40 to-orange-600/30',
-  'from-red-600/40 via-orange-500/50 to-amber-600/30',
-];
-
-// Get consistent gradient based on item id
-function getGradientForItem(id: string): string {
-  const hash = id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
-  return GRADIENT_PRESETS[hash % GRADIENT_PRESETS.length];
 }
 
 // Get category display info
@@ -70,13 +57,16 @@ function getFormatLabel(title: string, category: IdeaCardData['category']): stri
   return defaults[category] || 'Content';
 }
 
-// IdeaCard Component - matches screenshot design
+// IdeaCard Component - uses sonic line textures
 function IdeaCard({ item }: { item: IdeaCardData }) {
   const slug = item.slug || generateSlug(item.title);
   const categoryInfo = getCategoryInfo(item.category);
   const formatLabel = getFormatLabel(item.title, item.category);
-  const gradientClass = getGradientForItem(item.id);
   const CategoryIcon = categoryInfo.icon;
+  
+  // Get texture - use pre-assigned index or derive from title
+  const textureIndex = item.textureIndex ?? getTextureIndexFromString(item.title);
+  const textureUrl = getTextureByIndex(textureIndex);
 
   // Clean title - remove format prefix if present
   const cleanTitle = item.title
@@ -86,47 +76,53 @@ function IdeaCard({ item }: { item: IdeaCardData }) {
   return (
     <Link
       href={`/discover/ideas/${slug}?id=${item.id}`}
-      className="group relative flex flex-col rounded-2xl overflow-hidden h-full bg-os-bg-dark
-                 border border-transparent hover:border-brand-aperol
+      className="group relative flex flex-col rounded-2xl overflow-hidden h-full 
+                 bg-os-surface-dark/50 border border-os-border-dark/50
+                 hover:border-brand-aperol hover:bg-os-surface-dark/70
                  transition-all duration-200
                  hover:shadow-lg hover:shadow-brand-aperol/10
                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-aperol focus-visible:ring-offset-2 focus-visible:ring-offset-os-bg-dark"
     >
-      {/* Gradient Cover Area */}
-      <div className={`relative w-full aspect-[4/3] bg-gradient-to-br ${gradientClass}`}>
-        {/* Subtle texture overlay */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white/5 via-transparent to-transparent" />
+      {/* Sonic Line Texture Cover */}
+      <div className="relative w-full aspect-[16/9] overflow-hidden">
+        <Image
+          src={textureUrl}
+          alt=""
+          fill
+          className="object-cover"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+        />
       </div>
 
       {/* Content Section */}
-      <div className="relative z-10 flex flex-col flex-1 p-4 sm:p-5">
+      <div className="relative z-10 flex flex-col flex-1 p-3 sm:p-4">
         {/* Format Label with sparkle */}
-        <div className="flex items-center gap-1.5 mb-3">
-          <Sparkles className="w-3 h-3 text-brand-vanilla/70" />
-          <span className="text-xs font-medium text-brand-vanilla/70 tracking-wide">
+        <div className="flex items-center gap-1.5 mb-2">
+          <Sparkles className="w-3 h-3 text-brand-vanilla/60" />
+          <span className="text-[11px] font-medium text-brand-vanilla/60 tracking-wide">
             {formatLabel}
           </span>
         </div>
 
-        {/* Title */}
-        <h3 className="font-display font-bold text-brand-vanilla text-lg sm:text-xl leading-snug line-clamp-3 flex-1">
+        {/* Title - smaller for better visual hierarchy */}
+        <h3 className="font-display font-bold text-brand-vanilla text-sm sm:text-[15px] leading-snug line-clamp-3 flex-1">
           {cleanTitle}
         </h3>
 
-        {/* Footer Chips */}
-        <div className="flex items-center gap-3 mt-4 pt-4">
+        {/* Footer Chips - flex-nowrap to prevent wrapping */}
+        <div className="flex items-center gap-2 mt-3 pt-3 border-t border-os-border-dark/30 flex-nowrap overflow-hidden">
           {/* Sources pill */}
-          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-os-border-dark bg-transparent">
-            <Clock className="w-3.5 h-3.5 text-os-text-secondary-dark" />
-            <span className="text-xs text-os-text-secondary-dark font-medium">
-              {item.sources.length} {item.sources.length === 1 ? 'source' : 'sources'}
+          <div className="inline-flex items-center gap-1 px-2 py-1 rounded-full border border-os-border-dark/50 bg-os-bg-dark/50 shrink-0">
+            <Clock className="w-3 h-3 text-os-text-secondary-dark" />
+            <span className="text-[10px] text-os-text-secondary-dark font-medium whitespace-nowrap">
+              {item.sources.length} sources
             </span>
           </div>
 
           {/* Category format pill */}
-          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-os-border-dark bg-transparent">
-            <CategoryIcon className="w-3.5 h-3.5 text-os-text-secondary-dark" />
-            <span className="text-xs text-os-text-secondary-dark font-medium">
+          <div className="inline-flex items-center gap-1 px-2 py-1 rounded-full border border-os-border-dark/50 bg-os-bg-dark/50 shrink-0">
+            <CategoryIcon className="w-3 h-3 text-os-text-secondary-dark" />
+            <span className="text-[10px] text-os-text-secondary-dark font-medium whitespace-nowrap">
               {categoryInfo.label}
             </span>
           </div>

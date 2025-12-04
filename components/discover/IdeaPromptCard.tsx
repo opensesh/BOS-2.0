@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { 
   Sparkles, 
@@ -11,6 +12,7 @@ import {
   Clock
 } from 'lucide-react';
 import { IdeaCardData } from '@/types';
+import { getTextureByIndex, getTextureIndexFromString } from '@/lib/discover-utils';
 
 interface IdeaPromptCardProps {
   item: IdeaCardData;
@@ -33,15 +35,6 @@ const CATEGORY_CONFIG = {
   },
 };
 
-// Gradient presets for card backgrounds - warm terracotta/aperol tones
-const GRADIENT_PRESETS = [
-  'from-orange-600/60 via-orange-500/40 to-rose-600/30',
-  'from-amber-600/50 via-orange-500/40 to-red-600/30',
-  'from-rose-600/50 via-orange-500/40 to-amber-600/30',
-  'from-orange-500/50 via-rose-500/40 to-orange-600/30',
-  'from-red-600/40 via-orange-500/50 to-amber-600/30',
-];
-
 // Source favicon/logo mappings
 const SOURCE_LOGOS: Record<string, { favicon: string; color: string }> = {
   'TechCrunch': { favicon: 'https://techcrunch.com/wp-content/uploads/2015/02/cropped-cropped-favicon-gradient.png', color: '#0A0' },
@@ -51,19 +44,16 @@ const SOURCE_LOGOS: Record<string, { favicon: string; color: string }> = {
   'Ars Technica': { favicon: 'https://cdn.arstechnica.net/favicon.ico', color: '#F60' },
 };
 
-// Get consistent gradient based on item id
-function getGradientForItem(id: string): string {
-  const hash = id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
-  return GRADIENT_PRESETS[hash % GRADIENT_PRESETS.length];
-}
-
 export function IdeaPromptCard({ item, variant = 'compact' }: IdeaPromptCardProps) {
   const router = useRouter();
   const [isGenerating, setIsGenerating] = useState(false);
 
   const categoryConfig = CATEGORY_CONFIG[item.category];
   const CategoryIcon = categoryConfig.icon;
-  const gradientClass = getGradientForItem(item.id);
+  
+  // Get texture - use pre-assigned index or derive from title
+  const textureIndex = item.textureIndex ?? getTextureIndexFromString(item.title);
+  const textureUrl = getTextureByIndex(textureIndex);
 
   // Generate brief prompt and navigate to chat
   const handleGenerateBrief = (e: React.MouseEvent) => {
@@ -141,50 +131,50 @@ Please provide:
 
   if (variant === 'featured') {
     return (
-      <div className="group flex flex-col md:flex-row gap-6 p-5 rounded-2xl bg-os-bg-dark border border-transparent hover:border-brand-aperol transition-all duration-200 hover:shadow-lg hover:shadow-brand-aperol/10">
+      <div className="group flex flex-col md:flex-row gap-6 p-5 rounded-2xl bg-os-surface-dark/50 border border-os-border-dark/50 hover:border-brand-aperol hover:bg-os-surface-dark/70 transition-all duration-200 hover:shadow-lg hover:shadow-brand-aperol/10">
         {/* Text Content - LEFT */}
         <div className="flex-1 flex flex-col justify-between min-w-0">
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-3">
             {/* Category label with sparkle */}
             <div className="flex items-center gap-2">
-              <Sparkles className="w-3.5 h-3.5 text-brand-vanilla/80" />
-              <span className="text-sm font-medium text-brand-vanilla/80 tracking-wide">
+              <Sparkles className="w-3 h-3 text-brand-vanilla/60" />
+              <span className="text-xs font-medium text-brand-vanilla/60 tracking-wide">
                 {categoryConfig.label}
               </span>
             </div>
 
             {/* Title */}
-            <h2 className="text-2xl md:text-3xl font-display font-bold text-brand-vanilla leading-tight">
+            <h2 className="text-xl md:text-2xl font-display font-bold text-brand-vanilla leading-tight">
               {item.title}
             </h2>
 
             {/* Description */}
-            <p className="text-os-text-secondary-dark text-base leading-relaxed">
+            <p className="text-os-text-secondary-dark text-sm leading-relaxed">
               {item.description}
             </p>
 
             {/* Source chips */}
             <div className="mt-2">
-              <span className="text-xs text-os-text-secondary-dark font-medium mb-2 block">Reference Sources:</span>
+              <span className="text-[10px] text-os-text-secondary-dark font-medium mb-2 block">Reference Sources:</span>
               <SourceChips />
             </div>
           </div>
 
           {/* Generate Ideas button */}
-          <div className="mt-6">
+          <div className="mt-4">
             <button
               onClick={handleGenerateBrief}
               disabled={isGenerating}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-brand-aperol text-white font-medium hover:bg-brand-aperol/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand-aperol text-white text-sm font-medium hover:bg-brand-aperol/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isGenerating ? (
                 <>
-                  <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                  <div className="w-3.5 h-3.5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                   Generating...
                 </>
               ) : (
                 <>
-                  <Sparkles className="w-4 h-4" />
+                  <Sparkles className="w-3.5 h-3.5" />
                   Generate Ideas
                 </>
               )}
@@ -192,65 +182,75 @@ Please provide:
           </div>
         </div>
 
-        {/* Gradient Cover - RIGHT */}
-        <div className="w-full md:w-[360px] shrink-0">
-          <div className={`relative aspect-[16/10] overflow-hidden rounded-2xl bg-gradient-to-br ${gradientClass}`}>
-            {/* Subtle texture overlay */}
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white/5 via-transparent to-transparent" />
+        {/* Sonic Line Texture Cover - RIGHT */}
+        <div className="w-full md:w-[320px] shrink-0">
+          <div className="relative aspect-[16/9] overflow-hidden rounded-xl">
+            <Image
+              src={textureUrl}
+              alt=""
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 320px"
+            />
           </div>
         </div>
       </div>
     );
   }
 
-  // Compact variant - card matching screenshot design
+  // Compact variant - uses sonic line textures
   return (
     <button
       onClick={handleGenerateBrief}
       disabled={isGenerating}
-      className="group relative flex flex-col rounded-2xl overflow-hidden h-full bg-os-bg-dark border border-transparent hover:border-brand-aperol transition-all duration-200 hover:shadow-lg hover:shadow-brand-aperol/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-aperol focus-visible:ring-offset-2 focus-visible:ring-offset-os-bg-dark text-left"
+      className="group relative flex flex-col rounded-2xl overflow-hidden h-full bg-os-surface-dark/50 border border-os-border-dark/50 hover:border-brand-aperol hover:bg-os-surface-dark/70 transition-all duration-200 hover:shadow-lg hover:shadow-brand-aperol/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-aperol focus-visible:ring-offset-2 focus-visible:ring-offset-os-bg-dark text-left"
     >
-      {/* Gradient Cover Area */}
-      <div className={`relative aspect-[4/3] w-full bg-gradient-to-br ${gradientClass}`}>
-        {/* Subtle texture overlay */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white/5 via-transparent to-transparent" />
+      {/* Sonic Line Texture Cover */}
+      <div className="relative w-full aspect-[16/9] overflow-hidden">
+        <Image
+          src={textureUrl}
+          alt=""
+          fill
+          className="object-cover"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+        />
         {/* Loading overlay */}
         {isGenerating && (
-          <div className="absolute inset-0 flex items-center justify-center bg-black/40">
-            <div className="w-8 h-8 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+          <div className="absolute inset-0 flex items-center justify-center bg-black/50">
+            <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin" />
           </div>
         )}
       </div>
 
       {/* Content Area */}
-      <div className="relative z-10 flex flex-col flex-1 p-4 sm:p-5">
+      <div className="relative z-10 flex flex-col flex-1 p-3 sm:p-4">
         {/* Category label with sparkle */}
-        <div className="flex items-center gap-1.5 mb-3">
-          <Sparkles className="w-3 h-3 text-brand-vanilla/70" />
-          <span className="text-xs font-medium text-brand-vanilla/70 tracking-wide">
+        <div className="flex items-center gap-1.5 mb-2">
+          <Sparkles className="w-3 h-3 text-brand-vanilla/60" />
+          <span className="text-[11px] font-medium text-brand-vanilla/60 tracking-wide">
             {categoryConfig.label}
           </span>
         </div>
 
-        {/* Title */}
-        <h3 className="text-lg sm:text-xl font-display font-bold text-brand-vanilla leading-snug line-clamp-3 mb-auto">
+        {/* Title - smaller for better visual hierarchy */}
+        <h3 className="text-sm sm:text-[15px] font-display font-bold text-brand-vanilla leading-snug line-clamp-3 mb-auto">
           {item.title}
         </h3>
 
-        {/* Bottom pills */}
-        <div className="flex items-center gap-3 mt-4 pt-4">
+        {/* Bottom pills - flex-nowrap to prevent wrapping */}
+        <div className="flex items-center gap-2 mt-3 pt-3 border-t border-os-border-dark/30 flex-nowrap overflow-hidden">
           {/* Sources pill */}
-          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-os-border-dark bg-transparent">
-            <Clock className="w-3.5 h-3.5 text-os-text-secondary-dark" />
-            <span className="text-xs text-os-text-secondary-dark font-medium">
-              {item.sources.length} {item.sources.length === 1 ? 'source' : 'sources'}
+          <div className="inline-flex items-center gap-1 px-2 py-1 rounded-full border border-os-border-dark/50 bg-os-bg-dark/50 shrink-0">
+            <Clock className="w-3 h-3 text-os-text-secondary-dark" />
+            <span className="text-[10px] text-os-text-secondary-dark font-medium whitespace-nowrap">
+              {item.sources.length} sources
             </span>
           </div>
 
           {/* Category format pill */}
-          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-os-border-dark bg-transparent">
-            <CategoryIcon className="w-3.5 h-3.5 text-os-text-secondary-dark" />
-            <span className="text-xs text-os-text-secondary-dark font-medium">
+          <div className="inline-flex items-center gap-1 px-2 py-1 rounded-full border border-os-border-dark/50 bg-os-bg-dark/50 shrink-0">
+            <CategoryIcon className="w-3 h-3 text-os-text-secondary-dark" />
+            <span className="text-[10px] text-os-text-secondary-dark font-medium whitespace-nowrap">
               {categoryConfig.label}
             </span>
           </div>
