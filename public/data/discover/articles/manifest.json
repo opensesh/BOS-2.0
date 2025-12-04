@@ -1,20 +1,15 @@
 {
-  "generated": "2025-12-04T18:33:37.350Z",
+  "generated": "2025-12-04T19:09:38.212Z",
   "articles": [
     {
-      "slug": "workspace-studio-aims-to-solve-the-real-agent-problem-gettin",
-      "title": "Workspace Studio: Google's Strategy to Solve AI Agent Adoption by Meeting Employees Where They Work",
-      "sourceCount": 14
-    },
-    {
       "slug": "8-tips-for-designers-building-branded-templates-in-figma-buz",
-      "title": "8 Essential Tips for Designers Building Branded Templates in Figma Buzz: A Complete Guide to Maintaining Consistency at Scale",
+      "title": "Eight essential tips for building bulletproof branded templates in Figma Buzz",
       "sourceCount": 10
     },
     {
-      "slug": "aws-launches-kiro-powers-with-stripe-figma-and-datadog-integ",
-      "title": "News Update",
-      "sourceCount": 10
+      "slug": "anthropic-vs-openai-red-teaming-methods-reveal-different-sec",
+      "title": "Anthropic vs. OpenAI: Diverging Red Teaming Playbooks Expose Competing Visions for Enterprise AI Security",
+      "sourceCount": 21
     }
   ]
 }

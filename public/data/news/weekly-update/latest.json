@@ -1,42 +1,7 @@
 {
   "type": "weekly-update",
-  "date": "2025-12-04T18:33:55.021Z",
+  "date": "2025-12-04T19:09:58.570Z",
   "updates": [
-    {
-      "title": "Workspace Studio aims to solve the real agent problem: Getting employees to use them",
-      "description": "One problem enterprises face is getting employees to actually use the AI agents their dev teams have built. Google, which has already shipped many AI tools through its Workspace apps, has made Google Workspace Studio generally available to give more employees access to design, manage and share AI agents, further democratizing agentic workflows. This puts Google directly in competition with Microsoft’s Copilot and undercuts some integrations that brought OpenAI’s ChatGPT into enterprise applicati",
-      "timestamp": "12/03/2025, 5:00 AM",
-      "sources": [
-        {
-          "name": "VentureBeat AI",
-          "url": "https://venturebeat.com/ai/workspace-studio-aims-to-solve-the-real-agent-problem-getting-employees-to",
-          "thumbnailUrl": "https://images.ctfassets.net/jdtwqhzvc2n1/4PcovXS8DXRuIKIW9T0PGw/a5b465669cd047892adbd3779daff50a/crimedy7_illustration_of_robots_working_in_an_office_--ar_169_2cff007f-5395-4aff-9b80-80f6e5afb524_2.png?w=300&amp;q=30"
-        },
-        {
-          "name": "Bizzbuzz",
-          "url": "https://www.bizzbuzz.news/technology/google-workspace-studio-takes-on-the-real-agent-problem-helping-employees-actually-use-ai-tools-1379705"
-        },
-        {
-          "name": "Workspace",
-          "url": "https://workspace.google.com/blog/product-announcements/introducing-google-workspace-studio-agents-for-everyday-work"
-        },
-        {
-          "name": "9to5google",
-          "url": "https://9to5google.com/2025/12/03/google-workspace-studio/"
-        },
-        {
-          "name": "Workspaceupdates",
-          "url": "https://workspaceupdates.googleblog.com/2025/12/blog-post.html"
-        },
-        {
-          "name": "Android",
-          "url": "https://android.gadgethacks.com/news/google-workspace-studio-ai-agents-automate-work-tasks/"
-        }
-      ],
-      "tier": "featured",
-      "sourceUrl": "https://venturebeat.com/ai/workspace-studio-aims-to-solve-the-real-agent-problem-getting-employees-to",
-      "topicCategory": "ai-creative"
-    },
     {
       "title": "8 tips for designers building branded templates in Figma Buzz",
       "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
@@ -90,9 +55,44 @@
           "url": "https://siliconangle.com/2025/12/02/aws-puts-ai-agents-work-truly-autonomous-software-development/"
         }
       ],
-      "tier": "featured",
+      "tier": "quick",
       "sourceUrl": "https://venturebeat.com/ai/aws-launches-kiro-powers-with-stripe-figma-and-datadog-integrations-for-ai",
       "topicCategory": "general-tech"
+    },
+    {
+      "title": "Anthropic vs. OpenAI red teaming methods reveal different security priorities for enterprise AI",
+      "description": "Model providers want to prove the security and robustness of their models, releasing system cards and conducting red-team exercises with each new release. But it can be difficult for enterprises to parse through the results, which vary widely and can be misleading. Anthropic's 153-page system card for Claude Opus 4.5 versus OpenAI's 60-page GPT-5 system card reveals a fundamental split in how these labs approach security validation. Anthropic discloses in their system card how they rely on multi",
+      "timestamp": "12/04/2025, 5:00 AM",
+      "sources": [
+        {
+          "name": "VentureBeat AI",
+          "url": "https://venturebeat.com/security/anthropic-vs-openai-red-teaming-methods-reveal-different-security-priorities",
+          "thumbnailUrl": "https://images.ctfassets.net/jdtwqhzvc2n1/3rwD78rWMVQoD6mxei3how/7a9957d3a02efd06ca5a7dbee64505de/Anthropic_red_teaming.jpg?w=300&amp;q=30"
+        },
+        {
+          "name": "Fortune",
+          "url": "https://fortune.com/2025/09/04/anthropic-red-team-pushes-ai-models-into-the-danger-zone-and-burnishes-companys-reputation-for-safety/"
+        },
+        {
+          "name": "Cset",
+          "url": "https://cset.georgetown.edu/article/ai-red-teaming-design-threat-models-and-tools/"
+        },
+        {
+          "name": "Openai",
+          "url": "https://openai.com/index/openai-anthropic-safety-evaluation/"
+        },
+        {
+          "name": "Ai-supremacy",
+          "url": "https://www.ai-supremacy.com/p/openai-code-red-2025-the-fall-of-chatgpt"
+        },
+        {
+          "name": "Alignment",
+          "url": "https://alignment.anthropic.com/2025/openai-findings/"
+        }
+      ],
+      "tier": "featured",
+      "sourceUrl": "https://venturebeat.com/security/anthropic-vs-openai-red-teaming-methods-reveal-different-security-priorities",
+      "topicCategory": "ai-creative"
     },
     {
       "title": "Delivering securely on data and AI strategy",
