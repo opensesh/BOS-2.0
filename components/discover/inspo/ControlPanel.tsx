@@ -244,28 +244,28 @@ export default function ControlPanel() {
     <AnimatePresence>
       {isPanelOpen && (
         <>
-          {/* Backdrop */}
+          {/* Backdrop - below mobile header */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm"
+            className="fixed inset-0 top-14 lg:top-0 z-40 bg-black/40 backdrop-blur-sm"
             onClick={handleBackdropClick}
           />
 
-          {/* Drawer Panel */}
+          {/* Drawer Panel - below mobile header on mobile/tablet, full height on desktop */}
           <motion.div
             ref={panelRef}
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 30, stiffness: 300 }}
-            className="fixed top-0 right-0 bottom-0 z-50 w-full max-w-[320px] bg-os-surface-dark border-l border-os-border-dark shadow-2xl flex flex-col"
+            className="fixed top-14 lg:top-0 right-0 bottom-0 z-50 w-full max-w-[320px] bg-os-surface-dark border-l border-os-border-dark shadow-2xl flex flex-col"
           >
-            {/* Header */}
-            <div className="flex items-center justify-between px-4 py-4 border-b border-os-border-dark shrink-0">
-              <span className="font-display font-semibold text-brand-vanilla">
+            {/* Header - h-12 on desktop to match Sidebar header */}
+            <div className="flex items-center justify-between px-4 h-14 lg:h-12 border-b border-os-border-dark shrink-0">
+              <span className="font-display font-semibold text-brand-vanilla lg:text-sm">
                 Settings
               </span>
               <button
@@ -323,8 +323,8 @@ export default function ControlPanel() {
                   <div className="pt-2 flex gap-2">
                     <button
                       onClick={() => {
-                        setInnerColor('#FE5102');
-                        setOuterColor('#FFFAEE');
+                        setInnerColor('#FFFAEE');
+                        setOuterColor('#FE5102');
                       }}
                       className="flex-1 px-3 py-2 text-xs font-medium bg-os-bg-dark border border-os-border-dark rounded-lg text-os-text-secondary-dark hover:text-brand-vanilla hover:border-brand-aperol/50 transition-colors"
                     >

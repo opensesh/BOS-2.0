@@ -1,13 +1,13 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
-import { Canvas, useThree } from '@react-three/fiber';
+import { useRef, useEffect, useState } from 'react';
+import { Canvas, useThree, useFrame } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import * as THREE from 'three';
 import ParticleSystem from './ParticleSystem';
 import { useInspoStore } from '@/lib/stores/inspo-store';
 
-// Component to handle camera reset on view mode changes
+// Component to handle camera reset and fade on view mode changes
 function CameraController() {
   const { camera } = useThree();
   const controlsRef = useRef<any>(null);
@@ -63,6 +63,42 @@ function CameraController() {
   );
 }
 
+// Fade overlay component for smooth transitions
+function TransitionFade() {
+  const meshRef = useRef<THREE.Mesh>(null);
+  const isTransitioning = useInspoStore((state) => state.isTransitioning);
+  const [opacity, setOpacity] = useState(0);
+  const targetOpacity = useRef(0);
+  
+  // Animate opacity based on transition state
+  useEffect(() => {
+    targetOpacity.current = isTransitioning ? 0.6 : 0;
+  }, [isTransitioning]);
+  
+  useFrame((_, delta) => {
+    // Smoothly interpolate opacity
+    const speed = isTransitioning ? 8 : 4; // Faster fade-in, slower fade-out
+    const newOpacity = THREE.MathUtils.lerp(opacity, targetOpacity.current, delta * speed);
+    setOpacity(newOpacity);
+    
+    if (meshRef.current && meshRef.current.material) {
+      (meshRef.current.material as THREE.MeshBasicMaterial).opacity = newOpacity;
+    }
+  });
+  
+  return (
+    <mesh ref={meshRef} position={[0, 0, 25]}>
+      <planeGeometry args={[100, 100]} />
+      <meshBasicMaterial 
+        color="#141414" 
+        transparent 
+        opacity={opacity}
+        depthWrite={false}
+      />
+    </mesh>
+  );
+}
+
 export default function InspoCanvas() {
   return (
     <Canvas
@@ -74,6 +110,7 @@ export default function InspoCanvas() {
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} intensity={1} />
       <ParticleSystem radius={15} />
+      <TransitionFade />
       <CameraController />
     </Canvas>
   );

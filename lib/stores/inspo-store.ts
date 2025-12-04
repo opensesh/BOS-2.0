@@ -49,8 +49,8 @@ const DEFAULT_PARTICLE_SETTINGS: ParticleSettings = {
 };
 
 const DEFAULT_COLOR_SETTINGS: ColorSettings = {
-  innerColor: '#FE5102', // Aperol
-  outerColor: '#FFFAEE', // Vanilla
+  innerColor: '#FFFAEE', // Vanilla (center)
+  outerColor: '#FE5102', // Aperol (edge)
 };
 
 export const useInspoStore = create<InspoState>((set) => ({
