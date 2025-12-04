@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import {
   Search,
   Mic,
@@ -44,9 +44,13 @@ export function FollowUpInput({
   const [mode, setMode] = useState<'search' | 'research'>('search');
   const [showModelSelector, setShowModelSelector] = useState(false);
   const [showConnectorDropdown, setShowConnectorDropdown] = useState(false);
+  const [modelDropdownPosition, setModelDropdownPosition] = useState<{ right?: number; left?: number; maxWidth?: number }>({});
+  const [connectorDropdownPosition, setConnectorDropdownPosition] = useState<{ right?: number; left?: number; maxWidth?: number }>({});
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const modelSelectorRef = useRef<HTMLDivElement>(null);
+  const modelButtonRef = useRef<HTMLButtonElement>(null);
   const connectorRef = useRef<HTMLDivElement>(null);
+  const connectorButtonRef = useRef<HTMLButtonElement>(null);
 
   // Attachment handling
   const {
@@ -87,6 +91,74 @@ export function FollowUpInput({
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
+
+  // Calculate model dropdown position for responsive alignment
+  const calculateModelDropdownPosition = useCallback(() => {
+    const button = modelButtonRef.current;
+    if (!button) return;
+
+    const buttonRect = button.getBoundingClientRect();
+    const viewportWidth = window.innerWidth;
+    const isMobileOrTablet = viewportWidth < 1024; // lg breakpoint - includes tablets
+
+    if (isMobileOrTablet) {
+      // Find the form container to align with its right edge
+      const formContainer = button.closest('form');
+      if (formContainer) {
+        const containerRect = formContainer.getBoundingClientRect();
+        const rightOffset = buttonRect.right - containerRect.right;
+        const dropdownMaxWidth = Math.min(containerRect.width, 280);
+        setModelDropdownPosition({ right: rightOffset, left: undefined, maxWidth: dropdownMaxWidth });
+      } else {
+        const containerPadding = 16;
+        setModelDropdownPosition({ right: 0, left: undefined, maxWidth: Math.min(viewportWidth - (containerPadding * 2), 280) });
+      }
+    } else {
+      setModelDropdownPosition({ left: 0, right: undefined, maxWidth: 224 }); // 56 * 4 = 224px (w-56)
+    }
+  }, []);
+
+  // Calculate connector dropdown position for responsive alignment
+  const calculateConnectorDropdownPosition = useCallback(() => {
+    const button = connectorButtonRef.current;
+    if (!button) return;
+
+    const buttonRect = button.getBoundingClientRect();
+    const viewportWidth = window.innerWidth;
+    const isMobileOrTablet = viewportWidth < 1024; // lg breakpoint - includes tablets
+
+    if (isMobileOrTablet) {
+      // Find the form container to align with its right edge
+      const formContainer = button.closest('form');
+      if (formContainer) {
+        const containerRect = formContainer.getBoundingClientRect();
+        const rightOffset = buttonRect.right - containerRect.right;
+        const dropdownMaxWidth = Math.min(containerRect.width, 320);
+        setConnectorDropdownPosition({ right: rightOffset, left: undefined, maxWidth: dropdownMaxWidth });
+      } else {
+        const containerPadding = 16;
+        setConnectorDropdownPosition({ right: 0, left: undefined, maxWidth: Math.min(viewportWidth - (containerPadding * 2), 320) });
+      }
+    } else {
+      setConnectorDropdownPosition({ right: 0, left: undefined, maxWidth: 256 }); // 64 * 4 = 256px (w-64)
+    }
+  }, []);
+
+  useEffect(() => {
+    if (showModelSelector) {
+      calculateModelDropdownPosition();
+      window.addEventListener('resize', calculateModelDropdownPosition);
+      return () => window.removeEventListener('resize', calculateModelDropdownPosition);
+    }
+  }, [showModelSelector, calculateModelDropdownPosition]);
+
+  useEffect(() => {
+    if (showConnectorDropdown) {
+      calculateConnectorDropdownPosition();
+      window.addEventListener('resize', calculateConnectorDropdownPosition);
+      return () => window.removeEventListener('resize', calculateConnectorDropdownPosition);
+    }
+  }, [showConnectorDropdown, calculateConnectorDropdownPosition]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -191,6 +263,7 @@ export function FollowUpInput({
               {/* Model Selector */}
               <div className="relative" ref={modelSelectorRef}>
                 <button
+                  ref={modelButtonRef}
                   type="button"
                   onClick={() => setShowModelSelector(!showModelSelector)}
                   className="flex items-center gap-1.5 px-2 py-1.5 rounded-lg text-sm text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-bg-dark transition-colors"
@@ -204,7 +277,12 @@ export function FollowUpInput({
                 {showModelSelector && (
                   <div
                     onClick={(e) => e.stopPropagation()}
-                    className="absolute right-0 sm:right-auto sm:left-0 bottom-full mb-2 w-56 max-w-[calc(100vw-2rem)] bg-os-surface-dark rounded-lg border border-os-border-dark shadow-xl z-50 py-1"
+                    className="absolute bottom-full mb-2 bg-os-surface-dark rounded-lg border border-os-border-dark shadow-xl z-50 py-1 lg:w-56"
+                    style={{
+                      right: modelDropdownPosition.right !== undefined ? modelDropdownPosition.right : undefined,
+                      left: modelDropdownPosition.left !== undefined ? modelDropdownPosition.left : undefined,
+                      width: modelDropdownPosition.maxWidth !== undefined ? modelDropdownPosition.maxWidth : undefined,
+                    }}
                   >
                     {Object.values(models).map((model) => (
                       <button
@@ -271,6 +349,7 @@ export function FollowUpInput({
               {/* Globe - Connectors */}
               <div className="relative" ref={connectorRef}>
                 <button
+                  ref={connectorButtonRef}
                   type="button"
                   onClick={() => setShowConnectorDropdown(!showConnectorDropdown)}
                   className={`
@@ -289,7 +368,12 @@ export function FollowUpInput({
                 {showConnectorDropdown && (
                   <div
                     onClick={(e) => e.stopPropagation()}
-                    className="absolute right-0 bottom-full mb-2 w-64 max-w-[calc(100vw-2rem)] bg-os-surface-dark rounded-lg border border-os-border-dark shadow-xl z-50 py-1"
+                    className="absolute bottom-full mb-2 bg-os-surface-dark rounded-lg border border-os-border-dark shadow-xl z-50 py-1 lg:w-64"
+                    style={{
+                      right: connectorDropdownPosition.right !== undefined ? connectorDropdownPosition.right : undefined,
+                      left: connectorDropdownPosition.left !== undefined ? connectorDropdownPosition.left : undefined,
+                      width: connectorDropdownPosition.maxWidth !== undefined ? connectorDropdownPosition.maxWidth : undefined,
+                    }}
                   >
                     <ConnectorItem icon={Globe} title="Web" description="Search the Internet" active />
                     <ConnectorItem icon={GraduationCap} title="Academic" description="Search papers" />

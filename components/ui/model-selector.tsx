@@ -12,7 +12,9 @@ interface ModelSelectorProps {
 
 export function ModelSelector({ selectedModel, onModelChange, disabled }: ModelSelectorProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [position, setPosition] = useState<{ right?: number; left?: number; maxWidth?: number }>({});
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
   const currentModel = models[selectedModel];
   
@@ -20,6 +22,55 @@ export function ModelSelector({ selectedModel, onModelChange, disabled }: ModelS
   const displayName = currentModel.version 
     ? `${currentModel.name} ${currentModel.version}` 
     : currentModel.name;
+
+  // Calculate position to align with container edge on mobile/tablet
+  useEffect(() => {
+    if (!isOpen || !buttonRef.current) return;
+
+    const calculatePosition = () => {
+      const button = buttonRef.current;
+      if (!button) return;
+
+      const buttonRect = button.getBoundingClientRect();
+      const viewportWidth = window.innerWidth;
+      const isMobileOrTablet = viewportWidth < 1024; // lg breakpoint - includes tablets
+
+      if (isMobileOrTablet) {
+        // Find the form container to align with its right edge
+        const formContainer = button.closest('form');
+        if (formContainer) {
+          const containerRect = formContainer.getBoundingClientRect();
+          
+          // Calculate using button position directly
+          const rightOffset = buttonRect.right - containerRect.right;
+          
+          // Max width should not exceed the form width, but also cap at a reasonable size
+          const dropdownMaxWidth = Math.min(containerRect.width, 280);
+          
+          setPosition({ 
+            right: rightOffset, 
+            left: undefined,
+            maxWidth: dropdownMaxWidth
+          });
+        } else {
+          // Fallback: align with viewport minus padding
+          const containerPadding = 16;
+          setPosition({ 
+            right: 0, 
+            left: undefined,
+            maxWidth: Math.min(viewportWidth - (containerPadding * 2), 280)
+          });
+        }
+      } else {
+        // Desktop: align to left of trigger with fixed width
+        setPosition({ left: 0, right: undefined, maxWidth: 256 }); // 64 * 4 = 256px (w-64)
+      }
+    };
+
+    calculatePosition();
+    window.addEventListener('resize', calculatePosition);
+    return () => window.removeEventListener('resize', calculatePosition);
+  }, [isOpen]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -41,6 +92,7 @@ export function ModelSelector({ selectedModel, onModelChange, disabled }: ModelS
   return (
     <div ref={dropdownRef} className="relative">
       <button
+        ref={buttonRef}
         type="button"
         onClick={() => !disabled && setIsOpen(!isOpen)}
         disabled={disabled}
@@ -60,7 +112,14 @@ export function ModelSelector({ selectedModel, onModelChange, disabled }: ModelS
       </button>
 
       {isOpen && (
-        <div className="absolute bottom-full right-0 sm:right-auto sm:left-0 mb-2 w-64 max-w-[calc(100vw-2rem)] bg-os-surface-dark rounded-xl border border-os-border-dark shadow-xl overflow-hidden z-50">
+        <div 
+          className="absolute bottom-full mb-2 bg-os-surface-dark rounded-xl border border-os-border-dark shadow-xl overflow-hidden z-50 lg:w-64"
+          style={{
+            right: position.right !== undefined ? position.right : undefined,
+            left: position.left !== undefined ? position.left : undefined,
+            width: position.maxWidth !== undefined ? position.maxWidth : undefined,
+          }}
+        >
           <div className="py-2">
             {/* Auto option */}
             <button

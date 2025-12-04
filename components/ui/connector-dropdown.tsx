@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 
 interface Connector {
   id: string;
@@ -27,11 +27,74 @@ export function ConnectorDropdown({
 }: ConnectorDropdownProps) {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const onCloseRef = useRef(onClose);
+  const [position, setPosition] = useState<{ 
+    right?: number; 
+    left?: number; 
+    maxWidth?: number;
+    bottom?: number;
+    useFixed?: boolean;
+  }>({});
 
   // Keep onClose ref up to date without triggering re-renders
   useEffect(() => {
     onCloseRef.current = onClose;
   }, [onClose]);
+
+  // Calculate position to align with container edge on mobile/tablet
+  useEffect(() => {
+    if (!isOpen || !triggerRef?.current) return;
+
+    const calculatePosition = () => {
+      const trigger = triggerRef.current;
+      if (!trigger) return;
+
+      const triggerRect = trigger.getBoundingClientRect();
+      const viewportWidth = window.innerWidth;
+      const isMobileOrTablet = viewportWidth < 1024; // lg breakpoint - includes tablets
+
+      if (isMobileOrTablet) {
+        // Find the form container to align with its right edge
+        const formContainer = trigger.closest('form');
+        if (formContainer) {
+          const containerRect = formContainer.getBoundingClientRect();
+          
+          // Use fixed positioning for precise alignment on mobile/tablet
+          // Position from viewport right edge to align with form's right edge
+          const rightFromViewport = viewportWidth - containerRect.right;
+          
+          // Position from viewport bottom, above the trigger
+          const bottomFromViewport = viewportWidth > 0 ? window.innerHeight - triggerRect.top + 8 : undefined;
+          
+          // Max width should not exceed the form width, but also cap at a reasonable size
+          const dropdownMaxWidth = Math.min(containerRect.width, 320);
+          
+          setPosition({ 
+            right: rightFromViewport, 
+            left: undefined,
+            maxWidth: dropdownMaxWidth,
+            bottom: bottomFromViewport,
+            useFixed: true
+          });
+        } else {
+          // Fallback: align with viewport minus padding
+          const containerPadding = 16;
+          setPosition({ 
+            right: containerPadding, 
+            left: undefined,
+            maxWidth: Math.min(viewportWidth - (containerPadding * 2), 320),
+            useFixed: true
+          });
+        }
+      } else {
+        // Desktop: use absolute positioning, align to left of trigger
+        setPosition({ left: 0, right: undefined, maxWidth: 288, useFixed: false }); // 72 * 4 = 288px (w-72)
+      }
+    };
+
+    calculatePosition();
+    window.addEventListener('resize', calculatePosition);
+    return () => window.removeEventListener('resize', calculatePosition);
+  }, [isOpen, triggerRef]);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -57,7 +120,13 @@ export function ConnectorDropdown({
     <div
       ref={dropdownRef}
       onClick={(e) => e.stopPropagation()}
-      className="absolute bottom-full right-0 sm:right-auto sm:left-0 mb-2 w-72 max-w-[calc(100vw-2rem)] bg-os-surface-dark rounded-xl border border-os-border-dark shadow-xl z-50"
+      className={`${position.useFixed ? 'fixed' : 'absolute bottom-full mb-2'} bg-os-surface-dark rounded-xl border border-os-border-dark shadow-xl z-50 lg:w-72`}
+      style={{
+        right: position.right !== undefined ? position.right : undefined,
+        left: position.left !== undefined ? position.left : undefined,
+        width: position.maxWidth !== undefined ? position.maxWidth : undefined,
+        bottom: position.useFixed && position.bottom !== undefined ? position.bottom : undefined,
+      }}
     >
       <div className="p-2">
         {connectors.map((connector) => {
