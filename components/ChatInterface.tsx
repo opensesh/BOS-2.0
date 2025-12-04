@@ -115,6 +115,9 @@ export function ChatInterface() {
     },
   });
 
+  // Derive hasMessages early so it can be used in effects
+  const hasMessages = messages.length > 0;
+
   // Reset chat function
   const resetChat = useCallback(() => {
     setMessages([]);
@@ -546,8 +549,6 @@ export function ChatInterface() {
     const firstUserMessage = parsedMessages.find(m => m.role === 'user');
     return firstUserMessage?.content.slice(0, 50) || 'New Thread';
   }, [parsedMessages]);
-
-  const hasMessages = messages.length > 0;
 
   return (
     <>
