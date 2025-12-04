@@ -81,6 +81,7 @@ export function ChatInterface() {
   const [showConnectorDropdown, setShowConnectorDropdown] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [suggestionsMode, setSuggestionsMode] = useState<'search' | 'research'>('search');
+  const [showInlineAutocomplete, setShowInlineAutocomplete] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [modelUsed, setModelUsed] = useState<string | undefined>();
   const [activeTab, setActiveTab] = useState<'answer' | 'links' | 'images'>('answer');
@@ -92,7 +93,13 @@ export function ChatInterface() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   // Chat context for cross-component communication
-  const { shouldResetChat, acknowledgeChatReset, addToHistory } = useChatContext();
+  const { 
+    shouldResetChat, 
+    acknowledgeChatReset, 
+    addToHistory, 
+    setCurrentSessionId,
+    currentSessionId,
+  } = useChatContext();
 
   // Create transport once - stable reference
   const chatTransport = useRef(new DefaultChatTransport({
@@ -142,15 +149,54 @@ export function ChatInterface() {
           const preview = firstAssistantMessage 
             ? getMessageContent(firstAssistantMessage).slice(0, 100)
             : '';
-          addToHistory(title, preview);
+          // Convert messages to the format expected by chat history
+          const chatMessages = messages.map(m => ({
+            id: m.id,
+            role: m.role as 'user' | 'assistant',
+            content: getMessageContent(m),
+            timestamp: new Date().toISOString(),
+          }));
+          addToHistory(title, preview, chatMessages);
         }
       }
       resetChat();
       setArticleContext(null);
       setIdeaContext(null);
+      setCurrentSessionId(null);
       acknowledgeChatReset();
     }
-  }, [shouldResetChat, acknowledgeChatReset, resetChat, messages, addToHistory, getMessageContent]);
+  }, [shouldResetChat, acknowledgeChatReset, resetChat, messages, addToHistory, getMessageContent, setCurrentSessionId]);
+
+  // Auto-save session when streaming completes (status changes from streaming to ready)
+  const prevStatusRef = useRef(status);
+  useEffect(() => {
+    // Only save when transitioning from streaming/submitted to ready with messages
+    if (
+      (prevStatusRef.current === 'streaming' || prevStatusRef.current === 'submitted') &&
+      status === 'ready' &&
+      messages.length > 0
+    ) {
+      const firstUserMessage = messages.find(m => m.role === 'user');
+      const lastAssistantMessage = [...messages].reverse().find(m => m.role === 'assistant');
+      
+      if (firstUserMessage && lastAssistantMessage) {
+        const title = getMessageContent(firstUserMessage).slice(0, 100) || 'Untitled Chat';
+        const preview = getMessageContent(lastAssistantMessage).slice(0, 150);
+        
+        // Convert messages to chat history format
+        const chatMessages = messages.map(m => ({
+          id: m.id,
+          role: m.role as 'user' | 'assistant',
+          content: getMessageContent(m),
+          timestamp: new Date().toISOString(),
+        }));
+        
+        // Save to history (this also updates Supabase)
+        addToHistory(title, preview, chatMessages);
+      }
+    }
+    prevStatusRef.current = status;
+  }, [status, messages, addToHistory, getMessageContent]);
 
   // Process URL search params for article follow-up queries or prompt pre-fill
   useEffect(() => {
@@ -308,6 +354,16 @@ export function ChatInterface() {
     }
   }, [input]);
 
+  // Show inline autocomplete when user starts typing
+  useEffect(() => {
+    // Show autocomplete when input has at least 2 characters and not loading
+    if (input.length >= 2 && !isLoading && !hasMessages) {
+      setShowInlineAutocomplete(true);
+    } else if (input.length < 2) {
+      setShowInlineAutocomplete(false);
+    }
+  }, [input, isLoading, hasMessages]);
+
   // Scroll to bottom when new messages arrive
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -405,11 +461,35 @@ export function ChatInterface() {
     }
   };
 
-  const handleQueryClick = useCallback((queryText: string) => {
+  const handleQueryClick = useCallback(async (queryText: string, submit = false) => {
     setInput(queryText);
     setShowSuggestions(false);
-    textareaRef.current?.focus();
-  }, []);
+    setShowInlineAutocomplete(false);
+    
+    if (submit && queryText.trim()) {
+      // Log the search to history
+      try {
+        const { logSearchQuery } = await import('@/hooks/useSearchSuggestions');
+        await logSearchQuery(queryText, suggestionsMode);
+      } catch (err) {
+        console.error('Error logging search:', err);
+      }
+      
+      // Submit the query immediately
+      if (!isLoading && typeof sendMessage === 'function') {
+        setInput('');
+        try {
+          await sendMessage({ text: queryText }, { body: { model: selectedModel } });
+        } catch (err) {
+          console.error('Failed to send message:', err);
+          setSubmitError(err instanceof Error ? err.message : 'Failed to send message');
+          setInput(queryText);
+        }
+      }
+    } else {
+      textareaRef.current?.focus();
+    }
+  }, [isLoading, sendMessage, selectedModel, suggestionsMode]);
 
   const handleMicClick = () => {
     if (isListening) {
@@ -695,7 +775,11 @@ export function ChatInterface() {
                         onChange={(e) => setInput(e.target.value)}
                         onKeyDown={handleKeyDown}
                         onFocus={() => setIsFocused(true)}
-                        onBlur={() => setIsFocused(false)}
+                        onBlur={() => {
+                          setIsFocused(false);
+                          // Delay hiding autocomplete to allow click events
+                          setTimeout(() => setShowInlineAutocomplete(false), 150);
+                        }}
                         onPaste={handlePaste}
                         placeholder={attachments.length > 0 ? "Add a message or send with images..." : "Ask anything. Type @ for mentions and / for shortcuts."}
                         className="w-full px-4 py-4 bg-transparent text-os-text-primary-dark placeholder:text-os-text-secondary-dark resize-none focus:outline-none min-h-[60px] max-h-[300px]"
@@ -705,12 +789,24 @@ export function ChatInterface() {
                       />
                     </div>
 
+                    {/* Inline Autocomplete Suggestions (Perplexity-style) */}
+                    {showInlineAutocomplete && input.length >= 2 && (
+                      <div className="border-t border-os-border-dark">
+                        <SearchResearchSuggestions
+                          mode={suggestionsMode}
+                          onQueryClick={handleQueryClick}
+                          inputValue={input}
+                        />
+                      </div>
+                    )}
+
                     <div className="flex flex-wrap items-center justify-between px-4 py-3 border-t border-os-border-dark gap-2 sm:gap-4">
                       <div className="flex items-center gap-2 sm:gap-3">
                         <SearchResearchToggle
                           onQueryClick={handleQueryClick}
                           onModeChange={handleModeChange}
                           showSuggestions={showSuggestions}
+                          inputValue={input}
                         />
                       </div>
 
@@ -874,7 +970,11 @@ export function ChatInterface() {
                 className="w-full max-w-3xl mx-auto px-4 mt-4"
                 variants={fadeIn}
               >
-                <SearchResearchSuggestions mode={suggestionsMode} onQueryClick={handleQueryClick} />
+                <SearchResearchSuggestions 
+                  mode={suggestionsMode} 
+                  onQueryClick={handleQueryClick}
+                  inputValue={input}
+                />
               </motion.div>
             )}
           </motion.div>
