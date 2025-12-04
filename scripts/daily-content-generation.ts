@@ -806,17 +806,38 @@ async function generateFeaturedArticles(
         .filter(s => s.title)
         .map(s => s.title as string);
       
+      // Build source cards for horizontal display (top 6 sources)
+      const sourceCards = allSources.slice(0, 6).map(s => ({
+        id: s.id,
+        name: s.name,
+        url: s.url,
+        favicon: s.favicon,
+        title: s.title || cluster.title,
+      }));
+      
+      // Build hero image object (if we have a URL)
+      const finalHeroImageUrl = heroImageUrl || result.heroImageUrl;
+      const heroImage = finalHeroImageUrl ? { url: finalHeroImageUrl } : undefined;
+      
       const article: DiscoverArticle = {
         id: slug,
         slug,
         title: result.title || cluster.title,
-        summary: cluster.description || '',
-        heroImageUrl: heroImageUrl || result.heroImageUrl, // Use our fetched image or fallback to result
         publishedAt: new Date().toISOString(),
-        sources: allSources,
+        generatedAt: new Date().toISOString(),
+        totalSources: allSources.length,
         sections,
+        sourceCards,
+        allSources: allSources.map(s => ({
+          id: s.id,
+          name: s.name,
+          url: s.url,
+          favicon: s.favicon,
+          title: s.title,
+        })),
+        heroImage,
         sidebarSections,
-        relatedArticles: [], // Will be populated separately if needed
+        relatedArticles: [],
       };
       
       articles.push(article);
@@ -857,7 +878,7 @@ async function saveFeaturedArticles(articles: DiscoverArticle[]): Promise<void> 
     articles: articles.map(a => ({
       slug: a.slug,
       title: a.title,
-      sourceCount: a.sources.length,
+      sourceCount: a.totalSources,
     })),
   };
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
