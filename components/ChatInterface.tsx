@@ -705,8 +705,8 @@ export function ChatInterface() {
                       />
                     </div>
 
-                    <div className="flex items-center justify-between px-4 py-3 border-t border-os-border-dark flex-nowrap gap-4">
-                      <div className="flex items-center gap-3">
+                    <div className="flex flex-wrap items-center justify-between px-4 py-3 border-t border-os-border-dark gap-2 sm:gap-4">
+                      <div className="flex items-center gap-2 sm:gap-3">
                         <SearchResearchToggle
                           onQueryClick={handleQueryClick}
                           onModeChange={handleModeChange}
@@ -714,14 +714,14 @@ export function ChatInterface() {
                         />
                       </div>
 
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-1 sm:gap-2">
                         <ModelSelector
                           selectedModel={selectedModel}
                           onModelChange={setSelectedModel}
                           disabled={isLoading}
                         />
 
-                        <div className="w-px h-5 bg-os-border-dark" />
+                        <div className="hidden sm:block w-px h-5 bg-os-border-dark" />
                         <div className="relative">
                           <button
                             ref={globeButtonRef}

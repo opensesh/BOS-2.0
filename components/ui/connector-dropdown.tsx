@@ -56,7 +56,8 @@ export function ConnectorDropdown({
   return (
     <div
       ref={dropdownRef}
-      className="absolute bottom-full left-0 mb-2 w-72 bg-os-surface-dark rounded-xl border border-os-border-dark shadow-xl z-50"
+      onClick={(e) => e.stopPropagation()}
+      className="absolute bottom-full right-0 sm:right-auto sm:left-0 mb-2 w-72 max-w-[calc(100vw-2rem)] bg-os-surface-dark rounded-xl border border-os-border-dark shadow-xl z-50"
     >
       <div className="p-2">
         {connectors.map((connector) => {

@@ -1,0 +1,71 @@
+name: Generate Discover Articles
+
+on:
+  # Run daily at 8 AM PST (16:00 UTC)
+  schedule:
+    - cron: '0 16 * * *'
+  
+  # Allow manual triggering for testing
+  workflow_dispatch:
+    inputs:
+      max_articles:
+        description: 'Maximum number of articles to generate'
+        required: false
+        default: '5'
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate articles
+        env:
+          PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+          MAX_ARTICLES: ${{ github.event.inputs.max_articles || '5' }}
+        run: npm run generate:articles
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if [ -n "$(git status --porcelain public/data/discover/articles/)" ]; then
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add public/data/discover/articles/
+          git commit -m "chore(discover): auto-generate articles $(date +'%Y-%m-%d %H:%M')"
+          git push
+
+      - name: Summary
+        run: |
+          echo "## Article Generation Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Generated at: $(date)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Generated Articles:" >> $GITHUB_STEP_SUMMARY
+          ls -la public/data/discover/articles/*.json 2>/dev/null || echo "No articles found" >> $GITHUB_STEP_SUMMARY
+

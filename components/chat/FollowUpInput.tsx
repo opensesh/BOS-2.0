@@ -185,9 +185,9 @@ export function FollowUpInput({
           </div>
 
           {/* Footer toolbar */}
-          <div className="flex items-center justify-between px-4 py-3 border-t border-os-border-dark">
+          <div className="flex flex-wrap items-center justify-between px-4 py-3 border-t border-os-border-dark gap-2">
             {/* Left side - Model Selector + Search/Research Toggle */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1 sm:gap-2">
               {/* Model Selector */}
               <div className="relative" ref={modelSelectorRef}>
                 <button
@@ -202,7 +202,10 @@ export function FollowUpInput({
 
                 {/* Model dropdown - opens upward */}
                 {showModelSelector && (
-                  <div className="absolute left-0 bottom-full mb-2 w-56 bg-os-surface-dark rounded-lg border border-os-border-dark shadow-xl z-50 py-1">
+                  <div
+                    onClick={(e) => e.stopPropagation()}
+                    className="absolute right-0 sm:right-auto sm:left-0 bottom-full mb-2 w-56 max-w-[calc(100vw-2rem)] bg-os-surface-dark rounded-lg border border-os-border-dark shadow-xl z-50 py-1"
+                  >
                     {Object.values(models).map((model) => (
                       <button
                         key={model.id}
@@ -230,7 +233,7 @@ export function FollowUpInput({
                 )}
               </div>
 
-              <div className="w-px h-6 bg-os-border-dark" />
+              <div className="hidden sm:block w-px h-6 bg-os-border-dark" />
 
               {/* Search/Research Toggle */}
               <div className="flex items-center bg-os-bg-dark rounded-lg p-0.5">
@@ -264,7 +267,7 @@ export function FollowUpInput({
             </div>
 
             {/* Right side - action buttons */}
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-0.5 sm:gap-1">
               {/* Globe - Connectors */}
               <div className="relative" ref={connectorRef}>
                 <button
@@ -284,7 +287,10 @@ export function FollowUpInput({
 
                 {/* Connector dropdown - opens upward */}
                 {showConnectorDropdown && (
-                  <div className="absolute right-0 bottom-full mb-2 w-64 bg-os-surface-dark rounded-lg border border-os-border-dark shadow-xl z-50 py-1">
+                  <div
+                    onClick={(e) => e.stopPropagation()}
+                    className="absolute right-0 bottom-full mb-2 w-64 max-w-[calc(100vw-2rem)] bg-os-surface-dark rounded-lg border border-os-border-dark shadow-xl z-50 py-1"
+                  >
                     <ConnectorItem icon={Globe} title="Web" description="Search the Internet" active />
                     <ConnectorItem icon={GraduationCap} title="Academic" description="Search papers" />
                     <ConnectorItem icon={Users} title="Social" description="Discussions" />

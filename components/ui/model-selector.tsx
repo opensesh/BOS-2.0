@@ -60,7 +60,7 @@ export function ModelSelector({ selectedModel, onModelChange, disabled }: ModelS
       </button>
 
       {isOpen && (
-        <div className="absolute bottom-full left-0 mb-2 w-64 bg-os-surface-dark rounded-xl border border-os-border-dark shadow-xl overflow-hidden z-50">
+        <div className="absolute bottom-full right-0 sm:right-auto sm:left-0 mb-2 w-64 max-w-[calc(100vw-2rem)] bg-os-surface-dark rounded-xl border border-os-border-dark shadow-xl overflow-hidden z-50">
           <div className="py-2">
             {/* Auto option */}
             <button
