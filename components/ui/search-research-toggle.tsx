@@ -2,6 +2,8 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { Search, Orbit } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { suggestionsContainer, suggestionItem } from '@/lib/motion';
 
 type Mode = 'search' | 'research';
 
@@ -286,15 +288,24 @@ export function SearchResearchSuggestions({
   const CurrentIcon = mode === 'search' ? Search : Orbit;
 
   return (
-    <div className="w-full mt-3 animate-fade-in">
+    <motion.div
+      className="w-full mt-3"
+      variants={suggestionsContainer}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       {/* Suggestions List */}
       <div className="space-y-1">
         {suggestions.slice(0, 5).map((suggestion, index) => (
-          <button
+          <motion.button
             key={index}
+            variants={suggestionItem}
             type="button"
             onClick={() => onQueryClick?.(suggestion)}
-            className="w-full text-left p-2 rounded-lg hover:bg-os-surface-dark transition-colors group"
+            whileHover={{ x: 4, backgroundColor: 'rgba(255, 255, 255, 0.05)' }}
+            whileTap={{ scale: 0.98 }}
+            className="w-full text-left p-2 rounded-lg transition-colors group"
           >
             <div className="flex items-start space-x-2">
               <CurrentIcon className="w-4 h-4 text-os-text-secondary-dark group-hover:text-brand-aperol mt-0.5 flex-shrink-0" />
@@ -302,9 +313,9 @@ export function SearchResearchSuggestions({
                 {suggestion}
               </span>
             </div>
-          </button>
+          </motion.button>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }

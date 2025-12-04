@@ -64,11 +64,18 @@ export function ConnectorDropdown({
           const Icon = connector.icon;
 
           return (
-            <button
+            <div
               key={connector.id}
-              type="button"
               onClick={() => onToggleConnector(connector.id)}
-              className="w-full flex items-start gap-3 p-3 rounded-lg hover:bg-os-bg-dark transition-colors group"
+              className="w-full flex items-start gap-3 p-3 rounded-lg hover:bg-os-bg-dark transition-colors group cursor-pointer"
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  onToggleConnector(connector.id);
+                }
+              }}
             >
               <div className="flex-shrink-0 mt-0.5">
                 <Icon className="w-4 h-4 text-os-text-secondary-dark" />
@@ -84,14 +91,9 @@ export function ConnectorDropdown({
                 )}
               </div>
               <div className="flex-shrink-0 mt-0.5">
-                <button
-                  type="button"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onToggleConnector(connector.id);
-                  }}
+                <div
                   className={`
-                    relative w-9 h-5 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-brand-aperol focus:ring-offset-2 focus:ring-offset-os-surface-dark
+                    relative w-9 h-5 rounded-full transition-colors
                     ${connector.enabled ? 'bg-brand-aperol' : 'bg-os-border-dark'}
                   `}
                   aria-label={`Toggle ${connector.title}`}
@@ -102,9 +104,9 @@ export function ConnectorDropdown({
                       ${connector.enabled ? 'translate-x-4' : 'translate-x-0'}
                     `}
                   />
-                </button>
+                </div>
               </div>
-            </button>
+            </div>
           );
         })}
       </div>

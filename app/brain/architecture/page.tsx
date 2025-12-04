@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Sidebar } from '@/components/Sidebar';
 import { MarkdownCodeViewer } from '@/components/brain/MarkdownCodeViewer';
 import { BrainSettingsModal } from '@/components/brain/BrainSettingsModal';
+import { PageTransition, MotionItem } from '@/lib/motion';
 import { ArrowLeft, Settings } from 'lucide-react';
 
 export default function ArchitecturePage() {
@@ -23,10 +24,10 @@ export default function ArchitecturePage() {
       <Sidebar />
       
       <div className="flex-1 flex flex-col min-w-0 overflow-y-auto custom-scrollbar bg-os-bg-dark pt-14 lg:pt-0">
-        <div className="w-full max-w-6xl mx-auto px-6 py-8 md:px-12 md:py-12">
+        <PageTransition className="w-full max-w-6xl mx-auto px-6 py-8 md:px-12 md:py-12">
           {/* Back Button & Settings Row */}
-          <div className="flex items-center justify-between mb-8">
-            <Link 
+          <MotionItem className="flex items-center justify-between mb-8">
+            <Link
               href="/brain"
               className="group inline-flex items-center gap-2 text-os-text-secondary-dark hover:text-brand-aperol transition-colors"
             >
@@ -40,27 +41,29 @@ export default function ArchitecturePage() {
             >
               <Settings className="w-5 h-5 text-os-text-secondary-dark group-hover:text-brand-vanilla transition-colors" />
             </button>
-          </div>
+          </MotionItem>
 
           {/* Page Header */}
-          <div className="flex flex-col gap-2 mb-10">
+          <MotionItem className="flex flex-col gap-2 mb-10">
             <h1 className="text-4xl md:text-5xl font-display font-bold text-brand-vanilla leading-tight">
               Architecture
             </h1>
             <p className="text-base md:text-lg text-os-text-secondary-dark max-w-2xl">
-              This website is structured to serve both as a landing page for humans and as a 
-              well-organized resource for AI agent interpretation. Think of it as our brand brain 
+              This website is structured to serve both as a landing page for humans and as a
+              well-organized resource for AI agent interpretation. Think of it as our brand brain
               that will continue to grow and extend use cases over time.
             </p>
-          </div>
+          </MotionItem>
 
           {/* Content */}
-          <MarkdownCodeViewer
-            filename="architecture.md"
-            content={content || 'Loading...'}
-            maxLines={50}
-          />
-        </div>
+          <MotionItem>
+            <MarkdownCodeViewer
+              filename="architecture.md"
+              content={content || 'Loading...'}
+              maxLines={50}
+            />
+          </MotionItem>
+        </PageTransition>
       </div>
 
       {/* Settings Modal - Opens with architecture section (which is automatic) */}

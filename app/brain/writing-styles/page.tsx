@@ -7,6 +7,7 @@ import { Sidebar } from '@/components/Sidebar';
 import { MarkdownCodeViewer } from '@/components/brain/MarkdownCodeViewer';
 import { TabSelector } from '@/components/brain/TabSelector';
 import { BrainSettingsModal } from '@/components/brain/BrainSettingsModal';
+import { PageTransition, MotionItem } from '@/lib/motion';
 import { ArrowLeft, Settings, Loader2 } from 'lucide-react';
 
 const writingStyles = [
@@ -48,10 +49,10 @@ function WritingStylesContent() {
       <Sidebar />
       
       <div className="flex-1 flex flex-col min-w-0 overflow-y-auto custom-scrollbar bg-os-bg-dark pt-14 lg:pt-0">
-        <div className="w-full max-w-6xl mx-auto px-6 py-8 md:px-12 md:py-12">
+        <PageTransition className="w-full max-w-6xl mx-auto px-6 py-8 md:px-12 md:py-12">
           {/* Back Button & Settings Row */}
-          <div className="flex items-center justify-between mb-8">
-            <Link 
+          <MotionItem className="flex items-center justify-between mb-8">
+            <Link
               href="/brain"
               className="group inline-flex items-center gap-2 text-os-text-secondary-dark hover:text-brand-aperol transition-colors"
             >
@@ -65,34 +66,37 @@ function WritingStylesContent() {
             >
               <Settings className="w-5 h-5 text-os-text-secondary-dark group-hover:text-brand-vanilla transition-colors" />
             </button>
-          </div>
+          </MotionItem>
 
           {/* Page Header */}
-          <div className="flex flex-col gap-2 mb-10">
+          <MotionItem className="flex flex-col gap-2 mb-10">
             <h1 className="text-4xl md:text-5xl font-display font-bold text-brand-vanilla leading-tight">
               Writing Styles
             </h1>
             <p className="text-base md:text-lg text-os-text-secondary-dark max-w-2xl">
-              Context-specific voice guidelines for different content types. From blog posts to 
+              Context-specific voice guidelines for different content types. From blog posts to
               strategic communications, each style guide ensures consistent, on-brand messaging.
             </p>
-          </div>
+          </MotionItem>
 
           {/* Tab Selector */}
-          <TabSelector
-            tabs={writingStyles.map(w => ({ id: w.id, label: w.label }))}
-            activeTab={activeTab}
-            onChange={setActiveTab}
-            className="mb-6"
-          />
+          <MotionItem className="mb-6">
+            <TabSelector
+              tabs={writingStyles.map(w => ({ id: w.id, label: w.label }))}
+              activeTab={activeTab}
+              onChange={setActiveTab}
+            />
+          </MotionItem>
 
           {/* Content */}
-          <MarkdownCodeViewer
-            filename={activeFile?.file || 'loading...'}
-            content={content || 'Loading...'}
-            maxLines={50}
-          />
-        </div>
+          <MotionItem>
+            <MarkdownCodeViewer
+              filename={activeFile?.file || 'loading...'}
+              content={content || 'Loading...'}
+              maxLines={50}
+            />
+          </MotionItem>
+        </PageTransition>
       </div>
 
       {/* Settings Modal - Opens with writing section pre-selected */}

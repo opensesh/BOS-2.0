@@ -14,6 +14,7 @@ import {
   Type, 
   ImageIcon, 
   FileText,
+  Braces,
   ArrowUpRight,
   Plus,
   ExternalLink,
@@ -56,6 +57,13 @@ const brandHubItems = [
     description: 'Complete brand documentation',
     href: '/brand-hub/guidelines',
     icon: FileText,
+  },
+  {
+    id: 'design-tokens',
+    title: 'Design Tokens',
+    description: 'Portable styles package for AI tools',
+    href: '/brand-hub/design-tokens',
+    icon: Braces,
   },
 ];
 

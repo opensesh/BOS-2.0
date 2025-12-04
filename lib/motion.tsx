@@ -143,6 +143,191 @@ export const overlayFade: Variants = {
   },
 };
 
+// Suggestions container with stagger
+export const suggestionsContainer: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 8,
+    scale: 0.98
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.2,
+      ease: easings.easeOut,
+      staggerChildren: 0.04,
+      delayChildren: 0.05,
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: 4,
+    scale: 0.98,
+    transition: {
+      duration: 0.15,
+      ease: easings.easeIn,
+    },
+  },
+};
+
+// Individual suggestion item
+export const suggestionItem: Variants = {
+  hidden: {
+    opacity: 0,
+    x: -8
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.2,
+      ease: easings.easeOut,
+    },
+  },
+  exit: {
+    opacity: 0,
+    x: -4,
+    transition: {
+      duration: 0.1,
+    },
+  },
+};
+
+// Dropdown opening upward
+export const dropdownUp: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 8,
+    scale: 0.95
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.2,
+      ease: easings.easeOut,
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: 4,
+    scale: 0.97,
+    transition: {
+      duration: 0.15,
+      ease: easings.easeIn,
+    },
+  },
+};
+
+// Dropdown item
+export const dropdownItem: Variants = {
+  hidden: {
+    opacity: 0,
+    y: -4
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.15,
+      ease: easings.easeOut,
+    },
+  },
+};
+
+// Sub-page slide in (forward navigation)
+export const subPageSlideIn: Variants = {
+  hidden: {
+    opacity: 0,
+    x: 24
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.3,
+      ease: easings.easeOut,
+    },
+  },
+  exit: {
+    opacity: 0,
+    x: -12,
+    transition: {
+      duration: 0.2,
+      ease: easings.easeIn,
+    },
+  },
+};
+
+// Back navigation (slide from left)
+export const pageSlideBack: Variants = {
+  hidden: {
+    opacity: 0,
+    x: -24
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.3,
+      ease: easings.easeOut,
+    },
+  },
+  exit: {
+    opacity: 0,
+    x: 12,
+    transition: {
+      duration: 0.2,
+      ease: easings.easeIn,
+    },
+  },
+};
+
+// Page enter (default for route changes)
+export const pageEnter: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 16
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.35,
+      ease: easings.easeOut,
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: -8,
+    transition: {
+      duration: 0.2,
+      ease: easings.easeIn,
+    },
+  },
+};
+
+// Input highlight animation (for suggestion click)
+export const inputHighlight: Variants = {
+  initial: {
+    boxShadow: '0 0 0 0 rgba(255, 107, 53, 0)'
+  },
+  highlight: {
+    boxShadow: [
+      '0 0 0 0 rgba(255, 107, 53, 0)',
+      '0 0 0 4px rgba(255, 107, 53, 0.3)',
+      '0 0 0 0 rgba(255, 107, 53, 0)',
+    ],
+    transition: {
+      duration: 0.4,
+      ease: 'easeOut',
+    },
+  },
+};
+
 // Page transition wrapper component
 interface PageTransitionProps {
   children: ReactNode;
