@@ -81,7 +81,6 @@ export function ChatInterface() {
   const [showConnectorDropdown, setShowConnectorDropdown] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [suggestionsMode, setSuggestionsMode] = useState<'search' | 'research'>('search');
-  const [showInlineAutocomplete, setShowInlineAutocomplete] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [modelUsed, setModelUsed] = useState<string | undefined>();
   const [activeTab, setActiveTab] = useState<'answer' | 'links' | 'images'>('answer');
@@ -357,16 +356,6 @@ export function ChatInterface() {
     }
   }, [input]);
 
-  // Show inline autocomplete when user starts typing
-  useEffect(() => {
-    // Show autocomplete when input has at least 2 characters and not loading
-    if (input.length >= 2 && !isLoading && !hasMessages) {
-      setShowInlineAutocomplete(true);
-    } else if (input.length < 2) {
-      setShowInlineAutocomplete(false);
-    }
-  }, [input, isLoading, hasMessages]);
-
   // Scroll to bottom when new messages arrive
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -467,7 +456,6 @@ export function ChatInterface() {
   const handleQueryClick = useCallback(async (queryText: string, submit = false) => {
     setInput(queryText);
     setShowSuggestions(false);
-    setShowInlineAutocomplete(false);
     
     if (submit && queryText.trim()) {
       // Log the search to history
@@ -776,11 +764,7 @@ export function ChatInterface() {
                         onChange={(e) => setInput(e.target.value)}
                         onKeyDown={handleKeyDown}
                         onFocus={() => setIsFocused(true)}
-                        onBlur={() => {
-                          setIsFocused(false);
-                          // Delay hiding autocomplete to allow click events
-                          setTimeout(() => setShowInlineAutocomplete(false), 150);
-                        }}
+                        onBlur={() => setIsFocused(false)}
                         onPaste={handlePaste}
                         placeholder={attachments.length > 0 ? "Add a message or send with images..." : "Ask anything. Type @ for mentions and / for shortcuts."}
                         className="w-full px-4 py-4 bg-transparent text-os-text-primary-dark placeholder:text-os-text-secondary-dark resize-none focus:outline-none min-h-[60px] max-h-[300px]"
@@ -790,24 +774,13 @@ export function ChatInterface() {
                       />
                     </div>
 
-                    {/* Inline Autocomplete Suggestions (Perplexity-style) */}
-                    {showInlineAutocomplete && input.length >= 2 && (
-                      <div className="border-t border-os-border-dark">
-                        <SearchResearchSuggestions
-                          mode={suggestionsMode}
-                          onQueryClick={handleQueryClick}
-                          inputValue={input}
-                        />
-                      </div>
-                    )}
-
+                    {/* Toolbar - always visible */}
                     <div className="flex flex-wrap items-center justify-between px-4 py-3 border-t border-os-border-dark gap-2 sm:gap-4">
                       <div className="flex items-center gap-2 sm:gap-3">
                         <SearchResearchToggle
                           onQueryClick={handleQueryClick}
                           onModeChange={handleModeChange}
                           showSuggestions={showSuggestions}
-                          inputValue={input}
                         />
                       </div>
 
@@ -961,23 +934,20 @@ export function ChatInterface() {
                         </button>
                       </div>
                     </div>
+
+                    {/* Suggestions - inside container, below toolbar */}
+                    {showSuggestions && (
+                      <div className="border-t border-os-border-dark">
+                        <SearchResearchSuggestions 
+                          mode={suggestionsMode} 
+                          onQueryClick={handleQueryClick}
+                        />
+                      </div>
+                    )}
                   </div>
                 </form>
               </div>
             </motion.div>
-
-            {showSuggestions && (
-              <motion.div 
-                className="w-full max-w-3xl mx-auto px-4 mt-4"
-                variants={fadeIn}
-              >
-                <SearchResearchSuggestions 
-                  mode={suggestionsMode} 
-                  onQueryClick={handleQueryClick}
-                  inputValue={input}
-                />
-              </motion.div>
-            )}
           </motion.div>
         )}
       </div>
