@@ -1,62 +1,64 @@
 {
   "type": "monthly-outlook",
-  "date": "2025-12-04T16:19:14.085Z",
+  "date": "2025-12-04T18:33:55.021Z",
   "updates": [
     {
-      "title": "Dragon Rouge creates pre-school snack brand for Goodies",
-      "description": "Dragon Rouge has created a characterful brand world for Goodies, The Hero Group’s new snack range aimed at pre-schoolers. The teams used a joyfully chaotic focus group of three to six-year-olds to help shape the product and the design language. Martha Miralles, senior vice president of The Hero Group’s Growing Up products, explains that Goodies […]What to read next: BrandOpus creates new brand and packaging for Alpen | Derek&Eric heroes “the dude” logo for innocent’s brand refresh | Dog wash bra",
-      "timestamp": "12/02/2025, 11:26 AM",
+      "title": "Blueberry by Studio NARI",
+      "description": "“Mind. Blown”, as someone in Gen Alpha might have said a long time ago, maybe while performing some flossing at a velocity so rapid as to be barely perceptible to the naked Millennial eye. But they probably wouldn’t say that any more, such is the rapacious speed at which all things ‘young person’ change. Gen Alpha inhabits a world so\nThe post Blueberry by Studio NARI appeared first on BP&O - Branding, Packaging and Opinion.",
+      "timestamp": "12/04/2025, 9:15 AM",
       "sources": [
         {
-          "name": "Design Week",
-          "url": "https://www.designweek.co.uk/dragon-rouge-creates-pre-school-snack-brand-for-goodies/"
+          "name": "BP&O",
+          "url": "https://bpando.org/2025/12/04/blueberry-digital-fashion-brand-identity-by-studio-nari/"
         }
       ],
       "tier": "quick",
-      "sourceUrl": "https://www.designweek.co.uk/dragon-rouge-creates-pre-school-snack-brand-for-goodies/",
+      "sourceUrl": "https://bpando.org/2025/12/04/blueberry-digital-fashion-brand-identity-by-studio-nari/",
       "topicCategory": "branding"
     },
     {
-      "title": "How is FutureBrand using AI?",
-      "description": "FutureBrand is a global strategy and design agency that works with clients like Mastercard, Merck and San Pellegrino. Here executive creative director Stephen McGilvray explains how they’re using AI, and how he feels about it. You can see all the articles in this series here. Broadly speaking, are you excited for how AI will change […]What to read next: How is COLLINS using AI? | How is Superside using AI? | “Designers crave connection” – fighting the loneliness epidemic | “The eye of the storm”",
-      "timestamp": "12/01/2025, 9:00 AM",
+      "title": "VCs deploy ‘kingmaking’ strategy to crown AI winners in their infancy",
+      "description": "While VCs have long used big investments to spur category winners, they are taking this strategy to new extremes.",
+      "timestamp": "12/03/2025, 8:24 PM",
       "sources": [
         {
-          "name": "Design Week",
-          "url": "https://www.designweek.co.uk/how-is-futurebrand-using-ai/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/03/vcs-deploy-kingmaking-strategy-to-crown-ai-winners-in-their-infancy/"
         }
       ],
       "tier": "quick",
-      "sourceUrl": "https://www.designweek.co.uk/how-is-futurebrand-using-ai/",
+      "sourceUrl": "https://techcrunch.com/2025/12/03/vcs-deploy-kingmaking-strategy-to-crown-ai-winners-in-their-infancy/",
+      "topicCategory": "ai-creative"
+    },
+    {
+      "title": "Inside NetSuite’s next act: Evan Goldberg on the future of AI-powered business systems",
+      "description": "Presented by Oracle NetSuiteWhen Evan Goldberg started NetSuite in 1998, his vision was radically simple: give entrepreneurs access to their business data anytime, anywhere. At the time, most enterprise software lived on local servers. As an entrepreneur himself, Goldberg understood the frustration intimately. \"I had fragmented systems. They all said something different,\" he recalls of his early days. NetSuite was the first company to deliver enterprise applications entirely through web browsers",
+      "timestamp": "12/04/2025, 5:00 AM",
+      "sources": [
+        {
+          "name": "VentureBeat AI",
+          "url": "https://venturebeat.com/ai/inside-netsuites-next-act-evan-goldberg-on-the-future-of-ai-powered-business",
+          "thumbnailUrl": "https://images.ctfassets.net/jdtwqhzvc2n1/2XtOSMqQi1z1ZProN1wL2h/93796f6888f6a6567104c2545639c3c3/2025_SuiteWorld_ExecutiveKeynote01_88144-64-.jpg?w=300&amp;q=30"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://venturebeat.com/ai/inside-netsuites-next-act-evan-goldberg-on-the-future-of-ai-powered-business",
       "topicCategory": "startup-business"
     },
     {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "timestamp": "10/23/2025, 12:00 AM",
+      "title": "Gemini 3 Pro scores 69% trust in blinded testing up from 16% for Gemini 2.5: The case for evaluating AI on real-world trust, not academic benchmarks",
+      "description": "Just a few short weeks ago, Google debuted its Gemini 3 model, claiming it scored a leadership position in multiple AI benchmarks. But the challenge with vendor-provided benchmarks is that they are just that — vendor-provided. A new vendor-neutral evaluation from Prolific, however, puts Gemini 3 at the top of the leaderboard. This isn't on a set of academic benchmarks; rather, it's on a set of real-world attributes that actual users and organizations care about. Prolific was founded by researche",
+      "timestamp": "12/03/2025, 10:00 PM",
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+          "name": "VentureBeat AI",
+          "url": "https://venturebeat.com/ai/gemini-3-pro-scores-69-trust-in-blinded-testing-up-from-16-for-gemini-2-5",
+          "thumbnailUrl": "https://images.ctfassets.net/jdtwqhzvc2n1/7yjTvbIyA6uS1W5QRhYRRz/aa77881e59d142025c2f07fe16738494/blind-ai-test-smk.jpg?w=300&amp;q=30"
         }
       ],
       "tier": "quick",
-      "sourceUrl": "https://www.figma.com/blog/new-features-in-figma-buzz/",
-      "topicCategory": "design-ux"
-    },
-    {
-      "title": "How to streamline your design system workflow in Figma",
-      "description": "If you’ve ever stared down a blank Figma file while building a new design system, never fear: These new features and plugins will turn that mountain of work into an afternoon task.",
-      "timestamp": "04/08/2025, 12:00 AM",
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/how-to-streamline-your-design-system-workflow-in-figma/"
-        }
-      ],
-      "tier": "quick",
-      "sourceUrl": "https://www.figma.com/blog/how-to-streamline-your-design-system-workflow-in-figma/",
-      "topicCategory": "design-ux"
+      "sourceUrl": "https://venturebeat.com/ai/gemini-3-pro-scores-69-trust-in-blinded-testing-up-from-16-for-gemini-2-5",
+      "topicCategory": "ai-creative"
     }
   ]
 }

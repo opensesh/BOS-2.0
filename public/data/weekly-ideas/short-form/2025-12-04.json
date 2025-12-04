@@ -1,115 +1,28 @@
 {
   "type": "short-form",
-  "date": "2025-12-04T16:19:14.086Z",
+  "date": "2025-12-04T18:33:55.022Z",
   "ideas": [
-    {
-      "title": "The 11 Best Social Media Management Tools in 2026 (+ Alternatives)",
-      "description": "Social media marketing is more than just posting content and hoping for engagements. It’s maintaining an active presence and building a strong brand community. Read more...\nThe post Best social media management tools for businesses in 2025 appeared first on Sprout Social.",
-      "starred": true,
-      "sources": [
-        {
-          "name": "Buffer Resources",
-          "url": "https://buffer.com/resources/best-social-media-management-tools/"
-        },
-        {
-          "name": "Sprout Social Insights",
-          "url": "https://sproutsocial.com/insights/social-media-management-tools/"
-        },
-        {
-          "name": "Onlysocial",
-          "url": "https://onlysocial.io/social-media-automation-tools/"
-        },
-        {
-          "name": "Marqait",
-          "url": "https://www.marqait.com/ai-blog/top-social-media-management-tools-for-small-businesses"
-        },
-        {
-          "name": "Sproutsocial",
-          "url": "https://sproutsocial.com/insights/social-media-monitoring-tools/"
-        },
-        {
-          "name": "Brandwatch",
-          "url": "https://www.brandwatch.com/blog/social-media-automation-tools/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=HMPR2wCSdFw"
-        }
-      ],
-      "hooks": [
-        "AI Tools That Crush Social Media Management",
-        "Future of Social Media: 11 Game-Changing Tools",
-        "Work Smarter: Top Social Media Automation Secrets"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Start with a fast-paced tool comparison montage",
-            "Use quick screen transitions between tools",
-            "Include emoji-based rating system for visual engagement"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Provocative statistic about social media management",
-            "Use clean, grid-like design for tool comparisons",
-            "Final slide includes clear call-to-action or learning resource"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Open with unexpected visual metaphor about tool efficiency",
-            "Use rapid-fire tool demonstrations",
-            "Include text overlay with key features/pricing"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame content as professional strategy insight",
-            "Include data-driven comparisons between tools",
-            "Use more technical, detailed language"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, futuristic color palette with electric blues and neon accents. Dynamic diagonal compositions. Modern sans-serif typography with occasional glitch/tech overlay effects. Minimal 3D render elements suggesting technological innovation. Motion graphics emphasizing tool transitions and efficiency."
-      },
-      "exampleOutline": [
-        "Section 1: Provocative AI-Powered Social Media Landscape Opener",
-        "Section 2: Current Social Media Management Challenges",
-        "Section 3: Detailed Tool Breakdown & Comparative Analysis",
-        "Section 4: Emerging Trends and Future Predictions",
-        "Section 5: Strategic Implementation Recommendations"
-      ],
-      "hashtags": "#AITools #SocialMediaManagement #MarketingTech #DigitalStrategy #ProductivityHacks #SocialMediaTools #MarketingAutomation #AIMarketing #BusinessTechnology #ContentCreation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7767791/pexels-photo-7767791.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 2
-    },
     {
       "title": "Workspace Studio aims to solve the real agent problem: Getting employees to use them",
       "description": "One problem enterprises face is getting employees to actually use the AI agents their dev teams have built. Google, which has already shipped many AI tools through its Workspace apps, has made Google Workspace Studio generally available to give more employees access to design, manage and share AI agents, further democratizing agentic workflows. This puts Google directly in competition with Microsoft’s Copilot and undercuts some integrations that brought OpenAI’s ChatGPT into enterprise applicati",
-      "starred": false,
+      "starred": true,
       "sources": [
         {
           "name": "VentureBeat AI",
-          "url": "https://venturebeat.com/ai/workspace-studio-aims-to-solve-the-real-agent-problem-getting-employees-to"
+          "url": "https://venturebeat.com/ai/workspace-studio-aims-to-solve-the-real-agent-problem-getting-employees-to",
+          "thumbnailUrl": "https://images.ctfassets.net/jdtwqhzvc2n1/4PcovXS8DXRuIKIW9T0PGw/a5b465669cd047892adbd3779daff50a/crimedy7_illustration_of_robots_working_in_an_office_--ar_169_2cff007f-5395-4aff-9b80-80f6e5afb524_2.png?w=300&amp;q=30"
         },
         {
-          "name": "Dera",
-          "url": "https://www.dera.ai/en/news/c6349cdc-50ec-23d7-a2d9-bd3b92dd7d78"
-        },
-        {
-          "name": "9to5google",
-          "url": "https://9to5google.com/2025/12/03/google-workspace-studio/"
+          "name": "Bizzbuzz",
+          "url": "https://www.bizzbuzz.news/technology/google-workspace-studio-takes-on-the-real-agent-problem-helping-employees-actually-use-ai-tools-1379705"
         },
         {
           "name": "Workspace",
           "url": "https://workspace.google.com/blog/product-announcements/introducing-google-workspace-studio-agents-for-everyday-work"
+        },
+        {
+          "name": "9to5google",
+          "url": "https://9to5google.com/2025/12/03/google-workspace-studio/"
         },
         {
           "name": "Workspaceupdates",
@@ -121,141 +34,57 @@
         }
       ],
       "hooks": [
-        "AI Agents: The New Workspace Productivity Hack",
-        "Google's Secret Weapon for Employee Workflow",
-        "Unlock Instant Productivity with AI Workflows"
+        "AI Agents: The Secret Weapon Your Team Needs",
+        "Unlock Enterprise Workflow Magic with Google Studio",
+        "Democratizing AI: Beyond Tech Team Boundaries"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use dynamic screen recording of Workspace Studio interface",
-            "Highlight before/after productivity transformation",
-            "Include quick text animations showing workflow acceleration"
+            "Use screen recording of actual Workspace Studio interface",
+            "Include quick workflow transformation animation",
+            "Add text overlay highlighting key productivity gains"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Provocative problem statement",
-            "Use step-by-step visual breakdown of agent creation",
-            "Final slide: Clear value proposition with call-to-action"
+            "First slide: Problem statement with bold graphic",
+            "Progressive slides showing agent workflow steps",
+            "Final slide with clear call-to-action/learning resource"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with unexpected productivity statistic",
-            "Use split-screen comparison of manual vs AI-assisted work",
-            "Include fast-paced screen capture demonstrating tool"
+            "Start with unexpected AI productivity statistic",
+            "Use fast-paced screen transitions",
+            "Include human presenter for authenticity"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
             "Frame as enterprise innovation strategy",
-            "Include data-driven insights about AI workflow efficiency",
-            "Position content as thought leadership piece"
+            "Include data-driven productivity metrics",
+            "Highlight potential ROI for business leaders"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-energy, tech-forward aesthetic with electric blue and deep charcoal color palette. Dynamic geometric overlays, transparent data visualizations, fluid motion graphics showing workflow transformation. Typography: Sharp, minimal sans-serif with occasional technical glitch effects. Composition emphasizes speed and efficiency through diagonal lines and rapid transitions."
+        "description": "High-contrast tech-inspired color palette (electric blue, deep gray, white), dynamic geometric transitions, futuristic sans-serif typography, motion graphics showing workflow transformation, clean yet energetic Apple/Google design language aesthetic"
       },
       "exampleOutline": [
         "Hook: Provocative AI productivity challenge",
-        "Problem: Enterprise workflow bottlenecks",
+        "Problem: Enterprise AI adoption barriers",
         "Solution: Google Workspace Studio capabilities",
-        "Practical Demonstration: Agent creation workflow",
-        "Future Vision: AI democratization"
+        "Real-world Impact: Workflow transformation examples",
+        "Call-to-Action: Learn/Explore Further"
       ],
-      "hashtags": "#AIProductivity #WorkspaceSolutions #GoogleAI #EnterpriseTech #AIWorkflow #ProductivityHacks #FutureOfWork #AIAgents #WorkTech #InnovationStrategy",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 10
-    },
-    {
-      "title": "“What working in retail taught me about UX design”",
-      "description": "Before I ever mapped a user journey online, I was wrangling life‑size elephants on Oxford Street. As you do. My first career was in fashion retail, starting on the shop floor at River Island and eventually moving into visual merchandising in central London. It was a world of mannequins (human, elephant, and giraffe, all bases […]What to read next: “Vibe coding is exciting but designers must tread carefully” | Neighbourhood app Nextdoor relaunches with new brand and product design | “Design is de",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Design Week",
-          "url": "https://www.designweek.co.uk/what-working-in-retail-taught-me-about-ux-design/"
-        },
-        {
-          "name": "Designlab",
-          "url": "https://designlab.com/blog/transition-to-ux-design"
-        },
-        {
-          "name": "Interaction-design",
-          "url": "https://www.interaction-design.org/literature/article/interaction-design-foundation-reviews-how-to-successfully-switch-to-a-ux-career"
-        },
-        {
-          "name": "Uxplanet",
-          "url": "https://uxplanet.org/how-i-became-a-ux-ui-designer-in-6-months-from-scratch-my-career-change-journey-31dc56eaf178"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=Ba29aO0n9ck"
-        },
-        {
-          "name": "Uxdesign",
-          "url": "https://uxdesign.cc/why-is-the-ux-job-market-such-a-mess-right-now-a-comprehensive-explanation-97d5588696fd"
-        }
-      ],
-      "hooks": [
-        "Retail skills = UX design superpower",
-        "From mannequins to user journeys",
-        "How selling clothes taught me design"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Start with dramatic retail scene transition",
-            "Use quick jump cuts between retail/design moments",
-            "Include personal transformation visual metaphor"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Provocative before/after career graphic",
-            "Use infographic-style slides comparing skills",
-            "Final slide with clear call-to-action/learning"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "High-energy opening with unexpected retail moment",
-            "Use text overlays to highlight key learnings",
-            "Include quick b-roll of retail/design environments"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "More detailed professional narrative arc",
-            "Include specific skill translation examples",
-            "Add credibility with brief professional context"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold color palette transitioning from retail (warm oranges/reds) to digital design (cool blues/teals). Dynamic split-screen compositions. Modern sans-serif typography with motion-graphic style transitions. High-contrast visual metaphors showing skill transformation."
-      },
-      "exampleOutline": [
-        "Hook: Unexpected career origin story",
-        "Personal retail experience context",
-        "Transferable skills breakdown",
-        "Key UX design parallels",
-        "Inspirational career transformation message"
-      ],
-      "hashtags": "#UXDesign #CareerTransition #DesignJourney #RetailToTech #UserExperience #DesignSkills #CreativeCareer #TechLife #DesignThinking #ProfessionalGrowth",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "hashtags": "#AIWorkflow #EnterpriseAI #GoogleWorkspace #ProductivityHacks #AITools #WorkplaceTech #InnovationStrategy #AIAgents #WorkflowAutomation #TechTrends",
+      "pexelsImageUrl": "https://images.pexels.com/photos/8014542/pexels-photo-8014542.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
       "textureIndex": 1
     },
     {
@@ -266,61 +95,69 @@
         {
           "name": "Figma Blog",
           "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
+        },
+        {
+          "name": "Figma",
+          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+        },
+        {
+          "name": "Figmalion",
+          "url": "https://figmalion.com/issue/221"
         }
       ],
       "hooks": [
-        "Design Templates That Work, Not Break",
-        "Figma Secrets: Brand Templates That Flex",
-        "Master Self-Serve Design Without Losing Control"
+        "Design Templates That Don't Break Brand Guidelines",
+        "Figma Buzz: Unlock Flexible Brand Design",
+        "Create Scalable Templates Without Losing Identity"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick screen recordings showing template editing",
-            "Add dynamic typography highlighting key template rules",
-            "Include before/after visual transitions"
+            "Use quick screen transitions to showcase template flexibility",
+            "Demonstrate before/after template editing in first 3 seconds",
+            "Include motion graphics showing dynamic template elements"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: provocative template fail screenshot",
-            "Use clean, grid-based slide layouts",
-            "Final slide includes clear learning/action takeaway"
+            "First slide: Bold visual template transformation",
+            "Use consistent color overlay across slides",
+            "Each slide highlights one template design principle"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with unexpected design template 'horror story'",
-            "Use rapid-fire motion graphics",
-            "End with clear, actionable framework"
+            "Start with unexpected visual template glitch",
+            "Use text overlays to explain key concepts quickly",
+            "Include rapid-fire visual examples of template adaptability"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Frame as professional design strategy",
-            "Include data/metrics about template efficiency",
-            "Use more technical, granular language"
+            "Frame content as professional design strategy",
+            "Include data/statistics about template efficiency",
+            "Use more technical language and design process insights"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast color palette with electric blue and charcoal gray. Dynamic, asymmetrical compositions with technical grid overlays. Bold, sans-serif typography with motion-tracked text animations. Geometric design element transitions. Minimal but energetic aesthetic referencing Swiss design and contemporary tech interfaces."
+        "description": "High-contrast color palette with electric blue and charcoal gray, dynamic grid-based compositions, experimental sans-serif typography, fluid motion graphics showing template morphing, minimalist tech-inspired aesthetic with subtle glitch effects"
       },
       "exampleOutline": [
-        "Section 1: Provocative Design Challenge Hook",
-        "Section 2: Common Template Design Pitfalls",
-        "Section 3: 8 Strategic Template Design Principles",
-        "Section 4: Scalable Brand Consistency Framework",
-        "Section 5: Call-to-Experiment Invitation"
+        "Section 1: Provocative Template Challenge Hook",
+        "Section 2: Brand Consistency Dilemma",
+        "Section 3: 8 Tactical Template Design Strategies",
+        "Section 4: Scalability and Flexibility Insights",
+        "Section 5: Call-to-Experiment/Learn More"
       ],
-      "hashtags": "#DesignTemplates #FigmaDesign #BrandSystem #CreativeStrategy #AIDesign #ProductDesign #DesignSystem #CreativeTech #DesignInnovation #BrandIdentity",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 8
+      "hashtags": "#FigmaDesign #BrandTemplates #AIDesign #CreativeStrategy #DesignSystem #ProductivityHacks #DesignTips #BrandIdentity #CreativeTech #DesignInnovation",
+      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 12
     },
     {
       "title": "AWS launches Kiro powers with Stripe, Figma, and Datadog integrations for AI-assisted coding",
@@ -329,62 +166,212 @@
       "sources": [
         {
           "name": "VentureBeat AI",
-          "url": "https://venturebeat.com/ai/aws-launches-kiro-powers-with-stripe-figma-and-datadog-integrations-for-ai"
+          "url": "https://venturebeat.com/ai/aws-launches-kiro-powers-with-stripe-figma-and-datadog-integrations-for-ai",
+          "thumbnailUrl": "https://images.ctfassets.net/jdtwqhzvc2n1/53TbLNDfKawmAd8kGfw7ce/17400e5e49710944890e2a6b69cf04f8/nuneybits_Vector_art_of_a_server_rack_in_the_clouds_bf8ba787-9002-494b-b6be-fedd40deb4f9.webp?w=300&amp;q=30"
+        },
+        {
+          "name": "Computerweekly",
+          "url": "https://www.computerweekly.com/blog/CW-Developer-Network/AWS-launches-Kiro-IDE-for-real-agentic-development-at-scale"
+        },
+        {
+          "name": "Aws",
+          "url": "https://aws.amazon.com/startups/learn/power-your-startup-with-1-year-of-kiro-pro-plus-now-available-through-aws-startups?lang=en-US"
+        },
+        {
+          "name": "Aboutamazon",
+          "url": "https://www.aboutamazon.com/news/aws/amazon-ai-frontier-agents-autonomous-kiro"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/watch?v=4qcWgPb-8Fk"
+        },
+        {
+          "name": "Siliconangle",
+          "url": "https://siliconangle.com/2025/12/02/aws-puts-ai-agents-work-truly-autonomous-software-development/"
         }
       ],
       "hooks": [
-        "AI Coding Just Got Its Superpower",
-        "AWS Unlocks Developer's Secret Weapon",
-        "Instant Expertise: The Future of Coding"
+        "AI Just Rewrote Software Development Forever",
+        "Code Like a Genius with AWS Kiro",
+        "Developers: Your New AI Superpower Has Arrived"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Open with a dramatic code/AI visualization",
-            "Use quick cuts between developer screens",
-            "Include text overlay explaining key innovation"
+            "Start with dramatic coding animation",
+            "Use split-screen showing human/AI collaboration",
+            "Include rapid visual transitions showing workflow speed"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Provocative visual of AI + coding",
-            "Use infographic-style slides explaining Kiro Powers",
-            "Final slide: Clear call-to-learn-more"
+            "First slide: Provocative AI transformation graphic",
+            "Use infographic-style slides explaining Kiro integrations",
+            "Final slide: Clear call-to-action with link"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with unexpected tech glitch transition",
-            "Use screen recording to show integration",
-            "Add energetic voiceover explaining breakthrough"
+            "Open with unexpected coding glitch/transformation",
+            "Use screen capture showing real-time AI coding",
+            "Include quick expert commentary soundbite"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
             "Frame as professional development opportunity",
-            "Include expert quote or technical breakdown",
-            "Link to deeper technical resources"
+            "Include data/statistic about AI coding efficiency",
+            "Highlight enterprise-level integration potential"
           ]
         }
       ],
       "visualDirection": {
         "rating": 8,
-        "description": "High-contrast cyberpunk-inspired color palette with electric blues and neon accents, fragmented code-like typography, dynamic geometric transitions, holographic UI elements suggesting advanced technology, motion graphics that simulate neural network connections"
+        "description": "High-contrast cyberpunk-inspired color palette (electric blues, neon greens), dynamic geometric overlays, glitch-style motion graphics, futuristic sans-serif typography, abstract tech-inspired backgrounds suggesting computational complexity"
       },
       "exampleOutline": [
-        "Teaser: What if AI could instantly specialize?",
-        "The Current Coding Limitation",
-        "AWS Kiro Powers: How It Works",
-        "Game-Changing Tool Integrations",
-        "What This Means for Developers"
+        "Hook: Disruptive AI coding breakthrough",
+        "Problem: Current AI development limitations",
+        "Solution: AWS Kiro Powers explained",
+        "Key Integrations: Stripe, Figma, Datadog",
+        "Future Impact: Transforming software development"
       ],
-      "hashtags": "#AWSKIRO #AICodeAssistant #DeveloperTools #AIInnovation #CloudComputing #SoftwareDevelopment #TechBreakthrough #AmazonWebServices #CodingAI #TechInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 2
+      "hashtags": "#AWSKIRO #AIDevelopment #AICode #TechInnovation #SoftwareDev #AIAssistant #CodeFaster #TechTrends #StartupTech #FutureOfCoding",
+      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 4
+    },
+    {
+      "title": "Delivering securely on data and AI strategy",
+      "description": "Most organizations feel the imperative to keep pace with continuing advances in AI capabilities, as highlighted in a recent MIT Technology Review Insights report. That clearly has security implications, particularly as organizations navigate a surge in the volume, velocity, and variety of security data. This explosion of data, coupled with fragmented toolchains, is making it…",
+      "starred": false,
+      "sources": [
+        {
+          "name": "MIT Technology Review AI",
+          "url": "https://www.technologyreview.com/2025/12/04/1128311/delivering-securely-on-data-and-ai-strategy/",
+          "thumbnailUrl": "https://wp.technologyreview.com/wp-content/uploads/2025/11/MIT_DatabricksEbrief_CoverV4_101525.png?w=1555"
+        }
+      ],
+      "hooks": [
+        "AI Security: Your Data's Silent Guardian",
+        "Cracking the Code of Digital Defense",
+        "Navigating AI's Security Frontier Safely"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use split-screen visualization of data threats",
+            "Incorporate quick motion graphics showing data protection",
+            "Include a dramatic sound effect for security reveal"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Provocative statistic about data vulnerability",
+            "Use infographic-style slides with minimal text",
+            "Final slide includes clear call-to-action"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Open with unexpected visual metaphor for data security",
+            "Use quick cuts to maintain high energy",
+            "Include text overlays for key points"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame content as professional insight/strategy",
+            "Use more technical language and precise graphics",
+            "Include credible source citation from MIT Technology Review"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast cyberpunk-inspired palette with electric blues and deep charcoals. Dynamic geometric compositions suggesting data flow and protection. Sharp, angular typography with glitch-inspired motion effects. Incorporate abstract data visualization elements with translucent layers suggesting complexity and security."
+      },
+      "exampleOutline": [
+        "Hook: Dramatic AI security challenge",
+        "Data Explosion Context: Volume & Velocity",
+        "Security Risks in Fragmented Toolchains",
+        "Strategic AI Protection Insights",
+        "Call-to-Action: Next Steps"
+      ],
+      "hashtags": "#AIStrategy #DataSecurity #TechInnovation #CyberDefense #AITrends #TechnologyInsights #DigitalTransformation #CyberSecurity #AIEthics #InnovationStrategy",
+      "pexelsImageUrl": "https://images.pexels.com/photos/7245606/pexels-photo-7245606.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 8
+    },
+    {
+      "title": "Three new features to help build brand momentum with Figma Buzz",
+      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+        }
+      ],
+      "hooks": [
+        "Figma Buzz: Design Superpowers Unlocked",
+        "3 Game-Changing Features for Creative Pros",
+        "Workflow Magic: Figma's Latest Innovation"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick screen recordings of new features",
+            "Create fast-paced transitions between feature demos",
+            "Add subtle motion graphics to highlight key moments"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Bold headline with feature overview",
+            "Use clean, high-contrast screenshots",
+            "Each slide focuses on one specific feature benefit"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected visual or sound design",
+            "Use text overlays to explain complex features quickly",
+            "End with clear call-to-action for exploring Figma"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame features as professional productivity enhancers",
+            "Include data or efficiency metrics",
+            "Use more detailed, technical language"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, futuristic color palette with electric blues and neon accents. Dynamic, asymmetrical compositions. Modern sans-serif typography with geometric motion graphics. Slight glitch/digital aesthetic to emphasize technological innovation. High-contrast visual style that feels cutting-edge and professional."
+      },
+      "exampleOutline": [
+        "Hook: Attention-grabbing feature intro",
+        "Problem: Current design workflow limitations",
+        "Solution: Three specific Figma Buzz features",
+        "Impact: How these features transform work",
+        "Call-to-Action: Try new features now"
+      ],
+      "hashtags": "#FigmaBuzz #DesignInnovation #CreativeTech #ProductivityHacks #AIDesign #WorkflowOptimization #DesignTools #CreativeProfessionals #TechInnovation #DigitalDesign",
+      "pexelsImageUrl": "https://images.pexels.com/photos/8014528/pexels-photo-8014528.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 12
     }
   ]
 }
