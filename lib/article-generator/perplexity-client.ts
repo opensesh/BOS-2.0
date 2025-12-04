@@ -131,10 +131,14 @@ async function searchForSources(
     
     Provide detailed information with specific facts, quotes, and data points.
     Include multiple perspectives and viewpoints from different sources.
-    Focus on recent developments and breaking news.`,
+    Focus on recent developments and breaking news.
+    
+    IMPORTANT: Cite as many different sources as possible (aim for 10+ unique sources).
+    Include mainstream news outlets, tech publications, industry blogs, and expert analysis.
+    Every claim should be cited with [number] format.`,
     undefined,
     'sonar', // Use cheaper model for searches
-    1500
+    2000  // Increased token limit for more sources
   );
 
   const sources: SourceInfo[] = [];
@@ -518,10 +522,14 @@ export async function generateDiscoverArticle(
   }
 
   // Run searches to gather more sources (using cheaper 'sonar' model)
+  // Multiple queries to get diverse sources from different angles
   const searchQueries = [
     topic,
-    `${topic} latest news`,
-    `${topic} analysis reaction`,
+    `${topic} latest news today`,
+    `${topic} analysis opinions`,
+    `${topic} impact implications`,
+    `${topic} expert commentary`,
+    `${topic} industry reaction`,
   ];
 
   for (const query of searchQueries) {
@@ -537,14 +545,14 @@ export async function generateDiscoverArticle(
       
       searchResults.push(result.text);
       
-      // Stop if we have enough sources (reduced from 40 to 25 for cost efficiency)
-      if (allSources.length >= 25) {
+      // Target 40+ sources for comprehensive coverage
+      if (allSources.length >= 40) {
         console.log(`  Reached ${allSources.length} sources, stopping search`);
         break;
       }
       
       // Small delay between API calls
-      await new Promise(r => setTimeout(r, 500));
+      await new Promise(r => setTimeout(r, 300));
     } catch (error) {
       console.warn(`  Search failed for "${query}":`, error);
     }
@@ -587,4 +595,5 @@ export async function generateDiscoverArticle(
     heroImageUrl,
   };
 }
+
 

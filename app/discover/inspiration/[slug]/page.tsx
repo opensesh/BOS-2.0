@@ -143,7 +143,7 @@ function generateSlugFromTitle(title: string): string {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '')
-    .substring(0, 50);
+    .substring(0, 60);
 }
 
 // Process raw inspiration data and add IDs - matches discover-utils.ts format

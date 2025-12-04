@@ -85,7 +85,7 @@ export function DiscoverMore({ currentSlug, relatedQueries = [], relatedArticles
                     .toLowerCase()
                     .replace(/[^a-z0-9]+/g, '-')
                     .replace(/^-+|-+$/g, '')
-                    .substring(0, 50);
+                    .substring(0, 60);
 
                   if (itemSlug !== currentSlug && !foundArticles.find(a => a.slug === itemSlug)) {
                     foundArticles.push({
@@ -123,7 +123,7 @@ export function DiscoverMore({ currentSlug, relatedQueries = [], relatedArticles
                     .toLowerCase()
                     .replace(/[^a-z0-9]+/g, '-')
                     .replace(/^-+|-+$/g, '')
-                    .substring(0, 50);
+                    .substring(0, 60);
 
                   if (itemSlug !== currentSlug && !foundArticles.find(a => a.slug === itemSlug)) {
                     foundArticles.push({

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
@@ -15,6 +15,7 @@ import { InlineSourceChips, SourceGroup } from '@/components/discover/article/In
 import { SectionSourceBar } from '@/components/discover/article/SectionSourceBar';
 import { SourcesDrawer } from '@/components/discover/article/SourcesDrawer';
 import { AllSourcesDrawer } from '@/components/discover/article/AllSourcesDrawer';
+import { AddToSpaceModal, ArticleForSpace } from '@/components/discover/AddToSpaceModal';
 import type { DiscoverArticle, DiscoverSection, CitationChip } from '@/types';
 
 // Helper to create a simplified article from news/ideas data
@@ -203,6 +204,23 @@ export default function ArticlePage() {
   const [sectionDrawerOpen, setSectionDrawerOpen] = useState(false);
   const [drawerSection, setDrawerSection] = useState<{ title?: string; citations: CitationChip[] } | null>(null);
   const [allSourcesDrawerOpen, setAllSourcesDrawerOpen] = useState(false);
+  
+  // Add to Space modal state
+  const [isAddToSpaceOpen, setIsAddToSpaceOpen] = useState(false);
+
+  // Handle Add to Space
+  const handleAddToSpace = useCallback(() => {
+    setIsAddToSpaceOpen(true);
+  }, []);
+
+  // Convert article to format expected by AddToSpaceModal
+  const articleForSpace: ArticleForSpace | null = article ? {
+    title: article.title,
+    slug: article.slug,
+    imageUrl: article.heroImage?.url,
+    sourceCount: article.totalSources,
+    url: `/discover/${article.slug}`,
+  } : null;
 
   // Load article from pre-generated JSON or fallback to news data
   useEffect(() => {
@@ -240,7 +258,7 @@ export default function ArticlePage() {
                 .toLowerCase()
                 .replace(/[^a-z0-9]+/g, '-')
                 .replace(/^-+|-+$/g, '')
-                .substring(0, 50);
+                .substring(0, 60);
               return updateSlug === slug;
             });
             
@@ -353,7 +371,11 @@ export default function ArticlePage() {
 
       <main className="flex-1 flex flex-col overflow-hidden pt-14 lg:pt-0">
         {/* Sticky Header */}
-        <StickyArticleHeader title={article.title} titleRef={titleRef} />
+        <StickyArticleHeader 
+          title={article.title} 
+          titleRef={titleRef} 
+          onAddToSpace={handleAddToSpace}
+        />
 
         {/* Scrollable content */}
         <div className="flex-1 overflow-y-auto custom-scrollbar">
@@ -522,6 +544,13 @@ export default function ArticlePage() {
         onClose={() => setAllSourcesDrawerOpen(false)}
         sources={article.allSources}
         totalCount={article.totalSources}
+      />
+
+      {/* Add to Space Modal */}
+      <AddToSpaceModal
+        isOpen={isAddToSpaceOpen}
+        onClose={() => setIsAddToSpaceOpen(false)}
+        article={articleForSpace}
       />
     </div>
   );
