@@ -71,6 +71,50 @@ export interface SpaceThread {
   messageCount: number;
 }
 
+// ===========================================
+// Space Discussion Types (Supabase)
+// ===========================================
+
+/**
+ * A message within a space discussion
+ */
+export interface SpaceDiscussionMessage {
+  id: string;
+  discussionId: string;
+  role: 'user' | 'assistant';
+  content: string;
+  createdAt: string;
+}
+
+/**
+ * A discussion thread within a space
+ * Stored in Supabase for persistence
+ */
+export interface SpaceDiscussion {
+  id: string;
+  spaceId: string;
+  spaceSlug: string;
+  title: string;
+  preview: string; // First ~100 chars of AI response
+  messageCount: number;
+  createdAt: string;
+  updatedAt: string;
+}
+
+/**
+ * Space context for chat - includes files, links, instructions, tasks
+ */
+export interface SpaceContext {
+  spaceId: string;
+  spaceSlug: string;
+  spaceTitle: string;
+  spaceIcon?: string;
+  files?: SpaceFile[];
+  links?: SpaceLink[];
+  instructions?: string;
+  tasks?: SpaceTask[];
+}
+
 export interface Brand {
   id: string;
   name: string;

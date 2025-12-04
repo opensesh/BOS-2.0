@@ -2,12 +2,15 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import { ArrowLeft } from 'lucide-react';
 import { Sidebar } from '@/components/Sidebar';
 import { SpaceHeader } from '@/components/SpaceHeader';
+import { SpaceChatInput } from '@/components/spaces/SpaceChatInput';
+import { SpaceResourceCards } from '@/components/spaces/SpaceResourceCards';
+import { DiscussionCard } from '@/components/spaces/SpaceReferenceCard';
 import { useSpaces } from '@/hooks/useSpaces';
-import { SPACE_THREADS } from '@/lib/mock-data';
+import { useSpaceDiscussions } from '@/hooks/useSpaceDiscussions';
 import { AddFilesModal } from '@/components/spaces/AddFilesModal';
 import { AddLinksModal } from '@/components/spaces/AddLinksModal';
 import { AddInstructionsModal } from '@/components/spaces/AddInstructionsModal';
@@ -17,24 +20,17 @@ import {
   Link as LinkIcon,
   FileText,
   Calendar,
-  Send,
-  Globe,
-  Grid,
-  GripVertical,
-  HelpCircle,
-  Image as ImageIcon,
-  Clock,
-  Paperclip,
-  Mic,
+  MessageSquare,
 } from 'lucide-react';
 
 type ModalType = 'files' | 'links' | 'instructions' | 'tasks' | null;
 
 export default function SpacePage() {
   const params = useParams();
+  const router = useRouter();
   const slug = params.slug as string;
   const [activeModal, setActiveModal] = useState<ModalType>(null);
-  
+
   const {
     spaces,
     exampleSpaces,
@@ -51,12 +47,33 @@ export default function SpacePage() {
     toggleTask,
     removeTask,
   } = useSpaces();
-  
+
+  const {
+    discussions,
+    isLoading: discussionsLoading,
+    createDiscussion,
+  } = useSpaceDiscussions(slug);
+
   const space = getSpace(slug);
-  const threads = SPACE_THREADS[slug] || [];
 
   // Check if this is a user space (can be edited/deleted) or an example space
   const isUserSpace = spaces.some((s) => s.slug === slug);
+
+  // Handle starting a new chat
+  const handleStartChat = async (query: string, discussionId: string) => {
+    if (!space) return;
+
+    // Navigate to the chat page
+    const searchParams = new URLSearchParams({
+      q: query,
+      spaceId: space.id,
+      spaceTitle: space.title,
+      ...(space.icon && { spaceIcon: space.icon }),
+      isNew: 'true',
+    });
+
+    router.push(`/spaces/${slug}/chat/${discussionId}?${searchParams.toString()}`);
+  };
 
   if (!isLoaded) {
     return (
@@ -91,15 +108,21 @@ export default function SpacePage() {
     );
   };
 
+  const hasResources =
+    (space.files && space.files.length > 0) ||
+    (space.links && space.links.length > 0) ||
+    (space.instructions && space.instructions.trim()) ||
+    (space.tasks && space.tasks.length > 0);
+
   return (
     <div className="flex h-screen bg-os-bg-dark dark:bg-os-bg-dark text-os-text-primary-dark font-sans overflow-hidden">
       <Sidebar />
-      
+
       <main className="flex-1 flex overflow-hidden relative pt-14 lg:pt-0">
         <div className="flex-1 overflow-y-auto custom-scrollbar">
-          <div className="w-full max-w-6xl mx-auto px-6 py-8 md:px-12 md:py-12">
+          <div className="w-full max-w-4xl mx-auto px-6 py-8 md:px-12 md:py-12">
             {/* Back Button */}
-            <Link 
+            <Link
               href="/spaces"
               className="group inline-flex items-center gap-2 text-os-text-secondary-dark hover:text-brand-aperol transition-colors mb-8"
             >
@@ -113,14 +136,16 @@ export default function SpacePage() {
               icon={space.icon}
               spaceId={isUserSpace ? space.id : undefined}
               onDelete={isUserSpace ? deleteSpace : undefined}
-              onRename={isUserSpace ? (newTitle) => updateSpace(space.id, { title: newTitle }) : undefined}
+              onRename={
+                isUserSpace
+                  ? (newTitle) => updateSpace(space.id, { title: newTitle })
+                  : undefined
+              }
             />
 
             {/* Description */}
             {space.description && (
-              <p className="text-os-text-secondary-dark mb-8">
-                {space.description}
-              </p>
+              <p className="text-os-text-secondary-dark mb-8">{space.description}</p>
             )}
 
             {/* Action Buttons */}
@@ -161,90 +186,66 @@ export default function SpacePage() {
               </button>
             </div>
 
-            {/* Input Card */}
-            <div className="mb-8 p-6 rounded-xl bg-os-surface-dark border border-os-border-dark">
-              <textarea
-                placeholder={`Ask anything about ${space.title}. Type / for shortcuts.`}
-                className="
-                  w-full bg-transparent border-none outline-none
-                  text-os-text-primary-dark placeholder-os-text-secondary-dark
-                  resize-none
-                  min-h-[100px]
-                "
-                rows={4}
+            {/* Resource Cards */}
+            {hasResources && (
+              <SpaceResourceCards
+                files={space.files}
+                links={space.links}
+                instructions={space.instructions}
+                tasks={space.tasks}
+                onRemoveFile={isUserSpace ? (fileId) => removeFile(space.id, fileId) : undefined}
+                onRemoveLink={isUserSpace ? (linkId) => removeLink(space.id, linkId) : undefined}
+                onToggleTask={isUserSpace ? (taskId) => toggleTask(space.id, taskId) : undefined}
+                onRemoveTask={isUserSpace ? (taskId) => removeTask(space.id, taskId) : undefined}
+                isReadOnly={!isUserSpace}
               />
-              
-              {/* Input Controls */}
-              <div className="flex items-center justify-between mt-4 pt-4 border-t border-os-border-dark">
-                <div className="flex items-center gap-2">
-                  <button className="p-2 rounded-lg hover:bg-os-bg-darker text-os-text-secondary-dark hover:text-os-text-primary-dark transition-colors">
-                    <Globe className="w-4 h-4" />
-                  </button>
-                  <button className="p-2 rounded-lg hover:bg-os-bg-darker text-os-text-secondary-dark hover:text-os-text-primary-dark transition-colors">
-                    <Grid className="w-4 h-4" />
-                  </button>
-                  <button className="p-2 rounded-lg hover:bg-os-bg-darker text-os-text-secondary-dark hover:text-os-text-primary-dark transition-colors">
-                    <GripVertical className="w-4 h-4" />
-                  </button>
-                  <button className="p-2 rounded-lg hover:bg-os-bg-darker text-os-text-secondary-dark hover:text-os-text-primary-dark transition-colors">
-                    <HelpCircle className="w-4 h-4" />
-                  </button>
-                  <button className="p-2 rounded-lg hover:bg-os-bg-darker text-os-text-secondary-dark hover:text-os-text-primary-dark transition-colors">
-                    <ImageIcon className="w-4 h-4" />
-                  </button>
-                  <button className="p-2 rounded-lg hover:bg-os-bg-darker text-os-text-secondary-dark hover:text-os-text-primary-dark transition-colors">
-                    <Clock className="w-4 h-4" />
-                  </button>
-                  <button className="p-2 rounded-lg hover:bg-os-bg-darker text-os-text-secondary-dark hover:text-os-text-primary-dark transition-colors">
-                    <Paperclip className="w-4 h-4" />
-                  </button>
-                  <button className="p-2 rounded-lg hover:bg-os-bg-darker text-os-text-secondary-dark hover:text-os-text-primary-dark transition-colors">
-                    <Mic className="w-4 h-4 text-brand-aperol" />
-                  </button>
-                </div>
-                <button className="p-2 rounded-lg bg-brand-aperol hover:bg-brand-aperol/80 text-white transition-colors">
-                  <Send className="w-4 h-4" />
-                </button>
-              </div>
+            )}
+
+            {/* Chat Input Card */}
+            <div className="mb-10">
+              <SpaceChatInput
+                spaceSlug={space.slug}
+                spaceId={space.id}
+                spaceTitle={space.title}
+                spaceIcon={space.icon}
+                onStartChat={handleStartChat}
+              />
             </div>
 
-            {/* My Threads Section */}
+            {/* Recent Discussions Section */}
             <div className="border-t border-os-border-dark pt-8">
-              <h2 className="text-xl font-semibold text-os-text-primary-dark mb-4 pb-2 border-b border-os-border-dark">
-                My threads
-              </h2>
-              
-              {threads.length > 0 ? (
+              <div className="flex items-center gap-2 mb-6">
+                <MessageSquare className="w-5 h-5 text-os-text-secondary-dark" />
+                <h2 className="text-xl font-semibold text-os-text-primary-dark">
+                  Recent discussions
+                </h2>
+              </div>
+
+              {discussionsLoading ? (
+                <div className="flex items-center justify-center py-12">
+                  <div className="w-6 h-6 border-2 border-brand-aperol border-t-transparent rounded-full animate-spin" />
+                </div>
+              ) : discussions.length > 0 ? (
                 <div className="space-y-3">
-                  {threads.map((thread) => (
-                    <div
-                      key={thread.id}
-                      className="
-                        p-4 rounded-lg
-                        bg-os-surface-dark/50 border border-os-border-dark
-                        hover:bg-os-surface-dark hover:border-os-border-dark
-                        transition-all cursor-pointer
-                      "
-                    >
-                      <div className="flex items-start justify-between">
-                        <div className="flex-1">
-                          <h3 className="text-base font-medium text-os-text-primary-dark mb-1">
-                            {thread.title}
-                          </h3>
-                          <div className="flex items-center gap-4 text-sm text-os-text-secondary-dark">
-                            <span>{thread.messageCount} messages</span>
-                            <span>•</span>
-                            <span>{thread.lastActivity}</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  {discussions.map((discussion) => (
+                    <DiscussionCard
+                      key={discussion.id}
+                      id={discussion.id}
+                      title={discussion.title}
+                      preview={discussion.preview}
+                      messageCount={discussion.messageCount}
+                      updatedAt={discussion.updatedAt}
+                      spaceSlug={space.slug}
+                    />
                   ))}
                 </div>
               ) : (
                 <div className="text-center py-12 text-os-text-secondary-dark">
-                  <p className="mb-2">Your threads will appear here.</p>
-                  <p>Ask anything above to get started.</p>
+                  <MessageSquare className="w-12 h-12 mx-auto mb-4 opacity-30" />
+                  <p className="mb-2">No discussions yet</p>
+                  <p className="text-sm">
+                    Start a conversation above to begin exploring this space.
+                  </p>
                 </div>
               )}
             </div>
