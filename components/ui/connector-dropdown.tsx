@@ -30,9 +30,7 @@ export function ConnectorDropdown({
   const [position, setPosition] = useState<{ 
     right?: number; 
     left?: number; 
-    maxWidth?: number;
-    bottom?: number;
-    useFixed?: boolean;
+    width?: number;
   }>({});
 
   // Keep onClose ref up to date without triggering re-renders
@@ -48,50 +46,41 @@ export function ConnectorDropdown({
       const trigger = triggerRef.current;
       if (!trigger) return;
 
-      const triggerRect = trigger.getBoundingClientRect();
       const viewportWidth = window.innerWidth;
-      const isMobileOrTablet = viewportWidth < 1024; // lg breakpoint - includes tablets
+      const isMobileOrTablet = viewportWidth < 1024; // lg breakpoint
 
       if (isMobileOrTablet) {
         // Find the form container to align with its right edge
         const formContainer = trigger.closest('form');
         if (formContainer) {
           const containerRect = formContainer.getBoundingClientRect();
+          // Get the dropdown's offset parent (the relative container)
+          const offsetParent = dropdownRef.current?.offsetParent as HTMLElement;
+          const offsetParentRect = offsetParent?.getBoundingClientRect();
           
-          // Use fixed positioning for precise alignment on mobile/tablet
-          // Position from viewport right edge to align with form's right edge
-          const rightFromViewport = viewportWidth - containerRect.right;
-          
-          // Position from viewport bottom, above the trigger
-          const bottomFromViewport = viewportWidth > 0 ? window.innerHeight - triggerRect.top + 8 : undefined;
-          
-          // Max width should not exceed the form width, but also cap at a reasonable size
-          const dropdownMaxWidth = Math.min(containerRect.width, 320);
-          
-          setPosition({ 
-            right: rightFromViewport, 
-            left: undefined,
-            maxWidth: dropdownMaxWidth,
-            bottom: bottomFromViewport,
-            useFixed: true
-          });
+          if (offsetParentRect) {
+            // Calculate right offset to align dropdown right edge with form right edge
+            const rightOffset = offsetParentRect.right - containerRect.right;
+            setPosition({ 
+              right: rightOffset, 
+              left: undefined,
+              width: Math.min(containerRect.width, 320)
+            });
+          } else {
+            // Fallback if no offset parent found
+            setPosition({ right: 0, left: undefined, width: 320 });
+          }
         } else {
-          // Fallback: align with viewport minus padding
-          const containerPadding = 16;
-          setPosition({ 
-            right: containerPadding, 
-            left: undefined,
-            maxWidth: Math.min(viewportWidth - (containerPadding * 2), 320),
-            useFixed: true
-          });
+          setPosition({ right: 0, left: undefined, width: 320 });
         }
       } else {
-        // Desktop: use absolute positioning, align to left of trigger
-        setPosition({ left: 0, right: undefined, maxWidth: 288, useFixed: false }); // 72 * 4 = 288px (w-72)
+        // Desktop: align to left of trigger
+        setPosition({ left: 0, right: undefined, width: 288 });
       }
     };
 
-    calculatePosition();
+    // Small delay to ensure DOM is ready
+    requestAnimationFrame(calculatePosition);
     window.addEventListener('resize', calculatePosition);
     return () => window.removeEventListener('resize', calculatePosition);
   }, [isOpen, triggerRef]);
@@ -120,12 +109,11 @@ export function ConnectorDropdown({
     <div
       ref={dropdownRef}
       onClick={(e) => e.stopPropagation()}
-      className={`${position.useFixed ? 'fixed' : 'absolute bottom-full mb-2'} bg-os-surface-dark rounded-xl border border-os-border-dark shadow-xl z-50 lg:w-72`}
+      className="absolute bottom-full mb-2 bg-os-surface-dark rounded-xl border border-os-border-dark shadow-xl z-50"
       style={{
         right: position.right !== undefined ? position.right : undefined,
         left: position.left !== undefined ? position.left : undefined,
-        width: position.maxWidth !== undefined ? position.maxWidth : undefined,
-        bottom: position.useFixed && position.bottom !== undefined ? position.bottom : undefined,
+        width: position.width !== undefined ? position.width : undefined,
       }}
     >
       <div className="p-2">
