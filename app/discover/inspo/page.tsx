@@ -8,7 +8,7 @@ import { Sidebar } from '@/components/Sidebar';
 import { InspoHeader } from '@/components/discover/InspoHeader';
 import { useInspoStore, ViewMode } from '@/lib/stores/inspo-store';
 
-// Dynamically import the 3D canvas to avoid SSR issues
+// Dynamically import the 3D canvas and control panel to avoid SSR issues
 const InspoCanvas = dynamic(
   () => import('@/components/discover/inspo/InspoCanvas'),
   {
@@ -21,6 +21,14 @@ const InspoCanvas = dynamic(
   }
 );
 
+const ControlPanel = dynamic(
+  () => import('@/components/discover/inspo/ControlPanel'),
+  { ssr: false }
+);
+
+// Valid view modes for URL param validation
+const VALID_VIEW_MODES: ViewMode[] = ['sphere', 'galaxy', 'grid', 'nebula', 'starfield', 'vortex'];
+
 function InspoContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -29,7 +37,7 @@ function InspoContent() {
   // Sync URL param with store on mount
   useEffect(() => {
     const viewParam = searchParams.get('view') as ViewMode | null;
-    if (viewParam && ['sphere', 'galaxy', 'grid'].includes(viewParam)) {
+    if (viewParam && VALID_VIEW_MODES.includes(viewParam)) {
       setViewMode(viewParam);
     }
   }, [searchParams, setViewMode]);
@@ -44,7 +52,7 @@ function InspoContent() {
   return (
     <div className="flex h-screen bg-os-bg-dark text-os-text-primary-dark font-sans">
       <Sidebar />
-      <main className="flex-1 flex flex-col min-w-0 overflow-hidden bg-os-bg-dark pt-14 lg:pt-0">
+      <main className="flex-1 flex flex-col min-w-0 overflow-hidden bg-os-bg-dark pt-14 lg:pt-0 relative">
         {/* Header - matches DiscoverLayout padding */}
         <div className="w-full max-w-6xl mx-auto px-6 py-8 md:px-12 md:py-12">
           <InspoHeader
@@ -63,6 +71,9 @@ function InspoContent() {
         >
           <InspoCanvas />
         </motion.div>
+
+        {/* Control Panel - floating */}
+        <ControlPanel />
       </main>
     </div>
   );

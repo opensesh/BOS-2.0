@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-import { Settings, Bookmark, ChevronDown, Check, Filter, Globe, Atom, Grid3X3 } from 'lucide-react';
+import { Settings, Bookmark, ChevronDown, Check, Globe, Orbit, Grid3X3, Cloud, Stars, Wind } from 'lucide-react';
 import { ViewMode } from '@/lib/stores/inspo-store';
 
 interface InspoHeaderProps {
@@ -14,9 +14,12 @@ interface InspoHeaderProps {
 }
 
 const VIEW_MODE_OPTIONS: { id: ViewMode; label: string; icon: typeof Globe }[] = [
-  { id: 'sphere', label: 'Sphere View', icon: Globe },
-  { id: 'galaxy', label: 'Galaxy View', icon: Atom },
-  { id: 'grid', label: 'Grid View', icon: Grid3X3 },
+  { id: 'galaxy', label: 'Galaxy', icon: Orbit },
+  { id: 'sphere', label: 'Sphere', icon: Globe },
+  { id: 'nebula', label: 'Nebula', icon: Cloud },
+  { id: 'starfield', label: 'Starfield', icon: Stars },
+  { id: 'vortex', label: 'Vortex', icon: Wind },
+  { id: 'grid', label: 'Grid', icon: Grid3X3 },
 ];
 
 export function InspoHeader({
@@ -40,8 +43,8 @@ export function InspoHeader({
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const currentViewLabel = VIEW_MODE_OPTIONS.find(v => v.id === viewMode)?.label || 'Sphere View';
-  const CurrentViewIcon = VIEW_MODE_OPTIONS.find(v => v.id === viewMode)?.icon || Globe;
+  const currentViewOption = VIEW_MODE_OPTIONS.find(v => v.id === viewMode) || VIEW_MODE_OPTIONS[1];
+  const CurrentViewIcon = currentViewOption.icon;
 
   return (
     <div className="flex items-center justify-between gap-4 mb-6">
@@ -85,7 +88,7 @@ export function InspoHeader({
             }`}
           >
             <CurrentViewIcon className="w-4 h-4" />
-            <span className="hidden sm:inline">{currentViewLabel}</span>
+            <span className="hidden sm:inline">{currentViewOption.label}</span>
             <ChevronDown className={`w-4 h-4 transition-transform ${isFilterOpen ? 'rotate-180' : ''}`} />
           </button>
 
