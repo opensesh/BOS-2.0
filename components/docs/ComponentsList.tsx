@@ -52,7 +52,7 @@ export function ComponentsList({ onSelectComponent, onClose }: ComponentsListPro
 
   const handleSelect = (componentId: string) => {
     onSelectComponent(componentId);
-    onClose();
+    // Note: onClose is handled by the parent's onSelectComponent callback
   };
 
   const ComponentRow = ({ component }: { component: ComponentDoc }) => (

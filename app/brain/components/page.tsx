@@ -20,7 +20,6 @@ function ComponentsContent() {
   
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [showListView, setShowListView] = useState(false);
-  const [cameFromList, setCameFromList] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedComponent, setSelectedComponent] = useState<ComponentDoc | null>(null);
   const [selectedVariant, setSelectedVariant] = useState<string>('default');
@@ -28,6 +27,7 @@ function ComponentsContent() {
   // Get component from URL params
   const componentIdFromUrl = searchParams.get('component');
   const variantIdFromUrl = searchParams.get('variant');
+  const fromListParam = searchParams.get('from') === 'list';
 
   // Initialize from URL params
   useEffect(() => {
@@ -100,7 +100,7 @@ function ComponentsContent() {
                 href="/brain"
                 className={cn(
                   "group inline-flex items-center gap-2 transition-colors",
-                  cameFromList && !showListView
+                  fromListParam && !showListView
                     ? "text-os-text-secondary-dark/60 hover:text-os-text-secondary-dark"
                     : "text-os-text-secondary-dark hover:text-brand-aperol"
                 )}
@@ -110,13 +110,14 @@ function ComponentsContent() {
               </Link>
               
               {/* Back to All Components - shown when viewing a component after coming from list */}
-              {cameFromList && !showListView && (
+              {fromListParam && !showListView && (
                 <>
                   <span className="text-os-text-secondary-dark/40">/</span>
                   <button
                     onClick={() => {
+                      // Navigate back to list view without 'from' param
                       setShowListView(true);
-                      setCameFromList(false);
+                      router.push('/brain/components');
                     }}
                     className="group inline-flex items-center gap-2 text-os-text-secondary-dark hover:text-brand-aperol transition-colors"
                   >
@@ -132,9 +133,12 @@ function ComponentsContent() {
               {/* All Components Button */}
               <button
                 onClick={() => {
-                  setShowListView(!showListView);
-                  if (!showListView) {
-                    setCameFromList(false);
+                  if (showListView) {
+                    setShowListView(false);
+                  } else {
+                    setShowListView(true);
+                    // Clear 'from' param when opening list view directly
+                    router.push('/brain/components');
                   }
                 }}
                 className={cn(
@@ -181,9 +185,19 @@ function ComponentsContent() {
             {showListView ? (
               <ComponentsList 
                 onSelectComponent={(componentId) => {
-                  handleSelectComponent(componentId);
+                  // Navigate with 'from=list' param for breadcrumb
+                  const params = new URLSearchParams();
+                  params.set('component', componentId);
+                  params.set('from', 'list');
+                  router.push(`/brain/components?${params.toString()}`);
                   setShowListView(false);
-                  setCameFromList(true);
+                  
+                  // Also update local state
+                  const component = getComponentById(componentId);
+                  if (component) {
+                    setSelectedComponent(component);
+                    setSelectedVariant('default');
+                  }
                 }}
                 onClose={() => setShowListView(false)}
               />
