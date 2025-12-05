@@ -95,27 +95,22 @@ function ComponentsContent() {
           <MotionItem className="flex items-center justify-between mb-8">
             {/* Navigation Links */}
             <div className="flex items-center gap-4">
-              {/* Back to Brain - always shown, secondary when viewing component from list */}
+              {/* Back to Brain - always shown */}
               <Link
                 href="/brain"
-                className={cn(
-                  "group inline-flex items-center gap-2 transition-colors",
-                  fromListParam && !showListView
-                    ? "text-os-text-secondary-dark/60 hover:text-os-text-secondary-dark"
-                    : "text-os-text-secondary-dark hover:text-brand-aperol"
-                )}
+                className="group inline-flex items-center gap-2 text-os-text-secondary-dark hover:text-brand-aperol transition-colors"
               >
                 <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
                 <span className="text-sm font-medium">Back to Brain</span>
               </Link>
               
-              {/* All Components breadcrumb - shown when viewing a component after coming from list */}
-              {fromListParam && !showListView && (
+              {/* All Components breadcrumb - always shown when viewing a component */}
+              {!showListView && (
                 <>
                   <span className="text-os-text-secondary-dark/40">/</span>
                   <button
                     onClick={() => {
-                      // Navigate back to list view without 'from' param
+                      // Navigate to list view
                       setShowListView(true);
                       router.push('/brain/components');
                     }}

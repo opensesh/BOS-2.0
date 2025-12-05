@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useRef, useState, useCallback, useEffect } from 'react';
-import { X, Upload, BrainCog, FileText, CheckCircle2, FolderTree, BookOpen, PenTool, Check, ArrowRight } from 'lucide-react';
+import { X, Upload, BrainCog, FileText, CheckCircle2, BookOpen, PenTool, Check, ArrowRight } from 'lucide-react';
 
 export type BrainSection = 'architecture' | 'guidelines' | 'writing';
 
@@ -87,25 +87,16 @@ export function BrainSettingsModal({ isOpen, onClose, defaultSection }: BrainSet
 
   const options = [
     {
-      id: 'architecture' as const,
-      title: 'Architecture',
-      description: 'Auto-generated from your repository structure',
-      icon: FolderTree,
-      isAutomatic: true,
-    },
-    {
       id: 'guidelines' as const,
       title: 'Brand Guidelines',
       description: 'Upload your brand identity documentation',
       icon: BookOpen,
-      isAutomatic: false,
     },
     {
       id: 'writing' as const,
       title: 'Writing Styles',
       description: 'Upload your voice and tone guidelines',
       icon: PenTool,
-      isAutomatic: false,
     },
   ];
 
@@ -121,18 +112,13 @@ export function BrainSettingsModal({ isOpen, onClose, defaultSection }: BrainSet
       <div className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-os-bg-dark border border-os-border-dark rounded-2xl shadow-2xl m-4">
         {/* Header */}
         <div className="sticky top-0 flex items-center justify-between p-6 border-b border-os-border-dark bg-os-bg-dark z-10">
-          <div className="flex items-center gap-3">
-            <div className="p-2 rounded-lg bg-brand-aperol/10">
-              <BrainCog className="w-5 h-5 text-brand-aperol" />
-            </div>
-            <div>
-              <h2 className="text-xl font-display font-bold text-brand-vanilla">
-                Brand Brain Settings
-              </h2>
-              <p className="text-sm text-os-text-secondary-dark">
-                Configure your AI brand knowledge
-              </p>
-            </div>
+          <div>
+            <h2 className="text-xl font-display font-bold text-brand-vanilla">
+              Brain Settings
+            </h2>
+            <p className="text-sm text-os-text-secondary-dark">
+              Configure your brand knowledge base
+            </p>
           </div>
           <button
             onClick={onClose}
@@ -145,7 +131,7 @@ export function BrainSettingsModal({ isOpen, onClose, defaultSection }: BrainSet
         {/* Content */}
         <div className="p-6 space-y-6">
           {/* Option Cards Row */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {options.map((option) => {
               const Icon = option.icon;
               const isSelected = selectedOption === option.id;
