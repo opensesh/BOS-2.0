@@ -228,28 +228,40 @@ export async function POST(req: Request) {
     });
     
     // Log system prompt details for debugging
-    console.log('System prompt built:', {
-      contextType: enrichedContext?.type || 'none',
-      promptLength: systemPrompt.length,
-      hasArticleSummary: !!enrichedContext?.article?.summary,
-    });
+    console.log('=== SYSTEM PROMPT DEBUG ===');
+    console.log('Context type:', enrichedContext?.type || 'none');
+    console.log('Prompt length:', systemPrompt.length);
+    console.log('Has article summary:', !!enrichedContext?.article?.summary);
+    console.log('Article summary preview:', enrichedContext?.article?.summary?.slice(0, 200) || 'none');
+    console.log('Selected model:', selectedModel);
+    console.log('Message count:', modelMessages.length);
+    console.log('=== END DEBUG ===');
 
-    // Stream the response
-    const result = streamText({
-      model: modelInstance,
-      messages: modelMessages,
-      system: systemPrompt,
-    });
+    // Stream the response with error handling
+    try {
+      const result = streamText({
+        model: modelInstance,
+        messages: modelMessages,
+        system: systemPrompt,
+        // Add reasonable limits
+        maxTokens: 4096,
+      });
 
-    // Return streaming response in format useChat expects (AI SDK 5.x)
-    // Must use toUIMessageStreamResponse() for useChat hook to parse correctly
-    // Include brand sources in headers for client-side citation rendering
-    return result.toUIMessageStreamResponse({
-      headers: {
-        'X-Model-Used': selectedModel,
-        'X-Brand-Sources': JSON.stringify(BRAND_SOURCES),
-      },
-    });
+      console.log('Stream created successfully, returning response...');
+
+      // Return streaming response in format useChat expects (AI SDK 5.x)
+      // Must use toUIMessageStreamResponse() for useChat hook to parse correctly
+      // Include brand sources in headers for client-side citation rendering
+      return result.toUIMessageStreamResponse({
+        headers: {
+          'X-Model-Used': selectedModel,
+          'X-Brand-Sources': JSON.stringify(BRAND_SOURCES),
+        },
+      });
+    } catch (streamError) {
+      console.error('Error creating stream:', streamError);
+      throw streamError;
+    }
   } catch (error) {
     console.error('Error in chat API:', error);
     
