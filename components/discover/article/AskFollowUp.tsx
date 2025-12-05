@@ -1,18 +1,27 @@
 'use client';
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import {
-  Search,
   Mic,
   Globe,
   Paperclip,
   Send,
-  Sparkles,
+  Brain,
+  Compass,
+  Palette,
   Lightbulb,
   ArrowUpRight,
 } from 'lucide-react';
+import { ModelId } from '@/lib/ai/providers';
+import { useAttachments } from '@/hooks/useAttachments';
+import { useVoiceRecognition } from '@/hooks/useVoiceRecognition';
+import { AttachmentPreview, DragOverlay } from '@/components/chat/AttachmentPreview';
+import { SearchResearchToggle } from '@/components/ui/search-research-toggle';
+import { ConnectorDropdown } from '@/components/ui/connector-dropdown';
+import { ModelSelector } from '@/components/ui/model-selector';
 
 interface AskFollowUpProps {
   articleTitle: string;
@@ -20,27 +29,118 @@ interface AskFollowUpProps {
   articleImage?: string;
 }
 
-// Pinned chat input at bottom of article page
+interface Connector {
+  id: string;
+  icon: React.ComponentType<{ className?: string }>;
+  title: string;
+  description: string;
+  enabled: boolean;
+}
+
+// Pinned chat input at bottom of article page - matches home page style
 export function AskFollowUp({ articleTitle, articleSlug, articleImage }: AskFollowUpProps) {
   const [query, setQuery] = useState('');
   const [isFocused, setIsFocused] = useState(false);
+  const [selectedModel, setSelectedModel] = useState<ModelId>('auto');
+  const [showConnectorDropdown, setShowConnectorDropdown] = useState(false);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [suggestionsMode, setSuggestionsMode] = useState<'search' | 'research'>('search');
   const router = useRouter();
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const globeButtonRef = useRef<HTMLButtonElement>(null);
+
+  // Connectors (matching homepage)
+  const connectors: Connector[] = [
+    { id: 'web', icon: Globe, title: 'Web', description: 'Search across the entire internet', enabled: true },
+    { id: 'brand', icon: Palette, title: 'Brand', description: 'Access brand assets and guidelines', enabled: true },
+    { id: 'brain', icon: Brain, title: 'Brain', description: 'Search brand knowledge base', enabled: true },
+    { id: 'discover', icon: Compass, title: 'Discover', description: 'Explore curated content and ideas', enabled: false },
+  ];
+
+  const [activeConnectors, setActiveConnectors] = useState<Set<string>>(new Set(['web', 'brand', 'brain']));
+
+  const handleToggleConnector = (id: string) => {
+    setActiveConnectors((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) {
+        next.delete(id);
+      } else {
+        next.add(id);
+      }
+      return next;
+    });
+  };
+
+  const updatedConnectors = connectors.map((connector) => ({
+    ...connector,
+    enabled: activeConnectors.has(connector.id),
+  }));
+
+  // Voice recognition
+  const {
+    isListening,
+    transcript,
+    error: voiceError,
+    startListening,
+    stopListening,
+    resetTranscript,
+  } = useVoiceRecognition((finalTranscript) => {
+    setQuery((prev) => prev + (prev ? ' ' : '') + finalTranscript);
+    resetTranscript();
+  });
+
+  // Attachment handling
+  const {
+    attachments,
+    isDragging,
+    error: attachmentError,
+    addFiles,
+    removeAttachment,
+    clearAttachments,
+    clearError: clearAttachmentError,
+    handlePaste,
+    handleDragOver,
+    handleDragLeave,
+    handleDrop,
+    fileInputRef,
+    openFilePicker,
+  } = useAttachments();
+
+  // Update input with live transcript
+  useEffect(() => {
+    if (transcript && isListening) {
+      setQuery((prev) => {
+        const base = prev.replace(transcript, '').trim();
+        return base + (base ? ' ' : '') + transcript;
+      });
+    }
+  }, [transcript, isListening]);
 
   // Auto-resize textarea
   useEffect(() => {
     if (textareaRef.current) {
       textareaRef.current.style.height = 'auto';
-      textareaRef.current.style.height = `${Math.min(textareaRef.current.scrollHeight, 120)}px`;
+      textareaRef.current.style.height = `${Math.min(textareaRef.current.scrollHeight, 150)}px`;
     }
   }, [query]);
 
+  // Close connector dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = () => {
+      setShowConnectorDropdown(false);
+    };
+
+    if (showConnectorDropdown) {
+      document.addEventListener('click', handleClickOutside);
+      return () => document.removeEventListener('click', handleClickOutside);
+    }
+  }, [showConnectorDropdown]);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!query.trim()) return;
+    if (!query.trim() && attachments.length === 0) return;
 
     // Navigate to home with the article context and query
-    // The query params will tell the chat to show the article reference card
     const searchParams = new URLSearchParams({
       q: query.trim(),
       articleRef: articleSlug,
@@ -48,6 +148,7 @@ export function AskFollowUp({ articleTitle, articleSlug, articleImage }: AskFoll
       ...(articleImage && { articleImage }),
     });
 
+    clearAttachments();
     router.push(`/?${searchParams.toString()}`);
   };
 
@@ -58,21 +159,80 @@ export function AskFollowUp({ articleTitle, articleSlug, articleImage }: AskFoll
     }
   };
 
+  const handleMicClick = () => {
+    if (isListening) {
+      stopListening();
+    } else {
+      startListening();
+    }
+  };
+
+  const handleModeChange = useCallback((show: boolean, mode: 'search' | 'research') => {
+    setShowSuggestions(show);
+    setSuggestionsMode(mode);
+  }, []);
+
+  const handleConnectorDropdownClose = useCallback(() => {
+    setShowConnectorDropdown(false);
+  }, []);
+
+  const handleQueryClick = useCallback((queryText: string) => {
+    setQuery(queryText);
+    setShowSuggestions(false);
+    textareaRef.current?.focus();
+  }, []);
+
   return (
     <div className="fixed bottom-0 left-0 right-0 z-30 bg-gradient-to-t from-os-bg-dark via-os-bg-dark to-transparent pt-8 pb-4 lg:pl-[56px]">
       <div className="max-w-4xl mx-auto px-6 md:px-12">
         <form onSubmit={handleSubmit}>
+          {/* Hidden file input */}
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept="image/*"
+            multiple
+            onChange={(e) => {
+              if (e.target.files) {
+                addFiles(e.target.files);
+                e.target.value = '';
+              }
+            }}
+            className="hidden"
+          />
+
           <div
             className={`
-              relative bg-os-surface-dark/95 backdrop-blur-xl rounded-xl
+              relative bg-os-surface-dark/80 backdrop-blur-xl rounded-xl
               border transition-all duration-200 shadow-xl
               ${
-                isFocused
-                  ? 'border-brand-aperol shadow-brand-aperol/10'
-                  : 'border-os-border-dark hover:border-os-border-dark/80'
+                isDragging
+                  ? 'border-brand-aperol shadow-lg shadow-brand-aperol/20'
+                  : isFocused
+                    ? 'border-brand-aperol shadow-brand-aperol/10'
+                    : 'border-os-border-dark hover:border-os-border-dark/80'
               }
             `}
+            onDragOver={handleDragOver}
+            onDragEnter={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+            }}
+            onDragLeave={handleDragLeave}
+            onDrop={handleDrop}
           >
+            {/* Drag overlay */}
+            <DragOverlay isDragging={isDragging} />
+
+            {/* Attachment preview */}
+            <AttachmentPreview
+              attachments={attachments}
+              onRemove={removeAttachment}
+              error={attachmentError}
+              onClearError={clearAttachmentError}
+              compact
+            />
+
             {/* Input area */}
             <div className="relative">
               <textarea
@@ -82,78 +242,175 @@ export function AskFollowUp({ articleTitle, articleSlug, articleImage }: AskFoll
                 onKeyDown={handleKeyDown}
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}
-                placeholder="Ask follow-up"
-                className="w-full px-4 py-3 bg-transparent text-os-text-primary-dark placeholder:text-os-text-secondary-dark resize-none focus:outline-none min-h-[48px] max-h-[120px]"
+                onPaste={handlePaste}
+                placeholder={attachments.length > 0 ? "Add a message or send with images..." : "Ask follow-up"}
+                className="w-full px-4 py-4 bg-transparent text-os-text-primary-dark placeholder:text-os-text-secondary-dark resize-none focus:outline-none min-h-[60px] max-h-[150px]"
                 rows={1}
               />
             </div>
 
             {/* Footer toolbar */}
-            <div className="flex items-center justify-between px-3 py-2 border-t border-os-border-dark/50">
-              {/* Left side - Search/Research Toggle */}
-              <div className="flex items-center gap-1">
-                <button
-                  type="button"
-                  className="p-2 rounded-lg bg-brand-aperol text-white"
-                  title="Search"
-                >
-                  <Search className="w-4 h-4" />
-                </button>
-                <button
-                  type="button"
-                  className="p-2 rounded-lg text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-bg-dark transition-colors"
-                  title="Deep Research"
-                >
-                  <Sparkles className="w-4 h-4" />
-                </button>
-                <button
-                  type="button"
-                  className="p-2 rounded-lg text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-bg-dark transition-colors"
-                  title="Reason"
-                >
-                  <Lightbulb className="w-4 h-4" />
-                </button>
+            <div className="flex flex-wrap items-center justify-between px-4 py-3 border-t border-os-border-dark/50 gap-2">
+              {/* Left side - Model Selector + Search/Research Toggle */}
+              <div className="flex items-center gap-1 sm:gap-2">
+                {/* Model Selector */}
+                <ModelSelector
+                  selectedModel={selectedModel}
+                  onModelChange={setSelectedModel}
+                  disabled={false}
+                />
+
+                <div className="hidden sm:block w-px h-6 bg-os-border-dark" />
+
+                {/* Search/Research Toggle */}
+                <SearchResearchToggle
+                  onQueryClick={handleQueryClick}
+                  onModeChange={handleModeChange}
+                  showSuggestions={showSuggestions}
+                />
               </div>
 
               {/* Right side - action buttons */}
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-0.5 sm:gap-1">
+                {/* Globe - Connectors */}
+                <div className="relative">
+                  <button
+                    ref={globeButtonRef}
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setShowConnectorDropdown(!showConnectorDropdown);
+                    }}
+                    className={`
+                      p-2 rounded-lg transition-all
+                      ${showConnectorDropdown 
+                        ? 'bg-brand-aperol/20 text-brand-aperol' 
+                        : 'text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-bg-dark'
+                      }
+                    `}
+                    title="Connectors"
+                  >
+                    <Globe className="w-5 h-5" />
+                  </button>
+                  <ConnectorDropdown
+                    isOpen={showConnectorDropdown}
+                    onClose={handleConnectorDropdownClose}
+                    connectors={updatedConnectors}
+                    onToggleConnector={handleToggleConnector}
+                    triggerRef={globeButtonRef as React.RefObject<HTMLElement>}
+                  />
+                </div>
+
+                {/* Attach */}
                 <button
                   type="button"
-                  className="p-2 rounded-lg text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-bg-dark transition-colors"
-                  title="Globe"
+                  onClick={openFilePicker}
+                  className={`relative p-2 rounded-lg transition-colors ${
+                    attachments.length > 0
+                      ? 'bg-brand-aperol/20 text-brand-aperol'
+                      : 'text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-bg-dark'
+                  }`}
+                  title="Attach images (or paste/drag & drop)"
                 >
-                  <Globe className="w-4 h-4" />
+                  <Paperclip className="w-5 h-5" />
+                  {attachments.length > 0 && (
+                    <span className="absolute -top-1 -right-1 w-4 h-4 bg-brand-aperol text-white text-[10px] font-medium rounded-full flex items-center justify-center">
+                      {attachments.length}
+                    </span>
+                  )}
                 </button>
-                <button
-                  type="button"
-                  className="p-2 rounded-lg text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-bg-dark transition-colors"
-                  title="Attach"
-                >
-                  <Paperclip className="w-4 h-4" />
-                </button>
-                <button
-                  type="button"
-                  className="p-2 rounded-lg text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-bg-dark transition-colors"
-                  title="Voice input"
-                >
-                  <Mic className="w-4 h-4" />
-                </button>
+
+                {/* Voice input with animation */}
+                <div className="relative">
+                  {/* Pulsing rings when recording */}
+                  {isListening && (
+                    <>
+                      <motion.div
+                        className="absolute inset-0 rounded-lg bg-brand-aperol/30"
+                        initial={{ scale: 1, opacity: 0.6 }}
+                        animate={{
+                          scale: [1, 1.8, 2.2],
+                          opacity: [0.6, 0.3, 0],
+                        }}
+                        transition={{
+                          duration: 1.5,
+                          repeat: Infinity,
+                          ease: 'easeOut',
+                        }}
+                      />
+                      <motion.div
+                        className="absolute inset-0 rounded-lg bg-brand-aperol/20"
+                        initial={{ scale: 1, opacity: 0.4 }}
+                        animate={{
+                          scale: [1, 1.5, 1.8],
+                          opacity: [0.4, 0.2, 0],
+                        }}
+                        transition={{
+                          duration: 1.5,
+                          repeat: Infinity,
+                          ease: 'easeOut',
+                          delay: 0.3,
+                        }}
+                      />
+                    </>
+                  )}
+                  <motion.button
+                    type="button"
+                    onClick={handleMicClick}
+                    className={`relative p-2 rounded-lg transition-colors ${
+                      isListening
+                        ? 'bg-brand-aperol text-white'
+                        : 'text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-bg-dark'
+                    }`}
+                    title={isListening ? 'Stop recording' : 'Start voice input'}
+                    whileTap={{ scale: 0.92 }}
+                    animate={isListening ? {
+                      scale: [1, 1.05, 1],
+                    } : { scale: 1 }}
+                    transition={isListening ? {
+                      duration: 0.8,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                    } : { duration: 0.15 }}
+                  >
+                    <motion.div
+                      animate={isListening ? { rotate: [0, -8, 8, -8, 0] } : { rotate: 0 }}
+                      transition={isListening ? {
+                        duration: 0.5,
+                        repeat: Infinity,
+                        repeatDelay: 1,
+                        ease: 'easeInOut',
+                      } : { duration: 0.15 }}
+                    >
+                      <Mic className="w-5 h-5" />
+                    </motion.div>
+                  </motion.button>
+                  {voiceError && (
+                    <motion.span
+                      initial={{ opacity: 0, y: 4 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs text-red-400 whitespace-nowrap bg-os-surface-dark px-2 py-1 rounded"
+                    >
+                      {voiceError}
+                    </motion.span>
+                  )}
+                </div>
 
                 {/* Submit button */}
                 <button
                   type="submit"
-                  disabled={!query.trim()}
+                  disabled={!query.trim() && attachments.length === 0}
                   className={`
                     p-2 rounded-lg transition-all
                     ${
-                      query.trim()
+                      (query.trim() || attachments.length > 0)
                         ? 'bg-brand-aperol text-white hover:bg-brand-aperol/90'
                         : 'text-os-text-secondary-dark/50 cursor-not-allowed'
                     }
                   `}
                   title="Send"
                 >
-                  <Send className="w-4 h-4" />
+                  <Send className="w-5 h-5" />
                 </button>
               </div>
             </div>
