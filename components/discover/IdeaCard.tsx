@@ -112,30 +112,37 @@ export function IdeaCard({ item, variant = 'compact' }: IdeaCardProps) {
         href={`/discover/ideas/${item.slug}`}
         className="group flex flex-row gap-4 p-4 rounded-2xl bg-os-surface-dark/50 border border-os-border-dark/50 hover:border-brand-aperol hover:bg-os-surface-dark/70 transition-all duration-200 hover:shadow-lg hover:shadow-brand-aperol/10"
       >
-        {/* Sonic Line Texture Cover - LEFT (reduced from 1/3 to 1/4) */}
-        <div className="w-1/4 shrink-0">
-          <div className="relative w-full h-full min-h-[80px] overflow-hidden rounded-xl">
-            {/* Using native img tag for crisp images */}
+        {/* Sonic Line Texture Cover - LEFT (narrower with large icon) */}
+        <div className="w-24 sm:w-28 shrink-0">
+          <div className="relative w-full h-full min-h-[96px] overflow-hidden rounded-xl">
+            {/* Using native img tag with explicit dimensions */}
             <img
               src={textureUrl}
               alt=""
+              width={800}
+              height={600}
               className="absolute inset-0 w-full h-full object-cover"
               loading="lazy"
+              style={{ imageRendering: 'crisp-edges' }}
             />
             
-            {/* Content Type Badge Overlay */}
-            <div className="absolute top-2 left-2 flex items-center gap-1 px-2 py-1 rounded-md bg-os-charcoal/90 backdrop-blur-sm border border-brand-vanilla/10">
-              <FormatIcon className="w-3 h-3 text-brand-vanilla" />
-              <span className="text-[10px] font-medium text-brand-vanilla tracking-wide">
-                {formatLabel}
-              </span>
+            {/* Large Centered Content Type Icon */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-os-charcoal/80 backdrop-blur-md border-2 border-brand-vanilla/20 group-hover:border-brand-aperol/60 transition-colors">
+                <FormatIcon className="w-6 h-6 sm:w-7 sm:h-7 text-brand-vanilla" />
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Text Content - RIGHT (3/4 width) */}
+        {/* Text Content - RIGHT */}
         <div className="flex-1 flex flex-col justify-between min-w-0">
           <div className="flex flex-col gap-2">
+            {/* Format Label */}
+            <span className="text-[11px] font-medium text-brand-vanilla/60 tracking-wide uppercase">
+              {formatLabel}
+            </span>
+
             {/* Title */}
             <h2 className="text-lg md:text-xl font-display font-bold text-brand-vanilla leading-tight line-clamp-2">
               {cleanTitle}
@@ -167,35 +174,44 @@ export function IdeaCard({ item, variant = 'compact' }: IdeaCardProps) {
     );
   }
 
-  // Compact variant - horizontal layout with reduced image size
+  // Compact variant - horizontal layout with narrow image
   return (
     <Link 
       href={`/discover/ideas/${item.slug}`}
       className="group flex flex-row rounded-2xl overflow-hidden h-full bg-os-surface-dark/50 border border-os-border-dark/50 hover:border-brand-aperol hover:bg-os-surface-dark/70 transition-all duration-200 hover:shadow-lg hover:shadow-brand-aperol/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-aperol focus-visible:ring-offset-2 focus-visible:ring-offset-os-bg-dark"
     >
-      {/* Sonic Line Texture Cover - LEFT (reduced from 1/3 to 1/4) */}
-      <div className="w-1/4 sm:w-[28%] shrink-0 relative overflow-hidden">
-        {/* Using native img tag for crisp images */}
+      {/* Sonic Line Texture Cover - LEFT (narrow with large icon) */}
+      <div className="w-20 sm:w-24 shrink-0 relative overflow-hidden">
+        {/* Using native img tag with explicit dimensions */}
         <img
           src={textureUrl}
           alt=""
+          width={800}
+          height={600}
           className="absolute inset-0 w-full h-full object-cover"
           loading="lazy"
+          style={{ imageRendering: 'crisp-edges' }}
         />
         
-        {/* Content Type Badge Overlay */}
-        <div className="absolute top-2 left-2 flex items-center gap-1 px-2 py-1 rounded-md bg-os-charcoal/90 backdrop-blur-sm border border-brand-vanilla/10">
-          <FormatIcon className="w-3 h-3 text-brand-vanilla" />
-          <span className="text-[10px] font-medium text-brand-vanilla tracking-wide">
-            {formatLabel}
-          </span>
+        {/* Large Centered Content Type Icon */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-os-charcoal/80 backdrop-blur-md border-2 border-brand-vanilla/20 group-hover:border-brand-aperol/60 transition-colors">
+            <FormatIcon className="w-5 h-5 sm:w-6 sm:h-6 text-brand-vanilla" />
+          </div>
         </div>
       </div>
 
-      {/* Content Section - RIGHT (3/4 width) */}
+      {/* Content Section - RIGHT */}
       <div className="flex-1 flex flex-col p-3 sm:p-4 min-w-0">
+        {/* Format Label */}
+        <div className="flex items-center gap-1.5 mb-2">
+          <span className="text-[11px] font-medium text-brand-vanilla/60 tracking-wide uppercase">
+            {formatLabel}
+          </span>
+        </div>
+
         {/* Title */}
-        <h3 className="font-display font-bold text-brand-vanilla text-sm sm:text-[15px] leading-snug line-clamp-3 flex-1 mb-3">
+        <h3 className="font-display font-bold text-brand-vanilla text-sm sm:text-base leading-snug line-clamp-3 flex-1 mb-3">
           {cleanTitle}
         </h3>
 
