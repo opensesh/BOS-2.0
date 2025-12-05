@@ -11,6 +11,8 @@ interface ModalProps {
   children: React.ReactNode;
   size?: 'sm' | 'md' | 'lg';
   showCloseButton?: boolean;
+  /** If true, automatically focuses the first focusable element inside the modal */
+  autoFocusFirst?: boolean;
 }
 
 export function Modal({
@@ -20,6 +22,7 @@ export function Modal({
   children,
   size = 'md',
   showCloseButton = true,
+  autoFocusFirst = true,
 }: ModalProps) {
   const modalRef = useRef<HTMLDivElement>(null);
   const previousActiveElement = useRef<HTMLElement | null>(null);
@@ -41,8 +44,30 @@ export function Modal({
       document.addEventListener('keydown', handleKeyDown);
       document.body.style.overflow = 'hidden';
 
-      // Focus the modal
-      modalRef.current?.focus();
+      // Focus handling - find first focusable element or fall back to modal container
+      if (autoFocusFirst && modalRef.current) {
+        const focusableSelectors = [
+          'input:not([disabled]):not([type="hidden"])',
+          'textarea:not([disabled])',
+          'select:not([disabled])',
+          'button:not([disabled])',
+          '[tabindex]:not([tabindex="-1"])',
+        ].join(', ');
+
+        // Small delay to let the modal render completely
+        requestAnimationFrame(() => {
+          const firstFocusable = modalRef.current?.querySelector<HTMLElement>(
+            focusableSelectors
+          );
+          if (firstFocusable) {
+            firstFocusable.focus();
+          } else {
+            modalRef.current?.focus();
+          }
+        });
+      } else {
+        modalRef.current?.focus();
+      }
 
       return () => {
         document.removeEventListener('keydown', handleKeyDown);
@@ -50,7 +75,18 @@ export function Modal({
         previousActiveElement.current?.focus();
       };
     }
-  }, [isOpen, handleKeyDown]);
+  }, [isOpen, handleKeyDown, autoFocusFirst]);
+
+  // Handle click outside to close
+  const handleBackdropClick = useCallback(
+    (e: React.MouseEvent) => {
+      // Only close if clicking the backdrop directly, not its children
+      if (e.target === e.currentTarget) {
+        onClose();
+      }
+    },
+    [onClose]
+  );
 
   if (!isOpen) return null;
 
@@ -62,15 +98,15 @@ export function Modal({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4"
       role="dialog"
       aria-modal="true"
       aria-labelledby="modal-title"
+      onClick={handleBackdropClick}
     >
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-        onClick={onClose}
+        className="absolute inset-0 bg-black/60 backdrop-blur-sm animate-in fade-in-0 duration-200"
         aria-hidden="true"
       />
 
@@ -79,15 +115,16 @@ export function Modal({
         ref={modalRef}
         tabIndex={-1}
         className={cn(
-          'relative w-full mx-4 rounded-xl',
+          'relative w-full rounded-xl',
           'bg-os-surface-dark border border-os-border-dark',
           'shadow-2xl',
           'animate-in fade-in-0 zoom-in-95 duration-200',
+          'max-h-[90vh] overflow-hidden flex flex-col',
           sizeClasses[size]
         )}
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-os-border-dark">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-os-border-dark flex-shrink-0">
           <h2
             id="modal-title"
             className="text-lg font-display font-semibold text-brand-vanilla"
@@ -96,8 +133,9 @@ export function Modal({
           </h2>
           {showCloseButton && (
             <button
+              type="button"
               onClick={onClose}
-              className="p-1.5 rounded-lg text-os-text-secondary-dark hover:text-brand-vanilla hover:bg-os-border-dark transition-colors"
+              className="p-1.5 rounded-lg text-os-text-secondary-dark hover:text-brand-vanilla hover:bg-os-border-dark transition-colors focus:outline-none focus:ring-2 focus:ring-brand-aperol/50"
               aria-label="Close modal"
             >
               <X className="w-5 h-5" />
@@ -105,8 +143,8 @@ export function Modal({
           )}
         </div>
 
-        {/* Body */}
-        <div className="px-6 py-4">{children}</div>
+        {/* Body - scrollable */}
+        <div className="px-6 py-4 overflow-y-auto custom-scrollbar flex-1">{children}</div>
       </div>
     </div>
   );

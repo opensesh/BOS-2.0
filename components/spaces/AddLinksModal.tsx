@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Modal } from '@/components/ui/Modal';
-import { Link as LinkIcon, X, ExternalLink } from 'lucide-react';
+import { Link as LinkIcon, X, ExternalLink, Plus } from 'lucide-react';
 import { SpaceLink } from '@/types';
 
 interface AddLinksModalProps {
@@ -24,6 +24,17 @@ export function AddLinksModal({
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [error, setError] = useState('');
+  const urlInputRef = useRef<HTMLInputElement>(null);
+
+  // Auto-focus URL input when modal opens
+  useEffect(() => {
+    if (isOpen) {
+      const timer = setTimeout(() => {
+        urlInputRef.current?.focus();
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [isOpen]);
 
   const validateUrl = (urlString: string): boolean => {
     try {
@@ -53,11 +64,19 @@ export function AddLinksModal({
       description: description.trim() || undefined,
     });
 
-    // Reset form
+    // Reset form and refocus for adding more
     setUrl('');
     setTitle('');
     setDescription('');
     setError('');
+    urlInputRef.current?.focus();
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && !e.shiftKey && url.trim()) {
+      e.preventDefault();
+      handleAddLink();
+    }
   };
 
   const handleClose = () => {
@@ -71,43 +90,62 @@ export function AddLinksModal({
   return (
     <Modal isOpen={isOpen} onClose={handleClose} title="Add Links" size="md">
       {/* Add new link form */}
-      <div className="space-y-4">
+      <form 
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleAddLink();
+        }}
+        className="space-y-4"
+      >
         <div>
-          <label className="block text-sm font-medium text-os-text-primary-dark mb-1.5">
+          <label 
+            htmlFor="link-url"
+            className="block text-sm font-medium text-os-text-primary-dark mb-1.5"
+          >
             URL <span className="text-red-500">*</span>
           </label>
           <input
+            ref={urlInputRef}
+            id="link-url"
             type="url"
             value={url}
             onChange={(e) => {
               setUrl(e.target.value);
               setError('');
             }}
+            onKeyDown={handleKeyDown}
             placeholder="https://example.com"
-            className="
-              w-full px-3 py-2 rounded-xl
-              bg-os-border-dark border border-os-border-dark
+            autoComplete="url"
+            className={`
+              w-full px-3 py-2.5 rounded-xl
+              bg-os-border-dark border
               text-os-text-primary-dark placeholder-os-text-secondary-dark
               focus:outline-none focus:ring-2 focus:ring-brand-aperol/50 focus:border-brand-aperol
               transition-colors
-            "
+              ${error ? 'border-red-500' : 'border-os-border-dark'}
+            `}
           />
           {error && (
-            <p className="mt-1 text-sm text-red-500">{error}</p>
+            <p className="mt-1.5 text-sm text-red-500" role="alert">{error}</p>
           )}
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-os-text-primary-dark mb-1.5">
-            Title (optional)
+          <label 
+            htmlFor="link-title"
+            className="block text-sm font-medium text-os-text-primary-dark mb-1.5"
+          >
+            Title <span className="text-os-text-secondary-dark font-normal">(optional)</span>
           </label>
           <input
+            id="link-title"
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             placeholder="Link title"
+            autoComplete="off"
             className="
-              w-full px-3 py-2 rounded-xl
+              w-full px-3 py-2.5 rounded-xl
               bg-os-border-dark border border-os-border-dark
               text-os-text-primary-dark placeholder-os-text-secondary-dark
               focus:outline-none focus:ring-2 focus:ring-brand-aperol/50 focus:border-brand-aperol
@@ -117,16 +155,20 @@ export function AddLinksModal({
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-os-text-primary-dark mb-1.5">
-            Description (optional)
+          <label 
+            htmlFor="link-description"
+            className="block text-sm font-medium text-os-text-primary-dark mb-1.5"
+          >
+            Description <span className="text-os-text-secondary-dark font-normal">(optional)</span>
           </label>
           <textarea
+            id="link-description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             placeholder="Brief description of the link"
             rows={2}
             className="
-              w-full px-3 py-2 rounded-xl resize-none
+              w-full px-3 py-2.5 rounded-xl resize-none
               bg-os-border-dark border border-os-border-dark
               text-os-text-primary-dark placeholder-os-text-secondary-dark
               focus:outline-none focus:ring-2 focus:ring-brand-aperol/50 focus:border-brand-aperol
@@ -136,12 +178,14 @@ export function AddLinksModal({
         </div>
 
         <button
-          onClick={handleAddLink}
-          className="w-full px-4 py-2 rounded-xl text-sm font-medium text-white bg-brand-aperol hover:bg-brand-aperol/80 transition-colors"
+          type="submit"
+          disabled={!url.trim()}
+          className="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-xl text-sm font-medium text-white bg-brand-aperol hover:bg-brand-aperol/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
+          <Plus className="w-4 h-4" />
           Add Link
         </button>
-      </div>
+      </form>
 
       {/* Existing links */}
       {existingLinks.length > 0 && (
@@ -149,13 +193,13 @@ export function AddLinksModal({
           <h4 className="text-sm font-medium text-os-text-primary-dark mb-3">
             Saved links ({existingLinks.length})
           </h4>
-          <div className="space-y-2 max-h-48 overflow-y-auto">
+          <div className="space-y-2 max-h-48 overflow-y-auto custom-scrollbar pr-1">
             {existingLinks.map((link) => (
               <div
                 key={link.id}
-                className="flex items-start justify-between p-3 rounded-lg bg-os-surface-dark"
+                className="flex items-start justify-between p-3 rounded-xl bg-os-surface-dark hover:bg-os-surface-dark/80 transition-colors"
               >
-                <div className="flex items-start gap-2 min-w-0 flex-1">
+                <div className="flex items-start gap-2.5 min-w-0 flex-1">
                   <LinkIcon className="w-4 h-4 text-os-text-secondary-dark mt-0.5 flex-shrink-0" />
                   <div className="min-w-0">
                     <p className="text-sm text-os-text-primary-dark truncate">
@@ -166,9 +210,9 @@ export function AddLinksModal({
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-xs text-brand-aperol hover:underline flex items-center gap-1 truncate"
+                        className="text-xs text-brand-aperol hover:underline inline-flex items-center gap-1 truncate max-w-full"
                       >
-                        {link.url}
+                        <span className="truncate">{link.url}</span>
                         <ExternalLink className="w-3 h-3 flex-shrink-0" />
                       </a>
                     )}
@@ -181,8 +225,10 @@ export function AddLinksModal({
                 </div>
                 {onRemoveLink && (
                   <button
+                    type="button"
                     onClick={() => onRemoveLink(link.id)}
-                    className="p-1 rounded hover:bg-os-border-dark text-os-text-secondary-dark hover:text-red-500 transition-colors flex-shrink-0"
+                    className="p-1.5 rounded-lg hover:bg-os-border-dark text-os-text-secondary-dark hover:text-red-500 transition-colors flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-red-500/50"
+                    aria-label={`Remove link "${link.title || link.url}"`}
                   >
                     <X className="w-4 h-4" />
                   </button>
@@ -193,11 +239,21 @@ export function AddLinksModal({
         </div>
       )}
 
-      {/* Close button */}
+      {/* Empty state hint */}
+      {existingLinks.length === 0 && (
+        <div className="mt-4 p-4 rounded-xl bg-os-surface-dark/50 text-center">
+          <p className="text-sm text-os-text-secondary-dark">
+            Add links to reference websites and resources in this space.
+          </p>
+        </div>
+      )}
+
+      {/* Footer */}
       <div className="flex justify-end mt-6 pt-4 border-t border-os-border-dark">
         <button
+          type="button"
           onClick={handleClose}
-          className="px-4 py-2 rounded-xl text-sm font-medium text-os-text-primary-dark bg-os-border-dark hover:bg-os-border-dark/80 transition-colors"
+          className="px-4 py-2.5 rounded-xl text-sm font-medium text-os-text-primary-dark bg-os-border-dark hover:bg-os-border-dark/80 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-aperol/50"
         >
           Done
         </button>
