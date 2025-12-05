@@ -53,8 +53,8 @@ function InspoContent() {
     <div className="flex h-screen bg-os-bg-dark text-os-text-primary-dark font-sans">
       <Sidebar />
       <main className="flex-1 flex flex-col min-w-0 overflow-hidden bg-os-bg-dark pt-14 lg:pt-0 relative">
-        {/* Header - matches DiscoverLayout padding */}
-        <div className="w-full max-w-6xl mx-auto px-6 py-8 md:px-12 md:py-12">
+        {/* Header - compact padding to match Ideas page */}
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-6 pt-6 pb-4 md:px-12 md:pt-8 md:pb-4">
           <InspoHeader
             viewMode={viewMode}
             onViewModeChange={handleViewModeChange}
@@ -63,11 +63,18 @@ function InspoContent() {
           />
         </div>
 
+        {/* Gradient fade overlay - seamless transition from header to canvas */}
+        <div className="absolute top-14 lg:top-0 left-0 right-0 h-32 md:h-40 pointer-events-none z-[5]"
+          style={{
+            background: 'linear-gradient(to bottom, #141414 0%, #141414 40%, transparent 100%)'
+          }}
+        />
+
         {/* 3D Visualization - fills remaining space */}
         <motion.div
-          className="flex-1 w-full"
-          initial={{ opacity: 0, scale: 0.98 }}
-          animate={{ opacity: 1, scale: 1 }}
+          className="flex-1 w-full -mt-8 md:-mt-12"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
           <InspoCanvas />
@@ -86,7 +93,7 @@ export default function InspoPage() {
       <div className="flex h-screen bg-os-bg-dark text-os-text-primary-dark font-sans">
         <Sidebar />
         <main className="flex-1 flex flex-col min-w-0 overflow-hidden bg-os-bg-dark pt-14 lg:pt-0">
-          <div className="w-full max-w-6xl mx-auto px-6 py-8 md:px-12 md:py-12">
+          <div className="w-full max-w-6xl mx-auto px-6 pt-6 pb-4 md:px-12 md:pt-8 md:pb-4">
             <div className="h-12" />
           </div>
           <div className="flex-1 w-full flex items-center justify-center">

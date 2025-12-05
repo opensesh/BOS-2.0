@@ -62,7 +62,7 @@ function AccordionSection({
             transition={{ duration: 0.2, ease: 'easeInOut' }}
             className="overflow-hidden"
           >
-            <div className="px-4 pb-4">
+            <div className="px-4 pt-1 pb-4">
               {children}
             </div>
           </motion.div>
