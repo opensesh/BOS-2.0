@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Plus, ChevronRight, ChevronDown, Box, Layers, PanelRight, X, LayoutList } from 'lucide-react';
+import { Search, Plus, ChevronRight, ChevronDown, Box, Layers, X } from 'lucide-react';
 import { buildNavigationTree, NavItem, getAllComponents } from '@/lib/component-registry';
 import { cn } from '@/lib/utils';
 
@@ -13,8 +13,6 @@ interface ComponentsDrawerProps {
   onSelectComponent: (componentId: string) => void;
   searchQuery: string;
   onSearchChange: (query: string) => void;
-  showListView: boolean;
-  onToggleListView: () => void;
 }
 
 export function ComponentsDrawer({
@@ -24,8 +22,6 @@ export function ComponentsDrawer({
   onSelectComponent,
   searchQuery,
   onSearchChange,
-  showListView,
-  onToggleListView,
 }: ComponentsDrawerProps) {
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set(['application', 'design-system']));
   
@@ -219,55 +215,6 @@ export function ComponentsDrawer({
 
   return (
     <>
-      {/* Toggle buttons - fixed to right side, consistent across viewports */}
-      <AnimatePresence>
-        {!isOpen && (
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            transition={{ duration: 0.15 }}
-            className="fixed right-0 top-1/2 -translate-y-1/2 z-30 flex flex-col gap-1"
-          >
-            {/* All Components button */}
-            <button
-              onClick={onToggleListView}
-              className={cn(
-                "group relative flex items-center justify-center w-10 h-12 border border-os-border-dark border-r-0 rounded-l-lg transition-colors",
-                showListView 
-                  ? "bg-brand-aperol/20 border-brand-aperol/50" 
-                  : "bg-os-surface-dark hover:bg-os-border-dark"
-              )}
-              aria-label="All Components"
-            >
-              <LayoutList className={cn(
-                "w-5 h-5 transition-colors",
-                showListView 
-                  ? "text-brand-aperol" 
-                  : "text-os-text-secondary-dark group-hover:text-brand-vanilla"
-              )} />
-              {/* Tooltip */}
-              <span className="absolute right-full mr-2 px-2 py-1 text-xs font-medium text-brand-vanilla bg-os-surface-dark border border-os-border-dark rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-150 whitespace-nowrap pointer-events-none">
-                All Components
-              </span>
-            </button>
-            
-            {/* Show Components drawer button */}
-            <button
-              onClick={onToggle}
-              className="group relative flex items-center justify-center w-10 h-12 bg-os-surface-dark border border-os-border-dark border-r-0 rounded-l-lg hover:bg-os-border-dark transition-colors"
-              aria-label="Show Components"
-            >
-              <PanelRight className="w-5 h-5 text-os-text-secondary-dark group-hover:text-brand-vanilla transition-colors" />
-              {/* Tooltip */}
-              <span className="absolute right-full mr-2 px-2 py-1 text-xs font-medium text-brand-vanilla bg-os-surface-dark border border-os-border-dark rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-150 whitespace-nowrap pointer-events-none">
-                Show Components
-              </span>
-            </button>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
       {/* Drawer - Right side, consistent across all viewports */}
       <AnimatePresence>
         {isOpen && (

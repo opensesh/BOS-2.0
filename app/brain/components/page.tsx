@@ -8,7 +8,8 @@ import { ComponentsDrawer } from '@/components/docs/ComponentsDrawer';
 import { ComponentPreview } from '@/components/docs/ComponentPreview';
 import { ComponentsList } from '@/components/docs/ComponentsList';
 import { PageTransition, MotionItem } from '@/lib/motion';
-import { ArrowLeft, Loader2 } from 'lucide-react';
+import { ArrowLeft, Loader2, LayoutList, PanelRight } from 'lucide-react';
+import { cn } from '@/lib/utils';
 import { getComponentById, getAllComponents, ComponentDoc } from '@/lib/component-registry';
 // Initialize registry with components
 import '@/lib/component-registry-data';
@@ -84,15 +85,13 @@ function ComponentsContent() {
         onSelectComponent={handleSelectComponent}
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
-        showListView={showListView}
-        onToggleListView={() => setShowListView(!showListView)}
       />
       
       {/* Main Content */}
       <div className="flex-1 flex flex-col min-w-0 overflow-y-auto custom-scrollbar bg-os-bg-dark pt-14 lg:pt-0">
         <PageTransition className="w-full max-w-6xl mx-auto px-6 py-8 md:px-12 md:py-12">
-          {/* Back Button Row */}
-          <MotionItem className="mb-8">
+          {/* Back Button & Actions Row */}
+          <MotionItem className="flex items-center justify-between mb-8">
             <Link
               href="/brain"
               className="group inline-flex items-center gap-2 text-os-text-secondary-dark hover:text-brand-aperol transition-colors"
@@ -100,6 +99,37 @@ function ComponentsContent() {
               <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
               <span className="text-sm font-medium">Back to Brain</span>
             </Link>
+            
+            {/* Action Buttons */}
+            <div className="flex items-center gap-2">
+              {/* All Components Button */}
+              <button
+                onClick={() => setShowListView(!showListView)}
+                className={cn(
+                  "group relative p-3 rounded-xl border transition-colors",
+                  showListView 
+                    ? "bg-brand-aperol/20 border-brand-aperol/50 text-brand-aperol" 
+                    : "bg-os-surface-dark hover:bg-os-border-dark border-os-border-dark text-os-text-secondary-dark hover:text-brand-vanilla"
+                )}
+                title="All Components"
+              >
+                <LayoutList className="w-5 h-5 transition-colors" />
+              </button>
+              
+              {/* Show Components Drawer Button */}
+              <button
+                onClick={() => setIsDrawerOpen(!isDrawerOpen)}
+                className={cn(
+                  "group relative p-3 rounded-xl border transition-colors",
+                  isDrawerOpen 
+                    ? "bg-brand-aperol/20 border-brand-aperol/50 text-brand-aperol" 
+                    : "bg-os-surface-dark hover:bg-os-border-dark border-os-border-dark text-os-text-secondary-dark hover:text-brand-vanilla"
+                )}
+                title="Show Components"
+              >
+                <PanelRight className="w-5 h-5 transition-colors" />
+              </button>
+            </div>
           </MotionItem>
 
           {/* Page Header */}
