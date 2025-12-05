@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useRef, useState, useCallback, useEffect } from 'react';
-import { X, Upload, BrainCog, FileText, CheckCircle2, BookOpen, PenTool, Check, ArrowRight } from 'lucide-react';
+import { X, Upload, FileText, CheckCircle2, BookOpen, PenTool, Check, ArrowRight } from 'lucide-react';
 
 export type BrainSection = 'architecture' | 'guidelines' | 'writing';
 
@@ -21,13 +21,15 @@ interface UploadedFile {
 type SelectedOption = 'guidelines' | 'writing' | null;
 
 export function BrainSettingsModal({ isOpen, onClose, defaultSection }: BrainSettingsModalProps) {
-  const [selectedOption, setSelectedOption] = useState<SelectedOption>(null);
+  const [selectedOption, setSelectedOption] = useState<SelectedOption>('guidelines');
   
   // Set default section when modal opens
   useEffect(() => {
-    if (isOpen && defaultSection) {
+    if (isOpen) {
       if (defaultSection === 'guidelines' || defaultSection === 'writing') {
         setSelectedOption(defaultSection);
+      } else {
+        setSelectedOption('guidelines');
       }
     }
   }, [isOpen, defaultSection]);
@@ -255,35 +257,6 @@ export function BrainSettingsModal({ isOpen, onClose, defaultSection }: BrainSet
             </section>
           )}
 
-          {/* AI Brand Interview Section */}
-          <section className="p-5 rounded-xl bg-os-surface-dark/30 border border-os-border-dark">
-            <div className="flex items-start gap-4">
-              <div className="p-2 rounded-lg bg-brand-aperol/10">
-                <BrainCog className="w-5 h-5 text-brand-aperol" />
-              </div>
-              <div className="flex-1">
-                <h3 className="text-lg font-display font-medium text-brand-vanilla mb-2">
-                  AI Brand Interview
-                </h3>
-                <p className="text-sm text-os-text-secondary-dark mb-4">
-                  After uploading your documentation, we&apos;ll interview you to create a comprehensive 
-                  brand brain ecosystem for your design team and AI agents.
-                </p>
-                <div className="flex items-center gap-2 text-sm text-os-text-secondary-dark">
-                  <ArrowRight className="w-4 h-4 text-brand-aperol" />
-                  <span>Available after uploading brand content</span>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Coming Soon Notice */}
-          <div className="p-4 rounded-xl bg-brand-aperol/10 border border-brand-aperol/20">
-            <p className="text-sm text-brand-vanilla">
-              <span className="font-medium">Vision Mode:</span> This feature is currently a placeholder. 
-              Full functionality for uploading brand content and AI-guided interviews will be built out in a future update.
-            </p>
-          </div>
         </div>
 
         {/* Footer */}
@@ -296,9 +269,10 @@ export function BrainSettingsModal({ isOpen, onClose, defaultSection }: BrainSet
           </button>
           <button
             onClick={onClose}
-            className="px-6 py-2.5 text-sm font-medium bg-brand-vanilla text-brand-charcoal rounded-lg hover:bg-brand-vanilla/90 transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-medium bg-brand-vanilla text-brand-charcoal rounded-lg hover:bg-brand-vanilla/90 transition-colors"
           >
-            Save Changes
+            Continue to Interview
+            <ArrowRight className="w-4 h-4" />
           </button>
         </div>
       </div>
