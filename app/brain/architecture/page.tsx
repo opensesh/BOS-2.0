@@ -45,9 +45,14 @@ export default function ArchitecturePage() {
 
           {/* Page Header */}
           <MotionItem className="flex flex-col gap-2 mb-10">
-            <h1 className="text-4xl md:text-5xl font-display font-bold text-brand-vanilla leading-tight">
-              Architecture
-            </h1>
+            <div className="flex items-center gap-3">
+              <h1 className="text-4xl md:text-5xl font-display font-bold text-brand-vanilla leading-tight">
+                Architecture
+              </h1>
+              <span className="px-2.5 py-1 text-xs font-medium bg-green-500/20 text-green-400 rounded-full">
+                Automatic
+              </span>
+            </div>
             <p className="text-base md:text-lg text-os-text-secondary-dark max-w-2xl">
               This website is structured to serve both as a landing page for humans and as a
               well-organized resource for AI agent interpretation. Think of it as our brand brain
