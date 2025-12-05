@@ -18,7 +18,7 @@ interface UploadedFile {
   status: 'uploading' | 'complete';
 }
 
-type SelectedOption = 'architecture' | 'guidelines' | 'writing' | null;
+type SelectedOption = 'guidelines' | 'writing' | null;
 
 export function BrainSettingsModal({ isOpen, onClose, defaultSection }: BrainSettingsModalProps) {
   const [selectedOption, setSelectedOption] = useState<SelectedOption>(null);
@@ -26,7 +26,6 @@ export function BrainSettingsModal({ isOpen, onClose, defaultSection }: BrainSet
   // Set default section when modal opens
   useEffect(() => {
     if (isOpen && defaultSection) {
-      // Architecture is automatic, so only set guidelines or writing
       if (defaultSection === 'guidelines' || defaultSection === 'writing') {
         setSelectedOption(defaultSection);
       }
@@ -139,27 +138,17 @@ export function BrainSettingsModal({ isOpen, onClose, defaultSection }: BrainSet
               return (
                 <button
                   key={option.id}
-                  onClick={() => setSelectedOption(option.isAutomatic ? null : option.id)}
-                  disabled={option.isAutomatic}
+                  onClick={() => setSelectedOption(option.id)}
                   className={`
-                    relative p-4 rounded-xl border text-left transition-all
-                    ${option.isAutomatic 
-                      ? 'bg-os-surface-dark/30 border-os-border-dark cursor-default' 
-                      : isSelected
-                        ? 'bg-brand-aperol/10 border-brand-aperol'
-                        : 'bg-os-surface-dark/50 border-os-border-dark hover:border-os-text-secondary-dark cursor-pointer'
+                    relative p-4 rounded-xl border text-left transition-all cursor-pointer
+                    ${isSelected
+                      ? 'bg-brand-aperol/10 border-brand-aperol'
+                      : 'bg-os-surface-dark/50 border-os-border-dark hover:border-os-text-secondary-dark'
                     }
                   `}
                 >
-                  {/* Automatic Badge */}
-                  {option.isAutomatic && (
-                    <span className="absolute top-2 right-2 px-2 py-0.5 text-[10px] font-medium bg-green-500/20 text-green-400 rounded-full">
-                      Automatic
-                    </span>
-                  )}
-                  
                   {/* Selected Checkmark */}
-                  {isSelected && !option.isAutomatic && (
+                  {isSelected && (
                     <span className="absolute top-2 right-2 p-1 bg-brand-aperol rounded-full">
                       <Check className="w-3 h-3 text-brand-charcoal" />
                     </span>
@@ -180,7 +169,7 @@ export function BrainSettingsModal({ isOpen, onClose, defaultSection }: BrainSet
           </div>
 
           {/* Upload Section - Shows when Guidelines or Writing Styles selected */}
-          {selectedOption && selectedOption !== 'architecture' && (
+          {selectedOption && (
             <section className="space-y-4">
               <div className="flex items-center gap-2">
                 <Upload className="w-5 h-5 text-brand-aperol" />
