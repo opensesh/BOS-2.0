@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 /**
@@ -92,23 +92,19 @@ export function DotFlowLoader({
   return (
     <div className={`flex items-center gap-3 ${className}`}>
       {/* Dot Flow Animation */}
-      <div className="flex items-center gap-1">
-        {[0, 1, 2].map((index) => (
-          <motion.span
-            key={index}
-            className="w-2 h-2 rounded-full bg-brand-aperol"
-            animate={{
-              scale: [1, 1.3, 1],
-              opacity: [0.5, 1, 0.5],
-            }}
-            transition={{
-              duration: 1,
-              repeat: Infinity,
-              delay: index * 0.2,
-              ease: 'easeInOut',
-            }}
-          />
-        ))}
+      <div className="flex items-center gap-[5px]">
+        <span 
+          className="w-2 h-2 rounded-full bg-brand-aperol animate-dot-pulse"
+          style={{ animationDelay: '0ms' }}
+        />
+        <span 
+          className="w-2 h-2 rounded-full bg-brand-aperol animate-dot-pulse"
+          style={{ animationDelay: '200ms' }}
+        />
+        <span 
+          className="w-2 h-2 rounded-full bg-brand-aperol animate-dot-pulse"
+          style={{ animationDelay: '400ms' }}
+        />
       </div>
 
       {/* Text Animation */}
@@ -153,23 +149,19 @@ export function DotFlowWave({
   return (
     <div className={`flex items-center gap-3 ${className}`}>
       {/* Wave Flow Animation */}
-      <div className="flex items-center gap-[3px]">
-        {[0, 1, 2].map((index) => (
-          <motion.span
-            key={index}
-            className="w-1.5 h-1.5 rounded-full bg-brand-aperol"
-            animate={{
-              y: [0, -4, 0],
-              scale: [1, 1.1, 1],
-            }}
-            transition={{
-              duration: 0.6,
-              repeat: Infinity,
-              delay: index * 0.15,
-              ease: [0.4, 0, 0.2, 1],
-            }}
-          />
-        ))}
+      <div className="flex items-center gap-[4px]">
+        <span 
+          className="w-1.5 h-1.5 rounded-full bg-brand-aperol animate-dot-wave"
+          style={{ animationDelay: '0ms' }}
+        />
+        <span 
+          className="w-1.5 h-1.5 rounded-full bg-brand-aperol animate-dot-wave"
+          style={{ animationDelay: '150ms' }}
+        />
+        <span 
+          className="w-1.5 h-1.5 rounded-full bg-brand-aperol animate-dot-wave"
+          style={{ animationDelay: '300ms' }}
+        />
       </div>
 
       {/* Text Animation */}
@@ -193,6 +185,7 @@ export function DotFlowWave({
 
 /**
  * Premium: Pulse expansion effect that mimics thinking/processing
+ * Uses CSS animations for guaranteed rendering + Framer Motion for text
  */
 export function DotFlowPulse({ 
   className = '', 
@@ -213,36 +206,19 @@ export function DotFlowPulse({
 
   return (
     <div className={`flex items-center gap-3 ${className}`}>
-      {/* Pulse Flow Animation */}
-      <div className="relative flex items-center gap-1">
-        {[0, 1, 2].map((index) => (
-          <motion.span
-            key={index}
-            className="w-2 h-2 rounded-full bg-brand-aperol"
-            animate={{
-              scale: [0.8, 1.2, 0.8],
-              opacity: [0.4, 1, 0.4],
-            }}
-            transition={{
-              duration: 1.2,
-              repeat: Infinity,
-              delay: index * 0.25,
-              ease: [0.4, 0, 0.6, 1],
-            }}
-          />
-        ))}
-        {/* Glow effect behind dots */}
-        <motion.div
-          className="absolute inset-0 -z-10 rounded-full bg-brand-aperol/20 blur-sm"
-          animate={{
-            scale: [0.9, 1.3, 0.9],
-            opacity: [0.3, 0.6, 0.3],
-          }}
-          transition={{
-            duration: 1.5,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
+      {/* Pulse Flow Animation - Using CSS for reliable rendering */}
+      <div className="flex items-center gap-[5px]">
+        <span 
+          className="w-2 h-2 rounded-full bg-brand-aperol animate-dot-pulse"
+          style={{ animationDelay: '0ms' }}
+        />
+        <span 
+          className="w-2 h-2 rounded-full bg-brand-aperol animate-dot-pulse"
+          style={{ animationDelay: '200ms' }}
+        />
+        <span 
+          className="w-2 h-2 rounded-full bg-brand-aperol animate-dot-pulse"
+          style={{ animationDelay: '400ms' }}
         />
       </div>
 

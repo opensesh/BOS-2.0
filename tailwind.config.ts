@@ -44,6 +44,8 @@ export default {
       animation: {
         blob: 'blob 10s infinite',
         cursor: 'cursor .75s step-end infinite',
+        'dot-pulse': 'dot-pulse 1.4s ease-in-out infinite',
+        'dot-wave': 'dot-wave 0.6s ease-in-out infinite',
       },
       keyframes: {
         blob: {
@@ -63,6 +65,24 @@ export default {
         cursor: {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0' },
+        },
+        'dot-pulse': {
+          '0%, 100%': {
+            transform: 'scale(0.8)',
+            opacity: '0.4',
+          },
+          '50%': {
+            transform: 'scale(1.2)',
+            opacity: '1',
+          },
+        },
+        'dot-wave': {
+          '0%, 100%': {
+            transform: 'translateY(0) scale(1)',
+          },
+          '50%': {
+            transform: 'translateY(-4px) scale(1.1)',
+          },
         },
       },
     },
