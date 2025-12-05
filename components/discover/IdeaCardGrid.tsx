@@ -2,9 +2,8 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Video, FileText, Pen, Clock, Sparkles } from 'lucide-react';
+import { Video, FileText, Pen, Clock, Sparkles, Play, Image as ImageIcon, BookOpen, Square } from 'lucide-react';
 import { IdeaCardData } from '@/types';
 import { getTextureByIndex, getTextureIndexFromString } from '@/lib/discover-utils';
 
@@ -57,12 +56,33 @@ function getFormatLabel(title: string, category: IdeaCardData['category']): stri
   return defaults[category] || 'Content';
 }
 
+// Get format-specific icon for badge overlay
+function getFormatIcon(formatLabel: string) {
+  switch (formatLabel.toLowerCase()) {
+    case 'reel':
+    case 'video':
+    case 'tutorial':
+      return Play;
+    case 'carousel':
+      return Square;
+    case 'story':
+      return ImageIcon;
+    case 'article':
+    case 'guide':
+    case 'listicle':
+      return BookOpen;
+    default:
+      return Video;
+  }
+}
+
 // IdeaCard Component - uses sonic line textures
 function IdeaCard({ item }: { item: IdeaCardData }) {
   const slug = item.slug || generateSlug(item.title);
   const categoryInfo = getCategoryInfo(item.category);
   const formatLabel = getFormatLabel(item.title, item.category);
   const CategoryIcon = categoryInfo.icon;
+  const FormatIcon = getFormatIcon(formatLabel);
   
   // Get texture - use pre-assigned index or derive from title
   const textureIndex = item.textureIndex ?? getTextureIndexFromString(item.title);
@@ -83,34 +103,34 @@ function IdeaCard({ item }: { item: IdeaCardData }) {
                  hover:shadow-lg hover:shadow-brand-aperol/10
                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-aperol focus-visible:ring-offset-2 focus-visible:ring-offset-os-bg-dark"
     >
-      {/* Sonic Line Texture Cover */}
-      <div className="relative w-full aspect-[16/9] overflow-hidden">
-        <Image
+      {/* Sonic Line Texture Cover - Reduced height */}
+      <div className="relative w-full aspect-[5/3] sm:aspect-[4/3] overflow-hidden">
+        {/* Using native img tag for crisp, non-blurred images */}
+        <img
           src={textureUrl}
           alt=""
-          fill
-          className="object-cover"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
         />
+        
+        {/* Content Type Badge Overlay */}
+        <div className="absolute top-2 left-2 flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-os-charcoal/90 backdrop-blur-sm border border-brand-vanilla/10">
+          <FormatIcon className="w-3.5 h-3.5 text-brand-vanilla" />
+          <span className="text-xs font-medium text-brand-vanilla tracking-wide">
+            {formatLabel}
+          </span>
+        </div>
       </div>
 
       {/* Content Section */}
       <div className="relative z-10 flex flex-col flex-1 p-3 sm:p-4">
-        {/* Format Label with sparkle */}
-        <div className="flex items-center gap-1.5 mb-2">
-          <Sparkles className="w-3 h-3 text-brand-vanilla/60" />
-          <span className="text-[11px] font-medium text-brand-vanilla/60 tracking-wide">
-            {formatLabel}
-          </span>
-        </div>
-
         {/* Title - smaller for better visual hierarchy */}
-        <h3 className="font-display font-bold text-brand-vanilla text-sm sm:text-[15px] leading-snug line-clamp-3 flex-1">
+        <h3 className="font-display font-bold text-brand-vanilla text-sm sm:text-[15px] leading-snug line-clamp-3 flex-1 mb-3">
           {cleanTitle}
         </h3>
 
         {/* Footer Chips - flex-nowrap to prevent wrapping */}
-        <div className="flex items-center gap-2 mt-3 pt-3 border-t border-os-border-dark/30 flex-nowrap overflow-hidden">
+        <div className="flex items-center gap-2 pt-3 border-t border-os-border-dark/30 flex-nowrap overflow-hidden">
           {/* Sources pill */}
           <div className="inline-flex items-center gap-1 px-2 py-1 rounded-full border border-os-border-dark/50 bg-os-bg-dark/50 shrink-0">
             <Clock className="w-3 h-3 text-os-text-secondary-dark" />
