@@ -201,17 +201,6 @@ export default function SpacePage() {
               />
             )}
 
-            {/* Chat Input Card */}
-            <div className="mb-10">
-              <SpaceChatInput
-                spaceSlug={space.slug}
-                spaceId={space.id}
-                spaceTitle={space.title}
-                spaceIcon={space.icon}
-                onStartChat={handleStartChat}
-              />
-            </div>
-
             {/* Recent Discussions Section */}
             <div className="border-t border-os-border-dark pt-8">
               <div className="flex items-center gap-2 mb-6">
@@ -244,19 +233,26 @@ export default function SpacePage() {
                   <MessageSquare className="w-12 h-12 mx-auto mb-4 opacity-30" />
                   <p className="mb-2">No discussions yet</p>
                   <p className="text-sm">
-                    Start a conversation above to begin exploring this space.
+                    Start a conversation below to begin exploring this space.
                   </p>
                 </div>
               )}
             </div>
+
+            {/* Bottom padding for fixed chat input */}
+            <div className="h-32" />
           </div>
         </div>
-
-        {/* Right Actions Sidebar (Desktop) */}
-        <div className="hidden md:block w-16 shrink-0 border-l border-os-border-dark p-4">
-          {/* Action sidebar can go here */}
-        </div>
       </main>
+
+      {/* Fixed Chat Input at Bottom */}
+      <SpaceChatInput
+        spaceSlug={space.slug}
+        spaceId={space.id}
+        spaceTitle={space.title}
+        spaceIcon={space.icon}
+        onStartChat={handleStartChat}
+      />
 
       {/* Modals */}
       <AddFilesModal
