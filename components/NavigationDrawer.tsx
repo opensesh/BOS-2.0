@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   FileText,
@@ -36,8 +36,6 @@ interface NavigationDrawerProps {
   item: string | null;
   onClose: () => void;
   railRef: React.RefObject<HTMLElement | null>;
-  onDrawerEnter?: () => void;
-  onDrawerLeave?: () => void;
 }
 
 const brandHubNavItems = [
@@ -46,23 +44,21 @@ const brandHubNavItems = [
   { label: 'Typography', href: '/brand-hub/fonts', icon: Type },
   { label: 'Art Direction', href: '/brand-hub/art-direction', icon: ImageIcon },
   { label: 'Guidelines', href: '/brand-hub/guidelines', icon: FileText },
-  { label: 'Tokens', href: '/brand-hub/design-tokens', icon: Code },
 ];
 
-export function NavigationDrawer({ isOpen, item, onClose, railRef, onDrawerEnter, onDrawerLeave }: NavigationDrawerProps) {
+export function NavigationDrawer({ isOpen, item, onClose, railRef }: NavigationDrawerProps) {
   const pathname = usePathname();
-  const router = useRouter();
   const drawerRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ top: 0, left: 0, height: 0 });
+  const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const onCloseRef = useRef(onClose);
   const { chatHistory } = useChatContext();
   const { spaces: userSpaces, isLoaded: spacesLoaded } = useSpaces();
 
-  // Handler for link clicks - explicitly navigate and close drawer
-  const handleLinkClick = (href: string) => (e: React.MouseEvent) => {
-    e.preventDefault();
-    onClose();
-    router.push(href);
-  };
+  // Keep onClose ref up to date without triggering re-renders
+  useEffect(() => {
+    onCloseRef.current = onClose;
+  }, [onClose]);
 
   useEffect(() => {
     if (isOpen && railRef.current && item) {
@@ -78,6 +74,58 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef, onDrawerEnter
       }
     }
   }, [isOpen, item, railRef]);
+
+  // Handle hover behavior - keep drawer open when hovering over rail item or drawer
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!isOpen || !drawerRef.current || !railRef.current) return;
+
+      const target = e.target as Node;
+      const isOverDrawer = drawerRef.current.contains(target);
+      const isOverRail = railRef.current.contains(target);
+      
+      // Check if we're hovering over the specific nav item or its parent wrapper
+      const navItem = railRef.current.querySelector(`[data-nav-item="${item}"]`);
+      const navItemParent = navItem?.closest('div');
+      const isOverNavItem = navItem && (
+        navItem.contains(target) || 
+        navItem === target ||
+        (navItemParent && navItemParent.contains(target))
+      );
+
+      // Clear any existing timeout
+      if (closeTimeoutRef.current) {
+        clearTimeout(closeTimeoutRef.current);
+        closeTimeoutRef.current = null;
+      }
+
+      // Keep drawer open if over drawer, rail, or the specific nav item
+      if (isOverDrawer || isOverRail || isOverNavItem) {
+        return; // Keep drawer open
+      }
+
+      // If not over any of these, schedule close with delay
+      closeTimeoutRef.current = setTimeout(() => {
+        // Double-check before closing
+        if (typeof document === 'undefined') return;
+        const stillOverDrawer = drawerRef.current?.contains(document.elementFromPoint(e.clientX, e.clientY));
+        const stillOverRail = railRef.current?.contains(document.elementFromPoint(e.clientX, e.clientY));
+        if (!stillOverDrawer && !stillOverRail) {
+          onCloseRef.current();
+        }
+      }, 200); // Delay to allow movement between rail and drawer
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousemove', handleMouseMove);
+      return () => {
+        document.removeEventListener('mousemove', handleMouseMove);
+        if (closeTimeoutRef.current) {
+          clearTimeout(closeTimeoutRef.current);
+        }
+      };
+    }
+  }, [isOpen, item, railRef]); // Removed onClose from dependencies
 
   const renderContent = () => {
     switch (item) {
@@ -131,7 +179,6 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef, onDrawerEnter
                       >
                         <Link
                           href={`/spaces/${space.slug}`}
-                          onClick={handleLinkClick(`/spaces/${space.slug}`)}
                           className={`
                             w-full flex items-center gap-3 px-3 py-2 rounded-lg mb-1
                             transition-colors
@@ -230,7 +277,6 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef, onDrawerEnter
               <motion.div variants={fadeInUp} className="space-y-1 mb-4">
                 <Link
                   href="/discover?tab=News"
-                  onClick={handleLinkClick('/discover?tab=News')}
                   className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg transition-colors ${
                     isOnNews
                       ? 'bg-os-surface-dark text-brand-aperol'
@@ -242,7 +288,6 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef, onDrawerEnter
                 </Link>
                 <Link
                   href="/discover?tab=Ideas"
-                  onClick={handleLinkClick('/discover?tab=Ideas')}
                   className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg transition-colors ${
                     isOnIdeas
                       ? 'text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-brand-vanilla'
@@ -254,7 +299,6 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef, onDrawerEnter
                 </Link>
                 <Link
                   href="/discover/inspo"
-                  onClick={handleLinkClick('/discover/inspo')}
                   className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg transition-colors ${
                     isOnInspo
                       ? 'bg-os-surface-dark text-brand-aperol'
@@ -293,7 +337,6 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef, onDrawerEnter
                     <motion.div key={navItem.href} variants={fadeInUp} custom={index}>
                       <Link
                         href={navItem.href}
-                        onClick={handleLinkClick(navItem.href)}
                         className={`
                           w-full flex items-center gap-3 px-3 py-2 rounded-lg
                           transition-colors
@@ -317,7 +360,6 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef, onDrawerEnter
                 <motion.div variants={fadeInUp} className="mt-4 pt-4 border-t border-os-border-dark">
                   <Link
                     href="/brand-hub"
-                    onClick={handleLinkClick('/brand-hub')}
                     className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-lg text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-brand-vanilla transition-colors text-sm"
                   >
                     View All Assets
@@ -358,7 +400,6 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef, onDrawerEnter
                     <motion.div key={navItem.href} variants={fadeInUp} custom={index}>
                       <Link
                         href={navItem.href}
-                        onClick={handleLinkClick(navItem.href)}
                         className={`
                           w-full flex items-center gap-3 px-3 py-2 rounded-lg
                           transition-colors
@@ -382,7 +423,6 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef, onDrawerEnter
                 <motion.div variants={fadeInUp} className="mt-4 pt-4 border-t border-os-border-dark">
                   <Link
                     href="/brain"
-                    onClick={handleLinkClick('/brain')}
                     className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-lg text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-brand-vanilla transition-colors text-sm"
                   >
                     View Brain Overview
@@ -424,7 +464,7 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef, onDrawerEnter
         <motion.div
           ref={drawerRef}
           data-navigation-drawer
-          className="hidden lg:block fixed z-50 w-[220px] bg-os-bg-darker border-r border-os-border-dark shadow-xl overflow-y-auto pointer-events-auto"
+          className="hidden lg:block fixed z-50 w-[220px] bg-os-bg-darker border-r border-os-border-dark shadow-xl overflow-y-auto"
           style={{
             top: `${position.top}px`,
             left: `${position.left}px`,
@@ -434,8 +474,13 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef, onDrawerEnter
           initial="hidden"
           animate="visible"
           exit="exit"
-          onMouseEnter={onDrawerEnter}
-          onMouseLeave={onDrawerLeave}
+          onMouseEnter={() => {
+            // Clear any pending close when entering drawer
+            if (closeTimeoutRef.current) {
+              clearTimeout(closeTimeoutRef.current);
+              closeTimeoutRef.current = null;
+            }
+          }}
         >
           {renderContent()}
         </motion.div>
