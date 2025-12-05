@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { 
   Sparkles, 
@@ -131,10 +130,23 @@ Please provide:
 
   if (variant === 'featured') {
     return (
-      <div className="group flex flex-col md:flex-row gap-6 p-5 rounded-2xl bg-os-surface-dark/50 border border-os-border-dark/50 hover:border-brand-aperol hover:bg-os-surface-dark/70 transition-all duration-200 hover:shadow-lg hover:shadow-brand-aperol/10">
-        {/* Text Content - LEFT */}
+      <div className="group flex flex-row gap-4 p-4 rounded-2xl bg-os-surface-dark/50 border border-os-border-dark/50 hover:border-brand-aperol hover:bg-os-surface-dark/70 transition-all duration-200 hover:shadow-lg hover:shadow-brand-aperol/10">
+        {/* Sonic Line Texture Cover - LEFT (1/3 width) */}
+        <div className="w-1/3 shrink-0">
+          <div className="relative w-full h-full min-h-[100px] overflow-hidden rounded-xl">
+            {/* Using native img tag for full quality */}
+            <img
+              src={textureUrl}
+              alt=""
+              className="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        {/* Text Content - RIGHT (2/3 width) */}
         <div className="flex-1 flex flex-col justify-between min-w-0">
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-2">
             {/* Category label with sparkle */}
             <div className="flex items-center gap-2">
               <Sparkles className="w-3 h-3 text-brand-vanilla/60" />
@@ -144,28 +156,27 @@ Please provide:
             </div>
 
             {/* Title */}
-            <h2 className="text-xl md:text-2xl font-display font-bold text-brand-vanilla leading-tight">
+            <h2 className="text-lg md:text-xl font-display font-bold text-brand-vanilla leading-tight line-clamp-2">
               {item.title}
             </h2>
 
             {/* Description */}
-            <p className="text-os-text-secondary-dark text-sm leading-relaxed">
+            <p className="text-os-text-secondary-dark text-sm leading-relaxed line-clamp-2">
               {item.description}
             </p>
 
             {/* Source chips */}
-            <div className="mt-2">
-              <span className="text-[10px] text-os-text-secondary-dark font-medium mb-2 block">Reference Sources:</span>
+            <div className="mt-1">
               <SourceChips />
             </div>
           </div>
 
           {/* Generate Ideas button */}
-          <div className="mt-4">
+          <div className="mt-3">
             <button
               onClick={handleGenerateBrief}
               disabled={isGenerating}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand-aperol text-white text-sm font-medium hover:bg-brand-aperol/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-brand-aperol text-white text-sm font-medium hover:bg-brand-aperol/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isGenerating ? (
                 <>
@@ -181,40 +192,25 @@ Please provide:
             </button>
           </div>
         </div>
-
-        {/* Sonic Line Texture Cover - RIGHT */}
-        <div className="w-full md:w-[320px] shrink-0">
-          <div className="relative aspect-[16/9] overflow-hidden rounded-xl">
-            <Image
-              src={textureUrl}
-              alt=""
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 320px"
-              unoptimized
-            />
-          </div>
-        </div>
       </div>
     );
   }
 
-  // Compact variant - uses sonic line textures
+  // Compact variant - horizontal layout with 1/3 image
   return (
     <button
       onClick={handleGenerateBrief}
       disabled={isGenerating}
-      className="group relative flex flex-col rounded-2xl overflow-hidden h-full bg-os-surface-dark/50 border border-os-border-dark/50 hover:border-brand-aperol hover:bg-os-surface-dark/70 transition-all duration-200 hover:shadow-lg hover:shadow-brand-aperol/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-aperol focus-visible:ring-offset-2 focus-visible:ring-offset-os-bg-dark text-left"
+      className="group flex flex-row rounded-2xl overflow-hidden h-full bg-os-surface-dark/50 border border-os-border-dark/50 hover:border-brand-aperol hover:bg-os-surface-dark/70 transition-all duration-200 hover:shadow-lg hover:shadow-brand-aperol/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-aperol focus-visible:ring-offset-2 focus-visible:ring-offset-os-bg-dark text-left"
     >
-      {/* Sonic Line Texture Cover */}
-      <div className="relative w-full aspect-[16/9] overflow-hidden">
-        <Image
+      {/* Sonic Line Texture Cover - LEFT (1/3 width) */}
+      <div className="w-1/3 shrink-0 relative overflow-hidden">
+        {/* Using native img tag for full quality */}
+        <img
           src={textureUrl}
           alt=""
-          fill
-          className="object-cover"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-          unoptimized
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
         />
         {/* Loading overlay */}
         {isGenerating && (
@@ -224,8 +220,8 @@ Please provide:
         )}
       </div>
 
-      {/* Content Area */}
-      <div className="relative z-10 flex flex-col flex-1 p-3 sm:p-4">
+      {/* Content Area - RIGHT (2/3 width) */}
+      <div className="flex-1 flex flex-col p-3 sm:p-4 min-w-0">
         {/* Category label with sparkle */}
         <div className="flex items-center gap-1.5 mb-2">
           <Sparkles className="w-3 h-3 text-brand-vanilla/60" />
@@ -234,12 +230,12 @@ Please provide:
           </span>
         </div>
 
-        {/* Title - smaller for better visual hierarchy */}
-        <h3 className="text-sm sm:text-[15px] font-display font-bold text-brand-vanilla leading-snug line-clamp-3 mb-auto">
+        {/* Title */}
+        <h3 className="text-sm sm:text-[15px] font-display font-bold text-brand-vanilla leading-snug line-clamp-3 flex-1">
           {item.title}
         </h3>
 
-        {/* Bottom pills - flex-nowrap to prevent wrapping */}
+        {/* Bottom pills */}
         <div className="flex items-center gap-2 mt-3 pt-3 border-t border-os-border-dark/30 flex-nowrap overflow-hidden">
           {/* Sources pill */}
           <div className="inline-flex items-center gap-1 px-2 py-1 rounded-full border border-os-border-dark/50 bg-os-bg-dark/50 shrink-0">

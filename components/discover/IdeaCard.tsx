@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Clock, Video, FileText, Pen, Sparkles } from 'lucide-react';
 import { IdeaCardData } from '@/types';
 import { getTextureByIndex, getTextureIndexFromString } from '@/lib/discover-utils';
@@ -89,11 +88,24 @@ export function IdeaCard({ item, variant = 'compact' }: IdeaCardProps) {
     return (
       <Link 
         href={`/discover/ideas/${item.slug}`}
-        className="group flex flex-col md:flex-row gap-6 p-5 rounded-2xl bg-os-surface-dark/50 border border-os-border-dark/50 hover:border-brand-aperol hover:bg-os-surface-dark/70 transition-all duration-200 hover:shadow-lg hover:shadow-brand-aperol/10"
+        className="group flex flex-row gap-4 p-4 rounded-2xl bg-os-surface-dark/50 border border-os-border-dark/50 hover:border-brand-aperol hover:bg-os-surface-dark/70 transition-all duration-200 hover:shadow-lg hover:shadow-brand-aperol/10"
       >
-        {/* Text Content - LEFT */}
+        {/* Sonic Line Texture Cover - LEFT (1/3 width) */}
+        <div className="w-1/3 shrink-0">
+          <div className="relative w-full h-full min-h-[80px] overflow-hidden rounded-xl">
+            {/* Using native img tag for full quality */}
+            <img
+              src={textureUrl}
+              alt=""
+              className="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        {/* Text Content - RIGHT (2/3 width) */}
         <div className="flex-1 flex flex-col justify-between min-w-0">
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-2">
             {/* Format label with sparkle */}
             <div className="flex items-center gap-2">
               <Sparkles className="w-3 h-3 text-brand-vanilla/60" />
@@ -103,18 +115,18 @@ export function IdeaCard({ item, variant = 'compact' }: IdeaCardProps) {
             </div>
 
             {/* Title */}
-            <h2 className="text-xl md:text-2xl font-display font-bold text-brand-vanilla leading-tight">
+            <h2 className="text-lg md:text-xl font-display font-bold text-brand-vanilla leading-tight line-clamp-2">
               {cleanTitle}
             </h2>
 
             {/* Description */}
-            <p className="text-os-text-secondary-dark text-sm leading-relaxed line-clamp-3">
+            <p className="text-os-text-secondary-dark text-sm leading-relaxed line-clamp-2">
               {item.description}
             </p>
           </div>
 
           {/* Footer pills */}
-          <div className="flex items-center gap-2 mt-4 flex-nowrap">
+          <div className="flex items-center gap-2 mt-3 flex-nowrap">
             <div className="inline-flex items-center gap-1 px-2 py-1 rounded-full border border-os-border-dark/50 bg-os-bg-dark/50 shrink-0">
               <Clock className="w-3 h-3 text-os-text-secondary-dark" />
               <span className="text-[10px] text-os-text-secondary-dark font-medium whitespace-nowrap">
@@ -129,44 +141,29 @@ export function IdeaCard({ item, variant = 'compact' }: IdeaCardProps) {
             </div>
           </div>
         </div>
-
-        {/* Sonic Line Texture Cover - RIGHT */}
-        <div className="w-full md:w-[320px] shrink-0">
-          <div className="relative aspect-[16/9] overflow-hidden rounded-xl">
-            <Image
-              src={textureUrl}
-              alt=""
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 320px"
-              unoptimized
-            />
-          </div>
-        </div>
       </Link>
     );
   }
 
-  // Compact variant - uses sonic line textures
+  // Compact variant - horizontal layout with 1/3 image
   return (
     <Link 
       href={`/discover/ideas/${item.slug}`}
-      className="group relative flex flex-col rounded-2xl overflow-hidden h-full bg-os-surface-dark/50 border border-os-border-dark/50 hover:border-brand-aperol hover:bg-os-surface-dark/70 transition-all duration-200 hover:shadow-lg hover:shadow-brand-aperol/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-aperol focus-visible:ring-offset-2 focus-visible:ring-offset-os-bg-dark"
+      className="group flex flex-row rounded-2xl overflow-hidden h-full bg-os-surface-dark/50 border border-os-border-dark/50 hover:border-brand-aperol hover:bg-os-surface-dark/70 transition-all duration-200 hover:shadow-lg hover:shadow-brand-aperol/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-aperol focus-visible:ring-offset-2 focus-visible:ring-offset-os-bg-dark"
     >
-      {/* Sonic Line Texture Cover */}
-      <div className="relative w-full aspect-[16/9] overflow-hidden">
-        <Image
+      {/* Sonic Line Texture Cover - LEFT (1/3 width) */}
+      <div className="w-1/3 shrink-0 relative overflow-hidden">
+        {/* Using native img tag for full quality */}
+        <img
           src={textureUrl}
           alt=""
-          fill
-          className="object-cover"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-          unoptimized
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
         />
       </div>
 
-      {/* Content Section */}
-      <div className="relative z-10 flex flex-col flex-1 p-3 sm:p-4">
+      {/* Content Section - RIGHT (2/3 width) */}
+      <div className="flex-1 flex flex-col p-3 sm:p-4 min-w-0">
         {/* Format Label with sparkle */}
         <div className="flex items-center gap-1.5 mb-2">
           <Sparkles className="w-3 h-3 text-brand-vanilla/60" />
@@ -175,12 +172,12 @@ export function IdeaCard({ item, variant = 'compact' }: IdeaCardProps) {
           </span>
         </div>
 
-        {/* Title - smaller for better visual hierarchy */}
+        {/* Title */}
         <h3 className="font-display font-bold text-brand-vanilla text-sm sm:text-[15px] leading-snug line-clamp-3 flex-1">
           {cleanTitle}
         </h3>
 
-        {/* Footer Chips - flex-nowrap to prevent wrapping */}
+        {/* Footer Chips */}
         <div className="flex items-center gap-2 mt-3 pt-3 border-t border-os-border-dark/30 flex-nowrap overflow-hidden">
           {/* Sources pill */}
           <div className="inline-flex items-center gap-1 px-2 py-1 rounded-full border border-os-border-dark/50 bg-os-bg-dark/50 shrink-0">
