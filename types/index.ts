@@ -324,14 +324,23 @@ export interface NewsData {
 
 /**
  * Content format types by category
- * - short-form: Instagram Reels, Carousels, Stories, Quick Images
- * - long-form: YouTube videos, tutorials, livestreams
- * - blog: Articles, listicles, case studies, guides
+ * - short-form: Instagram Reels, Carousels, Stories, Quick Images (format-based)
+ * - long-form: YouTube videos, tutorials, livestreams (approach-based: instructional, leadership, framework)
+ * - blog: Articles, listicles, case studies, guides (style-based: instructional, visionary, explanatory)
  */
 export type ShortFormFormat = 'reel' | 'carousel' | 'story' | 'quick-image';
 export type LongFormFormat = 'video' | 'tutorial' | 'livestream' | 'documentary';
 export type BlogFormat = 'article' | 'listicle' | 'case-study' | 'guide' | 'thread';
 export type ContentFormat = ShortFormFormat | LongFormFormat | BlogFormat;
+
+/**
+ * Content subcategories define the approach/style for each category
+ * These map to formats but add semantic meaning about the content approach
+ */
+export type ShortFormSubcategory = ShortFormFormat; // For short-form, subcategory = format
+export type LongFormSubcategory = 'instructional' | 'leadership' | 'framework' | 'thought-leadership';
+export type BlogSubcategory = 'instructional' | 'visionary' | 'explanatory' | 'case-study-deep-dive';
+export type ContentSubcategory = ShortFormSubcategory | LongFormSubcategory | BlogSubcategory;
 
 /**
  * Rich idea item with full creative brief for JSON storage
@@ -344,6 +353,10 @@ export interface IdeaItem {
   
   // Content format (e.g., 'reel', 'carousel', 'video', 'article')
   format?: ContentFormat;
+  
+  // Content subcategory defines the approach/style (e.g., 'instructional', 'visionary')
+  // For short-form, this matches format. For long-form/blog, it defines the content approach.
+  subcategory?: ContentSubcategory;
   
   // Rich creative brief fields (optional for backwards compatibility)
   hooks?: string[];
