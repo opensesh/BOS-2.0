@@ -182,44 +182,23 @@ export function BrandSelector({ size = 32, className = '', href = '/', onClick }
   return (
     <>
       <div className={`relative flex items-center justify-center group ${className}`}>
-        <button
-          ref={triggerRef}
-          onClick={(e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            setIsOpen(!isOpen);
-          }}
+        {/* Navigation Link - Separate from dropdown trigger */}
+        <Link
+          href={href}
+          onClick={onClick}
           className="
             relative z-[70]
             flex items-center justify-center
-            w-full h-full p-2
+            p-2
             border border-transparent
             rounded-lg
             hover:bg-os-surface-dark/50
             hover:border-brand-aperol/30
             transition-all duration-200
-            cursor-pointer
           "
-          aria-label="Select brand"
-          title="Select brand"
+          title={selectedBrand.name}
         >
-          {/* Logo - shrinks slightly on hover */}
-          <Link
-            href={href}
-            className="
-              flex items-center justify-center
-              transition-transform duration-200
-              group-hover:scale-90
-            "
-            onClick={(e) => {
-              // Call custom onClick handler if provided
-              onClick?.();
-              // Don't navigate if clicking the button area
-              if (e.target !== e.currentTarget) {
-                e.preventDefault();
-              }
-            }}
-          >
+          <div className="transition-transform duration-200 group-hover:scale-90">
             {selectedBrand.logoPath ? (
               <Image
                 src={selectedBrand.logoPath}
@@ -231,7 +210,33 @@ export function BrandSelector({ size = 32, className = '', href = '/', onClick }
             ) : (
               <Brandmark size={size} />
             )}
-          </Link>
+          </div>
+        </Link>
+        
+        {/* Dropdown Trigger Button - Separate small button */}
+        <button
+          ref={triggerRef}
+          onClick={(e) => {
+            e.stopPropagation();
+            setIsOpen(!isOpen);
+          }}
+          className="
+            absolute -bottom-1 -right-1
+            w-4 h-4
+            flex items-center justify-center
+            bg-os-surface-dark border border-os-border-dark
+            rounded-full
+            hover:bg-os-border-dark hover:border-brand-aperol/50
+            transition-all duration-200
+            opacity-0 group-hover:opacity-100
+            z-[71]
+          "
+          aria-label="Select brand"
+          title="Select brand"
+        >
+          <svg className="w-2.5 h-2.5 text-os-text-secondary-dark" viewBox="0 0 12 12" fill="none">
+            <path d="M3 5L6 8L9 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
         </button>
 
         {/* Dropdown - Fixed positioning to escape parent stacking context */}

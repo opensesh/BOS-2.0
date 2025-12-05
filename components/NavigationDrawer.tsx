@@ -44,6 +44,7 @@ const brandHubNavItems = [
   { label: 'Typography', href: '/brand-hub/fonts', icon: Type },
   { label: 'Art Direction', href: '/brand-hub/art-direction', icon: ImageIcon },
   { label: 'Guidelines', href: '/brand-hub/guidelines', icon: FileText },
+  { label: 'Tokens', href: '/brand-hub/design-tokens', icon: Code },
 ];
 
 export function NavigationDrawer({ isOpen, item, onClose, railRef }: NavigationDrawerProps) {
@@ -75,7 +76,7 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef }: NavigationD
     }
   }, [isOpen, item, railRef]);
 
-  // Handle hover behavior - keep drawer open when hovering over rail item or drawer
+  // Handle hover behavior - close drawer when mouse leaves both drawer and rail
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (!isOpen || !drawerRef.current || !railRef.current) return;
@@ -83,15 +84,6 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef }: NavigationD
       const target = e.target as Node;
       const isOverDrawer = drawerRef.current.contains(target);
       const isOverRail = railRef.current.contains(target);
-      
-      // Check if we're hovering over the specific nav item or its parent wrapper
-      const navItem = railRef.current.querySelector(`[data-nav-item="${item}"]`);
-      const navItemParent = navItem?.closest('div');
-      const isOverNavItem = navItem && (
-        navItem.contains(target) || 
-        navItem === target ||
-        (navItemParent && navItemParent.contains(target))
-      );
 
       // Clear any existing timeout
       if (closeTimeoutRef.current) {
@@ -99,21 +91,15 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef }: NavigationD
         closeTimeoutRef.current = null;
       }
 
-      // Keep drawer open if over drawer, rail, or the specific nav item
-      if (isOverDrawer || isOverRail || isOverNavItem) {
+      // Keep drawer open if over drawer or rail
+      if (isOverDrawer || isOverRail) {
         return; // Keep drawer open
       }
 
-      // If not over any of these, schedule close with delay
+      // If not over drawer or rail, schedule close with short delay
       closeTimeoutRef.current = setTimeout(() => {
-        // Double-check before closing
-        if (typeof document === 'undefined') return;
-        const stillOverDrawer = drawerRef.current?.contains(document.elementFromPoint(e.clientX, e.clientY));
-        const stillOverRail = railRef.current?.contains(document.elementFromPoint(e.clientX, e.clientY));
-        if (!stillOverDrawer && !stillOverRail) {
-          onCloseRef.current();
-        }
-      }, 200); // Delay to allow movement between rail and drawer
+        onCloseRef.current();
+      }, 150); // Short delay for smoother UX
     };
 
     if (isOpen) {
@@ -125,7 +111,7 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef }: NavigationD
         }
       };
     }
-  }, [isOpen, item, railRef]); // Removed onClose from dependencies
+  }, [isOpen, railRef]); // Simplified dependencies
 
   const renderContent = () => {
     switch (item) {

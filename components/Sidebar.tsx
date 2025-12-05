@@ -125,7 +125,7 @@ export function Sidebar() {
                 key={item.href}
                 className="relative w-full flex justify-center"
                 onMouseEnter={() => setHoveredItem(item.label)}
-                onMouseLeave={() => {}}
+                onMouseLeave={() => setHoveredItem(null)}
               >
                 <Link
                   data-nav-item={item.label}
