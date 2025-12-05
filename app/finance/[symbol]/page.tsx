@@ -183,19 +183,17 @@ export default function StockDetailPage({ params }: PageProps) {
                   </div>
 
                   {/* Latest News & Company Profile - Side by Side */}
-                  <div className="flex flex-col lg:flex-row gap-6">
+                  <div className="grid grid-cols-1 lg:grid-cols-[1fr,340px] xl:grid-cols-[1fr,380px] gap-6">
                     {/* Latest News */}
-                    <div className="flex-1 min-w-0 bg-os-surface-dark/30 rounded-xl p-4 border border-os-border-dark/50">
+                    <div className="bg-os-surface-dark/30 rounded-xl p-4 border border-os-border-dark/50">
                       <LatestNews news={news} loading={newsLoading} maxItems={6} />
                     </div>
 
                     {/* Company Profile */}
-                    {(profile || profileLoading) && (
-                      <div className="lg:w-[340px] xl:w-[380px] shrink-0 bg-os-surface-dark/30 rounded-xl p-4 border border-os-border-dark/50">
-                        <h3 className="text-sm font-medium text-brand-vanilla mb-4">About</h3>
-                        <CompanyProfile profile={profile} loading={profileLoading} />
-                      </div>
-                    )}
+                    <div className="bg-os-surface-dark/30 rounded-xl p-4 border border-os-border-dark/50">
+                      <h3 className="text-sm font-medium text-brand-vanilla mb-4">About</h3>
+                      <CompanyProfile profile={profile} loading={profileLoading} />
+                    </div>
                   </div>
                 </motion.div>
               )}
