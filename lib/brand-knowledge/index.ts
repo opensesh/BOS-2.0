@@ -17,6 +17,10 @@ export type {
   BrandPageRoute,
   SystemPromptOptions,
   ResourceCardData,
+  PageContext,
+  ArticleContext,
+  IdeaContext,
+  SpaceContext,
 } from './types';
 
 // Page routes and utilities

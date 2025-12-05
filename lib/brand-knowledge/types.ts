@@ -83,6 +83,46 @@ export interface BrandPageRoute {
 export interface SystemPromptOptions {
   includeFullDocs?: boolean;
   focusAreas?: ('identity' | 'messaging' | 'art-direction' | 'writing-styles')[];
+  context?: PageContext;
+}
+
+// Page context for contextual chat responses
+export interface PageContext {
+  type: 'article' | 'idea' | 'space' | 'home';
+  article?: ArticleContext;
+  idea?: IdeaContext;
+  space?: SpaceContext;
+}
+
+// Article context when user is viewing/following up on an article
+export interface ArticleContext {
+  title: string;
+  slug: string;
+  summary?: string;
+  content?: string;
+  sections?: string[];
+  sourceCount?: number;
+}
+
+// Idea context when user is viewing/generating from an idea
+export interface IdeaContext {
+  title: string;
+  category: 'short-form' | 'long-form' | 'blog' | string;
+  generationType?: string;
+  generationLabel?: string;
+  description?: string;
+}
+
+// Space context when user is chatting within a space
+export interface SpaceContext {
+  id: string;
+  title: string;
+  instructions?: string;
+  fileCount?: number;
+  linkCount?: number;
+  taskCount?: number;
+  fileNames?: string[];
+  linkTitles?: string[];
 }
 
 // Parsed resource card from AI response

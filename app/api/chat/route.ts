@@ -1,7 +1,7 @@
 import { streamText, convertToModelMessages } from 'ai';
 import { ModelId, getModelInstance, models } from '@/lib/ai/providers';
 import { autoSelectModel } from '@/lib/ai/auto-router';
-import { buildBrandSystemPrompt, shouldIncludeFullDocs, BRAND_SOURCES } from '@/lib/brand-knowledge';
+import { buildBrandSystemPrompt, shouldIncludeFullDocs, BRAND_SOURCES, type PageContext } from '@/lib/brand-knowledge';
 
 export const maxDuration = 60; // Allow streaming responses up to 60 seconds
 
@@ -96,7 +96,16 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
     console.log('Request body:', JSON.stringify(body, null, 2));
-    const { messages, model = 'auto' } = body;
+    const { messages, model = 'auto', context } = body as {
+      messages: ClientMessage[];
+      model?: string;
+      context?: PageContext;
+    };
+    
+    // Log context for debugging
+    if (context) {
+      console.log('Page context received:', context.type, context);
+    }
 
     // Validate request
     if (!messages || !Array.isArray(messages) || messages.length === 0) {
@@ -150,10 +159,14 @@ export async function POST(req: Request) {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const modelMessages = convertToModelMessages(validatedMessages as any);
 
-    // Build brand-aware system prompt
+    // Build brand-aware system prompt with page context
     const systemPrompt = buildBrandSystemPrompt({
       includeFullDocs: shouldIncludeFullDocs(messages),
+      context: context,
     });
+    
+    // Log system prompt length for debugging
+    console.log('System prompt built with context:', context?.type || 'none', 'Length:', systemPrompt.length);
 
     // Stream the response
     const result = streamText({

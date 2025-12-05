@@ -4,8 +4,130 @@
  * Constructs the system prompt with brand knowledge context.
  */
 
-import { SystemPromptOptions } from './types';
+import { SystemPromptOptions, PageContext } from './types';
 import { BRAND_PAGE_ROUTES } from './page-routes';
+
+/**
+ * Build context-specific instructions based on the page context
+ */
+function buildContextInstructions(context: PageContext): string {
+  const parts: string[] = [];
+
+  parts.push('## Current Page Context');
+  parts.push('The user is currently viewing content in Brand OS. Answer questions with this context in mind.');
+  parts.push('');
+
+  switch (context.type) {
+    case 'article':
+      if (context.article) {
+        parts.push(`### Viewing Article`);
+        parts.push(`**Title:** "${context.article.title}"`);
+        
+        if (context.article.summary) {
+          parts.push(`**Summary:** ${context.article.summary}`);
+        }
+        
+        if (context.article.content) {
+          parts.push(`**Article Content:**`);
+          parts.push(context.article.content);
+        }
+        
+        if (context.article.sections && context.article.sections.length > 0) {
+          parts.push(`**Sections:** ${context.article.sections.join(', ')}`);
+        }
+        
+        if (context.article.sourceCount) {
+          parts.push(`**Sources cited:** ${context.article.sourceCount}`);
+        }
+        
+        parts.push('');
+        parts.push('When the user asks questions, assume they are asking about this article unless they explicitly ask about something else.');
+        parts.push('Provide insights, analysis, and follow-up information related to the article topic.');
+      }
+      break;
+
+    case 'idea':
+      if (context.idea) {
+        parts.push(`### Viewing Content Idea`);
+        parts.push(`**Title:** "${context.idea.title}"`);
+        parts.push(`**Content Type:** ${formatCategory(context.idea.category)}`);
+        
+        if (context.idea.description) {
+          parts.push(`**Description:** ${context.idea.description}`);
+        }
+        
+        if (context.idea.generationType) {
+          parts.push(`**Generation Request:** ${context.idea.generationLabel || context.idea.generationType}`);
+        }
+        
+        parts.push('');
+        parts.push('Help the user develop this content idea. Provide creative suggestions, outlines, copy, or resources based on what they ask for.');
+        parts.push('Consider the content type and format requirements when giving recommendations.');
+      }
+      break;
+
+    case 'space':
+      if (context.space) {
+        parts.push(`### Working in Space`);
+        parts.push(`**Space Name:** "${context.space.title}"`);
+        
+        if (context.space.instructions) {
+          parts.push(`**Custom Instructions:** ${context.space.instructions}`);
+        }
+        
+        const resources: string[] = [];
+        if (context.space.fileCount && context.space.fileCount > 0) {
+          resources.push(`${context.space.fileCount} files`);
+          if (context.space.fileNames && context.space.fileNames.length > 0) {
+            parts.push(`**Available Files:** ${context.space.fileNames.join(', ')}`);
+          }
+        }
+        if (context.space.linkCount && context.space.linkCount > 0) {
+          resources.push(`${context.space.linkCount} links`);
+          if (context.space.linkTitles && context.space.linkTitles.length > 0) {
+            parts.push(`**Reference Links:** ${context.space.linkTitles.join(', ')}`);
+          }
+        }
+        if (context.space.taskCount && context.space.taskCount > 0) {
+          resources.push(`${context.space.taskCount} tasks`);
+        }
+        
+        if (resources.length > 0) {
+          parts.push(`**Resources:** ${resources.join(', ')}`);
+        }
+        
+        parts.push('');
+        parts.push('This is a workspace for focused collaboration. Follow any custom instructions provided.');
+        parts.push('Reference the available files and links when relevant to the user\'s questions.');
+      }
+      break;
+
+    case 'home':
+    default:
+      // No specific context for home page
+      parts.push('The user is on the home page. Answer general questions about OPEN SESSION brand or any topic they ask about.');
+      break;
+  }
+
+  parts.push('');
+  return parts.join('\n');
+}
+
+/**
+ * Format category name for display
+ */
+function formatCategory(category: string): string {
+  switch (category) {
+    case 'short-form':
+      return 'Short-Form Video (TikTok, Reels, YouTube Shorts)';
+    case 'long-form':
+      return 'Long-Form Video (YouTube)';
+    case 'blog':
+      return 'Blog Post';
+    default:
+      return category.charAt(0).toUpperCase() + category.slice(1);
+  }
+}
 
 // Brand assistant core instructions
 const BRAND_ASSISTANT_INSTRUCTIONS = `You are the Brand Operating System (BOS), an AI assistant with deep knowledge of the OPEN SESSION brand.
@@ -171,15 +293,23 @@ const ASSET_REFERENCE = `## Quick Asset Reference
 export function buildBrandSystemPrompt(options: SystemPromptOptions = {}): string {
   const parts: string[] = [
     BRAND_ASSISTANT_INSTRUCTIONS,
-    '',
-    CITATION_FORMAT_INSTRUCTIONS,
-    '',
-    RESOURCE_CARD_INSTRUCTIONS,
-    '',
-    BRAND_ESSENTIALS,
-    '',
-    ASSET_REFERENCE,
   ];
+
+  // Add page context if provided (this comes FIRST for priority)
+  if (options.context && options.context.type !== 'home') {
+    parts.push('');
+    parts.push(buildContextInstructions(options.context));
+  }
+
+  // Add standard brand documentation
+  parts.push('');
+  parts.push(CITATION_FORMAT_INSTRUCTIONS);
+  parts.push('');
+  parts.push(RESOURCE_CARD_INSTRUCTIONS);
+  parts.push('');
+  parts.push(BRAND_ESSENTIALS);
+  parts.push('');
+  parts.push(ASSET_REFERENCE);
 
   // Add full documentation if requested (for comprehensive queries)
   if (options.includeFullDocs) {

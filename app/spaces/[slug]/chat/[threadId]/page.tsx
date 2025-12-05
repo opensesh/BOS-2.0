@@ -12,6 +12,7 @@ import { SpaceResourceCards } from '@/components/spaces/SpaceResourceCards';
 import { useSpaces } from '@/hooks/useSpaces';
 import { useSpaceDiscussions, useDiscussionMessages } from '@/hooks/useSpaceDiscussions';
 import { ModelId } from '@/lib/ai/providers';
+import type { PageContext } from '@/lib/brand-knowledge';
 import {
   FollowUpInput,
   ChatHeader,
@@ -114,9 +115,27 @@ export default function SpaceChatPage() {
     }
   }, [storedMessages, messages.length, setMessages]);
 
+  // Build space context for API calls
+  const spaceContext = useMemo((): PageContext | undefined => {
+    if (!space) return undefined;
+    return {
+      type: 'space',
+      space: {
+        id: space.id,
+        title: space.title,
+        instructions: space.instructions,
+        fileCount: space.files?.length || 0,
+        linkCount: space.links?.length || 0,
+        taskCount: space.tasks?.length || 0,
+        fileNames: space.files?.map(f => f.name),
+        linkTitles: space.links?.map(l => l.title || l.url),
+      },
+    };
+  }, [space]);
+
   // Handle initial query from URL (new chat)
   useEffect(() => {
-    if (isNew && initialQuery && !hasSubmittedInitial && space) {
+    if (isNew && initialQuery && !hasSubmittedInitial && space && spaceContext) {
       setHasSubmittedInitial(true);
 
       // Create the discussion first
@@ -124,46 +143,13 @@ export default function SpaceChatPage() {
         // Create discussion in Supabase/localStorage
         await createDiscussion(initialQuery.slice(0, 50), space.id);
 
-        // Build context from space data
-        const contextParts: string[] = [];
-
-        if (space.instructions) {
-          contextParts.push(`Custom Instructions: ${space.instructions}`);
-        }
-
-        if (space.files && space.files.length > 0) {
-          contextParts.push(
-            `Available Files: ${space.files.map((f) => f.name).join(', ')}`
-          );
-        }
-
-        if (space.links && space.links.length > 0) {
-          contextParts.push(
-            `Reference Links: ${space.links.map((l) => l.title || l.url).join(', ')}`
-          );
-        }
-
-        if (space.tasks && space.tasks.length > 0) {
-          const pending = space.tasks.filter((t) => !t.completed);
-          const completed = space.tasks.filter((t) => t.completed);
-          contextParts.push(
-            `Tasks: ${pending.length} pending, ${completed.length} completed`
-          );
-        }
-
-        // Prepend context to the query if there's any
-        const contextMessage =
-          contextParts.length > 0
-            ? `Context for this space "${space.title}":\n${contextParts.join('\n')}\n\nUser question: ${initialQuery}`
-            : initialQuery;
-
         // Clear URL params
         router.replace(`/spaces/${slug}/chat/${threadId}`, { scroll: false });
 
-        // Send the message
+        // Send the message with space context (no longer prepending context to message)
         await sendMessage(
-          { text: contextMessage },
-          { body: { model: selectedModel } }
+          { text: initialQuery },
+          { body: { model: selectedModel, context: spaceContext } }
         );
       };
 
@@ -174,6 +160,7 @@ export default function SpaceChatPage() {
     initialQuery,
     hasSubmittedInitial,
     space,
+    spaceContext,
     slug,
     threadId,
     selectedModel,
@@ -239,10 +226,10 @@ export default function SpaceChatPage() {
 
         await sendMessage(
           { text: query.trim() || 'What do you see in this image?', files: files as unknown as FileList },
-          { body: { model: selectedModel } }
+          { body: { model: selectedModel, context: spaceContext } }
         );
       } else {
-        await sendMessage({ text: query.trim() }, { body: { model: selectedModel } });
+        await sendMessage({ text: query.trim() }, { body: { model: selectedModel, context: spaceContext } });
       }
     } catch (err) {
       console.error('Failed to send follow-up:', err);

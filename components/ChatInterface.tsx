@@ -26,6 +26,7 @@ import { useAttachments, Attachment } from '@/hooks/useAttachments';
 import { ModelId } from '@/lib/ai/providers';
 import { useChatContext } from '@/lib/chat-context';
 import { fadeIn, fadeInUp, staggerContainer } from '@/lib/motion';
+import type { PageContext } from '@/lib/brand-knowledge';
 import {
   FollowUpInput,
   SourceInfo,
@@ -238,7 +239,15 @@ export function ChatInterface() {
           try {
             const decodedQuery = decodeURIComponent(query);
             console.log('Auto-submitting article follow-up:', { query: decodedQuery, model: selectedModel });
-            await sendMessage({ text: decodedQuery }, { body: { model: selectedModel } });
+            // Build context for the API
+            const context: PageContext = {
+              type: 'article',
+              article: {
+                title: decodedTitle,
+                slug: articleRef,
+              },
+            };
+            await sendMessage({ text: decodedQuery }, { body: { model: selectedModel, context } });
           } catch (err) {
             console.error('Failed to send article follow-up:', err);
             setSubmitError(err instanceof Error ? err.message : 'Failed to send message');
@@ -283,7 +292,17 @@ export function ChatInterface() {
           try {
             const decodedQuery = decodeURIComponent(query);
             console.log('Auto-submitting idea query:', { query: decodedQuery, model: selectedModel });
-            await sendMessage({ text: decodedQuery }, { body: { model: selectedModel } });
+            // Build context for the API if we have idea context
+            const context: PageContext | undefined = (ideaTitle && ideaCategory) ? {
+              type: 'idea',
+              idea: {
+                title: decodeURIComponent(ideaTitle),
+                category: decodeURIComponent(ideaCategory),
+                generationType: generationType || undefined,
+                generationLabel: generationLabel ? decodeURIComponent(generationLabel) : undefined,
+              },
+            } : undefined;
+            await sendMessage({ text: decodedQuery }, { body: { model: selectedModel, context } });
           } catch (err) {
             console.error('Failed to send idea generation:', err);
             setSubmitError(err instanceof Error ? err.message : 'Failed to send message');
@@ -396,6 +415,32 @@ export function ChatInterface() {
 
   useKeyboardShortcuts(shortcuts);
 
+  // Build PageContext from current article/idea context for API calls
+  const pageContext = useMemo((): PageContext | undefined => {
+    if (articleContext) {
+      return {
+        type: 'article',
+        article: {
+          title: articleContext.title,
+          slug: articleContext.slug,
+          // Note: We don't have full article content here, but the title is sufficient for context
+        },
+      };
+    }
+    if (ideaContext) {
+      return {
+        type: 'idea',
+        idea: {
+          title: ideaContext.title,
+          category: ideaContext.category,
+          generationType: ideaContext.generationType,
+          generationLabel: ideaContext.generationLabel,
+        },
+      };
+    }
+    return undefined;
+  }, [articleContext, ideaContext]);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitError(null);
@@ -428,10 +473,10 @@ export function ChatInterface() {
         // Use type assertion to satisfy AI SDK types
         await sendMessage(
           { text: userMessage || 'What do you see in this image?', files: files as unknown as FileList },
-          { body: { model: selectedModel } }
+          { body: { model: selectedModel, context: pageContext } }
         );
       } else {
-        await sendMessage({ text: userMessage }, { body: { model: selectedModel } });
+        await sendMessage({ text: userMessage }, { body: { model: selectedModel, context: pageContext } });
       }
     } catch (err) {
       console.error('Failed to send message:', err);
@@ -458,10 +503,10 @@ export function ChatInterface() {
         // Use type assertion to satisfy AI SDK types
         await sendMessage(
           { text: query.trim() || 'What do you see in this image?', files: files as unknown as FileList },
-          { body: { model: selectedModel } }
+          { body: { model: selectedModel, context: pageContext } }
         );
       } else {
-        await sendMessage({ text: query.trim() }, { body: { model: selectedModel } });
+        await sendMessage({ text: query.trim() }, { body: { model: selectedModel, context: pageContext } });
       }
     } catch (err) {
       console.error('Failed to send follow-up:', err);
@@ -493,7 +538,7 @@ export function ChatInterface() {
       if (!isLoading && typeof sendMessage === 'function') {
         setInput('');
         try {
-          await sendMessage({ text: queryText }, { body: { model: selectedModel } });
+          await sendMessage({ text: queryText }, { body: { model: selectedModel, context: pageContext } });
         } catch (err) {
           console.error('Failed to send message:', err);
           setSubmitError(err instanceof Error ? err.message : 'Failed to send message');
@@ -503,7 +548,7 @@ export function ChatInterface() {
     } else {
       textareaRef.current?.focus();
     }
-  }, [isLoading, sendMessage, selectedModel, suggestionsMode]);
+  }, [isLoading, sendMessage, selectedModel, suggestionsMode, pageContext]);
 
   const handleMicClick = () => {
     if (isListening) {
