@@ -20,6 +20,7 @@ function ComponentsContent() {
   
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [showListView, setShowListView] = useState(false);
+  const [cameFromList, setCameFromList] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedComponent, setSelectedComponent] = useState<ComponentDoc | null>(null);
   const [selectedVariant, setSelectedVariant] = useState<string>('default');
@@ -92,19 +93,50 @@ function ComponentsContent() {
         <PageTransition className="w-full max-w-6xl mx-auto px-6 py-8 md:px-12 md:py-12">
           {/* Back Button & Actions Row */}
           <MotionItem className="flex items-center justify-between mb-8">
-            <Link
-              href="/brain"
-              className="group inline-flex items-center gap-2 text-os-text-secondary-dark hover:text-brand-aperol transition-colors"
-            >
-              <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
-              <span className="text-sm font-medium">Back to Brain</span>
-            </Link>
+            {/* Navigation Links */}
+            <div className="flex items-center gap-4">
+              {/* Back to Brain - always shown, secondary when viewing component from list */}
+              <Link
+                href="/brain"
+                className={cn(
+                  "group inline-flex items-center gap-2 transition-colors",
+                  cameFromList && !showListView
+                    ? "text-os-text-secondary-dark/60 hover:text-os-text-secondary-dark"
+                    : "text-os-text-secondary-dark hover:text-brand-aperol"
+                )}
+              >
+                <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
+                <span className="text-sm font-medium">Back to Brain</span>
+              </Link>
+              
+              {/* Back to All Components - shown when viewing a component after coming from list */}
+              {cameFromList && !showListView && (
+                <>
+                  <span className="text-os-text-secondary-dark/40">/</span>
+                  <button
+                    onClick={() => {
+                      setShowListView(true);
+                      setCameFromList(false);
+                    }}
+                    className="group inline-flex items-center gap-2 text-os-text-secondary-dark hover:text-brand-aperol transition-colors"
+                  >
+                    <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
+                    <span className="text-sm font-medium">Back to All Components</span>
+                  </button>
+                </>
+              )}
+            </div>
             
             {/* Action Buttons */}
             <div className="flex items-center gap-2">
               {/* All Components Button */}
               <button
-                onClick={() => setShowListView(!showListView)}
+                onClick={() => {
+                  setShowListView(!showListView);
+                  if (!showListView) {
+                    setCameFromList(false);
+                  }
+                }}
                 className={cn(
                   "group relative p-3 rounded-xl border transition-colors",
                   showListView 
@@ -151,6 +183,7 @@ function ComponentsContent() {
                 onSelectComponent={(componentId) => {
                   handleSelectComponent(componentId);
                   setShowListView(false);
+                  setCameFromList(true);
                 }}
                 onClose={() => setShowListView(false)}
               />
