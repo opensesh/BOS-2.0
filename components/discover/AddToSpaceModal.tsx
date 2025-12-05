@@ -1,10 +1,11 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { X, FolderPlus, Plus, Check, Search, CheckCircle2 } from 'lucide-react';
+import React, { useState, useEffect, useMemo } from 'react';
+import { X, FolderPlus, Plus, Check, Search, CheckCircle2, CheckCheck } from 'lucide-react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSpaces } from '@/hooks/useSpaces';
+import type { Space } from '@/types';
 
 // Generic article data that works with both NewsCardData and DiscoverArticle
 export interface ArticleForSpace {
@@ -13,6 +14,21 @@ export interface ArticleForSpace {
   imageUrl?: string;
   sourceCount?: number;
   url?: string;
+}
+
+// Helper to check if an article URL exists in a space's links
+export function isArticleInSpace(space: Space, articleSlug: string): boolean {
+  if (!space.links || space.links.length === 0) return false;
+  const articleUrl = `/discover/${articleSlug}`;
+  return space.links.some(link => 
+    link.url === articleUrl || 
+    link.url.includes(`/discover/${articleSlug}`)
+  );
+}
+
+// Helper to count how many spaces contain an article
+export function countSpacesWithArticle(spaces: Space[], articleSlug: string): number {
+  return spaces.filter(space => isArticleInSpace(space, articleSlug)).length;
 }
 
 interface AddToSpaceModalProps {
@@ -54,6 +70,16 @@ export function AddToSpaceModal({ isOpen, onClose, article, onSuccess }: AddToSp
   const filteredSpaces = allSpaces.filter(space =>
     space.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+  // Track which spaces already have this article
+  const spacesWithArticle = useMemo(() => {
+    if (!article) return new Set<string>();
+    return new Set(
+      allSpaces
+        .filter(space => isArticleInSpace(space, article.slug))
+        .map(space => space.id)
+    );
+  }, [allSpaces, article]);
 
   // Reset state when modal opens
   useEffect(() => {
@@ -240,29 +266,44 @@ export function AddToSpaceModal({ isOpen, onClose, article, onSuccess }: AddToSp
                 filteredSpaces.map((space, index) => {
                   const isUserSpace = spaces.some(s => s.id === space.id);
                   const linkCount = space.links?.length || 0;
+                  const alreadyAdded = spacesWithArticle.has(space.id);
                   
                   return (
                     <button
                       key={space.id}
-                      onClick={() => toggleSpace(space.id)}
+                      onClick={() => !alreadyAdded && toggleSpace(space.id)}
+                      disabled={alreadyAdded}
                       className={`w-full flex items-center gap-3 p-3 rounded-xl transition-all ${
-                        selectedSpaces.has(space.id)
-                          ? 'bg-brand-aperol/10 border border-brand-aperol/30'
-                          : 'bg-os-surface-dark/50 border border-transparent hover:bg-os-surface-dark'
+                        alreadyAdded
+                          ? 'bg-green-500/5 border border-green-500/20 cursor-default'
+                          : selectedSpaces.has(space.id)
+                            ? 'bg-brand-aperol/10 border border-brand-aperol/30'
+                            : 'bg-os-surface-dark/50 border border-transparent hover:bg-os-surface-dark'
                       }`}
                     >
-                      {/* Color indicator */}
-                      <div
-                        className="w-3 h-3 rounded-full flex-shrink-0"
-                        style={{ backgroundColor: getSpaceColor(index) }}
-                      />
+                      {/* Color indicator or checkmark for already added */}
+                      {alreadyAdded ? (
+                        <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
+                          <CheckCheck className="w-3 h-3 text-green-500" />
+                        </div>
+                      ) : (
+                        <div
+                          className="w-3 h-3 rounded-full flex-shrink-0"
+                          style={{ backgroundColor: getSpaceColor(index) }}
+                        />
+                      )}
                       
                       <div className="flex-1 text-left min-w-0">
                         <div className="flex items-center gap-2">
-                          <p className="text-sm font-medium text-brand-vanilla truncate">
+                          <p className={`text-sm font-medium truncate ${alreadyAdded ? 'text-green-400' : 'text-brand-vanilla'}`}>
                             {space.title}
                           </p>
-                          {!isUserSpace && (
+                          {alreadyAdded && (
+                            <span className="text-[10px] px-1.5 py-0.5 rounded bg-green-500/10 text-green-400 font-medium">
+                              Added
+                            </span>
+                          )}
+                          {!isUserSpace && !alreadyAdded && (
                             <span className="text-[10px] px-1.5 py-0.5 rounded bg-os-surface-dark text-os-text-secondary-dark">
                               Example
                             </span>
@@ -279,7 +320,7 @@ export function AddToSpaceModal({ isOpen, onClose, article, onSuccess }: AddToSp
                         <span className="text-xs text-os-text-secondary-dark">
                           {linkCount} {linkCount === 1 ? 'link' : 'links'}
                         </span>
-                        {selectedSpaces.has(space.id) && (
+                        {selectedSpaces.has(space.id) && !alreadyAdded && (
                           <Check className="w-4 h-4 text-brand-aperol" />
                         )}
                       </div>

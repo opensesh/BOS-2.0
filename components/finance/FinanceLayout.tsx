@@ -65,7 +65,7 @@ export function FinanceSearchBar({ className = '' }: { className?: string }) {
   return (
     <div ref={containerRef} className={`relative ${className}`}>
       <div className="relative">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-os-text-secondary-dark" />
+        <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-os-text-secondary-dark" />
         <input
           ref={inputRef}
           type="text"
@@ -75,8 +75,8 @@ export function FinanceSearchBar({ className = '' }: { className?: string }) {
             setIsOpen(true);
           }}
           onFocus={() => setIsOpen(true)}
-          placeholder="Search stocks, crypto..."
-          className="w-full pl-9 pr-9 py-2 text-sm bg-os-surface-dark/60 border border-os-border-dark/50 rounded-lg text-brand-vanilla placeholder-os-text-secondary-dark focus:outline-none focus:border-brand-aperol focus:bg-os-surface-dark transition-colors"
+          placeholder="Search..."
+          className="w-full pl-8 pr-8 py-1.5 text-xs bg-os-surface-dark/60 border border-os-border-dark/50 rounded-lg text-brand-vanilla placeholder-os-text-secondary-dark focus:outline-none focus:border-brand-aperol focus:bg-os-surface-dark transition-colors"
         />
         {query && (
           <button
@@ -84,13 +84,13 @@ export function FinanceSearchBar({ className = '' }: { className?: string }) {
               setQuery('');
               clearResults();
             }}
-            className="absolute right-3 top-1/2 -translate-y-1/2 p-0.5 hover:bg-os-bg-dark rounded transition-colors"
+            className="absolute right-2.5 top-1/2 -translate-y-1/2 p-0.5 hover:bg-os-bg-dark rounded transition-colors"
           >
-            <X className="w-3.5 h-3.5 text-os-text-secondary-dark" />
+            <X className="w-3 h-3 text-os-text-secondary-dark" />
           </button>
         )}
         {loading && (
-          <Loader2 className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-os-text-secondary-dark animate-spin" />
+          <Loader2 className="absolute right-2.5 top-1/2 -translate-y-1/2 w-3 h-3 text-os-text-secondary-dark animate-spin" />
         )}
       </div>
 

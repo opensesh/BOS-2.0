@@ -33,22 +33,41 @@ export function getSessionId(): string {
  */
 async function checkTablesAvailable(): Promise<boolean> {
   if (tablesChecked) return tablesAvailable;
-  
+
   try {
     const supabase = createClient();
     const { error } = await supabase
       .from('chat_sessions')
       .select('id')
       .limit(1);
-    
+
     tablesChecked = true;
-    tablesAvailable = !error || !error.message.includes('does not exist');
-    
-    if (!tablesAvailable) {
-      console.info('Chat history tables not yet created. Run the migration in lib/supabase/migrations/001_chat_history.sql');
+
+    // Table is available if no error at all
+    if (!error) {
+      tablesAvailable = true;
+      return true;
     }
-    
-    return tablesAvailable;
+
+    // Check for common "table doesn't exist" or permission errors
+    const errorMessage = error.message?.toLowerCase() || '';
+    const errorCode = error.code || '';
+
+    // These indicate tables don't exist or aren't accessible - gracefully degrade
+    const isTableMissing =
+      errorMessage.includes('does not exist') ||
+      errorMessage.includes('relation') ||
+      errorCode === '42P01' || // PostgreSQL: undefined_table
+      errorCode === 'PGRST116'; // PostgREST: no rows returned (RLS)
+
+    tablesAvailable = false;
+
+    if (isTableMissing) {
+      // Only log once, not an error - this is expected during initial setup
+      console.info('Chat history: Supabase tables not available. Chat history disabled.');
+    }
+
+    return false;
   } catch {
     tablesChecked = true;
     tablesAvailable = false;
@@ -140,7 +159,10 @@ export const chatService = {
       .limit(limit);
     
     if (error) {
-      console.error('Error fetching chat sessions:', error);
+      // Only log if it's an unexpected error (tables should be checked first)
+      if (error.message && !error.message.includes('does not exist')) {
+        console.error('Error fetching chat sessions:', error.message || error.code || 'Unknown error');
+      }
       return [];
     }
     
