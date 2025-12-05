@@ -228,6 +228,8 @@ export interface NewsCardData {
   sourceUrl?: string;      // For quick: external link to original source
   // Topic categorization for filtering
   topicCategory?: NewsTopicCategory;
+  // Total sources count (for featured articles with enriched sources from Perplexity)
+  totalSources?: number;
 }
 
 /**

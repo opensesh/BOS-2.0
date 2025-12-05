@@ -276,6 +276,8 @@ export function processNewsData(data: NewsData): NewsCardData[] {
       sourceUrl,
       // Topic categorization
       topicCategory: update.topicCategory,
+      // Total sources count (for featured articles with Perplexity sources)
+      totalSources: update.totalSources,
     };
     
     cards.push(card);
