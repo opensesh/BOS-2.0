@@ -13,7 +13,7 @@
 
 import { anthropic } from '@ai-sdk/anthropic';
 import { generateText } from 'ai';
-import type { InspirationItem, PlatformTip, VisualDirection, ShortFormFormat, LongFormFormat, BlogFormat, ContentFormat } from '@/types';
+import type { InspirationItem, PlatformTip, VisualDirection, ShortFormFormat, LongFormFormat, BlogFormat, ContentFormat, ContentSubcategory, LongFormSubcategory, BlogSubcategory } from '@/types';
 
 // ===========================================
 // Platform Configuration
@@ -40,6 +40,53 @@ export const FORMATS_BY_CATEGORY: {
   'long-form': ['video', 'tutorial', 'livestream', 'documentary'],
   'blog': ['article', 'listicle', 'case-study', 'guide', 'thread'],
 };
+
+/**
+ * Subcategory definitions for each category
+ * - Short-form: Subcategory = format (format-based)
+ * - Long-form: Subcategories define content approach (instructional, leadership, framework, etc.)
+ * - Blog: Subcategories define writing style (instructional, visionary, explanatory, etc.)
+ */
+export const SUBCATEGORIES_BY_CATEGORY: {
+  'short-form': ShortFormFormat[];
+  'long-form': LongFormSubcategory[];
+  'blog': BlogSubcategory[];
+} = {
+  'short-form': ['reel', 'carousel', 'story', 'quick-image'], // For short-form, subcategory = format
+  'long-form': ['instructional', 'leadership', 'framework', 'thought-leadership'],
+  'blog': ['instructional', 'visionary', 'explanatory', 'case-study-deep-dive'],
+};
+
+/**
+ * Map format to subcategory for long-form and blog
+ * For short-form, format = subcategory
+ */
+export function getSubcategoryForFormat(format: ContentFormat, category: 'short-form' | 'long-form' | 'blog'): ContentSubcategory {
+  if (category === 'short-form') {
+    return format as ShortFormFormat; // For short-form, subcategory = format
+  }
+  
+  if (category === 'long-form') {
+    // Map long-form formats to subcategory approaches
+    const mapping: Record<LongFormFormat, LongFormSubcategory> = {
+      'tutorial': 'instructional',
+      'video': 'thought-leadership',
+      'livestream': 'leadership',
+      'documentary': 'framework',
+    };
+    return mapping[format as LongFormFormat];
+  }
+  
+  // Blog format to subcategory mapping
+  const mapping: Record<BlogFormat, BlogSubcategory> = {
+    'guide': 'instructional',
+    'article': 'visionary',
+    'listicle': 'explanatory',
+    'case-study': 'case-study-deep-dive',
+    'thread': 'explanatory',
+  };
+  return mapping[format as BlogFormat];
+}
 
 /**
  * Format display names for prompts
@@ -310,7 +357,7 @@ function generateFallbackIdea(
 
 /**
  * Generate multiple ideas with rich briefs from news topics
- * Ensures format variety by rotating through available formats for the category
+ * Ensures format AND subcategory variety by guaranteeing at least one of each
  */
 export async function generateIdeasBatch(
   newsTopics: Array<{
@@ -330,21 +377,36 @@ export async function generateIdeasBatch(
 
   const topicsToProcess = newsTopics.slice(0, maxIdeas);
   
-  // Get available formats for this category and shuffle them for variety
+  // Get available formats for this category
   const availableFormats = [...FORMATS_BY_CATEGORY[category]];
-  // Shuffle the formats array
-  for (let i = availableFormats.length - 1; i > 0; i--) {
+  
+  // GUARANTEE DIVERSITY: Assign formats to ensure each format appears at least once
+  const assignedFormats: ContentFormat[] = [];
+  
+  // First, assign one idea to each format (up to number of topics)
+  for (let i = 0; i < Math.min(topicsToProcess.length, availableFormats.length); i++) {
+    assignedFormats.push(availableFormats[i]);
+  }
+  
+  // Then, randomly assign remaining slots
+  for (let i = availableFormats.length; i < topicsToProcess.length; i++) {
+    const randomFormat = availableFormats[Math.floor(Math.random() * availableFormats.length)];
+    assignedFormats.push(randomFormat);
+  }
+  
+  // Shuffle the assigned formats for variety (so first topic isn't always format[0])
+  for (let i = assignedFormats.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [availableFormats[i], availableFormats[j]] = [availableFormats[j], availableFormats[i]];
+    [assignedFormats[i], assignedFormats[j]] = [assignedFormats[j], assignedFormats[i]];
   }
 
   for (let i = 0; i < topicsToProcess.length; i++) {
     const topic = topicsToProcess[i];
-    // Rotate through formats to ensure variety (cycle back if more topics than formats)
-    const assignedFormat = availableFormats[i % availableFormats.length];
+    const assignedFormat = assignedFormats[i];
+    const subcategory = getSubcategoryForFormat(assignedFormat, category);
     
     try {
-      console.log(`Generating ${category} idea ${i + 1}/${topicsToProcess.length} [${assignedFormat}]: "${topic.title.slice(0, 40)}..."`);
+      console.log(`Generating ${category} idea ${i + 1}/${topicsToProcess.length} [${assignedFormat} → ${subcategory}]: "${topic.title.slice(0, 40)}..."`);
       
       const richIdea = await generateRichIdea(
         topic.title,
@@ -360,6 +422,7 @@ export async function generateIdeasBatch(
         starred: i === 0, // Star the first idea
         sources: topic.sources,
         format: richIdea.format,
+        subcategory,
         hooks: richIdea.hooks,
         platformTips: richIdea.platformTips,
         visualDirection: richIdea.visualDirection,
@@ -377,6 +440,9 @@ export async function generateIdeasBatch(
       console.error(`Failed to generate idea for "${topic.title}":`, error);
     }
   }
+
+  console.log(`  📊 Format distribution: ${ideas.map(i => i.format).join(', ')}`);
+  console.log(`  📂 Subcategory distribution: ${ideas.map(i => i.subcategory).join(', ')}`);
 
   return ideas;
 }
