@@ -119,42 +119,13 @@ export function buildNavigationTree(): NavItem[] {
       };
 
       pageComponents.forEach(component => {
+        // Components are leaf nodes - variants are shown as pills in the preview
         const componentItem: NavItem = {
           id: component.id,
           name: component.name,
           type: 'component',
           componentId: component.id,
-          children: [],
         };
-
-        // Add Documentation as first child
-        componentItem.children?.push({
-          id: `${component.id}-docs`,
-          name: 'Documentation',
-          type: 'variant',
-          componentId: component.id,
-          variantId: 'docs',
-        });
-
-        // Add Default variant
-        componentItem.children?.push({
-          id: `${component.id}-default`,
-          name: 'Default',
-          type: 'variant',
-          componentId: component.id,
-          variantId: 'default',
-        });
-
-        // Add custom variants
-        component.variants?.forEach(variant => {
-          componentItem.children?.push({
-            id: `${component.id}-${variant.id}`,
-            name: variant.name,
-            type: 'variant',
-            componentId: component.id,
-            variantId: variant.id,
-          });
-        });
 
         pageItem.children?.push(componentItem);
       });
@@ -175,42 +146,13 @@ export function buildNavigationTree(): NavItem[] {
     };
 
     componentRegistry.designSystem.forEach(component => {
+      // Components are leaf nodes - variants are shown as pills in the preview
       const componentItem: NavItem = {
         id: component.id,
         name: component.name,
         type: 'component',
         componentId: component.id,
-        children: [],
       };
-
-      // Add Documentation as first child
-      componentItem.children?.push({
-        id: `${component.id}-docs`,
-        name: 'Documentation',
-        type: 'variant',
-        componentId: component.id,
-        variantId: 'docs',
-      });
-
-      // Add Default variant
-      componentItem.children?.push({
-        id: `${component.id}-default`,
-        name: 'Default',
-        type: 'variant',
-        componentId: component.id,
-        variantId: 'default',
-      });
-
-      // Add custom variants
-      component.variants?.forEach(variant => {
-        componentItem.children?.push({
-          id: `${component.id}-${variant.id}`,
-          name: variant.name,
-          type: 'variant',
-          componentId: component.id,
-          variantId: variant.id,
-        });
-      });
 
       designSystemSection.children?.push(componentItem);
     });
