@@ -6,6 +6,7 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import { Sidebar } from '@/components/Sidebar';
 import { ComponentsDrawer } from '@/components/docs/ComponentsDrawer';
 import { ComponentPreview } from '@/components/docs/ComponentPreview';
+import { ComponentsList } from '@/components/docs/ComponentsList';
 import { PageTransition, MotionItem } from '@/lib/motion';
 import { ArrowLeft, Loader2 } from 'lucide-react';
 import { getComponentById, getAllComponents, ComponentDoc } from '@/lib/component-registry';
@@ -16,7 +17,8 @@ function ComponentsContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   
-  const [isDrawerOpen, setIsDrawerOpen] = useState(true);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [showListView, setShowListView] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedComponent, setSelectedComponent] = useState<ComponentDoc | null>(null);
   const [selectedVariant, setSelectedVariant] = useState<string>('default');
@@ -82,6 +84,8 @@ function ComponentsContent() {
         onSelectComponent={handleSelectComponent}
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
+        showListView={showListView}
+        onToggleListView={() => setShowListView(!showListView)}
       />
       
       {/* Main Content */}
@@ -101,20 +105,32 @@ function ComponentsContent() {
           {/* Page Header */}
           <MotionItem className="flex flex-col gap-2 mb-10">
             <h1 className="text-4xl md:text-5xl font-display font-bold text-brand-vanilla leading-tight">
-              {selectedComponent?.name || 'Components'}
+              {showListView ? 'All Components' : (selectedComponent?.name || 'Components')}
             </h1>
             <p className="text-base md:text-lg text-os-text-secondary-dark max-w-2xl">
-              {selectedComponent?.description || 'Interactive component documentation and live preview. Select a component from the drawer to explore its props and variants.'}
+              {showListView 
+                ? 'Browse all registered components with metadata including creation date, category, and usage statistics.'
+                : (selectedComponent?.description || 'Interactive component documentation and live preview. Select a component from the drawer to explore its props and variants.')}
             </p>
           </MotionItem>
 
-          {/* Component Preview */}
+          {/* Content - List View or Component Preview */}
           <MotionItem>
-            <ComponentPreview
-              component={selectedComponent}
-              selectedVariant={selectedVariant}
-              onVariantChange={handleVariantChange}
-            />
+            {showListView ? (
+              <ComponentsList 
+                onSelectComponent={(componentId) => {
+                  handleSelectComponent(componentId);
+                  setShowListView(false);
+                }}
+                onClose={() => setShowListView(false)}
+              />
+            ) : (
+              <ComponentPreview
+                component={selectedComponent}
+                selectedVariant={selectedVariant}
+                onVariantChange={handleVariantChange}
+              />
+            )}
           </MotionItem>
         </PageTransition>
       </div>
