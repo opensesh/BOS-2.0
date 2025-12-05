@@ -170,11 +170,11 @@ export function ComponentsDrawer({
 
   return (
     <>
-      {/* Toggle button when closed - fixed position */}
+      {/* Toggle button when closed - positioned inline with nav items (between Home and Brand) */}
       {!isOpen && (
         <button
           onClick={onToggle}
-          className="fixed left-[56px] top-1/2 -translate-y-1/2 z-30 hidden lg:flex items-center justify-center w-6 h-12 bg-os-surface-dark border border-os-border-dark border-l-0 rounded-r-lg hover:bg-os-border-dark transition-colors"
+          className="fixed left-[56px] top-[120px] z-30 hidden lg:flex items-center justify-center w-6 h-12 bg-os-surface-dark border border-os-border-dark border-l-0 rounded-r-lg hover:bg-os-border-dark transition-colors"
           aria-label="Open component drawer"
         >
           <PanelLeft className="w-4 h-4 text-os-text-secondary-dark" />

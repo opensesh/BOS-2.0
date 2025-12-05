@@ -6,9 +6,8 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import { Sidebar } from '@/components/Sidebar';
 import { ComponentsDrawer } from '@/components/docs/ComponentsDrawer';
 import { ComponentPreview } from '@/components/docs/ComponentPreview';
-import { BrainSettingsModal } from '@/components/brain/BrainSettingsModal';
 import { PageTransition, MotionItem } from '@/lib/motion';
-import { ArrowLeft, Settings, Loader2, PanelLeft } from 'lucide-react';
+import { ArrowLeft, Loader2, PanelLeft } from 'lucide-react';
 import { getComponentById, getAllComponents, ComponentDoc } from '@/lib/component-registry';
 // Initialize registry with components
 import '@/lib/component-registry-data';
@@ -21,7 +20,6 @@ function ComponentsContent() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedComponent, setSelectedComponent] = useState<ComponentDoc | null>(null);
   const [selectedVariant, setSelectedVariant] = useState<string>('default');
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
   // Get component from URL params
   const componentIdFromUrl = searchParams.get('component');
@@ -89,31 +87,22 @@ function ComponentsContent() {
       {/* Main Content */}
       <div className="flex-1 flex flex-col min-w-0 overflow-y-auto custom-scrollbar bg-os-bg-dark pt-14 lg:pt-0">
         <PageTransition className="w-full max-w-6xl mx-auto px-6 py-8 md:px-12 md:py-12">
-          {/* Back Button & Settings Row */}
+          {/* Back Button & Drawer Toggle Row */}
           <MotionItem className="flex items-center justify-between mb-8">
-            <div className="flex items-center gap-3">
-              {/* Mobile drawer toggle */}
-              <button
-                onClick={() => setIsDrawerOpen(!isDrawerOpen)}
-                className="lg:hidden p-2 rounded-lg bg-os-surface-dark border border-os-border-dark hover:bg-os-border-dark transition-colors"
-                aria-label="Toggle component drawer"
-              >
-                <PanelLeft className="w-4 h-4 text-os-text-secondary-dark" />
-              </button>
-              <Link
-                href="/brain"
-                className="group inline-flex items-center gap-2 text-os-text-secondary-dark hover:text-brand-aperol transition-colors"
-              >
-                <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
-                <span className="text-sm font-medium">Back to Brain</span>
-              </Link>
-            </div>
-            <button
-              onClick={() => setIsSettingsOpen(true)}
-              className="p-3 rounded-xl bg-os-surface-dark hover:bg-os-border-dark border border-os-border-dark transition-colors group"
-              title="Brain Settings"
+            <Link
+              href="/brain"
+              className="group inline-flex items-center gap-2 text-os-text-secondary-dark hover:text-brand-aperol transition-colors"
             >
-              <Settings className="w-5 h-5 text-os-text-secondary-dark group-hover:text-brand-vanilla transition-colors" />
+              <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
+              <span className="text-sm font-medium">Back to Brain</span>
+            </Link>
+            {/* Mobile/Tablet drawer toggle - replaces settings button */}
+            <button
+              onClick={() => setIsDrawerOpen(!isDrawerOpen)}
+              className="lg:hidden p-3 rounded-xl bg-os-surface-dark hover:bg-os-border-dark border border-os-border-dark transition-colors group"
+              aria-label="Toggle component drawer"
+            >
+              <PanelLeft className="w-5 h-5 text-os-text-secondary-dark group-hover:text-brand-vanilla transition-colors" />
             </button>
           </MotionItem>
 
@@ -137,12 +126,6 @@ function ComponentsContent() {
           </MotionItem>
         </PageTransition>
       </div>
-
-      {/* Settings Modal */}
-      <BrainSettingsModal
-        isOpen={isSettingsOpen}
-        onClose={() => setIsSettingsOpen(false)}
-      />
     </div>
   );
 }
