@@ -14,6 +14,7 @@ import {
   ArrowUpRight,
   MessageSquare,
   Plus,
+  TrendingUp,
 } from 'lucide-react';
 import { NavigationDrawer } from './NavigationDrawer';
 import { BrandSelector } from './BrandSelector';
@@ -115,7 +116,9 @@ export function Sidebar() {
         <nav className="flex flex-col items-center">
           {navItems.map((item, index) => {
             const Icon = item.icon;
-            const isActive = pathname === item.href || (item.href === '/spaces' && pathname.startsWith('/spaces'));
+            const isActive = pathname === item.href || 
+              (item.href === '/spaces' && pathname.startsWith('/spaces')) ||
+              (item.href === '/discover' && pathname.startsWith('/discover'));
             
             return (
               <div
@@ -183,6 +186,41 @@ export function Sidebar() {
 
         {/* Bottom Section */}
         <div className="flex flex-col items-center border-t border-os-border-dark py-1">
+          <Link
+            href="/finance"
+            className={`
+              flex flex-col items-center justify-center
+              py-2 px-2 min-h-[52px]
+              transition-colors duration-150 group
+              ${pathname.startsWith('/finance') ? 'text-brand-aperol' : 'text-os-text-secondary-dark hover:text-os-text-primary-dark'}
+            `}
+            title="Finance"
+          >
+            <div className="relative">
+              <div className={`
+                absolute -left-2 top-1/2 -translate-y-1/2 w-[2px] rounded-r-full
+                transition-all duration-150
+                ${pathname.startsWith('/finance') ? 'h-5 bg-brand-aperol' : 'h-0 bg-transparent'}
+              `} />
+              <div className={`
+                w-8 h-8 flex items-center justify-center rounded-lg transition-colors duration-150
+                ${pathname.startsWith('/finance') ? 'bg-brand-aperol/10' : 'group-hover:bg-os-surface-dark'}
+              `}>
+                <TrendingUp className="w-[18px] h-[18px]" />
+              </div>
+            </div>
+            <span 
+              className={`text-[9px] font-medium text-center mt-1 transition-all duration-200 ease-out ${pathname.startsWith('/finance') ? 'text-brand-aperol' : ''}`}
+              style={{
+                opacity: isSidebarHovered ? 1 : 0,
+                transform: isSidebarHovered ? 'translateY(0)' : 'translateY(-2px)',
+                transitionDelay: isSidebarHovered ? '100ms' : '0ms',
+              }}
+            >
+              Finance
+            </span>
+          </Link>
+
           <button
             className="
               flex flex-col items-center justify-center
@@ -317,7 +355,9 @@ export function Sidebar() {
               <nav className="px-3 space-y-1">
                 {navItems.map((item, index) => {
                   const Icon = item.icon;
-                  const isActive = pathname === item.href || (item.href === '/spaces' && pathname.startsWith('/spaces'));
+                  const isActive = pathname === item.href || 
+                    (item.href === '/spaces' && pathname.startsWith('/spaces')) ||
+                    (item.href === '/discover' && pathname.startsWith('/discover'));
                   
                   return (
                     <motion.div key={item.href} variants={fadeInUp} custom={index}>
@@ -344,6 +384,19 @@ export function Sidebar() {
               <motion.div variants={fadeInUp} className="border-t border-os-border-dark my-4" />
 
               <motion.div variants={fadeInUp} className="px-3 space-y-1">
+                <Link
+                  href="/finance"
+                  onClick={closeMobileMenu}
+                  className={`w-full flex items-center space-x-3 px-3 py-3 rounded-lg transition-all duration-200 ${
+                    pathname.startsWith('/finance')
+                      ? 'bg-os-surface-dark text-brand-aperol'
+                      : 'text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-os-text-primary-dark'
+                  }`}
+                >
+                  <TrendingUp className="w-5 h-5" />
+                  <span className="font-medium">Finance</span>
+                </Link>
+
                 <button className="w-full flex items-center space-x-3 px-3 py-3 rounded-lg text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-os-text-primary-dark transition-all duration-200">
                   <Bell className="w-5 h-5" />
                   <span className="font-medium">Notifications</span>

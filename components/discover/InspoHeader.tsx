@@ -59,7 +59,7 @@ export function InspoHeader({
         {/* Tab Pills */}
         <div className="flex items-center bg-os-surface-dark/50 rounded-full p-1">
           <Link
-            href="/discover?tab=News"
+            href="/discover"
             className="px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 text-os-text-secondary-dark hover:text-brand-vanilla"
           >
             News
@@ -70,9 +70,12 @@ export function InspoHeader({
           >
             Ideas
           </Link>
-          <span className="px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 bg-brand-aperol text-white">
+          <Link
+            href="/discover/inspo"
+            className="px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 bg-brand-aperol text-white"
+          >
             Inspo
-          </span>
+          </Link>
         </div>
       </div>
 

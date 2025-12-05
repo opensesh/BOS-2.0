@@ -18,12 +18,14 @@ import {
   ScanFace,
   Compass,
   Lightbulb,
+  Sparkles,
   History,
   Code,
   PenTool,
   MessageSquare,
   Zap,
   Layers,
+  Newspaper,
 } from 'lucide-react';
 import { useChatContext } from '@/lib/chat-context';
 import { useSpaces } from '@/hooks/useSpaces';
@@ -256,6 +258,10 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef }: NavigationD
         );
       
       case 'Discover':
+        const isOnNews = pathname === '/discover' && !pathname.includes('inspo');
+        const isOnIdeas = pathname === '/discover' && !pathname.includes('inspo'); // Ideas is on same page with tab
+        const isOnInspo = pathname === '/discover/inspo';
+        
         return (
           <motion.div 
             className="py-2"
@@ -270,26 +276,37 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef }: NavigationD
               
               <motion.div variants={fadeInUp} className="space-y-1 mb-4">
                 <Link
-                  href="/discover"
+                  href="/discover?tab=News"
                   className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg transition-colors ${
-                    pathname === '/discover'
+                    isOnNews
                       ? 'bg-os-surface-dark text-brand-aperol'
                       : 'text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-brand-vanilla'
                   }`}
                 >
-                  <Compass className="w-5 h-5" />
+                  <Newspaper className="w-5 h-5" />
                   <span className="text-sm">News</span>
                 </Link>
                 <Link
-                  href="/discover"
+                  href="/discover?tab=Ideas"
                   className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg transition-colors ${
-                    pathname === '/discover'
+                    isOnIdeas
                       ? 'text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-brand-vanilla'
                       : 'text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-brand-vanilla'
                   }`}
                 >
                   <Lightbulb className="w-5 h-5" />
                   <span className="text-sm">Ideas</span>
+                </Link>
+                <Link
+                  href="/discover/inspo"
+                  className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg transition-colors ${
+                    isOnInspo
+                      ? 'bg-os-surface-dark text-brand-aperol'
+                      : 'text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-brand-vanilla'
+                  }`}
+                >
+                  <Sparkles className="w-5 h-5" />
+                  <span className="text-sm">Inspiration</span>
                 </Link>
               </motion.div>
             </div>
