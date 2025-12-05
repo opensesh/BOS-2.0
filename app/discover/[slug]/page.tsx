@@ -568,6 +568,15 @@ export default function ArticlePage() {
           articleTitle={article.title} 
           articleSlug={slug}
           articleImage={article.heroImage?.url}
+          articleSummary={
+            // Extract first 2-3 paragraphs as summary for LLM context
+            article.sections
+              .flatMap(s => s.paragraphs.map(p => p.content))
+              .slice(0, 3)
+              .join('\n\n')
+          }
+          articleSections={article.sidebarSections}
+          sourceCount={article.totalSources}
         />
       </main>
 

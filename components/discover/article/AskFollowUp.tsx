@@ -27,6 +27,9 @@ interface AskFollowUpProps {
   articleTitle: string;
   articleSlug: string;
   articleImage?: string;
+  articleSummary?: string; // First few paragraphs for context
+  articleSections?: string[]; // Section titles
+  sourceCount?: number;
 }
 
 interface Connector {
@@ -38,7 +41,14 @@ interface Connector {
 }
 
 // Pinned chat input at bottom of article page - matches home page style
-export function AskFollowUp({ articleTitle, articleSlug, articleImage }: AskFollowUpProps) {
+export function AskFollowUp({ 
+  articleTitle, 
+  articleSlug, 
+  articleImage,
+  articleSummary,
+  articleSections,
+  sourceCount,
+}: AskFollowUpProps) {
   const [query, setQuery] = useState('');
   const [isFocused, setIsFocused] = useState(false);
   const [selectedModel, setSelectedModel] = useState<ModelId>('auto');
@@ -139,6 +149,17 @@ export function AskFollowUp({ articleTitle, articleSlug, articleImage }: AskFoll
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!query.trim() && attachments.length === 0) return;
+
+    // Store article context in sessionStorage for the chat interface
+    // This allows passing more data than URL params can handle
+    const articleContext = {
+      title: articleTitle,
+      slug: articleSlug,
+      summary: articleSummary,
+      sections: articleSections,
+      sourceCount: sourceCount,
+    };
+    sessionStorage.setItem('articleContext', JSON.stringify(articleContext));
 
     // Navigate to home with the article context and query
     // URLSearchParams handles encoding automatically

@@ -222,7 +222,27 @@ export function ChatInterface() {
       const decodedTitle = decodeURIComponent(articleTitle).replace(/&amp;/g, '&');
       const decodedImage = articleImage ? decodeURIComponent(articleImage).replace(/&amp;/g, '&') : undefined;
       
-      // Set the article context
+      // Try to get full article context from sessionStorage (set by AskFollowUp)
+      let storedArticleContext: { 
+        title: string; 
+        slug: string; 
+        summary?: string; 
+        sections?: string[];
+        sourceCount?: number;
+      } | null = null;
+      
+      try {
+        const stored = sessionStorage.getItem('articleContext');
+        if (stored) {
+          storedArticleContext = JSON.parse(stored);
+          // Clear it after reading
+          sessionStorage.removeItem('articleContext');
+        }
+      } catch (e) {
+        console.error('Failed to parse stored article context:', e);
+      }
+      
+      // Set the article context for UI display
       setArticleContext({
         title: decodedTitle,
         slug: articleRef,
@@ -238,13 +258,21 @@ export function ChatInterface() {
         setTimeout(async () => {
           try {
             const decodedQuery = decodeURIComponent(query);
-            console.log('Auto-submitting article follow-up:', { query: decodedQuery, model: selectedModel });
-            // Build context for the API
+            console.log('Auto-submitting article follow-up:', { 
+              query: decodedQuery, 
+              model: selectedModel,
+              hasStoredContext: !!storedArticleContext,
+              summaryLength: storedArticleContext?.summary?.length || 0,
+            });
+            // Build context for the API with full article content
             const context: PageContext = {
               type: 'article',
               article: {
                 title: decodedTitle,
                 slug: articleRef,
+                summary: storedArticleContext?.summary,
+                sections: storedArticleContext?.sections,
+                sourceCount: storedArticleContext?.sourceCount,
               },
             };
             await sendMessage({ text: decodedQuery }, { body: { model: selectedModel, context } });

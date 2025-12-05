@@ -22,27 +22,34 @@ function buildContextInstructions(context: PageContext): string {
       if (context.article) {
         parts.push(`### Viewing Article`);
         parts.push(`**Title:** "${context.article.title}"`);
+        parts.push('');
         
         if (context.article.summary) {
-          parts.push(`**Summary:** ${context.article.summary}`);
+          parts.push(`**Article Content (Summary):**`);
+          parts.push(context.article.summary);
+          parts.push('');
         }
         
         if (context.article.content) {
-          parts.push(`**Article Content:**`);
+          parts.push(`**Full Article Content:**`);
           parts.push(context.article.content);
+          parts.push('');
         }
         
         if (context.article.sections && context.article.sections.length > 0) {
-          parts.push(`**Sections:** ${context.article.sections.join(', ')}`);
+          parts.push(`**Article Sections:** ${context.article.sections.join(', ')}`);
         }
         
         if (context.article.sourceCount) {
-          parts.push(`**Sources cited:** ${context.article.sourceCount}`);
+          parts.push(`**Sources cited in article:** ${context.article.sourceCount}`);
         }
         
         parts.push('');
-        parts.push('When the user asks questions, assume they are asking about this article unless they explicitly ask about something else.');
-        parts.push('Provide insights, analysis, and follow-up information related to the article topic.');
+        parts.push('IMPORTANT: The user is asking about THIS SPECIFIC ARTICLE shown above.');
+        parts.push('- Base your answers primarily on the article content provided above');
+        parts.push('- Do NOT respond with generic brand information unless the user explicitly asks');
+        parts.push('- If the user asks "what do I need to know" or similar, summarize the key points from THIS article');
+        parts.push('- Provide insights, analysis, and follow-up information directly related to the article topic');
       }
       break;
 
