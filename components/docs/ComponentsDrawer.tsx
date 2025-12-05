@@ -186,13 +186,13 @@ export function ComponentsDrawer({
         {isOpen && (
           <motion.aside
             initial={{ width: 0, opacity: 0 }}
-            animate={{ width: 280, opacity: 1 }}
+            animate={{ width: 220, opacity: 1 }}
             exit={{ width: 0, opacity: 0 }}
             transition={{ duration: 0.2 }}
             className="hidden lg:flex flex-col bg-os-bg-darker border-r border-os-border-dark flex-shrink-0 overflow-hidden h-full"
           >
-            {/* Header with close button */}
-            <div className="flex items-center justify-between p-3 border-b border-os-border-dark">
+            {/* Header with close button - h-12 to match Sidebar header */}
+            <div className="flex items-center justify-between px-3 h-12 border-b border-os-border-dark">
               <span className="font-display font-semibold text-brand-vanilla text-sm">Components</span>
               <button
                 onClick={onToggle}
