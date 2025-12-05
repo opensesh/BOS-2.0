@@ -217,20 +217,34 @@ export function ChatInterface() {
       // Reset existing messages to ensure proper message alternation
       setMessages([]);
       
+      // Decode the title (URL params might have encoding issues)
+      const decodedTitle = decodeURIComponent(articleTitle).replace(/&amp;/g, '&');
+      const decodedImage = articleImage ? decodeURIComponent(articleImage).replace(/&amp;/g, '&') : undefined;
+      
       // Set the article context
       setArticleContext({
-        title: articleTitle,
+        title: decodedTitle,
         slug: articleRef,
-        imageUrl: articleImage || undefined,
+        imageUrl: decodedImage,
       });
 
       // Clear URL params without reload
       router.replace('/', { scroll: false });
 
-      // Auto-submit the query with longer delay to ensure state is cleared
-      setTimeout(() => {
-        sendMessage({ text: query });
-      }, 250);
+      // Auto-submit the query with longer delay to ensure state is fully cleared
+      // Using requestAnimationFrame + setTimeout for more reliable timing
+      requestAnimationFrame(() => {
+        setTimeout(async () => {
+          try {
+            const decodedQuery = decodeURIComponent(query);
+            console.log('Auto-submitting article follow-up:', { query: decodedQuery, model: selectedModel });
+            await sendMessage({ text: decodedQuery }, { body: { model: selectedModel } });
+          } catch (err) {
+            console.error('Failed to send article follow-up:', err);
+            setSubmitError(err instanceof Error ? err.message : 'Failed to send message');
+          }
+        }, 100);
+      });
     }
     // Handle standalone query (from ideas prompts / generate ideas)
     else if (query && !articleRef) {
@@ -250,11 +264,11 @@ export function ChatInterface() {
       
       if (ideaTitle && ideaCategory) {
         setIdeaContext({
-          title: ideaTitle,
-          category: ideaCategory,
-          slug: ideaSlug || undefined,
+          title: decodeURIComponent(ideaTitle),
+          category: decodeURIComponent(ideaCategory),
+          slug: ideaSlug ? decodeURIComponent(ideaSlug) : undefined,
           generationType: generationType || undefined,
-          generationLabel: generationLabel || undefined,
+          generationLabel: generationLabel ? decodeURIComponent(generationLabel) : undefined,
         });
       } else {
         setIdeaContext(null);
@@ -263,12 +277,21 @@ export function ChatInterface() {
       // Clear URL params without reload
       router.replace('/', { scroll: false });
 
-      // Auto-submit the query with longer delay to ensure state is cleared
-      setTimeout(() => {
-        sendMessage({ text: query });
-      }, 250);
+      // Auto-submit the query with longer delay to ensure state is fully cleared
+      requestAnimationFrame(() => {
+        setTimeout(async () => {
+          try {
+            const decodedQuery = decodeURIComponent(query);
+            console.log('Auto-submitting idea query:', { query: decodedQuery, model: selectedModel });
+            await sendMessage({ text: decodedQuery }, { body: { model: selectedModel } });
+          } catch (err) {
+            console.error('Failed to send idea generation:', err);
+            setSubmitError(err instanceof Error ? err.message : 'Failed to send message');
+          }
+        }, 100);
+      });
     }
-  }, [searchParams, router, sendMessage, setMessages, hasProcessedUrlParams]);
+  }, [searchParams, router, sendMessage, setMessages, hasProcessedUrlParams, selectedModel, setSubmitError]);
 
   // status can be: 'submitted' | 'streaming' | 'ready' | 'error'
   const isLoading = status === 'submitted' || status === 'streaming';

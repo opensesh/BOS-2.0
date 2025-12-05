@@ -141,12 +141,15 @@ export function AskFollowUp({ articleTitle, articleSlug, articleImage }: AskFoll
     if (!query.trim() && attachments.length === 0) return;
 
     // Navigate to home with the article context and query
-    const searchParams = new URLSearchParams({
-      q: query.trim(),
-      articleRef: articleSlug,
-      articleTitle: articleTitle,
-      ...(articleImage && { articleImage }),
-    });
+    // URLSearchParams handles encoding automatically
+    const searchParams = new URLSearchParams();
+    searchParams.set('q', query.trim());
+    searchParams.set('articleRef', articleSlug);
+    searchParams.set('articleTitle', articleTitle);
+    if (articleImage) {
+      // Decode any HTML entities in the image URL before encoding
+      searchParams.set('articleImage', articleImage.replace(/&amp;/g, '&'));
+    }
 
     clearAttachments();
     router.push(`/?${searchParams.toString()}`);
@@ -183,8 +186,12 @@ export function AskFollowUp({ articleTitle, articleSlug, articleImage }: AskFoll
   }, []);
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-30 bg-gradient-to-t from-os-bg-dark via-os-bg-dark to-transparent pt-8 pb-4 lg:pl-[56px]">
-      <div className="max-w-4xl mx-auto px-6 md:px-12">
+    <div className="fixed bottom-0 left-0 right-0 z-30 lg:pl-[56px]">
+      {/* Solid background with gradient fade at top */}
+      <div className="absolute inset-0 bg-os-bg-dark" />
+      <div className="absolute inset-x-0 -top-8 h-8 bg-gradient-to-t from-os-bg-dark to-transparent pointer-events-none" />
+      
+      <div className="relative max-w-4xl mx-auto px-6 md:px-12 pb-4 pt-2">
         <form onSubmit={handleSubmit}>
           {/* Hidden file input */}
           <input
@@ -210,7 +217,7 @@ export function AskFollowUp({ articleTitle, articleSlug, articleImage }: AskFoll
                   ? 'border-brand-aperol shadow-lg shadow-brand-aperol/20'
                   : isFocused
                     ? 'border-brand-aperol shadow-brand-aperol/10'
-                    : 'border-os-border-dark hover:border-os-border-dark/80'
+                    : 'border-os-border-dark hover:border-os-border-dark/60'
               }
             `}
             onDragOver={handleDragOver}
@@ -243,26 +250,17 @@ export function AskFollowUp({ articleTitle, articleSlug, articleImage }: AskFoll
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}
                 onPaste={handlePaste}
-                placeholder={attachments.length > 0 ? "Add a message or send with images..." : "Ask follow-up"}
+                placeholder={attachments.length > 0 ? "Add a message or send with images..." : "Ask follow-up about this article..."}
                 className="w-full px-4 py-4 bg-transparent text-os-text-primary-dark placeholder:text-os-text-secondary-dark resize-none focus:outline-none min-h-[60px] max-h-[150px]"
                 rows={1}
+                aria-label="Follow-up question input"
               />
             </div>
 
-            {/* Footer toolbar */}
-            <div className="flex flex-wrap items-center justify-between px-4 py-3 border-t border-os-border-dark/50 gap-2">
-              {/* Left side - Model Selector + Search/Research Toggle */}
-              <div className="flex items-center gap-1 sm:gap-2">
-                {/* Model Selector */}
-                <ModelSelector
-                  selectedModel={selectedModel}
-                  onModelChange={setSelectedModel}
-                  disabled={false}
-                />
-
-                <div className="hidden sm:block w-px h-6 bg-os-border-dark" />
-
-                {/* Search/Research Toggle */}
+            {/* Footer toolbar - matching homepage layout */}
+            <div className="flex flex-wrap items-center justify-between px-4 py-3 border-t border-os-border-dark gap-2 sm:gap-4">
+              {/* Left side - Search/Research Toggle */}
+              <div className="flex items-center gap-2 sm:gap-3">
                 <SearchResearchToggle
                   onQueryClick={handleQueryClick}
                   onModeChange={handleModeChange}
@@ -271,7 +269,16 @@ export function AskFollowUp({ articleTitle, articleSlug, articleImage }: AskFoll
               </div>
 
               {/* Right side - action buttons */}
-              <div className="flex items-center gap-0.5 sm:gap-1">
+              <div className="flex items-center gap-1 sm:gap-2">
+                {/* Model Selector */}
+                <ModelSelector
+                  selectedModel={selectedModel}
+                  onModelChange={setSelectedModel}
+                  disabled={false}
+                />
+
+                <div className="hidden sm:block w-px h-5 bg-os-border-dark" />
+
                 {/* Globe - Connectors */}
                 <div className="relative">
                   <button
@@ -281,13 +288,12 @@ export function AskFollowUp({ articleTitle, articleSlug, articleImage }: AskFoll
                       e.stopPropagation();
                       setShowConnectorDropdown(!showConnectorDropdown);
                     }}
-                    className={`
-                      p-2 rounded-lg transition-all
-                      ${showConnectorDropdown 
+                    className={`p-2 rounded-lg transition-all ${
+                      showConnectorDropdown 
                         ? 'bg-brand-aperol/20 text-brand-aperol' 
                         : 'text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-bg-dark'
-                      }
-                    `}
+                    }`}
+                    aria-label="Connectors"
                     title="Connectors"
                   >
                     <Globe className="w-5 h-5" />
@@ -302,23 +308,29 @@ export function AskFollowUp({ articleTitle, articleSlug, articleImage }: AskFoll
                 </div>
 
                 {/* Attach */}
-                <button
-                  type="button"
-                  onClick={openFilePicker}
-                  className={`relative p-2 rounded-lg transition-colors ${
-                    attachments.length > 0
-                      ? 'bg-brand-aperol/20 text-brand-aperol'
-                      : 'text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-bg-dark'
-                  }`}
-                  title="Attach images (or paste/drag & drop)"
-                >
-                  <Paperclip className="w-5 h-5" />
-                  {attachments.length > 0 && (
-                    <span className="absolute -top-1 -right-1 w-4 h-4 bg-brand-aperol text-white text-[10px] font-medium rounded-full flex items-center justify-center">
-                      {attachments.length}
-                    </span>
-                  )}
-                </button>
+                <div className="relative">
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      openFilePicker();
+                    }}
+                    className={`p-2 rounded-lg transition-all ${
+                      attachments.length > 0
+                        ? 'bg-brand-aperol/20 text-brand-aperol'
+                        : 'text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-bg-dark'
+                    }`}
+                    aria-label="Attach images"
+                    title="Attach images (or paste/drag & drop)"
+                  >
+                    <Paperclip className="w-5 h-5" />
+                    {attachments.length > 0 && (
+                      <span className="absolute -top-1 -right-1 w-4 h-4 bg-brand-aperol text-white text-[10px] font-medium rounded-full flex items-center justify-center">
+                        {attachments.length}
+                      </span>
+                    )}
+                  </button>
+                </div>
 
                 {/* Voice input with animation */}
                 <div className="relative">
@@ -362,6 +374,7 @@ export function AskFollowUp({ articleTitle, articleSlug, articleImage }: AskFoll
                         ? 'bg-brand-aperol text-white'
                         : 'text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-bg-dark'
                     }`}
+                    aria-label="Voice input"
                     title={isListening ? 'Stop recording' : 'Start voice input'}
                     whileTap={{ scale: 0.92 }}
                     animate={isListening ? {
@@ -400,14 +413,12 @@ export function AskFollowUp({ articleTitle, articleSlug, articleImage }: AskFoll
                 <button
                   type="submit"
                   disabled={!query.trim() && attachments.length === 0}
-                  className={`
-                    p-2 rounded-lg transition-all
-                    ${
-                      (query.trim() || attachments.length > 0)
-                        ? 'bg-brand-aperol text-white hover:bg-brand-aperol/90'
-                        : 'text-os-text-secondary-dark/50 cursor-not-allowed'
-                    }
-                  `}
+                  className={`p-2 rounded-lg transition-all ${
+                    (query.trim() || attachments.length > 0)
+                      ? 'bg-brand-aperol text-white hover:bg-brand-aperol/90'
+                      : 'text-os-text-secondary-dark/50 cursor-not-allowed'
+                  }`}
+                  aria-label="Send message"
                   title="Send"
                 >
                   <Send className="w-5 h-5" />
@@ -434,6 +445,8 @@ export function ArticleReferenceCard({
   onNavigate?: () => void;
 }) {
   const router = useRouter();
+  const [imageError, setImageError] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   const handleClick = () => {
     if (onNavigate) {
@@ -443,23 +456,40 @@ export function ArticleReferenceCard({
     }
   };
 
+  // Decode HTML entities in URL (e.g., &amp; -> &)
+  const decodedImageUrl = imageUrl?.replace(/&amp;/g, '&');
+
   return (
     <button
       onClick={handleClick}
       className="w-full flex items-center gap-3 p-3 mb-4 bg-os-surface-dark/50 rounded-xl border border-os-border-dark/50 hover:border-brand-aperol/30 transition-all group text-left"
     >
       {/* Thumbnail */}
-      {imageUrl && (
-        <div className="relative w-16 h-12 rounded-lg overflow-hidden bg-os-bg-dark flex-shrink-0">
-          <Image
-            src={imageUrl}
-            alt={title}
-            fill
-            className="object-cover"
-            unoptimized
-          />
-        </div>
-      )}
+      <div className="relative w-16 h-12 rounded-lg overflow-hidden bg-os-bg-dark flex-shrink-0">
+        {decodedImageUrl && !imageError ? (
+          <>
+            {!imageLoaded && (
+              <div className="absolute inset-0 animate-pulse bg-gradient-to-r from-os-surface-dark via-os-bg-dark to-os-surface-dark" />
+            )}
+            <Image
+              src={decodedImageUrl}
+              alt={title}
+              fill
+              className={`object-cover transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+              unoptimized
+              onLoad={() => setImageLoaded(true)}
+              onError={() => setImageError(true)}
+            />
+          </>
+        ) : (
+          // Fallback icon when no image or error
+          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-os-surface-dark to-os-bg-dark">
+            <svg className="w-6 h-6 text-os-text-secondary-dark/30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+            </svg>
+          </div>
+        )}
+      </div>
 
       {/* Content */}
       <div className="flex-1 min-w-0">
