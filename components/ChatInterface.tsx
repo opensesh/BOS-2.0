@@ -660,7 +660,7 @@ export function ChatInterface() {
       <BackgroundGradient fadeOut={hasMessages} />
       {hasMessages && <div className="fixed inset-0 z-0 bg-os-bg-dark" />}
 
-      <div className={`fixed inset-0 z-20 flex flex-col ${hasMessages ? '' : 'items-center justify-center'}`}>
+      <div className={`fixed inset-0 z-10 flex flex-col ${hasMessages ? '' : 'items-center justify-center'}`}>
         {/* Chat Mode */}
         {hasMessages && (
           <div className="flex flex-col h-full">
