@@ -26,6 +26,7 @@ import {
   Zap,
   Layers,
   Newspaper,
+  Shapes,
 } from 'lucide-react';
 import { useChatContext } from '@/lib/chat-context';
 import { useSpaces } from '@/hooks/useSpaces';
@@ -43,6 +44,7 @@ const brandHubNavItems = [
   { label: 'Colors', href: '/brand-hub/colors', icon: Palette },
   { label: 'Typography', href: '/brand-hub/fonts', icon: Type },
   { label: 'Art Direction', href: '/brand-hub/art-direction', icon: ImageIcon },
+  { label: 'Tokens', href: '/brand-hub/design-tokens', icon: Shapes },
   { label: 'Guidelines', href: '/brand-hub/guidelines', icon: FileText },
 ];
 
