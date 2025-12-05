@@ -110,11 +110,11 @@ function SkillsContent() {
         </PageTransition>
       </div>
 
-      {/* Settings Modal */}
+      {/* Settings Modal - Opens with skills section pre-selected */}
       <BrainSettingsModal
         isOpen={isSettingsOpen}
         onClose={() => setIsSettingsOpen(false)}
-        defaultSection="guidelines"
+        defaultSection="skills"
       />
     </div>
   );

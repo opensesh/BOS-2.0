@@ -1,9 +1,9 @@
 'use client';
 
 import React, { useRef, useState, useCallback, useEffect } from 'react';
-import { X, Upload, FileText, CheckCircle2, BookOpen, PenTool, Check, ArrowRight } from 'lucide-react';
+import { X, Upload, FileText, CheckCircle2, BookOpen, PenTool, Check, ArrowRight, Zap } from 'lucide-react';
 
-export type BrainSection = 'architecture' | 'guidelines' | 'writing';
+export type BrainSection = 'architecture' | 'guidelines' | 'writing' | 'skills';
 
 interface BrainSettingsModalProps {
   isOpen: boolean;
@@ -18,18 +18,20 @@ interface UploadedFile {
   status: 'uploading' | 'complete';
 }
 
-type SelectedOption = 'guidelines' | 'writing' | null;
+type SelectedOption = 'guidelines' | 'writing' | 'skills' | null;
 
 export function BrainSettingsModal({ isOpen, onClose, defaultSection }: BrainSettingsModalProps) {
-  const [selectedOption, setSelectedOption] = useState<SelectedOption>('guidelines');
+  const [selectedOption, setSelectedOption] = useState<SelectedOption>(null);
+  const [skillDescription, setSkillDescription] = useState('');
   
   // Set default section when modal opens
   useEffect(() => {
     if (isOpen) {
-      if (defaultSection === 'guidelines' || defaultSection === 'writing') {
+      if (defaultSection === 'guidelines' || defaultSection === 'writing' || defaultSection === 'skills') {
         setSelectedOption(defaultSection);
       } else {
-        setSelectedOption('guidelines');
+        // No default selection when opened from main Brain page
+        setSelectedOption(null);
       }
     }
   }, [isOpen, defaultSection]);
@@ -99,6 +101,12 @@ export function BrainSettingsModal({ isOpen, onClose, defaultSection }: BrainSet
       description: 'Upload your voice and tone guidelines',
       icon: PenTool,
     },
+    {
+      id: 'skills' as const,
+      title: 'Skills',
+      description: 'Create custom AI capabilities',
+      icon: Zap,
+    },
   ];
 
   return (
@@ -132,7 +140,7 @@ export function BrainSettingsModal({ isOpen, onClose, defaultSection }: BrainSet
         {/* Content */}
         <div className="p-6 space-y-6">
           {/* Option Cards Row */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {options.map((option) => {
               const Icon = option.icon;
               const isSelected = selectedOption === option.id;
@@ -171,7 +179,7 @@ export function BrainSettingsModal({ isOpen, onClose, defaultSection }: BrainSet
           </div>
 
           {/* Upload Section - Shows when Guidelines or Writing Styles selected */}
-          {selectedOption && (
+          {(selectedOption === 'guidelines' || selectedOption === 'writing') && (
             <section className="space-y-4">
               <div className="flex items-center gap-2">
                 <Upload className="w-5 h-5 text-brand-aperol" />
@@ -254,6 +262,30 @@ export function BrainSettingsModal({ isOpen, onClose, defaultSection }: BrainSet
                   ))}
                 </div>
               )}
+            </section>
+          )}
+
+          {/* Skills Description Section - Shows when Skills selected */}
+          {selectedOption === 'skills' && (
+            <section className="space-y-4">
+              <div className="flex items-center gap-2">
+                <Zap className="w-5 h-5 text-brand-aperol" />
+                <h3 className="text-lg font-display font-medium text-brand-vanilla">
+                  Create a Skill
+                </h3>
+              </div>
+              
+              <p className="text-sm text-os-text-secondary-dark">
+                Describe the capability you want to add to your brand operating system.
+              </p>
+              
+              {/* Text Area */}
+              <textarea
+                value={skillDescription}
+                onChange={(e) => setSkillDescription(e.target.value)}
+                placeholder="Describe the skill you want to create in your brand operating system..."
+                className="w-full h-40 p-4 rounded-xl bg-os-surface-dark/50 border border-os-border-dark text-brand-vanilla placeholder:text-os-text-secondary-dark/50 focus:outline-none focus:border-brand-aperol focus:ring-1 focus:ring-brand-aperol resize-none transition-colors"
+              />
             </section>
           )}
 
