@@ -80,230 +80,206 @@ export function SpaceResourceCards({
   const articleLinks = links.filter(isArticleLink);
   const regularLinks = links.filter(link => !isArticleLink(link));
 
-  // Common card styles
-  const cardBase = "group relative flex items-center gap-3 p-3 rounded-xl border transition-all";
-  const cardDefault = "bg-os-bg-dark/50 border-os-border-dark/30 hover:border-brand-aperol/30 hover:bg-os-bg-dark";
-  const iconContainerBase = "w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors";
+  // Compact chip card for files, links, articles
+  const ChipCard = ({ 
+    icon: Icon, 
+    label, 
+    sublabel,
+    href,
+    onClick,
+    onRemove,
+  }: {
+    icon: React.ElementType;
+    label: string;
+    sublabel?: string;
+    href?: string;
+    onClick?: () => void;
+    onRemove?: () => void;
+  }) => {
+    const content = (
+      <>
+        <div className="w-7 h-7 rounded-lg bg-os-border-dark/50 flex items-center justify-center flex-shrink-0 group-hover:bg-brand-aperol/20 transition-colors">
+          <Icon className="w-3.5 h-3.5 text-os-text-secondary-dark group-hover:text-brand-aperol transition-colors" />
+        </div>
+        <div className="flex-1 min-w-0">
+          <p className="text-xs font-medium text-os-text-primary-dark truncate group-hover:text-brand-aperol transition-colors leading-tight">
+            {label}
+          </p>
+          {sublabel && (
+            <p className="text-[10px] text-os-text-secondary-dark truncate leading-tight">
+              {sublabel}
+            </p>
+          )}
+        </div>
+        {onRemove && !isReadOnly && (
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              onRemove();
+            }}
+            className="opacity-0 group-hover:opacity-100 p-1 rounded-md hover:bg-red-500/10 text-os-text-secondary-dark hover:text-red-400 transition-all flex-shrink-0"
+          >
+            <X className="w-3 h-3" />
+          </button>
+        )}
+      </>
+    );
+
+    const className = "group relative flex items-center gap-2 px-2 py-1.5 rounded-lg bg-os-bg-dark/80 border border-os-border-dark/30 hover:border-brand-aperol/30 transition-all";
+
+    if (href) {
+      return (
+        <a href={href} target={href.startsWith('/') ? undefined : '_blank'} rel="noopener noreferrer" className={className}>
+          {content}
+        </a>
+      );
+    }
+
+    return (
+      <div className={className} onClick={onClick}>
+        {content}
+      </div>
+    );
+  };
 
   return (
     <div className="mb-8">
-      {/* Resource Cards Container */}
-      <div className="space-y-4">
-        {/* Files Section */}
+      {/* Container with distinct background */}
+      <div className="bg-os-surface-dark/40 rounded-xl border border-os-border-dark/40 p-4 space-y-4">
+        {/* Files */}
         {files.length > 0 && (
           <div>
-            <div className="flex items-center gap-2 mb-3">
-              <Upload className="w-3.5 h-3.5 text-os-text-secondary-dark" />
-              <p className="text-xs text-os-text-secondary-dark font-medium uppercase tracking-wide">Files</p>
-              <span className="text-xs text-os-text-secondary-dark/60">{files.length}</span>
+            <div className="flex items-center gap-1.5 mb-2">
+              <Upload className="w-3 h-3 text-os-text-secondary-dark/70" />
+              <p className="text-[10px] text-os-text-secondary-dark/70 font-medium uppercase tracking-wider">Files</p>
+              <span className="text-[10px] text-os-text-secondary-dark/50">{files.length}</span>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <div className="flex flex-wrap gap-1.5">
               {files.map((file) => {
                 const IconComponent = getFileIcon(file.type);
                 return (
-                  <div
+                  <ChipCard
                     key={file.id}
-                    className={`${cardBase} ${cardDefault}`}
-                  >
-                    <div className={`${iconContainerBase} bg-os-surface-dark group-hover:bg-brand-aperol/10`}>
-                      <IconComponent className="w-5 h-5 text-os-text-secondary-dark group-hover:text-brand-aperol transition-colors" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium text-os-text-primary-dark truncate group-hover:text-brand-aperol transition-colors">
-                        {file.name}
-                      </p>
-                      <p className="text-xs text-os-text-secondary-dark">
-                        {formatFileSize(file.size)}
-                      </p>
-                    </div>
-                    {!isReadOnly && onRemoveFile && (
-                      <button
-                        onClick={() => onRemoveFile(file.id)}
-                        className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 p-1.5 rounded-lg hover:bg-red-500/10 text-os-text-secondary-dark hover:text-red-400 transition-all"
-                      >
-                        <X className="w-3.5 h-3.5" />
-                      </button>
-                    )}
-                  </div>
+                    icon={IconComponent}
+                    label={file.name}
+                    sublabel={formatFileSize(file.size)}
+                    onRemove={onRemoveFile ? () => onRemoveFile(file.id) : undefined}
+                  />
                 );
               })}
             </div>
           </div>
         )}
 
-        {/* Regular Links Section */}
+        {/* Links */}
         {regularLinks.length > 0 && (
           <div>
-            <div className="flex items-center gap-2 mb-3">
-              <LinkIcon className="w-3.5 h-3.5 text-os-text-secondary-dark" />
-              <p className="text-xs text-os-text-secondary-dark font-medium uppercase tracking-wide">Links</p>
-              <span className="text-xs text-os-text-secondary-dark/60">{regularLinks.length}</span>
+            <div className="flex items-center gap-1.5 mb-2">
+              <LinkIcon className="w-3 h-3 text-os-text-secondary-dark/70" />
+              <p className="text-[10px] text-os-text-secondary-dark/70 font-medium uppercase tracking-wider">Links</p>
+              <span className="text-[10px] text-os-text-secondary-dark/50">{regularLinks.length}</span>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <div className="flex flex-wrap gap-1.5">
               {regularLinks.map((link) => (
-                <a
+                <ChipCard
                   key={link.id}
+                  icon={LinkIcon}
+                  label={link.title || getDomainFromUrl(link.url)}
+                  sublabel={getDomainFromUrl(link.url)}
                   href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`${cardBase} ${cardDefault}`}
-                >
-                  <div className={`${iconContainerBase} bg-os-surface-dark group-hover:bg-brand-aperol/10`}>
-                    <LinkIcon className="w-5 h-5 text-os-text-secondary-dark group-hover:text-brand-aperol transition-colors" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm font-medium text-os-text-primary-dark truncate group-hover:text-brand-aperol transition-colors">
-                      {link.title || getDomainFromUrl(link.url)}
-                    </p>
-                    <p className="text-xs text-os-text-secondary-dark truncate">
-                      {getDomainFromUrl(link.url)}
-                    </p>
-                  </div>
-                  <ExternalLink className="w-4 h-4 text-os-text-secondary-dark group-hover:text-brand-aperol transition-colors flex-shrink-0" />
-                  {!isReadOnly && onRemoveLink && (
-                    <button
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        onRemoveLink(link.id);
-                      }}
-                      className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 p-1.5 rounded-lg hover:bg-red-500/10 text-os-text-secondary-dark hover:text-red-400 transition-all"
-                    >
-                      <X className="w-3.5 h-3.5" />
-                    </button>
-                  )}
-                </a>
+                  onRemove={onRemoveLink ? () => onRemoveLink(link.id) : undefined}
+                />
               ))}
             </div>
           </div>
         )}
 
-        {/* Articles Section (internal discover links) */}
+        {/* Articles */}
         {articleLinks.length > 0 && (
           <div>
-            <div className="flex items-center gap-2 mb-3">
-              <Newspaper className="w-3.5 h-3.5 text-os-text-secondary-dark" />
-              <p className="text-xs text-os-text-secondary-dark font-medium uppercase tracking-wide">Articles</p>
-              <span className="text-xs text-os-text-secondary-dark/60">{articleLinks.length}</span>
+            <div className="flex items-center gap-1.5 mb-2">
+              <Newspaper className="w-3 h-3 text-os-text-secondary-dark/70" />
+              <p className="text-[10px] text-os-text-secondary-dark/70 font-medium uppercase tracking-wider">Articles</p>
+              <span className="text-[10px] text-os-text-secondary-dark/50">{articleLinks.length}</span>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <div className="flex flex-wrap gap-1.5">
               {articleLinks.map((link) => (
-                <a
+                <ChipCard
                   key={link.id}
+                  icon={Newspaper}
+                  label={link.title || 'Article'}
+                  sublabel="Discover"
                   href={link.url}
-                  className={`${cardBase} ${cardDefault}`}
-                >
-                  <div className={`${iconContainerBase} bg-os-surface-dark group-hover:bg-brand-aperol/10`}>
-                    <Newspaper className="w-5 h-5 text-os-text-secondary-dark group-hover:text-brand-aperol transition-colors" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm font-medium text-os-text-primary-dark truncate group-hover:text-brand-aperol transition-colors">
-                      {link.title || 'Article'}
-                    </p>
-                    {link.description && (
-                      <p className="text-xs text-os-text-secondary-dark truncate">
-                        {link.description}
-                      </p>
-                    )}
-                  </div>
-                  <ExternalLink className="w-4 h-4 text-os-text-secondary-dark group-hover:text-brand-aperol transition-colors flex-shrink-0" />
-                  {!isReadOnly && onRemoveLink && (
-                    <button
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        onRemoveLink(link.id);
-                      }}
-                      className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 p-1.5 rounded-lg hover:bg-red-500/10 text-os-text-secondary-dark hover:text-red-400 transition-all"
-                    >
-                      <X className="w-3.5 h-3.5" />
-                    </button>
-                  )}
-                </a>
+                  onRemove={onRemoveLink ? () => onRemoveLink(link.id) : undefined}
+                />
               ))}
             </div>
           </div>
         )}
 
-        {/* Instructions Section */}
+        {/* Instructions - stays as larger card since it has text content */}
         {instructions && instructions.trim() && (
           <div>
-            <div className="flex items-center gap-2 mb-3">
-              <FileText className="w-3.5 h-3.5 text-os-text-secondary-dark" />
-              <p className="text-xs text-os-text-secondary-dark font-medium uppercase tracking-wide">Custom Instructions</p>
+            <div className="flex items-center gap-1.5 mb-2">
+              <FileText className="w-3 h-3 text-os-text-secondary-dark/70" />
+              <p className="text-[10px] text-os-text-secondary-dark/70 font-medium uppercase tracking-wider">Instructions</p>
             </div>
-            <div className={`${cardBase} ${cardDefault} items-start`}>
-              <div className={`${iconContainerBase} bg-os-surface-dark group-hover:bg-brand-aperol/10`}>
-                <FileText className="w-5 h-5 text-os-text-secondary-dark group-hover:text-brand-aperol transition-colors" />
+            <div className="group flex items-start gap-2 px-3 py-2 rounded-lg bg-os-bg-dark/80 border border-os-border-dark/30 hover:border-brand-aperol/30 transition-all">
+              <div className="w-7 h-7 rounded-lg bg-os-border-dark/50 flex items-center justify-center flex-shrink-0 group-hover:bg-brand-aperol/20 transition-colors mt-0.5">
+                <FileText className="w-3.5 h-3.5 text-os-text-secondary-dark group-hover:text-brand-aperol transition-colors" />
               </div>
-              <div className="flex-1 min-w-0 py-0.5">
-                <p className="text-sm text-os-text-primary-dark whitespace-pre-wrap line-clamp-4">
-                  {instructions}
-                </p>
-              </div>
+              <p className="text-xs text-os-text-primary-dark whitespace-pre-wrap line-clamp-3 flex-1">
+                {instructions}
+              </p>
             </div>
           </div>
         )}
 
-        {/* Tasks Section */}
+        {/* Tasks - compact list */}
         {tasks.length > 0 && (
           <div>
-            <div className="flex items-center gap-2 mb-3">
-              <ListTodo className="w-3.5 h-3.5 text-os-text-secondary-dark" />
-              <p className="text-xs text-os-text-secondary-dark font-medium uppercase tracking-wide">Tasks</p>
-              <span className="text-xs text-os-text-secondary-dark/60">
-                {completedTasks}/{tasks.length}
-              </span>
+            <div className="flex items-center gap-1.5 mb-2">
+              <ListTodo className="w-3 h-3 text-os-text-secondary-dark/70" />
+              <p className="text-[10px] text-os-text-secondary-dark/70 font-medium uppercase tracking-wider">Tasks</p>
+              <span className="text-[10px] text-os-text-secondary-dark/50">{completedTasks}/{tasks.length}</span>
             </div>
-            <div className="space-y-2">
+            <div className="space-y-1">
               {tasks.map((task) => (
                 <div
                   key={task.id}
-                  className={`${cardBase} ${
+                  className={`group flex items-center gap-2 px-2 py-1.5 rounded-lg border transition-all ${
                     task.completed
-                      ? 'bg-green-500/5 border-green-500/20 hover:border-green-500/40'
-                      : cardDefault
+                      ? 'bg-green-500/5 border-green-500/20'
+                      : 'bg-os-bg-dark/80 border-os-border-dark/30 hover:border-brand-aperol/30'
                   }`}
                 >
-                  <div className={`${iconContainerBase} ${
-                    task.completed 
-                      ? 'bg-green-500/10' 
-                      : 'bg-os-surface-dark group-hover:bg-brand-aperol/10'
-                  }`}>
-                    <button
-                      onClick={() => onToggleTask?.(task.id)}
-                      disabled={isReadOnly || !onToggleTask}
-                      className={`${isReadOnly ? 'cursor-default' : 'cursor-pointer'}`}
-                    >
-                      {task.completed ? (
-                        <CheckCircle2 className="w-5 h-5 text-green-500" />
-                      ) : (
-                        <Circle className="w-5 h-5 text-os-text-secondary-dark group-hover:text-brand-aperol transition-colors" />
-                      )}
-                    </button>
-                  </div>
+                  <button
+                    onClick={() => onToggleTask?.(task.id)}
+                    disabled={isReadOnly || !onToggleTask}
+                    className={`flex-shrink-0 ${isReadOnly ? 'cursor-default' : 'cursor-pointer'}`}
+                  >
+                    {task.completed ? (
+                      <CheckCircle2 className="w-4 h-4 text-green-500" />
+                    ) : (
+                      <Circle className="w-4 h-4 text-os-text-secondary-dark hover:text-brand-aperol transition-colors" />
+                    )}
+                  </button>
                   <div className="flex-1 min-w-0">
-                    <p
-                      className={`text-sm font-medium ${
-                        task.completed
-                          ? 'text-os-text-secondary-dark line-through'
-                          : 'text-os-text-primary-dark group-hover:text-brand-aperol transition-colors'
-                      }`}
-                    >
+                    <p className={`text-xs font-medium truncate ${
+                      task.completed
+                        ? 'text-os-text-secondary-dark line-through'
+                        : 'text-os-text-primary-dark'
+                    }`}>
                       {task.title}
                     </p>
-                    {task.description && (
-                      <p className="text-xs text-os-text-secondary-dark mt-0.5 line-clamp-1">
-                        {task.description}
-                      </p>
-                    )}
                   </div>
                   {!isReadOnly && onRemoveTask && (
                     <button
                       onClick={() => onRemoveTask(task.id)}
-                      className="opacity-0 group-hover:opacity-100 p-1.5 rounded-lg hover:bg-red-500/10 text-os-text-secondary-dark hover:text-red-400 transition-all"
+                      className="opacity-0 group-hover:opacity-100 p-1 rounded-md hover:bg-red-500/10 text-os-text-secondary-dark hover:text-red-400 transition-all"
                     >
-                      <X className="w-3.5 h-3.5" />
+                      <X className="w-3 h-3" />
                     </button>
                   )}
                 </div>
