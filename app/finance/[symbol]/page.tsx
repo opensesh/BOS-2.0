@@ -51,7 +51,7 @@ export default function StockDetailPage({ params }: PageProps) {
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden pt-14 lg:pt-0">
         {/* Header */}
         <header className="shrink-0 z-30 h-12 bg-os-bg-dark border-b border-os-border-dark/50">
-          <div className="flex items-center justify-between h-full px-6 md:px-12">
+          <div className="flex items-center justify-between h-full px-6 md:px-12 max-w-4xl mx-auto">
             {/* Left: Back to Finance */}
             <Link
               href="/finance"
@@ -70,7 +70,7 @@ export default function StockDetailPage({ params }: PageProps) {
         <div className="flex-1 flex overflow-hidden">
           {/* Main content - scrollable */}
           <div className="flex-1 overflow-y-auto custom-scrollbar">
-            <div className="w-full max-w-4xl lg:max-w-none lg:pr-0 mx-auto lg:mx-0 px-6 py-8 md:px-12 md:py-12">
+            <div className="w-full max-w-4xl mx-auto px-6 py-8 md:px-12 md:py-12">
               {/* Stock Header */}
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
@@ -182,23 +182,17 @@ export default function StockDetailPage({ params }: PageProps) {
                     <StockStats quote={quote} loading={quoteLoading} />
                   </div>
 
-                  {/* Latest News */}
-                  <div className="bg-os-surface-dark/30 rounded-xl p-4 border border-os-border-dark/50">
-                    <LatestNews news={news} loading={newsLoading} maxItems={8} />
-                  </div>
+                  {/* Latest News & Company Profile - Side by Side */}
+                  <div className="flex flex-col lg:flex-row gap-6">
+                    {/* Latest News */}
+                    <div className="flex-1 min-w-0 bg-os-surface-dark/30 rounded-xl p-4 border border-os-border-dark/50">
+                      <LatestNews news={news} loading={newsLoading} maxItems={6} />
+                    </div>
 
-                  {/* Company Profile - Mobile Only */}
-                  <div className="lg:hidden">
+                    {/* Company Profile */}
                     {(profile || profileLoading) && (
-                      <div className="bg-os-surface-dark/30 rounded-xl p-4 border border-os-border-dark/50">
-                        <h3 className="text-sm font-medium text-brand-vanilla mb-4 flex items-center gap-2">
-                          <div className="w-8 h-8 rounded-lg bg-os-surface-dark border border-os-border-dark flex items-center justify-center">
-                            <span className="text-xs font-bold text-brand-vanilla">
-                              {symbol.replace('^', '').slice(0, 2)}
-                            </span>
-                          </div>
-                          About {quote?.shortName || symbol}
-                        </h3>
+                      <div className="lg:w-[340px] xl:w-[380px] shrink-0 bg-os-surface-dark/30 rounded-xl p-4 border border-os-border-dark/50">
+                        <h3 className="text-sm font-medium text-brand-vanilla mb-4">About</h3>
                         <CompanyProfile profile={profile} loading={profileLoading} />
                       </div>
                     )}
@@ -244,35 +238,9 @@ export default function StockDetailPage({ params }: PageProps) {
             </div>
           </div>
 
-          {/* Sidebar - Company Profile */}
-          <aside className="hidden lg:flex lg:flex-col lg:w-[320px] xl:w-[380px] border-l border-os-border-dark bg-os-surface-dark/30 overflow-hidden">
-            <div className="flex-1 overflow-y-auto custom-scrollbar p-4 space-y-6">
-              {/* Company Profile Section */}
-              {(profile || profileLoading) && (
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-os-surface-dark border border-os-border-dark flex items-center justify-center">
-                      <span className="text-sm font-bold text-brand-vanilla">
-                        {symbol.replace('^', '').slice(0, 2)}
-                      </span>
-                    </div>
-                    <div>
-                      <h3 className="text-sm font-medium text-brand-vanilla">
-                        About {quote?.shortName || symbol}
-                      </h3>
-                      <span className="text-xs text-os-text-secondary-dark">Company Profile</span>
-                    </div>
-                  </div>
-                  <CompanyProfile profile={profile} loading={profileLoading} />
-                </div>
-              )}
-
-              {/* Divider */}
-              <div className="border-t border-os-border-dark/50" />
-
-              {/* Watchlist Section */}
-              <WatchlistSidebar />
-            </div>
+          {/* Sidebar - fixed width */}
+          <aside className="hidden xl:block w-[320px] border-l border-os-border-dark bg-os-surface-dark/30 p-4 overflow-y-auto custom-scrollbar">
+            <WatchlistSidebar />
           </aside>
         </div>
       </div>
