@@ -45,6 +45,14 @@ export function ComponentPreview({
     }
   }, [component, selectedVariant]);
 
+  // Reset preview state when component changes
+  React.useEffect(() => {
+    // Reset zoom and other preview states to defaults
+    setZoom(1);
+    setCodeCopied(false);
+    setActiveTab('props');
+  }, [component?.id]);
+
   const handlePropChange = useCallback((name: string, value: any) => {
     setComponentProps(prev => ({
       ...prev,
