@@ -25,8 +25,8 @@ import {
   Zap,
   Layers,
 } from 'lucide-react';
-import { SPACES } from '@/lib/mock-data';
 import { useChatContext } from '@/lib/chat-context';
+import { useSpaces } from '@/hooks/useSpaces';
 import { slideFromLeft, staggerContainerFast, fadeInUp } from '@/lib/motion';
 
 interface NavigationDrawerProps {
@@ -51,6 +51,7 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef }: NavigationD
   const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const onCloseRef = useRef(onClose);
   const { chatHistory } = useChatContext();
+  const { spaces: userSpaces, isLoaded: spacesLoaded } = useSpaces();
 
   // Keep onClose ref up to date without triggering re-renders
   useEffect(() => {
@@ -156,40 +157,50 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef }: NavigationD
               </motion.button>
 
               <motion.div variants={fadeInUp} className="border-t border-os-border-dark pt-2">
-                <div className="px-3 py-1 text-xs text-os-text-secondary-dark mb-2">Private</div>
-                {SPACES.map((space, index) => {
-                  const isSpaceActive = pathname === `/spaces/${space.slug}`;
-                  return (
-                    <motion.div
-                      key={space.id}
-                      variants={fadeInUp}
-                      custom={index}
-                    >
-                      <Link
-                        href={`/spaces/${space.slug}`}
-                        className={`
-                          w-full flex items-center gap-3 px-3 py-2 rounded-lg mb-1
-                          transition-colors
-                          ${
-                            isSpaceActive
-                              ? 'bg-os-surface-dark text-brand-aperol'
-                              : 'text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-brand-vanilla'
-                          }
-                        `}
+                <div className="px-3 py-1 text-xs text-os-text-secondary-dark mb-2">My Spaces</div>
+                {!spacesLoaded ? (
+                  <div className="px-3 py-2 text-xs text-os-text-secondary-dark/60">
+                    Loading...
+                  </div>
+                ) : userSpaces.length === 0 ? (
+                  <div className="px-3 py-2 text-xs text-os-text-secondary-dark/60">
+                    No spaces yet. Create one above!
+                  </div>
+                ) : (
+                  userSpaces.map((space, index) => {
+                    const isSpaceActive = pathname === `/spaces/${space.slug}`;
+                    return (
+                      <motion.div
+                        key={space.id}
+                        variants={fadeInUp}
+                        custom={index}
                       >
-                        <LayoutGrid className={`w-5 h-5 ${isSpaceActive ? 'text-brand-aperol' : ''}`} />
-                        <div className="flex-1 min-w-0">
-                          <div className="text-sm font-medium truncate">{space.title}</div>
-                          {space.description && (
-                            <div className="text-xs text-os-text-secondary-dark truncate">
-                              {space.description}
-                            </div>
-                          )}
-                        </div>
-                      </Link>
-                    </motion.div>
-                  );
-                })}
+                        <Link
+                          href={`/spaces/${space.slug}`}
+                          className={`
+                            w-full flex items-center gap-3 px-3 py-2 rounded-lg mb-1
+                            transition-colors
+                            ${
+                              isSpaceActive
+                                ? 'bg-os-surface-dark text-brand-aperol'
+                                : 'text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-brand-vanilla'
+                            }
+                          `}
+                        >
+                          <LayoutGrid className={`w-5 h-5 ${isSpaceActive ? 'text-brand-aperol' : ''}`} />
+                          <div className="flex-1 min-w-0">
+                            <div className="text-sm font-medium truncate">{space.title}</div>
+                            {space.description && (
+                              <div className="text-xs text-os-text-secondary-dark truncate">
+                                {space.description}
+                              </div>
+                            )}
+                          </div>
+                        </Link>
+                      </motion.div>
+                    );
+                  })
+                )}
               </motion.div>
             </div>
           </motion.div>
