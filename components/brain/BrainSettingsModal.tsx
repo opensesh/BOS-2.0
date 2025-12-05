@@ -268,12 +268,9 @@ export function BrainSettingsModal({ isOpen, onClose, defaultSection }: BrainSet
           {/* Skills Description Section - Shows when Skills selected */}
           {selectedOption === 'skills' && (
             <section className="space-y-4">
-              <div className="flex items-center gap-2">
-                <Zap className="w-5 h-5 text-brand-aperol" />
-                <h3 className="text-lg font-display font-medium text-brand-vanilla">
-                  Create a Skill
-                </h3>
-              </div>
+              <h3 className="text-lg font-display font-medium text-brand-vanilla">
+                Create a Skill
+              </h3>
               
               <p className="text-sm text-os-text-secondary-dark">
                 Describe the capability you want to add to your brand operating system.
