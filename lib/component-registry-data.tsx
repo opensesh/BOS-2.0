@@ -5,9 +5,19 @@ import { ComponentDoc, componentRegistry } from './component-registry';
 
 // Import actual components
 import { BrandLoader } from '@/components/ui/brand-loader';
-import { Modal, ConfirmModal } from '@/components/ui/Modal';
-import { FlipCard, FlipCardPersistent } from '@/components/ui/FlipCard';
+import { Modal } from '@/components/ui/Modal';
+import { FlipCard } from '@/components/ui/FlipCard';
 import { TabSelector } from '@/components/brain/TabSelector';
+import { DotLoader } from '@/components/ui/dot-loader';
+import { SearchResearchToggle } from '@/components/ui/search-research-toggle';
+import { ThemeToggle } from '@/components/ThemeToggle';
+import { TypewriterText } from '@/components/TypewriterText';
+import { BackgroundGradient } from '@/components/BackgroundGradient';
+import { SpaceCard } from '@/components/SpaceCard';
+import { IdeaCard } from '@/components/discover/IdeaCard';
+import { TieredNewsCard } from '@/components/discover/TieredNewsCard';
+import { MarketWidget } from '@/components/discover/MarketWidget';
+import { WeatherWidget } from '@/components/discover/WeatherWidget';
 
 // ============================================
 // DESIGN SYSTEM COMPONENTS
@@ -353,8 +363,154 @@ const ColorSwatchDoc: ComponentDoc = {
   ],
 };
 
+// ThemeToggle Component
+const ThemeToggleDemo = ({ isCollapsed }: { isCollapsed: boolean }) => {
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-2 w-fit">
+      <ThemeToggle isCollapsed={isCollapsed} />
+    </div>
+  );
+};
+
+const ThemeToggleDoc: ComponentDoc = {
+  id: 'theme-toggle',
+  name: 'ThemeToggle',
+  description: 'A button component that toggles between light and dark mode. Displays sun/moon icons based on current theme state.',
+  category: 'design-system',
+  component: ThemeToggleDemo,
+  defaultProps: {
+    isCollapsed: false,
+  },
+  controls: [
+    {
+      name: 'isCollapsed',
+      type: 'boolean',
+      description: 'Show icon only (collapsed sidebar mode)',
+      defaultValue: false,
+    },
+  ],
+  variants: [
+    { id: 'collapsed', name: 'Collapsed', props: { isCollapsed: true } },
+    { id: 'expanded', name: 'Expanded', props: { isCollapsed: false } },
+  ],
+};
+
+// TypewriterText Component
+const TypewriterTextDoc: ComponentDoc = {
+  id: 'typewriter-text',
+  name: 'TypewriterText',
+  description: 'An animated text component that cycles through phrases with a typewriter effect. Used for dynamic hero text and engaging taglines.',
+  category: 'design-system',
+  component: TypewriterText,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// BackgroundGradient Component
+const BackgroundGradientDemo = ({ fadeOut }: { fadeOut: boolean }) => {
+  return (
+    <div className="relative w-full h-48 rounded-xl overflow-hidden bg-os-bg-dark">
+      <BackgroundGradient fadeOut={fadeOut} />
+      <div className="absolute inset-0 flex items-center justify-center">
+        <p className="text-brand-vanilla text-sm">Content overlays the gradient</p>
+      </div>
+    </div>
+  );
+};
+
+const BackgroundGradientDoc: ComponentDoc = {
+  id: 'background-gradient',
+  name: 'BackgroundGradient',
+  description: 'A decorative background component with animated gradient blobs and grid pattern. Used for visual interest on landing pages and empty states.',
+  category: 'design-system',
+  component: BackgroundGradientDemo,
+  defaultProps: {
+    fadeOut: false,
+  },
+  controls: [
+    {
+      name: 'fadeOut',
+      type: 'boolean',
+      description: 'Whether the gradient should be faded out',
+      defaultValue: false,
+    },
+  ],
+  variants: [
+    { id: 'visible', name: 'Visible', props: { fadeOut: false } },
+    { id: 'faded', name: 'Faded Out', props: { fadeOut: true } },
+  ],
+};
+
+// DotLoader Component
+const DOT_LOADER_FRAMES = [
+  [0, 1, 2, 7, 8, 9, 14, 15, 16],
+  [3, 4, 5, 10, 11, 12, 17, 18, 19],
+  [6, 13, 20, 21, 22, 23, 24, 27, 28, 29, 30, 31, 34, 35, 36, 37, 38, 41, 42, 43, 44, 45],
+  [25, 26, 32, 33, 39, 40, 46, 47, 48],
+];
+
+const DotLoaderDemo = ({ isPlaying, duration }: { isPlaying: boolean; duration: number }) => {
+  return (
+    <div className="flex items-center justify-center p-8 bg-os-surface-dark rounded-xl">
+      <DotLoader
+        frames={DOT_LOADER_FRAMES}
+        isPlaying={isPlaying}
+        duration={duration}
+        dotClassName="bg-os-text-secondary-dark/30 [&.active]:bg-brand-aperol"
+      />
+    </div>
+  );
+};
+
+const DotLoaderDoc: ComponentDoc = {
+  id: 'dot-loader',
+  name: 'DotLoader',
+  description: 'A 7x7 dot matrix loader that animates through frames. Perfect for loading states with a retro/digital aesthetic.',
+  category: 'design-system',
+  component: DotLoaderDemo,
+  defaultProps: {
+    isPlaying: true,
+    duration: 100,
+  },
+  controls: [
+    {
+      name: 'isPlaying',
+      type: 'boolean',
+      description: 'Whether the animation is playing',
+      defaultValue: true,
+    },
+    {
+      name: 'duration',
+      type: 'range',
+      description: 'Frame duration in milliseconds',
+      defaultValue: 100,
+      min: 50,
+      max: 500,
+      step: 50,
+    },
+  ],
+  variants: [
+    { id: 'fast', name: 'Fast', props: { isPlaying: true, duration: 50 } },
+    { id: 'slow', name: 'Slow', props: { isPlaying: true, duration: 300 } },
+    { id: 'paused', name: 'Paused', props: { isPlaying: false, duration: 100 } },
+  ],
+};
+
+// SearchResearchToggle Component
+const SearchResearchToggleDoc: ComponentDoc = {
+  id: 'search-research-toggle',
+  name: 'SearchResearchToggle',
+  description: 'An iOS-style toggle for switching between Search and Research modes. Shows contextual suggestions and upsell prompts on hover.',
+  category: 'design-system',
+  component: SearchResearchToggle,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
 // ============================================
-// APPLICATION COMPONENTS (Placeholder examples)
+// APPLICATION COMPONENTS
 // ============================================
 
 // Discover - NewsCard placeholder
@@ -420,6 +576,308 @@ const NewsCardDoc: ComponentDoc = {
   ],
 };
 
+// TieredNewsCard Component
+const TieredNewsCardDemo = ({
+  title,
+  summary,
+  tier,
+  variant,
+}: {
+  title: string;
+  summary: string;
+  tier: 'featured' | 'summary' | 'quick';
+  variant: 'featured' | 'compact';
+}) => {
+  const mockItem = {
+    id: 'demo-1',
+    slug: 'demo-article',
+    title,
+    summary,
+    sources: [
+      { id: '1', name: 'TechCrunch', url: 'https://techcrunch.com' },
+      { id: '2', name: 'The Verge', url: 'https://theverge.com' },
+      { id: '3', name: 'Wired', url: 'https://wired.com' },
+    ],
+    publishedAt: '2 hours ago',
+    category: 'weekly-update' as const,
+    tier,
+    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800',
+  };
+
+  return (
+    <div className="max-w-md">
+      <TieredNewsCard item={mockItem} variant={variant} />
+    </div>
+  );
+};
+
+const TieredNewsCardDoc: ComponentDoc = {
+  id: 'tiered-news-card',
+  name: 'TieredNewsCard',
+  description: 'A news card with tiered content levels: featured (40+ sources), summary (AI-generated), and quick (external link). Supports featured and compact variants.',
+  category: 'application',
+  page: 'Discover',
+  component: TieredNewsCardDemo,
+  defaultProps: {
+    title: 'The Future of AI in Design: A Comprehensive Analysis',
+    summary: 'Artificial intelligence is transforming how designers work, from automated layouts to intelligent asset generation.',
+    tier: 'featured',
+    variant: 'compact',
+  },
+  controls: [
+    {
+      name: 'title',
+      type: 'text',
+      description: 'Article headline',
+      defaultValue: 'The Future of AI in Design',
+      required: true,
+    },
+    {
+      name: 'summary',
+      type: 'text',
+      description: 'Article summary text',
+      defaultValue: 'Artificial intelligence is transforming how designers work.',
+    },
+    {
+      name: 'tier',
+      type: 'select',
+      description: 'Content tier level',
+      defaultValue: 'featured',
+      options: [
+        { label: 'Featured (40+ sources)', value: 'featured' },
+        { label: 'Summary (AI Generated)', value: 'summary' },
+        { label: 'Quick (External Link)', value: 'quick' },
+      ],
+    },
+    {
+      name: 'variant',
+      type: 'select',
+      description: 'Card layout variant',
+      defaultValue: 'compact',
+      options: [
+        { label: 'Featured (Large)', value: 'featured' },
+        { label: 'Compact (Grid)', value: 'compact' },
+      ],
+    },
+  ],
+  variants: [
+    { id: 'featured-tier', name: 'Featured Tier', props: { title: 'Major Industry Shift', summary: 'In-depth analysis with 40+ sources.', tier: 'featured', variant: 'compact' } },
+    { id: 'summary-tier', name: 'Summary Tier', props: { title: 'AI Summary Article', summary: 'AI-generated summary of the news.', tier: 'summary', variant: 'compact' } },
+    { id: 'quick-tier', name: 'Quick Tier', props: { title: 'Quick News Update', summary: 'External link to original source.', tier: 'quick', variant: 'compact' } },
+    { id: 'featured-layout', name: 'Featured Layout', props: { title: 'Hero Article', summary: 'Large layout for hero placement.', tier: 'featured', variant: 'featured' } },
+  ],
+};
+
+// IdeaCard Component
+const IdeaCardDemo = ({
+  title,
+  description,
+  category,
+  variant,
+}: {
+  title: string;
+  description: string;
+  category: 'short-form' | 'long-form' | 'blog';
+  variant: 'featured' | 'compact';
+}) => {
+  const mockItem = {
+    id: 'demo-idea-1',
+    slug: 'demo-idea',
+    title,
+    description,
+    sources: [
+      { id: '1', name: 'Source 1', url: '#' },
+      { id: '2', name: 'Source 2', url: '#' },
+    ],
+    category,
+    isPrompt: true as const,
+    textureIndex: 3,
+  };
+
+  return (
+    <div className="max-w-md">
+      <IdeaCard item={mockItem} variant={variant} />
+    </div>
+  );
+};
+
+const IdeaCardDoc: ComponentDoc = {
+  id: 'idea-card',
+  name: 'IdeaCard',
+  description: 'A card for content ideas/prompts with textured backgrounds. Displays title, description, category badge, and source count. Available in featured and compact variants.',
+  category: 'application',
+  page: 'Discover',
+  component: IdeaCardDemo,
+  defaultProps: {
+    title: 'Behind-the-scenes look at our design process',
+    description: 'Show the messy middle of creating something great - the iterations, the failures, and the breakthroughs.',
+    category: 'short-form',
+    variant: 'compact',
+  },
+  controls: [
+    {
+      name: 'title',
+      type: 'text',
+      description: 'Idea title',
+      defaultValue: 'Behind-the-scenes look at our design process',
+      required: true,
+    },
+    {
+      name: 'description',
+      type: 'text',
+      description: 'Idea description',
+      defaultValue: 'Show the messy middle of creating something great.',
+    },
+    {
+      name: 'category',
+      type: 'select',
+      description: 'Content category',
+      defaultValue: 'short-form',
+      options: [
+        { label: 'Short Form', value: 'short-form' },
+        { label: 'Long Form', value: 'long-form' },
+        { label: 'Blog', value: 'blog' },
+      ],
+    },
+    {
+      name: 'variant',
+      type: 'select',
+      description: 'Card layout variant',
+      defaultValue: 'compact',
+      options: [
+        { label: 'Featured (Large)', value: 'featured' },
+        { label: 'Compact (Grid)', value: 'compact' },
+      ],
+    },
+  ],
+  variants: [
+    { id: 'short-form', name: 'Short Form', props: { title: 'Reel: 5 Design Tips', description: 'Quick tips for better designs.', category: 'short-form', variant: 'compact' } },
+    { id: 'long-form', name: 'Long Form', props: { title: 'Tutorial: Building a Design System', description: 'Complete walkthrough.', category: 'long-form', variant: 'compact' } },
+    { id: 'blog', name: 'Blog Post', props: { title: 'Article: The Future of UX', description: 'Thought leadership piece.', category: 'blog', variant: 'compact' } },
+    { id: 'featured-variant', name: 'Featured Layout', props: { title: 'Featured Idea Card', description: 'Larger layout for hero placement.', category: 'short-form', variant: 'featured' } },
+  ],
+};
+
+// MarketWidget Component
+const MarketWidgetDoc: ComponentDoc = {
+  id: 'market-widget',
+  name: 'MarketWidget',
+  description: 'A stock market widget showing watchlist with live data, sparkline charts, and an editable back side using FlipCard. Links to finance pages.',
+  category: 'application',
+  page: 'Discover',
+  component: MarketWidget,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// WeatherWidget Component
+const WeatherWidgetDoc: ComponentDoc = {
+  id: 'weather-widget',
+  name: 'WeatherWidget',
+  description: 'A weather forecast widget showing current conditions and 5-day forecast. Uses FlipCard for location editing with city search.',
+  category: 'application',
+  page: 'Discover',
+  component: WeatherWidget,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// SpaceCard Component
+const SpaceCardDemo = ({
+  title,
+  description,
+  icon,
+  isPrivate,
+  isCreate,
+}: {
+  title: string;
+  description: string;
+  icon: string;
+  isPrivate: boolean;
+  isCreate: boolean;
+}) => {
+  if (isCreate) {
+    return (
+      <div className="max-w-sm">
+        <SpaceCard isCreate onCreateClick={() => {}} />
+      </div>
+    );
+  }
+
+  const mockSpace = {
+    id: 'demo-space',
+    slug: 'demo-space',
+    title,
+    description,
+    icon,
+    isPrivate,
+    lastModified: '2 hr. ago',
+    createdAt: new Date().toISOString(),
+  };
+
+  return (
+    <div className="max-w-sm">
+      <SpaceCard space={mockSpace} />
+    </div>
+  );
+};
+
+const SpaceCardDoc: ComponentDoc = {
+  id: 'space-card',
+  name: 'SpaceCard',
+  description: 'A card component for displaying Spaces - collaborative workspaces. Shows title, description, icon, privacy status, and last modified time. Also has a "Create Space" variant.',
+  category: 'application',
+  page: 'Spaces',
+  component: SpaceCardDemo,
+  defaultProps: {
+    title: 'Brand Guidelines',
+    description: 'Central hub for all brand assets, guidelines, and documentation.',
+    icon: '📐',
+    isPrivate: false,
+    isCreate: false,
+  },
+  controls: [
+    {
+      name: 'title',
+      type: 'text',
+      description: 'Space title',
+      defaultValue: 'Brand Guidelines',
+      required: true,
+    },
+    {
+      name: 'description',
+      type: 'text',
+      description: 'Space description',
+      defaultValue: 'Central hub for all brand assets.',
+    },
+    {
+      name: 'icon',
+      type: 'text',
+      description: 'Emoji icon',
+      defaultValue: '📐',
+    },
+    {
+      name: 'isPrivate',
+      type: 'boolean',
+      description: 'Whether the space is private',
+      defaultValue: false,
+    },
+    {
+      name: 'isCreate',
+      type: 'boolean',
+      description: 'Show as create card',
+      defaultValue: false,
+    },
+  ],
+  variants: [
+    { id: 'private', name: 'Private Space', props: { title: 'Secret Project', description: 'Private workspace.', icon: '🔒', isPrivate: true, isCreate: false } },
+    { id: 'create', name: 'Create Card', props: { title: '', description: '', icon: '', isPrivate: false, isCreate: true } },
+    { id: 'project', name: 'Project Space', props: { title: 'Q1 Campaign', description: 'Marketing campaign materials.', icon: '🚀', isPrivate: false, isCreate: false } },
+  ],
+};
+
 // ============================================
 // REGISTER ALL COMPONENTS
 // ============================================
@@ -437,13 +895,28 @@ export function initializeRegistry() {
     FlipCardDoc,
     TabSelectorDoc,
     ColorSwatchDoc,
+    ThemeToggleDoc,
+    TypewriterTextDoc,
+    BackgroundGradientDoc,
+    DotLoaderDoc,
+    SearchResearchToggleDoc,
   ];
 
   // Add Application components
   componentRegistry.application = {
-    Discover: [NewsCardDoc],
+    Discover: [
+      NewsCardDoc,
+      TieredNewsCardDoc,
+      IdeaCardDoc,
+      MarketWidgetDoc,
+      WeatherWidgetDoc,
+    ],
+    Spaces: [
+      SpaceCardDoc,
+    ],
   };
 }
 
 // Auto-initialize on import
 initializeRegistry();
+
