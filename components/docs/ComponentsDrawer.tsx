@@ -2,10 +2,9 @@
 
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Plus, ChevronRight, ChevronDown, Box, Layers, PanelLeftClose, PanelLeft } from 'lucide-react';
-import { buildNavigationTree, NavItem, getAllComponents, ComponentDoc } from '@/lib/component-registry';
+import { Search, Plus, ChevronRight, ChevronDown, Box, Layers, PanelRight, X } from 'lucide-react';
+import { buildNavigationTree, NavItem, getAllComponents } from '@/lib/component-registry';
 import { cn } from '@/lib/utils';
-import { slideFromLeft, overlayFade } from '@/lib/motion';
 
 interface ComponentsDrawerProps {
   isOpen: boolean;
@@ -35,13 +34,10 @@ export function ComponentsDrawer({
     
     const filterNavItems = (items: NavItem[]): NavItem[] => {
       return items.reduce<NavItem[]>((acc, item) => {
-        // Skip variants in the tree - they'll be shown as pills in the preview
         if (item.type === 'variant') return acc;
         
         if (item.type === 'component') {
-          // Check if component name matches search
           if (!query || item.name.toLowerCase().includes(query)) {
-            // Return component without children (variants)
             acc.push({ ...item, children: undefined });
           }
         } else if (item.children) {
@@ -150,7 +146,6 @@ export function ComponentsDrawer({
           <span className="truncate">{item.name}</span>
         </button>
 
-        {/* Children */}
         <AnimatePresence initial={false}>
           {hasChildren && isExpanded && (
             <motion.div
@@ -168,140 +163,106 @@ export function ComponentsDrawer({
     );
   };
 
-  return (
+  // Drawer content (shared between open states)
+  const DrawerContent = () => (
     <>
-      {/* Toggle button when closed - positioned inline with nav items (between Home and Brand) */}
-      {!isOpen && (
+      {/* Header with close button - h-12 to match Sidebar header */}
+      <div className="flex items-center justify-between px-3 h-12 border-b border-os-border-dark shrink-0">
+        <span className="font-display font-semibold text-brand-vanilla text-sm">Components</span>
         <button
           onClick={onToggle}
-          className="fixed left-[56px] top-[120px] z-30 hidden lg:flex items-center justify-center w-6 h-12 bg-os-surface-dark border border-os-border-dark border-l-0 rounded-r-lg hover:bg-os-border-dark transition-colors"
-          aria-label="Open component drawer"
+          className="p-1.5 rounded-lg hover:bg-os-border-dark transition-colors"
+          aria-label="Close drawer"
         >
-          <PanelLeft className="w-4 h-4 text-os-text-secondary-dark" />
+          <X className="w-4 h-4 text-os-text-secondary-dark" />
         </button>
-      )}
+      </div>
 
-      {/* Desktop Drawer */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.aside
-            initial={{ width: 0, opacity: 0 }}
-            animate={{ width: 220, opacity: 1 }}
-            exit={{ width: 0, opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="hidden lg:flex flex-col bg-os-bg-darker border-r border-os-border-dark flex-shrink-0 overflow-hidden h-full"
+      {/* Search Bar */}
+      <div className="p-3 border-b border-os-border-dark shrink-0">
+        <div className="flex gap-2">
+          <div className="flex-1 relative">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-os-text-secondary-dark" />
+            <input
+              type="text"
+              placeholder="Find components"
+              value={searchQuery}
+              onChange={(e) => onSearchChange(e.target.value)}
+              className="w-full pl-9 pr-3 py-2 text-sm bg-os-bg-dark border border-os-border-dark rounded-lg text-brand-vanilla placeholder:text-os-text-secondary-dark focus:outline-none focus:border-brand-aperol/50 transition-colors"
+            />
+          </div>
+          <button
+            className="p-2 rounded-lg border border-os-border-dark bg-os-bg-dark hover:bg-os-surface-dark transition-colors"
+            aria-label="Add component"
           >
-            {/* Header with close button - h-12 to match Sidebar header */}
-            <div className="flex items-center justify-between px-3 h-12 border-b border-os-border-dark">
-              <span className="font-display font-semibold text-brand-vanilla text-sm">Components</span>
-              <button
-                onClick={onToggle}
-                className="p-1.5 rounded-lg hover:bg-os-border-dark transition-colors"
-                aria-label="Close drawer"
-              >
-                <PanelLeftClose className="w-4 h-4 text-os-text-secondary-dark" />
-              </button>
-            </div>
+            <Plus className="w-4 h-4 text-os-text-secondary-dark" />
+          </button>
+        </div>
+      </div>
 
-            {/* Search Bar */}
-            <div className="p-3 border-b border-os-border-dark">
-              <div className="flex gap-2">
-                <div className="flex-1 relative">
-                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-os-text-secondary-dark" />
-                  <input
-                    type="text"
-                    placeholder="Find components"
-                    value={searchQuery}
-                    onChange={(e) => onSearchChange(e.target.value)}
-                    className="w-full pl-9 pr-3 py-2 text-sm bg-os-bg-dark border border-os-border-dark rounded-lg text-brand-vanilla placeholder:text-os-text-secondary-dark focus:outline-none focus:border-brand-aperol/50 transition-colors"
-                  />
-                </div>
-                <button
-                  className="p-2 rounded-lg border border-os-border-dark bg-os-bg-dark hover:bg-os-surface-dark transition-colors"
-                  aria-label="Add component"
-                >
-                  <Plus className="w-4 h-4 text-os-text-secondary-dark" />
-                </button>
-              </div>
-            </div>
+      {/* Navigation Tree */}
+      <div className="flex-1 overflow-y-auto custom-scrollbar py-2">
+        {filteredTree.length === 0 ? (
+          <div className="px-4 py-8 text-center text-os-text-secondary-dark text-sm">
+            No components found
+          </div>
+        ) : (
+          filteredTree.map(item => renderNavItem(item))
+        )}
+      </div>
+    </>
+  );
 
-            {/* Navigation Tree */}
-            <div className="flex-1 overflow-y-auto custom-scrollbar py-2">
-              {filteredTree.length === 0 ? (
-                <div className="px-4 py-8 text-center text-os-text-secondary-dark text-sm">
-                  No components found
-                </div>
-              ) : (
-                filteredTree.map(item => renderNavItem(item))
-              )}
-            </div>
-          </motion.aside>
+  return (
+    <>
+      {/* Toggle button when closed - fixed to right side, consistent across viewports */}
+      <AnimatePresence>
+        {!isOpen && (
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 20 }}
+            transition={{ duration: 0.15 }}
+            className="fixed right-0 top-1/2 -translate-y-1/2 z-30"
+          >
+            <button
+              onClick={onToggle}
+              className="group relative flex items-center justify-center w-10 h-12 bg-os-surface-dark border border-os-border-dark border-r-0 rounded-l-lg hover:bg-os-border-dark transition-colors"
+              aria-label="Show Components"
+            >
+              <PanelRight className="w-5 h-5 text-os-text-secondary-dark group-hover:text-brand-vanilla transition-colors" />
+              {/* Tooltip */}
+              <span className="absolute right-full mr-2 px-2 py-1 text-xs font-medium text-brand-vanilla bg-os-surface-dark border border-os-border-dark rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-150 whitespace-nowrap pointer-events-none">
+                Show Components
+              </span>
+            </button>
+          </motion.div>
         )}
       </AnimatePresence>
 
-      {/* Mobile/Tablet - Overlay drawer */}
+      {/* Drawer - Right side, consistent across all viewports */}
       <AnimatePresence>
         {isOpen && (
           <>
+            {/* Backdrop - only on mobile/tablet */}
             <motion.div
-              className="fixed inset-0 top-14 z-40 bg-black/50 lg:hidden"
-              variants={overlayFade}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0 top-14 lg:top-0 z-40 bg-black/40 lg:bg-transparent lg:pointer-events-none"
               onClick={onToggle}
             />
+            
+            {/* Drawer panel */}
             <motion.aside
-              className="fixed top-14 left-0 bottom-0 z-50 w-80 max-w-[85vw] bg-os-bg-darker border-r border-os-border-dark lg:hidden flex flex-col"
-              variants={slideFromLeft}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'spring', damping: 30, stiffness: 300 }}
+              className="fixed top-14 lg:top-0 right-0 bottom-0 z-50 w-[280px] max-w-[85vw] bg-os-bg-darker border-l border-os-border-dark flex flex-col"
             >
-              {/* Header */}
-              <div className="flex items-center justify-between p-4 border-b border-os-border-dark">
-                <span className="font-display font-semibold text-brand-vanilla">Components</span>
-                <button
-                  onClick={onToggle}
-                  className="p-1.5 rounded-lg hover:bg-os-border-dark transition-colors"
-                  aria-label="Close drawer"
-                >
-                  <PanelLeftClose className="w-5 h-5 text-os-text-secondary-dark" />
-                </button>
-              </div>
-
-              {/* Search Bar */}
-              <div className="p-3 border-b border-os-border-dark">
-                <div className="flex gap-2">
-                  <div className="flex-1 relative">
-                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-os-text-secondary-dark" />
-                    <input
-                      type="text"
-                      placeholder="Find components"
-                      value={searchQuery}
-                      onChange={(e) => onSearchChange(e.target.value)}
-                      className="w-full pl-9 pr-3 py-2 text-sm bg-os-bg-dark border border-os-border-dark rounded-lg text-brand-vanilla placeholder:text-os-text-secondary-dark focus:outline-none focus:border-brand-aperol/50 transition-colors"
-                    />
-                  </div>
-                  <button
-                    className="p-2 rounded-lg border border-os-border-dark bg-os-bg-dark hover:bg-os-surface-dark transition-colors"
-                    aria-label="Add component"
-                  >
-                    <Plus className="w-4 h-4 text-os-text-secondary-dark" />
-                  </button>
-                </div>
-              </div>
-
-              {/* Navigation Tree */}
-              <div className="flex-1 overflow-y-auto custom-scrollbar py-2">
-                {filteredTree.length === 0 ? (
-                  <div className="px-4 py-8 text-center text-os-text-secondary-dark text-sm">
-                    No components found
-                  </div>
-                ) : (
-                  filteredTree.map(item => renderNavItem(item))
-                )}
-              </div>
+              <DrawerContent />
             </motion.aside>
           </>
         )}
