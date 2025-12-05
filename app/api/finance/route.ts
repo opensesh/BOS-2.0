@@ -250,35 +250,79 @@ export async function GET(request: NextRequest) {
           return NextResponse.json({ error: 'Symbol is required' }, { status: 400 });
         }
 
+        // Try the Yahoo Finance RSS feed approach
+        try {
+          const response = await fetch(
+            `https://feeds.finance.yahoo.com/rss/2.0/headline?s=${symbol}&region=US&lang=en-US`,
+            {
+              headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+              },
+              next: { revalidate: 300 }, // Cache for 5 minutes
+            }
+          );
+
+          if (response.ok) {
+            const xmlText = await response.text();
+            // Parse RSS XML - extract items
+            const items: NewsItem[] = [];
+            const itemMatches = xmlText.match(/<item>[\s\S]*?<\/item>/g) || [];
+            
+            for (const itemXml of itemMatches.slice(0, 10)) {
+              const title = itemXml.match(/<title>([\s\S]*?)<\/title>/)?.[1]?.replace(/<!\[CDATA\[|\]\]>/g, '').trim() || '';
+              const link = itemXml.match(/<link>([\s\S]*?)<\/link>/)?.[1]?.trim() || '';
+              const pubDate = itemXml.match(/<pubDate>([\s\S]*?)<\/pubDate>/)?.[1]?.trim() || '';
+              const source = itemXml.match(/<source[^>]*>([\s\S]*?)<\/source>/)?.[1]?.trim() || 'Yahoo Finance';
+              
+              if (title && link) {
+                items.push({
+                  uuid: Buffer.from(link).toString('base64').slice(0, 16),
+                  title,
+                  publisher: source,
+                  link,
+                  providerPublishTime: pubDate ? Math.floor(new Date(pubDate).getTime() / 1000) : Math.floor(Date.now() / 1000),
+                });
+              }
+            }
+
+            if (items.length > 0) {
+              return NextResponse.json(items);
+            }
+          }
+        } catch (e) {
+          console.error('RSS feed error:', e);
+        }
+
+        // Fallback: try the older v1 API
         const response = await fetch(
-          `https://query2.finance.yahoo.com/v2/finance/news?symbols=${symbol}&count=10`,
+          `https://query1.finance.yahoo.com/v1/finance/search?q=${symbol}&newsCount=10&quotesCount=0`,
           {
             headers: {
               'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
             },
-            next: { revalidate: 300 }, // Cache for 5 minutes
+            next: { revalidate: 300 },
           }
         );
 
         if (!response.ok) {
-          return NextResponse.json({ error: 'News not found' }, { status: 404 });
+          return NextResponse.json([]); // Return empty array instead of error
         }
 
         const data = await response.json();
-        const news: NewsItem[] = (data?.items?.result || []).map((item: {
+        const news: NewsItem[] = (data?.news || []).map((item: {
           uuid: string;
           title: string;
           publisher: string;
           link: string;
-          published_at: number;
-          main_image?: { resolutions: Array<{ url: string; width: number; height: number }> };
+          providerPublishTime: number;
+          thumbnail?: { resolutions: Array<{ url: string; width: number; height: number }> };
         }) => ({
-          uuid: item.uuid,
+          uuid: item.uuid || Math.random().toString(36).slice(2),
           title: item.title,
-          publisher: item.publisher,
+          publisher: item.publisher || 'Yahoo Finance',
           link: item.link,
-          providerPublishTime: item.published_at,
-          thumbnail: item.main_image,
+          providerPublishTime: item.providerPublishTime || Math.floor(Date.now() / 1000),
+          thumbnail: item.thumbnail,
         }));
 
         return NextResponse.json(news);
@@ -364,4 +408,5 @@ export async function GET(request: NextRequest) {
     );
   }
 }
+
 

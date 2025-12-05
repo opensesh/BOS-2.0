@@ -215,7 +215,7 @@ export default function DesignTokensPage() {
     <div className="flex h-screen bg-os-bg-dark dark:bg-os-bg-dark text-os-text-primary-dark font-sans">
       <Sidebar />
       <BrandHubLayout
-        title="Design Tokens"
+        title="Tokens"
         description="Portable design system package with all brand tokens, styles, and configuration. Download for use in any project or with AI tools."
       >
         <div className="space-y-10">
@@ -359,4 +359,5 @@ border-radius: var(--radius-brand);`}
     </div>
   );
 }
+
 

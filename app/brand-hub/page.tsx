@@ -60,7 +60,7 @@ const brandHubItems = [
   },
   {
     id: 'design-tokens',
-    title: 'Design Tokens',
+    title: 'Tokens',
     description: 'Portable styles package for AI tools',
     href: '/brand-hub/design-tokens',
     icon: Braces,

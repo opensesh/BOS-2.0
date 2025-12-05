@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Sun, CloudSun, Cloud, CloudRain, CloudSnow, CloudLightning, MapPin, Loader2, Search, RotateCcw, Check, AlertCircle } from 'lucide-react';
+import { Sun, CloudSun, Cloud, CloudRain, CloudSnow, CloudLightning, MapPin, Loader2, Search, Settings, Check, AlertCircle } from 'lucide-react';
 import { useWeatherData } from '@/hooks/useWeatherData';
 import { FlipCard } from '@/components/ui/FlipCard';
 
@@ -66,7 +66,7 @@ function WeatherDisplay({
             className="p-1 hover:bg-os-surface-dark rounded transition-colors"
             title="Change location"
           >
-            <RotateCcw className="w-3 h-3 text-os-text-secondary-dark hover:text-brand-aperol" />
+            <Settings className="w-3 h-3 text-os-text-secondary-dark hover:text-brand-aperol" />
           </button>
         </div>
       </div>

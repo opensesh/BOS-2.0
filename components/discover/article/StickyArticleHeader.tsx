@@ -22,9 +22,10 @@ interface StickyArticleHeaderProps {
   backLink?: string;
   backLabel?: string;
   onAddToSpace?: () => void;
+  spacesCount?: number; // Number of spaces this article is already in
 }
 
-export function StickyArticleHeader({ title, titleRef, backLink = '/discover', backLabel = 'Discover', onAddToSpace }: StickyArticleHeaderProps) {
+export function StickyArticleHeader({ title, titleRef, backLink = '/discover', backLabel = 'Discover', onAddToSpace, spacesCount = 0 }: StickyArticleHeaderProps) {
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [showOverflowMenu, setShowOverflowMenu] = useState(false);
   const [showShareModal, setShowShareModal] = useState(false);
@@ -126,7 +127,12 @@ export function StickyArticleHeader({ title, titleRef, backLink = '/discover', b
                   className="w-full flex items-center gap-3 px-4 py-3 text-sm text-os-text-primary-dark hover:bg-os-bg-dark transition-colors"
                 >
                   <Plus className="w-4 h-4" />
-                  <span>Add to Space</span>
+                  <span className="flex-1 text-left">Add to Space</span>
+                  {spacesCount > 0 && (
+                    <span className="px-1.5 py-0.5 text-[10px] font-medium rounded-full bg-brand-aperol/20 text-brand-aperol">
+                      {spacesCount}
+                    </span>
+                  )}
                 </button>
                 <button
                   onClick={() => {

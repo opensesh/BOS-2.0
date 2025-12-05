@@ -49,7 +49,7 @@ export default function StockDetailPage({ params }: PageProps) {
     <div className="flex h-screen bg-os-bg-dark dark:bg-os-bg-dark text-os-text-primary-dark font-sans">
       <Sidebar />
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden pt-14 lg:pt-0">
-        {/* Header - matches StickyArticleHeader style */}
+        {/* Header */}
         <header className="shrink-0 z-30 h-12 bg-os-bg-dark border-b border-os-border-dark/50">
           <div className="flex items-center justify-between h-full px-6 md:px-12 max-w-4xl mx-auto">
             {/* Left: Back to Finance */}
@@ -61,12 +61,7 @@ export default function StockDetailPage({ params }: PageProps) {
               <span className="text-sm font-medium hidden sm:inline">Finance</span>
             </Link>
 
-            {/* Center: Symbol */}
-            <h1 className="text-sm font-medium text-brand-vanilla">
-              {symbol}
-            </h1>
-
-            {/* Right: Actions placeholder */}
+            {/* Right: empty for now */}
             <div className="w-20" />
           </div>
         </header>
