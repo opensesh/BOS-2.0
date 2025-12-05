@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   FileText,
@@ -51,10 +51,18 @@ const brandHubNavItems = [
 
 export function NavigationDrawer({ isOpen, item, onClose, railRef, onDrawerEnter, onDrawerLeave }: NavigationDrawerProps) {
   const pathname = usePathname();
+  const router = useRouter();
   const drawerRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ top: 0, left: 0, height: 0 });
   const { chatHistory } = useChatContext();
   const { spaces: userSpaces, isLoaded: spacesLoaded } = useSpaces();
+
+  // Handler for link clicks - explicitly navigate and close drawer
+  const handleLinkClick = (href: string) => (e: React.MouseEvent) => {
+    e.preventDefault();
+    onClose();
+    router.push(href);
+  };
 
   useEffect(() => {
     if (isOpen && railRef.current && item) {
@@ -123,6 +131,7 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef, onDrawerEnter
                       >
                         <Link
                           href={`/spaces/${space.slug}`}
+                          onClick={handleLinkClick(`/spaces/${space.slug}`)}
                           className={`
                             w-full flex items-center gap-3 px-3 py-2 rounded-lg mb-1
                             transition-colors
@@ -221,6 +230,7 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef, onDrawerEnter
               <motion.div variants={fadeInUp} className="space-y-1 mb-4">
                 <Link
                   href="/discover?tab=News"
+                  onClick={handleLinkClick('/discover?tab=News')}
                   className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg transition-colors ${
                     isOnNews
                       ? 'bg-os-surface-dark text-brand-aperol'
@@ -232,6 +242,7 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef, onDrawerEnter
                 </Link>
                 <Link
                   href="/discover?tab=Ideas"
+                  onClick={handleLinkClick('/discover?tab=Ideas')}
                   className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg transition-colors ${
                     isOnIdeas
                       ? 'text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-brand-vanilla'
@@ -243,6 +254,7 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef, onDrawerEnter
                 </Link>
                 <Link
                   href="/discover/inspo"
+                  onClick={handleLinkClick('/discover/inspo')}
                   className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg transition-colors ${
                     isOnInspo
                       ? 'bg-os-surface-dark text-brand-aperol'
@@ -281,6 +293,7 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef, onDrawerEnter
                     <motion.div key={navItem.href} variants={fadeInUp} custom={index}>
                       <Link
                         href={navItem.href}
+                        onClick={handleLinkClick(navItem.href)}
                         className={`
                           w-full flex items-center gap-3 px-3 py-2 rounded-lg
                           transition-colors
@@ -304,6 +317,7 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef, onDrawerEnter
                 <motion.div variants={fadeInUp} className="mt-4 pt-4 border-t border-os-border-dark">
                   <Link
                     href="/brand-hub"
+                    onClick={handleLinkClick('/brand-hub')}
                     className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-lg text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-brand-vanilla transition-colors text-sm"
                   >
                     View All Assets
@@ -344,6 +358,7 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef, onDrawerEnter
                     <motion.div key={navItem.href} variants={fadeInUp} custom={index}>
                       <Link
                         href={navItem.href}
+                        onClick={handleLinkClick(navItem.href)}
                         className={`
                           w-full flex items-center gap-3 px-3 py-2 rounded-lg
                           transition-colors
@@ -367,6 +382,7 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef, onDrawerEnter
                 <motion.div variants={fadeInUp} className="mt-4 pt-4 border-t border-os-border-dark">
                   <Link
                     href="/brain"
+                    onClick={handleLinkClick('/brain')}
                     className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-lg text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-brand-vanilla transition-colors text-sm"
                   >
                     View Brain Overview
@@ -408,7 +424,7 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef, onDrawerEnter
         <motion.div
           ref={drawerRef}
           data-navigation-drawer
-          className="hidden lg:block fixed z-50 w-[220px] bg-os-bg-darker border-r border-os-border-dark shadow-xl overflow-y-auto"
+          className="hidden lg:block fixed z-50 w-[220px] bg-os-bg-darker border-r border-os-border-dark shadow-xl overflow-y-auto pointer-events-auto"
           style={{
             top: `${position.top}px`,
             left: `${position.left}px`,
