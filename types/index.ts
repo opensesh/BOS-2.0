@@ -43,6 +43,7 @@ export interface SpaceTask {
   id: string;
   title: string;
   description?: string;
+  assignee?: string;
   completed: boolean;
   createdAt: string;
 }

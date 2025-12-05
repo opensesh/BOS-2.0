@@ -44,24 +44,23 @@ export function Modal({
       document.addEventListener('keydown', handleKeyDown);
       document.body.style.overflow = 'hidden';
 
-      // Focus handling - find first focusable element or fall back to modal container
+      // Focus handling - find first input/textarea in the body, not header buttons
       if (autoFocusFirst && modalRef.current) {
-        const focusableSelectors = [
+        // Prioritize inputs and textareas in the modal body over header buttons
+        const inputSelectors = [
           'input:not([disabled]):not([type="hidden"])',
           'textarea:not([disabled])',
           'select:not([disabled])',
-          'button:not([disabled])',
-          '[tabindex]:not([tabindex="-1"])',
         ].join(', ');
 
         // Small delay to let the modal render completely
         requestAnimationFrame(() => {
-          const firstFocusable = modalRef.current?.querySelector<HTMLElement>(
-            focusableSelectors
-          );
-          if (firstFocusable) {
-            firstFocusable.focus();
+          // First try to find an input/textarea/select (skip buttons in header)
+          const firstInput = modalRef.current?.querySelector<HTMLElement>(inputSelectors);
+          if (firstInput) {
+            firstInput.focus();
           } else {
+            // Fall back to modal container if no inputs found
             modalRef.current?.focus();
           }
         });

@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { Modal } from '@/components/ui/Modal';
-import { Plus, X, Square, CheckSquare } from 'lucide-react';
+import { Plus, X, Square, CheckSquare, User } from 'lucide-react';
 import { SpaceTask } from '@/types';
 
 interface AddTasksModalProps {
@@ -24,6 +24,7 @@ export function AddTasksModal({
 }: AddTasksModalProps) {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
+  const [assignee, setAssignee] = useState('');
   const titleInputRef = useRef<HTMLInputElement>(null);
 
   // Auto-focus title input when modal opens
@@ -32,7 +33,7 @@ export function AddTasksModal({
       // Small delay to ensure modal animation completes
       const timer = setTimeout(() => {
         titleInputRef.current?.focus();
-      }, 100);
+      }, 150);
       return () => clearTimeout(timer);
     }
   }, [isOpen]);
@@ -43,11 +44,13 @@ export function AddTasksModal({
     onAddTask({
       title: title.trim(),
       description: description.trim() || undefined,
+      assignee: assignee.trim() || undefined,
     });
 
     // Reset form and refocus for adding more tasks
     setTitle('');
     setDescription('');
+    setAssignee('');
     titleInputRef.current?.focus();
   };
 
@@ -61,6 +64,7 @@ export function AddTasksModal({
   const handleClose = () => {
     setTitle('');
     setDescription('');
+    setAssignee('');
     onClose();
   };
 
@@ -70,19 +74,13 @@ export function AddTasksModal({
   return (
     <Modal isOpen={isOpen} onClose={handleClose} title="Add Tasks" size="md">
       {/* Add new task form */}
-      <form 
-        onSubmit={(e) => {
-          e.preventDefault();
-          handleAddTask();
-        }}
-        className="space-y-4"
-      >
+      <div className="space-y-4">
         <div>
           <label 
             htmlFor="task-title"
             className="block text-sm font-medium text-os-text-primary-dark mb-1.5"
           >
-            Task title <span className="text-red-500">*</span>
+            Task title
           </label>
           <input
             ref={titleInputRef}
@@ -108,13 +106,13 @@ export function AddTasksModal({
             htmlFor="task-description"
             className="block text-sm font-medium text-os-text-primary-dark mb-1.5"
           >
-            Description <span className="text-os-text-secondary-dark font-normal">(optional)</span>
+            Description
           </label>
           <textarea
             id="task-description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            placeholder="Add more details..."
+            placeholder="Add more details (optional)"
             rows={2}
             className="
               w-full px-3 py-2.5 rounded-xl resize-none
@@ -126,15 +124,33 @@ export function AddTasksModal({
           />
         </div>
 
-        <button
-          type="submit"
-          disabled={!title.trim()}
-          className="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-xl text-sm font-medium text-white bg-brand-aperol hover:bg-brand-aperol/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          <Plus className="w-4 h-4" />
-          Add Task
-        </button>
-      </form>
+        <div>
+          <label 
+            htmlFor="task-assignee"
+            className="block text-sm font-medium text-os-text-primary-dark mb-1.5"
+          >
+            Assignee
+          </label>
+          <div className="relative">
+            <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-os-text-secondary-dark" />
+            <input
+              id="task-assignee"
+              type="text"
+              value={assignee}
+              onChange={(e) => setAssignee(e.target.value)}
+              placeholder="Assign to someone (optional)"
+              autoComplete="off"
+              className="
+                w-full pl-10 pr-3 py-2.5 rounded-xl
+                bg-os-border-dark border border-os-border-dark
+                text-os-text-primary-dark placeholder-os-text-secondary-dark
+                focus:outline-none focus:ring-2 focus:ring-brand-aperol/50 focus:border-brand-aperol
+                transition-colors
+              "
+            />
+          </div>
+        </div>
+      </div>
 
       {/* Existing tasks */}
       {existingTasks.length > 0 && (
@@ -165,7 +181,7 @@ export function AddTasksModal({
             </div>
           )}
 
-          <div className="space-y-2 max-h-64 overflow-y-auto custom-scrollbar pr-1">
+          <div className="space-y-2 max-h-48 overflow-y-auto custom-scrollbar pr-1">
             {existingTasks.map((task) => (
               <div
                 key={task.id}
@@ -205,6 +221,12 @@ export function AddTasksModal({
                       {task.description}
                     </p>
                   )}
+                  {task.assignee && (
+                    <div className="flex items-center gap-1 mt-1.5">
+                      <User className="w-3 h-3 text-os-text-secondary-dark" />
+                      <span className="text-xs text-os-text-secondary-dark">{task.assignee}</span>
+                    </div>
+                  )}
                 </div>
                 {onRemoveTask && (
                   <button
@@ -222,27 +244,25 @@ export function AddTasksModal({
         </div>
       )}
 
-      {/* Empty state hint when no tasks */}
-      {existingTasks.length === 0 && (
-        <div className="mt-4 p-4 rounded-xl bg-os-surface-dark/50 text-center">
-          <p className="text-sm text-os-text-secondary-dark">
-            Add tasks to track what needs to be done in this space.
-          </p>
-        </div>
-      )}
-
-      {/* Footer */}
-      <div className="flex justify-end mt-6 pt-4 border-t border-os-border-dark">
+      {/* Footer with action buttons */}
+      <div className="flex justify-end gap-3 mt-6 pt-4 border-t border-os-border-dark">
         <button
           type="button"
           onClick={handleClose}
           className="px-4 py-2.5 rounded-xl text-sm font-medium text-os-text-primary-dark bg-os-border-dark hover:bg-os-border-dark/80 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-aperol/50"
         >
-          Done
+          Cancel
+        </button>
+        <button
+          type="button"
+          onClick={handleAddTask}
+          disabled={!title.trim()}
+          className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium text-white bg-brand-aperol hover:bg-brand-aperol/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-brand-aperol/50"
+        >
+          <Plus className="w-4 h-4" />
+          Add Task
         </button>
       </div>
     </Modal>
   );
 }
-
-
