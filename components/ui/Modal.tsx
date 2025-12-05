@@ -37,12 +37,32 @@ export function Modal({
     [onClose]
   );
 
-  // Focus trap and escape key handling
+  // Track if we've already focused on initial open
+  const hasFocusedRef = useRef(false);
+
+  // Reset focus tracking when modal closes
+  useEffect(() => {
+    if (!isOpen) {
+      hasFocusedRef.current = false;
+    }
+  }, [isOpen]);
+
+  // Escape key handling - separate from focus to avoid re-running focus logic
   useEffect(() => {
     if (isOpen) {
-      previousActiveElement.current = document.activeElement as HTMLElement;
       document.addEventListener('keydown', handleKeyDown);
+      return () => {
+        document.removeEventListener('keydown', handleKeyDown);
+      };
+    }
+  }, [isOpen, handleKeyDown]);
+
+  // Focus and body scroll management - only run once when modal opens
+  useEffect(() => {
+    if (isOpen && !hasFocusedRef.current) {
+      previousActiveElement.current = document.activeElement as HTMLElement;
       document.body.style.overflow = 'hidden';
+      hasFocusedRef.current = true;
 
       // Focus handling - find first input/textarea in the body, not header buttons
       if (autoFocusFirst && modalRef.current) {
@@ -67,14 +87,16 @@ export function Modal({
       } else {
         modalRef.current?.focus();
       }
+    }
 
-      return () => {
-        document.removeEventListener('keydown', handleKeyDown);
+    // Cleanup when modal closes
+    return () => {
+      if (!isOpen) {
         document.body.style.overflow = '';
         previousActiveElement.current?.focus();
-      };
-    }
-  }, [isOpen, handleKeyDown, autoFocusFirst]);
+      }
+    };
+  }, [isOpen, autoFocusFirst]);
 
   // Handle click outside to close
   const handleBackdropClick = useCallback(

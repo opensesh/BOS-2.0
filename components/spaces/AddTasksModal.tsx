@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { Modal } from '@/components/ui/Modal';
 import { Plus, X, Square, CheckSquare, User } from 'lucide-react';
 import { SpaceTask } from '@/types';
@@ -27,16 +27,7 @@ export function AddTasksModal({
   const [assignee, setAssignee] = useState('');
   const titleInputRef = useRef<HTMLInputElement>(null);
 
-  // Auto-focus title input when modal opens
-  useEffect(() => {
-    if (isOpen) {
-      // Small delay to ensure modal animation completes
-      const timer = setTimeout(() => {
-        titleInputRef.current?.focus();
-      }, 150);
-      return () => clearTimeout(timer);
-    }
-  }, [isOpen]);
+  // Modal component handles auto-focus on first input
 
   const handleAddTask = () => {
     if (!title.trim()) return;
