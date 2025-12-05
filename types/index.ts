@@ -37,6 +37,7 @@ export interface SpaceLink {
   title?: string;
   description?: string;
   addedAt: string;
+  articleId?: string; // If the link was added from an article
 }
 
 export interface SpaceTask {
@@ -319,6 +320,17 @@ export interface NewsData {
 }
 
 /**
+ * Content format types by category
+ * - short-form: Instagram Reels, Carousels, Stories, Quick Images
+ * - long-form: YouTube videos, tutorials, livestreams
+ * - blog: Articles, listicles, case studies, guides
+ */
+export type ShortFormFormat = 'reel' | 'carousel' | 'story' | 'quick-image';
+export type LongFormFormat = 'video' | 'tutorial' | 'livestream' | 'documentary';
+export type BlogFormat = 'article' | 'listicle' | 'case-study' | 'guide' | 'thread';
+export type ContentFormat = ShortFormFormat | LongFormFormat | BlogFormat;
+
+/**
  * Rich idea item with full creative brief for JSON storage
  */
 export interface IdeaItem {
@@ -326,6 +338,9 @@ export interface IdeaItem {
   description: string;
   starred?: boolean;
   sources: Array<{ name: string; url: string }>;
+  
+  // Content format (e.g., 'reel', 'carousel', 'video', 'article')
+  format?: ContentFormat;
   
   // Rich creative brief fields (optional for backwards compatibility)
   hooks?: string[];
@@ -344,6 +359,9 @@ export interface IdeaItem {
   pexelsImageUrl?: string;             // Pexels image URL for card thumbnail
   textureIndex?: number;               // Index 1-13 for sonic line background texture
 }
+
+// Type alias for backwards compatibility with ideas-generator.ts
+export type InspirationItem = IdeaItem;
 
 export interface IdeaData {
   type: 'short-form' | 'long-form' | 'blog';

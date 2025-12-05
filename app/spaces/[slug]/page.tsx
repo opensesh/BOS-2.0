@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { useParams, useRouter } from 'next/navigation';
 import { ArrowLeft } from 'lucide-react';
@@ -15,15 +15,19 @@ import { AddFilesModal } from '@/components/spaces/AddFilesModal';
 import { AddLinksModal } from '@/components/spaces/AddLinksModal';
 import { AddInstructionsModal } from '@/components/spaces/AddInstructionsModal';
 import { AddTasksModal } from '@/components/spaces/AddTasksModal';
+import { SpaceArticlesDrawer } from '@/components/spaces/SpaceArticlesDrawer';
 import {
   Upload,
   Link as LinkIcon,
   FileText,
-  Calendar,
+  ListTodo,
   MessageSquare,
+  Newspaper,
+  Plus,
 } from 'lucide-react';
+import { NewsCardData } from '@/types';
 
-type ModalType = 'files' | 'links' | 'instructions' | 'tasks' | null;
+type ModalType = 'files' | 'links' | 'instructions' | 'tasks' | 'articles' | null;
 
 export default function SpacePage() {
   const params = useParams();
@@ -55,6 +59,34 @@ export default function SpacePage() {
   } = useSpaceDiscussions(slug);
 
   const space = getSpace(slug);
+
+  // Track added article IDs for the drawer
+  const addedArticleIds = useMemo(() => {
+    const ids = new Set<string>();
+    space?.links?.forEach(link => {
+      // Check if link has an articleId property (for articles added from drawer)
+      if (link.articleId) {
+        ids.add(link.articleId);
+      }
+    });
+    return ids;
+  }, [space?.links]);
+
+  // Handle adding an article to the space
+  const handleAddArticle = (article: NewsCardData) => {
+    if (!space) return;
+    
+    // Add the article as a link with additional metadata
+    addLink(space.id, {
+      url: `/discover/${article.slug}`,
+      title: article.title,
+      description: article.summary,
+      articleId: article.id,
+    });
+    
+    // Close the drawer after adding
+    setActiveModal(null);
+  };
 
   // Check if this is a user space (can be edited/deleted) or an example space
   const isUserSpace = spaces.some((s) => s.slug === slug);
@@ -99,20 +131,50 @@ export default function SpacePage() {
     );
   }
 
-  const getButtonCountBadge = (count: number) => {
-    if (count === 0) return null;
-    return (
-      <span className="ml-1.5 px-1.5 py-0.5 text-xs rounded-full bg-brand-aperol/20 text-brand-aperol">
-        {count}
-      </span>
-    );
-  };
-
   const hasResources =
     (space.files && space.files.length > 0) ||
     (space.links && space.links.length > 0) ||
     (space.instructions && space.instructions.trim()) ||
     (space.tasks && space.tasks.length > 0);
+
+  // Resource button configuration
+  const resourceButtons = [
+    {
+      id: 'files' as const,
+      icon: Upload,
+      label: 'Files',
+      count: space.files?.length || 0,
+      hasContent: (space.files?.length || 0) > 0,
+    },
+    {
+      id: 'links' as const,
+      icon: LinkIcon,
+      label: 'Links',
+      count: space.links?.length || 0,
+      hasContent: (space.links?.length || 0) > 0,
+    },
+    {
+      id: 'articles' as const,
+      icon: Newspaper,
+      label: 'Articles',
+      count: addedArticleIds.size,
+      hasContent: addedArticleIds.size > 0,
+    },
+    {
+      id: 'instructions' as const,
+      icon: FileText,
+      label: 'Instructions',
+      count: 0,
+      hasContent: !!(space.instructions && space.instructions.trim()),
+    },
+    {
+      id: 'tasks' as const,
+      icon: ListTodo,
+      label: 'Tasks',
+      count: space.tasks?.length || 0,
+      hasContent: (space.tasks?.length || 0) > 0,
+    },
+  ];
 
   return (
     <div className="flex h-screen bg-os-bg-dark dark:bg-os-bg-dark text-os-text-primary-dark font-sans overflow-hidden">
@@ -148,42 +210,62 @@ export default function SpacePage() {
               <p className="text-os-text-secondary-dark mb-8">{space.description}</p>
             )}
 
-            {/* Action Buttons */}
-            <div className="flex flex-wrap gap-3 mb-6">
-              <button
-                onClick={() => setActiveModal('files')}
-                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-os-surface-dark hover:bg-os-border-dark text-os-text-primary-dark transition-colors"
-              >
-                <Upload className="w-4 h-4" />
-                <span className="text-sm">Add files</span>
-                {getButtonCountBadge(space.files?.length || 0)}
-              </button>
-              <button
-                onClick={() => setActiveModal('links')}
-                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-os-surface-dark hover:bg-os-border-dark text-os-text-primary-dark transition-colors"
-              >
-                <LinkIcon className="w-4 h-4" />
-                <span className="text-sm">Add links</span>
-                {getButtonCountBadge(space.links?.length || 0)}
-              </button>
-              <button
-                onClick={() => setActiveModal('instructions')}
-                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-os-surface-dark hover:bg-os-border-dark text-os-text-primary-dark transition-colors"
-              >
-                <FileText className="w-4 h-4" />
-                <span className="text-sm">Add instructions</span>
-                {space.instructions && (
-                  <span className="ml-1.5 w-2 h-2 rounded-full bg-brand-aperol" />
-                )}
-              </button>
-              <button
-                onClick={() => setActiveModal('tasks')}
-                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-os-surface-dark hover:bg-os-border-dark text-os-text-primary-dark transition-colors"
-              >
-                <Calendar className="w-4 h-4" />
-                <span className="text-sm">Add tasks</span>
-                {getButtonCountBadge(space.tasks?.length || 0)}
-              </button>
+            {/* Resource Button Rail */}
+            <div className="mb-8">
+              <div className="flex items-center gap-2 mb-3">
+                <Plus className="w-3.5 h-3.5 text-os-text-secondary-dark" />
+                <span className="text-xs font-medium text-os-text-secondary-dark uppercase tracking-wide">
+                  Resources
+                </span>
+                <div className="flex-1 h-px bg-os-border-dark/50" />
+              </div>
+              
+              <div className="flex items-start gap-1">
+                {resourceButtons.map((btn) => {
+                  const Icon = btn.icon;
+                  return (
+                    <button
+                      key={btn.id}
+                      onClick={() => setActiveModal(btn.id)}
+                      className="group relative flex flex-col items-center gap-1.5 px-3 py-2.5 rounded-xl hover:bg-os-surface-dark/80 transition-all duration-200"
+                    >
+                      {/* Icon Container */}
+                      <div className={`
+                        relative w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-200
+                        ${btn.hasContent 
+                          ? 'bg-brand-aperol/10 text-brand-aperol group-hover:bg-brand-aperol/20' 
+                          : 'bg-os-surface-dark text-os-text-secondary-dark group-hover:bg-os-border-dark group-hover:text-os-text-primary-dark'
+                        }
+                      `}>
+                        <Icon className="w-5 h-5" />
+                        
+                        {/* Count Badge */}
+                        {btn.count > 0 && (
+                          <span className="absolute -top-1 -right-1 min-w-[18px] h-[18px] px-1 flex items-center justify-center text-[10px] font-semibold rounded-full bg-brand-aperol text-white">
+                            {btn.count}
+                          </span>
+                        )}
+                        
+                        {/* Dot indicator for instructions (no count) */}
+                        {btn.id === 'instructions' && btn.hasContent && (
+                          <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-brand-aperol" />
+                        )}
+                      </div>
+                      
+                      {/* Label */}
+                      <span className={`
+                        text-[11px] font-medium transition-colors duration-200
+                        ${btn.hasContent 
+                          ? 'text-os-text-primary-dark' 
+                          : 'text-os-text-secondary-dark group-hover:text-os-text-primary-dark'
+                        }
+                      `}>
+                        {btn.label}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
             </div>
 
             {/* Resource Cards */}
@@ -285,6 +367,13 @@ export default function SpacePage() {
         existingTasks={space.tasks}
         onToggleTask={isUserSpace ? (taskId) => toggleTask(space.id, taskId) : undefined}
         onRemoveTask={isUserSpace ? (taskId) => removeTask(space.id, taskId) : undefined}
+      />
+
+      <SpaceArticlesDrawer
+        isOpen={activeModal === 'articles'}
+        onClose={() => setActiveModal(null)}
+        onAddArticle={handleAddArticle}
+        addedArticleIds={addedArticleIds}
       />
     </div>
   );
