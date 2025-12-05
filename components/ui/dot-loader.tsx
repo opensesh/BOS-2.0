@@ -81,3 +81,4 @@ export const DotLoader = ({
         </div>
     );
 };
+

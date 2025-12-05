@@ -94,3 +94,4 @@ export function StockStatsCompact({ quote }: { quote: Quote | null }) {
 }
 
 
+
