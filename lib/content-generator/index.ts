@@ -31,6 +31,7 @@ export {
 // Ideas Generator
 export {
   PLATFORMS_BY_CATEGORY,
+  FORMATS_BY_CATEGORY,
   generateRichIdea,
   generateIdeasBatch,
   transformTopicToIdeas,

@@ -319,6 +319,8 @@ export function processIdeaData(data: IdeaData): IdeaCardData[] {
       category: data.type,
       starred: idea.starred,
       isPrompt: true as const, // Always true - idea items are content prompts
+      // Content format (e.g., 'reel', 'carousel', 'video', 'article')
+      format: idea.format,
       // Rich creative brief fields (optional for backwards compatibility, also decode)
       hooks: idea.hooks?.map(h => decodeHTMLEntities(h)),
       platformTips: idea.platformTips as PlatformTip[] | undefined,

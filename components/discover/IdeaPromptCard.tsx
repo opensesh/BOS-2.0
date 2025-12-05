@@ -191,6 +191,7 @@ Please provide:
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 320px"
+              unoptimized
             />
           </div>
         </div>
@@ -213,6 +214,7 @@ Please provide:
           fill
           className="object-cover"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          unoptimized
         />
         {/* Loading overlay */}
         {isGenerating && (

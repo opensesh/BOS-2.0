@@ -13,7 +13,7 @@
 
 import { anthropic } from '@ai-sdk/anthropic';
 import { generateText } from 'ai';
-import type { InspirationItem, PlatformTip, VisualDirection } from '@/types';
+import type { InspirationItem, PlatformTip, VisualDirection, ShortFormFormat, LongFormFormat, BlogFormat, ContentFormat } from '@/types';
 
 // ===========================================
 // Platform Configuration
@@ -26,6 +26,38 @@ export const PLATFORMS_BY_CATEGORY = {
   'short-form': ['Instagram Reel', 'Instagram Carousel', 'YouTube Short', 'LinkedIn'] as const,
   'long-form': ['YouTube'] as const,
   'blog': ['Substack', 'Medium', 'LinkedIn Article'] as const,
+};
+
+/**
+ * Format options by content category - used to ensure variety
+ */
+export const FORMATS_BY_CATEGORY: {
+  'short-form': ShortFormFormat[];
+  'long-form': LongFormFormat[];
+  'blog': BlogFormat[];
+} = {
+  'short-form': ['reel', 'carousel', 'story', 'quick-image'],
+  'long-form': ['video', 'tutorial', 'livestream', 'documentary'],
+  'blog': ['article', 'listicle', 'case-study', 'guide', 'thread'],
+};
+
+/**
+ * Format display names for prompts
+ */
+const FORMAT_DISPLAY_NAMES: Record<ContentFormat, string> = {
+  'reel': 'Instagram Reel/TikTok/YouTube Short',
+  'carousel': 'Instagram Carousel (multi-slide)',
+  'story': 'Instagram Story Series',
+  'quick-image': 'Quick Image Post/Meme',
+  'video': 'YouTube Video',
+  'tutorial': 'Step-by-Step Tutorial',
+  'livestream': 'Live Stream/Q&A',
+  'documentary': 'Documentary-Style Video',
+  'article': 'Long-Form Article',
+  'listicle': 'Listicle (X Things...)',
+  'case-study': 'Case Study Deep-Dive',
+  'guide': 'Comprehensive Guide',
+  'thread': 'Twitter/X Thread',
 };
 
 /**
@@ -97,6 +129,7 @@ VISUAL DIRECTION RATING SCALE (1-10):
 // ===========================================
 
 interface GeneratedIdea {
+  format: ContentFormat;
   hooks: string[];
   platformTips: PlatformTip[];
   visualDirection: VisualDirection;
@@ -106,15 +139,22 @@ interface GeneratedIdea {
 
 /**
  * Generate a rich creative brief for an idea
+ * @param assignedFormat - Pre-assigned format to ensure variety across batch
  */
 export async function generateRichIdea(
   title: string,
   description: string,
   category: 'short-form' | 'long-form' | 'blog',
-  sources: Array<{ name: string; url: string }>
+  sources: Array<{ name: string; url: string }>,
+  assignedFormat?: ContentFormat
 ): Promise<GeneratedIdea> {
   const platforms = PLATFORMS_BY_CATEGORY[category];
   const contentContext = CONTENT_TYPE_CONTEXT[category];
+  const formats = FORMATS_BY_CATEGORY[category];
+  
+  // Use assigned format or pick random one
+  const format = assignedFormat || formats[Math.floor(Math.random() * formats.length)];
+  const formatDisplayName = FORMAT_DISPLAY_NAMES[format];
   
   const sourceList = sources
     .map(s => `- ${s.name}: ${s.url}`)
@@ -133,21 +173,24 @@ Generate a complete creative brief for this content idea:
 TITLE: ${title}
 DESCRIPTION: ${description}
 CATEGORY: ${category}
+FORMAT: ${formatDisplayName}
 SOURCES:
 ${sourceList}
+
+IMPORTANT: This idea MUST be optimized for the "${formatDisplayName}" format specifically. Tailor all hooks, tips, visuals, and outline to this format.
 
 Provide your response in this EXACT JSON format:
 {
   "hooks": [
-    "First attention-grabbing hook (5-10 words max)",
-    "Second alternative hook",
-    "Third alternative hook"
+    "First attention-grabbing hook optimized for ${formatDisplayName} (5-10 words max)",
+    "Second alternative hook for ${formatDisplayName}",
+    "Third alternative hook for ${formatDisplayName}"
   ],
   "platformTips": [
 ${platforms.map(p => `    {
       "platform": "${p}",
       "tips": [
-        "Specific tip for ${p}",
+        "Specific tip for ${p} when creating a ${formatDisplayName}",
         "Another tip for ${p}",
         "Third tip for ${p}"
       ]
@@ -155,10 +198,10 @@ ${platforms.map(p => `    {
   ],
   "visualDirection": {
     "rating": 7,
-    "description": "Describe the visual approach: color mood, composition style, typography treatment, motion/animation notes, aesthetic references"
+    "description": "Describe the visual approach specifically for ${formatDisplayName}: color mood, composition style, typography treatment, motion/animation notes, aesthetic references"
   },
   "exampleOutline": [
-    "Section 1: Hook/Opening",
+    "Section 1: Hook/Opening for ${formatDisplayName}",
     "Section 2: Context/Problem",
     "Section 3: Core content",
     "Section 4: Key insight",
@@ -168,10 +211,10 @@ ${platforms.map(p => `    {
 }
 
 IMPORTANT:
-- Hooks must be punchy, curiosity-sparking, and under 10 words
-- Platform tips must be specific and actionable for that exact platform
+- Hooks must be punchy, curiosity-sparking, and under 10 words - optimized for ${formatDisplayName}
+- Platform tips must be specific and actionable for that exact platform and format
 - Visual direction rating should match the topic's potential (design topics can be bolder)
-- Outline should match the content type structure
+- Outline should match the ${formatDisplayName} structure specifically
 - Include 10-15 relevant hashtags for discoverability
 - Output ONLY valid JSON, no markdown or explanation`;
 
@@ -189,18 +232,22 @@ IMPORTANT:
       throw new Error('No valid JSON found in response');
     }
 
-    const parsed = JSON.parse(jsonMatch[0]) as GeneratedIdea;
+    const parsed = JSON.parse(jsonMatch[0]) as Omit<GeneratedIdea, 'format'>;
     
     // Validate required fields
     if (!parsed.hooks || !parsed.platformTips || !parsed.visualDirection || !parsed.exampleOutline || !parsed.hashtags) {
       throw new Error('Missing required fields in generated idea');
     }
 
-    return parsed;
+    // Return with the assigned format
+    return {
+      format,
+      ...parsed,
+    };
   } catch (error) {
     console.error('Error generating rich idea:', error);
     // Return a fallback structure
-    return generateFallbackIdea(title, description, category);
+    return generateFallbackIdea(title, description, category, format);
   }
 }
 
@@ -210,11 +257,13 @@ IMPORTANT:
 function generateFallbackIdea(
   title: string,
   description: string,
-  category: 'short-form' | 'long-form' | 'blog'
+  category: 'short-form' | 'long-form' | 'blog',
+  format: ContentFormat
 ): GeneratedIdea {
   const platforms = PLATFORMS_BY_CATEGORY[category];
   
   return {
+    format,
     hooks: [
       `This changes everything about ${title.split(' ').slice(0, 3).join(' ')}...`,
       `What nobody tells you about ${title.split(' ').slice(0, 3).join(' ')}`,
@@ -261,6 +310,7 @@ function generateFallbackIdea(
 
 /**
  * Generate multiple ideas with rich briefs from news topics
+ * Ensures format variety by rotating through available formats for the category
  */
 export async function generateIdeasBatch(
   newsTopics: Array<{
@@ -279,18 +329,29 @@ export async function generateIdeasBatch(
   const ideas: InspirationItem[] = [];
 
   const topicsToProcess = newsTopics.slice(0, maxIdeas);
+  
+  // Get available formats for this category and shuffle them for variety
+  const availableFormats = [...FORMATS_BY_CATEGORY[category]];
+  // Shuffle the formats array
+  for (let i = availableFormats.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [availableFormats[i], availableFormats[j]] = [availableFormats[j], availableFormats[i]];
+  }
 
   for (let i = 0; i < topicsToProcess.length; i++) {
     const topic = topicsToProcess[i];
+    // Rotate through formats to ensure variety (cycle back if more topics than formats)
+    const assignedFormat = availableFormats[i % availableFormats.length];
     
     try {
-      console.log(`Generating ${category} idea ${i + 1}/${topicsToProcess.length}: "${topic.title.slice(0, 40)}..."`);
+      console.log(`Generating ${category} idea ${i + 1}/${topicsToProcess.length} [${assignedFormat}]: "${topic.title.slice(0, 40)}..."`);
       
       const richIdea = await generateRichIdea(
         topic.title,
         topic.description,
         category,
-        topic.sources
+        topic.sources,
+        assignedFormat
       );
 
       ideas.push({
@@ -298,6 +359,7 @@ export async function generateIdeasBatch(
         description: topic.description,
         starred: i === 0, // Star the first idea
         sources: topic.sources,
+        format: richIdea.format,
         hooks: richIdea.hooks,
         platformTips: richIdea.platformTips,
         visualDirection: richIdea.visualDirection,

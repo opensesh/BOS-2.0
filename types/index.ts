@@ -250,6 +250,9 @@ export interface IdeaCardData {
   starred?: boolean;
   isPrompt: true; // Always true - idea items are content prompts
   
+  // Content format (e.g., 'reel', 'carousel', 'video', 'article')
+  format?: ContentFormat;
+  
   // Rich creative brief fields (optional for backwards compatibility)
   hooks?: string[];                    // 2-3 attention-grabbing hook ideas
   platformTips?: PlatformTip[];        // Platform-specific execution guidance

@@ -26,8 +26,31 @@ function getCategoryInfo(category: IdeaCardData['category']) {
   }
 }
 
-// Get format label based on title keywords
-function getFormatLabel(title: string, category: IdeaCardData['category']): string {
+// Format display names mapping
+const FORMAT_LABELS: Record<string, string> = {
+  'reel': 'Reel',
+  'carousel': 'Carousel',
+  'story': 'Story',
+  'quick-image': 'Quick Image',
+  'video': 'Video',
+  'tutorial': 'Tutorial',
+  'livestream': 'Livestream',
+  'documentary': 'Documentary',
+  'article': 'Article',
+  'listicle': 'Listicle',
+  'case-study': 'Case Study',
+  'guide': 'Guide',
+  'thread': 'Thread',
+};
+
+// Get format label - uses format field if available, falls back to title keywords
+function getFormatLabel(title: string, category: IdeaCardData['category'], format?: string): string {
+  // Use format field if available
+  if (format && FORMAT_LABELS[format]) {
+    return FORMAT_LABELS[format];
+  }
+  
+  // Fallback: detect from title keywords
   const lowerTitle = title.toLowerCase();
   
   if (lowerTitle.includes('carousel')) return 'Carousel';
@@ -38,6 +61,7 @@ function getFormatLabel(title: string, category: IdeaCardData['category']): stri
   if (lowerTitle.includes('tutorial')) return 'Tutorial';
   if (lowerTitle.includes('guide')) return 'Guide';
   if (lowerTitle.includes('listicle')) return 'Listicle';
+  if (lowerTitle.includes('case study') || lowerTitle.includes('case-study')) return 'Case Study';
   
   const defaults: Record<string, string> = {
     'short-form': 'Reel',
@@ -49,7 +73,7 @@ function getFormatLabel(title: string, category: IdeaCardData['category']): stri
 
 export function IdeaCard({ item, variant = 'compact' }: IdeaCardProps) {
   const categoryInfo = getCategoryInfo(item.category);
-  const formatLabel = getFormatLabel(item.title, item.category);
+  const formatLabel = getFormatLabel(item.title, item.category, item.format);
   const CategoryIcon = categoryInfo.icon;
   
   // Get texture - use pre-assigned index or derive from title
@@ -115,6 +139,7 @@ export function IdeaCard({ item, variant = 'compact' }: IdeaCardProps) {
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 320px"
+              unoptimized
             />
           </div>
         </div>
@@ -136,6 +161,7 @@ export function IdeaCard({ item, variant = 'compact' }: IdeaCardProps) {
           fill
           className="object-cover"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          unoptimized
         />
       </div>
 
