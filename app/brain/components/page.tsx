@@ -109,7 +109,7 @@ function ComponentsContent() {
                 <span className="text-sm font-medium">Back to Brain</span>
               </Link>
               
-              {/* Back to All Components - shown when viewing a component after coming from list */}
+              {/* All Components breadcrumb - shown when viewing a component after coming from list */}
               {fromListParam && !showListView && (
                 <>
                   <span className="text-os-text-secondary-dark/40">/</span>
@@ -119,10 +119,9 @@ function ComponentsContent() {
                       setShowListView(true);
                       router.push('/brain/components');
                     }}
-                    className="group inline-flex items-center gap-2 text-os-text-secondary-dark hover:text-brand-aperol transition-colors"
+                    className="text-os-text-secondary-dark hover:text-brand-aperol transition-colors"
                   >
-                    <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
-                    <span className="text-sm font-medium">Back to All Components</span>
+                    <span className="text-sm font-medium">All Components</span>
                   </button>
                 </>
               )}
