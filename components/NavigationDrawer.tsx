@@ -27,6 +27,7 @@ import {
   Layers,
   Newspaper,
   Shapes,
+  TrendingUp,
 } from 'lucide-react';
 import { useChatContext } from '@/lib/chat-context';
 import { useSpaces } from '@/hooks/useSpaces';
@@ -263,6 +264,7 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef }: NavigationD
         const isOnNews = pathname === '/discover' && !pathname.includes('inspo');
         const isOnIdeas = pathname === '/discover' && !pathname.includes('inspo'); // Ideas is on same page with tab
         const isOnInspo = pathname === '/discover/inspo';
+        const isOnFinance = pathname.startsWith('/finance');
         
         return (
           <motion.div 
@@ -309,6 +311,17 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef }: NavigationD
                 >
                   <Sparkles className="w-5 h-5" />
                   <span className="text-sm">Inspiration</span>
+                </Link>
+                <Link
+                  href="/finance"
+                  className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg transition-colors ${
+                    isOnFinance
+                      ? 'bg-os-surface-dark text-brand-aperol'
+                      : 'text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-brand-vanilla'
+                  }`}
+                >
+                  <TrendingUp className="w-5 h-5" />
+                  <span className="text-sm">Finance</span>
                 </Link>
               </motion.div>
             </div>
