@@ -3,7 +3,9 @@
 import React from 'react';
 import { ComponentDoc, componentRegistry } from './component-registry';
 
-// Import actual components
+// ============================================
+// DESIGN SYSTEM IMPORTS
+// ============================================
 import { BrandLoader } from '@/components/ui/brand-loader';
 import { Modal } from '@/components/ui/Modal';
 import { FlipCard } from '@/components/ui/FlipCard';
@@ -13,11 +15,28 @@ import { SearchResearchToggle } from '@/components/ui/search-research-toggle';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { TypewriterText } from '@/components/TypewriterText';
 import { BackgroundGradient } from '@/components/BackgroundGradient';
+import { Brandmark } from '@/components/Brandmark';
+
+// ============================================
+// APPLICATION IMPORTS
+// ============================================
+// Discover
 import { SpaceCard } from '@/components/SpaceCard';
 import { IdeaCard } from '@/components/discover/IdeaCard';
 import { TieredNewsCard } from '@/components/discover/TieredNewsCard';
 import { MarketWidget } from '@/components/discover/MarketWidget';
 import { WeatherWidget } from '@/components/discover/WeatherWidget';
+
+// Chat
+import { ChatTabNav, type ChatTab } from '@/components/chat/ChatTabNav';
+import { RelatedQuestions } from '@/components/chat/RelatedQuestions';
+
+// Finance
+import { StockStats } from '@/components/finance/StockStats';
+import { CompanyProfile } from '@/components/finance/CompanyProfile';
+
+// Spaces
+import { SpaceResourceCards } from '@/components/spaces/SpaceResourceCards';
 
 // ============================================
 // DESIGN SYSTEM COMPONENTS
@@ -59,6 +78,34 @@ const BrandLoaderDoc: ComponentDoc = {
     { id: 'small', name: 'Small', props: { size: 30, variant: 'pulse' } },
     { id: 'large', name: 'Large', props: { size: 120, variant: 'pulse' } },
     { id: 'rotating', name: 'Rotating', props: { size: 60, variant: 'rotate' } },
+  ],
+};
+
+// Brandmark Component
+const BrandmarkDoc: ComponentDoc = {
+  id: 'brandmark',
+  name: 'Brandmark',
+  description: 'The Brand OS logo mark component. Renders the vanilla-colored brandmark SVG at a configurable size.',
+  category: 'design-system',
+  component: Brandmark,
+  defaultProps: {
+    size: 48,
+  },
+  controls: [
+    {
+      name: 'size',
+      type: 'range',
+      description: 'Size of the brandmark in pixels',
+      defaultValue: 48,
+      min: 16,
+      max: 128,
+      step: 8,
+    },
+  ],
+  variants: [
+    { id: 'small', name: 'Small (24px)', props: { size: 24 } },
+    { id: 'medium', name: 'Medium (48px)', props: { size: 48 } },
+    { id: 'large', name: 'Large (96px)', props: { size: 96 } },
   ],
 };
 
@@ -299,7 +346,7 @@ const ButtonDoc: ComponentDoc = {
   ],
 };
 
-// Color Swatch Component (for demonstrating colors)
+// Color Swatch Component
 const ColorSwatchDemo = ({ 
   color, 
   name, 
@@ -510,10 +557,119 @@ const SearchResearchToggleDoc: ComponentDoc = {
 };
 
 // ============================================
-// APPLICATION COMPONENTS
+// APPLICATION COMPONENTS - CHAT
 // ============================================
 
-// Discover - NewsCard placeholder
+// ChatTabNav Component
+const ChatTabNavDemo = ({ activeTab, hasLinks, hasImages }: { activeTab: ChatTab; hasLinks: boolean; hasImages: boolean }) => {
+  return (
+    <div className="bg-os-surface-dark rounded-lg">
+      <ChatTabNav
+        activeTab={activeTab}
+        onTabChange={() => {}}
+        hasLinks={hasLinks}
+        hasImages={hasImages}
+        linksCount={hasLinks ? 12 : 0}
+        imagesCount={hasImages ? 6 : 0}
+      />
+    </div>
+  );
+};
+
+const ChatTabNavDoc: ComponentDoc = {
+  id: 'chat-tab-nav',
+  name: 'ChatTabNav',
+  description: 'Tab navigation for chat responses. Switches between Answer, Links, and Images views. Tabs are disabled when no content is available.',
+  category: 'application',
+  page: 'Chat',
+  component: ChatTabNavDemo,
+  defaultProps: {
+    activeTab: 'answer',
+    hasLinks: true,
+    hasImages: true,
+  },
+  controls: [
+    {
+      name: 'activeTab',
+      type: 'select',
+      description: 'Currently active tab',
+      defaultValue: 'answer',
+      options: [
+        { label: 'Answer', value: 'answer' },
+        { label: 'Links', value: 'links' },
+        { label: 'Images', value: 'images' },
+      ],
+    },
+    {
+      name: 'hasLinks',
+      type: 'boolean',
+      description: 'Whether links are available',
+      defaultValue: true,
+    },
+    {
+      name: 'hasImages',
+      type: 'boolean',
+      description: 'Whether images are available',
+      defaultValue: true,
+    },
+  ],
+  variants: [
+    { id: 'links-active', name: 'Links Active', props: { activeTab: 'links', hasLinks: true, hasImages: true } },
+    { id: 'images-active', name: 'Images Active', props: { activeTab: 'images', hasLinks: true, hasImages: true } },
+    { id: 'answer-only', name: 'Answer Only', props: { activeTab: 'answer', hasLinks: false, hasImages: false } },
+  ],
+};
+
+// RelatedQuestions Component
+const RelatedQuestionsDemo = () => {
+  const mockQuestions = [
+    'How does brand identity differ from brand image?',
+    'What are the key elements of a successful brand strategy?',
+    'How do companies measure brand value?',
+  ];
+
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-4 max-w-md">
+      <h3 className="text-[15px] font-semibold text-os-text-primary-dark mb-3">
+        Related
+      </h3>
+      <div className="divide-y divide-os-border-dark/50">
+        {mockQuestions.map((question, idx) => (
+          <button
+            key={idx}
+            className="w-full flex items-start gap-3 py-3 text-left hover:bg-os-surface-dark/30 transition-colors group -mx-2 px-2 rounded"
+          >
+            <svg className="w-4 h-4 text-os-text-secondary-dark mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <polyline points="9 10 4 15 9 20" />
+              <path d="M20 4v7a4 4 0 0 1-4 4H4" />
+            </svg>
+            <span className="text-[14px] text-os-text-primary-dark/80 group-hover:text-os-text-primary-dark transition-colors">
+              {question}
+            </span>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const RelatedQuestionsDoc: ComponentDoc = {
+  id: 'related-questions',
+  name: 'RelatedQuestions',
+  description: 'Displays contextually related follow-up questions based on the AI response. Questions are generated from the response content and original query.',
+  category: 'application',
+  page: 'Chat',
+  component: RelatedQuestionsDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// ============================================
+// APPLICATION COMPONENTS - DISCOVER
+// ============================================
+
+// NewsCard Demo
 const NewsCardDemo = ({
   title,
   source,
@@ -664,7 +820,6 @@ const TieredNewsCardDoc: ComponentDoc = {
     { id: 'featured-tier', name: 'Featured Tier', props: { title: 'Major Industry Shift', summary: 'In-depth analysis with 40+ sources.', tier: 'featured', variant: 'compact' } },
     { id: 'summary-tier', name: 'Summary Tier', props: { title: 'AI Summary Article', summary: 'AI-generated summary of the news.', tier: 'summary', variant: 'compact' } },
     { id: 'quick-tier', name: 'Quick Tier', props: { title: 'Quick News Update', summary: 'External link to original source.', tier: 'quick', variant: 'compact' } },
-    { id: 'featured-layout', name: 'Featured Layout', props: { title: 'Hero Article', summary: 'Large layout for hero placement.', tier: 'featured', variant: 'featured' } },
   ],
 };
 
@@ -754,7 +909,6 @@ const IdeaCardDoc: ComponentDoc = {
     { id: 'short-form', name: 'Short Form', props: { title: 'Reel: 5 Design Tips', description: 'Quick tips for better designs.', category: 'short-form', variant: 'compact' } },
     { id: 'long-form', name: 'Long Form', props: { title: 'Tutorial: Building a Design System', description: 'Complete walkthrough.', category: 'long-form', variant: 'compact' } },
     { id: 'blog', name: 'Blog Post', props: { title: 'Article: The Future of UX', description: 'Thought leadership piece.', category: 'blog', variant: 'compact' } },
-    { id: 'featured-variant', name: 'Featured Layout', props: { title: 'Featured Idea Card', description: 'Larger layout for hero placement.', category: 'short-form', variant: 'featured' } },
   ],
 };
 
@@ -783,6 +937,92 @@ const WeatherWidgetDoc: ComponentDoc = {
   controls: [],
   variants: [],
 };
+
+// ============================================
+// APPLICATION COMPONENTS - FINANCE
+// ============================================
+
+// StockStats Component
+const StockStatsDemo = () => {
+  const mockQuote = {
+    symbol: 'AAPL',
+    shortName: 'Apple Inc.',
+    regularMarketPrice: 195.27,
+    regularMarketChange: 2.35,
+    regularMarketChangePercent: 1.22,
+    regularMarketPreviousClose: 192.92,
+    regularMarketOpen: 193.50,
+    regularMarketDayHigh: 196.10,
+    regularMarketDayLow: 192.80,
+    regularMarketVolume: 52847600,
+    fiftyTwoWeekHigh: 199.62,
+    fiftyTwoWeekLow: 164.08,
+    marketCap: 3012000000000,
+    trailingPE: 30.5,
+    epsTrailingTwelveMonths: 6.40,
+    currency: 'USD',
+  };
+
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-4 max-w-2xl">
+      <StockStats quote={mockQuote} />
+    </div>
+  );
+};
+
+const StockStatsDoc: ComponentDoc = {
+  id: 'stock-stats',
+  name: 'StockStats',
+  description: 'Displays key financial statistics for a stock including price, volume, market cap, P/E ratio, and 52-week range. Grid layout with loading skeleton.',
+  category: 'application',
+  page: 'Finance',
+  component: StockStatsDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// CompanyProfile Component
+const CompanyProfileDemo = () => {
+  const mockProfile = {
+    symbol: 'AAPL',
+    shortName: 'Apple Inc.',
+    longBusinessSummary: 'Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, Mac, iPad, and wearables, home and accessories.',
+    sector: 'Technology',
+    industry: 'Consumer Electronics',
+    fullTimeEmployees: 164000,
+    city: 'Cupertino',
+    state: 'California',
+    country: 'United States',
+    website: 'https://www.apple.com',
+    companyOfficers: [
+      { name: 'Tim Cook', title: 'CEO' },
+      { name: 'Luca Maestri', title: 'CFO' },
+    ],
+  };
+
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-4 max-w-lg">
+      <CompanyProfile profile={mockProfile} />
+    </div>
+  );
+};
+
+const CompanyProfileDoc: ComponentDoc = {
+  id: 'company-profile',
+  name: 'CompanyProfile',
+  description: 'Displays company information including business description, sector, industry, employee count, location, and key executives. Expandable description.',
+  category: 'application',
+  page: 'Finance',
+  component: CompanyProfileDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// ============================================
+// APPLICATION COMPONENTS - SPACES
+// ============================================
 
 // SpaceCard Component
 const SpaceCardDemo = ({
@@ -874,8 +1114,48 @@ const SpaceCardDoc: ComponentDoc = {
   variants: [
     { id: 'private', name: 'Private Space', props: { title: 'Secret Project', description: 'Private workspace.', icon: '🔒', isPrivate: true, isCreate: false } },
     { id: 'create', name: 'Create Card', props: { title: '', description: '', icon: '', isPrivate: false, isCreate: true } },
-    { id: 'project', name: 'Project Space', props: { title: 'Q1 Campaign', description: 'Marketing campaign materials.', icon: '🚀', isPrivate: false, isCreate: false } },
   ],
+};
+
+// SpaceResourceCards Component
+const SpaceResourceCardsDemo = () => {
+  const mockFiles = [
+    { id: '1', name: 'brand-guidelines.pdf', size: 2400000, type: 'application/pdf', addedAt: new Date().toISOString() },
+    { id: '2', name: 'logo-pack.zip', size: 8500000, type: 'application/zip', addedAt: new Date().toISOString() },
+  ];
+
+  const mockLinks = [
+    { id: '1', url: 'https://figma.com/file/abc', title: 'Design System', addedAt: new Date().toISOString() },
+    { id: '2', url: '/discover/ai-trends', title: 'AI Trends Article', articleId: 'ai-trends', addedAt: new Date().toISOString() },
+  ];
+
+  const mockTasks = [
+    { id: '1', title: 'Review brand colors', completed: true, createdAt: new Date().toISOString() },
+    { id: '2', title: 'Update typography scale', completed: false, createdAt: new Date().toISOString() },
+  ];
+
+  return (
+    <div className="max-w-lg">
+      <SpaceResourceCards
+        files={mockFiles}
+        links={mockLinks}
+        instructions="Use brand voice guidelines for all content."
+        tasks={mockTasks}
+      />
+    </div>
+  );
+};
+
+const SpaceResourceCardsDoc: ComponentDoc = {
+  id: 'space-resource-cards',
+  name: 'SpaceResourceCards',
+  description: 'A unified grid of space resources including files, links, articles, instructions, and tasks. Compact card design with remove and toggle actions.',
+  category: 'application',
+  page: 'Spaces',
+  component: SpaceResourceCardsDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
 };
 
 // ============================================
@@ -887,9 +1167,10 @@ export function initializeRegistry() {
   componentRegistry.designSystem = [];
   componentRegistry.application = {};
 
-  // Add Design System components
+  // Add Design System components (12 total)
   componentRegistry.designSystem = [
     BrandLoaderDoc,
+    BrandmarkDoc,
     ButtonDoc,
     ModalDoc,
     FlipCardDoc,
@@ -904,6 +1185,10 @@ export function initializeRegistry() {
 
   // Add Application components
   componentRegistry.application = {
+    Chat: [
+      ChatTabNavDoc,
+      RelatedQuestionsDoc,
+    ],
     Discover: [
       NewsCardDoc,
       TieredNewsCardDoc,
@@ -911,12 +1196,16 @@ export function initializeRegistry() {
       MarketWidgetDoc,
       WeatherWidgetDoc,
     ],
+    Finance: [
+      StockStatsDoc,
+      CompanyProfileDoc,
+    ],
     Spaces: [
       SpaceCardDoc,
+      SpaceResourceCardsDoc,
     ],
   };
 }
 
 // Auto-initialize on import
 initializeRegistry();
-
