@@ -36,6 +36,8 @@ interface NavigationDrawerProps {
   item: string | null;
   onClose: () => void;
   railRef: React.RefObject<HTMLElement | null>;
+  onDrawerEnter?: () => void;
+  onDrawerLeave?: () => void;
 }
 
 const brandHubNavItems = [
@@ -47,19 +49,12 @@ const brandHubNavItems = [
   { label: 'Tokens', href: '/brand-hub/design-tokens', icon: Code },
 ];
 
-export function NavigationDrawer({ isOpen, item, onClose, railRef }: NavigationDrawerProps) {
+export function NavigationDrawer({ isOpen, item, onClose, railRef, onDrawerEnter, onDrawerLeave }: NavigationDrawerProps) {
   const pathname = usePathname();
   const drawerRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ top: 0, left: 0, height: 0 });
-  const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const onCloseRef = useRef(onClose);
   const { chatHistory } = useChatContext();
   const { spaces: userSpaces, isLoaded: spacesLoaded } = useSpaces();
-
-  // Keep onClose ref up to date without triggering re-renders
-  useEffect(() => {
-    onCloseRef.current = onClose;
-  }, [onClose]);
 
   useEffect(() => {
     if (isOpen && railRef.current && item) {
@@ -75,43 +70,6 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef }: NavigationD
       }
     }
   }, [isOpen, item, railRef]);
-
-  // Handle hover behavior - close drawer when mouse leaves both drawer and rail
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!isOpen || !drawerRef.current || !railRef.current) return;
-
-      const target = e.target as Node;
-      const isOverDrawer = drawerRef.current.contains(target);
-      const isOverRail = railRef.current.contains(target);
-
-      // Clear any existing timeout
-      if (closeTimeoutRef.current) {
-        clearTimeout(closeTimeoutRef.current);
-        closeTimeoutRef.current = null;
-      }
-
-      // Keep drawer open if over drawer or rail
-      if (isOverDrawer || isOverRail) {
-        return; // Keep drawer open
-      }
-
-      // If not over drawer or rail, schedule close with short delay
-      closeTimeoutRef.current = setTimeout(() => {
-        onCloseRef.current();
-      }, 150); // Short delay for smoother UX
-    };
-
-    if (isOpen) {
-      document.addEventListener('mousemove', handleMouseMove);
-      return () => {
-        document.removeEventListener('mousemove', handleMouseMove);
-        if (closeTimeoutRef.current) {
-          clearTimeout(closeTimeoutRef.current);
-        }
-      };
-    }
-  }, [isOpen, railRef]); // Simplified dependencies
 
   const renderContent = () => {
     switch (item) {
@@ -460,13 +418,8 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef }: NavigationD
           initial="hidden"
           animate="visible"
           exit="exit"
-          onMouseEnter={() => {
-            // Clear any pending close when entering drawer
-            if (closeTimeoutRef.current) {
-              clearTimeout(closeTimeoutRef.current);
-              closeTimeoutRef.current = null;
-            }
-          }}
+          onMouseEnter={onDrawerEnter}
+          onMouseLeave={onDrawerLeave}
         >
           {renderContent()}
         </motion.div>

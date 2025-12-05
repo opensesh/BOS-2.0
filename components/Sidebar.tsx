@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useCallback } from 'react';
+import { useState, useRef, useCallback, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -36,11 +36,60 @@ export function Sidebar() {
   const { isMobileMenuOpen, closeMobileMenu } = useMobileMenu();
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [isSidebarHovered, setIsSidebarHovered] = useState(false);
+  const [isDrawerHovered, setIsDrawerHovered] = useState(false);
   const railRef = useRef<HTMLElement>(null);
+  const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const { chatHistory, triggerChatReset } = useChatContext();
+
+  // Clear timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (closeTimeoutRef.current) {
+        clearTimeout(closeTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  const handleNavItemEnter = useCallback((itemLabel: string) => {
+    // Clear any pending close timeout
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+    setHoveredItem(itemLabel);
+  }, []);
+
+  const handleNavItemLeave = useCallback(() => {
+    // Don't close immediately - give time to move to drawer
+    closeTimeoutRef.current = setTimeout(() => {
+      // Only close if not hovering over drawer
+      setHoveredItem((currentItem) => {
+        // This will be checked by the drawer's hover state
+        return currentItem;
+      });
+    }, 100);
+  }, []);
+
+  const handleDrawerEnter = useCallback(() => {
+    // Clear any pending close timeout when entering drawer
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+    setIsDrawerHovered(true);
+  }, []);
+
+  const handleDrawerLeave = useCallback(() => {
+    setIsDrawerHovered(false);
+    // Close drawer after leaving it
+    closeTimeoutRef.current = setTimeout(() => {
+      setHoveredItem(null);
+    }, 150);
+  }, []);
 
   const handleDrawerClose = useCallback(() => {
     setHoveredItem(null);
+    setIsDrawerHovered(false);
   }, []);
 
   const handleNewChat = useCallback(() => {
@@ -124,8 +173,8 @@ export function Sidebar() {
               <div
                 key={item.href}
                 className="relative w-full flex justify-center"
-                onMouseEnter={() => setHoveredItem(item.label)}
-                onMouseLeave={() => setHoveredItem(null)}
+                onMouseEnter={() => handleNavItemEnter(item.label)}
+                onMouseLeave={handleNavItemLeave}
               >
                 <Link
                   data-nav-item={item.label}
@@ -428,6 +477,8 @@ export function Sidebar() {
         item={hoveredItem}
         onClose={handleDrawerClose}
         railRef={railRef}
+        onDrawerEnter={handleDrawerEnter}
+        onDrawerLeave={handleDrawerLeave}
       />
     </>
   );
