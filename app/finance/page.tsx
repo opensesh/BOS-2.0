@@ -27,7 +27,7 @@ export default function FinancePage() {
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden pt-14 lg:pt-0">
         {/* Header - matches StickyArticleHeader style */}
         <header className="shrink-0 z-30 h-12 bg-os-bg-dark border-b border-os-border-dark/50">
-          <div className="flex items-center justify-between h-full px-4 max-w-6xl mx-auto">
+          <div className="flex items-center justify-between h-full px-6 md:px-12 max-w-4xl mx-auto">
             {/* Left: Back to Discover */}
             <Link
               href="/discover"
@@ -53,7 +53,7 @@ export default function FinancePage() {
         <div className="flex-1 flex overflow-hidden">
           {/* Main content - scrollable */}
           <div className="flex-1 overflow-y-auto custom-scrollbar">
-            <div className="w-full max-w-6xl mx-auto px-6 py-8 md:px-12 md:py-12">
+            <div className="w-full max-w-4xl mx-auto px-6 py-8 md:px-12 md:py-12">
               {/* Mobile search */}
               <div className="md:hidden mb-6">
                 <FinanceSearchBar className="w-full" />

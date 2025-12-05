@@ -35,7 +35,7 @@ export default function StockDetailPage({ params }: PageProps) {
   const symbol = decodeURIComponent(resolvedParams.symbol).toUpperCase();
   
   const [activeTab, setActiveTab] = useState<FinanceTab>('overview');
-  const [chartRange, setChartRange] = useState<ChartRange>('1d');
+  const [chartRange, setChartRange] = useState<ChartRange>('ytd');
 
   // Fetch data
   const { data: quote, loading: quoteLoading } = useQuote(symbol);
@@ -51,7 +51,7 @@ export default function StockDetailPage({ params }: PageProps) {
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden pt-14 lg:pt-0">
         {/* Header - matches StickyArticleHeader style */}
         <header className="shrink-0 z-30 h-12 bg-os-bg-dark border-b border-os-border-dark/50">
-          <div className="flex items-center justify-between h-full px-4 max-w-6xl mx-auto">
+          <div className="flex items-center justify-between h-full px-6 md:px-12 max-w-4xl mx-auto">
             {/* Left: Back to Finance */}
             <Link
               href="/finance"
@@ -75,7 +75,7 @@ export default function StockDetailPage({ params }: PageProps) {
         <div className="flex-1 flex overflow-hidden">
           {/* Main content - scrollable */}
           <div className="flex-1 overflow-y-auto custom-scrollbar">
-            <div className="w-full max-w-6xl mx-auto px-6 py-8 md:px-12 md:py-12">
+            <div className="w-full max-w-4xl mx-auto px-6 py-8 md:px-12 md:py-12">
               {/* Stock Header */}
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
@@ -131,7 +131,7 @@ export default function StockDetailPage({ params }: PageProps) {
                           ({formatPercent(quote.regularMarketChangePercent)})
                         </span>
                         <span className="text-sm text-os-text-secondary-dark ml-2">
-                          1D
+                          {chartRange.toUpperCase()}
                         </span>
                       </div>
                     </>
@@ -140,11 +140,11 @@ export default function StockDetailPage({ params }: PageProps) {
                   )}
                 </div>
 
-                {/* Market Status */}
+                {/* Last Update */}
                 <div className="flex items-center gap-2 text-xs text-os-text-secondary-dark">
                   <Clock className="w-3 h-3" />
                   <span>
-                    At close: {new Date().toLocaleDateString('en-US', {
+                    Last update: {new Date().toLocaleString('en-US', {
                       month: 'short',
                       day: 'numeric',
                       hour: 'numeric',
