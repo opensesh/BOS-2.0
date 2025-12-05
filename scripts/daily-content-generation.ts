@@ -109,34 +109,49 @@ interface RSSItem {
  * Tries multiple common formats: media:content, enclosure, media:thumbnail, og:image in content
  */
 function extractThumbnailUrl(itemXml: string): string | undefined {
+  let url: string | undefined;
+  
   // Try media:content with url attribute (most common for images)
   const mediaContentMatch = itemXml.match(/<media:content[^>]*url=["']([^"']+)["'][^>]*(?:type=["']image\/[^"']+["'])?[^>]*\/?>/i);
   if (mediaContentMatch && isImageUrl(mediaContentMatch[1])) {
-    return mediaContentMatch[1];
+    url = mediaContentMatch[1];
   }
   
   // Try media:thumbnail
-  const mediaThumbnailMatch = itemXml.match(/<media:thumbnail[^>]*url=["']([^"']+)["'][^>]*\/?>/i);
-  if (mediaThumbnailMatch) {
-    return mediaThumbnailMatch[1];
+  if (!url) {
+    const mediaThumbnailMatch = itemXml.match(/<media:thumbnail[^>]*url=["']([^"']+)["'][^>]*\/?>/i);
+    if (mediaThumbnailMatch) {
+      url = mediaThumbnailMatch[1];
+    }
   }
   
   // Try enclosure with image type
-  const enclosureMatch = itemXml.match(/<enclosure[^>]*url=["']([^"']+)["'][^>]*type=["']image\/[^"']+["'][^>]*\/?>/i);
-  if (enclosureMatch) {
-    return enclosureMatch[1];
+  if (!url) {
+    const enclosureMatch = itemXml.match(/<enclosure[^>]*url=["']([^"']+)["'][^>]*type=["']image\/[^"']+["'][^>]*\/?>/i);
+    if (enclosureMatch) {
+      url = enclosureMatch[1];
+    }
   }
   
   // Try enclosure without type (check if URL looks like an image)
-  const enclosureAnyMatch = itemXml.match(/<enclosure[^>]*url=["']([^"']+)["'][^>]*\/?>/i);
-  if (enclosureAnyMatch && isImageUrl(enclosureAnyMatch[1])) {
-    return enclosureAnyMatch[1];
+  if (!url) {
+    const enclosureAnyMatch = itemXml.match(/<enclosure[^>]*url=["']([^"']+)["'][^>]*\/?>/i);
+    if (enclosureAnyMatch && isImageUrl(enclosureAnyMatch[1])) {
+      url = enclosureAnyMatch[1];
+    }
   }
   
   // Try to find image URL in content or description (common in some feeds)
-  const imgMatch = itemXml.match(/<img[^>]*src=["']([^"']+)["'][^>]*\/?>/i);
-  if (imgMatch && isImageUrl(imgMatch[1])) {
-    return imgMatch[1];
+  if (!url) {
+    const imgMatch = itemXml.match(/<img[^>]*src=["']([^"']+)["'][^>]*\/?>/i);
+    if (imgMatch && isImageUrl(imgMatch[1])) {
+      url = imgMatch[1];
+    }
+  }
+  
+  // Decode HTML entities in the URL (e.g., &amp; -> &)
+  if (url) {
+    return decodeHtmlEntities(url);
   }
   
   return undefined;
@@ -1338,16 +1353,19 @@ async function main() {
     await saveFeaturedArticles(featuredArticles);
     
     // Get slugs of featured articles for cross-referencing
-    const featuredSlugs = new Set(featuredArticles.map(a => a.slug));
+    // Create a map of slug -> totalSources for featured articles
+    const featuredArticleData = new Map(featuredArticles.map(a => [a.slug, a.totalSources]));
     
     // Generate and save news (mark top items as 'featured' if they have rich articles)
     const newsItems = await generateNews(rssItems);
     
-    // Update news items: those with matching featured articles get 'featured' tier
+    // Update news items: those with matching featured articles get 'featured' tier and totalSources
     for (const item of newsItems) {
       const slug = generateSlug(item.title);
-      if (featuredSlugs.has(slug)) {
+      const totalSources = featuredArticleData.get(slug);
+      if (totalSources !== undefined) {
         item.tier = 'featured';
+        item.totalSources = totalSources;
       }
     }
     

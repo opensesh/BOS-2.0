@@ -305,6 +305,8 @@ export interface NewsUpdateItem {
   sourceUrl?: string;      // For quick: external link to original source
   // Topic categorization
   topicCategory?: NewsTopicCategory;
+  // Total sources count (for featured articles with enriched sources from Perplexity)
+  totalSources?: number;
 }
 
 export interface NewsData {

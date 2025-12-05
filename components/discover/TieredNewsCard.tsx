@@ -389,7 +389,7 @@ export function TieredNewsCard({
           text-os-text-secondary-dark group-hover/sources:text-os-text-primary-dark transition-colors
           ${isFeatured ? 'text-xs' : 'text-[11px]'}
         `}>
-          {displaySources.length} sources
+          {item.totalSources || displaySources.length} sources
         </span>
       </button>
     );

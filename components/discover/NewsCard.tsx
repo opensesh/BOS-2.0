@@ -165,8 +165,8 @@ export function NewsCard({
   // Memoize sources with favicon data
   const displaySources = useMemo(() => convertSources(item.sources), [item.sources]);
   
-  // Accurate source count from actual data
-  const actualSourceCount = item.sources.length;
+  // Accurate source count - use totalSources if available (for featured articles with Perplexity sources)
+  const actualSourceCount = item.totalSources || item.sources.length;
 
   // Intersection Observer for lazy loading OG images
   useEffect(() => {
