@@ -2,8 +2,49 @@ import { streamText, convertToModelMessages } from 'ai';
 import { ModelId, getModelInstance, models } from '@/lib/ai/providers';
 import { autoSelectModel } from '@/lib/ai/auto-router';
 import { buildBrandSystemPrompt, shouldIncludeFullDocs, BRAND_SOURCES, type PageContext } from '@/lib/brand-knowledge';
+import { readFile } from 'fs/promises';
+import { join } from 'path';
 
 export const maxDuration = 60; // Allow streaming responses up to 60 seconds
+
+// Fetch article content from pre-generated JSON files
+async function fetchArticleContent(slug: string): Promise<{ summary: string; sections: string[] } | null> {
+  try {
+    const articlePath = join(process.cwd(), 'public', 'data', 'discover', 'articles', `${slug}.json`);
+    const data = await readFile(articlePath, 'utf-8');
+    const article = JSON.parse(data);
+    
+    // Extract paragraph content from sections
+    const paragraphs: string[] = [];
+    const sectionTitles: string[] = [];
+    
+    for (const section of article.sections || []) {
+      if (section.title) {
+        sectionTitles.push(section.title);
+      }
+      for (const para of section.paragraphs || []) {
+        if (para.content) {
+          paragraphs.push(para.content);
+        }
+      }
+    }
+    
+    // Take first 5 paragraphs as summary (enough context without being too long)
+    const summary = paragraphs.slice(0, 5).join('\n\n');
+    
+    console.log('Fetched article content:', { 
+      slug, 
+      paragraphCount: paragraphs.length,
+      summaryLength: summary.length,
+      sections: sectionTitles 
+    });
+    
+    return { summary, sections: sectionTitles };
+  } catch (error) {
+    console.error('Failed to fetch article content:', slug, error);
+    return null;
+  }
+}
 
 // Interface for file attachments from client
 interface FileAttachment {
@@ -95,7 +136,7 @@ export async function POST(req: Request) {
   console.log('=== Chat API called ===');
   try {
     const body = await req.json();
-    console.log('Request body:', JSON.stringify(body, null, 2));
+    console.log('Request body keys:', Object.keys(body));
     const { messages, model = 'auto', context } = body as {
       messages: ClientMessage[];
       model?: string;
@@ -103,8 +144,29 @@ export async function POST(req: Request) {
     };
     
     // Log context for debugging
-    if (context) {
-      console.log('Page context received:', context.type, context);
+    console.log('Page context received:', context?.type || 'none', {
+      hasArticle: !!context?.article,
+      articleSlug: context?.article?.slug,
+      hasSummary: !!context?.article?.summary,
+      summaryLength: context?.article?.summary?.length || 0,
+    });
+    
+    // Enrich article context by fetching content if we have slug but no summary
+    let enrichedContext = context;
+    if (context?.type === 'article' && context.article?.slug && !context.article.summary) {
+      console.log('Fetching article content for slug:', context.article.slug);
+      const articleContent = await fetchArticleContent(context.article.slug);
+      if (articleContent) {
+        enrichedContext = {
+          ...context,
+          article: {
+            ...context.article,
+            summary: articleContent.summary,
+            sections: articleContent.sections,
+          },
+        };
+        console.log('Article context enriched with content, summary length:', articleContent.summary.length);
+      }
     }
 
     // Validate request
@@ -159,14 +221,18 @@ export async function POST(req: Request) {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const modelMessages = convertToModelMessages(validatedMessages as any);
 
-    // Build brand-aware system prompt with page context
+    // Build brand-aware system prompt with page context (use enriched context)
     const systemPrompt = buildBrandSystemPrompt({
       includeFullDocs: shouldIncludeFullDocs(messages),
-      context: context,
+      context: enrichedContext,
     });
     
-    // Log system prompt length for debugging
-    console.log('System prompt built with context:', context?.type || 'none', 'Length:', systemPrompt.length);
+    // Log system prompt details for debugging
+    console.log('System prompt built:', {
+      contextType: enrichedContext?.type || 'none',
+      promptLength: systemPrompt.length,
+      hasArticleSummary: !!enrichedContext?.article?.summary,
+    });
 
     // Stream the response
     const result = streamText({
