@@ -18,7 +18,8 @@ import {
   BookOpen,
   PenTool,
   ArrowUpRight,
-  Zap
+  Zap,
+  Layers
 } from 'lucide-react';
 
 // Bento cards for subpages
@@ -50,6 +51,13 @@ const brainPages = [
     description: 'System capabilities and configuration',
     href: '/brain/skills',
     icon: Zap,
+  },
+  {
+    id: 'components',
+    title: 'Components',
+    description: 'Interactive component documentation',
+    href: '/brain/components',
+    icon: Layers,
   },
 ];
 

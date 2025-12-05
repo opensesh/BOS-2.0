@@ -23,6 +23,7 @@ import {
   PenTool,
   MessageSquare,
   Zap,
+  Layers,
 } from 'lucide-react';
 import { SPACES } from '@/lib/mock-data';
 import { useChatContext } from '@/lib/chat-context';
@@ -347,6 +348,7 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef }: NavigationD
           { label: 'Brand Identity', href: '/brain/brand-identity', icon: BookOpen },
           { label: 'Writing Styles', href: '/brain/writing-styles', icon: PenTool },
           { label: 'Skills', href: '/brain/skills', icon: Zap },
+          { label: 'Components', href: '/brain/components', icon: Layers },
         ];
         const isOnBrainSubpage = pathname.startsWith('/brain/');
         
