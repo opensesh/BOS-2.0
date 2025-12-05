@@ -88,6 +88,7 @@ export function ChatInterface() {
   const [articleContext, setArticleContext] = useState<ArticleContext | null>(null);
   const [ideaContext, setIdeaContext] = useState<IdeaContext | null>(null);
   const [hasProcessedUrlParams, setHasProcessedUrlParams] = useState(false);
+  const [activeConnectors, setActiveConnectors] = useState<Set<string>>(new Set(['web', 'brand', 'brain', 'discover']));
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const globeButtonRef = useRef<HTMLButtonElement>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -275,7 +276,14 @@ export function ChatInterface() {
                 sourceCount: storedArticleContext?.sourceCount,
               },
             };
-            await sendMessage({ text: decodedQuery }, { body: { model: selectedModel, context } });
+            // Include current connector settings
+            const currentConnectors = {
+              web: activeConnectors.has('web'),
+              brand: activeConnectors.has('brand'),
+              brain: activeConnectors.has('brain'),
+              discover: activeConnectors.has('discover'),
+            };
+            await sendMessage({ text: decodedQuery }, { body: { model: selectedModel, context, connectors: currentConnectors } });
           } catch (err) {
             console.error('Failed to send article follow-up:', err);
             setSubmitError(err instanceof Error ? err.message : 'Failed to send message');
@@ -330,7 +338,14 @@ export function ChatInterface() {
                 generationLabel: generationLabel ? decodeURIComponent(generationLabel) : undefined,
               },
             } : undefined;
-            await sendMessage({ text: decodedQuery }, { body: { model: selectedModel, context } });
+            // Include current connector settings
+            const currentConnectors = {
+              web: activeConnectors.has('web'),
+              brand: activeConnectors.has('brand'),
+              brain: activeConnectors.has('brain'),
+              discover: activeConnectors.has('discover'),
+            };
+            await sendMessage({ text: decodedQuery }, { body: { model: selectedModel, context, connectors: currentConnectors } });
           } catch (err) {
             console.error('Failed to send idea generation:', err);
             setSubmitError(err instanceof Error ? err.message : 'Failed to send message');
@@ -338,7 +353,7 @@ export function ChatInterface() {
         }, 100);
       });
     }
-  }, [searchParams, router, sendMessage, setMessages, hasProcessedUrlParams, selectedModel, setSubmitError]);
+  }, [searchParams, router, sendMessage, setMessages, hasProcessedUrlParams, selectedModel, setSubmitError, activeConnectors]);
 
   // status can be: 'submitted' | 'streaming' | 'ready' | 'error'
   const isLoading = status === 'submitted' || status === 'streaming';
@@ -358,10 +373,8 @@ export function ChatInterface() {
     { id: 'web', icon: Globe, title: 'Web', description: 'Search across the entire internet', enabled: true },
     { id: 'brand', icon: Palette, title: 'Brand', description: 'Access brand assets and guidelines', enabled: true },
     { id: 'brain', icon: Brain, title: 'Brain', description: 'Search brand knowledge base', enabled: true },
-    { id: 'discover', icon: Compass, title: 'Discover', description: 'Explore curated content and ideas', enabled: false },
+    { id: 'discover', icon: Compass, title: 'Discover', description: 'Search your curated news & design sources', enabled: true },
   ];
-
-  const [activeConnectors, setActiveConnectors] = useState<Set<string>>(new Set(['web', 'brand', 'brain']));
 
   const handleToggleConnector = (id: string) => {
     setActiveConnectors((prev) => {
@@ -469,6 +482,14 @@ export function ChatInterface() {
     return undefined;
   }, [articleContext, ideaContext]);
 
+  // Build connector settings object for API calls
+  const connectorSettings = useMemo(() => ({
+    web: activeConnectors.has('web'),
+    brand: activeConnectors.has('brand'),
+    brain: activeConnectors.has('brain'),
+    discover: activeConnectors.has('discover'),
+  }), [activeConnectors]);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitError(null);
@@ -501,10 +522,10 @@ export function ChatInterface() {
         // Use type assertion to satisfy AI SDK types
         await sendMessage(
           { text: userMessage || 'What do you see in this image?', files: files as unknown as FileList },
-          { body: { model: selectedModel, context: pageContext } }
+          { body: { model: selectedModel, context: pageContext, connectors: connectorSettings } }
         );
       } else {
-        await sendMessage({ text: userMessage }, { body: { model: selectedModel, context: pageContext } });
+        await sendMessage({ text: userMessage }, { body: { model: selectedModel, context: pageContext, connectors: connectorSettings } });
       }
     } catch (err) {
       console.error('Failed to send message:', err);
@@ -531,10 +552,10 @@ export function ChatInterface() {
         // Use type assertion to satisfy AI SDK types
         await sendMessage(
           { text: query.trim() || 'What do you see in this image?', files: files as unknown as FileList },
-          { body: { model: selectedModel, context: pageContext } }
+          { body: { model: selectedModel, context: pageContext, connectors: connectorSettings } }
         );
       } else {
-        await sendMessage({ text: query.trim() }, { body: { model: selectedModel, context: pageContext } });
+        await sendMessage({ text: query.trim() }, { body: { model: selectedModel, context: pageContext, connectors: connectorSettings } });
       }
     } catch (err) {
       console.error('Failed to send follow-up:', err);
@@ -566,7 +587,7 @@ export function ChatInterface() {
       if (!isLoading && typeof sendMessage === 'function') {
         setInput('');
         try {
-          await sendMessage({ text: queryText }, { body: { model: selectedModel, context: pageContext } });
+          await sendMessage({ text: queryText }, { body: { model: selectedModel, context: pageContext, connectors: connectorSettings } });
         } catch (err) {
           console.error('Failed to send message:', err);
           setSubmitError(err instanceof Error ? err.message : 'Failed to send message');
@@ -576,7 +597,7 @@ export function ChatInterface() {
     } else {
       textareaRef.current?.focus();
     }
-  }, [isLoading, sendMessage, selectedModel, suggestionsMode, pageContext]);
+  }, [isLoading, sendMessage, selectedModel, suggestionsMode, pageContext, connectorSettings]);
 
   const handleMicClick = () => {
     if (isListening) {

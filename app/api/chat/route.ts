@@ -4,8 +4,19 @@ import { autoSelectModel } from '@/lib/ai/auto-router';
 import { buildBrandSystemPrompt, shouldIncludeFullDocs, BRAND_SOURCES, type PageContext } from '@/lib/brand-knowledge';
 import { readFile } from 'fs/promises';
 import { join } from 'path';
+import { NewsData } from '@/types';
+import { processNewsData } from '@/lib/discover-utils';
+import { searchNewsData, formatDiscoverResultsForAI, DiscoverSearchResult, getRelevantCategories } from '@/lib/discover-search';
 
 export const maxDuration = 60; // Allow streaming responses up to 60 seconds
+
+// Connector settings from client
+interface ConnectorSettings {
+  web: boolean;
+  brand: boolean;
+  brain: boolean;
+  discover: boolean;
+}
 
 // Fetch article content from pre-generated JSON files
 async function fetchArticleContent(slug: string): Promise<{ summary: string; sections: string[] } | null> {
@@ -43,6 +54,65 @@ async function fetchArticleContent(slug: string): Promise<{ summary: string; sec
   } catch (error) {
     console.error('Failed to fetch article content:', slug, error);
     return null;
+  }
+}
+
+// Load all news data from discover RSS feeds
+async function loadDiscoverNewsData() {
+  const types = ['weekly-update', 'monthly-outlook'];
+  const allNews = [];
+
+  for (const type of types) {
+    try {
+      const filePath = join(process.cwd(), 'public', 'data', 'news', type, 'latest.json');
+      const data = await readFile(filePath, 'utf-8');
+      const newsData: NewsData = JSON.parse(data);
+      const processed = processNewsData(newsData);
+      allNews.push(...processed);
+    } catch (error) {
+      // Silently skip if news data not available
+      console.log(`News data not available for ${type}`);
+    }
+  }
+
+  return allNews;
+}
+
+// Search discover content and return results with formatted context
+async function searchDiscoverContent(query: string): Promise<{
+  results: DiscoverSearchResult[];
+  formattedContext: string;
+}> {
+  try {
+    const newsData = await loadDiscoverNewsData();
+    
+    if (newsData.length === 0) {
+      return { results: [], formattedContext: '' };
+    }
+
+    // Get relevant categories for the query
+    const relevantCategories = getRelevantCategories(query);
+    
+    // Search with relevant categories
+    const results = searchNewsData(newsData, query, {
+      maxResults: 5,
+      categories: relevantCategories,
+      minRelevance: 3,
+    });
+
+    const formattedContext = formatDiscoverResultsForAI(results);
+    
+    console.log('Discover search results:', {
+      query,
+      relevantCategories,
+      resultCount: results.length,
+      contextLength: formattedContext.length,
+    });
+
+    return { results, formattedContext };
+  } catch (error) {
+    console.error('Error searching discover content:', error);
+    return { results: [], formattedContext: '' };
   }
 }
 
@@ -137,11 +207,22 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
     console.log('Request body keys:', Object.keys(body));
-    const { messages, model = 'auto', context } = body as {
+    const { messages, model = 'auto', context, connectors } = body as {
       messages: ClientMessage[];
       model?: string;
       context?: PageContext;
+      connectors?: ConnectorSettings;
     };
+    
+    // Default connector settings (all enabled by default)
+    const activeConnectors: ConnectorSettings = connectors || {
+      web: true,
+      brand: true,
+      brain: true,
+      discover: true,
+    };
+    
+    console.log('Active connectors:', activeConnectors);
     
     // Log context for debugging
     console.log('Page context received:', context?.type || 'none', {
@@ -221,11 +302,38 @@ export async function POST(req: Request) {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const modelMessages = convertToModelMessages(validatedMessages as any);
 
+    // Search discover content if connector is enabled
+    let discoverContext = '';
+    let discoverSources: DiscoverSearchResult[] = [];
+    
+    if (activeConnectors.discover) {
+      // Get the latest user message for search query
+      const latestUserMessage = validatedMessages.findLast(m => m.role === 'user');
+      const userQuery = typeof latestUserMessage?.content === 'string' 
+        ? latestUserMessage.content 
+        : '';
+      
+      if (userQuery) {
+        const discoverResults = await searchDiscoverContent(userQuery);
+        discoverContext = discoverResults.formattedContext;
+        discoverSources = discoverResults.results;
+        console.log('Discover search completed:', {
+          query: userQuery.slice(0, 50),
+          foundResults: discoverSources.length,
+        });
+      }
+    }
+
     // Build brand-aware system prompt with page context (use enriched context)
-    const systemPrompt = buildBrandSystemPrompt({
+    let systemPrompt = buildBrandSystemPrompt({
       includeFullDocs: shouldIncludeFullDocs(messages),
       context: enrichedContext,
     });
+    
+    // Append discover context if available
+    if (discoverContext) {
+      systemPrompt += `\n\n${discoverContext}\n\nWhen referencing these sources, cite them using [1], [2], etc. format to help users verify information.`;
+    }
     
     // Log system prompt details for debugging
     console.log('=== SYSTEM PROMPT DEBUG ===');
@@ -233,6 +341,8 @@ export async function POST(req: Request) {
     console.log('Prompt length:', systemPrompt.length);
     console.log('Has article summary:', !!enrichedContext?.article?.summary);
     console.log('Article summary preview:', enrichedContext?.article?.summary?.slice(0, 200) || 'none');
+    console.log('Has discover context:', !!discoverContext);
+    console.log('Discover sources count:', discoverSources.length);
     console.log('Selected model:', selectedModel);
     console.log('Message count:', modelMessages.length);
     console.log('=== END DEBUG ===');
@@ -251,11 +361,13 @@ export async function POST(req: Request) {
 
       // Return streaming response in format useChat expects (AI SDK 5.x)
       // Must use toUIMessageStreamResponse() for useChat hook to parse correctly
-      // Include brand sources in headers for client-side citation rendering
+      // Include brand and discover sources in headers for client-side rendering
       return result.toUIMessageStreamResponse({
         headers: {
           'X-Model-Used': selectedModel,
           'X-Brand-Sources': JSON.stringify(BRAND_SOURCES),
+          'X-Discover-Sources': JSON.stringify(discoverSources),
+          'X-Active-Connectors': JSON.stringify(activeConnectors),
         },
       });
     } catch (streamError) {

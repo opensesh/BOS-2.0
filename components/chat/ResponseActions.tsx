@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
 import {
   Share2,
   Download,
@@ -15,6 +15,8 @@ import {
   FileDown,
   Globe,
   Hexagon,
+  Compass,
+  Rss,
 } from 'lucide-react';
 import { SourceInfo } from './AnswerView';
 import { BrandResourceCardProps } from './BrandResourceCard';
@@ -142,10 +144,28 @@ export function ResponseActions({
 
   // Check if Perplexity model is used
   const isPerplexityModel = modelUsed?.includes('sonar') || modelUsed?.includes('perplexity');
-  const hasExternalSources = sources.length > 0;
+  
+  // Separate sources by type
+  const { discoverSources, webSources } = useMemo(() => {
+    const discover: SourceInfo[] = [];
+    const web: SourceInfo[] = [];
+    
+    sources.forEach(source => {
+      if (source.type === 'discover') {
+        discover.push(source);
+      } else {
+        web.push(source);
+      }
+    });
+    
+    return { discoverSources: discover, webSources: web };
+  }, [sources]);
+
+  const hasDiscoverSources = discoverSources.length > 0;
+  const hasWebSources = webSources.length > 0;
   const hasBrandResources = resourceCards.length > 0;
   const totalSourcesCount = sources.length + resourceCards.length;
-  const hasAnySourcesData = hasExternalSources || hasBrandResources;
+  const hasAnySourcesData = hasDiscoverSources || hasWebSources || hasBrandResources;
 
   return (
     <>
@@ -232,18 +252,27 @@ export function ResponseActions({
             </button>
           </Tooltip>
 
-          {/* Sources button - shows for any sources available (external or brand) */}
+          {/* Sources button - shows for any sources available (external, discover, or brand) */}
           {hasAnySourcesData && (
             <button
               onClick={() => setShowSourcesDrawer(true)}
               className="flex items-center gap-2 ml-2 px-2.5 py-1.5 rounded-full bg-os-surface-dark/80 hover:bg-os-surface-dark border border-os-border-dark/50 transition-colors group"
             >
-              {/* Stacked source icons */}
+              {/* Stacked source icons - show up to 4 icons representing different source types */}
               <div className="flex -space-x-1">
-                {/* Show external source favicons first */}
-                {sources.slice(0, hasBrandResources ? 2 : 3).map((source, idx) => (
+                {/* Show discover source icons first (cyan) */}
+                {discoverSources.slice(0, hasWebSources || hasBrandResources ? 1 : 2).map((source, idx) => (
                   <div
-                    key={source.id || idx}
+                    key={source.id || `discover-${idx}`}
+                    className="w-5 h-5 rounded-full bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center"
+                  >
+                    <Rss className="w-2.5 h-2.5 text-cyan-400" />
+                  </div>
+                ))}
+                {/* Show web source favicons */}
+                {webSources.slice(0, hasDiscoverSources ? 1 : (hasBrandResources ? 2 : 3)).map((source, idx) => (
+                  <div
+                    key={source.id || `web-${idx}`}
                     className="w-5 h-5 rounded-full bg-os-bg-dark border border-os-border-dark flex items-center justify-center"
                   >
                     {source.favicon ? (

@@ -16,10 +16,13 @@ export interface SourceInfo {
   favicon?: string;
   title?: string;
   snippet?: string;
-  // Extended for brand sources
-  type?: 'external' | 'brand-doc' | 'asset';
+  // Extended for different source types
+  type?: 'external' | 'brand-doc' | 'asset' | 'discover';
   path?: string;
   thumbnail?: string;
+  // Discover-specific fields
+  category?: string; // RSS category (e.g., 'design-ux', 'branding', 'ai-creative')
+  publishedAt?: string;
 }
 
 export interface ContentSection {
