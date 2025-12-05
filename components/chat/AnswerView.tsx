@@ -3,7 +3,7 @@
 import React from 'react';
 import { InlineCitation } from './InlineCitation';
 import { BrandResourceCards, BrandResourceCardProps } from './BrandResourceCard';
-import { DotFlowPulse } from '@/components/ui/dot-flow-loader';
+import { ThinkingDotFlow } from '@/components/ui/dot-flow';
 import {
   BRAND_PAGE_ROUTES,
   BRAND_SOURCES,
@@ -117,8 +117,8 @@ export function AnswerView({
 
         {/* Streaming indicator with DotFlow animation */}
         {isStreaming && (
-          <div className="py-1">
-            <DotFlowPulse showText={true} textInterval={2500} />
+          <div className="py-2">
+            <ThinkingDotFlow />
           </div>
         )}
 
