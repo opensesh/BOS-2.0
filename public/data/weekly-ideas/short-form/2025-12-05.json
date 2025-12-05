@@ -1,78 +1,172 @@
 {
   "type": "short-form",
-  "date": "2025-12-05T00:21:53.659Z",
+  "date": "2025-12-05T16:19:34.375Z",
   "ideas": [
+    {
+      "title": "The New York Times is suing Perplexity for copyright infringement",
+      "description": "The New York Times filed a copyright lawsuit against Perplexity, joining other publishers using legal action as leverage to force AI companies into licensing deals that compensate content creators.",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/05/the-new-york-times-is-suing-perplexity-for-copyright-infringement/"
+        },
+        {
+          "name": "Axios",
+          "url": "https://www.axios.com/2025/12/05/nyt-sues-perplexity-for-copyright-infringement"
+        },
+        {
+          "name": "Engadget",
+          "url": "https://www.engadget.com/ai/the-new-york-times-and-chicago-tribune-sue-perplexity-over-alleged-copyright-infringement-153656431.html"
+        },
+        {
+          "name": "Pressgazette",
+          "url": "https://pressgazette.co.uk/platforms/news-publisher-ai-deals-lawsuits-openai-google/"
+        },
+        {
+          "name": "Mediagazer",
+          "url": "https://mediagazer.com/241021/p11"
+        }
+      ],
+      "format": "story",
+      "hooks": [
+        "AI vs. Journalism: The Copyright Battle Begins",
+        "NYT Strikes Back at AI Content Theft",
+        "Perplexity Sued: The Future of AI Content"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick jump cuts to maintain energy",
+            "Include text overlays to explain complex points",
+            "Create a dramatic narrative arc in 30 seconds"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "Use each slide to break down a key argument",
+            "Create visually striking infographic-style slides",
+            "Ensure first slide is a provocative visual hook"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Open with a shocking statistic or quote",
+            "Use screen recordings to show context",
+            "Add dynamic text animations to explain concepts"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as a thought leadership piece",
+            "Use more formal, analytical language",
+            "Include professional insights and implications"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast digital aesthetic with glitch-inspired overlays. Use a color palette of deep blues, electric teals, and sharp whites. Typography should feel tech-forward with angular, modern sans-serif fonts. Incorporate subtle digital texture and motion graphics that suggest data and information flow. Visual style should feel like a digital courtroom drama meets tech investigative documentary."
+      },
+      "exampleOutline": [
+        "Section 1: Dramatic Hook - NYT vs. AI Showdown",
+        "Section 2: What Happened? Perplexity's Content Scraping",
+        "Section 3: Copyright Infringement Explained Simply",
+        "Section 4: Potential Industry-Wide Implications",
+        "Section 5: Call to Engage - Share Your Thoughts"
+      ],
+      "hashtags": "#AIEthics #CopyrightLaw #MediaTech #NYTimes #AIControversy #TechLawsuit #ContentCreation #AIRegulation #JournalismTech #DigitalRights",
+      "pexelsImageUrl": "https://images.pexels.com/photos/7767791/pexels-photo-7767791.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 6
+    },
     {
       "title": "8 tips for designers building branded templates in Figma Buzz",
       "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
-      "starred": true,
+      "starred": false,
       "sources": [
         {
           "name": "Figma Blog",
           "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
         },
         {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+          "name": "Webdesignernews",
+          "url": "https://webdesignernews.com/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
+        },
+        {
+          "name": "Ux-news",
+          "url": "https://ux-news.com/new-features-in-figma-buzz-customizable-templates-plugins-and-video-trimming/"
         },
         {
           "name": "Figmalion",
-          "url": "https://figmalion.com/issue/221"
+          "url": "https://figmalion.com/topics/figma-buzz"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/watch?v=FPpzI7z_U-o"
+        },
+        {
+          "name": "Figma",
+          "url": "https://www.figma.com/blog/branding/"
         }
       ],
+      "format": "quick-image",
       "hooks": [
-        "Design templates that flex, not break",
-        "Unlock scalable brand design in Figma",
-        "Marketing-ready templates in 8 simple steps"
+        "Design Templates That Don't Break Your Brand's Soul 🎨",
+        "Figma Secrets: Flexible Branding Without the Chaos",
+        "8 Pro Hacks for Bulletproof Design Systems"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick screen transitions to highlight template steps",
-            "Demonstrate template editing with fast cursor movements",
-            "Include text overlays showing key transformation moments"
+            "Use fast-paced jump cuts between template examples",
+            "Include visual before/after comparisons of template flexibility",
+            "Add dynamic text overlays highlighting key transformation moments"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Provocative design challenge visual",
-            "Use slide-to-slide progression showing template evolution",
-            "Final slide includes clear call-to-action/learning resource"
+            "First slide: Bold provocative statement about template design",
+            "Use high-contrast mockups showing template adaptability",
+            "Final slide: Clear call-to-action with template download link"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Open with unexpected design fail/transformation",
-            "Use screen recording with dynamic cursor movements",
-            "Include rapid-fire voiceover explaining template principles"
+            "Start with unexpected visual metaphor about brand flexibility",
+            "Use screen recordings showing actual Figma template editing",
+            "Include quick verbal explanation with on-screen text highlights"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Frame as professional design workflow optimization",
-            "Include concrete business impact statistics",
-            "Link to deeper learning resource/workshop"
+            "Frame content as professional design strategy insight",
+            "Include data/statistics about template efficiency",
+            "Use more technical language and precise design terminology"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, dynamic color palette with electric blues and vibrant oranges. Kinetic typography with sliding/morphing text. Screen capture with animated graphic overlays. High-contrast, tech-forward aesthetic mimicking design tool interfaces. Motion graphics showing template flexibility."
+        "description": "Vibrant, high-contrast design with geometric overlays. Neon accent colors against dark/neutral background. Dynamic typography with motion-based text reveals. Blend of digital UI mockups and abstract design elements. Reference aesthetic: Spotify design system meets futuristic design manifesto."
       },
       "exampleOutline": [
-        "Hook: Provocative design challenge statement",
-        "Problem: Rigid vs. flexible brand templates",
-        "8 key template design strategies",
-        "Real-world examples of successful implementations",
-        "Call-to-action: Download template guide"
+        "Section 1: Provocative Hook About Design Limitations",
+        "Section 2: The Template Design Challenge",
+        "Section 3: 8 Rapid-Fire Design System Tips",
+        "Section 4: Transformative Design Potential Insight",
+        "Section 5: Quick Actionable Next Steps"
       ],
-      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystem #CreativeWorkflow #AIDesign #ProductivityHacks #DesignTips #MarketingDesign #CreativeTech #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 1
+      "hashtags": "#DesignTemplates #FigmaDesign #BrandSystem #CreativeStrategy #AIDesign #DesignTips #ProductDesign #UIUXDesign #DesignThinking #CreativeTech",
+      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 9
     },
     {
       "title": "Three new features to help build brand momentum with Figma Buzz",
@@ -104,59 +198,60 @@
           "url": "https://investor.figma.com/news-events/news/default.aspx"
         }
       ],
+      "format": "carousel",
       "hooks": [
-        "Design faster, create smarter with Figma Buzz",
-        "Unlock brand magic in three clicks",
-        "Your marketing workflow just got supercharged"
+        "Design Faster: Figma Buzz's Game-Changing New Features",
+        "3 Tools That Will Transform Your Design Workflow",
+        "Unlock Next-Level Brand Creation in Figma Buzz"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use screen recording of actual Figma interface",
-            "Include quick side-by-side before/after transformation",
-            "Add dynamic text overlay highlighting key benefits"
+            "Use quick transitions between feature highlights",
+            "Include dynamic motion graphics for each feature",
+            "Keep total video under 90 seconds"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Bold feature headline",
-            "Use mockup screenshots for each feature slide",
-            "Final slide: Clear call-to-action with link"
+            "First slide must have a high-contrast, attention-grabbing graphic",
+            "Use consistent color palette across all slides",
+            "Design each slide as a standalone visual story"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with unexpected visual disruption",
-            "Use rapid-cut transitions between features",
-            "Include designer reaction/excitement moments"
+            "Add text overlays explaining each feature",
+            "Use screen recordings to demonstrate functionality",
+            "Include a clear call-to-action in final frame"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Frame features as professional productivity gains",
-            "Include data/statistic about workflow efficiency",
-            "Use more technical, in-depth language"
+            "Add more technical depth to feature descriptions",
+            "Include professional use case examples",
+            "Frame features as productivity enhancers"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, tech-forward aesthetic with electric blue and charcoal gradient, sharp geometric typography, motion-design transitions, minimal illustrations highlighting product interface, high-contrast color blocking"
+        "description": "Bold, tech-forward aesthetic with electric blue and gradient accents. Clean, geometric typography with sharp angles. Incorporate abstract design system elements. Use motion graphics that simulate UI interactions. Minimalist but high-energy visual style reminiscent of modern tech interfaces."
       },
       "exampleOutline": [
-        "Attention-grabbing feature reveal",
-        "Current design workflow pain points",
-        "Three game-changing Figma Buzz features",
-        "Practical implementation strategies",
-        "Immediate action invitation"
+        "Slide 1: Bold hook graphic introducing Figma Buzz features",
+        "Slide 2: Marketing template connection overview",
+        "Slide 3: Design system integration details",
+        "Slide 4: Plugin connectivity explanation",
+        "Slide 5: Final call-to-action and exploration prompt"
       ],
-      "hashtags": "#FigmaBuzz #DesignTips #CreativeTech #ProductivityHack #AIDesign #MarketingTools #UXDesign #DesignWorkflow #CreativeInnovation #DigitalDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 9
+      "hashtags": "#FigmaBuzz #DesignTools #CreativeTech #AIDesign #ProductivityHacks #MarketingDesign #UXTools #DesignInnovation #CreativeWorkflow #DesignSystems",
+      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 10
     },
     {
       "title": "How to streamline your design system workflow in Figma",
@@ -166,81 +261,62 @@
         {
           "name": "Figma Blog",
           "url": "https://www.figma.com/blog/how-to-streamline-your-design-system-workflow-in-figma/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/schema-2025-design-systems-recap/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=N2NwII5mAU4&vl=en"
-        },
-        {
-          "name": "Community",
-          "url": "https://community.weweb.io/t/optimizing-design-system-figma-weweb/20404"
-        },
-        {
-          "name": "Help",
-          "url": "https://help.figma.com/hc/en-us/articles/35794667554839-What-s-new-from-Schema-2025"
-        },
-        {
-          "name": "Designsystemscollective",
-          "url": "https://www.designsystemscollective.com/design-system-trends-that-are-actually-worth-following-in-2025-44a405348687"
         }
       ],
+      "format": "reel",
       "hooks": [
-        "Figma Design Systems: Your Workflow Superpower",
-        "Turn Chaos into Clarity in Figma",
-        "Design Systems Unlocked: Figma Magic Revealed"
+        "Design Systems in Figma: From Chaos to Clarity 🚀",
+        "Hack Your Figma Workflow in 60 Seconds 💡",
+        "Turn Figma Design System Nightmares into Dreams"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use screen recording of actual Figma workflow",
-            "Include quick before/after visual transformation",
-            "Add energetic motion graphics to highlight key steps"
+            "Use fast-paced screen recordings with dynamic transitions",
+            "Add text overlays that sync with screen movements",
+            "Include quick emoji reactions to key points"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Bold problem statement graphic",
-            "Use sequential slides showing workflow steps",
-            "Final slide: Clear call-to-action with resource link"
+            "Break down workflow steps across 6-8 visual slides",
+            "Use consistent color coding for each workflow stage",
+            "First slide must have provocative problem statement"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with unexpected design system fail scenario",
-            "Use fast-paced screen capture with voiceover",
-            "End with clear, actionable plugin/technique recommendation"
+            "Start with unexpected visual metaphor for design complexity",
+            "Use screen capture with high-energy voiceover",
+            "Include quick before/after demonstration"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Frame as professional productivity enhancement",
-            "Include data/metrics about design system efficiency",
-            "Link to more in-depth resources or workshop"
+            "Add more technical depth in text commentary",
+            "Use professional screen recording aesthetic",
+            "Include specific plugin and tool recommendations"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast tech-inspired palette with deep blues and electric accents. Dynamic, asymmetric compositions emphasizing workflow progression. Clean sans-serif typography with occasional geometric overlays. Subtle motion graphics showing transformation and connection between design elements."
+        "description": "High-energy tech-inspired aesthetic with neon accent colors, dynamic screen transitions, floating UI elements, quick animated typography, dark mode interface with sharp-edged design system mockups"
       },
       "exampleOutline": [
-        "Section 1: Provocative Design System Challenge",
-        "Section 2: Common Workflow Bottlenecks",
-        "Section 3: Figma Features & Plugin Solutions",
-        "Section 4: Practical Implementation Strategy",
-        "Section 5: Next Steps & Free Resources"
+        "Hook: Provocative design system challenge",
+        "Problem: Overwhelming Figma design system creation",
+        "Solution: 3 key workflow optimization techniques",
+        "Demonstration: Live plugin/technique showcase",
+        "Call-to-Action: Follow for more design tips"
       ],
-      "hashtags": "#FigmaDesign #DesignSystems #ProductivityHacks #UXDesign #AIDesign #CreativeTech #DesignWorkflow #DesignTools #FigmaTips #CreativeStrategy",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 9
+      "hashtags": "#FigmaDesign #DesignSystems #UIDesign #ProductDesign #AdobeXD #DesignTips #CreativeWorkflow #AIDesign #DesignTechnology #UXDesign",
+      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 11
     },
     {
       "title": "Meta centralizes Facebook and Instagram support, tests AI support assistant",
@@ -252,123 +328,60 @@
           "url": "https://techcrunch.com/2025/12/04/meta-centralizes-facebook-and-instagram-support-tests-ai-support-assistant/"
         }
       ],
+      "format": "story",
       "hooks": [
-        "Meta's AI Revolution: Support Gets Smarter",
-        "One Hub to Rule Them All",
-        "Facebook & Instagram's New AI Lifeline"
+        "Meta's AI Revolution: Support Gets Smarter 🤖",
+        "One Hub to Rule Them All: Meta's Support Upgrade",
+        "Your Facebook Problems, Now AI-Powered 🚀"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Open with dramatic UI transformation animation",
-            "Use split-screen showing old vs new support interface",
-            "Add dynamic text overlays highlighting key AI features"
+            "Use quick screen transitions to simulate AI interface",
+            "Include animated text overlays highlighting key features",
+            "Incorporate screen recordings showing actual support flow"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Provocative AI support concept graphic",
-            "Use step-by-step visual explanation of new support hub",
-            "Final slide includes clear call-to-explore action"
+            "First slide must visually shock/intrigue viewers",
+            "Use consistent color scheme mimicking Meta's branding",
+            "Each slide should reveal a progressive insight about new support system"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Quick screen recording of new support interface",
-            "Use voiceover to explain AI assistant capabilities",
-            "Include rapid-fire benefit highlights with motion graphics"
+            "Open with unexpected visual metaphor about AI support",
+            "Use fast-paced editing to maintain attention",
+            "Include text annotations explaining complex concepts quickly"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Frame as strategic product evolution narrative",
-            "Include data/statistics about support efficiency",
-            "Highlight user experience improvement angle"
+            "Frame as professional innovation, not just feature update",
+            "Use data-driven graphics to illustrate support efficiency",
+            "Highlight potential enterprise/user experience improvements"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Futuristic tech aesthetic with electric blue and deep purple gradient background, holographic UI elements, minimalist sans-serif typography, floating translucent icons suggesting AI intelligence, subtle motion design showing interconnected support pathways"
+        "description": "High-contrast tech-futuristic aesthetic with deep blues and electric teals, geometric/modular compositions suggesting AI precision, floating holographic UI elements, sans-serif typography with sharp edges, subtle motion graphics simulating digital intelligence, minimal but impactful color palette"
       },
       "exampleOutline": [
-        "Attention-grabbing UI transformation visual",
-        "Current support challenges context",
-        "Meta's AI support hub breakdown",
-        "User empowerment through intelligent design",
-        "Explore/Learn More CTA"
+        "Section 1: Provocative AI Support Intro",
+        "Section 2: The Current Support Problem",
+        "Section 3: Meta's Centralized AI Solution",
+        "Section 4: How This Changes User Experience",
+        "Section 5: Call-to-Explore New Support Tools"
       ],
-      "hashtags": "#MetaAI #AISupport #TechInnovation #FacebookUpdate #InstagramTips #AIAssistant #UserExperience #DigitalTransformation #TechTrends #ProductUpdate",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
-    },
-    {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
-        }
-      ],
-      "hooks": [
-        "Typography gets a Figma-sized makeover",
-        "When design meets custom typeface magic",
-        "Inside Figma's radical font revolution"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use kinetic typography revealing letters",
-            "Show design process as quick transitions",
-            "Include behind-the-scenes designer moments"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Dramatic before/after typeface reveal",
-            "Use grid layout for type exploration",
-            "Include annotated design decision slides"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Fast-paced motion graphics breakdown",
-            "Designer interview snippet as hook",
-            "Demonstrate type flexibility in quick cuts"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Professional deep-dive into design process",
-            "Highlight technical typographic considerations",
-            "Frame as strategic brand evolution"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 8,
-        "description": "High-contrast color palette with electric blues/soft neutrals, experimental grid layouts, dynamic type reveal animations, Swiss design meets tech-forward aesthetic, motion-driven compositions that deconstruct letterforms"
-      },
-      "exampleOutline": [
-        "Section 1: Dramatic type transformation hook",
-        "Section 2: Why Figma needed custom typography",
-        "Section 3: Design process and creative challenges",
-        "Section 4: How new font reflects brand evolution",
-        "Section 5: Invitation to explore full design story"
-      ],
-      "hashtags": "#DesignSystem #Typography #FigmaDesign #CreativeTech #BrandIdentity #AIDesign #ProductDesign #CreativeProcess #TypeDesign #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 6
+      "hashtags": "#MetaAI #TechInnovation #AISupport #FacebookUpdate #InstagramTips #UserExperience #TechNews #AIRevolution #DigitalTransformation #SupportTech",
+      "pexelsImageUrl": "https://images.pexels.com/photos/7245606/pexels-photo-7245606.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 5
     }
   ]
 }

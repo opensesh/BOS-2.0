@@ -1,7 +1,37 @@
 {
   "type": "weekly-update",
-  "date": "2025-12-05T00:21:53.658Z",
+  "date": "2025-12-05T16:19:34.374Z",
   "updates": [
+    {
+      "title": "The New York Times is suing Perplexity for copyright infringement",
+      "description": "The New York Times filed a copyright lawsuit against Perplexity, joining other publishers using legal action as leverage to force AI companies into licensing deals that compensate content creators.",
+      "timestamp": "12/05/2025, 4:03 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/05/the-new-york-times-is-suing-perplexity-for-copyright-infringement/"
+        },
+        {
+          "name": "Axios",
+          "url": "https://www.axios.com/2025/12/05/nyt-sues-perplexity-for-copyright-infringement"
+        },
+        {
+          "name": "Engadget",
+          "url": "https://www.engadget.com/ai/the-new-york-times-and-chicago-tribune-sue-perplexity-over-alleged-copyright-infringement-153656431.html"
+        },
+        {
+          "name": "Pressgazette",
+          "url": "https://pressgazette.co.uk/platforms/news-publisher-ai-deals-lawsuits-openai-google/"
+        },
+        {
+          "name": "Mediagazer",
+          "url": "https://mediagazer.com/241021/p11"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/2025/12/05/the-new-york-times-is-suing-perplexity-for-copyright-infringement/",
+      "topicCategory": "social-trends"
+    },
     {
       "title": "8 tips for designers building branded templates in Figma Buzz",
       "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
@@ -12,18 +42,30 @@
           "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
         },
         {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+          "name": "Webdesignernews",
+          "url": "https://webdesignernews.com/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
+        },
+        {
+          "name": "Ux-news",
+          "url": "https://ux-news.com/new-features-in-figma-buzz-customizable-templates-plugins-and-video-trimming/"
         },
         {
           "name": "Figmalion",
-          "url": "https://figmalion.com/issue/221"
+          "url": "https://figmalion.com/topics/figma-buzz"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/watch?v=FPpzI7z_U-o"
+        },
+        {
+          "name": "Figma",
+          "url": "https://www.figma.com/blog/branding/"
         }
       ],
       "tier": "featured",
       "sourceUrl": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/",
       "topicCategory": "design-ux",
-      "totalSources": 14
+      "totalSources": 12
     },
     {
       "title": "Three new features to help build brand momentum with Figma Buzz",
@@ -58,7 +100,7 @@
       "tier": "featured",
       "sourceUrl": "https://www.figma.com/blog/new-features-in-figma-buzz/",
       "topicCategory": "design-ux",
-      "totalSources": 18
+      "totalSources": 19
     },
     {
       "title": "How to streamline your design system workflow in Figma",
@@ -68,32 +110,11 @@
         {
           "name": "Figma Blog",
           "url": "https://www.figma.com/blog/how-to-streamline-your-design-system-workflow-in-figma/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/schema-2025-design-systems-recap/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=N2NwII5mAU4&vl=en"
-        },
-        {
-          "name": "Community",
-          "url": "https://community.weweb.io/t/optimizing-design-system-figma-weweb/20404"
-        },
-        {
-          "name": "Help",
-          "url": "https://help.figma.com/hc/en-us/articles/35794667554839-What-s-new-from-Schema-2025"
-        },
-        {
-          "name": "Designsystemscollective",
-          "url": "https://www.designsystemscollective.com/design-system-trends-that-are-actually-worth-following-in-2025-44a405348687"
         }
       ],
-      "tier": "featured",
+      "tier": "quick",
       "sourceUrl": "https://www.figma.com/blog/how-to-streamline-your-design-system-workflow-in-figma/",
-      "topicCategory": "design-ux",
-      "totalSources": 9
+      "topicCategory": "design-ux"
     },
     {
       "title": "Meta centralizes Facebook and Instagram support, tests AI support assistant",
@@ -124,18 +145,18 @@
       "topicCategory": "branding"
     },
     {
-      "title": "Blueberry by Studio NARI",
-      "description": "“Mind. Blown”, as someone in Gen Alpha might have said a long time ago, maybe while performing some flossing at a velocity so rapid as to be barely perceptible to the naked Millennial eye. But they probably wouldn’t say that any more, such is the rapacious speed at which all things ‘young person’ change. Gen Alpha inhabits a world so\nThe post Blueberry by Studio NARI appeared first on BP&O - Branding, Packaging and Opinion.",
-      "timestamp": "12/04/2025, 9:15 AM",
+      "title": "Meta signs commercial AI data agreements with publishers to offer real-time news on Meta AI",
+      "description": "Meta is partnering with CNN, Fox News, Fox Sports, Le Monde Group, the People Inc. portfolio of media brands, The Daily Caller, The Washington Examiner, and USA Today.",
+      "timestamp": "12/05/2025, 3:27 PM",
       "sources": [
         {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/04/blueberry-digital-fashion-brand-identity-by-studio-nari/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/05/meta-signs-commercial-ai-data-agreements-with-publishers-to-offer-real-time-news-on-meta-ai/"
         }
       ],
       "tier": "quick",
-      "sourceUrl": "https://bpando.org/2025/12/04/blueberry-digital-fashion-brand-identity-by-studio-nari/",
-      "topicCategory": "branding"
+      "sourceUrl": "https://techcrunch.com/2025/12/05/meta-signs-commercial-ai-data-agreements-with-publishers-to-offer-real-time-news-on-meta-ai/",
+      "topicCategory": "startup-business"
     },
     {
       "title": "Figma on Figma: Evolving our visual language",
@@ -150,20 +171,6 @@
       "tier": "quick",
       "sourceUrl": "https://www.figma.com/blog/figma-on-figma-evolving-our-visual-language/",
       "topicCategory": "branding"
-    },
-    {
-      "title": "Keeping creativity flowing when times are tough",
-      "description": "Building a culture where everyone feels safe and encouraged to contribute is no small task. We are always interested in the ways teams use Figma to do just that—brainstorm, ideate, team-build—and it’s one of the many reasons we launched FigJam. Here, Senior Illustrator Alek Mackie shares how he stays creative and productive.",
-      "timestamp": "07/15/2021, 12:00 AM",
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/keeping-creativity-flowing/"
-        }
-      ],
-      "tier": "quick",
-      "sourceUrl": "https://www.figma.com/blog/keeping-creativity-flowing/",
-      "topicCategory": "general-tech"
     }
   ]
 }

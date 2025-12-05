@@ -1,54 +1,124 @@
 {
   "type": "long-form",
-  "date": "2025-12-05T00:21:53.659Z",
+  "date": "2025-12-05T16:19:34.375Z",
   "ideas": [
+    {
+      "title": "The New York Times is suing Perplexity for copyright infringement",
+      "description": "The New York Times filed a copyright lawsuit against Perplexity, joining other publishers using legal action as leverage to force AI companies into licensing deals that compensate content creators.",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/05/the-new-york-times-is-suing-perplexity-for-copyright-infringement/"
+        },
+        {
+          "name": "Axios",
+          "url": "https://www.axios.com/2025/12/05/nyt-sues-perplexity-for-copyright-infringement"
+        },
+        {
+          "name": "Engadget",
+          "url": "https://www.engadget.com/ai/the-new-york-times-and-chicago-tribune-sue-perplexity-over-alleged-copyright-infringement-153656431.html"
+        },
+        {
+          "name": "Pressgazette",
+          "url": "https://pressgazette.co.uk/platforms/news-publisher-ai-deals-lawsuits-openai-google/"
+        },
+        {
+          "name": "Mediagazer",
+          "url": "https://mediagazer.com/241021/p11"
+        }
+      ],
+      "format": "documentary",
+      "hooks": [
+        "AI vs. Media: The Copyright Battle Begins",
+        "When Algorithms Steal: Perplexity's Legal Nightmare",
+        "News Giants vs. AI: The Lawsuit That Changes Everything"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use archival news footage and legal document animations",
+            "Create split-screen comparisons of original content vs. AI outputs",
+            "Include expert interview-style talking head segments for credibility"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dark moody color palette with deep blues and grays, high-contrast typography, dynamic motion graphics simulating legal documents and digital interfaces, layered documentary-style visual storytelling with archival and contemporary footage blended, minimalist infographic elements to explain complex legal concepts"
+      },
+      "exampleOutline": [
+        "Opening: Dramatic reveal of lawsuit filing",
+        "Context: Rise of AI content scraping",
+        "Deep Dive: NYT's specific copyright claims",
+        "Industry Impact: Broader implications for media and AI",
+        "Closing: Future of content ownership in AI era"
+      ],
+      "hashtags": "#AILawsuit #CopyrightBattle #NYTimes #ArtificialIntelligence #MediaTech #LegalTech #AIEthics #ContentOwnership #PerplexityAI #TechLaw",
+      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 4
+    },
     {
       "title": "8 tips for designers building branded templates in Figma Buzz",
       "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
-      "starred": true,
+      "starred": false,
       "sources": [
         {
           "name": "Figma Blog",
           "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
         },
         {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+          "name": "Webdesignernews",
+          "url": "https://webdesignernews.com/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
+        },
+        {
+          "name": "Ux-news",
+          "url": "https://ux-news.com/new-features-in-figma-buzz-customizable-templates-plugins-and-video-trimming/"
         },
         {
           "name": "Figmalion",
-          "url": "https://figmalion.com/issue/221"
+          "url": "https://figmalion.com/topics/figma-buzz"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/watch?v=FPpzI7z_U-o"
+        },
+        {
+          "name": "Figma",
+          "url": "https://www.figma.com/blog/branding/"
         }
       ],
+      "format": "livestream",
       "hooks": [
-        "Design Templates That Don't Break Brand Guidelines",
-        "Figma Secrets: Build Flexible Brand Systems",
-        "Make Templates That Marketing Teams Actually Love"
+        "Live Design Challenge: Create Unbreakable Brand Templates!",
+        "Figma Secrets: Templates That Scale Without Breaking",
+        "Design Like a Pro: Flexible Brand Systems Revealed"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use screen recordings showing Figma interface",
-            "Include picture-in-picture designer commentary",
-            "Add chapter markers for quick navigation"
+            "Enable live chat for real-time audience interaction",
+            "Prepare pre-selected audience questions to kickstart Q&A",
+            "Use stream annotations to highlight key template design moments"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, dynamic Figma-inspired color palette with electric blue and soft grays. Experimental typography with technical grid layouts. Animated transitions revealing template mechanics. Motion graphics highlighting design system constraints. Clean but edgy aesthetic blending technical precision with creative flexibility."
+        "description": "Bold, dynamic split-screen design with live Figma interface on one side, presenter on the other. Vibrant electric blue and charcoal color palette. Animated typography highlighting key template design principles. Kinetic motion graphics demonstrating template flexibility. Clean, modern tech-inspired aesthetic with experimental layout transitions."
       },
       "exampleOutline": [
-        "Hook: Why Most Templates Fail",
-        "The Marketing-Design Collaboration Challenge",
-        "8 Strategic Template Design Principles",
-        "Live Figma Demonstration & Breakdown",
-        "Call-to-Action: Join Design Community"
+        "Section 1: High-Energy Live Stream Intro & Design Challenge",
+        "Section 2: Why Most Templates Fail - Real-World Examples",
+        "Section 3: 8 Tactical Template Design Strategies",
+        "Section 4: Live Audience Template Breakdown & Critique",
+        "Section 5: Call-to-Action & Community Challenge"
       ],
-      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystems #CreativeWorkflow #UIDesign #ProductDesign #DesignTips #BrandIdentity #CreativeStrategy #DesignCommunity",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 5
+      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystem #CreativeWorkflow #ProductDesign #UIUXTips #DesignInnovation #CreativeCoding #DesignStrategy #AIDesign",
+      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 7
     },
     {
       "title": "Three new features to help build brand momentum with Figma Buzz",
@@ -80,35 +150,36 @@
           "url": "https://investor.figma.com/news-events/news/default.aspx"
         }
       ],
+      "format": "tutorial",
       "hooks": [
-        "Design Faster: Figma Buzz's Game-Changing Features",
-        "Supercharge Your Workflow with Figma's New Tools",
-        "Brand Momentum: 3 Insider Tricks in Figma"
+        "Supercharge Your Figma Workflow in 3 Easy Steps",
+        "Unlock Hidden Figma Buzz Features Now",
+        "Design Faster: Figma Buzz's Secret Weapons Revealed"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use screen recording to demonstrate features live",
-            "Include picture-in-picture designer reactions/commentary",
-            "Create clear chapter markers for easy navigation"
+            "Use screen recording with cursor highlighting for each step",
+            "Create clear chapter markers for each feature demonstration",
+            "Include picture-in-picture for personal commentary and context"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, dynamic visual style with high-contrast Figma brand colors. Energetic motion graphics showing feature transitions. Modern, clean typography with sharp geometric elements. Incorporate subtle tech-inspired glitch animations to highlight innovation. Use a color palette of electric blues, deep purples, and bright accents to convey cutting-edge design technology."
+        "description": "Bold, dynamic visual style with electric blue and deep purple color palette. Geometric motion graphics transitions between steps. Clean, sans-serif typography with subtle animated highlights. Sharp, modern UI overlays that emphasize each feature's functionality. Incorporate Figma's design language with unexpected compositional angles."
       },
       "exampleOutline": [
-        "Intro: Teaser of workflow transformation",
-        "Problem: Current design collaboration limitations",
-        "Feature Deep Dive: Marketing templates, app plugins, video trimming",
-        "Real-world Impact: How these tools elevate brand creation",
-        "Call-to-Action: Try Figma Buzz features today"
+        "Introduction: Why These Figma Buzz Features Matter",
+        "Context: Current Design Workflow Challenges",
+        "Step-by-Step Feature Walkthrough (3 Key Features)",
+        "Practical Implementation Insights",
+        "Final Call-to-Action: Upgrade Your Design Process"
       ],
-      "hashtags": "#FigmaBuzz #DesignTips #CreativeWorkflow #ProductivityHacks #AIDesign #MarketingTools #CreativeTech #DesignInnovation #FigmaFeatures #BrandDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 6
+      "hashtags": "#FigmaBuzz #DesignTips #UIDesign #ProductivityHacks #CreativeWorkflow #DesignTools #AIDesign #MarketingTemplates #DesignSystem #CreativeTech",
+      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 4
     },
     {
       "title": "How to streamline your design system workflow in Figma",
@@ -118,56 +189,37 @@
         {
           "name": "Figma Blog",
           "url": "https://www.figma.com/blog/how-to-streamline-your-design-system-workflow-in-figma/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/schema-2025-design-systems-recap/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=N2NwII5mAU4&vl=en"
-        },
-        {
-          "name": "Community",
-          "url": "https://community.weweb.io/t/optimizing-design-system-figma-weweb/20404"
-        },
-        {
-          "name": "Help",
-          "url": "https://help.figma.com/hc/en-us/articles/35794667554839-What-s-new-from-Schema-2025"
-        },
-        {
-          "name": "Designsystemscollective",
-          "url": "https://www.designsystemscollective.com/design-system-trends-that-are-actually-worth-following-in-2025-44a405348687"
         }
       ],
+      "format": "video",
       "hooks": [
-        "Design Systems in Figma: Your Shortcut to Productivity",
-        "Transform Chaos into Clarity: Figma Design Workflow Hack",
-        "Crush Design System Complexity in Just One Afternoon"
+        "Design Systems in Figma: Speed Hack Unlocked!",
+        "Crush Your Figma Workflow in 10 Minutes",
+        "Bye Boring Design Systems, Hello Efficiency"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use dynamic screen recordings showing exact Figma workflow",
-            "Include picture-in-picture of presenter for personal connection",
-            "Add chapter markers for easy navigation"
+            "Use screen recording with picture-in-picture for live Figma demonstration",
+            "Create clear chapter markers for easy navigation",
+            "Include dynamic motion graphics to illustrate workflow steps"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, tech-forward aesthetic with deep blue and electric accent colors. Dynamic motion graphics showing workflow transitions. Clean, sans-serif typography with geometric elements. Animated UI mockups demonstrating Figma interface transformations. Subtle parallax effects during screen recordings."
+        "description": "High-energy, tech-forward aesthetic with vibrant blue-purple gradients. Dynamic motion graphics transitioning between Figma interface states. Clean, modern sans-serif typography with bold callouts. Animated UI elements that demonstrate workflow transformations. Sharp, angular design system visualizations with fluid transitions."
       },
       "exampleOutline": [
-        "Section 1: High-Energy Intro - Design System Pain Points",
-        "Section 2: Current Workflow Challenges in Figma",
-        "Section 3: New Features & Plugins Breakdown",
-        "Section 4: Live Demonstration of Streamlined Workflow",
-        "Section 5: Call-to-Action & Further Learning Resources"
+        "Hook: Dramatic reveal of design system complexity",
+        "Problem: Time-consuming manual design system creation",
+        "Solution: Figma features & plugin workflow strategies",
+        "Technical Deep Dive: Step-by-step implementation",
+        "Call-to-Action: Free resource/next steps"
       ],
-      "hashtags": "#FigmaDesign #DesignSystems #ProductivityHacks #UIDesign #CreativeWorkflow #DesignTips #AIDesign #FigmaTutorial #CreativeTech #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "hashtags": "#FigmaDesign #DesignSystems #ProductDesign #UIDesign #CreativeWorkflow #DesignTips #AIDesign #CreativeTech #DesignEfficiency #FigmaTutorial",
+      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
       "textureIndex": 9
     },
     {
@@ -180,74 +232,35 @@
           "url": "https://techcrunch.com/2025/12/04/meta-centralizes-facebook-and-instagram-support-tests-ai-support-assistant/"
         }
       ],
+      "format": "documentary",
       "hooks": [
-        "AI Support Revolution: Meta's Game-Changing Move",
-        "Inside Meta's New Customer Service Transformation",
-        "How AI Will Redefine Social Media Support"
+        "AI's Radical Shift in Social Media Support",
+        "Meta's Secret Weapon: AI Customer Service",
+        "Inside Meta's Next-Gen Support Revolution"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use screen recordings of new support interface",
-            "Include side-by-side comparison of old vs new system",
-            "Add animated graphics explaining AI support workflow"
+            "Use archival footage of Meta/Facebook support screens",
+            "Include expert interview-style commentary with screen transitions",
+            "Create dynamic lower-thirds with tech-inspired motion graphics"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Dynamic blue-purple gradient backgrounds, sleek tech-inspired motion graphics, clean sans-serif typography with subtle futuristic edge. Incorporate Meta's brand colors with high-contrast AI-themed visual metaphors. Utilize dynamic split-screen and parallax scrolling effects to illustrate complex support ecosystem."
+        "description": "Dark mode color palette with electric blue/deep navy accents. Asymmetrical composition with overlapping screen recordings. Futuristic sans-serif typography with high-contrast text. Subtle glitch/digital interference motion effects. Clean, tech-documentary aesthetic inspired by WIRED/Motherboard visual style."
       },
       "exampleOutline": [
-        "Opening: Meta's Support Landscape Transformation",
-        "The Current Customer Service Challenge",
-        "AI Assistant: Technical Deep Dive",
-        "Implications for User Experience and Privacy",
-        "Future of Social Media Support Platforms"
+        "Cold Open: Dramatic AI support interaction reveal",
+        "Historical Context: Evolution of social media support",
+        "Technical Deep Dive: How Meta's AI assistant works",
+        "Implications: Future of customer service technology",
+        "Call-to-Action: Explore Meta's new support ecosystem"
       ],
-      "hashtags": "#MetaAI #SocialMediaSupport #AIAssistant #TechInnovation #CustomerService #FacebookUpdate #InstagramTech #AISupport #SocialTech #UserExperience",
+      "hashtags": "#MetaAI #AISupport #SocialMediaTech #CustomerService #FacebookUpdate #InstagramTech #AIInnovation #TechTrends #DigitalTransformation #SupportTechnology",
       "pexelsImageUrl": "https://images.pexels.com/photos/7245606/pexels-photo-7245606.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 3
-    },
-    {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
-        }
-      ],
-      "hooks": [
-        "How a typeface transforms brand identity",
-        "Design's hidden language: Figma Sans revealed",
-        "When fonts speak volumes"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use animated typography to demonstrate font characteristics",
-            "Include behind-the-scenes design process B-roll",
-            "Create chapter markers highlighting key typeface development stages"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 8,
-        "description": "High-contrast color palette with geometric, modular aesthetic. Clean, technical compositions blending technical precision with creative fluidity. Typography-driven design with dynamic motion graphics showcasing font evolution. Minimal color scheme emphasizing white, light gray, and strategic accent colors. Kinetic text animations revealing design process layers."
-      },
-      "exampleOutline": [
-        "Opening: Dramatic typography reveal",
-        "Context: Figma's design evolution challenge",
-        "Core Content: Typeface design journey",
-        "Key Insight: Design philosophy behind font creation",
-        "Closing: Community and future vision CTA"
-      ],
-      "hashtags": "#DesignSystem #Typography #FigmaSans #ProductDesign #CreativeCoding #BrandIdentity #FontDesign #AIDesign #CreativeProcess #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
       "textureIndex": 1
     }
   ]
