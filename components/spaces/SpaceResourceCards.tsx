@@ -80,213 +80,212 @@ export function SpaceResourceCards({
   const articleLinks = links.filter(isArticleLink);
   const regularLinks = links.filter(link => !isArticleLink(link));
 
-  // Compact chip card for files, links, articles
-  const ChipCard = ({ 
-    icon: Icon, 
-    label, 
-    sublabel,
-    href,
-    onClick,
-    onRemove,
-  }: {
+  // Build flat list of all resources for unified grid
+  const allResources: Array<{
+    type: 'file' | 'link' | 'article' | 'instruction' | 'task';
+    id: string;
     icon: React.ElementType;
     label: string;
     sublabel?: string;
     href?: string;
-    onClick?: () => void;
+    completed?: boolean;
     onRemove?: () => void;
-  }) => {
-    const content = (
-      <>
-        <div className="w-7 h-7 rounded-lg bg-os-border-dark/50 flex items-center justify-center flex-shrink-0 group-hover:bg-brand-aperol/20 transition-colors">
-          <Icon className="w-3.5 h-3.5 text-os-text-secondary-dark group-hover:text-brand-aperol transition-colors" />
-        </div>
-        <div className="flex-1 min-w-0">
-          <p className="text-xs font-medium text-os-text-primary-dark truncate group-hover:text-brand-aperol transition-colors leading-tight">
-            {label}
-          </p>
-          {sublabel && (
-            <p className="text-[10px] text-os-text-secondary-dark truncate leading-tight">
-              {sublabel}
-            </p>
-          )}
-        </div>
-        {onRemove && !isReadOnly && (
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              onRemove();
-            }}
-            className="opacity-0 group-hover:opacity-100 p-1 rounded-md hover:bg-red-500/10 text-os-text-secondary-dark hover:text-red-400 transition-all flex-shrink-0"
-          >
-            <X className="w-3 h-3" />
-          </button>
-        )}
-      </>
-    );
+    onToggle?: () => void;
+  }> = [];
 
-    const className = "group relative flex items-center gap-2 px-2 py-1.5 rounded-lg bg-os-bg-dark/80 border border-os-border-dark/30 hover:border-brand-aperol/30 transition-all";
+  // Add files
+  files.forEach(file => {
+    allResources.push({
+      type: 'file',
+      id: file.id,
+      icon: getFileIcon(file.type),
+      label: file.name,
+      sublabel: formatFileSize(file.size),
+      onRemove: onRemoveFile ? () => onRemoveFile(file.id) : undefined,
+    });
+  });
 
-    if (href) {
-      return (
-        <a href={href} target={href.startsWith('/') ? undefined : '_blank'} rel="noopener noreferrer" className={className}>
-          {content}
-        </a>
-      );
-    }
+  // Add regular links
+  regularLinks.forEach(link => {
+    allResources.push({
+      type: 'link',
+      id: link.id,
+      icon: LinkIcon,
+      label: link.title || getDomainFromUrl(link.url),
+      sublabel: getDomainFromUrl(link.url),
+      href: link.url,
+      onRemove: onRemoveLink ? () => onRemoveLink(link.id) : undefined,
+    });
+  });
 
-    return (
-      <div className={className} onClick={onClick}>
-        {content}
-      </div>
-    );
-  };
+  // Add articles
+  articleLinks.forEach(link => {
+    allResources.push({
+      type: 'article',
+      id: link.id,
+      icon: Newspaper,
+      label: link.title || 'Article',
+      sublabel: 'Discover',
+      href: link.url,
+      onRemove: onRemoveLink ? () => onRemoveLink(link.id) : undefined,
+    });
+  });
+
+  // Add instructions as single item
+  if (instructions && instructions.trim()) {
+    allResources.push({
+      type: 'instruction',
+      id: 'instructions',
+      icon: FileText,
+      label: instructions.slice(0, 60) + (instructions.length > 60 ? '...' : ''),
+      sublabel: 'Custom instructions',
+    });
+  }
+
+  // Add tasks
+  tasks.forEach(task => {
+    allResources.push({
+      type: 'task',
+      id: task.id,
+      icon: task.completed ? CheckCircle2 : Circle,
+      label: task.title,
+      completed: task.completed,
+      onRemove: onRemoveTask ? () => onRemoveTask(task.id) : undefined,
+      onToggle: onToggleTask ? () => onToggleTask(task.id) : undefined,
+    });
+  });
 
   return (
-    <div className="mb-8">
+    <div className="mb-6">
       {/* Container with distinct background */}
-      <div className="bg-os-surface-dark/40 rounded-xl border border-os-border-dark/40 p-4 space-y-4">
-        {/* Files */}
-        {files.length > 0 && (
-          <div>
-            <div className="flex items-center gap-1.5 mb-2">
-              <Upload className="w-3 h-3 text-os-text-secondary-dark/70" />
-              <p className="text-[10px] text-os-text-secondary-dark/70 font-medium uppercase tracking-wider">Files</p>
-              <span className="text-[10px] text-os-text-secondary-dark/50">{files.length}</span>
-            </div>
-            <div className="flex flex-wrap gap-1.5">
-              {files.map((file) => {
-                const IconComponent = getFileIcon(file.type);
-                return (
-                  <ChipCard
-                    key={file.id}
-                    icon={IconComponent}
-                    label={file.name}
-                    sublabel={formatFileSize(file.size)}
-                    onRemove={onRemoveFile ? () => onRemoveFile(file.id) : undefined}
-                  />
-                );
-              })}
-            </div>
-          </div>
-        )}
+      <div className="bg-os-surface-dark/40 rounded-xl border border-os-border-dark/40 p-3">
+        {/* Unified 3-column grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5">
+          {allResources.map((item) => {
+            const Icon = item.icon;
+            const isTask = item.type === 'task';
+            const isCompleted = item.completed;
+            
+            const cardClasses = `
+              group relative flex items-center gap-2 p-2 rounded-lg border transition-all min-w-0
+              ${isCompleted 
+                ? 'bg-green-500/5 border-green-500/20 hover:border-green-500/30' 
+                : 'bg-os-bg-dark/60 border-os-border-dark/20 hover:border-brand-aperol/30 hover:bg-os-bg-dark'
+              }
+            `;
 
-        {/* Links */}
-        {regularLinks.length > 0 && (
-          <div>
-            <div className="flex items-center gap-1.5 mb-2">
-              <LinkIcon className="w-3 h-3 text-os-text-secondary-dark/70" />
-              <p className="text-[10px] text-os-text-secondary-dark/70 font-medium uppercase tracking-wider">Links</p>
-              <span className="text-[10px] text-os-text-secondary-dark/50">{regularLinks.length}</span>
-            </div>
-            <div className="flex flex-wrap gap-1.5">
-              {regularLinks.map((link) => (
-                <ChipCard
-                  key={link.id}
-                  icon={LinkIcon}
-                  label={link.title || getDomainFromUrl(link.url)}
-                  sublabel={getDomainFromUrl(link.url)}
-                  href={link.url}
-                  onRemove={onRemoveLink ? () => onRemoveLink(link.id) : undefined}
-                />
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Articles */}
-        {articleLinks.length > 0 && (
-          <div>
-            <div className="flex items-center gap-1.5 mb-2">
-              <Newspaper className="w-3 h-3 text-os-text-secondary-dark/70" />
-              <p className="text-[10px] text-os-text-secondary-dark/70 font-medium uppercase tracking-wider">Articles</p>
-              <span className="text-[10px] text-os-text-secondary-dark/50">{articleLinks.length}</span>
-            </div>
-            <div className="flex flex-wrap gap-1.5">
-              {articleLinks.map((link) => (
-                <ChipCard
-                  key={link.id}
-                  icon={Newspaper}
-                  label={link.title || 'Article'}
-                  sublabel="Discover"
-                  href={link.url}
-                  onRemove={onRemoveLink ? () => onRemoveLink(link.id) : undefined}
-                />
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Instructions - stays as larger card since it has text content */}
-        {instructions && instructions.trim() && (
-          <div>
-            <div className="flex items-center gap-1.5 mb-2">
-              <FileText className="w-3 h-3 text-os-text-secondary-dark/70" />
-              <p className="text-[10px] text-os-text-secondary-dark/70 font-medium uppercase tracking-wider">Instructions</p>
-            </div>
-            <div className="group flex items-start gap-2 px-3 py-2 rounded-lg bg-os-bg-dark/80 border border-os-border-dark/30 hover:border-brand-aperol/30 transition-all">
-              <div className="w-7 h-7 rounded-lg bg-os-border-dark/50 flex items-center justify-center flex-shrink-0 group-hover:bg-brand-aperol/20 transition-colors mt-0.5">
-                <FileText className="w-3.5 h-3.5 text-os-text-secondary-dark group-hover:text-brand-aperol transition-colors" />
-              </div>
-              <p className="text-xs text-os-text-primary-dark whitespace-pre-wrap line-clamp-3 flex-1">
-                {instructions}
-              </p>
-            </div>
-          </div>
-        )}
-
-        {/* Tasks - compact list */}
-        {tasks.length > 0 && (
-          <div>
-            <div className="flex items-center gap-1.5 mb-2">
-              <ListTodo className="w-3 h-3 text-os-text-secondary-dark/70" />
-              <p className="text-[10px] text-os-text-secondary-dark/70 font-medium uppercase tracking-wider">Tasks</p>
-              <span className="text-[10px] text-os-text-secondary-dark/50">{completedTasks}/{tasks.length}</span>
-            </div>
-            <div className="space-y-1">
-              {tasks.map((task) => (
-                <div
-                  key={task.id}
-                  className={`group flex items-center gap-2 px-2 py-1.5 rounded-lg border transition-all ${
-                    task.completed
-                      ? 'bg-green-500/5 border-green-500/20'
-                      : 'bg-os-bg-dark/80 border-os-border-dark/30 hover:border-brand-aperol/30'
-                  }`}
+            const content = (
+              <>
+                {/* Icon - clickable for tasks */}
+                <div 
+                  className={`
+                    w-6 h-6 rounded-md flex items-center justify-center flex-shrink-0 transition-colors
+                    ${isCompleted 
+                      ? 'bg-green-500/10' 
+                      : 'bg-os-border-dark/40 group-hover:bg-brand-aperol/15'
+                    }
+                    ${isTask && !isReadOnly ? 'cursor-pointer' : ''}
+                  `}
+                  onClick={isTask ? (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    item.onToggle?.();
+                  } : undefined}
                 >
-                  <button
-                    onClick={() => onToggleTask?.(task.id)}
-                    disabled={isReadOnly || !onToggleTask}
-                    className={`flex-shrink-0 ${isReadOnly ? 'cursor-default' : 'cursor-pointer'}`}
-                  >
-                    {task.completed ? (
-                      <CheckCircle2 className="w-4 h-4 text-green-500" />
-                    ) : (
-                      <Circle className="w-4 h-4 text-os-text-secondary-dark hover:text-brand-aperol transition-colors" />
-                    )}
-                  </button>
-                  <div className="flex-1 min-w-0">
-                    <p className={`text-xs font-medium truncate ${
-                      task.completed
-                        ? 'text-os-text-secondary-dark line-through'
-                        : 'text-os-text-primary-dark'
-                    }`}>
-                      {task.title}
+                  <Icon className={`w-3 h-3 transition-colors ${
+                    isCompleted 
+                      ? 'text-green-500' 
+                      : 'text-os-text-secondary-dark group-hover:text-brand-aperol'
+                  }`} />
+                </div>
+                
+                {/* Text content */}
+                <div className="flex-1 min-w-0 overflow-hidden">
+                  <p className={`text-[11px] font-medium truncate leading-tight transition-colors ${
+                    isCompleted 
+                      ? 'text-os-text-secondary-dark line-through' 
+                      : 'text-os-text-primary-dark group-hover:text-brand-aperol'
+                  }`}>
+                    {item.label}
+                  </p>
+                  {item.sublabel && !isTask && (
+                    <p className="text-[9px] text-os-text-secondary-dark/70 truncate leading-tight">
+                      {item.sublabel}
                     </p>
-                  </div>
-                  {!isReadOnly && onRemoveTask && (
-                    <button
-                      onClick={() => onRemoveTask(task.id)}
-                      className="opacity-0 group-hover:opacity-100 p-1 rounded-md hover:bg-red-500/10 text-os-text-secondary-dark hover:text-red-400 transition-all"
-                    >
-                      <X className="w-3 h-3" />
-                    </button>
                   )}
                 </div>
-              ))}
-            </div>
+
+                {/* Remove button */}
+                {item.onRemove && !isReadOnly && (
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      item.onRemove?.();
+                    }}
+                    className="opacity-0 group-hover:opacity-100 p-0.5 rounded hover:bg-red-500/10 text-os-text-secondary-dark/50 hover:text-red-400 transition-all flex-shrink-0"
+                  >
+                    <X className="w-2.5 h-2.5" />
+                  </button>
+                )}
+              </>
+            );
+
+            if (item.href) {
+              return (
+                <a 
+                  key={`${item.type}-${item.id}`}
+                  href={item.href} 
+                  target={item.href.startsWith('/') ? undefined : '_blank'} 
+                  rel="noopener noreferrer" 
+                  className={cardClasses}
+                >
+                  {content}
+                </a>
+              );
+            }
+
+            return (
+              <div key={`${item.type}-${item.id}`} className={cardClasses}>
+                {content}
+              </div>
+            );
+          })}
+        </div>
+        
+        {/* Resource count footer */}
+        <div className="flex items-center justify-between mt-2 pt-2 border-t border-os-border-dark/20">
+          <div className="flex items-center gap-3 text-[9px] text-os-text-secondary-dark/50">
+            {files.length > 0 && (
+              <span className="flex items-center gap-1">
+                <Upload className="w-2.5 h-2.5" /> {files.length}
+              </span>
+            )}
+            {regularLinks.length > 0 && (
+              <span className="flex items-center gap-1">
+                <LinkIcon className="w-2.5 h-2.5" /> {regularLinks.length}
+              </span>
+            )}
+            {articleLinks.length > 0 && (
+              <span className="flex items-center gap-1">
+                <Newspaper className="w-2.5 h-2.5" /> {articleLinks.length}
+              </span>
+            )}
+            {instructions && (
+              <span className="flex items-center gap-1">
+                <FileText className="w-2.5 h-2.5" /> 1
+              </span>
+            )}
+            {tasks.length > 0 && (
+              <span className="flex items-center gap-1">
+                <ListTodo className="w-2.5 h-2.5" /> {completedTasks}/{tasks.length}
+              </span>
+            )}
           </div>
-        )}
+          <span className="text-[9px] text-os-text-secondary-dark/40">
+            {allResources.length} items
+          </span>
+        </div>
       </div>
     </div>
   );
