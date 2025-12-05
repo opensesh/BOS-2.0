@@ -27,7 +27,7 @@ export function ComponentPreview({
   onVariantChange,
 }: ComponentPreviewProps) {
   const [zoom, setZoom] = useState(1);
-  const [showGrid, setShowGrid] = useState(false);
+  const [showGrid, setShowGrid] = useState(true);
   const [codeCopied, setCodeCopied] = useState(false);
   const [activeTab, setActiveTab] = useState<'props' | 'controls'>('props');
   const [componentProps, setComponentProps] = useState<Record<string, any>>({});
@@ -217,7 +217,7 @@ export default function Example() {
         <div 
           ref={previewRef}
           className={cn(
-            'min-h-[300px] p-8 flex items-center justify-center',
+            'min-h-[300px] p-8 flex items-center justify-center overflow-hidden',
             showGrid && 'bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:20px_20px]'
           )}
         >
