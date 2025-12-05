@@ -15,20 +15,16 @@ import {
   ScrollText,
   Lightbulb,
   Layers,
-  ListTree,
   FileSearch,
   Clock,
-  Sparkles,
   Copy,
   Check,
-  ChevronRight,
-  Hash,
-  Target,
-  Eye
+  ChevronRight
 } from 'lucide-react';
 import { Sidebar } from '@/components/Sidebar';
 import { StickyArticleHeader } from '@/components/discover/article/StickyArticleHeader';
-import { IdeaCardData, PlatformTip } from '@/types';
+import { SourceCards } from '@/components/discover/article/SourceCards';
+import { IdeaCardData, PlatformTip, SourceCard } from '@/types';
 import { getTextureByIndex, getTextureIndexFromString } from '@/lib/discover-utils';
 
 // Content-type specific generation options
@@ -295,6 +291,7 @@ export default function IdeaDetailPage() {
   const [loadingBrief, setLoadingBrief] = useState(false);
   const [activePlatform, setActivePlatform] = useState<string | null>(null);
   const [hashtagsCopied, setHashtagsCopied] = useState(false);
+  const [showAllSources, setShowAllSources] = useState(false);
 
   const id = searchParams.get('id');
   const slug = params.slug as string;
@@ -338,19 +335,16 @@ export default function IdeaDetailPage() {
     }
   }, [id, slug]);
 
-  // Fetch OG image with fallback - prefer pexelsImageUrl if available
+  // Fetch OG image with fallback - prioritize source thumbnails over Pexels
   useEffect(() => {
     if (item) {
-      // Use pexelsImageUrl if available, otherwise use fallback
-      if (item.pexelsImageUrl) {
-        setOgImage(item.pexelsImageUrl);
-        return;
-      }
-      
+      // Set fallback first
       setOgImage(FALLBACK_IMAGES[item.category] || FALLBACK_IMAGES['short-form']);
       
+      // Try to fetch thumbnails from sources
       if (item.sources && item.sources.length > 0) {
         const fetchImages = async () => {
+          // Try first 3 sources for OG images
           for (const source of item.sources.slice(0, 3)) {
             try {
               const response = await fetch(`/api/og-image?url=${encodeURIComponent(source.url)}`);
@@ -358,15 +352,23 @@ export default function IdeaDetailPage() {
                 const data = await response.json();
                 if (data.image) {
                   setOgImage(data.image);
-                  return;
+                  return; // Stop on first successful image
                 }
               }
             } catch {
               // Continue to next source
             }
           }
+          
+          // Fallback to Pexels only if no source thumbnails found
+          if (item.pexelsImageUrl) {
+            setOgImage(item.pexelsImageUrl);
+          }
         };
         fetchImages();
+      } else if (item.pexelsImageUrl) {
+        // Use Pexels as last resort if no sources available
+        setOgImage(item.pexelsImageUrl);
       }
     }
   }, [item]);
@@ -561,12 +563,9 @@ export default function IdeaDetailPage() {
                 {/* Hook Ideas - Only show if available */}
                 {item.hooks && item.hooks.length > 0 && (
                   <div className="mb-8">
-                    <div className="flex items-center gap-2 mb-4">
-                      <Sparkles className="w-5 h-5 text-brand-aperol" />
-                      <h2 className="text-lg font-display font-semibold text-brand-vanilla">
-                        Hook Ideas
-                      </h2>
-                    </div>
+                    <h2 className="text-lg font-display font-semibold text-brand-vanilla mb-4">
+                      Hook Ideas
+                    </h2>
                     <div className="space-y-3">
                       {item.hooks.map((hook, idx) => (
                         <div 
@@ -588,12 +587,9 @@ export default function IdeaDetailPage() {
                 {/* Platform Tips - Only show if available */}
                 {item.platformTips && item.platformTips.length > 0 && (
                   <div className="mb-8">
-                    <div className="flex items-center gap-2 mb-4">
-                      <Target className="w-5 h-5 text-brand-aperol" />
-                      <h2 className="text-lg font-display font-semibold text-brand-vanilla">
-                        Platform Tips
-                      </h2>
-                    </div>
+                    <h2 className="text-lg font-display font-semibold text-brand-vanilla mb-4">
+                      Platform Tips
+                    </h2>
                     
                     {/* Platform tabs */}
                     <div className="flex gap-2 mb-4 overflow-x-auto pb-1">
@@ -634,12 +630,9 @@ export default function IdeaDetailPage() {
                 {/* Visual Direction - Only show if available */}
                 {item.visualDirection && (
                   <div className="mb-8">
-                    <div className="flex items-center gap-2 mb-4">
-                      <Eye className="w-5 h-5 text-brand-aperol" />
-                      <h2 className="text-lg font-display font-semibold text-brand-vanilla">
-                        Visual Direction
-                      </h2>
-                    </div>
+                    <h2 className="text-lg font-display font-semibold text-brand-vanilla mb-4">
+                      Visual Direction
+                    </h2>
                     
                     <div className="p-4 rounded-xl bg-os-surface-dark/60 border border-os-border-dark/50">
                       {/* Rating badge */}
@@ -662,12 +655,9 @@ export default function IdeaDetailPage() {
                 {/* Example Outline - Only show if available */}
                 {item.exampleOutline && item.exampleOutline.length > 0 && (
                   <div className="mb-8">
-                    <div className="flex items-center gap-2 mb-4">
-                      <ListTree className="w-5 h-5 text-brand-aperol" />
-                      <h2 className="text-lg font-display font-semibold text-brand-vanilla">
-                        Example Outline
-                      </h2>
-                    </div>
+                    <h2 className="text-lg font-display font-semibold text-brand-vanilla mb-4">
+                      Example Outline
+                    </h2>
                     
                     <div className="space-y-2">
                       {item.exampleOutline.map((section, idx) => (
@@ -689,12 +679,9 @@ export default function IdeaDetailPage() {
                 {item.hashtags && (
                   <div className="mb-8">
                     <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center gap-2">
-                        <Hash className="w-5 h-5 text-brand-aperol" />
-                        <h2 className="text-lg font-display font-semibold text-brand-vanilla">
-                          Hashtags
-                        </h2>
-                      </div>
+                      <h2 className="text-lg font-display font-semibold text-brand-vanilla">
+                        Hashtags
+                      </h2>
                       <button
                         onClick={copyHashtags}
                         className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
@@ -746,24 +733,44 @@ export default function IdeaDetailPage() {
                   </div>
                 )}
 
-                {/* Source Links */}
+                {/* Source Cards - Using discover article style */}
                 <div className="mb-10">
                   <h2 className="text-sm font-semibold text-brand-vanilla mb-3 uppercase tracking-wide">
                     Reference Sources
                   </h2>
-                  <div className="flex flex-wrap gap-2">
-                    {item.sources.map((source, idx) => (
-                      <a
-                        key={source.id || idx}
-                        href={source.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-os-surface-dark/60 border border-os-border-dark/50 hover:border-brand-aperol/30 text-sm text-os-text-secondary-dark hover:text-brand-vanilla transition-all"
-                      >
-                        {source.name}
-                      </a>
-                    ))}
-                  </div>
+                  
+                  {item.sources && item.sources.length > 0 && (
+                    <>
+                      <SourceCards
+                        sources={item.sources.map((source, idx) => ({
+                          id: source.id || `source-${idx}`,
+                          name: source.name,
+                          url: source.url,
+                          title: item.title,
+                          favicon: undefined, // Will be fetched by SourceCards component
+                        }))}
+                        totalCount={item.sources.length}
+                        onViewAllSources={() => setShowAllSources(true)}
+                      />
+                      
+                      {/* If few sources, show as simple links */}
+                      {item.sources.length <= 4 && (
+                        <div className="flex flex-wrap gap-2">
+                          {item.sources.map((source, idx) => (
+                            <a
+                              key={source.id || idx}
+                              href={source.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-os-surface-dark/60 border border-os-border-dark/50 hover:border-brand-aperol/30 text-sm text-os-text-secondary-dark hover:text-brand-vanilla transition-all"
+                            >
+                              {source.name}
+                            </a>
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  )}
                 </div>
               </div>
 
