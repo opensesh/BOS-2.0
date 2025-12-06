@@ -1002,7 +1002,7 @@ const AttachmentPreviewDoc: ComponentDoc = {
   ],
 };
 
-// ShareModal Component
+// ShareModal Component - Static demo (actual modal uses fixed positioning)
 const ShareModalDemo = ({ isOpen }: { isOpen: boolean }) => {
   if (!isOpen) {
     return (
@@ -1012,13 +1012,57 @@ const ShareModalDemo = ({ isOpen }: { isOpen: boolean }) => {
     );
   }
   
+  // Render modal content inline for demo (avoiding fixed positioning issues)
   return (
-    <div className="relative bg-black/60 rounded-xl p-8 min-h-[350px] flex items-center justify-center">
-      <ShareModal
-        isOpen={isOpen}
-        onClose={() => {}}
-        threadUrl="https://brand-os.app/chat/abc123"
-      />
+    <div className="relative bg-black/60 rounded-xl p-6 flex items-center justify-center">
+      <div className="w-80 bg-os-surface-dark rounded-xl border border-os-border-dark shadow-xl overflow-hidden">
+        {/* Header */}
+        <div className="flex items-center justify-between px-4 py-3 border-b border-os-border-dark">
+          <h3 className="text-sm font-semibold text-os-text-primary-dark">Share this Thread</h3>
+          <button className="p-1 rounded hover:bg-os-bg-dark transition-colors">
+            <svg className="w-4 h-4 text-os-text-secondary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        
+        {/* Visibility options */}
+        <div className="p-2">
+          <button className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-os-bg-dark/50 transition-colors">
+            <svg className="w-4 h-4 text-os-text-secondary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+            <div className="text-left">
+              <p className="text-sm font-medium text-os-text-primary-dark">Private</p>
+              <p className="text-xs text-os-text-secondary-dark">Only the author can view</p>
+            </div>
+          </button>
+          
+          <button className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg bg-os-bg-dark transition-colors">
+            <svg className="w-4 h-4 text-brand-aperol" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+            </svg>
+            <div className="text-left flex-1">
+              <p className="text-sm font-medium text-brand-aperol">Anyone with the link</p>
+              <p className="text-xs text-os-text-secondary-dark">Anyone with the link</p>
+            </div>
+            <svg className="w-4 h-4 text-brand-aperol" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            </svg>
+          </button>
+        </div>
+        
+        {/* Share section */}
+        <div className="px-4 pb-4 pt-2">
+          <p className="text-xs font-semibold text-os-text-secondary-dark uppercase tracking-wider mb-2">Share</p>
+          <button className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-os-bg-dark hover:bg-os-bg-dark/80 rounded-lg transition-colors text-sm font-medium text-os-text-primary-dark">
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+            </svg>
+            <span>Copy Link</span>
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
@@ -1042,11 +1086,11 @@ const ShareModalDoc: ComponentDoc = {
     },
   ],
   variants: [
-    { id: 'open', name: 'Open', props: { isOpen: true } },
+    { id: 'default', name: 'Default', props: { isOpen: true } },
   ],
 };
 
-// ShortcutModal Component
+// ShortcutModal Component - Static demo (actual modal uses fixed positioning)
 const ShortcutModalDemo = ({ isOpen }: { isOpen: boolean }) => {
   if (!isOpen) {
     return (
@@ -1056,14 +1100,64 @@ const ShortcutModalDemo = ({ isOpen }: { isOpen: boolean }) => {
     );
   }
   
+  // Render modal content inline for demo (avoiding fixed positioning issues)
   return (
-    <div className="relative bg-black/60 rounded-xl p-8 min-h-[500px] flex items-center justify-center">
-      <ShortcutModal
-        isOpen={isOpen}
-        onClose={() => {}}
-        defaultName="brand-colors"
-        defaultInstructions=""
-      />
+    <div className="relative bg-black/60 rounded-xl p-6 flex items-center justify-center">
+      <div className="w-full max-w-xl bg-os-surface-dark rounded-2xl border border-os-border-dark shadow-2xl">
+        {/* Header */}
+        <div className="flex items-center justify-between px-6 py-4 border-b border-os-border-dark">
+          <h2 className="text-lg font-semibold text-os-text-primary-dark">Shortcut</h2>
+          <button className="p-1 rounded-lg hover:bg-os-bg-dark transition-colors">
+            <svg className="w-5 h-5 text-os-text-secondary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        
+        {/* Content */}
+        <div className="px-6 py-5 space-y-5">
+          {/* Shortcut name */}
+          <div>
+            <label className="block text-sm text-os-text-secondary-dark mb-2">Shortcut name</label>
+            <div className="relative">
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-os-text-secondary-dark">/</span>
+              <input
+                type="text"
+                defaultValue="brand-colors"
+                placeholder="my-shortcut"
+                className="w-full bg-os-bg-dark border border-os-border-dark rounded-lg pl-6 pr-4 py-3 text-os-text-primary-dark placeholder:text-os-text-secondary-dark/50 focus:outline-none focus:border-brand-aperol/50"
+              />
+            </div>
+          </div>
+          
+          {/* Instructions */}
+          <div>
+            <label className="block text-sm text-os-text-secondary-dark mb-2">Instructions</label>
+            <textarea
+              placeholder="Enter the instructions for this shortcut..."
+              className="w-full bg-os-bg-dark border border-os-border-dark rounded-lg px-4 py-3 text-os-text-primary-dark placeholder:text-os-text-secondary-dark/50 focus:outline-none focus:border-brand-aperol/50 min-h-[100px] resize-none"
+            />
+          </div>
+          
+          {/* Advanced toggle */}
+          <button className="flex items-center gap-2 text-sm text-os-text-secondary-dark hover:text-os-text-primary-dark transition-colors">
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+            <span>Advanced</span>
+          </button>
+        </div>
+        
+        {/* Footer */}
+        <div className="flex items-center justify-end gap-3 px-6 py-4 border-t border-os-border-dark">
+          <button className="px-4 py-2 text-sm font-medium text-os-text-primary-dark bg-os-bg-dark hover:bg-os-bg-dark/80 rounded-lg transition-colors">
+            Cancel
+          </button>
+          <button className="px-4 py-2 text-sm font-medium bg-brand-vanilla text-brand-charcoal hover:bg-brand-vanilla/90 rounded-lg transition-colors">
+            Save
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
@@ -1087,7 +1181,7 @@ const ShortcutModalDoc: ComponentDoc = {
     },
   ],
   variants: [
-    { id: 'open', name: 'Open', props: { isOpen: true } },
+    { id: 'default', name: 'Default', props: { isOpen: true } },
   ],
 };
 
@@ -1208,18 +1302,7 @@ const ChatHeaderDoc: ComponentDoc = {
   ],
 };
 
-// SourcesDrawer Component
-const mockDrawerSources: SourceInfo[] = [
-  { id: '1', name: 'TechCrunch', url: 'https://techcrunch.com/article', favicon: 'https://techcrunch.com/favicon.ico', title: 'Major Tech Industry Announcement', snippet: 'Breaking news from the tech world with analysis and insights from industry experts.' },
-  { id: '2', name: 'The Verge', url: 'https://theverge.com/article', favicon: 'https://theverge.com/favicon.ico', title: 'Design Trends 2024', snippet: 'New approaches to digital product design and user experience.' },
-  { id: '3', name: 'Wired', url: 'https://wired.com/article', favicon: 'https://wired.com/favicon.ico', title: 'AI and Machine Learning', snippet: 'How artificial intelligence is transforming business and society.' },
-];
-
-const mockDrawerResourceCards: BrandResourceCardProps[] = [
-  { title: 'Color System', description: 'Brand color palette', href: '/brand/colors', icon: 'Palette' },
-  { title: 'Typography', description: 'Font specifications', href: '/brand/typography', icon: 'Type' },
-];
-
+// SourcesDrawer Component - Static demo (actual drawer uses fixed positioning)
 const SourcesDrawerDemo = ({ isOpen }: { isOpen: boolean }) => {
   if (!isOpen) {
     return (
@@ -1229,16 +1312,63 @@ const SourcesDrawerDemo = ({ isOpen }: { isOpen: boolean }) => {
     );
   }
   
+  // Render drawer content inline for demo (avoiding fixed positioning issues)
   return (
-    <div className="relative bg-os-bg-dark rounded-xl min-h-[500px] overflow-hidden">
-      <div className="absolute inset-0 bg-black/40" />
-      <div className="absolute right-0 top-0 bottom-0 w-[400px] bg-os-bg-darker border-l border-os-border-dark">
-        <SourcesDrawer
-          isOpen={true}
-          onClose={() => {}}
-          sources={mockDrawerSources}
-          resourceCards={mockDrawerResourceCards}
-        />
+    <div className="relative bg-os-bg-dark rounded-xl overflow-hidden flex">
+      {/* Content placeholder */}
+      <div className="flex-1 bg-black/40 min-h-[400px] flex items-center justify-center">
+        <p className="text-os-text-secondary-dark/50 text-sm">Page content behind drawer</p>
+      </div>
+      
+      {/* Drawer panel */}
+      <div className="w-[320px] bg-os-bg-darker border-l border-os-border-dark flex flex-col">
+        {/* Header */}
+        <div className="flex items-center justify-between px-4 py-3 border-b border-os-border-dark">
+          <div className="flex items-center gap-2">
+            <svg className="w-5 h-5 text-os-text-secondary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+            </svg>
+            <h2 className="text-[15px] font-semibold text-os-text-primary-dark">5 sources</h2>
+          </div>
+          <button className="p-1.5 rounded-lg text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-surface-dark transition-colors">
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        
+        {/* Brand Resources Section */}
+        <div className="border-b border-os-border-dark/50">
+          <div className="px-4 py-2 bg-brand-aperol/5">
+            <div className="flex items-center gap-2">
+              <svg className="w-4 h-4 text-brand-aperol" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+              </svg>
+              <span className="text-xs font-semibold text-brand-aperol uppercase tracking-wider">Brand Resources</span>
+            </div>
+          </div>
+          <div className="px-4 py-3 hover:bg-os-surface-dark/50 transition-colors">
+            <h3 className="text-[14px] font-medium text-os-text-primary-dark">Color System</h3>
+            <p className="text-[13px] text-os-text-secondary-dark mt-0.5">Brand color palette</p>
+          </div>
+        </div>
+        
+        {/* Web Sources Section */}
+        <div className="flex-1 overflow-y-auto">
+          <div className="px-4 py-2 bg-os-surface-dark/30">
+            <span className="text-xs font-semibold text-os-text-secondary-dark uppercase tracking-wider">Web Sources</span>
+          </div>
+          {[
+            { name: 'TechCrunch', title: 'Major Tech Industry Announcement' },
+            { name: 'The Verge', title: 'Design Trends 2024' },
+            { name: 'Wired', title: 'AI and Machine Learning' },
+          ].map((source, idx) => (
+            <div key={idx} className="px-4 py-3 hover:bg-os-surface-dark/50 transition-colors border-b border-os-border-dark/50">
+              <p className="text-xs text-os-text-secondary-dark mb-0.5">{source.name}</p>
+              <h3 className="text-[14px] font-medium text-os-text-primary-dark line-clamp-2">{source.title}</h3>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -1263,7 +1393,7 @@ const SourcesDrawerDoc: ComponentDoc = {
     },
   ],
   variants: [
-    { id: 'open', name: 'Open', props: { isOpen: true } },
+    { id: 'default', name: 'Default', props: { isOpen: true } },
   ],
 };
 
