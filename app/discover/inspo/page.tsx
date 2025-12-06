@@ -4,7 +4,7 @@ import React, { useEffect, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
-import { Cube, Table2 } from 'lucide-react';
+import { Box, Table2 } from 'lucide-react';
 import { Sidebar } from '@/components/Sidebar';
 import { InspoHeader } from '@/components/discover/InspoHeader';
 import { InspoTable } from '@/components/InspoTable';
@@ -113,7 +113,7 @@ function InspoContent() {
                     : 'text-os-text-secondary-dark hover:text-brand-vanilla'
                 }`}
               >
-                <Cube className="w-4 h-4" />
+                <Box className="w-4 h-4" />
                 <span>3D Explorer</span>
               </button>
               <button
