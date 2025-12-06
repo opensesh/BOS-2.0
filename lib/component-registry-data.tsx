@@ -734,21 +734,24 @@ const NewsCardDoc: ComponentDoc = {
 
 // TieredNewsCard Component
 const TieredNewsCardDemo = ({
-  title,
-  summary,
-  tier,
-  variant,
+  title = 'The Future of AI in Design',
+  summary = 'Artificial intelligence is transforming how designers work.',
+  tier = 'featured',
+  variant = 'compact',
 }: {
-  title: string;
-  summary: string;
-  tier: 'featured' | 'summary' | 'quick';
-  variant: 'featured' | 'compact';
+  title?: string;
+  summary?: string;
+  tier?: 'featured' | 'summary' | 'quick';
+  variant?: 'featured' | 'compact';
 }) => {
+  const safeTitle = title || 'News Article';
+  const safeSummary = summary || 'Article summary text.';
+  
   const mockItem = {
     id: 'demo-1',
     slug: 'demo-article',
-    title,
-    summary,
+    title: safeTitle,
+    summary: safeSummary,
     sources: [
       { id: '1', name: 'TechCrunch', url: 'https://techcrunch.com' },
       { id: '2', name: 'The Verge', url: 'https://theverge.com' },
@@ -756,13 +759,18 @@ const TieredNewsCardDemo = ({
     ],
     publishedAt: '2 hours ago',
     category: 'weekly-update' as const,
-    tier,
-    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800',
+    tier: tier || 'featured',
+    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400',
   };
 
+  // Use appropriate max-width based on variant
+  const containerClass = variant === 'featured' 
+    ? 'w-full max-w-2xl' 
+    : 'w-full max-w-xs';
+
   return (
-    <div className="max-w-md">
-      <TieredNewsCard item={mockItem} variant={variant} />
+    <div className={containerClass}>
+      <TieredNewsCard item={mockItem} variant={variant || 'compact'} />
     </div>
   );
 };
@@ -825,33 +833,38 @@ const TieredNewsCardDoc: ComponentDoc = {
 
 // IdeaCard Component
 const IdeaCardDemo = ({
-  title,
-  description,
-  category,
-  variant,
+  title = 'Behind-the-scenes look at our design process',
+  description = 'Show the messy middle of creating something great.',
+  category = 'short-form',
+  variant = 'compact',
 }: {
-  title: string;
-  description: string;
-  category: 'short-form' | 'long-form' | 'blog';
-  variant: 'featured' | 'compact';
+  title?: string;
+  description?: string;
+  category?: 'short-form' | 'long-form' | 'blog';
+  variant?: 'featured' | 'compact';
 }) => {
+  // Ensure title is never undefined to prevent getFormatLabel error
+  const safeTitle = title || 'Content Idea';
+  const safeDescription = description || 'Idea description';
+  
   const mockItem = {
     id: 'demo-idea-1',
     slug: 'demo-idea',
-    title,
-    description,
+    title: safeTitle,
+    description: safeDescription,
     sources: [
       { id: '1', name: 'Source 1', url: '#' },
       { id: '2', name: 'Source 2', url: '#' },
     ],
-    category,
+    category: category || 'short-form',
     isPrompt: true as const,
     textureIndex: 3,
+    format: 'reel' as const, // Provide explicit format to avoid title parsing
   };
 
   return (
-    <div className="max-w-md">
-      <IdeaCard item={mockItem} variant={variant} />
+    <div className="w-full max-w-sm">
+      <IdeaCard item={mockItem} variant={variant || 'compact'} />
     </div>
   );
 };
