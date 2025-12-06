@@ -182,3 +182,4 @@ export function formatDiscoverResultsForAI(results: DiscoverSearchResult[]): str
   return `\n\n## Relevant Content from Your News Sources:\n${formattedResults}`;
 }
 
+
