@@ -1,246 +1,211 @@
 {
   "type": "long-form",
-  "date": "2025-12-06T16:17:24.273Z",
+  "date": "2025-12-06T16:24:09.887Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "A massive, Chinese-backed port could push the Amazon Rainforest over the edge",
+      "description": "A massive, Chinese-backed port could push the Amazon Rainforest over the edge",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/issue/221"
-        }
-      ],
-      "format": "documentary",
-      "subcategory": "framework",
-      "hooks": [
-        "Design Templates That Don't Break Under Pressure",
-        "Branded Figma Templates: The Marketing Design Secret",
-        "How Pro Designers Build Flexible Brand Systems"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use cinematic B-roll of designers working in Figma",
-            "Include behind-the-scenes interviews with template designers",
-            "Create dynamic screen recordings with smooth transitions"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Modern design aesthetic with high-contrast color palette (deep navy, bright teal, white). Dynamic split-screen compositions showcasing Figma interfaces and designer workflows. Kinetic typography with smooth motion graphics. Clean, technical feel with creative energy. Reference visual style: Vox explainer videos meets design documentary"
-      },
-      "exampleOutline": [
-        "Opening: Dramatic template breakdown scene",
-        "Problem: Brand consistency vs. design flexibility challenge",
-        "Core Content: 8 strategic template design principles",
-        "Expert Insights: Case studies and designer perspectives",
-        "Closing CTA: Community template challenge"
-      ],
-      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystem #CreativeWorkflow #AIDesign #ProductivityHacks #DesignTips #MarketingDesign #CreativeTech #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 1
-    },
-    {
-      "title": "The New York Times is suing Perplexity for copyright infringement",
-      "description": "The New York Times filed a copyright lawsuit against Perplexity, joining other publishers using legal action as leverage to force AI companies into licensing deals that compensate content creators.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2025/12/05/the-new-york-times-is-suing-perplexity-for-copyright-infringement/"
-        }
-      ],
-      "format": "livestream",
-      "subcategory": "leadership",
-      "hooks": [
-        "AI vs. Media: Epic Copyright Battle Begins!",
-        "NYT Drops Legal Bomb on Perplexity",
-        "Who Owns AI's Knowledge? Breaking News!"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Enable live chat for real-time audience interaction",
-            "Prepare pre-written Q&A segments to fill potential dead air",
-            "Use YouTube's live polling feature to engage viewers during stream"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-energy dynamic visual design with split-screen graphics showing legal documents and AI interfaces. Vibrant blue and electric orange color palette. Animated legal stamp/gavel transitions. Modern sans-serif typography with motion-tracked text highlights. Dynamic infographic overlays showing copyright claims and AI data flows."
-      },
-      "exampleOutline": [
-        "Opening: Breaking News Introduction (5 mins)",
-        "Context: NYT vs. Perplexity Legal Landscape (10 mins)",
-        "Deep Dive: Copyright Implications for AI (15 mins)",
-        "Industry Impact Analysis (10 mins)",
-        "Live Q&A with Audience (20 mins)"
-      ],
-      "hashtags": "#AILaw #CopyrightBattle #TechLegal #NYTimes #PerplexityAI #AIEthics #MediaTech #LegalTech #AIInnovation #TechNews",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 2
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Forum",
-          "url": "https://forum.figma.com/product-updates-3/new-features-in-figma-buzz-46631"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/three-new-features-to-help-build-brand-momentum-with-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/figma-buzz"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/newsroom/"
-        },
-        {
-          "name": "Investor",
-          "url": "https://investor.figma.com/news-events/news/default.aspx"
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/science/2025/12/a-massive-chinese-backed-port-could-push-the-amazon-rainforest-over-the-edge/"
         }
       ],
       "format": "tutorial",
       "subcategory": "instructional",
       "hooks": [
-        "Unlock Figma Buzz: 3 Game-Changing Design Features",
-        "Supercharge Your Design Workflow in 3 Steps",
-        "Design Faster: Figma Buzz's Secret Weapon Revealed"
+        "How Chinese Port Threatens Amazon's Survival",
+        "Mapping Ecological Destruction: Amazon's Critical Moment",
+        "The Port That Could Erase a Rainforest"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use screen recordings showing exact Figma Buzz workflow",
-            "Include picture-in-picture of presenter for personal connection",
-            "Create clear chapter markers for easy navigation"
+            "Use satellite/map visualizations to explain geographical context",
+            "Include animated infographics showing port's potential environmental impact",
+            "Create chapter markers for clear step-by-step navigation"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, dynamic visual approach with electric blue and deep purple color palette. Experimental typography with sharp, angular transitions. Dynamic motion graphics highlighting each feature with fluid, tech-inspired animations. Clean, futuristic aesthetic with high-contrast elements and subtle gradient overlays."
+        "description": "High-contrast green and deep blue color palette representing environmental tension. Dynamic map-based motion graphics with transparent overlay layers. Bold, technical typography with clean sans-serif fonts. Animated data visualization transitions. Aesthetic blending scientific precision with environmental storytelling."
       },
       "exampleOutline": [
-        "Introduction: Why Figma Buzz Matters",
-        "Context: Current Design Workflow Challenges",
-        "Feature 1: Marketing Template Integration",
-        "Feature 2: Cross-App Plugin Connections",
-        "Feature 3: Video Trimming Capabilities",
-        "Practical Implementation Walkthrough",
-        "Closing: Transforming Design Productivity"
+        "Introduction: The Emerging Ecological Threat",
+        "Step 1: Understanding the Chinese Port Project",
+        "Step 2: Mapping Potential Environmental Consequences",
+        "Step 3: Analyzing Rainforest Ecosystem Vulnerabilities",
+        "Conclusion: Actionable Insights and Future Scenarios"
       ],
-      "hashtags": "#FigmaBuzz #DesignWorkflow #AIDesign #CreativeTech #ProductivityHacks #DesignTools #UXDesign #MarketingDesign #CreativeWorkflow #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
+      "hashtags": "#AmazonRainforest #EnvironmentalConservation #ClimateChange #EcologicalImpact #SustainableDevelopment #GeopoliticalEcology #ChineseInvestment #RainforestProtection #GlobalEnvironment #EcosystemRisk",
+      "textureIndex": 2
     },
     {
-      "title": "How to streamline your design system workflow in Figma",
-      "description": "If you’ve ever stared down a blank Figma file while building a new design system, never fear: These new features and plugins will turn that mountain of work into an afternoon task.",
+      "title": "Ex-Googler&#8217;s Yoodli triples valuation to $300M+ with AI built to assist, not replace, people",
+      "description": "Yoodli counts Google, Snowflake, and Databricks among its customers.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/how-to-streamline-your-design-system-workflow-in-figma/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/05/ex-googlers-yoodli-triples-valuation-to-300m-with-ai-built-to-assist-not-replace-people/"
         }
       ],
       "format": "video",
       "subcategory": "thought-leadership",
       "hooks": [
-        "Design Systems in Figma: Transform Hours into Minutes",
-        "Hack Your Figma Workflow: Design System Shortcut",
-        "Figma Secrets: Build Design Systems Lightning Fast"
+        "AI That Empowers, Not Replaces: Ex-Googlers' $300M Journey",
+        "How Yoodli Built AI to Augment Human Potential",
+        "Silicon Valley's New AI Playbook: Assist, Don't Replace"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use dynamic screen recordings with live cursor movement",
-            "Include picture-in-picture for personal connection/explanation",
-            "Create clear chapter markers for easy navigation"
+            "Use dynamic screen recordings showing Yoodli's interface",
+            "Include picture-in-picture with founder/expert commentary",
+            "Create chapter markers for easy navigation"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-energy, tech-modern aesthetic with electric blue and charcoal gray color palette. Dynamic motion graphics showcasing Figma interface transitions. Sharp, sans-serif typography with high-contrast callouts. Animated workflow diagrams that visualize efficiency gains. Clean, futuristic screen recordings with subtle parallax effects."
+        "description": "Bold, tech-forward design with electric blue and deep charcoal palette. Geometric motion graphics illustrating AI-human collaboration. Sans-serif typography with sharp, clean lines. Animated data visualizations showing valuation growth. Minimalist yet dynamic screen transitions."
       },
       "exampleOutline": [
-        "Hook: Dramatic reveal of design system complexity",
-        "Context: Common design system creation challenges",
-        "Core Content: Figma features and plugin deep dive",
-        "Key Insight: Workflow optimization strategies",
-        "CTA: Actionable next steps and community engagement"
+        "Intro: Yoodli's Origin Story (Ex-Googlers' Vision)",
+        "The Problem: AI's Threatening Perception in Workplace",
+        "Yoodli's Unique Approach: AI as Human Augmentation",
+        "Case Studies: Google, Snowflake, Databricks Implementations",
+        "Future of Assistive AI Technology"
       ],
-      "hashtags": "#FigmaDesign #DesignSystems #ProductDesign #UXDesign #AIDesign #DesignWorkflow #CreativeTech #DesignTools #UIDesign #DesignTips",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 8
+      "hashtags": "#AI #TechInnovation #YoodliAI #FutureOfWork #AIAssistance #SiliconValley #StartupSuccess #GoogleAlumni #TechTrends #AIEthics",
+      "textureIndex": 0
     },
     {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
+      "title": "Sources: AI synthetic research startup Aaru raised a Series A at a $1B &#8216;headline&#8217; valuation",
+      "description": "The one-year-old startup, which does market research on simulated populations, had a multi-tier valuation round, sources tell TechCrunch.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/05/ai-synthetic-research-startup-aaru-raised-a-series-a-at-a-1b-headline-valuation/"
         }
       ],
       "format": "livestream",
       "subcategory": "leadership",
       "hooks": [
-        "Typography that tells a brand's entire story",
-        "How Figma reinvented its visual DNA",
-        "Design evolution: Behind Figma's custom typeface"
+        "AI Research Startup's $1B Valuation: Inside the Numbers",
+        "Billion-Dollar AI Breakthrough: Aaru's Secret Sauce Revealed",
+        "How One Startup Cracked the AI Research Code"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Enable live chat for real-time audience interaction",
-            "Prepare pre-screened Q&A questions as backup",
-            "Use YouTube Live's multi-participant streaming feature for expert panel discussion"
+            "Enable live chat for real-time audience engagement",
+            "Prepare pre-selected Q&A questions to spark discussion",
+            "Use YouTube's live polls to interact with viewers during stream"
           ]
         }
       ],
       "visualDirection": {
-        "rating": 8,
-        "description": "High-contrast color palette with Figma's signature blue, dynamic typography showcasing Figma Sans in-progress, animated type exploration with motion graphics revealing design process, clean yet experimental layout with live design annotations, screen capture of type design software with picture-in-picture host commentary"
+        "rating": 7,
+        "description": "High-energy, data-driven visual aesthetic with dynamic infographic overlays. Sleek dark mode background with electric blue and neon accent colors. Clean, modern typography with animated data visualization elements. Picture-in-picture setup with host and supplementary research graphics. Motion design that emphasizes data flow and technological innovation."
       },
       "exampleOutline": [
-        "Live Intro: Personal connection to typeface design journey",
-        "The Design Challenge: Why Figma needed a custom typeface",
-        "Technical Deep Dive: Typeface creation process & constraints",
-        "Community Insights: How our design philosophy shaped the font",
-        "Interactive Q&A: Audience type design questions"
+        "Section 1: Dramatic Reveal of Aaru's Funding Milestone",
+        "Section 2: What is Synthetic Research? Breaking Down the Concept",
+        "Section 3: Deep Dive into Aaru's Unique Market Approach",
+        "Section 4: Implications for AI Research and Market Trends",
+        "Section 5: Open Q&A with Live Audience Interaction"
       ],
-      "hashtags": "#FigmaDesign #Typography #BrandIdentity #CreativeProcess #DesignSystem #FontDesign #ProductDesign #AICreativity #DesignTrends #CreativeCommunity",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 11
+      "hashtags": "#AIResearch #StartupFunding #SyntheticPopulations #TechInnovation #AIStartup #VentureCapital #EmergingTech #DataScience #AITrends #InnovationInsights",
+      "textureIndex": 8
+    },
+    {
+      "title": "AWS needs you to believe in AI agents",
+      "description": "AWS announced a wave of new AI agent tools at re:Invent 2025, but can Amazon actually catch up to the AI leaders? While the cloud giant is betting big on enterprise AI with its third-gen chip and database discounts that got developers cheering, it&#8217;s still fighting to prove it can compete beyond infrastructure.&#160; This week [&#8230;]",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/video/aws-needs-you-to-believe-in-ai-agents/"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "AWS's AI Gamble: Can They Beat the Giants?",
+        "Inside Amazon's Secret AI Agent Battlefield",
+        "Enterprise AI: Amazon's Make-or-Break Moment"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use archival/B-roll footage of AWS conferences",
+            "Include dynamic graphics showing AI agent architecture",
+            "Create tension through cinematic interview-style transitions"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dark tech-noir palette with electric blue/deep charcoal accents. Asymmetric composition mimicking network/agent complexity. Dynamic motion graphics revealing technological layers. Sans-serif typography with technical precision. Blend of realistic tech footage and abstract visualization representing AI potential."
+      },
+      "exampleOutline": [
+        "Cold Open: Dramatic AWS re:Invent keynote moment",
+        "Historical Context: AWS's Cloud Infrastructure Legacy",
+        "Current Landscape: AI Agent Technology Overview",
+        "Technical Deep Dive: AWS's Strategic AI Investments",
+        "Future Projection: Enterprise AI Transformation Call-to-Action"
+      ],
+      "hashtags": "#AWSAI #EnterpriseAI #AIAgents #CloudComputing #TechInnovation #AmazonTech #AIStrategy #FutureOfWork #TechTrends #InnovationWatch",
+      "textureIndex": 4
+    },
+    {
+      "title": "Meta acquires AI device startup Limitless",
+      "description": "Limitless said it shares Meta's vision of bringing personal superintelligence to everyone.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/05/meta-acquires-ai-device-startup-limitless/"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "How Meta's AI Device Will Transform Your Workflow",
+        "Limitless AI: Your Personal Superintelligence Roadmap",
+        "Unlock Meta's Game-Changing AI Personal Assistant"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use screen recordings showing Limitless device interface",
+            "Include picture-in-picture expert commentary",
+            "Create clear chapter markers for tutorial steps"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech aesthetic with futuristic blue/gray color palette. Dynamic motion graphics showing device interactions. Clean, angular typography with technical precision. Minimal flat design with subtle depth and technological texture. Incorporate holographic UI elements and AI visualization effects."
+      },
+      "exampleOutline": [
+        "Introduction: Meta's AI Device Revolution",
+        "Understanding Limitless: Context & Potential",
+        "Step-by-Step: How the Device Works",
+        "Practical Applications & Use Cases",
+        "Future of Personal AI Assistants"
+      ],
+      "hashtags": "#MetaAI #AIDevice #PersonalAssistant #TechInnovation #LimitlessAI #FutureOfWork #ArtificialIntelligence #TechTutorial #AIWorkflow #InnovationStrategy",
+      "textureIndex": 3
     }
   ]
 }

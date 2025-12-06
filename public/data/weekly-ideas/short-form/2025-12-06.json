@@ -1,363 +1,330 @@
 {
   "type": "short-form",
-  "date": "2025-12-06T16:17:24.273Z",
+  "date": "2025-12-06T16:23:29.580Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "After you check out your Spotify Wrapped 2025, explore these copycats",
+      "description": "Spotify’s annual Wrapped feature just dropped, giving listeners a fun, personalized summary of their listening habits. It has gained immense popularity over the years, and as a result, many companies have seized the opportunity to create similar year-in-review experiences, offering users a recap of their habits, preferences, or interactions from the past year. Here are [&#8230;]",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/issue/221"
-        }
-      ],
-      "format": "quick-image",
-      "subcategory": "quick-image",
-      "hooks": [
-        "Design Templates That Don't Break Your Brand",
-        "Figma Hack: Make Flexible Brand Templates Now",
-        "8 Pro Tips to Bulletproof Your Design System"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick visual transitions between template examples",
-            "Include text overlay animations highlighting key points",
-            "Start with a surprising brand template 'fail' moment"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Provocative template breakdown graphic",
-            "Use consistent color-coded slides for each tip",
-            "Final slide: Clear call-to-action with template download link"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Open with rapid-fire template transformation sequence",
-            "Use screen recording of actual Figma template editing",
-            "Include dynamic cursor/interaction highlights"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Add professional credibility with design system screenshots",
-            "Include brief case study references",
-            "Use more technical, nuanced language"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, high-contrast design with glitch/tech aesthetic. Neon accent colors on dark background. Dynamic typography with slight motion. Grid-based layout with asymmetric composition. Blend of technical precision and creative energy."
-      },
-      "exampleOutline": [
-        "Section 1: Provocative Brand Template Failure Moment",
-        "Section 2: Common Design System Challenges",
-        "Section 3: 8 Tactical Template Creation Tips",
-        "Section 4: Transformative Design System Potential",
-        "Section 5: Quick Actionable Next Steps"
-      ],
-      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystem #AIDesign #CreativeTools #ProductDesign #UXTips #DesignHacks #CreativeCoding #DigitalDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 10
-    },
-    {
-      "title": "The New York Times is suing Perplexity for copyright infringement",
-      "description": "The New York Times filed a copyright lawsuit against Perplexity, joining other publishers using legal action as leverage to force AI companies into licensing deals that compensate content creators.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2025/12/05/the-new-york-times-is-suing-perplexity-for-copyright-infringement/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/06/spotify-wrapped-2024-is-almost-here-its-time-to-explore-all-the-copycats/"
         }
       ],
       "format": "carousel",
       "subcategory": "carousel",
       "hooks": [
-        "AI vs Media: Legal Battle Erupts!",
-        "Perplexity Sued: The Copyright Showdown",
-        "When AI Meets Journalism's Red Line"
+        "Spotify Wrapped Copycats: The Wildest Year-End Experiences!",
+        "Beyond Music: Brands Stealing Spotify's Wrapped Magic",
+        "Your Digital Life: Wrapped and Reimagined"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Start with dynamic text animation revealing lawsuit",
-            "Use quick cuts between legal/tech imagery",
-            "Incorporate trending sound effect for engagement"
+            "Use quick transition animations between slides",
+            "Include dynamic text overlays highlighting each platform's unique wrap",
+            "Create a fast-paced montage feeling with rapid cuts"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide must have high-contrast visual hook",
-            "Use infographic-style slides with clear data points",
-            "Progressive reveal of lawsuit details across slides"
+            "First slide must have eye-catching graphic showing multiple app logos",
+            "Use consistent color palette across all slides",
+            "Ensure each slide is readable in 3-5 seconds"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Compress narrative into 60-second legal drama arc",
-            "Use split-screen tech/journalism visuals",
-            "Dramatic voiceover explaining key stakes"
+            "Condense carousel content into 60-second rapid overview",
+            "Use voiceover to explain key points quickly",
+            "Add dynamic text and brand logo bumpers"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Add more nuanced legal/professional context",
-            "Include expert quote or analysis snippet",
-            "Use more formal, authoritative tone"
+            "Add more detailed professional context about data trends",
+            "Include potential business insights about personalization",
+            "Use more formal, analytical language"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast red/blue color palette symbolizing conflict. Dynamic geometric shapes representing legal/tech collision. Bold sans-serif typography with angular text layouts. Glitch/digital interference effects suggesting technological disruption. Minimalist illustration style with sharp, angular design elements."
+        "description": "Bold, futuristic color palette with electric blues and neon accents. Geometric typography with subtle motion graphics. Layered, semi-transparent app icon designs. Incorporate data visualization elements with abstract, tech-inspired backgrounds. Use clean, high-contrast design with dynamic diagonal compositions."
       },
       "exampleOutline": [
-        "Slide 1: Provocative headline/visual hook",
-        "Slide 2: NYT vs Perplexity lawsuit context",
-        "Slide 3: Copyright infringement key details",
-        "Slide 4: Implications for AI/media ecosystem",
-        "Slide 5: Call-to-action & further engagement"
+        "Slide 1: Provocative hook with collage of app logos",
+        "Slide 2: Brief history of Spotify Wrapped trend",
+        "Slide 3-5: Top 3 most creative year-end experiences",
+        "Slide 6: Emerging trends in personalized digital summaries",
+        "Slide 7: Call-to-action and exploration prompt"
       ],
-      "hashtags": "#AILawsuit #CopyrightAI #TechLegal #MediaTech #AIEthics #NYTimes #Perplexity #AIInnovation #LegalTech #CreativeRights",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
+      "hashtags": "#TechTrends #DigitalInnovation #SpotifyWrapped #DataVisualization #AITech #UserExperience #TechDesign #AnnualReview #DigitalLife #InnovationTrends",
+      "textureIndex": 5
     },
     {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
+      "title": "Digital artist Beeple put his face on a $100K robot dog next to Elon Musk and Picasso &#8211; it sold first",
+      "description": "The project marks at least the second time Winkelmann has become the art world's main character.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Forum",
-          "url": "https://forum.figma.com/product-updates-3/new-features-in-figma-buzz-46631"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/three-new-features-to-help-build-brand-momentum-with-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/figma-buzz"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/newsroom/"
-        },
-        {
-          "name": "Investor",
-          "url": "https://investor.figma.com/news-events/news/default.aspx"
-        }
-      ],
-      "format": "quick-image",
-      "subcategory": "quick-image",
-      "hooks": [
-        "Figma Buzz: Your Design Workflow Just Got Supercharged 🚀",
-        "3 Game-Changing Features Designers Can't Ignore",
-        "Crush Your Brand Game with Figma's New Tools"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick screen recordings showing actual feature transitions",
-            "Include dynamic text overlays highlighting key benefits",
-            "Create fast-paced split-screen comparisons of before/after"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Bold graphic with key statistic",
-            "Use consistent color palette matching Figma's brand",
-            "Include swipe-up animation cues to encourage interaction"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected visual metaphor about workflow",
-            "Use rapid jump cuts to maintain high energy",
-            "Include text annotations highlighting feature names"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame features as professional productivity enhancers",
-            "Use more detailed, infographic-style visual approach",
-            "Include brief expert commentary text overlay"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast tech-inspired aesthetic with electric blue/deep purple gradient background, geometric overlay shapes, sleek sans-serif typography, subtle motion graphics showing feature transitions, minimalist icon design with sharp edges and modern feel"
-      },
-      "exampleOutline": [
-        "Attention-Grabbing Visual Hook",
-        "Quick Problem Statement: Design Workflow Limitations",
-        "Three Feature Highlight Panels",
-        "Transformative Potential Insight",
-        "Call-to-Action: Try Figma Buzz"
-      ],
-      "hashtags": "#FigmaBuzz #DesignTools #CreativeTech #ProductivityHack #AIDesign #WorkflowOptimization #DesignInnovation #CreativeTools #MarketingDesign #TechTips",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
-    },
-    {
-      "title": "How to streamline your design system workflow in Figma",
-      "description": "If you’ve ever stared down a blank Figma file while building a new design system, never fear: These new features and plugins will turn that mountain of work into an afternoon task.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/how-to-streamline-your-design-system-workflow-in-figma/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/05/digital-artist-beeple-put-his-face-on-a-100k-robot-dog-next-to-elon-musk-and-picasso-it-sold-first/"
         }
       ],
       "format": "reel",
       "subcategory": "reel",
       "hooks": [
-        "Design Systems in Figma: Instant Pro Workflow Unlocked!",
-        "Crush Your Figma Design System in 60 Seconds",
-        "Tired of Endless Figma Setup? Watch This Now"
+        "Beeple's robot dog art just changed the game forever",
+        "How a digital artist hacked the art world",
+        "$100K robot dog: The wildest art story ever"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use fast jump cuts to maintain energy",
-            "Show screen recording with dynamic cursor movements",
-            "Add text overlays highlighting key Figma features"
+            "Use fast-paced jump cuts to maintain energy",
+            "Add dynamic text overlays highlighting key numbers",
+            "Use trending audio or create a custom sound bite"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Provocative problem statement",
-            "Use slide transitions to reveal workflow steps",
-            "Final slide: Clear call-to-action/next steps"
+            "First slide must be a high-impact visual teaser",
+            "Use slide transitions that create narrative flow",
+            "Include infographic-style slides breaking down key details"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with unexpected visual/sound design metaphor",
-            "Use quick tutorial-style screen capture",
-            "End with unexpected design system hack"
+            "Start with a pattern-interrupt visual or statement",
+            "Use screen recordings or digital art animations",
+            "Include subtitles for silent viewing"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "More technical language and professional tone",
-            "Include brief professional context/challenge",
-            "Emphasize efficiency and professional workflow optimization"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast tech-inspired color palette (deep blues/electric teals), dynamic motion graphics, rapid-transition screen recordings, bold sans-serif typography, animated cursor movements highlighting key interactions, minimalist design system aesthetic with playful transitions"
-      },
-      "exampleOutline": [
-        "Opening: Provocative design system challenge",
-        "Problem: Traditional design system setup pain points",
-        "Solution: 3-4 Figma workflow optimization techniques",
-        "Insider Tip: Unexpected plugin or feature",
-        "Call-to-Action: Explore further learning resources"
-      ],
-      "hashtags": "#FigmaDesign #DesignSystems #ProductDesign #UIUXTips #CreativeTech #DesignWorkflow #AIDesign #TechTips #DesignInnovation #CreativeTools",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 8
-    },
-    {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
-        }
-      ],
-      "format": "story",
-      "subcategory": "story",
-      "hooks": [
-        "Typography revolution: Inside Figma's custom font story",
-        "How designers build a brand from scratch",
-        "Typeface design: Behind Figma's visual identity"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick type animation transitions between slides",
-            "Include behind-the-scenes designer footage",
-            "Add text overlays explaining design process"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must showcase dramatic font comparison",
-            "Use square 1:1 slides with clean layouts",
-            "Include step-by-step design evolution graphics"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected type transformation",
-            "Include rapid visual design montage",
-            "Use designer interview soundbites"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame as professional design case study",
-            "Include technical design process details",
-            "Highlight strategic brand evolution insights"
+            "Frame as a professional innovation case study",
+            "Use more detailed technical explanations",
+            "Include professional commentary on art market disruption"
           ]
         }
       ],
       "visualDirection": {
         "rating": 8,
-        "description": "Experimental typography-focused aesthetic. High-contrast color palette with black/white/electric blue. Dynamic motion graphics showing font morphing. Clean Swiss design influence with unexpected geometric transitions. Typography as hero, minimal illustrative elements."
+        "description": "High-contrast cyberpunk-meets-digital-art aesthetic. Bold neon color palette with glitch effects. Dynamic typography that moves and transforms. Blend of 3D rendering and abstract digital art elements. Rapid visual transitions mimicking digital chaos. Reference: Beeple's EVERYDAYS mixed with futuristic tech visualizations."
       },
       "exampleOutline": [
-        "Section 1: Dramatic font reveal/hook",
-        "Section 2: Why Figma needed custom typography",
-        "Section 3: Design process and constraints",
-        "Section 4: Key design breakthrough moments",
-        "Section 5: Future of brand expression CTA"
+        "Shocking Visual Hook: Robot dog with Beeple's face",
+        "Quick Context: Digital art market disruption",
+        "Key Details: $100K sale, artistic innovation",
+        "Broader Insight: AI and art's transformative potential",
+        "Call-to-Action: Follow for more art tech stories"
       ],
-      "hashtags": "#DesignSystem #Typography #BrandIdentity #FigmaDesign #CreativeProcess #TypeDesign #ProductDesign #BrandEvolution #AICreativity #DesignTools",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8014528/pexels-photo-8014528.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "hashtags": "#Beeple #DigitalArt #AIArt #CreativeTech #ArtInnovation #NFT #TechArt #CreativeAI #ArtTech #FutureOfArt",
+      "textureIndex": 0
+    },
+    {
+      "title": "Ex-Googler&#8217;s Yoodli triples valuation to $300M+ with AI built to assist, not replace, people",
+      "description": "Yoodli counts Google, Snowflake, and Databricks among its customers.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/05/ex-googlers-yoodli-triples-valuation-to-300m-with-ai-built-to-assist-not-replace-people/"
+        }
+      ],
+      "format": "reel",
+      "subcategory": "reel",
+      "hooks": [
+        "AI that amplifies humans, not replaces them",
+        "How ex-Googlers build AI that actually helps",
+        "$300M startup secrets: Assistive, not invasive AI"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic split-screen showing human/AI interaction",
+            "Incorporate quick motion graphics explaining valuation growth",
+            "Add text overlays highlighting key company names"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Provocative statistic about AI assistance",
+            "Use infographic-style slides showing Yoodli's growth",
+            "Final slide: Clear call-to-action with link"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected visual metaphor about AI collaboration",
+            "Use quick jump cuts to maintain energy",
+            "Include founder soundbite or quick interview clip"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "More data-driven, professional tone",
+            "Include specific customer logos and growth metrics",
+            "Emphasize professional development angle of AI assistance"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast cyberpunk-inspired palette with electric blues and deep purples, geometric motion graphics showing human-AI interaction, sleek sans-serif typography with dynamic text animations, minimalist but energetic composition emphasizing technological innovation"
+      },
+      "exampleOutline": [
+        "Hook: Surprising statement about AI potential",
+        "Problem: Traditional AI's limitations",
+        "Yoodli's Unique Approach: Assistive AI model",
+        "Proof: $300M valuation, top tech customers",
+        "Call-to-Action: Learn more about collaborative AI"
+      ],
+      "hashtags": "#AI #TechInnovation #FutureOfWork #StartupSuccess #AIAssistance #GoogleAlumni #TechTrends #InnovativeTechnology #AIEthics #BusinessGrowth",
+      "textureIndex": 12
+    },
+    {
+      "title": "Sources: AI synthetic research startup Aaru raised a Series A at a $1B &#8216;headline&#8217; valuation",
+      "description": "The one-year-old startup, which does market research on simulated populations, had a multi-tier valuation round, sources tell TechCrunch.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/05/ai-synthetic-research-startup-aaru-raised-a-series-a-at-a-1b-headline-valuation/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "$1B Startup Reveals AI's Wild Research Secret 🚀",
+        "AI Research Just Got a Billion-Dollar Upgrade 💡",
+        "Synthetic Populations: The New Tech Gold Rush 🌐"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use a dynamic zoom transition to reveal valuation number",
+            "Incorporate quick data visualization of startup growth",
+            "Add subtle glitch/tech effect to enhance AI theme"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Shocking valuation headline",
+            "Use infographic-style slides to break down startup details",
+            "Final slide: Provocative question about AI research potential"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Open with unexpected visual metaphor for synthetic research",
+            "Use fast-paced text animations",
+            "Include quick expert quote or data point"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "More analytical tone, emphasize market potential",
+            "Include professional-looking data visualization",
+            "Add credible source attribution clearly"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Cyberpunk-meets-data visualization aesthetic. Neon accent colors on dark background. Futuristic sans-serif typography. Glitch/digital overlay effects. Dynamic diagonal compositions. Blend of abstract tech imagery with crisp information graphics. Color palette: deep navy, electric blue, bright cyan, with metallic silver accents."
+      },
+      "exampleOutline": [
+        "Section 1: Attention-grabbing headline with valuation shock",
+        "Section 2: Brief context of AI synthetic research",
+        "Section 3: Key startup details (Aaru, Series A)",
+        "Section 4: Provocative insight about AI research potential",
+        "Section 5: Call-to-learn-more CTA"
+      ],
+      "hashtags": "#AIResearch #StartupFunding #TechInnovation #SyntheticPopulations #AITrends #VentureCapital #EmergingTech #FutureOfResearch #AIStartup #InnovationEconomy",
+      "textureIndex": 4
+    },
+    {
+      "title": "Waymo to issue software recall over how robotaxis behave around school buses",
+      "description": "The voluntary recall comes as scrutiny by federal regulators and local school district officials increases.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/05/waymo-to-issue-software-recall-over-how-robotaxis-behave-around-school-buses/"
+        }
+      ],
+      "format": "story",
+      "subcategory": "story",
+      "hooks": [
+        "AI Cars vs. School Buses: The Safety Showdown 🚌🤖",
+        "Waymo's Software Recall: What You Need to Know",
+        "When Robots Meet School Buses: The Tech Dilemma"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use split-screen animation showing robotaxi and school bus interactions",
+            "Include quick text overlays explaining key safety concerns",
+            "End with a provocative question to drive engagement"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "Create infographic-style slides with clean, bold typography",
+            "Use each slide to break down a different aspect of the recall",
+            "Include one shocking or surprising statistic per slide"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with a dramatic visual metaphor about AI safety",
+            "Use quick cuts and dynamic motion graphics",
+            "Incorporate B-roll of autonomous vehicles and school environments"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame the story as a professional tech safety case study",
+            "Include expert commentary or quote from tech safety professional",
+            "Use more detailed, data-driven visual approach"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast color palette with electric blue and safety orange. Geometric, technical composition with futuristic overlay graphics. Clean sans-serif typography with dynamic motion tracking. Integrate robotic/digital texture elements. Use split-screen and overlay techniques to show complex interactions between technology and real-world scenarios."
+      },
+      "exampleOutline": [
+        "Section 1: Attention-grabbing visual of robotaxi near school bus",
+        "Section 2: Quick explanation of Waymo's software recall",
+        "Section 3: Key safety concerns and specific software issues",
+        "Section 4: Implications for autonomous vehicle technology",
+        "Section 5: Call-to-action: Learn more about AI safety"
+      ],
+      "hashtags": "#WaymoSafety #AutonomousVehicles #AITechnology #TransportationInnovation #TechSafety #RobotTaxi #FutureOfTransport #AIEthics #TechNews #InnovationWatch",
       "textureIndex": 11
     }
   ]
