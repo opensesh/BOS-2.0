@@ -23,6 +23,7 @@ import { ConnectorDropdown } from './ui/connector-dropdown';
 import { ModelSelector } from './ui/model-selector';
 import { useVoiceRecognition } from '@/hooks/useVoiceRecognition';
 import { useAttachments, Attachment } from '@/hooks/useAttachments';
+import { useSearchSuggestions } from '@/hooks/useSearchSuggestions';
 import { ModelId } from '@/lib/ai/providers';
 import { useChatContext } from '@/lib/chat-context';
 import { fadeIn, fadeInUp, staggerContainer } from '@/lib/motion';
@@ -101,6 +102,25 @@ export function ChatInterface() {
     setCurrentSessionId,
     currentSessionId,
   } = useChatContext();
+
+  // Search suggestions hook for autocomplete
+  const {
+    suggestions: fetchedSuggestions,
+    isLoading: suggestionsLoading,
+    fetchSuggestions,
+  } = useSearchSuggestions({
+    mode: suggestionsMode,
+    debounceMs: 200,
+    minQueryLength: 1,
+    maxSuggestions: 6,
+  });
+
+  // Fetch suggestions when input changes and suggestions panel is open
+  useEffect(() => {
+    if (showSuggestions) {
+      fetchSuggestions(localInput);
+    }
+  }, [localInput, showSuggestions, fetchSuggestions]);
 
   // Create transport once - stable reference
   const chatTransport = useRef(new DefaultChatTransport({
@@ -612,6 +632,21 @@ export function ChatInterface() {
     setSuggestionsMode(mode);
   }, []);
 
+  // Handle input changes - show suggestions as user types
+  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const value = e.target.value;
+    setLocalInput(value);
+
+    // Show suggestions when user starts typing (at least 1 character)
+    if (value.trim().length >= 1 && !showSuggestions) {
+      setShowSuggestions(true);
+    }
+    // Hide suggestions when input is cleared
+    if (value.trim().length === 0 && showSuggestions) {
+      setShowSuggestions(false);
+    }
+  }, [showSuggestions]);
+
   const handleConnectorDropdownClose = useCallback(() => {
     setShowConnectorDropdown(false);
   }, []);
@@ -878,7 +913,7 @@ export function ChatInterface() {
                       <textarea
                         ref={textareaRef}
                         value={input}
-                        onChange={(e) => setInput(e.target.value)}
+                        onChange={handleInputChange}
                         onKeyDown={handleKeyDown}
                         onFocus={() => setIsFocused(true)}
                         onBlur={() => setIsFocused(false)}
@@ -1055,9 +1090,12 @@ export function ChatInterface() {
                     {/* Suggestions - inside container, below toolbar */}
                     {showSuggestions && (
                       <div className="border-t border-os-border-dark">
-                        <SearchResearchSuggestions 
-                          mode={suggestionsMode} 
+                        <SearchResearchSuggestions
+                          mode={suggestionsMode}
                           onQueryClick={handleQueryClick}
+                          suggestions={fetchedSuggestions}
+                          inputValue={localInput}
+                          isLoading={suggestionsLoading}
                         />
                       </div>
                     )}
