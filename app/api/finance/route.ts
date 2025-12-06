@@ -204,29 +204,64 @@ export async function GET(request: NextRequest) {
           return NextResponse.json({ error: 'Symbol is required' }, { status: 400 });
         }
 
-        // For profile, we need to use a different approach
-        // Using quoteSummary endpoint
-        const response = await fetch(
-          `https://query2.finance.yahoo.com/v10/finance/quoteSummary/${symbol}?modules=assetProfile,summaryProfile,price`,
-          {
-            headers: {
-              'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-            },
-            next: { revalidate: 3600 }, // Cache for 1 hour
-          }
-        );
+        // Try multiple endpoints for company profile
+        let assetProfile = null;
+        let price = null;
 
-        if (!response.ok) {
+        // First try: Yahoo Finance quoteSummary endpoint
+        try {
+          const response = await fetch(
+            `https://query2.finance.yahoo.com/v10/finance/quoteSummary/${symbol}?modules=assetProfile,price`,
+            {
+              headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'Accept': 'application/json',
+                'Accept-Language': 'en-US,en;q=0.9',
+              },
+              next: { revalidate: 3600 }, // Cache for 1 hour
+            }
+          );
+
+          if (response.ok) {
+            const data = await response.json();
+            assetProfile = data?.quoteSummary?.result?.[0]?.assetProfile;
+            price = data?.quoteSummary?.result?.[0]?.price;
+          }
+        } catch (e) {
+          console.error('Yahoo quoteSummary error:', e);
+        }
+
+        // Second try: Yahoo Finance v11 endpoint (alternative format)
+        if (!assetProfile) {
+          try {
+            const response = await fetch(
+              `https://query1.finance.yahoo.com/v11/finance/quoteSummary/${symbol}?modules=assetProfile,price`,
+              {
+                headers: {
+                  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                },
+                next: { revalidate: 3600 },
+              }
+            );
+
+            if (response.ok) {
+              const data = await response.json();
+              assetProfile = data?.quoteSummary?.result?.[0]?.assetProfile;
+              price = data?.quoteSummary?.result?.[0]?.price;
+            }
+          } catch (e) {
+            console.error('Yahoo v11 endpoint error:', e);
+          }
+        }
+
+        // If we still don't have data, return an error
+        if (!assetProfile && !price) {
           return NextResponse.json({ error: 'Profile not found' }, { status: 404 });
         }
 
-        const data = await response.json();
-        const assetProfile = data?.quoteSummary?.result?.[0]?.assetProfile;
-        const price = data?.quoteSummary?.result?.[0]?.price;
-
         const profile: Partial<CompanyProfile> = {
           symbol: symbol.toUpperCase(),
-          shortName: price?.shortName,
+          shortName: price?.shortName || symbol,
           longName: price?.longName,
           sector: assetProfile?.sector,
           industry: assetProfile?.industry,
@@ -239,7 +274,7 @@ export async function GET(request: NextRequest) {
           companyOfficers: assetProfile?.companyOfficers?.slice(0, 5).map((officer: { name: string; title: string }) => ({
             name: officer.name,
             title: officer.title,
-          })),
+          })) || [],
         };
 
         return NextResponse.json(profile);
