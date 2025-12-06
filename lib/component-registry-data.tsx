@@ -59,9 +59,29 @@ import { FollowUpInput } from '@/components/chat/FollowUpInput';
 // Finance
 import { StockStats } from '@/components/finance/StockStats';
 import { CompanyProfile } from '@/components/finance/CompanyProfile';
+import { LatestNews } from '@/components/finance/LatestNews';
 
 // Spaces
 import { SpaceResourceCards } from '@/components/spaces/SpaceResourceCards';
+
+// Discover Main
+import { IdeaAccordion } from '@/components/discover/IdeaAccordion';
+import { InspirationCard } from '@/components/discover/InspirationCard';
+import { SettingsDrawer } from '@/components/discover/SettingsDrawer';
+import { DiscoverHeader } from '@/components/discover/DiscoverHeader';
+import { DiscoverTabs } from '@/components/discover/DiscoverTabs';
+import { NewsCard } from '@/components/discover/NewsCard';
+
+// Brand Hub
+import { AddResourceModal } from '@/components/brand-hub/AddResourceModal';
+
+// Brain
+import { BrainSettingsModal } from '@/components/brain/BrainSettingsModal';
+import { MarkdownCodeViewer } from '@/components/brain/MarkdownCodeViewer';
+
+// Core/UI
+import { ModelSelector } from '@/components/ui/model-selector';
+import { ConnectorDropdown } from '@/components/ui/connector-dropdown';
 
 // ============================================
 // DESIGN SYSTEM COMPONENTS
@@ -2145,6 +2165,542 @@ const CompanyProfileDoc: ComponentDoc = {
   variants: [],
 };
 
+// LatestNews Component
+const LatestNewsDemo = () => {
+  const mockNews = [
+    {
+      id: '1',
+      title: 'Tech Company Announces Major AI Initiative',
+      url: 'https://example.com/news/1',
+      source: 'Reuters',
+      publishedAt: new Date().toISOString(),
+    },
+    {
+      id: '2',
+      title: 'Q3 Earnings Beat Analyst Expectations',
+      url: 'https://example.com/news/2',
+      source: 'Bloomberg',
+      publishedAt: new Date().toISOString(),
+    },
+  ];
+  
+  return (
+    <div className="bg-os-surface-dark rounded-xl p-4 max-w-md">
+      <LatestNews news={mockNews} />
+    </div>
+  );
+};
+
+const LatestNewsDoc: ComponentDoc = {
+  id: 'latest-news',
+  name: 'LatestNews',
+  description: 'Displays latest news articles for a stock with source, title, and timestamp. Shows skeleton loading state while fetching.',
+  category: 'application',
+  page: 'Finance',
+  component: LatestNewsDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// ============================================
+// APPLICATION COMPONENTS - DISCOVER MAIN
+// ============================================
+
+// IdeaAccordion Component - Static demo
+const IdeaAccordionDemo = () => {
+  return (
+    <div className="bg-os-surface-dark rounded-xl p-4 max-w-3xl">
+      <div className="rounded-xl border border-os-border-dark/50 bg-os-surface-dark/20 overflow-hidden">
+        <button className="w-full flex items-center justify-between px-4 py-3 hover:bg-os-surface-dark/30 transition-colors">
+          <div className="flex items-center gap-3">
+            <svg className="w-5 h-5 text-brand-aperol" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <span className="text-base font-semibold text-brand-vanilla">Short-Form</span>
+            <span className="px-2 py-0.5 rounded-full bg-os-surface-dark text-xs text-os-text-secondary-dark">3</span>
+          </div>
+          <svg className="w-5 h-5 text-os-text-secondary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  );
+};
+
+const IdeaAccordionDoc: ComponentDoc = {
+  id: 'idea-accordion',
+  name: 'IdeaAccordion',
+  description: 'Expandable accordion sections for organizing content ideas by type (Short-Form, Long-Form, Blog). Each section shows idea cards with thumbnails, descriptions, and source chips.',
+  category: 'application',
+  page: 'Discover',
+  component: IdeaAccordionDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// InspirationCard Component - Static demo
+const InspirationCardDemo = ({ variant }: { variant: 'featured' | 'compact' }) => {
+  return (
+    <div className={`bg-os-surface-dark rounded-xl p-4 ${variant === 'featured' ? 'max-w-2xl' : 'max-w-xs'}`}>
+      <div className="group flex flex-col gap-3 p-3 rounded-xl bg-transparent hover:bg-os-surface-dark/30 transition-colors">
+        <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-gradient-to-br from-os-surface-dark to-os-bg-dark flex items-center justify-center">
+          <span className="text-2xl">💡</span>
+        </div>
+        <div className="flex flex-col gap-2">
+          <h3 className="text-sm font-medium text-brand-vanilla group-hover:text-brand-aperol transition-colors leading-snug line-clamp-3">
+            Creative Campaign Ideas for Social Media Marketing
+          </h3>
+          <div className="flex items-center gap-1.5">
+            <div className="flex -space-x-1.5">
+              {[1, 2, 3].map((_, idx) => (
+                <div key={idx} className="w-5 h-5 rounded-full bg-os-surface-dark border border-os-bg-dark flex items-center justify-center">
+                  <span className="text-[8px] text-os-text-secondary-dark font-bold">S</span>
+                </div>
+              ))}
+            </div>
+            <span className="text-xs text-os-text-secondary-dark">5 sources</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const InspirationCardDoc: ComponentDoc = {
+  id: 'inspiration-card',
+  name: 'InspirationCard',
+  description: 'Card component for displaying content inspiration with image, title, sources, and actions. Supports featured (large) and compact variants.',
+  category: 'application',
+  page: 'Discover',
+  component: InspirationCardDemo,
+  defaultProps: { variant: 'compact' },
+  controls: [
+    {
+      name: 'variant',
+      type: 'select',
+      description: 'Card display variant',
+      defaultValue: 'compact',
+      options: ['featured', 'compact'],
+    },
+  ],
+  variants: [
+    { id: 'compact', name: 'Compact', props: { variant: 'compact' } },
+    { id: 'featured', name: 'Featured', props: { variant: 'featured' } },
+  ],
+};
+
+// SettingsDrawer Component - Static demo
+const SettingsDrawerDemo = ({ isOpen }: { isOpen: boolean }) => {
+  if (!isOpen) {
+    return (
+      <div className="p-4 bg-os-surface-dark rounded-xl border border-os-border-dark text-center">
+        <p className="text-os-text-secondary-dark text-sm">Toggle &apos;isOpen&apos; to see the drawer</p>
+      </div>
+    );
+  }
+  
+  return (
+    <div className="relative bg-os-bg-dark rounded-xl overflow-hidden flex min-h-[400px]">
+      <div className="flex-1 bg-black/40 flex items-center justify-center">
+        <p className="text-os-text-secondary-dark/50 text-sm">Page content</p>
+      </div>
+      <div className="w-[300px] bg-os-surface-dark border-l border-os-border-dark flex flex-col">
+        <div className="flex items-center justify-between px-6 h-14 border-b border-os-border-dark">
+          <span className="font-display font-semibold text-brand-vanilla">Settings</span>
+          <button className="p-1.5 rounded-lg text-os-text-secondary-dark hover:text-brand-vanilla">
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div className="flex-1 p-4">
+          <p className="text-sm text-os-text-secondary-dark">Settings content here...</p>
+        </div>
+        <div className="px-4 py-3 border-t border-os-border-dark">
+          <p className="text-[10px] text-os-text-secondary-dark text-center">
+            Press <kbd className="px-1.5 py-0.5 rounded bg-os-border-dark text-brand-vanilla font-mono">ESC</kbd> to close
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const SettingsDrawerDoc: ComponentDoc = {
+  id: 'settings-drawer',
+  name: 'SettingsDrawer',
+  description: 'Slide-out drawer for settings panels. Closes on ESC key or backdrop click. Renders children content in scrollable area.',
+  category: 'application',
+  page: 'Discover',
+  component: SettingsDrawerDemo,
+  defaultProps: { isOpen: true },
+  controls: [
+    {
+      name: 'isOpen',
+      type: 'boolean',
+      description: 'Whether the drawer is visible',
+      defaultValue: true,
+    },
+  ],
+  variants: [
+    { id: 'open', name: 'Open', props: { isOpen: true } },
+  ],
+};
+
+// DiscoverHeader Component - Static demo
+const DiscoverHeaderDemo = () => {
+  return (
+    <div className="bg-os-surface-dark rounded-xl p-4 max-w-3xl">
+      <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center gap-3">
+          <h1 className="text-xl font-display font-bold text-brand-vanilla">Discover</h1>
+          <div className="flex items-center bg-os-surface-dark/50 rounded-full p-1">
+            <button className="px-4 py-1.5 rounded-full text-sm font-medium bg-brand-aperol text-white">News</button>
+            <button className="px-4 py-1.5 rounded-full text-sm font-medium text-os-text-secondary-dark">Ideas</button>
+            <button className="px-4 py-1.5 rounded-full text-sm font-medium text-os-text-secondary-dark">Inspo</button>
+          </div>
+        </div>
+        <div className="flex items-center gap-2">
+          <button className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium bg-os-surface-dark/60 text-os-text-secondary-dark border border-os-border-dark/30">
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+            </svg>
+            <span>All Topics</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const DiscoverHeaderDoc: ComponentDoc = {
+  id: 'discover-header',
+  name: 'DiscoverHeader',
+  description: 'Header for the Discover page with tab navigation (News/Ideas/Inspo), filter dropdown, sort options, saved articles, and settings buttons.',
+  category: 'application',
+  page: 'Discover',
+  component: DiscoverHeaderDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// NewsCard Component  
+const NewsCardDemo = () => {
+  return (
+    <div className="bg-os-surface-dark rounded-xl p-4 max-w-sm">
+      <NewsCard
+        article={{
+          id: 'demo-1',
+          title: 'Major Tech Company Announces New AI Initiative',
+          description: 'Leading technology firm unveils plans for next-generation artificial intelligence platform.',
+          url: 'https://example.com',
+          sourceName: 'TechCrunch',
+          publishedAt: new Date().toISOString(),
+          imageUrl: undefined,
+          category: 'ai-creative',
+        }}
+        variant="compact"
+      />
+    </div>
+  );
+};
+
+const NewsCardDoc: ComponentDoc = {
+  id: 'news-card',
+  name: 'NewsCard',
+  description: 'Individual news article card with image, title, description, source, and actions. Supports compact and expanded variants.',
+  category: 'application',
+  page: 'Discover',
+  component: NewsCardDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// DiscoverTabs Component - Static demo
+const DiscoverTabsDemo = () => {
+  return (
+    <div className="bg-os-surface-dark rounded-xl p-4">
+      <div className="flex items-center bg-os-surface-dark/50 rounded-full p-1 w-fit">
+        <button className="px-4 py-1.5 rounded-full text-sm font-medium bg-brand-aperol text-white transition-all">
+          News
+        </button>
+        <button className="px-4 py-1.5 rounded-full text-sm font-medium text-os-text-secondary-dark hover:text-brand-vanilla transition-all">
+          Ideas
+        </button>
+        <button className="px-4 py-1.5 rounded-full text-sm font-medium text-os-text-secondary-dark hover:text-brand-vanilla transition-all">
+          Inspo
+        </button>
+      </div>
+    </div>
+  );
+};
+
+const DiscoverTabsDoc: ComponentDoc = {
+  id: 'discover-tabs',
+  name: 'DiscoverTabs',
+  description: 'Tab navigation for switching between News, Ideas, and Inspiration content on the Discover page.',
+  category: 'application',
+  page: 'Discover',
+  component: DiscoverTabsDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// ============================================
+// APPLICATION COMPONENTS - BRAND HUB
+// ============================================
+
+// AddResourceModal Component - Static demo
+const AddResourceModalDemo = ({ isOpen }: { isOpen: boolean }) => {
+  if (!isOpen) {
+    return (
+      <div className="p-4 bg-os-surface-dark rounded-xl border border-os-border-dark text-center">
+        <p className="text-os-text-secondary-dark text-sm">Toggle &apos;isOpen&apos; to see the modal</p>
+      </div>
+    );
+  }
+  
+  return (
+    <div className="relative bg-black/60 rounded-xl p-6 flex items-center justify-center">
+      <div className="w-full max-w-md bg-os-surface-dark rounded-xl border border-os-border-dark shadow-xl overflow-hidden">
+        <div className="flex items-center justify-between p-4 border-b border-os-border-dark">
+          <h2 className="text-lg font-semibold text-os-text-primary-dark">Add Resource</h2>
+          <button className="p-1 rounded hover:bg-os-bg-dark transition-colors">
+            <svg className="w-4 h-4 text-os-text-secondary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div className="p-4 space-y-4">
+          <div>
+            <label className="block text-sm font-medium text-os-text-primary-dark mb-1.5">Name <span className="text-red-500">*</span></label>
+            <input type="text" placeholder="e.g., Brand Assets Drive" className="w-full px-3 py-2 rounded-lg bg-os-border-dark border border-os-border-dark text-os-text-primary-dark" />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-os-text-primary-dark mb-1.5">URL <span className="text-red-500">*</span></label>
+            <input type="url" placeholder="https://example.com" className="w-full px-3 py-2 rounded-lg bg-os-border-dark border border-os-border-dark text-os-text-primary-dark" />
+          </div>
+        </div>
+        <div className="flex justify-end gap-3 p-4 border-t border-os-border-dark">
+          <button className="px-4 py-2 rounded-lg text-sm font-medium text-os-text-primary-dark bg-os-border-dark">Cancel</button>
+          <button className="px-4 py-2 rounded-lg text-sm font-medium text-white bg-brand-aperol">Add Resource</button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const AddResourceModalDoc: ComponentDoc = {
+  id: 'add-resource-modal',
+  name: 'AddResourceModal',
+  description: 'Modal for adding or editing brand resources. Includes name and URL fields with validation.',
+  category: 'application',
+  page: 'Brand Hub',
+  component: AddResourceModalDemo,
+  defaultProps: { isOpen: true },
+  controls: [
+    {
+      name: 'isOpen',
+      type: 'boolean',
+      description: 'Whether the modal is visible',
+      defaultValue: true,
+    },
+  ],
+  variants: [
+    { id: 'default', name: 'Default', props: { isOpen: true } },
+  ],
+};
+
+// ============================================
+// APPLICATION COMPONENTS - BRAIN
+// ============================================
+
+// BrainSettingsModal Component - Static demo
+const BrainSettingsModalDemo = ({ isOpen }: { isOpen: boolean }) => {
+  if (!isOpen) {
+    return (
+      <div className="p-4 bg-os-surface-dark rounded-xl border border-os-border-dark text-center">
+        <p className="text-os-text-secondary-dark text-sm">Toggle &apos;isOpen&apos; to see the modal</p>
+      </div>
+    );
+  }
+  
+  return (
+    <div className="relative bg-black/60 rounded-xl p-4 flex items-center justify-center">
+      <div className="w-full max-w-2xl bg-os-bg-dark border border-os-border-dark rounded-2xl shadow-2xl">
+        <div className="flex items-center justify-between p-6 border-b border-os-border-dark">
+          <div>
+            <h2 className="text-xl font-display font-bold text-brand-vanilla">Brain Settings</h2>
+            <p className="text-sm text-os-text-secondary-dark">Configure your brand knowledge base</p>
+          </div>
+          <button className="p-2 rounded-lg hover:bg-os-surface-dark transition-colors">
+            <svg className="w-5 h-5 text-os-text-secondary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div className="p-6">
+          <div className="grid grid-cols-3 gap-4">
+            {['Brand Guidelines', 'Writing Styles', 'Skills'].map((title, idx) => (
+              <button key={idx} className="relative p-4 rounded-xl border bg-os-surface-dark/50 border-os-border-dark hover:border-os-text-secondary-dark text-left transition-all">
+                <div className="p-2 rounded-lg bg-brand-aperol/10 w-fit mb-3">
+                  <svg className="w-5 h-5 text-brand-aperol" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+                <h3 className="font-display font-medium text-brand-vanilla mb-1">{title}</h3>
+                <p className="text-xs text-os-text-secondary-dark">Configure {title.toLowerCase()}</p>
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const BrainSettingsModalDoc: ComponentDoc = {
+  id: 'brain-settings-modal',
+  name: 'BrainSettingsModal',
+  description: 'Modal for configuring brand knowledge base settings including Brand Guidelines, Writing Styles, and Skills. Features file upload zones.',
+  category: 'application',
+  page: 'Brain',
+  component: BrainSettingsModalDemo,
+  defaultProps: { isOpen: true },
+  controls: [
+    {
+      name: 'isOpen',
+      type: 'boolean',
+      description: 'Whether the modal is visible',
+      defaultValue: true,
+    },
+  ],
+  variants: [
+    { id: 'default', name: 'Default', props: { isOpen: true } },
+  ],
+};
+
+// MarkdownCodeViewer Component
+const MarkdownCodeViewerDemo = () => {
+  const sampleMarkdown = `# Brand Guidelines
+
+## Colors
+- Primary: #FE5102 (Aperol)
+- Background: #FFFAEE (Vanilla)
+- Text: #191919 (Charcoal)
+
+## Typography
+Use **Neue Haas Grotesk** for headings.
+Use \`monospace\` for code blocks.
+
+### Example Usage
+| Element | Font | Weight |
+|---------|------|--------|
+| H1 | Display Pro | Bold |
+| Body | Text Pro | Regular |`;
+
+  return (
+    <div className="max-w-2xl">
+      <MarkdownCodeViewer
+        filename="brand-guidelines.md"
+        content={sampleMarkdown}
+      />
+    </div>
+  );
+};
+
+const MarkdownCodeViewerDoc: ComponentDoc = {
+  id: 'markdown-code-viewer',
+  name: 'MarkdownCodeViewer',
+  description: 'Code viewer for markdown files with syntax highlighting, line numbers, copy and download functionality. Scrollable with max height.',
+  category: 'application',
+  page: 'Brain',
+  component: MarkdownCodeViewerDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// ============================================
+// APPLICATION COMPONENTS - CORE/UI
+// ============================================
+
+// ModelSelector Component
+const ModelSelectorDemo = () => {
+  return (
+    <div className="bg-os-surface-dark rounded-xl p-4 flex items-center justify-center min-h-[200px]">
+      <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-os-bg-dark border border-os-border-dark">
+        <span className="text-xs font-medium text-os-text-secondary-dark">Auto</span>
+        <svg className="w-3 h-3 text-os-text-secondary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+    </div>
+  );
+};
+
+const ModelSelectorDoc: ComponentDoc = {
+  id: 'model-selector',
+  name: 'ModelSelector',
+  description: 'Dropdown selector for choosing AI models. Shows current model with description. Supports Auto mode which selects best model automatically.',
+  category: 'application',
+  page: 'Core',
+  component: ModelSelectorDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// ConnectorDropdown Component - Static demo
+const ConnectorDropdownDemo = () => {
+  return (
+    <div className="bg-os-surface-dark rounded-xl p-4 flex items-center justify-center min-h-[250px]">
+      <div className="bg-os-surface-dark border border-os-border-dark rounded-xl shadow-xl w-64 p-2">
+        <div className="px-3 py-2 border-b border-os-border-dark mb-2">
+          <span className="text-xs font-semibold text-os-text-secondary-dark uppercase tracking-wide">Connectors</span>
+        </div>
+        {[
+          { icon: '🌐', name: 'Web', desc: 'Search the internet', enabled: true },
+          { icon: '🎨', name: 'Brand', desc: 'Brand assets', enabled: true },
+          { icon: '🧠', name: 'Brain', desc: 'Knowledge base', enabled: true },
+          { icon: '🧭', name: 'Discover', desc: 'Curated content', enabled: false },
+        ].map((c, idx) => (
+          <button key={idx} className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg ${c.enabled ? 'text-brand-aperol bg-brand-aperol/10' : 'text-os-text-secondary-dark hover:bg-os-bg-dark'} transition-colors`}>
+            <span className="text-lg">{c.icon}</span>
+            <div className="flex-1 text-left">
+              <p className="text-sm font-medium">{c.name}</p>
+              <p className="text-xs text-os-text-secondary-dark">{c.desc}</p>
+            </div>
+            {c.enabled && (
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            )}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const ConnectorDropdownDoc: ComponentDoc = {
+  id: 'connector-dropdown',
+  name: 'ConnectorDropdown',
+  description: 'Dropdown for toggling data source connectors (Web, Brand, Brain, Discover). Shows enabled/disabled state with checkmarks.',
+  category: 'application',
+  page: 'Core',
+  component: ConnectorDropdownDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
 // ============================================
 // APPLICATION COMPONENTS - SPACES
 // ============================================
@@ -2332,11 +2888,17 @@ export function initializeRegistry() {
       FollowUpInputDoc,
     ],
     Discover: [
+      // Main components
       NewsCardDoc,
       TieredNewsCardDoc,
       IdeaCardDoc,
       MarketWidgetDoc,
       WeatherWidgetDoc,
+      IdeaAccordionDoc,
+      InspirationCardDoc,
+      SettingsDrawerDoc,
+      DiscoverHeaderDoc,
+      DiscoverTabsDoc,
       // Article components
       ArticleHeaderDoc,
       ArticleSidebarDoc,
@@ -2348,10 +2910,22 @@ export function initializeRegistry() {
     Finance: [
       StockStatsDoc,
       CompanyProfileDoc,
+      LatestNewsDoc,
     ],
     Spaces: [
       SpaceCardDoc,
       SpaceResourceCardsDoc,
+    ],
+    'Brand Hub': [
+      AddResourceModalDoc,
+    ],
+    Brain: [
+      BrainSettingsModalDoc,
+      MarkdownCodeViewerDoc,
+    ],
+    Core: [
+      ModelSelectorDoc,
+      ConnectorDropdownDoc,
     ],
   };
 }
