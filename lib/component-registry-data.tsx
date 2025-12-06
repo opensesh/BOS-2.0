@@ -27,6 +27,14 @@ import { TieredNewsCard } from '@/components/discover/TieredNewsCard';
 import { MarketWidget } from '@/components/discover/MarketWidget';
 import { WeatherWidget } from '@/components/discover/WeatherWidget';
 
+// Discover Article
+import { ArticleHeader } from '@/components/discover/article/ArticleHeader';
+import { ArticleSidebar } from '@/components/discover/article/ArticleSidebar';
+import { ActionSidebar } from '@/components/discover/article/ActionSidebar';
+import { InlineSourceBadge, InlineSourceChips, type SourceGroup } from '@/components/discover/article/InlineSourceBadge';
+import { RelatedImages } from '@/components/discover/article/RelatedImages';
+import { DiscoverMore } from '@/components/discover/article/DiscoverMore';
+
 // Chat
 import { ChatTabNav, type ChatTab } from '@/components/chat/ChatTabNav';
 import { RelatedQuestions } from '@/components/chat/RelatedQuestions';
@@ -1864,6 +1872,198 @@ const WeatherWidgetDoc: ComponentDoc = {
 };
 
 // ============================================
+// APPLICATION COMPONENTS - DISCOVER ARTICLE
+// ============================================
+
+// ArticleHeader Component
+const ArticleHeaderDemo = ({ title, sourceCount }: { title: string; sourceCount: number }) => {
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-6 max-w-2xl">
+      <ArticleHeader
+        title={title}
+        publishedAt="2 hours ago"
+        sourceCount={sourceCount}
+      />
+    </div>
+  );
+};
+
+const ArticleHeaderDoc: ComponentDoc = {
+  id: 'article-header',
+  name: 'ArticleHeader',
+  description: 'Header section for discover articles showing title, publication time, and source count. Uses display font for the title.',
+  category: 'application',
+  page: 'Discover',
+  component: ArticleHeaderDemo,
+  defaultProps: {
+    title: 'The Future of AI in Design: How Machine Learning is Transforming Creative Work',
+    sourceCount: 12,
+  },
+  controls: [
+    {
+      name: 'title',
+      type: 'text',
+      description: 'Article title',
+      defaultValue: 'The Future of AI in Design',
+      required: true,
+    },
+    {
+      name: 'sourceCount',
+      type: 'range',
+      description: 'Number of sources',
+      defaultValue: 12,
+      min: 1,
+      max: 50,
+      step: 1,
+    },
+  ],
+  variants: [
+    { id: 'few-sources', name: 'Few Sources', props: { title: 'Quick Update', sourceCount: 3 } },
+    { id: 'many-sources', name: 'Many Sources', props: { title: 'Comprehensive Report', sourceCount: 45 } },
+  ],
+};
+
+// ArticleSidebar Component
+const ArticleSidebarDemo = () => {
+  const summaryPoints = [
+    'Key Findings & Overview',
+    'Industry Impact Analysis',
+    'Future Predictions',
+    'Expert Opinions',
+  ];
+  
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-6 max-w-xs">
+      <ArticleSidebar summaryPoints={summaryPoints} />
+    </div>
+  );
+};
+
+const ArticleSidebarDoc: ComponentDoc = {
+  id: 'article-sidebar',
+  name: 'ArticleSidebar',
+  description: 'Section navigation sidebar for articles. Displays summary points as clickable links that scroll to corresponding sections.',
+  category: 'application',
+  page: 'Discover',
+  component: ArticleSidebarDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// ActionSidebar Component
+const ActionSidebarDoc: ComponentDoc = {
+  id: 'action-sidebar',
+  name: 'ActionSidebar',
+  description: 'Floating sidebar with article actions: Save, Share, Copy, and Report. Shows tooltips on hover. Hidden on mobile.',
+  category: 'application',
+  page: 'Discover',
+  component: ActionSidebar,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// InlineSourceBadge Component
+const mockInlineSources = [
+  { id: '1', name: 'TechCrunch', url: 'https://techcrunch.com', favicon: 'https://techcrunch.com/favicon.ico' },
+  { id: '2', name: 'The Verge', url: 'https://theverge.com', favicon: 'https://theverge.com/favicon.ico' },
+  { id: '3', name: 'Wired', url: 'https://wired.com', favicon: 'https://wired.com/favicon.ico' },
+];
+
+const InlineSourceBadgeDemo = () => {
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-6 max-w-lg">
+      <p className="text-os-text-primary-dark text-base leading-relaxed">
+        According to recent industry reports, AI adoption in creative fields has increased by 45% this year.{' '}
+        <InlineSourceBadge sources={mockInlineSources} primarySourceName="techcrunch" />
+      </p>
+    </div>
+  );
+};
+
+const InlineSourceBadgeDoc: ComponentDoc = {
+  id: 'inline-source-badge',
+  name: 'InlineSourceBadge',
+  description: 'Inline citation badge that shows source name and count. Displays a popover with full source list on hover.',
+  category: 'application',
+  page: 'Discover',
+  component: InlineSourceBadgeDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// RelatedImages Component
+const RelatedImagesDemo = () => {
+  const mockImages = [
+    'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400',
+    'https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=400',
+  ];
+  
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-4 max-w-lg">
+      <RelatedImages images={mockImages} />
+    </div>
+  );
+};
+
+const RelatedImagesDoc: ComponentDoc = {
+  id: 'related-images',
+  name: 'RelatedImages',
+  description: 'Grid of related images for articles. Displays 2-column layout with hover zoom effect.',
+  category: 'application',
+  page: 'Discover',
+  component: RelatedImagesDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// DiscoverMore Component - Static demo (uses async data loading)
+const DiscoverMoreDemo = () => {
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-4 max-w-3xl">
+      <div className="border-t border-os-border-dark/50 pt-8">
+        <h3 className="text-lg font-display font-bold text-brand-vanilla mb-6">Discover more</h3>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {[
+            { title: 'AI Design Tools Comparison', sources: 8 },
+            { title: 'Future of Creative Work', sources: 12 },
+            { title: 'Machine Learning in UX', sources: 6 },
+            { title: 'Design System Trends', sources: 15 },
+          ].map((article, idx) => (
+            <div key={idx} className="group flex flex-col gap-2.5 p-2.5 bg-os-surface-dark/60 hover:bg-os-surface-dark rounded-xl border border-os-border-dark/50 hover:border-os-border-dark transition-all">
+              <div className="aspect-[16/10] bg-gradient-to-br from-os-surface-dark to-os-bg-dark rounded-lg flex items-center justify-center">
+                <span className="text-xl">📰</span>
+              </div>
+              <div className="flex flex-col gap-1.5">
+                <h4 className="text-xs font-medium text-brand-vanilla group-hover:text-brand-aperol transition-colors leading-snug line-clamp-2">
+                  {article.title}
+                </h4>
+                <span className="text-[10px] text-os-text-secondary-dark">{article.sources} sources</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const DiscoverMoreDoc: ComponentDoc = {
+  id: 'discover-more',
+  name: 'DiscoverMore',
+  description: 'Related articles grid shown at the bottom of article pages. Loads articles dynamically and displays them in a responsive 2x4 grid.',
+  category: 'application',
+  page: 'Discover',
+  component: DiscoverMoreDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// ============================================
 // APPLICATION COMPONENTS - FINANCE
 // ============================================
 
@@ -2137,6 +2337,13 @@ export function initializeRegistry() {
       IdeaCardDoc,
       MarketWidgetDoc,
       WeatherWidgetDoc,
+      // Article components
+      ArticleHeaderDoc,
+      ArticleSidebarDoc,
+      ActionSidebarDoc,
+      InlineSourceBadgeDoc,
+      RelatedImagesDoc,
+      DiscoverMoreDoc,
     ],
     Finance: [
       StockStatsDoc,
