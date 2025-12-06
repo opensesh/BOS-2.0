@@ -1,144 +1,487 @@
 'use client';
 
-import React from 'react';
-import { getAllComponents, ComponentDoc } from '@/lib/component-registry';
-import { Box, Calendar, Layout, Hash } from 'lucide-react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
+import { getAllComponents, ComponentDoc, getApplicationPages, componentRegistry } from '@/lib/component-registry';
+import { 
+  Search, 
+  ChevronDown, 
+  ChevronRight,
+  // Component type icons
+  Loader2,
+  Square,
+  Layers,
+  ToggleLeft,
+  Palette,
+  Type,
+  Image,
+  MessageSquare,
+  Link2,
+  Upload,
+  Share2,
+  Bookmark,
+  Grid3X3,
+  Sparkles,
+  BarChart3,
+  Building2,
+  FolderOpen,
+  ListChecks,
+  SlidersHorizontal,
+  X,
+} from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface ComponentsListProps {
   onSelectComponent: (componentId: string) => void;
   onClose: () => void;
 }
 
+// Smart icon mapping based on component name/type
+const getComponentIcon = (component: ComponentDoc) => {
+  const name = component.name.toLowerCase();
+  const id = component.id.toLowerCase();
+  
+  // Loading/Animation components
+  if (name.includes('loader') || name.includes('loading')) return Loader2;
+  if (name.includes('typewriter') || name.includes('text')) return Type;
+  
+  // UI Controls
+  if (name.includes('button')) return Square;
+  if (name.includes('modal') || name.includes('dialog')) return Layers;
+  if (name.includes('toggle') || name.includes('switch')) return ToggleLeft;
+  if (name.includes('tab') || name.includes('selector')) return SlidersHorizontal;
+  
+  // Visual/Brand
+  if (name.includes('color') || name.includes('swatch') || name.includes('palette')) return Palette;
+  if (name.includes('brand') || name.includes('logo') || name.includes('mark')) return Sparkles;
+  if (name.includes('gradient') || name.includes('background')) return Image;
+  if (name.includes('card') && name.includes('flip')) return Layers;
+  
+  // Chat components
+  if (name.includes('chat') || name.includes('message') || name.includes('response')) return MessageSquare;
+  if (name.includes('citation') || name.includes('source')) return Bookmark;
+  if (name.includes('question') || name.includes('related')) return MessageSquare;
+  if (name.includes('action') || name.includes('menu') || name.includes('overflow')) return ListChecks;
+  if (name.includes('link') || id.includes('link')) return Link2;
+  if (name.includes('image') && name.includes('view')) return Grid3X3;
+  if (name.includes('attachment') || name.includes('upload')) return Upload;
+  if (name.includes('share')) return Share2;
+  if (name.includes('shortcut')) return Bookmark;
+  if (name.includes('drawer')) return Layers;
+  if (name.includes('input') || name.includes('follow')) return MessageSquare;
+  if (name.includes('header')) return Layers;
+  if (name.includes('popover')) return MessageSquare;
+  
+  // Discover/News
+  if (name.includes('news') || name.includes('article')) return Grid3X3;
+  if (name.includes('idea')) return Sparkles;
+  if (name.includes('market') || name.includes('stock') || name.includes('widget')) return BarChart3;
+  if (name.includes('weather')) return Sparkles;
+  
+  // Finance
+  if (name.includes('stats') || name.includes('chart')) return BarChart3;
+  if (name.includes('profile') || name.includes('company')) return Building2;
+  
+  // Spaces
+  if (name.includes('space') && name.includes('card')) return FolderOpen;
+  if (name.includes('resource')) return ListChecks;
+  
+  // Default fallback
+  return Layers;
+};
+
+// Get icon color based on category
+const getIconColor = (category: string, page?: string) => {
+  if (category === 'design-system') return 'text-brand-aperol';
+  
+  // Different colors for different application pages
+  switch (page) {
+    case 'Chat': return 'text-blue-400';
+    case 'Discover': return 'text-emerald-400';
+    case 'Finance': return 'text-amber-400';
+    case 'Spaces': return 'text-purple-400';
+    default: return 'text-os-text-secondary-dark';
+  }
+};
+
 export function ComponentsList({ onSelectComponent, onClose }: ComponentsListProps) {
   const allComponents = getAllComponents();
+  const [searchQuery, setSearchQuery] = useState('');
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['design-system', ...getApplicationPages()]));
+  const [showAutocomplete, setShowAutocomplete] = useState(false);
+  const [selectedAutocompleteIndex, setSelectedAutocompleteIndex] = useState(0);
+  const searchRef = useRef<HTMLInputElement>(null);
+  const autocompleteRef = useRef<HTMLDivElement>(null);
 
-  // Group by category
+  // Group by category and page
   const designSystemComponents = allComponents.filter(c => c.category === 'design-system');
-  const applicationComponents = allComponents.filter(c => c.category === 'application');
+  const applicationPages = getApplicationPages();
 
-  // Mock usage data - in a real app this would come from analytics
-  const getUsageCount = (id: string) => {
-    const mockUsage: Record<string, number> = {
-      'brand-loader': 12,
-      'button': 45,
-      'modal': 23,
-      'flip-card': 8,
-      'tab-selector': 15,
-      'color-swatch': 6,
-      'news-card': 18,
-    };
-    return mockUsage[id] || Math.floor(Math.random() * 20) + 1;
+  // Filter components based on search
+  const filterComponents = (components: ComponentDoc[]) => {
+    if (!searchQuery.trim()) return components;
+    const query = searchQuery.toLowerCase();
+    return components.filter(c => 
+      c.name.toLowerCase().includes(query) ||
+      c.description.toLowerCase().includes(query) ||
+      c.id.toLowerCase().includes(query)
+    );
   };
 
-  // Mock created dates
-  const getCreatedDate = (id: string) => {
-    const mockDates: Record<string, string> = {
-      'brand-loader': '2024-01-15',
-      'button': '2024-01-10',
-      'modal': '2024-01-12',
-      'flip-card': '2024-02-01',
-      'tab-selector': '2024-01-20',
-      'color-swatch': '2024-02-15',
-      'news-card': '2024-02-20',
+  // Autocomplete suggestions
+  const autocompleteSuggestions = useMemo(() => {
+    if (!searchQuery.trim() || searchQuery.length < 2) return [];
+    const query = searchQuery.toLowerCase();
+    return allComponents
+      .filter(c => 
+        c.name.toLowerCase().includes(query) ||
+        c.id.toLowerCase().includes(query)
+      )
+      .slice(0, 6); // Limit to 6 suggestions
+  }, [searchQuery, allComponents]);
+
+  // Handle click outside to close autocomplete
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (
+        autocompleteRef.current && 
+        !autocompleteRef.current.contains(e.target as Node) &&
+        searchRef.current &&
+        !searchRef.current.contains(e.target as Node)
+      ) {
+        setShowAutocomplete(false);
+      }
     };
-    return mockDates[id] || '2024-03-01';
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Handle keyboard navigation in autocomplete
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (!showAutocomplete || autocompleteSuggestions.length === 0) return;
+    
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setSelectedAutocompleteIndex(prev => 
+        prev < autocompleteSuggestions.length - 1 ? prev + 1 : 0
+      );
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setSelectedAutocompleteIndex(prev => 
+        prev > 0 ? prev - 1 : autocompleteSuggestions.length - 1
+      );
+    } else if (e.key === 'Enter' && autocompleteSuggestions[selectedAutocompleteIndex]) {
+      e.preventDefault();
+      handleSelectSuggestion(autocompleteSuggestions[selectedAutocompleteIndex]);
+    } else if (e.key === 'Escape') {
+      setShowAutocomplete(false);
+    }
   };
 
-  const formatDate = (dateStr: string) => {
-    const date = new Date(dateStr);
-    return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  const handleSelectSuggestion = (component: ComponentDoc) => {
+    setSearchQuery(component.name);
+    setShowAutocomplete(false);
+    onSelectComponent(component.id);
   };
 
   const handleSelect = (componentId: string) => {
     onSelectComponent(componentId);
-    // Note: onClose is handled by the parent's onSelectComponent callback
   };
 
-  const ComponentRow = ({ component }: { component: ComponentDoc }) => (
-    <button
-      onClick={() => handleSelect(component.id)}
-      className="w-full flex items-center gap-4 p-4 hover:bg-os-surface-dark transition-colors text-left border-b border-os-border-dark/50 last:border-b-0"
-    >
-      {/* Icon */}
-      <div className="p-2 rounded-lg bg-os-surface-dark border border-os-border-dark">
-        <Box className="w-5 h-5 text-brand-aperol" />
-      </div>
+  const toggleSection = (sectionId: string) => {
+    setExpandedSections(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(sectionId)) {
+        newSet.delete(sectionId);
+      } else {
+        newSet.add(sectionId);
+      }
+      return newSet;
+    });
+  };
 
-      {/* Name & Description */}
-      <div className="flex-1 min-w-0">
-        <h3 className="text-sm font-medium text-brand-vanilla truncate">
-          {component.name}
-        </h3>
-        <p className="text-xs text-os-text-secondary-dark truncate">
-          {component.description}
-        </p>
-      </div>
+  const ComponentRow = ({ component }: { component: ComponentDoc }) => {
+    const IconComponent = getComponentIcon(component);
+    const iconColor = getIconColor(component.category, component.page);
+    const variantCount = component.variants?.length || 0;
+    const controlCount = component.controls?.length || 0;
+    
+    return (
+      <motion.button
+        initial={{ opacity: 0, y: -4 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -4 }}
+        transition={{ duration: 0.15 }}
+        onClick={() => handleSelect(component.id)}
+        className="w-full flex items-center gap-4 px-4 py-3 hover:bg-os-surface-dark transition-colors text-left border-b border-os-border-dark/30 last:border-b-0 group"
+      >
+        {/* Icon with type-specific styling */}
+        <div className={cn(
+          "p-2 rounded-lg transition-colors",
+          "bg-os-surface-dark/50 group-hover:bg-os-surface-dark border border-os-border-dark/50"
+        )}>
+          <IconComponent className={cn("w-4 h-4", iconColor)} />
+        </div>
 
-      {/* Page/Category */}
-      <div className="hidden sm:flex items-center gap-1.5 text-xs text-os-text-secondary-dark min-w-[100px]">
-        <Layout className="w-3.5 h-3.5" />
-        <span>{component.page || 'Design System'}</span>
-      </div>
+        {/* Name & Description */}
+        <div className="flex-1 min-w-0">
+          <h3 className="text-sm font-medium text-brand-vanilla truncate group-hover:text-brand-aperol transition-colors">
+            {component.name}
+          </h3>
+          <p className="text-xs text-os-text-secondary-dark truncate">
+            {component.description}
+          </p>
+        </div>
 
-      {/* Created Date */}
-      <div className="hidden md:flex items-center gap-1.5 text-xs text-os-text-secondary-dark min-w-[100px]">
-        <Calendar className="w-3.5 h-3.5" />
-        <span>{formatDate(getCreatedDate(component.id))}</span>
-      </div>
+        {/* Variants count */}
+        {variantCount > 0 && (
+          <div className="hidden sm:flex items-center gap-1.5 px-2 py-1 rounded-md bg-os-surface-dark/50 border border-os-border-dark/30">
+            <span className="text-xs text-os-text-secondary-dark">
+              {variantCount} variant{variantCount !== 1 ? 's' : ''}
+            </span>
+          </div>
+        )}
 
-      {/* Usage Count */}
-      <div className="flex items-center gap-1.5 text-xs text-os-text-secondary-dark min-w-[60px]">
-        <Hash className="w-3.5 h-3.5" />
-        <span>{getUsageCount(component.id)} uses</span>
-      </div>
-    </button>
-  );
+        {/* Props/Controls count */}
+        {controlCount > 0 && (
+          <div className="hidden md:flex items-center gap-1.5 px-2 py-1 rounded-md bg-os-surface-dark/50 border border-os-border-dark/30">
+            <SlidersHorizontal className="w-3 h-3 text-os-text-secondary-dark" />
+            <span className="text-xs text-os-text-secondary-dark">
+              {controlCount} prop{controlCount !== 1 ? 's' : ''}
+            </span>
+          </div>
+        )}
+
+        {/* Arrow indicator on hover */}
+        <ChevronRight className="w-4 h-4 text-os-text-secondary-dark opacity-0 group-hover:opacity-100 transition-opacity" />
+      </motion.button>
+    );
+  };
+
+  const SectionHeader = ({ 
+    title, 
+    count, 
+    sectionId,
+    color = 'text-brand-vanilla'
+  }: { 
+    title: string; 
+    count: number; 
+    sectionId: string;
+    color?: string;
+  }) => {
+    const isExpanded = expandedSections.has(sectionId);
+    
+    return (
+      <button
+        onClick={() => toggleSection(sectionId)}
+        className="w-full flex items-center justify-between px-4 py-3 border-b border-os-border-dark bg-os-bg-darker hover:bg-os-surface-dark/30 transition-colors group"
+      >
+        <div className="flex items-center gap-3">
+          <motion.div
+            animate={{ rotate: isExpanded ? 0 : -90 }}
+            transition={{ duration: 0.2 }}
+          >
+            <ChevronDown className="w-4 h-4 text-os-text-secondary-dark" />
+          </motion.div>
+          <h2 className={cn("text-sm font-semibold uppercase tracking-wider", color)}>
+            {title}
+          </h2>
+        </div>
+        <span className="text-xs text-os-text-secondary-dark px-2 py-0.5 rounded-full bg-os-surface-dark/50">
+          {count} component{count !== 1 ? 's' : ''}
+        </span>
+      </button>
+    );
+  };
+
+  const filteredDesignSystem = filterComponents(designSystemComponents);
+
+  // Check if we have any results
+  const hasResults = searchQuery.trim() 
+    ? allComponents.some(c => 
+        c.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        c.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        c.id.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : true;
 
   return (
-    <div className="space-y-6">
-      {/* Design System Components */}
-      {designSystemComponents.length > 0 && (
-        <div className="bg-os-surface-dark rounded-xl border border-os-border-dark overflow-hidden">
-          <div className="px-4 py-3 border-b border-os-border-dark bg-os-bg-darker">
-            <h2 className="text-sm font-semibold text-brand-vanilla uppercase tracking-wider">
-              Design System
-            </h2>
-            <p className="text-xs text-os-text-secondary-dark mt-0.5">
-              {designSystemComponents.length} components
-            </p>
-          </div>
-          <div>
-            {designSystemComponents.map(component => (
-              <ComponentRow key={component.id} component={component} />
-            ))}
-          </div>
+    <div className="space-y-4">
+      {/* Search Bar */}
+      <div className="relative">
+        <div className="relative">
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-os-text-secondary-dark pointer-events-none" />
+          <input
+            ref={searchRef}
+            type="text"
+            value={searchQuery}
+            onChange={(e) => {
+              setSearchQuery(e.target.value);
+              setShowAutocomplete(true);
+              setSelectedAutocompleteIndex(0);
+            }}
+            onFocus={() => setShowAutocomplete(true)}
+            onKeyDown={handleKeyDown}
+            placeholder="Search components..."
+            className={cn(
+              "w-full pl-11 pr-10 py-3 rounded-xl",
+              "bg-os-surface-dark border border-os-border-dark",
+              "text-sm text-brand-vanilla placeholder:text-os-text-secondary-dark",
+              "focus:outline-none focus:border-brand-aperol/50 focus:ring-1 focus:ring-brand-aperol/20",
+              "transition-colors"
+            )}
+          />
+          {searchQuery && (
+            <button
+              onClick={() => {
+                setSearchQuery('');
+                setShowAutocomplete(false);
+                searchRef.current?.focus();
+              }}
+              className="absolute right-3 top-1/2 -translate-y-1/2 p-1 rounded-md hover:bg-os-border-dark transition-colors"
+            >
+              <X className="w-4 h-4 text-os-text-secondary-dark" />
+            </button>
+          )}
+        </div>
+
+        {/* Autocomplete Dropdown */}
+        <AnimatePresence>
+          {showAutocomplete && autocompleteSuggestions.length > 0 && (
+            <motion.div
+              ref={autocompleteRef}
+              initial={{ opacity: 0, y: -8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.15 }}
+              className="absolute top-full left-0 right-0 mt-2 bg-os-surface-dark border border-os-border-dark rounded-xl shadow-xl overflow-hidden z-50"
+            >
+              {autocompleteSuggestions.map((component, index) => {
+                const IconComponent = getComponentIcon(component);
+                const iconColor = getIconColor(component.category, component.page);
+                
+                return (
+                  <button
+                    key={component.id}
+                    onClick={() => handleSelectSuggestion(component)}
+                    className={cn(
+                      "w-full flex items-center gap-3 px-4 py-2.5 text-left transition-colors",
+                      index === selectedAutocompleteIndex 
+                        ? "bg-brand-aperol/10 text-brand-vanilla" 
+                        : "hover:bg-os-surface-dark/80 text-os-text-secondary-dark hover:text-brand-vanilla"
+                    )}
+                  >
+                    <IconComponent className={cn("w-4 h-4", iconColor)} />
+                    <div className="flex-1 min-w-0">
+                      <span className="text-sm font-medium">{component.name}</span>
+                      <span className="text-xs text-os-text-secondary-dark ml-2">
+                        {component.category === 'design-system' ? 'Design System' : component.page}
+                      </span>
+                    </div>
+                    <ChevronRight className="w-3 h-3 text-os-text-secondary-dark" />
+                  </button>
+                );
+              })}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+
+      {/* No Results State */}
+      {!hasResults && (
+        <div className="text-center py-12 bg-os-surface-dark rounded-xl border border-os-border-dark">
+          <Search className="w-10 h-10 text-os-text-secondary-dark mx-auto mb-3 opacity-50" />
+          <h3 className="text-base font-medium text-brand-vanilla mb-1">No components found</h3>
+          <p className="text-sm text-os-text-secondary-dark">
+            Try a different search term
+          </p>
         </div>
       )}
 
-      {/* Application Components */}
-      {applicationComponents.length > 0 && (
+      {/* Design System Section */}
+      {(filteredDesignSystem.length > 0 || !searchQuery) && (
         <div className="bg-os-surface-dark rounded-xl border border-os-border-dark overflow-hidden">
-          <div className="px-4 py-3 border-b border-os-border-dark bg-os-bg-darker">
-            <h2 className="text-sm font-semibold text-brand-vanilla uppercase tracking-wider">
-              Application
-            </h2>
-            <p className="text-xs text-os-text-secondary-dark mt-0.5">
-              {applicationComponents.length} components
-            </p>
-          </div>
-          <div>
-            {applicationComponents.map(component => (
-              <ComponentRow key={component.id} component={component} />
-            ))}
-          </div>
+          <SectionHeader 
+            title="Design System" 
+            count={filteredDesignSystem.length}
+            sectionId="design-system"
+            color="text-brand-aperol"
+          />
+          <AnimatePresence>
+            {expandedSections.has('design-system') && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 'auto', opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.2 }}
+              >
+                {filteredDesignSystem.length > 0 ? (
+                  filteredDesignSystem.map(component => (
+                    <ComponentRow key={component.id} component={component} />
+                  ))
+                ) : (
+                  <div className="px-4 py-6 text-center text-os-text-secondary-dark text-sm">
+                    No design system components match your search
+                  </div>
+                )}
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       )}
 
-      {/* Empty State */}
+      {/* Application Sections - Grouped by Page */}
+      {applicationPages.map(page => {
+        const pageComponents = filterComponents(
+          componentRegistry.application[page] || []
+        );
+        
+        // Skip empty sections when searching
+        if (searchQuery && pageComponents.length === 0) return null;
+        
+        // Get page-specific color
+        const pageColor = page === 'Chat' ? 'text-blue-400'
+          : page === 'Discover' ? 'text-emerald-400'
+          : page === 'Finance' ? 'text-amber-400'
+          : page === 'Spaces' ? 'text-purple-400'
+          : 'text-brand-vanilla';
+
+        return (
+          <div key={page} className="bg-os-surface-dark rounded-xl border border-os-border-dark overflow-hidden">
+            <SectionHeader 
+              title={page} 
+              count={pageComponents.length}
+              sectionId={page}
+              color={pageColor}
+            />
+            <AnimatePresence>
+              {expandedSections.has(page) && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  {pageComponents.length > 0 ? (
+                    pageComponents.map(component => (
+                      <ComponentRow key={component.id} component={component} />
+                    ))
+                  ) : (
+                    <div className="px-4 py-6 text-center text-os-text-secondary-dark text-sm">
+                      No {page.toLowerCase()} components match your search
+                    </div>
+                  )}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        );
+      })}
+
+      {/* Empty State - No Components Registered */}
       {allComponents.length === 0 && (
-        <div className="text-center py-12">
-          <Box className="w-12 h-12 text-os-text-secondary-dark mx-auto mb-4" />
+        <div className="text-center py-12 bg-os-surface-dark rounded-xl border border-os-border-dark">
+          <Layers className="w-12 h-12 text-os-text-secondary-dark mx-auto mb-4" />
           <h3 className="text-lg font-medium text-brand-vanilla mb-2">No Components</h3>
           <p className="text-os-text-secondary-dark">
             No components have been registered yet.
