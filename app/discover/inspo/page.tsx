@@ -1,12 +1,15 @@
 'use client';
 
-import React, { useEffect, Suspense } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
+import { Cube, Table2 } from 'lucide-react';
 import { Sidebar } from '@/components/Sidebar';
 import { InspoHeader } from '@/components/discover/InspoHeader';
+import { InspoTable } from '@/components/InspoTable';
 import { useInspoStore, ViewMode } from '@/lib/stores/inspo-store';
+import { getInspoResources, type InspoResource } from '@/lib/data/inspo';
 
 // Dynamically import the 3D canvas and control panel to avoid SSR issues
 const InspoCanvas = dynamic(
@@ -29,10 +32,32 @@ const ControlPanel = dynamic(
 // Valid view modes for URL param validation
 const VALID_VIEW_MODES: ViewMode[] = ['sphere', 'galaxy', 'grid', 'nebula', 'starfield', 'vortex'];
 
+type DisplayMode = '3d' | 'table';
+
 function InspoContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { viewMode, setViewMode, isTransitioning, togglePanel } = useInspoStore();
+  
+  // Display mode state (3D vs Table)
+  const [displayMode, setDisplayMode] = useState<DisplayMode>('3d');
+  const [resources, setResources] = useState<InspoResource[]>([]);
+  const [isLoadingData, setIsLoadingData] = useState(false);
+
+  // Fetch inspiration resources on mount
+  useEffect(() => {
+    async function fetchResources() {
+      setIsLoadingData(true);
+      const { data, error } = await getInspoResources();
+      if (error) {
+        console.error('Error fetching resources:', error);
+      } else if (data) {
+        setResources(data);
+      }
+      setIsLoadingData(false);
+    }
+    fetchResources();
+  }, []);
 
   // Sync URL param with store on mount
   useEffect(() => {
@@ -40,13 +65,28 @@ function InspoContent() {
     if (viewParam && VALID_VIEW_MODES.includes(viewParam)) {
       setViewMode(viewParam);
     }
+    // Check for display mode in URL
+    const displayParam = searchParams.get('display') as DisplayMode | null;
+    if (displayParam === 'table' || displayParam === '3d') {
+      setDisplayMode(displayParam);
+    }
   }, [searchParams, setViewMode]);
 
   // Handle view mode change - update URL
   const handleViewModeChange = (mode: ViewMode) => {
     if (isTransitioning) return;
     setViewMode(mode);
-    router.push(`/discover/inspo?view=${mode}`, { scroll: false });
+    const params = new URLSearchParams(searchParams.toString());
+    params.set('view', mode);
+    router.push(`/discover/inspo?${params.toString()}`, { scroll: false });
+  };
+
+  // Handle display mode change
+  const handleDisplayModeChange = (mode: DisplayMode) => {
+    setDisplayMode(mode);
+    const params = new URLSearchParams(searchParams.toString());
+    params.set('display', mode);
+    router.push(`/discover/inspo?${params.toString()}`, { scroll: false });
   };
 
   return (
@@ -61,27 +101,77 @@ function InspoContent() {
             isTransitioning={isTransitioning}
             onSettingsClick={togglePanel}
           />
+
+          {/* Display Mode Toggle (3D Explorer | Table View) */}
+          <div className="flex items-center justify-center mt-6">
+            <div className="inline-flex items-center bg-os-surface-dark rounded-lg p-1 border border-os-border-dark">
+              <button
+                onClick={() => handleDisplayModeChange('3d')}
+                className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-all ${
+                  displayMode === '3d'
+                    ? 'bg-brand-aperol text-white shadow-sm'
+                    : 'text-os-text-secondary-dark hover:text-brand-vanilla'
+                }`}
+              >
+                <Cube className="w-4 h-4" />
+                <span>3D Explorer</span>
+              </button>
+              <button
+                onClick={() => handleDisplayModeChange('table')}
+                className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-all ${
+                  displayMode === 'table'
+                    ? 'bg-brand-aperol text-white shadow-sm'
+                    : 'text-os-text-secondary-dark hover:text-brand-vanilla'
+                }`}
+              >
+                <Table2 className="w-4 h-4" />
+                <span>Table View</span>
+              </button>
+            </div>
+          </div>
         </div>
 
-        {/* Gradient fade overlay - seamless transition from header to canvas */}
-        <div className="absolute top-14 lg:top-0 left-0 right-0 h-48 md:h-64 pointer-events-none z-[5]"
-          style={{
-            background: 'linear-gradient(to bottom, #141414 0%, #141414 50%, transparent 100%)'
-          }}
-        />
+        {displayMode === '3d' ? (
+          <>
+            {/* Gradient fade overlay - seamless transition from header to canvas */}
+            <div className="absolute top-14 lg:top-0 left-0 right-0 h-48 md:h-64 pointer-events-none z-[5]"
+              style={{
+                background: 'linear-gradient(to bottom, #141414 0%, #141414 50%, transparent 100%)'
+              }}
+            />
 
-        {/* 3D Visualization - fills remaining space, pulled up to overlap with gradient */}
-        <motion.div
-          className="flex-1 w-full -mt-20 md:-mt-28"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-        >
-          <InspoCanvas />
-        </motion.div>
+            {/* 3D Visualization - fills remaining space, pulled up to overlap with gradient */}
+            <motion.div
+              className="flex-1 w-full -mt-20 md:-mt-28"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+            >
+              <InspoCanvas />
+            </motion.div>
 
-        {/* Control Panel - drawer */}
-        <ControlPanel />
+            {/* Control Panel - drawer (only in 3D mode) */}
+            <ControlPanel />
+          </>
+        ) : (
+          /* Table View */
+          <motion.div
+            className="flex-1 w-full overflow-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="w-full max-w-7xl mx-auto px-6 pb-12">
+              {isLoadingData ? (
+                <div className="flex items-center justify-center py-20">
+                  <div className="w-8 h-8 border-2 border-brand-aperol border-t-transparent rounded-full animate-spin" />
+                </div>
+              ) : (
+                <InspoTable resources={resources} />
+              )}
+            </div>
+          </motion.div>
+        )}
       </main>
     </div>
   );
