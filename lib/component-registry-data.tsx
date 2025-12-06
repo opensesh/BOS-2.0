@@ -30,6 +30,23 @@ import { WeatherWidget } from '@/components/discover/WeatherWidget';
 // Chat
 import { ChatTabNav, type ChatTab } from '@/components/chat/ChatTabNav';
 import { RelatedQuestions } from '@/components/chat/RelatedQuestions';
+import { ResponseActions } from '@/components/chat/ResponseActions';
+import { InlineCitation } from '@/components/chat/InlineCitation';
+import { OverflowMenu } from '@/components/chat/OverflowMenu';
+import { BrandResourceCard, type BrandResourceCardProps } from '@/components/chat/BrandResourceCard';
+import { SourcePopover } from '@/components/chat/SourcePopover';
+import { BrandSourcePopover, type BrandSourceInfo } from '@/components/chat/BrandSourcePopover';
+import { AttachmentPreview } from '@/components/chat/AttachmentPreview';
+import { ShareModal } from '@/components/chat/ShareModal';
+import { ShortcutModal } from '@/components/chat/ShortcutModal';
+import { LinksView } from '@/components/chat/LinksView';
+import { ImagesView, type ImageResult } from '@/components/chat/ImagesView';
+import { ChatHeader } from '@/components/chat/ChatHeader';
+import { SourcesDrawer } from '@/components/chat/SourcesDrawer';
+import { AnswerView, type SourceInfo, type ContentSection } from '@/components/chat/AnswerView';
+import { ChatContent } from '@/components/chat/ChatContent';
+import { ChatResponse } from '@/components/chat/ChatResponse';
+import { FollowUpInput } from '@/components/chat/FollowUpInput';
 
 // Finance
 import { StockStats } from '@/components/finance/StockStats';
@@ -665,6 +682,771 @@ const RelatedQuestionsDoc: ComponentDoc = {
   variants: [],
 };
 
+// ResponseActions Component
+const mockSourcesForActions: SourceInfo[] = [
+  { id: '1', name: 'TechCrunch', url: 'https://techcrunch.com/article', title: 'Breaking Tech News', snippet: 'Latest developments in technology...' },
+  { id: '2', name: 'The Verge', url: 'https://theverge.com/article', title: 'Design Innovation', snippet: 'New approaches to digital design...' },
+  { id: '3', name: 'Wired', url: 'https://wired.com/article', title: 'Future of AI', snippet: 'How AI is changing industries...' },
+];
+
+const ResponseActionsDemo = ({ showSources }: { showSources: boolean }) => {
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-4 max-w-2xl">
+      <ResponseActions
+        sources={showSources ? mockSourcesForActions : []}
+        content="This is a sample AI response content that can be copied or shared."
+        query="What is brand identity?"
+        showSources={showSources}
+        modelUsed="sonar-pro"
+      />
+    </div>
+  );
+};
+
+const ResponseActionsDoc: ComponentDoc = {
+  id: 'response-actions',
+  name: 'ResponseActions',
+  description: 'Action bar for AI responses with share, export, regenerate, shortcut save, and feedback buttons. Shows source count badge when sources are available.',
+  category: 'application',
+  page: 'Chat',
+  component: ResponseActionsDemo,
+  defaultProps: {
+    showSources: true,
+  },
+  controls: [
+    {
+      name: 'showSources',
+      type: 'boolean',
+      description: 'Whether to show the sources button',
+      defaultValue: true,
+    },
+  ],
+  variants: [
+    { id: 'with-sources', name: 'With Sources', props: { showSources: true } },
+    { id: 'no-sources', name: 'No Sources', props: { showSources: false } },
+  ],
+};
+
+// InlineCitation Component
+const mockCitationSources: SourceInfo[] = [
+  { id: '1', name: 'Wikipedia', url: 'https://wikipedia.org', title: 'Brand Identity Definition', snippet: 'Brand identity encompasses visual elements...' },
+  { id: '2', name: 'Forbes', url: 'https://forbes.com', title: 'Building Strong Brands', snippet: 'Key strategies for brand development...' },
+];
+
+const InlineCitationDemo = ({ additionalCount }: { additionalCount: number }) => {
+  const sources = additionalCount > 0 
+    ? [...mockCitationSources, ...Array(additionalCount).fill(null).map((_, i) => ({
+        id: String(i + 3),
+        name: `Source ${i + 3}`,
+        url: '#',
+        title: `Additional Source ${i + 3}`,
+      }))]
+    : [mockCitationSources[0]];
+  
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-6 max-w-md">
+      <p className="text-os-text-primary-dark text-[15px] leading-relaxed">
+        Brand identity is the collection of visual and messaging elements that represent a company.{' '}
+        <InlineCitation
+          sources={sources}
+          primarySource={sources[0].name}
+          additionalCount={additionalCount}
+        />
+      </p>
+    </div>
+  );
+};
+
+const InlineCitationDoc: ComponentDoc = {
+  id: 'inline-citation',
+  name: 'InlineCitation',
+  description: 'Inline citation chip that appears within text content. Shows primary source name with optional count for additional sources. Hover to reveal source popover.',
+  category: 'application',
+  page: 'Chat',
+  component: InlineCitationDemo,
+  defaultProps: {
+    additionalCount: 2,
+  },
+  controls: [
+    {
+      name: 'additionalCount',
+      type: 'range',
+      description: 'Number of additional sources beyond the primary',
+      defaultValue: 2,
+      min: 0,
+      max: 5,
+      step: 1,
+    },
+  ],
+  variants: [
+    { id: 'single', name: 'Single Source', props: { additionalCount: 0 } },
+    { id: 'multiple', name: 'Multiple Sources', props: { additionalCount: 3 } },
+  ],
+};
+
+// OverflowMenu Component
+const OverflowMenuDemo = ({ threadTitle }: { threadTitle: string }) => {
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-4 flex justify-end">
+      <OverflowMenu
+        threadTitle={threadTitle}
+        content="Sample thread content for export."
+      />
+    </div>
+  );
+};
+
+const OverflowMenuDoc: ComponentDoc = {
+  id: 'overflow-menu',
+  name: 'OverflowMenu',
+  description: 'Dropdown menu with thread actions: bookmark, add to space, rename, export (PDF/Markdown/DOCX), and delete. Shows thread info header.',
+  category: 'application',
+  page: 'Chat',
+  component: OverflowMenuDemo,
+  defaultProps: {
+    threadTitle: 'What is brand identity?',
+  },
+  controls: [
+    {
+      name: 'threadTitle',
+      type: 'text',
+      description: 'Title of the chat thread',
+      defaultValue: 'What is brand identity?',
+    },
+  ],
+  variants: [
+    { id: 'default', name: 'Default', props: { threadTitle: 'What is brand identity?' } },
+    { id: 'long-title', name: 'Long Title', props: { threadTitle: 'How do I create a comprehensive brand strategy for my startup company?' } },
+  ],
+};
+
+// BrandResourceCard Component
+const BrandResourceCardDemo = ({ title, icon }: { title: string; icon: string }) => {
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-6 flex flex-wrap gap-2">
+      <BrandResourceCard
+        title={title}
+        description="Brand resource description"
+        href="/brand/colors"
+        icon={icon}
+      />
+    </div>
+  );
+};
+
+const BrandResourceCardDoc: ComponentDoc = {
+  id: 'brand-resource-card',
+  name: 'BrandResourceCard',
+  description: 'Pill-style link card for brand resources. Displays icon, title, and external link indicator. Used in AI responses to link to brand documentation.',
+  category: 'application',
+  page: 'Chat',
+  component: BrandResourceCardDemo,
+  defaultProps: {
+    title: 'Color System',
+    icon: 'Palette',
+  },
+  controls: [
+    {
+      name: 'title',
+      type: 'text',
+      description: 'Resource title',
+      defaultValue: 'Color System',
+    },
+    {
+      name: 'icon',
+      type: 'select',
+      description: 'Icon to display',
+      defaultValue: 'Palette',
+      options: [
+        { label: 'Palette', value: 'Palette' },
+        { label: 'Type', value: 'Type' },
+        { label: 'Hexagon', value: 'Hexagon' },
+        { label: 'Image', value: 'Image' },
+        { label: 'Layers', value: 'Layers' },
+        { label: 'BookOpen', value: 'BookOpen' },
+      ],
+    },
+  ],
+  variants: [
+    { id: 'typography', name: 'Typography', props: { title: 'Typography', icon: 'Type' } },
+    { id: 'colors', name: 'Colors', props: { title: 'Color System', icon: 'Palette' } },
+    { id: 'imagery', name: 'Imagery', props: { title: 'Photography', icon: 'Image' } },
+  ],
+};
+
+// SourcePopover Component
+const mockPopoverSources: SourceInfo[] = [
+  { id: '1', name: 'TechCrunch', url: 'https://techcrunch.com/article', favicon: 'https://techcrunch.com/favicon.ico', title: 'Breaking: Major Tech Announcement', snippet: 'Latest developments in the tech industry...' },
+  { id: '2', name: 'The Verge', url: 'https://theverge.com/article', favicon: 'https://theverge.com/favicon.ico', title: 'Design Trends 2024', snippet: 'New approaches to digital product design...' },
+  { id: '3', name: 'Wired', url: 'https://wired.com/article', favicon: 'https://wired.com/favicon.ico', title: 'AI Revolution', snippet: 'How artificial intelligence is changing everything...' },
+];
+
+const SourcePopoverDemo = ({ sourceCount }: { sourceCount: number }) => {
+  const sources = mockPopoverSources.slice(0, sourceCount);
+  
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-6 min-h-[300px] flex items-end">
+      <div className="relative">
+        <span className="text-os-text-secondary-dark text-sm">Hover to see sources</span>
+        <SourcePopover sources={sources} />
+      </div>
+    </div>
+  );
+};
+
+const SourcePopoverDoc: ComponentDoc = {
+  id: 'source-popover',
+  name: 'SourcePopover',
+  description: 'Popover panel showing source citations with favicons, titles, and snippets. Appears on hover over citation chips.',
+  category: 'application',
+  page: 'Chat',
+  component: SourcePopoverDemo,
+  defaultProps: {
+    sourceCount: 3,
+  },
+  controls: [
+    {
+      name: 'sourceCount',
+      type: 'range',
+      description: 'Number of sources to display',
+      defaultValue: 3,
+      min: 1,
+      max: 5,
+      step: 1,
+    },
+  ],
+  variants: [
+    { id: 'few-sources', name: 'Few Sources', props: { sourceCount: 2 } },
+    { id: 'many-sources', name: 'Many Sources', props: { sourceCount: 5 } },
+  ],
+};
+
+// BrandSourcePopover Component
+const mockBrandSources: BrandSourceInfo[] = [
+  { id: 'brand-colors', name: 'Color System', type: 'brand-doc', title: 'Brand Color Palette', path: '/brand/colors', snippet: 'Primary, secondary, and accent colors for the brand identity.', href: '/brand/colors' },
+  { id: 'brand-logo', name: 'Logo Assets', type: 'asset', title: 'Logo Package', path: '/public/logos/brandmark.svg', thumbnail: '/logos/brandmark.svg', href: '/brand/logos' },
+];
+
+const BrandSourcePopoverDemo = () => {
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-6 min-h-[300px] flex items-end">
+      <div className="relative">
+        <span className="text-brand-aperol text-sm">Brand source popover</span>
+        <BrandSourcePopover sources={mockBrandSources} />
+      </div>
+    </div>
+  );
+};
+
+const BrandSourcePopoverDoc: ComponentDoc = {
+  id: 'brand-source-popover',
+  name: 'BrandSourcePopover',
+  description: 'Popover for brand-specific sources showing document or asset references. Displays thumbnails for image assets and copy path functionality.',
+  category: 'application',
+  page: 'Chat',
+  component: BrandSourcePopoverDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// AttachmentPreview Component
+const mockAttachments = [
+  { id: '1', file: new File([''], 'screenshot.png', { type: 'image/png' }), preview: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100', type: 'image' as const },
+  { id: '2', file: new File([''], 'design.jpg', { type: 'image/jpeg' }), preview: 'https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=100', type: 'image' as const },
+];
+
+const AttachmentPreviewDemo = ({ compact, error }: { compact: boolean; error: string }) => {
+  return (
+    <div className="bg-os-surface-dark rounded-lg max-w-md">
+      <AttachmentPreview
+        attachments={mockAttachments}
+        onRemove={() => {}}
+        compact={compact}
+        error={error || undefined}
+        onClearError={() => {}}
+      />
+    </div>
+  );
+};
+
+const AttachmentPreviewDoc: ComponentDoc = {
+  id: 'attachment-preview',
+  name: 'AttachmentPreview',
+  description: 'Grid of image attachment thumbnails with remove buttons. Shows error messages and supports compact mode for inline display.',
+  category: 'application',
+  page: 'Chat',
+  component: AttachmentPreviewDemo,
+  defaultProps: {
+    compact: false,
+    error: '',
+  },
+  controls: [
+    {
+      name: 'compact',
+      type: 'boolean',
+      description: 'Use compact thumbnail size',
+      defaultValue: false,
+    },
+    {
+      name: 'error',
+      type: 'text',
+      description: 'Error message to display',
+      defaultValue: '',
+    },
+  ],
+  variants: [
+    { id: 'default', name: 'Default', props: { compact: false, error: '' } },
+    { id: 'compact', name: 'Compact', props: { compact: true, error: '' } },
+    { id: 'with-error', name: 'With Error', props: { compact: false, error: 'File too large. Maximum size is 10MB.' } },
+  ],
+};
+
+// ShareModal Component
+const ShareModalDemo = ({ isOpen }: { isOpen: boolean }) => {
+  if (!isOpen) {
+    return (
+      <div className="p-4 bg-os-surface-dark rounded-xl border border-os-border-dark text-center">
+        <p className="text-os-text-secondary-dark text-sm">Toggle &apos;isOpen&apos; to see the modal</p>
+      </div>
+    );
+  }
+  
+  return (
+    <div className="relative bg-black/60 rounded-xl p-8 min-h-[350px] flex items-center justify-center">
+      <ShareModal
+        isOpen={isOpen}
+        onClose={() => {}}
+        threadUrl="https://brand-os.app/chat/abc123"
+      />
+    </div>
+  );
+};
+
+const ShareModalDoc: ComponentDoc = {
+  id: 'share-modal',
+  name: 'ShareModal',
+  description: 'Modal dialog for sharing chat threads. Offers private or public visibility options and copy link functionality.',
+  category: 'application',
+  page: 'Chat',
+  component: ShareModalDemo,
+  defaultProps: {
+    isOpen: true,
+  },
+  controls: [
+    {
+      name: 'isOpen',
+      type: 'boolean',
+      description: 'Whether the modal is visible',
+      defaultValue: true,
+    },
+  ],
+  variants: [
+    { id: 'open', name: 'Open', props: { isOpen: true } },
+  ],
+};
+
+// ShortcutModal Component
+const ShortcutModalDemo = ({ isOpen }: { isOpen: boolean }) => {
+  if (!isOpen) {
+    return (
+      <div className="p-4 bg-os-surface-dark rounded-xl border border-os-border-dark text-center">
+        <p className="text-os-text-secondary-dark text-sm">Toggle &apos;isOpen&apos; to see the modal</p>
+      </div>
+    );
+  }
+  
+  return (
+    <div className="relative bg-black/60 rounded-xl p-8 min-h-[500px] flex items-center justify-center">
+      <ShortcutModal
+        isOpen={isOpen}
+        onClose={() => {}}
+        defaultName="brand-colors"
+        defaultInstructions=""
+      />
+    </div>
+  );
+};
+
+const ShortcutModalDoc: ComponentDoc = {
+  id: 'shortcut-modal',
+  name: 'ShortcutModal',
+  description: 'Modal for creating AI shortcuts with custom name, instructions, and advanced options like mode (search/research), model, and source type.',
+  category: 'application',
+  page: 'Chat',
+  component: ShortcutModalDemo,
+  defaultProps: {
+    isOpen: true,
+  },
+  controls: [
+    {
+      name: 'isOpen',
+      type: 'boolean',
+      description: 'Whether the modal is visible',
+      defaultValue: true,
+    },
+  ],
+  variants: [
+    { id: 'open', name: 'Open', props: { isOpen: true } },
+  ],
+};
+
+// LinksView Component
+const mockLinksViewSources: SourceInfo[] = [
+  { id: '1', name: 'MDN Web Docs', url: 'https://developer.mozilla.org/en-US/docs/Web', favicon: 'https://developer.mozilla.org/favicon.ico', title: 'Web Technology for Developers', snippet: 'MDN Web Docs provides information about Open Web technologies including HTML, CSS, and APIs.' },
+  { id: '2', name: 'CSS-Tricks', url: 'https://css-tricks.com/guides', favicon: 'https://css-tricks.com/favicon.ico', title: 'CSS Guides and Tutorials', snippet: 'A comprehensive collection of CSS techniques and best practices.' },
+  { id: '3', name: 'Smashing Magazine', url: 'https://smashingmagazine.com/articles', favicon: 'https://smashingmagazine.com/favicon.ico', title: 'Web Design Articles', snippet: 'Professional resources for web designers and developers.' },
+];
+
+const LinksViewDemo = () => {
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-4 max-w-2xl">
+      <LinksView query="web development best practices" sources={mockLinksViewSources} />
+    </div>
+  );
+};
+
+const LinksViewDoc: ComponentDoc = {
+  id: 'links-view',
+  name: 'LinksView',
+  description: 'Grid view of search result links with favicons, titles, snippets, and source domains. Used in the Links tab of chat responses.',
+  category: 'application',
+  page: 'Chat',
+  component: LinksViewDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// ImagesView Component
+const mockImagesViewImages: ImageResult[] = [
+  { id: '1', url: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400', thumbnailUrl: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=200', title: 'Abstract Design', sourceUrl: 'https://unsplash.com', sourceName: 'Unsplash', width: 400, height: 400 },
+  { id: '2', url: 'https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=400', thumbnailUrl: 'https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=200', title: 'Gradient Art', sourceUrl: 'https://unsplash.com', sourceName: 'Unsplash', width: 400, height: 400 },
+  { id: '3', url: 'https://images.unsplash.com/photo-1557682250-33bd709cbe85?w=400', thumbnailUrl: 'https://images.unsplash.com/photo-1557682250-33bd709cbe85?w=200', title: 'Purple Gradient', sourceUrl: 'https://unsplash.com', sourceName: 'Unsplash', width: 400, height: 400 },
+  { id: '4', url: 'https://images.unsplash.com/photo-1557682260-96773eb01377?w=400', thumbnailUrl: 'https://images.unsplash.com/photo-1557682260-96773eb01377?w=200', title: 'Blue Wave', sourceUrl: 'https://unsplash.com', sourceName: 'Unsplash', width: 400, height: 400 },
+];
+
+const ImagesViewDemo = () => {
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-4 max-w-2xl">
+      <ImagesView query="abstract gradient designs" images={mockImagesViewImages} />
+    </div>
+  );
+};
+
+const ImagesViewDoc: ComponentDoc = {
+  id: 'images-view',
+  name: 'ImagesView',
+  description: 'Grid gallery of image search results with lightbox functionality. Displays thumbnails with source overlay on hover.',
+  category: 'application',
+  page: 'Chat',
+  component: ImagesViewDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// ChatHeader Component
+const ChatHeaderDemo = ({ activeTab, hasLinks, hasImages }: { activeTab: ChatTab; hasLinks: boolean; hasImages: boolean }) => {
+  return (
+    <div className="bg-os-bg-dark rounded-lg overflow-hidden max-w-2xl">
+      <ChatHeader
+        activeTab={activeTab}
+        onTabChange={() => {}}
+        hasLinks={hasLinks}
+        hasImages={hasImages}
+        linksCount={hasLinks ? 8 : 0}
+        imagesCount={hasImages ? 12 : 0}
+        threadTitle="What is brand identity?"
+        onBack={() => {}}
+      />
+    </div>
+  );
+};
+
+const ChatHeaderDoc: ComponentDoc = {
+  id: 'chat-header',
+  name: 'ChatHeader',
+  description: 'Sticky header for chat pages with tab navigation (Answer/Links/Images), back button, overflow menu, and share button.',
+  category: 'application',
+  page: 'Chat',
+  component: ChatHeaderDemo,
+  defaultProps: {
+    activeTab: 'answer',
+    hasLinks: true,
+    hasImages: true,
+  },
+  controls: [
+    {
+      name: 'activeTab',
+      type: 'select',
+      description: 'Currently active tab',
+      defaultValue: 'answer',
+      options: [
+        { label: 'Answer', value: 'answer' },
+        { label: 'Links', value: 'links' },
+        { label: 'Images', value: 'images' },
+      ],
+    },
+    {
+      name: 'hasLinks',
+      type: 'boolean',
+      description: 'Whether links are available',
+      defaultValue: true,
+    },
+    {
+      name: 'hasImages',
+      type: 'boolean',
+      description: 'Whether images are available',
+      defaultValue: true,
+    },
+  ],
+  variants: [
+    { id: 'all-tabs', name: 'All Tabs', props: { activeTab: 'answer', hasLinks: true, hasImages: true } },
+    { id: 'answer-only', name: 'Answer Only', props: { activeTab: 'answer', hasLinks: false, hasImages: false } },
+    { id: 'links-active', name: 'Links Active', props: { activeTab: 'links', hasLinks: true, hasImages: true } },
+  ],
+};
+
+// SourcesDrawer Component
+const mockDrawerSources: SourceInfo[] = [
+  { id: '1', name: 'TechCrunch', url: 'https://techcrunch.com/article', favicon: 'https://techcrunch.com/favicon.ico', title: 'Major Tech Industry Announcement', snippet: 'Breaking news from the tech world with analysis and insights from industry experts.' },
+  { id: '2', name: 'The Verge', url: 'https://theverge.com/article', favicon: 'https://theverge.com/favicon.ico', title: 'Design Trends 2024', snippet: 'New approaches to digital product design and user experience.' },
+  { id: '3', name: 'Wired', url: 'https://wired.com/article', favicon: 'https://wired.com/favicon.ico', title: 'AI and Machine Learning', snippet: 'How artificial intelligence is transforming business and society.' },
+];
+
+const mockDrawerResourceCards: BrandResourceCardProps[] = [
+  { title: 'Color System', description: 'Brand color palette', href: '/brand/colors', icon: 'Palette' },
+  { title: 'Typography', description: 'Font specifications', href: '/brand/typography', icon: 'Type' },
+];
+
+const SourcesDrawerDemo = ({ isOpen }: { isOpen: boolean }) => {
+  if (!isOpen) {
+    return (
+      <div className="p-4 bg-os-surface-dark rounded-xl border border-os-border-dark text-center">
+        <p className="text-os-text-secondary-dark text-sm">Toggle &apos;isOpen&apos; to see the drawer</p>
+      </div>
+    );
+  }
+  
+  return (
+    <div className="relative bg-os-bg-dark rounded-xl min-h-[500px] overflow-hidden">
+      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute right-0 top-0 bottom-0 w-[400px] bg-os-bg-darker border-l border-os-border-dark">
+        <SourcesDrawer
+          isOpen={true}
+          onClose={() => {}}
+          sources={mockDrawerSources}
+          resourceCards={mockDrawerResourceCards}
+        />
+      </div>
+    </div>
+  );
+};
+
+const SourcesDrawerDoc: ComponentDoc = {
+  id: 'sources-drawer',
+  name: 'SourcesDrawer',
+  description: 'Slide-out drawer showing all sources for an AI response. Organized by type: Brand Resources, Discover (RSS), and Web Sources.',
+  category: 'application',
+  page: 'Chat',
+  component: SourcesDrawerDemo,
+  defaultProps: {
+    isOpen: true,
+  },
+  controls: [
+    {
+      name: 'isOpen',
+      type: 'boolean',
+      description: 'Whether the drawer is visible',
+      defaultValue: true,
+    },
+  ],
+  variants: [
+    { id: 'open', name: 'Open', props: { isOpen: true } },
+  ],
+};
+
+// AnswerView Component
+const mockAnswerSections: ContentSection[] = [
+  { type: 'paragraph', content: 'Brand identity encompasses the visual elements that represent a company, including its logo, color palette, typography, and overall design language.' },
+  { type: 'heading', content: 'Key Components', level: 2 },
+  { type: 'list', content: '', items: ['Logo and brandmark', 'Color system', 'Typography hierarchy', 'Imagery and photography style'] },
+  { type: 'paragraph', content: 'A strong brand identity helps create recognition and trust with your audience while differentiating you from competitors.' },
+];
+
+const mockAnswerSources: SourceInfo[] = [
+  { id: '1', name: 'Wikipedia', url: 'https://wikipedia.org', title: 'Brand Identity' },
+  { id: '2', name: 'HubSpot', url: 'https://hubspot.com', title: 'Building Brand Identity' },
+];
+
+const AnswerViewDemo = ({ isStreaming }: { isStreaming: boolean }) => {
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-4 max-w-2xl">
+      <AnswerView
+        query="What is brand identity?"
+        sections={mockAnswerSections}
+        sources={mockAnswerSources}
+        isStreaming={isStreaming}
+        showCitations={true}
+      />
+    </div>
+  );
+};
+
+const AnswerViewDoc: ComponentDoc = {
+  id: 'answer-view',
+  name: 'AnswerView',
+  description: 'Main AI response renderer that displays structured content with headings, paragraphs, lists, and inline citations. Supports streaming state.',
+  category: 'application',
+  page: 'Chat',
+  component: AnswerViewDemo,
+  defaultProps: {
+    isStreaming: false,
+  },
+  controls: [
+    {
+      name: 'isStreaming',
+      type: 'boolean',
+      description: 'Show streaming/loading indicator',
+      defaultValue: false,
+    },
+  ],
+  variants: [
+    { id: 'default', name: 'Complete', props: { isStreaming: false } },
+    { id: 'streaming', name: 'Streaming', props: { isStreaming: true } },
+  ],
+};
+
+// ChatContent Component
+const mockChatContent = `Brand identity is the collection of all elements that a company creates to portray the right image to its consumers.
+
+## Key Elements
+
+Brand identity includes your logo, color palette, typography, and overall visual language. These elements work together to create a cohesive and recognizable presence.
+
+## Why It Matters
+
+A strong brand identity helps build trust, creates recognition, and differentiates you from competitors in the marketplace.`;
+
+const ChatContentDemo = ({ isStreaming }: { isStreaming: boolean }) => {
+  return (
+    <div className="bg-os-surface-dark rounded-lg max-w-2xl">
+      <ChatContent
+        query="What is brand identity?"
+        content={mockChatContent}
+        sources={mockAnswerSources}
+        isStreaming={isStreaming}
+        modelUsed="sonar-pro"
+        onFollowUpClick={() => {}}
+        onRegenerate={() => {}}
+        isLastResponse={true}
+      />
+    </div>
+  );
+};
+
+const ChatContentDoc: ComponentDoc = {
+  id: 'chat-content',
+  name: 'ChatContent',
+  description: 'Complete chat message container that combines AnswerView, ResponseActions, and RelatedQuestions. Handles content parsing and resource extraction.',
+  category: 'application',
+  page: 'Chat',
+  component: ChatContentDemo,
+  defaultProps: {
+    isStreaming: false,
+  },
+  controls: [
+    {
+      name: 'isStreaming',
+      type: 'boolean',
+      description: 'Show streaming state',
+      defaultValue: false,
+    },
+  ],
+  variants: [
+    { id: 'complete', name: 'Complete Response', props: { isStreaming: false } },
+    { id: 'streaming', name: 'Streaming', props: { isStreaming: true } },
+  ],
+};
+
+// ChatResponse Component
+const ChatResponseDemo = () => {
+  return (
+    <div className="bg-os-bg-dark rounded-lg max-w-3xl h-[500px] overflow-hidden">
+      <ChatResponse
+        query="What is brand identity and how do I build one?"
+        content={mockChatContent}
+        sources={mockAnswerSources}
+        images={mockImagesViewImages}
+        isStreaming={false}
+        modelUsed="sonar-pro"
+        onFollowUpClick={() => {}}
+        onRegenerate={() => {}}
+      />
+    </div>
+  );
+};
+
+const ChatResponseDoc: ComponentDoc = {
+  id: 'chat-response',
+  name: 'ChatResponse',
+  description: 'Full chat response component with sticky tab header and scrollable content. Combines ChatTabNav, AnswerView, LinksView, and ImagesView.',
+  category: 'application',
+  page: 'Chat',
+  component: ChatResponseDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// FollowUpInput Component
+const FollowUpInputDemo = ({ isLoading, placeholder }: { isLoading: boolean; placeholder: string }) => {
+  return (
+    <div className="bg-os-bg-dark rounded-lg p-4 max-w-3xl">
+      <FollowUpInput
+        onSubmit={() => {}}
+        isLoading={isLoading}
+        placeholder={placeholder}
+        selectedModel="auto"
+        onModelChange={() => {}}
+      />
+    </div>
+  );
+};
+
+const FollowUpInputDoc: ComponentDoc = {
+  id: 'follow-up-input',
+  name: 'FollowUpInput',
+  description: 'Full-featured chat input with search/research toggle, model selector, connector dropdown, file attachments, voice input, and submit button.',
+  category: 'application',
+  page: 'Chat',
+  component: FollowUpInputDemo,
+  defaultProps: {
+    isLoading: false,
+    placeholder: 'Ask a follow-up',
+  },
+  controls: [
+    {
+      name: 'isLoading',
+      type: 'boolean',
+      description: 'Disable input during loading',
+      defaultValue: false,
+    },
+    {
+      name: 'placeholder',
+      type: 'text',
+      description: 'Input placeholder text',
+      defaultValue: 'Ask a follow-up',
+    },
+  ],
+  variants: [
+    { id: 'default', name: 'Default', props: { isLoading: false, placeholder: 'Ask a follow-up' } },
+    { id: 'loading', name: 'Loading', props: { isLoading: true, placeholder: 'Ask a follow-up' } },
+    { id: 'custom-placeholder', name: 'Custom Placeholder', props: { isLoading: false, placeholder: 'Ask about brand guidelines...' } },
+  ],
+};
+
 // ============================================
 // APPLICATION COMPONENTS - DISCOVER
 // ============================================
@@ -1201,6 +1983,23 @@ export function initializeRegistry() {
     Chat: [
       ChatTabNavDoc,
       RelatedQuestionsDoc,
+      ResponseActionsDoc,
+      InlineCitationDoc,
+      OverflowMenuDoc,
+      BrandResourceCardDoc,
+      SourcePopoverDoc,
+      BrandSourcePopoverDoc,
+      AttachmentPreviewDoc,
+      ShareModalDoc,
+      ShortcutModalDoc,
+      LinksViewDoc,
+      ImagesViewDoc,
+      ChatHeaderDoc,
+      SourcesDrawerDoc,
+      AnswerViewDoc,
+      ChatContentDoc,
+      ChatResponseDoc,
+      FollowUpInputDoc,
     ],
     Discover: [
       NewsCardDoc,
