@@ -277,7 +277,7 @@ export interface InspirationCardData {
   slug: string;
   title: string;
   description: string;
-  sources: Array<{ name: string; url: string }>;
+  sources: Array<{ id?: string; name: string; url: string }>;
   publishedAt?: string;
   imageUrl?: string;
   category: 'short-form' | 'long-form' | 'blog';
@@ -389,7 +389,7 @@ export interface IdeaItem {
   title: string;
   description: string;
   starred?: boolean;
-  sources: Array<{ name: string; url: string }>;
+  sources: Array<{ id?: string; name: string; url: string }>;
   
   // Content format (e.g., 'reel', 'carousel', 'video', 'article')
   format?: ContentFormat;
