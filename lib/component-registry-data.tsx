@@ -2106,6 +2106,9 @@ const StockStatsDemo = () => {
     trailingPE: 30.5,
     epsTrailingTwelveMonths: 6.40,
     currency: 'USD',
+    longName: 'Apple Inc.',
+    exchange: 'NASDAQ',
+    quoteType: 'EQUITY',
   };
 
   return (
@@ -2132,6 +2135,7 @@ const CompanyProfileDemo = () => {
   const mockProfile = {
     symbol: 'AAPL',
     shortName: 'Apple Inc.',
+    longName: 'Apple Inc.',
     longBusinessSummary: 'Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, Mac, iPad, and wearables, home and accessories.',
     sector: 'Technology',
     industry: 'Consumer Electronics',
@@ -2169,18 +2173,18 @@ const CompanyProfileDoc: ComponentDoc = {
 const LatestNewsDemo = () => {
   const mockNews = [
     {
-      id: '1',
+      uuid: '1',
       title: 'Tech Company Announces Major AI Initiative',
-      url: 'https://example.com/news/1',
-      source: 'Reuters',
-      publishedAt: new Date().toISOString(),
+      link: 'https://example.com/news/1',
+      publisher: 'Reuters',
+      providerPublishTime: Math.floor(Date.now() / 1000) - 1800, // 30 min ago
     },
     {
-      id: '2',
+      uuid: '2',
       title: 'Q3 Earnings Beat Analyst Expectations',
-      url: 'https://example.com/news/2',
-      source: 'Bloomberg',
-      publishedAt: new Date().toISOString(),
+      link: 'https://example.com/news/2',
+      publisher: 'Bloomberg',
+      providerPublishTime: Math.floor(Date.now() / 1000) - 3600, // 1 hour ago
     },
   ];
   
@@ -2283,7 +2287,10 @@ const InspirationCardDoc: ComponentDoc = {
       type: 'select',
       description: 'Card display variant',
       defaultValue: 'compact',
-      options: ['featured', 'compact'],
+      options: [
+        { label: 'Featured', value: 'featured' },
+        { label: 'Compact', value: 'compact' },
+      ],
     },
   ],
   variants: [
@@ -2383,39 +2390,6 @@ const DiscoverHeaderDoc: ComponentDoc = {
   category: 'application',
   page: 'Discover',
   component: DiscoverHeaderDemo,
-  defaultProps: {},
-  controls: [],
-  variants: [],
-};
-
-// NewsCard Component  
-const NewsCardDemo = () => {
-  return (
-    <div className="bg-os-surface-dark rounded-xl p-4 max-w-sm">
-      <NewsCard
-        article={{
-          id: 'demo-1',
-          title: 'Major Tech Company Announces New AI Initiative',
-          description: 'Leading technology firm unveils plans for next-generation artificial intelligence platform.',
-          url: 'https://example.com',
-          sourceName: 'TechCrunch',
-          publishedAt: new Date().toISOString(),
-          imageUrl: undefined,
-          category: 'ai-creative',
-        }}
-        variant="compact"
-      />
-    </div>
-  );
-};
-
-const NewsCardDoc: ComponentDoc = {
-  id: 'news-card',
-  name: 'NewsCard',
-  description: 'Individual news article card with image, title, description, source, and actions. Supports compact and expanded variants.',
-  category: 'application',
-  page: 'Discover',
-  component: NewsCardDemo,
   defaultProps: {},
   controls: [],
   variants: [],
