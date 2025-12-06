@@ -395,7 +395,7 @@ export async function GET(request: NextRequest) {
         let profile: Partial<CompanyProfile> | null = null;
 
         // First try: Financial Modeling Prep API (more reliable)
-        const fmpKey = process.env.FMP_API_KEY;
+        const fmpKey = process.env.FINANCIAL_MODELING_PREP_API_KEY || process.env.FMP_API_KEY;
         if (fmpKey) {
           try {
             const response = await fetch(
