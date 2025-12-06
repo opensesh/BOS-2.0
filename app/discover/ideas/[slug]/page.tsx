@@ -20,7 +20,10 @@ import {
   Clock,
   Copy,
   Check,
-  ChevronRight
+  ChevronRight,
+  ChevronDown,
+  GripVertical,
+  Sparkles
 } from 'lucide-react';
 import { Sidebar } from '@/components/Sidebar';
 import { StickyArticleHeader } from '@/components/discover/article/StickyArticleHeader';
@@ -279,6 +282,14 @@ const getRatingLabel = (rating: number) => {
   return 'Radical';
 };
 
+// HTML entity decoder
+function decodeHTMLEntities(text: string): string {
+  if (typeof window === 'undefined') return text;
+  const textarea = document.createElement('textarea');
+  textarea.innerHTML = text;
+  return textarea.value;
+}
+
 export default function IdeaDetailPage() {
   const params = useParams();
   const searchParams = useSearchParams();
@@ -293,6 +304,13 @@ export default function IdeaDetailPage() {
   const [activePlatform, setActivePlatform] = useState<string | null>(null);
   const [hashtagsCopied, setHashtagsCopied] = useState(false);
   const [showAllSources, setShowAllSources] = useState(false);
+  
+  // New state for interactive features
+  const [hooks, setHooks] = useState<string[]>([]);
+  const [copiedHookIndex, setCopiedHookIndex] = useState<number | null>(null);
+  const [draggedHookIndex, setDraggedHookIndex] = useState<number | null>(null);
+  const [expandedPlatformTip, setExpandedPlatformTip] = useState<number | null>(null);
+  const [copiedPromptIndex, setCopiedPromptIndex] = useState<number | null>(null);
 
   const id = searchParams.get('id');
   const slug = params.slug as string;
@@ -303,6 +321,58 @@ export default function IdeaDetailPage() {
       setActivePlatform(item.platformTips[0].platform);
     }
   }, [item, activePlatform]);
+
+  // Initialize hooks from item (decode HTML entities and remove quotes)
+  useEffect(() => {
+    if (item?.hooks && item.hooks.length > 0) {
+      const cleanedHooks = item.hooks.map(hook => {
+        const decoded = decodeHTMLEntities(hook);
+        // Remove surrounding quotes if present
+        return decoded.replace(/^["']|["']$/g, '');
+      });
+      setHooks(cleanedHooks);
+    }
+  }, [item]);
+
+  // Copy hook to clipboard
+  const copyHook = async (hook: string, index: number) => {
+    try {
+      await navigator.clipboard.writeText(hook);
+      setCopiedHookIndex(index);
+      setTimeout(() => setCopiedHookIndex(null), 2000);
+    } catch {
+      // Fallback
+      const textarea = document.createElement('textarea');
+      textarea.value = hook;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+      setCopiedHookIndex(index);
+      setTimeout(() => setCopiedHookIndex(null), 2000);
+    }
+  };
+
+  // Drag and drop handlers for hooks
+  const handleDragStart = (index: number) => {
+    setDraggedHookIndex(index);
+  };
+
+  const handleDragOver = (e: React.DragEvent, index: number) => {
+    e.preventDefault();
+    if (draggedHookIndex === null || draggedHookIndex === index) return;
+    
+    const newHooks = [...hooks];
+    const draggedHook = newHooks[draggedHookIndex];
+    newHooks.splice(draggedHookIndex, 1);
+    newHooks.splice(index, 0, draggedHook);
+    setHooks(newHooks);
+    setDraggedHookIndex(index);
+  };
+
+  const handleDragEnd = () => {
+    setDraggedHookIndex(null);
+  };
 
   // Copy hashtags to clipboard
   const copyHashtags = async () => {
@@ -519,12 +589,12 @@ export default function IdeaDetailPage() {
                     ref={titleRef}
                     className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-brand-vanilla mb-4 drop-shadow-md"
                   >
-                    {item.title}
+                    {decodeHTMLEntities(item.title)}
                   </h1>
 
                   {/* Brief Description Preview */}
                   <p className="text-sm md:text-base text-brand-vanilla/80 line-clamp-2 max-w-2xl">
-                    {item.description}
+                    {decodeHTMLEntities(item.description)}
                   </p>
                 </div>
 
@@ -558,27 +628,49 @@ export default function IdeaDetailPage() {
               <div className="flex-1 min-w-0">
                 {/* Full Description */}
                 <p className="text-[15px] leading-[1.75] text-os-text-primary-dark/90 mb-8">
-                  {item.description}
+                  {decodeHTMLEntities(item.description)}
                 </p>
 
                 {/* Hook Ideas - Only show if available */}
-                {item.hooks && item.hooks.length > 0 && (
+                {hooks && hooks.length > 0 && (
                   <div className="mb-8">
                     <h2 className="text-lg font-display font-semibold text-brand-vanilla mb-4">
                       Hook Ideas
                     </h2>
                     <div className="space-y-3">
-                      {item.hooks.map((hook, idx) => (
+                      {hooks.map((hook, idx) => (
                         <div 
                           key={idx}
-                          className="flex items-start gap-3 p-4 rounded-xl bg-os-surface-dark/60 border border-os-border-dark/50"
+                          draggable
+                          onDragStart={() => handleDragStart(idx)}
+                          onDragOver={(e) => handleDragOver(e, idx)}
+                          onDragEnd={handleDragEnd}
+                          className={`group flex items-start gap-3 p-4 rounded-xl bg-os-surface-dark/60 border border-os-border-dark/50 hover:border-os-border-dark transition-all cursor-move ${
+                            draggedHookIndex === idx ? 'opacity-50' : ''
+                          }`}
                         >
+                          <GripVertical className="w-4 h-4 text-os-text-secondary-dark/50 group-hover:text-os-text-secondary-dark flex-shrink-0 mt-0.5" />
                           <div className="w-6 h-6 rounded-full bg-brand-aperol/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                             <span className="text-xs font-bold text-brand-aperol">{idx + 1}</span>
                           </div>
-                          <p className="text-[15px] text-brand-vanilla font-medium leading-relaxed">
-                            "{hook}"
+                          <p className="flex-1 text-[15px] text-brand-vanilla font-medium leading-relaxed">
+                            {hook}
                           </p>
+                          <button
+                            onClick={() => copyHook(hook, idx)}
+                            className={`flex-shrink-0 p-2 rounded-lg transition-all ${
+                              copiedHookIndex === idx
+                                ? 'bg-emerald-500/20 text-emerald-400'
+                                : 'bg-os-surface-dark hover:bg-os-charcoal text-os-text-secondary-dark hover:text-brand-vanilla'
+                            }`}
+                            title="Copy hook"
+                          >
+                            {copiedHookIndex === idx ? (
+                              <Check className="w-4 h-4" />
+                            ) : (
+                              <Copy className="w-4 h-4" />
+                            )}
+                          </button>
                         </div>
                       ))}
                     </div>
@@ -609,69 +701,216 @@ export default function IdeaDetailPage() {
                       ))}
                     </div>
                     
-                    {/* Tips for active platform */}
+                    {/* Tips for active platform - Collapsible */}
                     {activePlatform && (
                       <div className="space-y-2">
                         {item.platformTips
                           .find(pt => pt.platform === activePlatform)
-                          ?.tips.map((tip, idx) => (
-                            <div 
-                              key={idx}
-                              className="flex items-start gap-3 p-3 rounded-lg bg-os-surface-dark/40"
-                            >
-                              <ChevronRight className="w-4 h-4 text-brand-aperol flex-shrink-0 mt-0.5" />
-                              <p className="text-sm text-os-text-primary-dark/90">{tip}</p>
-                            </div>
-                          ))}
+                          ?.tips.map((tip, idx) => {
+                            const isExpanded = expandedPlatformTip === idx;
+                            // Split tip into quick tip (first sentence) and detailed explanation (rest)
+                            const sentences = tip.split(/\.(?=\s|$)/);
+                            const quickTip = sentences[0] + (sentences.length > 1 ? '.' : '');
+                            const detailedExplanation = sentences.length > 1 ? sentences.slice(1).join('.').trim() : null;
+                            
+                            return (
+                              <div 
+                                key={idx}
+                                className="rounded-lg bg-os-surface-dark/40 border border-os-border-dark/50 overflow-hidden"
+                              >
+                                <button
+                                  onClick={() => setExpandedPlatformTip(isExpanded ? null : idx)}
+                                  className="w-full flex items-start gap-3 p-3 text-left hover:bg-os-surface-dark/60 transition-colors"
+                                >
+                                  <ChevronRight className={`w-4 h-4 text-brand-aperol flex-shrink-0 mt-0.5 transition-transform ${
+                                    isExpanded ? 'rotate-90' : ''
+                                  }`} />
+                                  <div className="flex-1">
+                                    <p className="text-sm font-medium text-brand-vanilla">{quickTip}</p>
+                                  </div>
+                                  {detailedExplanation && (
+                                    <ChevronDown className={`w-4 h-4 text-os-text-secondary-dark flex-shrink-0 mt-0.5 transition-transform ${
+                                      isExpanded ? 'rotate-180' : ''
+                                    }`} />
+                                  )}
+                                </button>
+                                
+                                {isExpanded && detailedExplanation && (
+                                  <div className="px-3 pb-3 pl-10">
+                                    <div className="pt-2 border-t border-os-border-dark/30">
+                                      <p className="text-sm text-os-text-primary-dark/80 leading-relaxed">
+                                        {detailedExplanation}
+                                      </p>
+                                      <div className="mt-3 p-3 rounded-lg bg-os-charcoal/40 border border-os-border-dark/30">
+                                        <p className="text-xs font-mono text-os-text-secondary-dark mb-1.5">Example:</p>
+                                        <p className="text-sm text-brand-vanilla/90 italic">
+                                          {/* Generate context-specific example */}
+                                          For "{decodeHTMLEntities(item.title)}" on {activePlatform}, focus on {quickTip.toLowerCase()}
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                )}
+                              </div>
+                            );
+                          })}
                       </div>
                     )}
                   </div>
                 )}
 
-                {/* Visual Direction - Only show if available */}
+                {/* Visual Concepts - Prompt Generator */}
                 {item.visualDirection && (
                   <div className="mb-8">
                     <h2 className="text-lg font-display font-semibold text-brand-vanilla mb-4">
-                      Visual Direction
+                      Visual Concepts
                     </h2>
                     
-                    <div className="p-4 rounded-xl bg-os-surface-dark/60 border border-os-border-dark/50">
-                      {/* Rating badge */}
-                      <div className="flex items-center gap-3 mb-3">
-                        <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium border ${getRatingColor(item.visualDirection.rating)}`}>
-                          <span>{item.visualDirection.rating}/10</span>
-                          <span className="text-xs opacity-75">•</span>
-                          <span>{getRatingLabel(item.visualDirection.rating)}</span>
-                        </span>
+                    {/* Configuration Tools */}
+                    <div className="mb-4 p-4 rounded-xl bg-os-surface-dark/60 border border-os-border-dark/50">
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                        <div>
+                          <label className="block text-xs font-medium text-os-text-secondary-dark mb-1.5">Aspect Ratio</label>
+                          <select className="w-full px-3 py-2 rounded-lg bg-os-charcoal border border-os-border-dark/50 text-sm text-brand-vanilla focus:border-brand-aperol focus:outline-none">
+                            <option>16:9</option>
+                            <option>9:16</option>
+                            <option>1:1</option>
+                            <option>4:5</option>
+                            <option>21:9</option>
+                          </select>
+                        </div>
+                        
+                        <div>
+                          <label className="block text-xs font-medium text-os-text-secondary-dark mb-1.5">Setting</label>
+                          <select className="w-full px-3 py-2 rounded-lg bg-os-charcoal border border-os-border-dark/50 text-sm text-brand-vanilla focus:border-brand-aperol focus:outline-none">
+                            <option>Studio</option>
+                            <option>Natural</option>
+                            <option>Urban</option>
+                            <option>Abstract</option>
+                            <option>Minimalist</option>
+                          </select>
+                        </div>
+                        
+                        <div>
+                          <label className="block text-xs font-medium text-os-text-secondary-dark mb-1.5">Art Direction</label>
+                          <select className="w-full px-3 py-2 rounded-lg bg-os-charcoal border border-os-border-dark/50 text-sm text-brand-vanilla focus:border-brand-aperol focus:outline-none">
+                            <option>Bold & Modern</option>
+                            <option>Minimal & Clean</option>
+                            <option>Textured & Warm</option>
+                            <option>High Contrast</option>
+                            <option>Soft & Dreamy</option>
+                          </select>
+                        </div>
+                        
+                        <div>
+                          <label className="block text-xs font-medium text-os-text-secondary-dark mb-1.5">Model</label>
+                          <select className="w-full px-3 py-2 rounded-lg bg-os-charcoal border border-os-border-dark/50 text-sm text-brand-vanilla focus:border-brand-aperol focus:outline-none">
+                            <option>Midjourney</option>
+                            <option>DALL-E 3</option>
+                            <option>Stable Diffusion</option>
+                            <option>Runway Gen-3</option>
+                            <option>SORA</option>
+                          </select>
+                        </div>
                       </div>
-                      
-                      {/* Description */}
-                      <p className="text-[15px] text-os-text-primary-dark/90 leading-relaxed">
-                        {item.visualDirection.description}
-                      </p>
+                    </div>
+                    
+                    {/* Prompt Ideas */}
+                    <div className="space-y-3">
+                      {[
+                        {
+                          rating: 8,
+                          label: 'Bold',
+                          prompt: `${item.visualDirection.description} --ar 16:9 --style raw --stylize 250`,
+                        },
+                        {
+                          rating: 7,
+                          label: 'Modern',
+                          prompt: `Clean, modern visual for "${decodeHTMLEntities(item.title)}" with minimalist composition, professional lighting, and brand-aligned color palette using vanilla and charcoal tones with aperol accent. High-end product photography style. --ar 16:9 --v 6.0`,
+                        },
+                        {
+                          rating: 9,
+                          label: 'Experimental',
+                          prompt: `Abstract conceptual art representing "${decodeHTMLEntities(item.title)}" with bold geometric shapes, dynamic composition, electric color palette, and cinematic lighting. Ultra-wide angle, editorial style. --ar 21:9 --chaos 30 --weird 100`,
+                        },
+                      ].map((concept, idx) => (
+                        <div 
+                          key={idx}
+                          className="group p-4 rounded-xl bg-os-surface-dark/60 border border-os-border-dark/50 hover:border-os-border-dark transition-all"
+                        >
+                          <div className="flex items-start justify-between gap-3 mb-3">
+                            <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium border ${getRatingColor(concept.rating)}`}>
+                              <Sparkles className="w-3.5 h-3.5" />
+                              <span>{concept.rating}/10</span>
+                              <span className="text-xs opacity-75">•</span>
+                              <span>{concept.label}</span>
+                            </span>
+                            
+                            <button
+                              onClick={async () => {
+                                await navigator.clipboard.writeText(concept.prompt);
+                                setCopiedPromptIndex(idx);
+                                setTimeout(() => setCopiedPromptIndex(null), 2000);
+                              }}
+                              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
+                                copiedPromptIndex === idx
+                                  ? 'bg-emerald-500/20 text-emerald-400'
+                                  : 'bg-os-surface-dark hover:bg-os-charcoal text-os-text-secondary-dark hover:text-brand-vanilla'
+                              }`}
+                            >
+                              {copiedPromptIndex === idx ? (
+                                <>
+                                  <Check className="w-4 h-4" />
+                                  Copied
+                                </>
+                              ) : (
+                                <>
+                                  <Copy className="w-4 h-4" />
+                                  Copy
+                                </>
+                              )}
+                            </button>
+                          </div>
+                          
+                          <p className="text-sm text-os-text-primary-dark/90 leading-relaxed font-mono bg-os-charcoal/40 p-3 rounded-lg border border-os-border-dark/30">
+                            {concept.prompt}
+                          </p>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 )}
 
-                {/* Example Outline - Only show if available */}
+                {/* Information Architecture - Only show if available */}
                 {item.exampleOutline && item.exampleOutline.length > 0 && (
                   <div className="mb-8">
                     <h2 className="text-lg font-display font-semibold text-brand-vanilla mb-4">
-                      Example Outline
+                      Information Architecture
                     </h2>
                     
                     <div className="space-y-2">
-                      {item.exampleOutline.map((section, idx) => (
-                        <div 
-                          key={idx}
-                          className="flex items-center gap-3 p-3 rounded-lg bg-os-surface-dark/40"
-                        >
-                          <div className="w-6 h-6 rounded bg-os-surface-dark flex items-center justify-center flex-shrink-0">
-                            <span className="text-xs font-mono text-os-text-secondary-dark">{idx + 1}</span>
+                      {item.exampleOutline.map((section, idx) => {
+                        // Remove redundant "Section X:" prefix if present
+                        const cleanedSection = section.replace(/^Section\s+\d+:\s*/i, '');
+                        
+                        return (
+                          <div 
+                            key={idx}
+                            className="flex items-start gap-3 p-3 rounded-lg bg-os-surface-dark/40 hover:bg-os-surface-dark/60 transition-colors"
+                          >
+                            <div className="w-6 h-6 rounded bg-brand-aperol/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                              <span className="text-xs font-bold text-brand-aperol">{idx + 1}</span>
+                            </div>
+                            <p className="text-sm text-brand-vanilla font-medium leading-relaxed">{cleanedSection}</p>
                           </div>
-                          <p className="text-sm text-os-text-primary-dark/90">{section}</p>
-                        </div>
-                      ))}
+                        );
+                      })}
+                    </div>
+                    
+                    <div className="mt-4 p-3 rounded-lg bg-os-charcoal/40 border border-os-border-dark/30">
+                      <p className="text-xs text-os-text-secondary-dark">
+                        <span className="font-semibold text-brand-aperol">Tip:</span> Use this structure as a starting framework. Adapt sections based on your content goals and audience needs.
+                      </p>
                     </div>
                   </div>
                 )}
