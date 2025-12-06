@@ -67,6 +67,193 @@ export interface NewsItem {
   };
 }
 
+// Hardcoded profiles for popular symbols (fallback when APIs fail)
+const HARDCODED_PROFILES: Record<string, Partial<CompanyProfile>> = {
+  'AAPL': {
+    symbol: 'AAPL',
+    shortName: 'Apple Inc.',
+    longName: 'Apple Inc.',
+    longBusinessSummary: 'Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal computers; iPad, a line of multi-purpose tablets; and wearables, home, and accessories comprising AirPods, Apple TV, Apple Watch, Beats products, and HomePod.',
+    sector: 'Technology',
+    industry: 'Consumer Electronics',
+    fullTimeEmployees: 164000,
+    city: 'Cupertino',
+    state: 'California',
+    country: 'United States',
+    website: 'https://www.apple.com',
+    companyOfficers: [
+      { name: 'Tim Cook', title: 'CEO' },
+      { name: 'Luca Maestri', title: 'CFO' },
+      { name: 'Jeff Williams', title: 'COO' },
+      { name: 'Katherine Adams', title: 'General Counsel' },
+    ],
+  },
+  'MSFT': {
+    symbol: 'MSFT',
+    shortName: 'Microsoft Corporation',
+    longName: 'Microsoft Corporation',
+    longBusinessSummary: 'Microsoft Corporation develops and supports software, services, devices, and solutions worldwide. The company operates through Productivity and Business Processes, Intelligent Cloud, and More Personal Computing segments. It offers Office, Exchange, SharePoint, Microsoft Teams, and related services.',
+    sector: 'Technology',
+    industry: 'Software—Infrastructure',
+    fullTimeEmployees: 221000,
+    city: 'Redmond',
+    state: 'Washington',
+    country: 'United States',
+    website: 'https://www.microsoft.com',
+    companyOfficers: [
+      { name: 'Satya Nadella', title: 'CEO' },
+      { name: 'Amy Hood', title: 'CFO' },
+    ],
+  },
+  'GOOGL': {
+    symbol: 'GOOGL',
+    shortName: 'Alphabet Inc.',
+    longName: 'Alphabet Inc.',
+    longBusinessSummary: 'Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Cloud, and Other Bets segments. The company provides search, advertising, commerce, and cloud services.',
+    sector: 'Communication Services',
+    industry: 'Internet Content & Information',
+    fullTimeEmployees: 182502,
+    city: 'Mountain View',
+    state: 'California',
+    country: 'United States',
+    website: 'https://www.abc.xyz',
+    companyOfficers: [
+      { name: 'Sundar Pichai', title: 'CEO' },
+      { name: 'Ruth Porat', title: 'CFO' },
+    ],
+  },
+  'AMZN': {
+    symbol: 'AMZN',
+    shortName: 'Amazon.com, Inc.',
+    longName: 'Amazon.com, Inc.',
+    longBusinessSummary: 'Amazon.com, Inc. engages in the retail sale of consumer products, advertising, and subscription services through online and physical stores worldwide. The company operates through North America, International, and Amazon Web Services segments.',
+    sector: 'Consumer Cyclical',
+    industry: 'Internet Retail',
+    fullTimeEmployees: 1525000,
+    city: 'Seattle',
+    state: 'Washington',
+    country: 'United States',
+    website: 'https://www.amazon.com',
+    companyOfficers: [
+      { name: 'Andy Jassy', title: 'CEO' },
+      { name: 'Brian Olsavsky', title: 'CFO' },
+    ],
+  },
+  'NVDA': {
+    symbol: 'NVDA',
+    shortName: 'NVIDIA Corporation',
+    longName: 'NVIDIA Corporation',
+    longBusinessSummary: 'NVIDIA Corporation provides graphics and compute and networking solutions in the United States, Taiwan, China, Hong Kong, and internationally. The company operates through Graphics and Compute & Networking segments, offering GeForce GPUs, data center platforms, and AI solutions.',
+    sector: 'Technology',
+    industry: 'Semiconductors',
+    fullTimeEmployees: 29600,
+    city: 'Santa Clara',
+    state: 'California',
+    country: 'United States',
+    website: 'https://www.nvidia.com',
+    companyOfficers: [
+      { name: 'Jensen Huang', title: 'CEO' },
+      { name: 'Colette Kress', title: 'CFO' },
+    ],
+  },
+  'META': {
+    symbol: 'META',
+    shortName: 'Meta Platforms, Inc.',
+    longName: 'Meta Platforms, Inc.',
+    longBusinessSummary: 'Meta Platforms, Inc. engages in the development of products that enable people to connect and share with friends and family through mobile devices, personal computers, virtual reality headsets, and wearables worldwide. It operates in two segments, Family of Apps and Reality Labs.',
+    sector: 'Communication Services',
+    industry: 'Internet Content & Information',
+    fullTimeEmployees: 67317,
+    city: 'Menlo Park',
+    state: 'California',
+    country: 'United States',
+    website: 'https://www.meta.com',
+    companyOfficers: [
+      { name: 'Mark Zuckerberg', title: 'CEO' },
+      { name: 'Susan Li', title: 'CFO' },
+    ],
+  },
+  'TSLA': {
+    symbol: 'TSLA',
+    shortName: 'Tesla, Inc.',
+    longName: 'Tesla, Inc.',
+    longBusinessSummary: 'Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States, China, and internationally. The company operates through Automotive and Energy Generation and Storage segments.',
+    sector: 'Consumer Cyclical',
+    industry: 'Auto Manufacturers',
+    fullTimeEmployees: 140473,
+    city: 'Austin',
+    state: 'Texas',
+    country: 'United States',
+    website: 'https://www.tesla.com',
+    companyOfficers: [
+      { name: 'Elon Musk', title: 'CEO' },
+      { name: 'Vaibhav Taneja', title: 'CFO' },
+    ],
+  },
+  'JPM': {
+    symbol: 'JPM',
+    shortName: 'JPMorgan Chase & Co.',
+    longName: 'JPMorgan Chase & Co.',
+    longBusinessSummary: 'JPMorgan Chase & Co. operates as a financial services company worldwide. It operates through Consumer & Community Banking, Corporate & Investment Bank, Commercial Banking, and Asset & Wealth Management segments.',
+    sector: 'Financial Services',
+    industry: 'Banks—Diversified',
+    fullTimeEmployees: 309926,
+    city: 'New York',
+    state: 'New York',
+    country: 'United States',
+    website: 'https://www.jpmorganchase.com',
+    companyOfficers: [
+      { name: 'Jamie Dimon', title: 'CEO' },
+      { name: 'Jeremy Barnum', title: 'CFO' },
+    ],
+  },
+  // Market indices
+  '^GSPC': {
+    symbol: '^GSPC',
+    shortName: 'S&P 500',
+    longName: 'S&P 500 Index',
+    longBusinessSummary: 'The S&P 500 is a stock market index tracking the stock performance of 500 of the largest companies listed on stock exchanges in the United States. It is one of the most commonly followed equity indices and is considered one of the best representations of the U.S. stock market.',
+    sector: 'Index',
+    industry: 'Market Index',
+    country: 'United States',
+    companyOfficers: [],
+  },
+  '^DJI': {
+    symbol: '^DJI',
+    shortName: 'Dow Jones Industrial Average',
+    longName: 'Dow Jones Industrial Average',
+    longBusinessSummary: 'The Dow Jones Industrial Average (DJIA) is a stock market index that tracks 30 large, publicly-owned blue-chip companies trading on the New York Stock Exchange and the Nasdaq. It is one of the oldest and most-watched indices in the world.',
+    sector: 'Index',
+    industry: 'Market Index',
+    country: 'United States',
+    companyOfficers: [],
+  },
+  '^IXIC': {
+    symbol: '^IXIC',
+    shortName: 'NASDAQ Composite',
+    longName: 'NASDAQ Composite Index',
+    longBusinessSummary: 'The NASDAQ Composite is a stock market index that includes almost all stocks listed on the Nasdaq stock exchange. It is heavily weighted towards information technology companies and is considered a barometer for the tech sector.',
+    sector: 'Index',
+    industry: 'Market Index',
+    country: 'United States',
+    companyOfficers: [],
+  },
+  '^RUT': {
+    symbol: '^RUT',
+    shortName: 'Russell 2000',
+    longName: 'Russell 2000 Index',
+    longBusinessSummary: 'The Russell 2000 Index is a small-cap stock market index that makes up the smallest 2,000 stocks in the Russell 3000 Index. It is widely regarded as a benchmark for small-cap U.S. stocks.',
+    sector: 'Index',
+    industry: 'Market Index',
+    country: 'United States',
+    companyOfficers: [],
+  },
+};
+
+function getHardcodedProfile(symbol: string): Partial<CompanyProfile> | null {
+  return HARDCODED_PROFILES[symbol] || null;
+}
+
 // Helper to fetch from Yahoo Finance API
 async function fetchYahooFinance(endpoint: string) {
   const apiKey = process.env.RAPIDAPI_KEY;
@@ -204,41 +391,52 @@ export async function GET(request: NextRequest) {
           return NextResponse.json({ error: 'Symbol is required' }, { status: 400 });
         }
 
-        // Try multiple endpoints for company profile
-        let assetProfile = null;
-        let price = null;
+        const upperSymbol = symbol.toUpperCase();
+        let profile: Partial<CompanyProfile> | null = null;
 
-        // First try: Yahoo Finance quoteSummary endpoint
-        try {
-          const response = await fetch(
-            `https://query2.finance.yahoo.com/v10/finance/quoteSummary/${symbol}?modules=assetProfile,price`,
-            {
-              headers: {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-                'Accept': 'application/json',
-                'Accept-Language': 'en-US,en;q=0.9',
-              },
-              next: { revalidate: 3600 }, // Cache for 1 hour
-            }
-          );
-
-          if (response.ok) {
-            const data = await response.json();
-            assetProfile = data?.quoteSummary?.result?.[0]?.assetProfile;
-            price = data?.quoteSummary?.result?.[0]?.price;
-          }
-        } catch (e) {
-          console.error('Yahoo quoteSummary error:', e);
-        }
-
-        // Second try: Yahoo Finance v11 endpoint (alternative format)
-        if (!assetProfile) {
+        // First try: Financial Modeling Prep API (more reliable)
+        const fmpKey = process.env.FMP_API_KEY;
+        if (fmpKey) {
           try {
             const response = await fetch(
-              `https://query1.finance.yahoo.com/v11/finance/quoteSummary/${symbol}?modules=assetProfile,price`,
+              `https://financialmodelingprep.com/api/v3/profile/${upperSymbol}?apikey=${fmpKey}`,
+              { next: { revalidate: 3600 } }
+            );
+
+            if (response.ok) {
+              const data = await response.json();
+              if (data && data.length > 0) {
+                const fmpProfile = data[0];
+                profile = {
+                  symbol: upperSymbol,
+                  shortName: fmpProfile.companyName,
+                  longName: fmpProfile.companyName,
+                  sector: fmpProfile.sector,
+                  industry: fmpProfile.industry,
+                  fullTimeEmployees: fmpProfile.fullTimeEmployees,
+                  city: fmpProfile.city,
+                  state: fmpProfile.state,
+                  country: fmpProfile.country,
+                  website: fmpProfile.website,
+                  longBusinessSummary: fmpProfile.description,
+                  companyOfficers: fmpProfile.ceo ? [{ name: fmpProfile.ceo, title: 'CEO' }] : [],
+                };
+              }
+            }
+          } catch (e) {
+            console.error('FMP API error:', e);
+          }
+        }
+
+        // Second try: Yahoo Finance quoteSummary endpoint
+        if (!profile) {
+          try {
+            const response = await fetch(
+              `https://query2.finance.yahoo.com/v10/finance/quoteSummary/${upperSymbol}?modules=assetProfile,price`,
               {
                 headers: {
                   'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                  'Accept': 'application/json',
                 },
                 next: { revalidate: 3600 },
               }
@@ -246,36 +444,42 @@ export async function GET(request: NextRequest) {
 
             if (response.ok) {
               const data = await response.json();
-              assetProfile = data?.quoteSummary?.result?.[0]?.assetProfile;
-              price = data?.quoteSummary?.result?.[0]?.price;
+              const assetProfile = data?.quoteSummary?.result?.[0]?.assetProfile;
+              const price = data?.quoteSummary?.result?.[0]?.price;
+              
+              if (assetProfile) {
+                profile = {
+                  symbol: upperSymbol,
+                  shortName: price?.shortName || upperSymbol,
+                  longName: price?.longName,
+                  sector: assetProfile.sector,
+                  industry: assetProfile.industry,
+                  fullTimeEmployees: assetProfile.fullTimeEmployees,
+                  city: assetProfile.city,
+                  state: assetProfile.state,
+                  country: assetProfile.country,
+                  website: assetProfile.website,
+                  longBusinessSummary: assetProfile.longBusinessSummary,
+                  companyOfficers: assetProfile.companyOfficers?.slice(0, 5).map((officer: { name: string; title: string }) => ({
+                    name: officer.name,
+                    title: officer.title,
+                  })) || [],
+                };
+              }
             }
           } catch (e) {
-            console.error('Yahoo v11 endpoint error:', e);
+            console.error('Yahoo quoteSummary error:', e);
           }
         }
 
-        // If we still don't have data, return an error
-        if (!assetProfile && !price) {
-          return NextResponse.json({ error: 'Profile not found' }, { status: 404 });
+        // Final fallback: Use hardcoded profiles for popular symbols
+        if (!profile) {
+          profile = getHardcodedProfile(upperSymbol);
         }
 
-        const profile: Partial<CompanyProfile> = {
-          symbol: symbol.toUpperCase(),
-          shortName: price?.shortName || symbol,
-          longName: price?.longName,
-          sector: assetProfile?.sector,
-          industry: assetProfile?.industry,
-          fullTimeEmployees: assetProfile?.fullTimeEmployees,
-          city: assetProfile?.city,
-          state: assetProfile?.state,
-          country: assetProfile?.country,
-          website: assetProfile?.website,
-          longBusinessSummary: assetProfile?.longBusinessSummary,
-          companyOfficers: assetProfile?.companyOfficers?.slice(0, 5).map((officer: { name: string; title: string }) => ({
-            name: officer.name,
-            title: officer.title,
-          })) || [],
-        };
+        if (!profile) {
+          return NextResponse.json({ error: 'Profile not found' }, { status: 404 });
+        }
 
         return NextResponse.json(profile);
       }

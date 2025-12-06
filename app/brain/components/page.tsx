@@ -83,7 +83,20 @@ function ComponentsContent() {
         isOpen={isDrawerOpen}
         onToggle={() => setIsDrawerOpen(!isDrawerOpen)}
         selectedComponentId={selectedComponent?.id}
-        onSelectComponent={handleSelectComponent}
+        onSelectComponent={(componentId) => {
+          // Navigate to All Components view and highlight the selected component
+          setShowListView(true);
+          const component = getComponentById(componentId);
+          if (component) {
+            setSelectedComponent(component);
+            setSelectedVariant('default');
+          }
+          // Update URL to include the component for reference
+          const params = new URLSearchParams();
+          params.set('component', componentId);
+          params.set('from', 'drawer');
+          router.push(`/brain/components?${params.toString()}`);
+        }}
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
       />

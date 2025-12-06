@@ -90,18 +90,9 @@ const getComponentIcon = (component: ComponentDoc) => {
   return Layers;
 };
 
-// Get icon color based on category
-const getIconColor = (category: string, page?: string) => {
-  if (category === 'design-system') return 'text-brand-aperol';
-  
-  // Different colors for different application pages
-  switch (page) {
-    case 'Chat': return 'text-blue-400';
-    case 'Discover': return 'text-emerald-400';
-    case 'Finance': return 'text-amber-400';
-    case 'Spaces': return 'text-purple-400';
-    default: return 'text-os-text-secondary-dark';
-  }
+// Get icon color - standardized vanilla with aperol on hover (handled via group-hover)
+const getIconColor = () => {
+  return 'text-os-text-secondary-dark group-hover:text-brand-aperol transition-colors';
 };
 
 export function ComponentsList({ onSelectComponent, onClose }: ComponentsListProps) {
@@ -202,7 +193,6 @@ export function ComponentsList({ onSelectComponent, onClose }: ComponentsListPro
 
   const ComponentRow = ({ component }: { component: ComponentDoc }) => {
     const IconComponent = getComponentIcon(component);
-    const iconColor = getIconColor(component.category, component.page);
     const variantCount = component.variants?.length || 0;
     const controlCount = component.controls?.length || 0;
     
@@ -215,12 +205,12 @@ export function ComponentsList({ onSelectComponent, onClose }: ComponentsListPro
         onClick={() => handleSelect(component.id)}
         className="w-full flex items-center gap-4 px-4 py-3 hover:bg-os-surface-dark transition-colors text-left border-b border-os-border-dark/30 last:border-b-0 group"
       >
-        {/* Icon with type-specific styling */}
+        {/* Icon with vanilla default, aperol on hover */}
         <div className={cn(
           "p-2 rounded-lg transition-colors",
           "bg-os-surface-dark/50 group-hover:bg-os-surface-dark border border-os-border-dark/50"
         )}>
-          <IconComponent className={cn("w-4 h-4", iconColor)} />
+          <IconComponent className={cn("w-4 h-4", getIconColor())} />
         </div>
 
         {/* Name & Description */}
@@ -253,7 +243,7 @@ export function ComponentsList({ onSelectComponent, onClose }: ComponentsListPro
         )}
 
         {/* Arrow indicator on hover */}
-        <ChevronRight className="w-4 h-4 text-os-text-secondary-dark opacity-0 group-hover:opacity-100 transition-opacity" />
+        <ChevronRight className="w-4 h-4 text-os-text-secondary-dark opacity-0 group-hover:opacity-100 group-hover:text-brand-aperol transition-all" />
       </motion.button>
     );
   };
@@ -262,12 +252,10 @@ export function ComponentsList({ onSelectComponent, onClose }: ComponentsListPro
     title, 
     count, 
     sectionId,
-    color = 'text-brand-vanilla'
   }: { 
     title: string; 
     count: number; 
     sectionId: string;
-    color?: string;
   }) => {
     const isExpanded = expandedSections.has(sectionId);
     
@@ -281,9 +269,9 @@ export function ComponentsList({ onSelectComponent, onClose }: ComponentsListPro
             animate={{ rotate: isExpanded ? 0 : -90 }}
             transition={{ duration: 0.2 }}
           >
-            <ChevronDown className="w-4 h-4 text-os-text-secondary-dark" />
+            <ChevronDown className="w-4 h-4 text-os-text-secondary-dark group-hover:text-brand-aperol transition-colors" />
           </motion.div>
-          <h2 className={cn("text-sm font-semibold uppercase tracking-wider", color)}>
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-brand-vanilla group-hover:text-brand-aperol transition-colors">
             {title}
           </h2>
         </div>
@@ -358,27 +346,39 @@ export function ComponentsList({ onSelectComponent, onClose }: ComponentsListPro
             >
               {autocompleteSuggestions.map((component, index) => {
                 const IconComponent = getComponentIcon(component);
-                const iconColor = getIconColor(component.category, component.page);
                 
                 return (
                   <button
                     key={component.id}
                     onClick={() => handleSelectSuggestion(component)}
                     className={cn(
-                      "w-full flex items-center gap-3 px-4 py-2.5 text-left transition-colors",
+                      "w-full flex items-center gap-3 px-4 py-2.5 text-left transition-colors group/item",
                       index === selectedAutocompleteIndex 
-                        ? "bg-brand-aperol/10 text-brand-vanilla" 
+                        ? "bg-brand-aperol/10 text-brand-aperol" 
                         : "hover:bg-os-surface-dark/80 text-os-text-secondary-dark hover:text-brand-vanilla"
                     )}
                   >
-                    <IconComponent className={cn("w-4 h-4", iconColor)} />
+                    <IconComponent className={cn(
+                      "w-4 h-4 transition-colors",
+                      index === selectedAutocompleteIndex 
+                        ? "text-brand-aperol" 
+                        : "text-os-text-secondary-dark group-hover/item:text-brand-aperol"
+                    )} />
                     <div className="flex-1 min-w-0">
-                      <span className="text-sm font-medium">{component.name}</span>
+                      <span className={cn(
+                        "text-sm font-medium",
+                        index === selectedAutocompleteIndex ? "text-brand-vanilla" : ""
+                      )}>{component.name}</span>
                       <span className="text-xs text-os-text-secondary-dark ml-2">
                         {component.category === 'design-system' ? 'Design System' : component.page}
                       </span>
                     </div>
-                    <ChevronRight className="w-3 h-3 text-os-text-secondary-dark" />
+                    <ChevronRight className={cn(
+                      "w-3 h-3 transition-colors",
+                      index === selectedAutocompleteIndex 
+                        ? "text-brand-aperol" 
+                        : "text-os-text-secondary-dark group-hover/item:text-brand-aperol"
+                    )} />
                   </button>
                 );
               })}
@@ -405,7 +405,6 @@ export function ComponentsList({ onSelectComponent, onClose }: ComponentsListPro
             title="Design System" 
             count={filteredDesignSystem.length}
             sectionId="design-system"
-            color="text-brand-aperol"
           />
           <AnimatePresence>
             {expandedSections.has('design-system') && (
@@ -438,13 +437,6 @@ export function ComponentsList({ onSelectComponent, onClose }: ComponentsListPro
         
         // Skip empty sections when searching
         if (searchQuery && pageComponents.length === 0) return null;
-        
-        // Get page-specific color
-        const pageColor = page === 'Chat' ? 'text-blue-400'
-          : page === 'Discover' ? 'text-emerald-400'
-          : page === 'Finance' ? 'text-amber-400'
-          : page === 'Spaces' ? 'text-purple-400'
-          : 'text-brand-vanilla';
 
         return (
           <div key={page} className="bg-os-surface-dark rounded-xl border border-os-border-dark overflow-hidden">
@@ -452,7 +444,6 @@ export function ComponentsList({ onSelectComponent, onClose }: ComponentsListPro
               title={page} 
               count={pageComponents.length}
               sectionId={page}
-              color={pageColor}
             />
             <AnimatePresence>
               {expandedSections.has(page) && (
