@@ -379,7 +379,7 @@ export default function IdeaDetailPage() {
   // Visual concepts configuration state
   const [aspectRatio, setAspectRatio] = useState('16:9');
   const [setting, setSetting] = useState('Studio');
-  const [artDirections, setArtDirections] = useState<string[]>(['Bold & Modern']);
+  const [artDirections, setArtDirections] = useState<string[]>(['Work']);
   const [selectedModel, setSelectedModel] = useState('Midjourney');
   const [artDirectionDropdownOpen, setArtDirectionDropdownOpen] = useState(false);
   
@@ -910,28 +910,56 @@ export default function IdeaDetailPage() {
                               className="w-full px-3 py-2 rounded-lg bg-os-charcoal border border-os-border-dark/50 text-sm text-brand-vanilla text-left focus:border-os-border-dark focus:outline-none flex items-center justify-between"
                             >
                               <span className="truncate">
-                                {artDirections.length > 0 ? `${artDirections.length} selected` : 'Select styles'}
+                                {artDirections.length > 0 ? `${artDirections.length} selected` : 'Select territory'}
                               </span>
                               <ChevronDown className={`w-4 h-4 text-os-text-secondary-dark transition-transform ${artDirectionDropdownOpen ? 'rotate-180' : ''}`} />
                             </button>
                             
                             {artDirectionDropdownOpen && (
-                              <div className="absolute z-10 w-full mt-1 p-2 rounded-lg bg-os-charcoal border border-os-border-dark shadow-lg">
-                                {['Bold & Modern', 'Minimal & Clean', 'Textured & Warm', 'High Contrast', 'Soft & Dreamy'].map(direction => (
-                                  <label
-                                    key={direction}
-                                    className="flex items-center gap-2 px-3 py-2 rounded hover:bg-os-surface-dark/60 cursor-pointer transition-colors"
-                                  >
-                                    <input
-                                      type="checkbox"
-                                      checked={artDirections.includes(direction)}
-                                      onChange={() => toggleArtDirection(direction)}
-                                      className="w-4 h-4 rounded border-os-border-dark/50 bg-os-surface-dark text-brand-vanilla focus:ring-brand-vanilla focus:ring-offset-0"
-                                    />
-                                    <span className="text-sm text-brand-vanilla">{direction}</span>
-                                  </label>
-                                ))}
-                              </div>
+                              <>
+                                {/* Backdrop to close dropdown */}
+                                <div 
+                                  className="fixed inset-0 z-10" 
+                                  onClick={() => setArtDirectionDropdownOpen(false)}
+                                />
+                                <div className="absolute z-20 w-64 mt-1 rounded-lg bg-[#1a1a1a] border border-os-border-dark shadow-xl overflow-hidden">
+                                  {[
+                                    { id: 'Auto', label: 'Auto', desc: 'Performance & Precision' },
+                                    { id: 'Lifestyle', label: 'Lifestyle', desc: 'Human Connection' },
+                                    { id: 'Move', label: 'Move', desc: 'Dynamic Energy' },
+                                    { id: 'Escape', label: 'Escape', desc: 'Wanderlust & Solitude' },
+                                    { id: 'Work', label: 'Work', desc: 'Design Transformation' },
+                                    { id: 'Feel', label: 'Feel', desc: 'Atmospheric Abstraction' },
+                                  ].map(territory => (
+                                    <div
+                                      key={territory.id}
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        toggleArtDirection(territory.id);
+                                      }}
+                                      className={`flex items-center justify-between px-3 py-2.5 cursor-pointer transition-colors border-b border-os-border-dark/30 last:border-b-0 ${
+                                        artDirections.includes(territory.id)
+                                          ? 'bg-os-surface-dark'
+                                          : 'hover:bg-os-surface-dark/60'
+                                      }`}
+                                    >
+                                      <div className="flex-1 min-w-0">
+                                        <p className="text-sm text-brand-vanilla font-medium">{territory.label}</p>
+                                        <p className="text-xs text-os-text-secondary-dark">{territory.desc}</p>
+                                      </div>
+                                      <div className={`w-5 h-5 rounded border flex items-center justify-center flex-shrink-0 ml-3 ${
+                                        artDirections.includes(territory.id)
+                                          ? 'bg-brand-vanilla border-brand-vanilla'
+                                          : 'border-os-border-dark'
+                                      }`}>
+                                        {artDirections.includes(territory.id) && (
+                                          <Check className="w-3.5 h-3.5 text-os-charcoal" />
+                                        )}
+                                      </div>
+                                    </div>
+                                  ))}
+                                </div>
+                              </>
                             )}
                           </div>
                         </div>
@@ -956,90 +984,184 @@ export default function IdeaDetailPage() {
                     {/* Prompt Ideas */}
                     <div className="space-y-3">
                       {(() => {
-                        const arFlag = `--ar ${aspectRatio.replace(':', ':')}`;
-                        const settingText = setting !== 'Any' ? `${setting.toLowerCase()} setting, ` : '';
-                        const artDirectionText = artDirections.join(', ').toLowerCase();
                         const baseTitle = decodeHTMLEntities(item.title);
                         
-                        // Generate model-specific parameters
-                        const getModelParams = (model: string, style: 'bold' | 'modern' | 'experimental') => {
-                          if (model === 'Midjourney') {
-                            if (style === 'bold') return `${arFlag} --style raw --stylize 250`;
-                            if (style === 'modern') return `${arFlag} --v 6.0`;
-                            if (style === 'experimental') return `${arFlag} --chaos 30 --weird 100`;
-                          } else if (model === 'DALL-E 3') {
-                            return ''; // DALL-E uses natural language only
-                          } else if (model === 'Stable Diffusion') {
-                            if (style === 'bold') return ', highly detailed, 8k uhd, professional photography';
-                            if (style === 'modern') return ', clean lines, minimalist, professional';
-                            if (style === 'experimental') return ', surreal, abstract, avant-garde, masterpiece';
-                          } else if (model === 'Runway Gen-3' || model === 'SORA') {
-                            return ', cinematic, high quality, professional lighting';
-                          }
-                          return '';
+                        // Territory-specific visual language (from brand art direction)
+                        const territoryStyles: Record<string, { visual: string; lighting: string; mood: string; keywords: string[] }> = {
+                          'Auto': {
+                            visual: 'high-contrast automotive photography with dramatic reflections',
+                            lighting: 'studio lighting with film grain and modern grit',
+                            mood: 'premium sophistication, technical precision',
+                            keywords: ['Precision', 'Technical', 'Premium']
+                          },
+                          'Lifestyle': {
+                            visual: 'authentic portraiture with fashion-forward composition',
+                            lighting: 'natural flattering light with warm tones',
+                            mood: 'genuine human connection, diverse representation',
+                            keywords: ['Authentic', 'Human', 'Fashion']
+                          },
+                          'Move': {
+                            visual: 'dynamic motion blur with kinetic energy',
+                            lighting: 'action photography with dramatic angles',
+                            mood: 'athletic vitality, energetic movement',
+                            keywords: ['Dynamic', 'Energy', 'Motion']
+                          },
+                          'Escape': {
+                            visual: 'environmental portraiture with vast landscapes',
+                            lighting: 'golden hour or blue hour natural light',
+                            mood: 'contemplative wanderlust, solitary figure in open space',
+                            keywords: ['Wanderlust', 'Contemplative', 'Natural']
+                          },
+                          'Work': {
+                            visual: 'clean data visualization and transformation showcase',
+                            lighting: 'professional studio with modern aesthetics',
+                            mood: 'innovation process, before/after revelation',
+                            keywords: ['Innovation', 'Transformation', 'Process']
+                          },
+                          'Feel': {
+                            visual: 'textural abstraction with organic color gradients',
+                            lighting: 'soft diffused light with bokeh effects',
+                            mood: 'atmospheric emotion, mood over message',
+                            keywords: ['Atmospheric', 'Textural', 'Mood']
+                          },
                         };
                         
-                        return [
+                        // Setting-specific environments
+                        const settingStyles: Record<string, string> = {
+                          'Any': '',
+                          'Studio': 'in a controlled studio environment with professional backdrop',
+                          'Natural': 'in natural outdoor environment with organic elements',
+                          'Urban': 'in urban cityscape with architectural elements and street textures',
+                          'Abstract': 'in abstract void space with geometric forms',
+                          'Minimalist': 'in clean minimalist space with negative space emphasis',
+                        };
+                        
+                        // Model-specific prompt structures
+                        const buildPromptForModel = (model: string, core: string, ar: string, style: 'editorial' | 'conceptual' | 'cinematic') => {
+                          const arValue = ar.replace(':', ':');
+                          
+                          if (model === 'Midjourney') {
+                            const styleParams = {
+                              editorial: `--ar ${arValue} --style raw --stylize 200`,
+                              conceptual: `--ar ${arValue} --v 6.0 --stylize 100`,
+                              cinematic: `--ar ${arValue} --style raw --stylize 400 --chaos 15`,
+                            };
+                            return `${core} ${styleParams[style]}`;
+                          } else if (model === 'DALL-E 3') {
+                            const qualityHint = style === 'cinematic' ? 'I NEED this to be photorealistic and cinematic. ' : '';
+                            return `${qualityHint}${core} Aspect ratio ${arValue}.`;
+                          } else if (model === 'Stable Diffusion') {
+                            const qualityTags = {
+                              editorial: 'masterpiece, best quality, professional photography, 8k uhd',
+                              conceptual: 'digital art, conceptual, clean design, sharp focus',
+                              cinematic: 'cinematic still, film grain, anamorphic, color graded',
+                            };
+                            return `${core}, ${qualityTags[style]}, aspect ratio ${arValue}`;
+                          } else if (model === 'Runway Gen-3' || model === 'SORA') {
+                            return `${core}. Cinematic quality, smooth motion, professional lighting. Duration: 4 seconds. Aspect ratio: ${arValue}.`;
+                          }
+                          return core;
+                        };
+                        
+                        // Build visual description from selections
+                        const selectedTerritories = artDirections.length > 0 ? artDirections : ['Work'];
+                        const primaryTerritory = territoryStyles[selectedTerritories[0]];
+                        const settingDesc = settingStyles[setting];
+                        
+                        // Combine territory visuals
+                        const combinedVisual = selectedTerritories
+                          .map(t => territoryStyles[t]?.visual)
+                          .filter(Boolean)
+                          .join(', blending ');
+                        
+                        const combinedMood = selectedTerritories
+                          .map(t => territoryStyles[t]?.mood)
+                          .filter(Boolean)
+                          .join(' with ');
+                        
+                        const combinedKeywords = selectedTerritories
+                          .flatMap(t => territoryStyles[t]?.keywords || [])
+                          .slice(0, 4);
+                        
+                        // Generate 3 distinct prompts
+                        const prompts = [
                           {
-                            label: 'Bold',
-                            themes: ['Dynamic', 'Tech-Inspired', 'High Energy'],
-                            prompt: `${item.visualDirection.description} ${settingText}${artDirectionText} style. ${getModelParams(selectedModel, 'bold')}`,
+                            label: 'Editorial',
+                            themes: combinedKeywords.slice(0, 3),
+                            prompt: buildPromptForModel(
+                              selectedModel,
+                              `${combinedVisual} ${settingDesc}. Subject: "${baseTitle}". ${primaryTerritory?.lighting}. Mood: ${combinedMood}. Brand palette: warm vanilla (#FFFAEE), deep charcoal (#191919), aperol accent (#FE5102).`,
+                              aspectRatio,
+                              'editorial'
+                            ),
                           },
                           {
-                            label: 'Modern',
-                            themes: ['Minimalist', 'Professional', 'Brand-Aligned'],
-                            prompt: `Clean, modern visual for "${baseTitle}" with ${settingText}minimalist composition, professional lighting, and brand-aligned color palette using vanilla and charcoal tones with aperol accent. ${artDirectionText} aesthetic. ${getModelParams(selectedModel, 'modern')}`,
+                            label: 'Conceptual',
+                            themes: ['Symbolic', 'Layered', 'Narrative'],
+                            prompt: buildPromptForModel(
+                              selectedModel,
+                              `Conceptual visual metaphor representing "${baseTitle}" ${settingDesc}. ${combinedVisual}. Symbolic composition with layered meaning. ${combinedMood}. Film-inspired color grading with subtle grain.`,
+                              aspectRatio,
+                              'conceptual'
+                            ),
                           },
                           {
-                            label: 'Experimental',
-                            themes: ['Abstract', 'Cinematic', 'Avant-Garde'],
-                            prompt: `Abstract conceptual art representing "${baseTitle}" with ${settingText}bold geometric shapes, dynamic composition, electric color palette, and cinematic lighting. ${artDirectionText} direction. ${getModelParams(selectedModel, 'experimental')}`,
+                            label: 'Cinematic',
+                            themes: ['Dramatic', 'Immersive', 'Story'],
+                            prompt: buildPromptForModel(
+                              selectedModel,
+                              `Cinematic wide shot ${settingDesc} capturing the essence of "${baseTitle}". ${combinedVisual}. Dramatic ${primaryTerritory?.lighting}. Anamorphic lens flare, shallow depth of field. ${combinedMood}.`,
+                              aspectRatio,
+                              'cinematic'
+                            ),
                           },
-                        ].map((concept, idx) => (
+                        ];
+                        
+                        return prompts.map((concept, idx) => (
                           <div 
                             key={idx}
                             className="group p-4 rounded-xl bg-os-surface-dark/60 border border-os-border-dark/50 hover:border-os-border-dark transition-all"
                           >
-                            <div className="flex items-start justify-between gap-3 mb-3">
+                            <p className="text-sm text-os-text-primary-dark/90 leading-relaxed font-mono bg-os-charcoal/40 p-3 rounded-lg border border-os-border-dark/30 mb-3">
+                              {concept.prompt}
+                            </p>
+                            
+                            <div className="flex items-center justify-between gap-3">
+                              <div className="flex flex-wrap items-center gap-2">
+                                {concept.themes.map(theme => (
+                                  <span 
+                                    key={theme}
+                                    className="px-2.5 py-1 rounded-md bg-os-surface-dark/60 border border-os-border-dark/30 text-xs text-os-text-secondary-dark"
+                                  >
+                                    {theme}
+                                  </span>
+                                ))}
+                              </div>
+                              
                               <button
                                 onClick={async () => {
                                   await navigator.clipboard.writeText(concept.prompt);
                                   setCopiedPromptIndex(idx);
                                   setTimeout(() => setCopiedPromptIndex(null), 2000);
                                 }}
-                                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
+                                className={`flex-shrink-0 px-2.5 py-1 rounded-md text-xs font-medium transition-all ${
                                   copiedPromptIndex === idx
                                     ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'
-                                    : 'bg-os-surface-dark hover:bg-os-charcoal text-os-text-secondary-dark hover:text-brand-vanilla border border-os-border-dark/30'
+                                    : 'bg-os-surface-dark/60 hover:bg-os-surface-dark text-os-text-secondary-dark hover:text-brand-vanilla border border-os-border-dark/30'
                                 }`}
                               >
                                 {copiedPromptIndex === idx ? (
-                                  <>
-                                    <Check className="w-4 h-4" />
+                                  <span className="flex items-center gap-1">
+                                    <Check className="w-3 h-3" />
                                     Copied
-                                  </>
+                                  </span>
                                 ) : (
-                                  <>
-                                    <Copy className="w-4 h-4" />
+                                  <span className="flex items-center gap-1">
+                                    <Copy className="w-3 h-3" />
                                     Copy
-                                  </>
+                                  </span>
                                 )}
                               </button>
-                            </div>
-                            
-                            <p className="text-sm text-os-text-primary-dark/90 leading-relaxed font-mono bg-os-charcoal/40 p-3 rounded-lg border border-os-border-dark/30 mb-3">
-                              {concept.prompt}
-                            </p>
-                            
-                            <div className="flex flex-wrap gap-2">
-                              {concept.themes.map(theme => (
-                                <span 
-                                  key={theme}
-                                  className="px-2.5 py-1 rounded-md bg-os-surface-dark/60 border border-os-border-dark/30 text-xs text-os-text-secondary-dark"
-                                >
-                                  {theme}
-                                </span>
-                              ))}
                             </div>
                           </div>
                         ));
