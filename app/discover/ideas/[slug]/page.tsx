@@ -15,6 +15,7 @@ import {
   ScrollText,
   Lightbulb,
   Layers,
+  ListTree,
   FileSearch,
   Clock,
   Copy,
