@@ -19,7 +19,6 @@ function ComponentsContent() {
   const router = useRouter();
   
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [showListView, setShowListView] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedComponent, setSelectedComponent] = useState<ComponentDoc | null>(null);
   const [selectedVariant, setSelectedVariant] = useState<string>('default');
@@ -27,7 +26,9 @@ function ComponentsContent() {
   // Get component from URL params
   const componentIdFromUrl = searchParams.get('component');
   const variantIdFromUrl = searchParams.get('variant');
-  const fromListParam = searchParams.get('from') === 'list';
+
+  // Show list view when no component is selected in URL
+  const showListView = !componentIdFromUrl;
 
   // Initialize from URL params
   useEffect(() => {
@@ -38,7 +39,7 @@ function ComponentsContent() {
         setSelectedVariant(variantIdFromUrl || 'default');
       }
     } else {
-      // Default to first component if none selected
+      // No component in URL - show list view, but preselect first component for when user switches
       const allComponents = getAllComponents();
       if (allComponents.length > 0) {
         setSelectedComponent(allComponents[0]);
@@ -84,18 +85,18 @@ function ComponentsContent() {
         onToggle={() => setIsDrawerOpen(!isDrawerOpen)}
         selectedComponentId={selectedComponent?.id}
         onSelectComponent={(componentId) => {
-          // Navigate to All Components view and highlight the selected component
-          setShowListView(true);
+          // Navigate to the component preview
           const component = getComponentById(componentId);
           if (component) {
             setSelectedComponent(component);
             setSelectedVariant('default');
           }
-          // Update URL to include the component for reference
+          // Update URL to show the component
           const params = new URLSearchParams();
           params.set('component', componentId);
-          params.set('from', 'drawer');
           router.push(`/brain/components?${params.toString()}`);
+          // Close drawer after selection
+          setIsDrawerOpen(false);
         }}
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
@@ -117,20 +118,16 @@ function ComponentsContent() {
                 <span className="text-sm font-medium">Back to Brain</span>
               </Link>
               
-              {/* All Components breadcrumb - always shown when viewing a component */}
+              {/* All Components breadcrumb - shown when viewing a specific component */}
               {!showListView && (
                 <>
                   <span className="text-os-text-secondary-dark/40">/</span>
-                  <button
-                    onClick={() => {
-                      // Navigate to list view
-                      setShowListView(true);
-                      router.push('/brain/components');
-                    }}
+                  <Link
+                    href="/brain/components"
                     className="text-os-text-secondary-dark hover:text-brand-aperol transition-colors"
                   >
                     <span className="text-sm font-medium">All Components</span>
-                  </button>
+                  </Link>
                 </>
               )}
             </div>
@@ -138,16 +135,8 @@ function ComponentsContent() {
             {/* Action Buttons */}
             <div className="flex items-center gap-2">
               {/* All Components Button */}
-              <button
-                onClick={() => {
-                  if (showListView) {
-                    setShowListView(false);
-                  } else {
-                    setShowListView(true);
-                    // Clear 'from' param when opening list view directly
-                    router.push('/brain/components');
-                  }
-                }}
+              <Link
+                href="/brain/components"
                 className={cn(
                   "group relative p-3 rounded-xl border transition-colors",
                   showListView 
@@ -157,7 +146,7 @@ function ComponentsContent() {
                 title="All Components"
               >
                 <LayoutList className="w-5 h-5 transition-colors" />
-              </button>
+              </Link>
               
               {/* Show Components Drawer Button */}
               <button
@@ -192,12 +181,10 @@ function ComponentsContent() {
             {showListView ? (
               <ComponentsList 
                 onSelectComponent={(componentId) => {
-                  // Navigate with 'from=list' param for breadcrumb
+                  // Navigate to component preview
                   const params = new URLSearchParams();
                   params.set('component', componentId);
-                  params.set('from', 'list');
                   router.push(`/brain/components?${params.toString()}`);
-                  setShowListView(false);
                   
                   // Also update local state
                   const component = getComponentById(componentId);
@@ -206,7 +193,12 @@ function ComponentsContent() {
                     setSelectedVariant('default');
                   }
                 }}
-                onClose={() => setShowListView(false)}
+                onClose={() => {
+                  // If there's a selected component, navigate to it
+                  if (selectedComponent) {
+                    router.push(`/brain/components?component=${selectedComponent.id}`);
+                  }
+                }}
               />
             ) : (
               <ComponentPreview
