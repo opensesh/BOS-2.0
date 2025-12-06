@@ -23,7 +23,9 @@ import {
   ChevronRight,
   ChevronDown,
   GripVertical,
-  Sparkles
+  Sparkles,
+  ThumbsUp,
+  ThumbsDown
 } from 'lucide-react';
 import { Sidebar } from '@/components/Sidebar';
 import { StickyArticleHeader } from '@/components/discover/article/StickyArticleHeader';
@@ -379,6 +381,12 @@ export default function IdeaDetailPage() {
   const [setting, setSetting] = useState('Studio');
   const [artDirections, setArtDirections] = useState<string[]>(['Bold & Modern']);
   const [selectedModel, setSelectedModel] = useState('Midjourney');
+  const [artDirectionDropdownOpen, setArtDirectionDropdownOpen] = useState(false);
+  
+  // Feedback state
+  const [feedbackType, setFeedbackType] = useState<'up' | 'down' | null>(null);
+  const [feedbackText, setFeedbackText] = useState('');
+  const [feedbackSubmitted, setFeedbackSubmitted] = useState(false);
 
   const id = searchParams.get('id');
   const slug = params.slug as string;
@@ -449,6 +457,29 @@ export default function IdeaDetailPage() {
         ? prev.filter(d => d !== direction)
         : [...prev, direction]
     );
+  };
+
+  // Submit feedback
+  const submitFeedback = async () => {
+    if (!item || !feedbackType) return;
+    
+    const feedbackData = {
+      ideaId: item.id,
+      ideaTitle: item.title,
+      feedbackType,
+      feedbackText,
+      timestamp: new Date().toISOString(),
+    };
+    
+    console.log('Feedback submitted:', feedbackData);
+    // TODO: Send to API endpoint for storage
+    
+    setFeedbackSubmitted(true);
+    setTimeout(() => {
+      setFeedbackSubmitted(false);
+      setFeedbackType(null);
+      setFeedbackText('');
+    }, 3000);
   };
 
   // Copy hashtags to clipboard
@@ -839,13 +870,13 @@ export default function IdeaDetailPage() {
                     
                     {/* Configuration Tools */}
                     <div className="mb-4 p-4 rounded-xl bg-os-surface-dark/60 border border-os-border-dark/50">
-                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                         <div>
                           <label className="block text-xs font-medium text-os-text-secondary-dark mb-1.5">Aspect Ratio</label>
                           <select 
                             value={aspectRatio}
                             onChange={(e) => setAspectRatio(e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-os-charcoal border border-os-border-dark/50 text-sm text-brand-vanilla focus:border-brand-aperol focus:outline-none"
+                            className="w-full px-3 py-2 rounded-lg bg-os-charcoal border border-os-border-dark/50 text-sm text-brand-vanilla focus:border-os-border-dark focus:outline-none"
                           >
                             <option>16:9</option>
                             <option>9:16</option>
@@ -860,7 +891,7 @@ export default function IdeaDetailPage() {
                           <select 
                             value={setting}
                             onChange={(e) => setSetting(e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-os-charcoal border border-os-border-dark/50 text-sm text-brand-vanilla focus:border-brand-aperol focus:outline-none"
+                            className="w-full px-3 py-2 rounded-lg bg-os-charcoal border border-os-border-dark/50 text-sm text-brand-vanilla focus:border-os-border-dark focus:outline-none"
                           >
                             <option>Any</option>
                             <option>Studio</option>
@@ -871,12 +902,46 @@ export default function IdeaDetailPage() {
                           </select>
                         </div>
                         
+                        <div className="relative">
+                          <label className="block text-xs font-medium text-os-text-secondary-dark mb-1.5">Art Direction</label>
+                          <div className="relative">
+                            <button
+                              onClick={() => setArtDirectionDropdownOpen(!artDirectionDropdownOpen)}
+                              className="w-full px-3 py-2 rounded-lg bg-os-charcoal border border-os-border-dark/50 text-sm text-brand-vanilla text-left focus:border-os-border-dark focus:outline-none flex items-center justify-between"
+                            >
+                              <span className="truncate">
+                                {artDirections.length > 0 ? `${artDirections.length} selected` : 'Select styles'}
+                              </span>
+                              <ChevronDown className={`w-4 h-4 text-os-text-secondary-dark transition-transform ${artDirectionDropdownOpen ? 'rotate-180' : ''}`} />
+                            </button>
+                            
+                            {artDirectionDropdownOpen && (
+                              <div className="absolute z-10 w-full mt-1 p-2 rounded-lg bg-os-charcoal border border-os-border-dark shadow-lg">
+                                {['Bold & Modern', 'Minimal & Clean', 'Textured & Warm', 'High Contrast', 'Soft & Dreamy'].map(direction => (
+                                  <label
+                                    key={direction}
+                                    className="flex items-center gap-2 px-3 py-2 rounded hover:bg-os-surface-dark/60 cursor-pointer transition-colors"
+                                  >
+                                    <input
+                                      type="checkbox"
+                                      checked={artDirections.includes(direction)}
+                                      onChange={() => toggleArtDirection(direction)}
+                                      className="w-4 h-4 rounded border-os-border-dark/50 bg-os-surface-dark text-brand-vanilla focus:ring-brand-vanilla focus:ring-offset-0"
+                                    />
+                                    <span className="text-sm text-brand-vanilla">{direction}</span>
+                                  </label>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                        
                         <div>
                           <label className="block text-xs font-medium text-os-text-secondary-dark mb-1.5">Model</label>
                           <select 
                             value={selectedModel}
                             onChange={(e) => setSelectedModel(e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-os-charcoal border border-os-border-dark/50 text-sm text-brand-vanilla focus:border-brand-aperol focus:outline-none"
+                            className="w-full px-3 py-2 rounded-lg bg-os-charcoal border border-os-border-dark/50 text-sm text-brand-vanilla focus:border-os-border-dark focus:outline-none"
                           >
                             <option>Midjourney</option>
                             <option>DALL-E 3</option>
@@ -884,25 +949,6 @@ export default function IdeaDetailPage() {
                             <option>Runway Gen-3</option>
                             <option>SORA</option>
                           </select>
-                        </div>
-                      </div>
-                      
-                      <div>
-                        <label className="block text-xs font-medium text-os-text-secondary-dark mb-1.5">Art Direction (Multi-Select)</label>
-                        <div className="flex flex-wrap gap-2">
-                          {['Bold & Modern', 'Minimal & Clean', 'Textured & Warm', 'High Contrast', 'Soft & Dreamy'].map(direction => (
-                            <button
-                              key={direction}
-                              onClick={() => toggleArtDirection(direction)}
-                              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
-                                artDirections.includes(direction)
-                                  ? 'bg-brand-aperol/20 text-brand-aperol border border-brand-aperol/40'
-                                  : 'bg-os-charcoal border border-os-border-dark/50 text-os-text-secondary-dark hover:text-brand-vanilla hover:border-os-border-dark'
-                              }`}
-                            >
-                              {direction}
-                            </button>
-                          ))}
                         </div>
                       </div>
                     </div>
@@ -936,14 +982,17 @@ export default function IdeaDetailPage() {
                         return [
                           {
                             label: 'Bold',
+                            themes: ['Dynamic', 'Tech-Inspired', 'High Energy'],
                             prompt: `${item.visualDirection.description} ${settingText}${artDirectionText} style. ${getModelParams(selectedModel, 'bold')}`,
                           },
                           {
                             label: 'Modern',
+                            themes: ['Minimalist', 'Professional', 'Brand-Aligned'],
                             prompt: `Clean, modern visual for "${baseTitle}" with ${settingText}minimalist composition, professional lighting, and brand-aligned color palette using vanilla and charcoal tones with aperol accent. ${artDirectionText} aesthetic. ${getModelParams(selectedModel, 'modern')}`,
                           },
                           {
                             label: 'Experimental',
+                            themes: ['Abstract', 'Cinematic', 'Avant-Garde'],
                             prompt: `Abstract conceptual art representing "${baseTitle}" with ${settingText}bold geometric shapes, dynamic composition, electric color palette, and cinematic lighting. ${artDirectionText} direction. ${getModelParams(selectedModel, 'experimental')}`,
                           },
                         ].map((concept, idx) => (
@@ -952,11 +1001,6 @@ export default function IdeaDetailPage() {
                             className="group p-4 rounded-xl bg-os-surface-dark/60 border border-os-border-dark/50 hover:border-os-border-dark transition-all"
                           >
                             <div className="flex items-start justify-between gap-3 mb-3">
-                              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium bg-brand-aperol/20 text-brand-aperol border border-brand-aperol/40">
-                                <Sparkles className="w-3.5 h-3.5" />
-                                <span>{concept.label}</span>
-                              </span>
-                              
                               <button
                                 onClick={async () => {
                                   await navigator.clipboard.writeText(concept.prompt);
@@ -965,8 +1009,8 @@ export default function IdeaDetailPage() {
                                 }}
                                 className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
                                   copiedPromptIndex === idx
-                                    ? 'bg-emerald-500/20 text-emerald-400'
-                                    : 'bg-os-surface-dark hover:bg-os-charcoal text-os-text-secondary-dark hover:text-brand-vanilla'
+                                    ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'
+                                    : 'bg-os-surface-dark hover:bg-os-charcoal text-os-text-secondary-dark hover:text-brand-vanilla border border-os-border-dark/30'
                                 }`}
                               >
                                 {copiedPromptIndex === idx ? (
@@ -983,9 +1027,20 @@ export default function IdeaDetailPage() {
                               </button>
                             </div>
                             
-                            <p className="text-sm text-os-text-primary-dark/90 leading-relaxed font-mono bg-os-charcoal/40 p-3 rounded-lg border border-os-border-dark/30">
+                            <p className="text-sm text-os-text-primary-dark/90 leading-relaxed font-mono bg-os-charcoal/40 p-3 rounded-lg border border-os-border-dark/30 mb-3">
                               {concept.prompt}
                             </p>
+                            
+                            <div className="flex flex-wrap gap-2">
+                              {concept.themes.map(theme => (
+                                <span 
+                                  key={theme}
+                                  className="px-2.5 py-1 rounded-md bg-os-surface-dark/60 border border-os-border-dark/30 text-xs text-os-text-secondary-dark"
+                                >
+                                  {theme}
+                                </span>
+                              ))}
+                            </div>
                           </div>
                         ));
                       })()}
@@ -1123,6 +1178,85 @@ export default function IdeaDetailPage() {
                       )}
                     </>
                   )}
+                </div>
+
+                {/* Feedback Section */}
+                <div className="mb-8 pt-8 border-t border-os-border-dark/30">
+                  <h2 className="text-lg font-display font-semibold text-brand-vanilla mb-4">
+                    Help Us Improve
+                  </h2>
+                  
+                  <p className="text-sm text-os-text-secondary-dark mb-4">
+                    Your feedback helps us curate better ideas for creators like you.
+                  </p>
+                  
+                  <div className="p-4 rounded-xl bg-os-surface-dark/60 border border-os-border-dark/50">
+                    {/* Thumbs Up/Down */}
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="text-sm text-os-text-secondary-dark">Rate this idea:</span>
+                      <div className="flex gap-2">
+                        <button
+                          onClick={() => setFeedbackType(feedbackType === 'up' ? null : 'up')}
+                          className={`p-2.5 rounded-lg transition-all ${
+                            feedbackType === 'up'
+                              ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/40'
+                              : 'bg-os-surface-dark/60 text-os-text-secondary-dark hover:text-brand-vanilla hover:bg-os-surface-dark border border-os-border-dark/50'
+                          }`}
+                          title="Like this idea"
+                        >
+                          <ThumbsUp className="w-5 h-5" />
+                        </button>
+                        
+                        <button
+                          onClick={() => setFeedbackType(feedbackType === 'down' ? null : 'down')}
+                          className={`p-2.5 rounded-lg transition-all ${
+                            feedbackType === 'down'
+                              ? 'bg-rose-500/20 text-rose-400 border border-rose-500/40'
+                              : 'bg-os-surface-dark/60 text-os-text-secondary-dark hover:text-brand-vanilla hover:bg-os-surface-dark border border-os-border-dark/50'
+                          }`}
+                          title="Dislike this idea"
+                        >
+                          <ThumbsDown className="w-5 h-5" />
+                        </button>
+                      </div>
+                    </div>
+                    
+                    {/* Feedback Text */}
+                    <div className="mb-4">
+                      <label className="block text-xs font-medium text-os-text-secondary-dark mb-2">
+                        {feedbackType === 'up' ? 'What do you like about this idea?' : feedbackType === 'down' ? 'What could be improved?' : 'Tell us more (optional)'}
+                      </label>
+                      <textarea
+                        value={feedbackText}
+                        onChange={(e) => setFeedbackText(e.target.value)}
+                        placeholder="Share your thoughts..."
+                        rows={3}
+                        className="w-full px-3 py-2 rounded-lg bg-os-charcoal border border-os-border-dark/50 text-sm text-brand-vanilla placeholder-os-text-secondary-dark/50 focus:border-os-border-dark focus:outline-none resize-none"
+                      />
+                    </div>
+                    
+                    {/* Submit Button */}
+                    <button
+                      onClick={submitFeedback}
+                      disabled={!feedbackType || feedbackSubmitted}
+                      className={`w-full px-4 py-2.5 rounded-lg text-sm font-medium transition-all ${
+                        feedbackSubmitted
+                          ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 cursor-default'
+                          : feedbackType
+                          ? 'bg-os-charcoal border border-os-border-dark hover:bg-os-surface-dark text-brand-vanilla'
+                          : 'bg-os-surface-dark/40 border border-os-border-dark/30 text-os-text-secondary-dark/50 cursor-not-allowed'
+                      }`}
+                    >
+                      {feedbackSubmitted ? (
+                        <span className="flex items-center justify-center gap-2">
+                          <Check className="w-4 h-4" />
+                          Thank you for your feedback!
+                        </span>
+                      ) : (
+                        'Submit Feedback'
+                      )}
+                    </button>
+                  </div>
                 </div>
               </div>
 
