@@ -63,6 +63,14 @@ import { LatestNews } from '@/components/finance/LatestNews';
 
 // Spaces
 import { SpaceResourceCards } from '@/components/spaces/SpaceResourceCards';
+import { SpaceReferenceCard, DiscussionCard } from '@/components/spaces/SpaceReferenceCard';
+import { SpaceChatInput } from '@/components/spaces/SpaceChatInput';
+import { CreateSpaceModal } from '@/components/spaces/CreateSpaceModal';
+import { AddLinksModal } from '@/components/spaces/AddLinksModal';
+import { AddFilesModal } from '@/components/spaces/AddFilesModal';
+import { AddTasksModal } from '@/components/spaces/AddTasksModal';
+import { AddInstructionsModal } from '@/components/spaces/AddInstructionsModal';
+import { SpaceArticlesDrawer } from '@/components/spaces/SpaceArticlesDrawer';
 
 // Discover Main
 import { IdeaAccordion } from '@/components/discover/IdeaAccordion';
@@ -2813,6 +2821,454 @@ const SpaceResourceCardsDoc: ComponentDoc = {
   variants: [],
 };
 
+// SpaceReferenceCard Component
+const SpaceReferenceCardDemo = () => {
+  return (
+    <div className="max-w-md">
+      <SpaceReferenceCard
+        spaceTitle="Brand Guidelines"
+        spaceSlug="brand-guidelines"
+        spaceIcon="📐"
+        discussionTitle="Color palette discussion"
+        onNavigate={() => {}}
+      />
+    </div>
+  );
+};
+
+const SpaceReferenceCardDoc: ComponentDoc = {
+  id: 'space-reference-card',
+  name: 'SpaceReferenceCard',
+  description: 'Reference card shown at top of space chat responses. Links back to the parent space with icon, title, and discussion context.',
+  category: 'application',
+  page: 'Spaces',
+  component: SpaceReferenceCardDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// DiscussionCard Component
+const DiscussionCardDemo = () => {
+  return (
+    <div className="max-w-md">
+      <DiscussionCard
+        id="demo-discussion"
+        title="Color palette deep dive"
+        preview="We explored the primary and secondary colors for the brand refresh..."
+        messageCount={12}
+        updatedAt={new Date().toISOString()}
+        spaceSlug="brand-guidelines"
+        onClick={() => {}}
+      />
+    </div>
+  );
+};
+
+const DiscussionCardDoc: ComponentDoc = {
+  id: 'discussion-card',
+  name: 'DiscussionCard',
+  description: 'Card for displaying recent discussions within a space. Shows title, preview, message count, and time since last update.',
+  category: 'application',
+  page: 'Spaces',
+  component: DiscussionCardDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// CreateSpaceModal Component - Static demo
+const CreateSpaceModalDemo = ({ isOpen }: { isOpen: boolean }) => {
+  if (!isOpen) {
+    return (
+      <div className="p-4 bg-os-surface-dark rounded-xl border border-os-border-dark text-center">
+        <p className="text-os-text-secondary-dark text-sm">Toggle &apos;isOpen&apos; to see the modal</p>
+      </div>
+    );
+  }
+  
+  return (
+    <div className="relative bg-black/60 rounded-xl p-6 flex items-center justify-center min-h-[400px]">
+      <div className="w-full max-w-lg bg-os-surface-dark rounded-2xl border border-os-border-dark shadow-2xl">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-os-border-dark">
+          <h2 className="text-lg font-semibold text-os-text-primary-dark">Create a Space</h2>
+          <button className="p-1 rounded-lg hover:bg-os-bg-dark transition-colors">
+            <svg className="w-5 h-5 text-os-text-secondary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div className="p-6 space-y-4">
+          <div>
+            <label className="block text-sm font-medium text-brand-vanilla mb-2">Title</label>
+            <input type="text" placeholder="e.g., Marketing Research" className="w-full px-4 py-3 rounded-xl bg-os-bg-dark border border-os-border-dark text-brand-vanilla placeholder:text-os-text-secondary-dark" />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-brand-vanilla mb-2">Description</label>
+            <textarea rows={3} placeholder="What is this space for?" className="w-full px-4 py-3 rounded-xl bg-os-bg-dark border border-os-border-dark text-brand-vanilla placeholder:text-os-text-secondary-dark resize-none" />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-brand-vanilla mb-3">Icon</label>
+            <div className="flex flex-wrap gap-2">
+              {['🚀', '💼', '📊', '🎨', '📚', '🔬', '💡', '🎯'].map((icon) => (
+                <button key={icon} className="w-10 h-10 rounded-xl bg-os-border-dark hover:bg-os-surface-dark text-2xl flex items-center justify-center">{icon}</button>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="flex items-center justify-end gap-3 px-6 py-4 border-t border-os-border-dark">
+          <button className="px-5 py-2.5 rounded-xl text-sm font-medium text-os-text-primary-dark bg-os-border-dark">Cancel</button>
+          <button className="px-5 py-2.5 rounded-xl text-sm font-medium text-white bg-brand-aperol">Create Space</button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const CreateSpaceModalDoc: ComponentDoc = {
+  id: 'create-space-modal',
+  name: 'CreateSpaceModal',
+  description: 'Modal dialog for creating new spaces. Includes title, description, and emoji icon picker with preset options.',
+  category: 'application',
+  page: 'Spaces',
+  component: CreateSpaceModalDemo,
+  defaultProps: {
+    isOpen: true,
+  },
+  controls: [
+    {
+      name: 'isOpen',
+      type: 'boolean',
+      description: 'Whether the modal is visible',
+      defaultValue: true,
+    },
+  ],
+  variants: [],
+};
+
+// AddLinksModal Component - Static demo
+const AddLinksModalDemo = ({ isOpen }: { isOpen: boolean }) => {
+  if (!isOpen) {
+    return (
+      <div className="p-4 bg-os-surface-dark rounded-xl border border-os-border-dark text-center">
+        <p className="text-os-text-secondary-dark text-sm">Toggle &apos;isOpen&apos; to see the modal</p>
+      </div>
+    );
+  }
+  
+  return (
+    <div className="relative bg-black/60 rounded-xl p-6 flex items-center justify-center min-h-[350px]">
+      <div className="w-full max-w-md bg-os-surface-dark rounded-2xl border border-os-border-dark shadow-2xl">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-os-border-dark">
+          <h2 className="text-lg font-semibold text-os-text-primary-dark">Add Links</h2>
+          <button className="p-1 rounded-lg hover:bg-os-bg-dark transition-colors">
+            <svg className="w-5 h-5 text-os-text-secondary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div className="p-6 space-y-4">
+          <div>
+            <label className="block text-sm font-medium text-os-text-primary-dark mb-1.5">URL <span className="text-red-500">*</span></label>
+            <input type="url" placeholder="https://example.com" className="w-full px-3 py-2.5 rounded-xl bg-os-border-dark border border-os-border-dark text-os-text-primary-dark placeholder:text-os-text-secondary-dark" />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-os-text-primary-dark mb-1.5">Title <span className="text-os-text-secondary-dark font-normal">(optional)</span></label>
+            <input type="text" placeholder="Link title" className="w-full px-3 py-2.5 rounded-xl bg-os-border-dark border border-os-border-dark text-os-text-primary-dark placeholder:text-os-text-secondary-dark" />
+          </div>
+          <button className="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-xl text-sm font-medium text-white bg-brand-aperol">
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" /></svg>
+            Add Link
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const AddLinksModalDoc: ComponentDoc = {
+  id: 'add-links-modal',
+  name: 'AddLinksModal',
+  description: 'Modal for adding URL links to a space. Supports URL, title, and description fields with validation and existing links display.',
+  category: 'application',
+  page: 'Spaces',
+  component: AddLinksModalDemo,
+  defaultProps: {
+    isOpen: true,
+  },
+  controls: [
+    {
+      name: 'isOpen',
+      type: 'boolean',
+      description: 'Whether the modal is visible',
+      defaultValue: true,
+    },
+  ],
+  variants: [],
+};
+
+// AddFilesModal Component - Static demo
+const AddFilesModalDemo = ({ isOpen }: { isOpen: boolean }) => {
+  if (!isOpen) {
+    return (
+      <div className="p-4 bg-os-surface-dark rounded-xl border border-os-border-dark text-center">
+        <p className="text-os-text-secondary-dark text-sm">Toggle &apos;isOpen&apos; to see the modal</p>
+      </div>
+    );
+  }
+  
+  return (
+    <div className="relative bg-black/60 rounded-xl p-6 flex items-center justify-center min-h-[300px]">
+      <div className="w-full max-w-md bg-os-surface-dark rounded-2xl border border-os-border-dark shadow-2xl">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-os-border-dark">
+          <h2 className="text-lg font-semibold text-os-text-primary-dark">Add Files</h2>
+          <button className="p-1 rounded-lg hover:bg-os-bg-dark transition-colors">
+            <svg className="w-5 h-5 text-os-text-secondary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div className="p-6">
+          <div className="border-2 border-dashed border-os-border-dark rounded-xl p-8 text-center hover:border-brand-aperol/50 transition-colors cursor-pointer">
+            <svg className="w-10 h-10 text-os-text-secondary-dark mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+            </svg>
+            <p className="text-sm text-os-text-secondary-dark mb-1">Drag and drop files here, or click to browse</p>
+            <p className="text-xs text-os-text-secondary-dark/70">PDF, images, documents up to 10MB</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const AddFilesModalDoc: ComponentDoc = {
+  id: 'add-files-modal',
+  name: 'AddFilesModal',
+  description: 'Modal for uploading files to a space. Features drag-and-drop zone, file type icons, and existing files list with remove functionality.',
+  category: 'application',
+  page: 'Spaces',
+  component: AddFilesModalDemo,
+  defaultProps: {
+    isOpen: true,
+  },
+  controls: [
+    {
+      name: 'isOpen',
+      type: 'boolean',
+      description: 'Whether the modal is visible',
+      defaultValue: true,
+    },
+  ],
+  variants: [],
+};
+
+// AddTasksModal Component - Static demo
+const AddTasksModalDemo = ({ isOpen }: { isOpen: boolean }) => {
+  if (!isOpen) {
+    return (
+      <div className="p-4 bg-os-surface-dark rounded-xl border border-os-border-dark text-center">
+        <p className="text-os-text-secondary-dark text-sm">Toggle &apos;isOpen&apos; to see the modal</p>
+      </div>
+    );
+  }
+  
+  return (
+    <div className="relative bg-black/60 rounded-xl p-6 flex items-center justify-center min-h-[350px]">
+      <div className="w-full max-w-md bg-os-surface-dark rounded-2xl border border-os-border-dark shadow-2xl">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-os-border-dark">
+          <h2 className="text-lg font-semibold text-os-text-primary-dark">Add Tasks</h2>
+          <button className="p-1 rounded-lg hover:bg-os-bg-dark transition-colors">
+            <svg className="w-5 h-5 text-os-text-secondary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div className="p-6 space-y-4">
+          <div>
+            <label className="block text-sm font-medium text-os-text-primary-dark mb-1.5">Task title</label>
+            <input type="text" placeholder="What needs to be done?" className="w-full px-3 py-2.5 rounded-xl bg-os-border-dark border border-os-border-dark text-os-text-primary-dark placeholder:text-os-text-secondary-dark" />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-os-text-primary-dark mb-1.5">Description</label>
+            <textarea rows={2} placeholder="Add details..." className="w-full px-3 py-2.5 rounded-xl bg-os-border-dark border border-os-border-dark text-os-text-primary-dark placeholder:text-os-text-secondary-dark resize-none" />
+          </div>
+          <button className="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-xl text-sm font-medium text-white bg-brand-aperol">
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" /></svg>
+            Add Task
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const AddTasksModalDoc: ComponentDoc = {
+  id: 'add-tasks-modal',
+  name: 'AddTasksModal',
+  description: 'Modal for creating tasks within a space. Includes title, description, and assignee fields with task list management.',
+  category: 'application',
+  page: 'Spaces',
+  component: AddTasksModalDemo,
+  defaultProps: {
+    isOpen: true,
+  },
+  controls: [
+    {
+      name: 'isOpen',
+      type: 'boolean',
+      description: 'Whether the modal is visible',
+      defaultValue: true,
+    },
+  ],
+  variants: [],
+};
+
+// AddInstructionsModal Component - Static demo
+const AddInstructionsModalDemo = ({ isOpen }: { isOpen: boolean }) => {
+  if (!isOpen) {
+    return (
+      <div className="p-4 bg-os-surface-dark rounded-xl border border-os-border-dark text-center">
+        <p className="text-os-text-secondary-dark text-sm">Toggle &apos;isOpen&apos; to see the modal</p>
+      </div>
+    );
+  }
+  
+  return (
+    <div className="relative bg-black/60 rounded-xl p-6 flex items-center justify-center min-h-[350px]">
+      <div className="w-full max-w-lg bg-os-surface-dark rounded-2xl border border-os-border-dark shadow-2xl">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-os-border-dark">
+          <h2 className="text-lg font-semibold text-os-text-primary-dark">Add Instructions</h2>
+          <button className="p-1 rounded-lg hover:bg-os-bg-dark transition-colors">
+            <svg className="w-5 h-5 text-os-text-secondary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div className="p-6 space-y-4">
+          <p className="text-sm text-os-text-secondary-dark">Add custom instructions for the AI when working in this space.</p>
+          <div>
+            <label className="block text-sm font-medium text-os-text-primary-dark mb-1.5">Instructions</label>
+            <textarea rows={6} placeholder="Example: Always respond in a formal tone..." className="w-full px-3 py-2.5 rounded-xl bg-os-border-dark border border-os-border-dark text-os-text-primary-dark placeholder:text-os-text-secondary-dark resize-none" />
+          </div>
+        </div>
+        <div className="flex items-center justify-end gap-3 px-6 py-4 border-t border-os-border-dark">
+          <button className="px-4 py-2 rounded-xl text-sm font-medium text-os-text-primary-dark bg-os-border-dark">Cancel</button>
+          <button className="px-4 py-2 rounded-xl text-sm font-medium text-white bg-brand-aperol">Save</button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const AddInstructionsModalDoc: ComponentDoc = {
+  id: 'add-instructions-modal',
+  name: 'AddInstructionsModal',
+  description: 'Modal for adding AI instructions to a space. Instructions are applied to all conversations within the space.',
+  category: 'application',
+  page: 'Spaces',
+  component: AddInstructionsModalDemo,
+  defaultProps: {
+    isOpen: true,
+  },
+  controls: [
+    {
+      name: 'isOpen',
+      type: 'boolean',
+      description: 'Whether the modal is visible',
+      defaultValue: true,
+    },
+  ],
+  variants: [],
+};
+
+// SpaceArticlesDrawer Component - Static demo
+const SpaceArticlesDrawerDemo = ({ isOpen }: { isOpen: boolean }) => {
+  if (!isOpen) {
+    return (
+      <div className="p-4 bg-os-surface-dark rounded-xl border border-os-border-dark text-center">
+        <p className="text-os-text-secondary-dark text-sm">Toggle &apos;isOpen&apos; to see the drawer</p>
+      </div>
+    );
+  }
+  
+  return (
+    <div className="relative bg-os-bg-dark rounded-xl overflow-hidden flex min-h-[400px]">
+      <div className="flex-1 bg-black/40 flex items-center justify-center">
+        <p className="text-os-text-secondary-dark/50 text-sm">Page content</p>
+      </div>
+      <div className="w-[320px] bg-os-bg-darker border-l border-os-border-dark flex flex-col">
+        <div className="flex items-center justify-between px-5 h-12 border-b border-os-border-dark">
+          <div className="flex items-center gap-2">
+            <svg className="w-4 h-4 text-brand-aperol" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+            </svg>
+            <span className="font-display font-semibold text-brand-vanilla">Add Articles</span>
+            <span className="px-2 py-0.5 rounded-full bg-os-surface-dark text-xs text-os-text-secondary-dark">12</span>
+          </div>
+        </div>
+        <div className="px-5 py-3 border-b border-os-border-dark/50">
+          <div className="relative">
+            <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-os-text-secondary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+            <input type="text" placeholder="Search articles..." className="w-full pl-10 pr-4 py-2 text-sm bg-os-surface-dark border border-os-border-dark rounded-lg text-os-text-primary-dark placeholder:text-os-text-secondary-dark" />
+          </div>
+        </div>
+        <div className="flex-1 overflow-y-auto">
+          {['AI Trends 2024', 'Design System Best Practices', 'Brand Strategy'].map((title, idx) => (
+            <div key={idx} className="px-5 py-4 border-b border-os-border-dark/50 hover:bg-os-surface-dark/30 transition-colors">
+              <h3 className="text-sm font-medium text-brand-vanilla mb-1">{title}</h3>
+              <p className="text-xs text-os-text-secondary-dark">Dec {idx + 1} • 5 sources</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const SpaceArticlesDrawerDoc: ComponentDoc = {
+  id: 'space-articles-drawer',
+  name: 'SpaceArticlesDrawer',
+  description: 'Slide-out drawer for browsing and adding Discover articles to a space. Features search, sorting, filtering by category, and add/remove functionality.',
+  category: 'application',
+  page: 'Spaces',
+  component: SpaceArticlesDrawerDemo,
+  defaultProps: {
+    isOpen: true,
+  },
+  controls: [
+    {
+      name: 'isOpen',
+      type: 'boolean',
+      description: 'Whether the drawer is visible',
+      defaultValue: true,
+    },
+  ],
+  variants: [],
+};
+
+// SpaceChatInput Component
+const SpaceChatInputDoc: ComponentDoc = {
+  id: 'space-chat-input',
+  name: 'SpaceChatInput',
+  description: 'Full-featured chat input for space pages. Matches homepage style with search/research toggle, model selector, connectors, attachments, and voice input.',
+  category: 'application',
+  page: 'Spaces',
+  component: () => (
+    <div className="relative bg-os-bg-dark rounded-xl p-4 max-w-3xl">
+      <div className="text-center text-os-text-secondary-dark text-sm p-8 border border-dashed border-os-border-dark rounded-xl">
+        <p>SpaceChatInput uses fixed positioning.</p>
+        <p className="text-xs mt-2">View in the Spaces page for the full experience.</p>
+      </div>
+    </div>
+  ),
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
 // ============================================
 // REGISTER ALL COMPONENTS
 // ============================================
@@ -2889,6 +3345,15 @@ export function initializeRegistry() {
     Spaces: [
       SpaceCardDoc,
       SpaceResourceCardsDoc,
+      SpaceReferenceCardDoc,
+      DiscussionCardDoc,
+      SpaceChatInputDoc,
+      CreateSpaceModalDoc,
+      AddLinksModalDoc,
+      AddFilesModalDoc,
+      AddTasksModalDoc,
+      AddInstructionsModalDoc,
+      SpaceArticlesDrawerDoc,
     ],
     'Brand Hub': [
       AddResourceModalDoc,
