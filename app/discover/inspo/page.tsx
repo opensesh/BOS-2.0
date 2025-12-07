@@ -5,10 +5,9 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import { Settings, Box, Table2 } from 'lucide-react';
+import { Box, Table2 } from 'lucide-react';
 import { Sidebar } from '@/components/Sidebar';
 import { InspoTable } from '@/components/InspoTable';
-import { useInspoStore } from '@/lib/stores/inspo-store';
 import { getInspoResources, normalizeResource, type InspoResource, type NormalizedResource } from '@/lib/data/inspo';
 
 // Dynamically import 3D components to avoid SSR issues
@@ -24,10 +23,11 @@ const InspoCanvas = dynamic(
   }
 );
 
-const ControlPanel = dynamic(
-  () => import('@/components/discover/inspo/ControlPanel'),
-  { ssr: false }
-);
+// ControlPanel kept for future scene manipulation features
+// const ControlPanel = dynamic(
+//   () => import('@/components/discover/inspo/ControlPanel'),
+//   { ssr: false }
+// );
 
 // Import InspoChat and CategoryButtons
 const InspoChat = dynamic(
@@ -45,7 +45,6 @@ type DisplayMode = '3d' | 'table';
 function InspoContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const { togglePanel } = useInspoStore();
   
   // Display mode state (3D vs Table)
   const [displayMode, setDisplayMode] = useState<DisplayMode>('3d');
@@ -154,7 +153,7 @@ function InspoContent() {
             {/* Right: Actions */}
             <div className="flex items-center gap-1">
               {/* Display Mode Toggle (3D / Table) */}
-              <div className="flex items-center bg-os-surface-dark rounded-lg p-1 border border-os-border-dark mr-1">
+              <div className="flex items-center bg-os-surface-dark rounded-lg p-1 border border-os-border-dark">
                 <button
                   onClick={() => handleDisplayModeChange('3d')}
                   className={`p-2 rounded-md transition-all ${
@@ -178,15 +177,6 @@ function InspoContent() {
                   <Table2 className="w-4 h-4" />
                 </button>
               </div>
-
-              {/* Settings */}
-              <button
-                onClick={togglePanel}
-                className="p-2 rounded-lg hover:bg-os-surface-dark transition-colors group"
-                title="Settings"
-              >
-                <Settings className="w-5 h-5 text-os-text-secondary-dark group-hover:text-brand-vanilla transition-colors" />
-              </button>
             </div>
           </div>
         </div>
@@ -256,9 +246,6 @@ function InspoContent() {
                 }
               </p>
             </div>
-
-            {/* Control Panel (3D Settings Drawer) */}
-            <ControlPanel />
           </div>
         ) : (
           /* Table View */
