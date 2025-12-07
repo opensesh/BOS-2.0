@@ -18,7 +18,7 @@ import {
   ScanFace,
   Compass,
   Lightbulb,
-  Sparkles,
+  Orbit,
   History,
   Code,
   PenTool,
@@ -309,7 +309,7 @@ export function NavigationDrawer({ isOpen, item, onClose, railRef }: NavigationD
                       : 'text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-brand-vanilla'
                   }`}
                 >
-                  <Sparkles className="w-5 h-5" />
+                  <Orbit className="w-5 h-5" />
                   <span className="text-sm">Inspiration</span>
                 </Link>
                 <Link

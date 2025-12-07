@@ -70,6 +70,7 @@ export default function ResourceDetailPage() {
   const [loading, setLoading] = useState(true);
   const [imgError, setImgError] = useState(false);
   const [faviconError, setFaviconError] = useState(false);
+  const [screenshotError, setScreenshotError] = useState(false);
   const [urlCopied, setUrlCopied] = useState(false);
 
   const resourceId = parseInt(params.id as string, 10);
@@ -177,6 +178,7 @@ export default function ResourceDetailPage() {
   const domain = getDomain(resource.url);
   const pricingStyle = getPricingStyle(resource.pricing);
   const hasThumbnail = resource.thumbnail && !imgError;
+  const hasScreenshot = resource.screenshot && !screenshotError;
 
   return (
     <div className="flex h-screen bg-os-bg-dark text-os-text-primary-dark font-sans overflow-hidden">
@@ -192,7 +194,47 @@ export default function ResourceDetailPage() {
         />
 
         <div className="flex-1 overflow-y-auto custom-scrollbar">
-          {/* Hero Section */}
+          {/* Screenshot Section - Compact browser preview */}
+          {hasScreenshot && (
+            <div className="w-full bg-os-bg-dark">
+              <div className="w-full max-w-4xl mx-auto px-6 pt-6 md:px-12">
+                {/* Browser-like frame */}
+                <div className="rounded-lg overflow-hidden border border-os-border-dark/50 shadow-xl bg-os-surface-dark">
+                  {/* Browser chrome - compact */}
+                  <div className="flex items-center gap-2 px-3 py-2 bg-os-surface-dark border-b border-os-border-dark/50">
+                    {/* Traffic lights */}
+                    <div className="flex gap-1">
+                      <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
+                      <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
+                      <div className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
+                    </div>
+                    {/* URL bar */}
+                    <div className="flex-1 flex items-center justify-center">
+                      <div className="flex items-center gap-1.5 px-3 py-1 bg-os-bg-dark rounded-md max-w-xs w-full">
+                        <Globe className="w-3 h-3 text-os-text-secondary-dark flex-shrink-0" />
+                        <span className="text-[11px] text-os-text-secondary-dark truncate">{domain}</span>
+                      </div>
+                    </div>
+                    {/* Spacer for symmetry */}
+                    <div className="w-[42px]" />
+                  </div>
+                  {/* Screenshot - much smaller aspect ratio for more content visibility */}
+                  <div className="relative aspect-[16/7] md:aspect-[16/6] bg-os-bg-dark">
+                    <Image
+                      src={resource.screenshot!}
+                      alt={`Screenshot of ${resource.name}`}
+                      fill
+                      className="object-cover object-top"
+                      onError={() => setScreenshotError(true)}
+                      priority
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Hero Section - Compact */}
           <div className="relative w-full bg-gradient-to-b from-os-surface-dark/50 to-os-bg-dark">
             {/* Background thumbnail blur effect */}
             {hasThumbnail && (
@@ -208,11 +250,11 @@ export default function ResourceDetailPage() {
               </div>
             )}
 
-            <div className="relative z-10 w-full max-w-4xl mx-auto px-6 py-10 md:px-12 md:py-16">
-              <div className="flex flex-col md:flex-row gap-8 items-start">
+            <div className="relative z-10 w-full max-w-4xl mx-auto px-6 py-6 md:px-12 md:py-10">
+              <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
                 {/* Left: Thumbnail/Favicon */}
                 <div className="shrink-0">
-                  <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden bg-os-surface-dark border-2 border-os-border-dark shadow-2xl">
+                  <div className="relative w-20 h-20 md:w-24 md:h-24 rounded-xl overflow-hidden bg-os-surface-dark border border-os-border-dark/50 shadow-xl">
                     {hasThumbnail ? (
                       <Image
                         src={resource.thumbnail!}
@@ -228,8 +270,8 @@ export default function ResourceDetailPage() {
                         <Image
                           src={faviconUrl}
                           alt={resource.name}
-                          width={64}
-                          height={64}
+                          width={40}
+                          height={40}
                           className="object-contain"
                           onError={() => setFaviconError(true)}
                           unoptimized
@@ -237,7 +279,7 @@ export default function ResourceDetailPage() {
                       </div>
                     ) : (
                       <div className="w-full h-full flex items-center justify-center bg-os-surface-dark">
-                        <span className="text-4xl font-bold text-os-text-secondary-dark">
+                        <span className="text-2xl font-bold text-os-text-secondary-dark">
                           {resource.name.charAt(0).toUpperCase()}
                         </span>
                       </div>
@@ -250,79 +292,49 @@ export default function ResourceDetailPage() {
                   {/* Title */}
                   <h1
                     ref={titleRef}
-                    className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-brand-vanilla mb-3"
+                    className="text-2xl md:text-3xl font-display font-bold text-brand-vanilla mb-1"
                   >
                     {resource.name}
                   </h1>
 
-                  {/* Domain + Tier */}
-                  <div className="flex items-center gap-4 text-os-text-secondary-dark mb-6">
-                    <div className="flex items-center gap-2">
-                      <Globe className="w-4 h-4" />
-                      <span className="text-sm">{domain}</span>
-                    </div>
-                    {resource.tier && (
-                      <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-brand-aperol/10 border border-brand-aperol/20">
-                        <Layers className="w-3 h-3 text-brand-aperol" />
-                        <span className="text-xs font-medium text-brand-aperol">Tier {resource.tier}</span>
-                      </div>
-                    )}
+                  {/* Domain */}
+                  <div className="flex items-center gap-2 text-os-text-secondary-dark mb-4">
+                    <Globe className="w-3.5 h-3.5" />
+                    <span className="text-sm">{domain}</span>
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex flex-wrap items-center gap-3 mb-5">
+                  <div className="flex flex-wrap items-center gap-2">
                     <a
                       href={resource.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-6 py-3 bg-brand-aperol text-white rounded-xl hover:bg-brand-aperol/90 transition-all font-medium shadow-lg shadow-brand-aperol/20"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-brand-aperol text-white rounded-lg hover:bg-brand-aperol/90 transition-all font-medium text-sm"
                     >
                       <span>Visit Website</span>
-                      <ArrowUpRight className="w-5 h-5" />
+                      <ArrowUpRight className="w-3.5 h-3.5" />
                     </a>
 
                     <button
                       onClick={copyUrl}
-                      className={`inline-flex items-center gap-2 px-4 py-3 rounded-xl border transition-all font-medium ${
+                      className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-lg border transition-all text-sm font-medium ${
                         urlCopied
                           ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400'
-                          : 'bg-os-surface-dark border-os-border-dark text-os-text-secondary-dark hover:text-brand-vanilla hover:border-os-border-dark'
+                          : 'bg-os-surface-dark/80 border-os-border-dark text-os-text-secondary-dark hover:text-brand-vanilla'
                       }`}
                     >
                       {urlCopied ? (
                         <>
-                          <Check className="w-4 h-4" />
+                          <Check className="w-3.5 h-3.5" />
                           <span>Copied!</span>
                         </>
                       ) : (
                         <>
-                          <Copy className="w-4 h-4" />
+                          <Copy className="w-3.5 h-3.5" />
                           <span>Copy URL</span>
                         </>
                       )}
                     </button>
-                  </div>
-
-                  {/* Category & Section & Pricing Pills - Below buttons */}
-                  <div className="flex flex-wrap items-center gap-2">
-                    {resource.category && (
-                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-brand-aperol/10 text-brand-aperol text-sm font-medium border border-brand-aperol/20">
-                        <Folder className="w-3.5 h-3.5" />
-                        {resource.category}
-                      </span>
-                    )}
-                    {resource.section && (
-                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-os-surface-dark text-os-text-secondary-dark text-sm border border-os-border-dark">
-                        <Layers className="w-3.5 h-3.5" />
-                        {resource.section}
-                      </span>
-                    )}
-                    {resource.pricing && (
-                      <span className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium border ${pricingStyle.bg} ${pricingStyle.text} ${pricingStyle.border}`}>
-                        <DollarSign className="w-3.5 h-3.5" />
-                        {resource.pricing}
-                      </span>
-                    )}
                   </div>
                 </div>
               </div>
@@ -330,98 +342,112 @@ export default function ResourceDetailPage() {
           </div>
 
           {/* Content Section */}
-          <div className="w-full max-w-4xl mx-auto px-6 py-8 md:px-12">
-            {/* Description */}
-            {resource.description && (
-              <div className="mb-10">
-                <h2 className="text-sm font-semibold text-brand-vanilla mb-3 uppercase tracking-wide flex items-center gap-2">
-                  <span className="w-8 h-px bg-brand-aperol" />
+          <div className="w-full max-w-4xl mx-auto px-6 pb-12 md:px-12">
+            {/* About Section - Description + Tags combined */}
+            {(resource.description || parseTags(resource.tags).length > 0) && (
+              <div className="mb-6">
+                <h2 className="text-xs font-semibold text-brand-vanilla mb-3 uppercase tracking-wide flex items-center gap-2">
+                  <span className="w-6 h-px bg-brand-aperol" />
                   About
                 </h2>
-                <p className="text-lg leading-relaxed text-os-text-primary-dark/90">
-                  {resource.description}
-                </p>
+
+                {resource.description && (
+                  <p className="text-sm leading-relaxed text-os-text-primary-dark/90 mb-4">
+                    {resource.description}
+                  </p>
+                )}
+
+                {/* Tags - flowing naturally below description */}
+                {(() => {
+                  const tags = parseTags(resource.tags);
+                  if (tags.length === 0) return null;
+                  return (
+                    <div className="flex flex-wrap gap-1.5">
+                      {tags.map((tag, idx) => (
+                        <span
+                          key={idx}
+                          className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-os-surface-dark/60 border border-os-border-dark/50 text-xs text-os-text-secondary-dark"
+                        >
+                          <Tag className="w-2.5 h-2.5" />
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  );
+                })()}
               </div>
             )}
 
-            {/* Tags */}
-            {(() => {
-              const tags = parseTags(resource.tags);
-              if (tags.length === 0) return null;
-              return (
-                <div className="mb-10">
-                  <h2 className="text-sm font-semibold text-brand-vanilla mb-4 uppercase tracking-wide flex items-center gap-2">
-                    <span className="w-8 h-px bg-brand-aperol" />
-                    Tags
-                  </h2>
-                  <div className="flex flex-wrap gap-2">
-                    {tags.map((tag, idx) => (
-                      <span
-                        key={idx}
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-os-surface-dark/60 border border-os-border-dark/50 text-sm text-os-text-secondary-dark"
-                      >
-                        <Tag className="w-3 h-3" />
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              );
-            })()}
-
-            {/* Quick Info Grid */}
-            <div className="mb-10">
-              <h2 className="text-sm font-semibold text-brand-vanilla mb-4 uppercase tracking-wide flex items-center gap-2">
-                <span className="w-8 h-px bg-brand-aperol" />
+            {/* Details Row - Category, Section, Pricing, Featured/Open Source */}
+            <div className="mb-6">
+              <h2 className="text-xs font-semibold text-brand-vanilla mb-3 uppercase tracking-wide flex items-center gap-2">
+                <span className="w-6 h-px bg-brand-aperol" />
                 Details
               </h2>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {resource.featured && (
-                  <div className="p-4 rounded-xl bg-os-surface-dark/60 border border-os-border-dark/50">
-                    <div className="flex items-center gap-2 text-amber-400 mb-1">
-                      <Star className="w-4 h-4 fill-current" />
-                      <span className="text-xs font-medium uppercase tracking-wide">Featured</span>
-                    </div>
-                    <p className="text-sm text-brand-vanilla">Curated pick</p>
-                  </div>
+              <div className="flex flex-wrap items-center gap-1.5">
+                {resource.category && (
+                  <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-brand-aperol/10 text-brand-aperol text-xs font-medium border border-brand-aperol/20">
+                    <Folder className="w-3 h-3" />
+                    {resource.category}
+                  </span>
                 )}
-
+                {resource.section && (
+                  <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-os-surface-dark text-os-text-secondary-dark text-xs border border-os-border-dark">
+                    <Layers className="w-3 h-3" />
+                    {resource.section}
+                  </span>
+                )}
+                {resource.pricing && (
+                  <span className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-xs font-medium border ${pricingStyle.bg} ${pricingStyle.text} ${pricingStyle.border}`}>
+                    <DollarSign className="w-3 h-3" />
+                    {resource.pricing}
+                  </span>
+                )}
+                {resource.tier && (
+                  <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-os-surface-dark text-os-text-secondary-dark text-xs border border-os-border-dark">
+                    <Layers className="w-3 h-3" />
+                    Tier {resource.tier}
+                  </span>
+                )}
+                {resource.featured && (
+                  <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-400 text-xs font-medium border border-amber-500/20">
+                    <Star className="w-3 h-3 fill-current" />
+                    Featured
+                  </span>
+                )}
                 {resource.opensource && (
-                  <div className="p-4 rounded-xl bg-os-surface-dark/60 border border-os-border-dark/50">
-                    <div className="flex items-center gap-2 text-emerald-400 mb-1">
-                      <Code className="w-4 h-4" />
-                      <span className="text-xs font-medium uppercase tracking-wide">Open Source</span>
-                    </div>
-                    <p className="text-sm text-brand-vanilla">Community driven</p>
-                  </div>
+                  <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-xs font-medium border border-emerald-500/20">
+                    <Code className="w-3 h-3" />
+                    Open Source
+                  </span>
                 )}
               </div>
             </div>
 
             {/* Related Resources */}
             {relatedResources.length > 0 && (
-              <div className="mb-10 pt-8 border-t border-os-border-dark/30">
-                <h2 className="text-sm font-semibold text-brand-vanilla mb-4 uppercase tracking-wide flex items-center gap-2">
-                  <span className="w-8 h-px bg-brand-aperol" />
+              <div className="mb-8 pt-6 border-t border-os-border-dark/30">
+                <h2 className="text-xs font-semibold text-brand-vanilla mb-3 uppercase tracking-wide flex items-center gap-2">
+                  <span className="w-6 h-px bg-brand-aperol" />
                   Related Resources
                 </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {relatedResources.map((related) => {
                     const relatedFavicon = getFaviconUrl(related.url);
                     return (
                       <Link
                         key={related.id}
                         href={`/discover/inspo/${related.id}`}
-                        className="group flex items-center gap-4 p-4 rounded-xl bg-os-surface-dark/40 border border-os-border-dark/30 hover:border-brand-aperol/30 hover:bg-os-surface-dark/60 transition-all"
+                        className="group flex items-center gap-3 p-3 rounded-lg bg-os-surface-dark/40 border border-os-border-dark/30 hover:border-brand-aperol/30 hover:bg-os-surface-dark/60 transition-all"
                       >
                         {/* Mini thumbnail with favicon fallback */}
-                        <div className="w-12 h-12 rounded-lg overflow-hidden bg-os-surface-dark border border-os-border-dark flex-shrink-0 flex items-center justify-center">
+                        <div className="w-10 h-10 rounded-md overflow-hidden bg-os-surface-dark border border-os-border-dark flex-shrink-0 flex items-center justify-center">
                           {related.thumbnail ? (
                             <Image
                               src={related.thumbnail}
                               alt={related.name}
-                              width={48}
-                              height={48}
+                              width={40}
+                              height={40}
                               className="w-full h-full object-cover"
                               unoptimized
                             />
@@ -429,20 +455,20 @@ export default function ResourceDetailPage() {
                             <Image
                               src={relatedFavicon}
                               alt={related.name}
-                              width={28}
-                              height={28}
+                              width={24}
+                              height={24}
                               className="object-contain"
                               unoptimized
                             />
                           ) : (
-                            <span className="text-sm font-medium text-os-text-secondary-dark">
+                            <span className="text-xs font-medium text-os-text-secondary-dark">
                               {related.name.charAt(0)}
                             </span>
                           )}
                         </div>
 
                         <div className="flex-1 min-w-0">
-                          <h3 className="font-medium text-brand-vanilla group-hover:text-brand-aperol transition-colors truncate">
+                          <h3 className="text-sm font-medium text-brand-vanilla group-hover:text-brand-aperol transition-colors truncate">
                             {related.name}
                           </h3>
                           <p className="text-xs text-os-text-secondary-dark truncate">
@@ -450,7 +476,7 @@ export default function ResourceDetailPage() {
                           </p>
                         </div>
 
-                        <ExternalLink className="w-4 h-4 text-os-text-secondary-dark group-hover:text-brand-aperol transition-colors flex-shrink-0" />
+                        <ExternalLink className="w-3.5 h-3.5 text-os-text-secondary-dark group-hover:text-brand-aperol transition-colors flex-shrink-0" />
                       </Link>
                     );
                   })}

@@ -162,8 +162,8 @@ export function InspoTable({ resources: rawResources }: InspoTableProps) {
 
   return (
     <div className="w-full">
-      {/* Filters - Sticky */}
-      <div className="sticky top-0 z-10 bg-os-bg-dark border-b border-os-border-dark backdrop-blur-sm bg-opacity-95">
+      {/* Filters */}
+      <div className="bg-os-bg-dark border-b border-os-border-dark">
         <div className="flex flex-wrap gap-4 p-4">
           {/* Category Filter */}
           <div className="flex flex-col gap-1.5">
@@ -239,16 +239,16 @@ export function InspoTable({ resources: rawResources }: InspoTableProps) {
 
       {/* Table */}
       <div className="overflow-x-auto">
-        <table className="w-full">
-          <thead>
+        <table className="w-full border-collapse">
+          <thead className="sticky top-0 z-10 bg-os-bg-dark shadow-[0_1px_0_0_rgba(255,255,255,0.1)]">
             <tr className="border-b border-os-border-dark">
               {/* Thumbnail Header */}
-              <th className="w-16 p-4">
+              <th className="w-16 p-4 bg-os-bg-dark">
                 <span className="sr-only">Thumbnail</span>
               </th>
 
               {/* Name Header */}
-              <th className="text-left p-4">
+              <th className="text-left p-4 bg-os-bg-dark">
                 <button
                   onClick={() => handleSort('name')}
                   className="flex items-center gap-2 text-xs font-accent uppercase tracking-wider text-os-text-secondary-dark hover:text-brand-aperol transition-colors group"
@@ -259,7 +259,7 @@ export function InspoTable({ resources: rawResources }: InspoTableProps) {
               </th>
 
               {/* Category Header */}
-              <th className="text-left p-4">
+              <th className="text-left p-4 bg-os-bg-dark">
                 <button
                   onClick={() => handleSort('category')}
                   className="flex items-center gap-2 text-xs font-accent uppercase tracking-wider text-os-text-secondary-dark hover:text-brand-aperol transition-colors group"
@@ -270,7 +270,7 @@ export function InspoTable({ resources: rawResources }: InspoTableProps) {
               </th>
 
               {/* Section Header */}
-              <th className="text-left p-4">
+              <th className="text-left p-4 bg-os-bg-dark">
                 <button
                   onClick={() => handleSort('section')}
                   className="flex items-center gap-2 text-xs font-accent uppercase tracking-wider text-os-text-secondary-dark hover:text-brand-aperol transition-colors group"
@@ -281,7 +281,7 @@ export function InspoTable({ resources: rawResources }: InspoTableProps) {
               </th>
 
               {/* Pricing Header */}
-              <th className="text-left p-4">
+              <th className="text-left p-4 bg-os-bg-dark">
                 <button
                   onClick={() => handleSort('pricing')}
                   className="flex items-center gap-2 text-xs font-accent uppercase tracking-wider text-os-text-secondary-dark hover:text-brand-aperol transition-colors group"
@@ -292,7 +292,7 @@ export function InspoTable({ resources: rawResources }: InspoTableProps) {
               </th>
 
               {/* Actions Header */}
-              <th className="w-20 p-4">
+              <th className="w-20 p-4 bg-os-bg-dark">
                 <span className="sr-only">Actions</span>
               </th>
             </tr>

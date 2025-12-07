@@ -282,8 +282,10 @@ export default function ArticlePage() {
 
       try {
         // Try to load pre-generated article JSON first
-        const response = await fetch(`/data/discover/articles/${slug}.json`);
-        
+        const response = await fetch(`/data/discover/articles/${slug}.json`, {
+          cache: 'no-store',
+        });
+
         if (response.ok) {
           const data: DiscoverArticle = await response.json();
           setArticle(data);
@@ -300,9 +302,9 @@ export default function ArticlePage() {
           '/data/news/weekly-update/latest.json',
           '/data/news/monthly-outlook/latest.json',
         ];
-        
+
         for (const url of newsUrls) {
-          const newsResponse = await fetch(url);
+          const newsResponse = await fetch(url, { cache: 'no-store' });
           if (newsResponse.ok) {
             const newsData = await newsResponse.json();
             const foundUpdate = newsData.updates?.find((update: { title: string }) => {
@@ -334,9 +336,9 @@ export default function ArticlePage() {
           '/data/weekly-ideas/long-form/latest.json',
           '/data/weekly-ideas/blog/latest.json',
         ];
-        
+
         for (const url of ideasUrls) {
-          const ideasResponse = await fetch(url);
+          const ideasResponse = await fetch(url, { cache: 'no-store' });
           if (ideasResponse.ok) {
             const ideasData = await ideasResponse.json();
             const foundIdea = ideasData.ideas?.find((idea: { title: string }) => {

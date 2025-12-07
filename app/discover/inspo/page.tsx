@@ -268,7 +268,7 @@ function InspoContent() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="w-full max-w-7xl mx-auto px-6 pb-12">
+            <div className="w-full max-w-6xl mx-auto px-6 md:px-12 pb-12">
               {isLoadingData ? (
                 <div className="flex items-center justify-center py-20">
                   <div className="w-8 h-8 border-2 border-brand-aperol border-t-transparent rounded-full animate-spin" />

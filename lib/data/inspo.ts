@@ -19,6 +19,7 @@ export interface InspoResource {
   Count: string | null;
   Tier: number | null;
   thumbnail_url: string | null;
+  screenshot: string | null;
 }
 
 // Helper to safely parse tags from Supabase (might be string or array)
@@ -47,6 +48,7 @@ export interface NormalizedResource {
   count: string | null;
   tier: number | null;
   thumbnail: string | null;
+  screenshot: string | null;
 }
 
 // Helper to normalize resource data to consistent lowercase keys
@@ -65,6 +67,7 @@ export function normalizeResource(resource: InspoResource): NormalizedResource {
     count: resource.Count ?? null,
     tier: resource.Tier ?? null,
     thumbnail: resource.thumbnail_url ?? null,
+    screenshot: resource.screenshot ?? null,
   };
 }
 

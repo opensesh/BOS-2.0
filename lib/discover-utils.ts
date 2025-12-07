@@ -339,7 +339,9 @@ export function processIdeaData(data: IdeaData): IdeaCardData[] {
  */
 export async function loadNewsData(type: 'weekly-update' | 'monthly-outlook'): Promise<NewsCardData[]> {
   try {
-    const response = await fetch(`/data/news/${type}/latest.json`);
+    const response = await fetch(`/data/news/${type}/latest.json`, {
+      cache: 'no-store', // Bypass cache to get fresh data
+    });
     if (!response.ok) {
       console.error(`Failed to load ${type} data:`, response.statusText);
       return [];
@@ -357,7 +359,9 @@ export async function loadNewsData(type: 'weekly-update' | 'monthly-outlook'): P
  */
 export async function loadIdeaData(type: 'short-form' | 'long-form' | 'blog'): Promise<IdeaCardData[]> {
   try {
-    const response = await fetch(`/data/weekly-ideas/${type}/latest.json`);
+    const response = await fetch(`/data/weekly-ideas/${type}/latest.json`, {
+      cache: 'no-store', // Bypass cache to get fresh data
+    });
     if (!response.ok) {
       console.error(`Failed to load ${type} data:`, response.statusText);
       return [];
