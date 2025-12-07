@@ -9,6 +9,7 @@
     "lint": "next lint",
     "generate:brand-index": "npx tsx lib/brand-knowledge/generate.ts",
     "generate:content": "npx tsx scripts/daily-content-generation.ts",
+    "fetch-thumbnails": "npx tsx scripts/populate-thumbnails.ts",
     "prebuild": "npm run generate:brand-index"
   },
   "dependencies": {
@@ -32,6 +33,7 @@
     "next": "15.5.7",
     "next-auth": "^4.24.13",
     "next-themes": "^0.4.4",
+    "open-graph-scraper": "^6.11.0",
     "react": "19.2.1",
     "react-dom": "19.2.1",
     "tailwind-merge": "^3.4.0",

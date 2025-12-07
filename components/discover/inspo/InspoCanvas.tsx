@@ -22,8 +22,8 @@ function CameraController() {
       controlsRef.current.update();
     }
     
-    // Smoothly move camera to default position
-    const targetPosition = new THREE.Vector3(0, 0, 30);
+    // Smoothly move camera to default position (closer for compact view)
+    const targetPosition = new THREE.Vector3(0, 0, 22);
     const currentPosition = camera.position.clone();
     
     if (currentPosition.distanceTo(targetPosition) > 5) {
@@ -53,8 +53,8 @@ function CameraController() {
       enableDamping
       dampingFactor={0.05}
       enablePan={false}
-      minDistance={15}
-      maxDistance={50}
+      minDistance={12}
+      maxDistance={40}
       // Disable controls during transition for smoother experience
       enabled={!isTransitioning}
       // Always look at center
@@ -67,13 +67,13 @@ export default function InspoCanvas() {
   return (
     <Canvas
       className="w-full h-full"
-      camera={{ position: [0, 0, 30], fov: 75 }}
+      camera={{ position: [0, 0, 22], fov: 60 }}
       gl={{ alpha: true }}
       style={{ background: '#141414' }} // matches os-bg-dark
     >
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} intensity={1} />
-      <ParticleSystem radius={15} />
+      <ParticleSystem radius={10} />
       <CameraController />
     </Canvas>
   );

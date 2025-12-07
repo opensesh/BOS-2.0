@@ -18,6 +18,7 @@ export interface InspoResource {
   Tags: string[] | null;
   Count: string | null;
   Tier: number | null;
+  Thumbnail: string | null;
 }
 
 // Normalized type for component use (lowercase keys)
@@ -34,6 +35,7 @@ export interface NormalizedResource {
   tags: string[] | null;
   count: string | null;
   tier: number | null;
+  thumbnail: string | null;
 }
 
 // Helper to normalize resource data to consistent lowercase keys
@@ -51,6 +53,7 @@ export function normalizeResource(resource: InspoResource): NormalizedResource {
     tags: resource.Tags ?? null,
     count: resource.Count ?? null,
     tier: resource.Tier ?? null,
+    thumbnail: resource.Thumbnail ?? null,
   };
 }
 
