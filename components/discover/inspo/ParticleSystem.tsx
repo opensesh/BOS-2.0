@@ -73,7 +73,7 @@ export default function ParticleSystem({ radius = 15 }: ParticleSystemProps) {
   const [currentPositions, setCurrentPositions] = useState<Float32Array>(layouts.sphere);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const prevViewModeRef = useRef(viewMode);
-  const prevCountRef = useRef(actualCount);
+  const prevCountRef = useRef(particleCount);
 
   // Initialize node data when positions change
   useEffect(() => {
