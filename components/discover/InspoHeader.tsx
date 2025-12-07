@@ -1,53 +1,26 @@
 'use client';
 
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { Settings, Bookmark, ChevronDown, Check, Globe, Orbit, Grid3X3, Cloud, Stars, Wind } from 'lucide-react';
-import { ViewMode } from '@/lib/stores/inspo-store';
+import { Settings, Bookmark, Box, Table2 } from 'lucide-react';
+
+type DisplayMode = '3d' | 'table';
 
 interface InspoHeaderProps {
-  viewMode: ViewMode;
-  onViewModeChange: (mode: ViewMode) => void;
-  isTransitioning: boolean;
+  displayMode: DisplayMode;
+  onDisplayModeChange: (mode: DisplayMode) => void;
   savedCount?: number;
   onOpenSaved?: () => void;
   onSettingsClick?: () => void;
 }
 
-const VIEW_MODE_OPTIONS: { id: ViewMode; label: string; icon: typeof Globe }[] = [
-  { id: 'galaxy', label: 'Galaxy', icon: Orbit },
-  { id: 'sphere', label: 'Sphere', icon: Globe },
-  { id: 'nebula', label: 'Nebula', icon: Cloud },
-  { id: 'starfield', label: 'Starfield', icon: Stars },
-  { id: 'vortex', label: 'Vortex', icon: Wind },
-  { id: 'grid', label: 'Grid', icon: Grid3X3 },
-];
-
 export function InspoHeader({
-  viewMode,
-  onViewModeChange,
-  isTransitioning,
+  displayMode,
+  onDisplayModeChange,
   savedCount = 0,
   onOpenSaved,
   onSettingsClick,
 }: InspoHeaderProps) {
-  const [isFilterOpen, setIsFilterOpen] = useState(false);
-  const filterRef = useRef<HTMLDivElement>(null);
-
-  // Close dropdowns when clicking outside
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (filterRef.current && !filterRef.current.contains(event.target as Node)) {
-        setIsFilterOpen(false);
-      }
-    }
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-
-  const currentViewOption = VIEW_MODE_OPTIONS.find(v => v.id === viewMode) || VIEW_MODE_OPTIONS[1];
-  const CurrentViewIcon = currentViewOption.icon;
-
   return (
     <div className="flex items-center justify-between gap-4 mb-6">
       {/* Left: Title and Tabs */}
@@ -80,56 +53,31 @@ export function InspoHeader({
       </div>
 
       {/* Right: Actions */}
-      <div className="flex items-center gap-2">
-        {/* View Mode Filter Dropdown */}
-        <div className="relative" ref={filterRef}>
+      <div className="flex items-center gap-1">
+        {/* Display Mode Toggle (3D / Table) */}
+        <div className="flex items-center bg-os-surface-dark rounded-lg p-1 border border-os-border-dark mr-1">
           <button
-            onClick={() => setIsFilterOpen(!isFilterOpen)}
-            disabled={isTransitioning}
-            className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-all ${
-              isTransitioning
-                ? 'opacity-50 cursor-not-allowed'
-                : 'bg-brand-aperol/15 text-brand-aperol border border-brand-aperol/30'
+            onClick={() => onDisplayModeChange('3d')}
+            className={`p-2 rounded-md transition-all ${
+              displayMode === '3d'
+                ? 'bg-brand-aperol text-white'
+                : 'text-os-text-secondary-dark hover:text-brand-vanilla'
             }`}
+            title="3D Explorer"
           >
-            <CurrentViewIcon className="w-4 h-4" />
-            <span className="hidden sm:inline">{currentViewOption.label}</span>
-            <ChevronDown className={`w-4 h-4 transition-transform ${isFilterOpen ? 'rotate-180' : ''}`} />
+            <Box className="w-4 h-4" />
           </button>
-
-          {isFilterOpen && (
-            <div className="absolute top-full right-0 mt-2 py-2 bg-os-surface-dark border border-os-border-dark rounded-xl shadow-xl min-w-[180px] z-50">
-              <div className="px-3 pb-2 mb-2 border-b border-os-border-dark">
-                <span className="text-xs font-semibold text-os-text-secondary-dark uppercase tracking-wide">
-                  View Mode
-                </span>
-              </div>
-              {VIEW_MODE_OPTIONS.map((option) => {
-                const Icon = option.icon;
-                return (
-                  <button
-                    key={option.id}
-                    onClick={() => {
-                      onViewModeChange(option.id);
-                      setIsFilterOpen(false);
-                    }}
-                    disabled={isTransitioning}
-                    className={`w-full flex items-center justify-between px-3 py-2 text-sm transition-colors ${
-                      viewMode === option.id
-                        ? 'text-brand-aperol bg-brand-aperol/10'
-                        : 'text-os-text-secondary-dark hover:text-brand-vanilla hover:bg-os-bg-dark'
-                    } ${isTransitioning ? 'opacity-50 cursor-not-allowed' : ''}`}
-                  >
-                    <div className="flex items-center gap-2">
-                      <Icon className="w-4 h-4" />
-                      <span>{option.label}</span>
-                    </div>
-                    {viewMode === option.id && <Check className="w-4 h-4" />}
-                  </button>
-                );
-              })}
-            </div>
-          )}
+          <button
+            onClick={() => onDisplayModeChange('table')}
+            className={`p-2 rounded-md transition-all ${
+              displayMode === 'table'
+                ? 'bg-brand-aperol text-white'
+                : 'text-os-text-secondary-dark hover:text-brand-vanilla'
+            }`}
+            title="Table View"
+          >
+            <Table2 className="w-4 h-4" />
+          </button>
         </div>
 
         {/* Saved Button */}
