@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useMemo, useEffect, useState, forwardRef, useImperativeHandle } from 'react';
-import { useFrame } from '@react-three/fiber';
+import { useFrame, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 import { generateOrbitalPosition } from '@/lib/utils/orbital-layout';
 import type { NormalizedResource } from '@/lib/data/inspo';
@@ -27,6 +27,38 @@ function getCategoryColor(category: string | null): string {
 }
 
 /**
+ * Calculate dynamic scale multiplier based on visible node count
+ * Fewer nodes = larger nodes for easier interaction
+ */
+function calculateDensityScale(visibleCount: number, totalCount: number): number {
+  if (visibleCount === 0) return 1;
+  
+  // Scale factors based on visible count
+  if (visibleCount <= 2) return 3.5;
+  if (visibleCount <= 5) return 2.8;
+  if (visibleCount <= 10) return 2.2;
+  if (visibleCount <= 20) return 1.8;
+  if (visibleCount <= 40) return 1.4;
+  if (visibleCount <= 70) return 1.2;
+  return 1.0;
+}
+
+/**
+ * Calculate camera distance based on visible node count
+ * Fewer nodes = camera moves closer to fill frame
+ */
+function calculateCameraDistance(visibleCount: number): number {
+  if (visibleCount === 0) return 60;
+  
+  if (visibleCount <= 2) return 35;
+  if (visibleCount <= 5) return 40;
+  if (visibleCount <= 10) return 45;
+  if (visibleCount <= 20) return 50;
+  if (visibleCount <= 40) return 55;
+  return 60;
+}
+
+/**
  * Animation configuration
  */
 const ANIMATION = {
@@ -34,14 +66,16 @@ const ANIMATION = {
   STAGGER_DELAY: 20,
   ENTRANCE_DURATION: 600,
   FILTER_LERP_SPEED: 0.1,
-  HOVER_LERP_SPEED: 0.15,     // Snappy hover scale
-  CLICK_LERP_SPEED: 0.3,      // Fast click pulse
+  HOVER_LERP_SPEED: 0.15,
+  CLICK_LERP_SPEED: 0.3,
+  SCALE_LERP_SPEED: 0.08,      // Smooth scale transitions
+  CAMERA_LERP_SPEED: 0.05,     // Smooth camera transitions
   VISIBLE_OPACITY: 1.0,
   HIDDEN_OPACITY: 0.0,
-  HOVER_SCALE: 1.3,           // Scale multiplier on hover
-  CLICK_SCALE: 1.5,           // Scale multiplier on click (pulse)
+  HOVER_SCALE: 1.3,
+  CLICK_SCALE: 1.5,
   NORMAL_SCALE: 1.0,
-  MIN_OPACITY_FOR_INTERACTION: 0.1, // Minimum opacity to allow hover/click
+  MIN_OPACITY_FOR_INTERACTION: 0.1,
 };
 
 export interface ResourceNodesHandle {
@@ -49,6 +83,7 @@ export interface ResourceNodesHandle {
   getResourceAtIndex: (index: number) => NormalizedResource | null;
   getOpacityAtIndex: (index: number) => number;
   getGroupRotation: () => THREE.Euler | null;
+  getVisibleCount: () => number;
 }
 
 interface ResourceNodesProps {
@@ -64,7 +99,10 @@ interface ResourceNodesProps {
  * ResourceNodes
  * 
  * Renders all resources as individual sphere meshes orbiting the central sphere.
- * Supports category, subcategory, and AI-based filtering with smooth animations.
+ * Features:
+ * - Dynamic sizing: fewer visible nodes = larger nodes
+ * - Auto-zoom: camera adjusts to frame visible nodes
+ * - Smooth transitions for all changes
  */
 const ResourceNodes = forwardRef<ResourceNodesHandle, ResourceNodesProps>(
   function ResourceNodes({ 
@@ -77,6 +115,7 @@ const ResourceNodes = forwardRef<ResourceNodesHandle, ResourceNodesProps>(
   }, ref) {
     const meshRef = useRef<THREE.InstancedMesh>(null);
     const groupRef = useRef<THREE.Group>(null);
+    const { camera } = useThree();
     
     // Animation state
     const [isInitialized, setIsInitialized] = useState(false);
@@ -84,6 +123,13 @@ const ResourceNodes = forwardRef<ResourceNodesHandle, ResourceNodesProps>(
     const targetOpacitiesRef = useRef<Float32Array | null>(null);
     const currentHoverScalesRef = useRef<Float32Array | null>(null);
     const entranceStartTimeRef = useRef<number | null>(null);
+    
+    // Dynamic scaling state
+    const currentDensityScaleRef = useRef(1);
+    const targetDensityScaleRef = useRef(1);
+    const currentCameraZRef = useRef(60);
+    const targetCameraZRef = useRef(60);
+    const visibleCountRef = useRef(0);
     
     const nodeRadius = 0.5;
     const orbitalConfig = { minRadius: 15, maxRadius: 50 };
@@ -95,6 +141,7 @@ const ResourceNodes = forwardRef<ResourceNodesHandle, ResourceNodesProps>(
       getResourceAtIndex: (index: number) => resources[index] || null,
       getOpacityAtIndex: (index: number) => currentOpacitiesRef.current?.[index] ?? 0,
       getGroupRotation: () => groupRef.current?.rotation || null,
+      getVisibleCount: () => visibleCountRef.current,
     }));
     
     // Calculate FIXED positions and colors for ALL resources
@@ -139,9 +186,11 @@ const ResourceNodes = forwardRef<ResourceNodesHandle, ResourceNodesProps>(
       }
     }, [resourceCount]);
     
-    // Update target opacities when any filter changes
+    // Update target opacities and calculate visible count when filters change
     useEffect(() => {
       if (!targetOpacitiesRef.current || resourceCount === 0) return;
+      
+      let visibleCount = 0;
       
       resources.forEach((resource, index) => {
         let shouldBeVisible = true;
@@ -164,7 +213,15 @@ const ResourceNodes = forwardRef<ResourceNodesHandle, ResourceNodesProps>(
         targetOpacitiesRef.current![index] = shouldBeVisible 
           ? ANIMATION.VISIBLE_OPACITY 
           : ANIMATION.HIDDEN_OPACITY;
+          
+        if (shouldBeVisible) visibleCount++;
       });
+      
+      // Update visible count and target scales
+      visibleCountRef.current = visibleCount;
+      targetDensityScaleRef.current = calculateDensityScale(visibleCount, resourceCount);
+      targetCameraZRef.current = calculateCameraDistance(visibleCount);
+      
     }, [activeFilter, activeSubFilter, filteredResourceIds, resources, resourceCount]);
     
     // Initial mesh setup
@@ -200,12 +257,28 @@ const ResourceNodes = forwardRef<ResourceNodesHandle, ResourceNodesProps>(
       // Slow orbital rotation
       groupRef.current.rotation.y += delta * 0.05;
       
+      // Smoothly lerp density scale
+      const densityScaleDiff = targetDensityScaleRef.current - currentDensityScaleRef.current;
+      if (Math.abs(densityScaleDiff) > 0.001) {
+        currentDensityScaleRef.current += densityScaleDiff * ANIMATION.SCALE_LERP_SPEED;
+      }
+      
+      // Smoothly lerp camera position
+      const cameraZDiff = targetCameraZRef.current - currentCameraZRef.current;
+      if (Math.abs(cameraZDiff) > 0.01) {
+        currentCameraZRef.current += cameraZDiff * ANIMATION.CAMERA_LERP_SPEED;
+        camera.position.z = currentCameraZRef.current;
+      }
+      
       const now = Date.now();
       const entranceStart = entranceStartTimeRef.current || now;
       const timeSinceStart = now - entranceStart;
       
       const dummy = new THREE.Object3D();
       let hasChanges = false;
+      
+      // Current density scale for this frame
+      const densityScale = currentDensityScaleRef.current;
       
       for (let i = 0; i < resourceCount; i++) {
         // Entrance animation
@@ -256,8 +329,10 @@ const ResourceNodes = forwardRef<ResourceNodesHandle, ResourceNodesProps>(
           hasChanges = true;
         }
         
-        // Final scale = opacity scale * hover/click scale
-        const finalScale = Math.max(0.001, newOpacity) * newHoverScale;
+        // Final scale = opacity scale * hover/click scale * density scale (for visible nodes)
+        const isVisible = targetOpacitiesRef.current[i] > 0;
+        const appliedDensityScale = isVisible ? densityScale : 1;
+        const finalScale = Math.max(0.001, newOpacity) * newHoverScale * appliedDensityScale;
         
         dummy.position.set(
           positions[i * 3] || 0,
@@ -267,6 +342,11 @@ const ResourceNodes = forwardRef<ResourceNodesHandle, ResourceNodesProps>(
         dummy.scale.set(finalScale, finalScale, finalScale);
         dummy.updateMatrix();
         meshRef.current.setMatrixAt(i, dummy.matrix);
+      }
+      
+      // Always update if density scale or camera is changing
+      if (Math.abs(densityScaleDiff) > 0.001 || Math.abs(cameraZDiff) > 0.01) {
+        hasChanges = true;
       }
       
       if (hasChanges) {

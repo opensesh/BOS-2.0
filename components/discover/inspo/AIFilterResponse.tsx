@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sparkles, X } from 'lucide-react';
+import { X } from 'lucide-react';
 
 interface AIFilterResponseProps {
   message: string | null;
@@ -74,13 +74,12 @@ export function AIFilterResponse({
     <AnimatePresence>
       {message && (
         <motion.div
-          initial={{ opacity: 0, y: 10, height: 0 }}
-          animate={{ opacity: 1, y: 0, height: 'auto' }}
-          exit={{ opacity: 0, y: -10, height: 0 }}
-          transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
-          className="overflow-hidden"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.25, ease: 'easeOut' }}
         >
-          <div className="bg-gradient-to-r from-brand-aperol/10 via-purple-500/10 to-cyan-500/10 backdrop-blur-sm rounded-lg border border-brand-aperol/20 p-4 relative">
+          <div className="bg-os-surface-dark/80 backdrop-blur-sm rounded-lg border border-os-border-dark p-3 relative">
             {/* Dismiss button */}
             <button
               onClick={onDismiss}
@@ -90,44 +89,35 @@ export function AIFilterResponse({
               <X className="w-3.5 h-3.5" />
             </button>
             
-            {/* AI Icon */}
-            <div className="flex items-start gap-3">
-              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-brand-aperol to-purple-500 flex items-center justify-center">
-                <Sparkles className="w-4 h-4 text-white" />
-              </div>
-              
-              <div className="flex-1 min-w-0 pt-1">
-                {/* Typing text */}
-                <p className="text-sm text-os-text-primary-dark leading-relaxed">
-                  {displayedText}
-                  {/* Blinking cursor while typing */}
-                  {!isComplete && (
-                    <motion.span
-                      animate={{ opacity: [1, 0] }}
-                      transition={{ duration: 0.5, repeat: Infinity }}
-                      className="inline-block w-0.5 h-4 bg-brand-aperol ml-0.5 align-middle"
-                    />
-                  )}
-                </p>
-                
-                {/* Match count badge - appears after typing completes */}
-                <AnimatePresence>
-                  {isComplete && matchCount !== undefined && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 5 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.2 }}
-                      className="mt-2"
-                    >
-                      <span className="inline-flex items-center gap-1.5 px-2 py-1 bg-os-surface-dark/60 rounded-full text-xs text-os-text-secondary-dark">
-                        <span className="w-1.5 h-1.5 rounded-full bg-brand-aperol animate-pulse" />
-                        {matchCount} resource{matchCount !== 1 ? 's' : ''} found
-                      </span>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            </div>
+            {/* Typing text */}
+            <p className="text-sm text-os-text-primary-dark leading-relaxed pr-6">
+              {displayedText}
+              {/* Blinking cursor while typing */}
+              {!isComplete && (
+                <motion.span
+                  animate={{ opacity: [1, 0] }}
+                  transition={{ duration: 0.5, repeat: Infinity }}
+                  className="inline-block w-0.5 h-4 bg-brand-aperol ml-0.5 align-middle"
+                />
+              )}
+            </p>
+            
+            {/* Match count badge - appears after typing completes */}
+            <AnimatePresence>
+              {isComplete && matchCount !== undefined && (
+                <motion.div
+                  initial={{ opacity: 0, y: 5 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 }}
+                  className="mt-2"
+                >
+                  <span className="inline-flex items-center gap-1.5 px-2 py-1 bg-os-bg-dark/60 rounded-full text-xs text-os-text-secondary-dark">
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-aperol animate-pulse" />
+                    {matchCount} resource{matchCount !== 1 ? 's' : ''} found
+                  </span>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </motion.div>
       )}
