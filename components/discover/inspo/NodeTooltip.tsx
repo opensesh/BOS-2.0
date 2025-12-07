@@ -7,7 +7,8 @@ export function NodeTooltip() {
   const hoveredNodeId = useInspoStore((state) => state.hoveredNodeId);
   const resources = useInspoStore((state) => state.resources);
   
-  if (hoveredNodeId === null || !resources[hoveredNodeId]) {
+  // Only show tooltip if we have a hovered node AND a resource for it
+  if (hoveredNodeId === null || resources.length === 0 || !resources[hoveredNodeId]) {
     return null;
   }
   
