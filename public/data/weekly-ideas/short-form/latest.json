@@ -1,317 +1,70 @@
 {
   "type": "short-form",
-  "date": "2025-12-07T16:17:12.016Z",
+  "date": "2025-12-07T16:22:37.443Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Coinbase starts onboarding users again in India, plans for fiat on-ramp next year",
+      "description": "Coinbase is exploring expansion into India with a staggered relaunch and hiring for different roles.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/issue/221"
-        }
-      ],
-      "format": "story",
-      "subcategory": "story",
-      "hooks": [
-        "Design Templates That Scale Without Breaking Brand",
-        "Figma Secrets: Make Templates That Marketing Loves",
-        "Brand Flexibility: Templates That Adapt & Inspire"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick screen transitions between template tips",
-            "Include fast-paced visual demonstrations of template editing",
-            "Use text overlays with high-contrast design"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "Create swipeable slides with clear hierarchy",
-            "Use consistent color coding for each template tip",
-            "Include graphic icons to illustrate each concept"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Add dynamic screen recordings of Figma workflow",
-            "Use voiceover to explain complex template strategies",
-            "Include rapid-fire editing to maintain attention"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Add more detailed technical explanations",
-            "Include professional case study references",
-            "Use more sophisticated design language"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-energy digital design aesthetic with neon accent colors, dynamic geometric transitions, futuristic typography, subtle motion graphics showing template flexibility, minimalist yet playful design system with strong visual hierarchy"
-      },
-      "exampleOutline": [
-        "Opening: Provocative template design challenge",
-        "Problem: Rigid vs. Flexible Brand Guidelines",
-        "Solution: 8 Strategic Template Design Principles",
-        "Key Insights: Marketing-Design Collaboration Strategies",
-        "Call-to-Action: Download Template Framework"
-      ],
-      "hashtags": "#FigmaDesign #BrandTemplates #AIDesign #CreativeTools #DesignSystem #MarketingDesign #ProductivityHacks #CreativeTips #DesignStrategy #AdobeAlternative",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Forum",
-          "url": "https://forum.figma.com/product-updates-3/new-features-in-figma-buzz-46631"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/three-new-features-to-help-build-brand-momentum-with-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/figma-buzz"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/newsroom/"
-        },
-        {
-          "name": "Investor",
-          "url": "https://investor.figma.com/news-events/news/default.aspx"
-        }
-      ],
-      "format": "reel",
-      "subcategory": "reel",
-      "hooks": [
-        "Figma Buzz: Design Superpowers Just Dropped 🚀",
-        "3 Game-Changing Features Designers Need Now",
-        "Your Brand's Next Level Starts Here"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use dynamic screen capture transitions",
-            "Include text overlay for key features",
-            "Keep pace high with quick cuts"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must preview all 3 features",
-            "Use clean, modular design for each slide",
-            "End with a compelling call-to-action slide"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected visual metaphor",
-            "Use professional voiceover explaining features",
-            "Include subtle screen recordings"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame as professional productivity upgrade",
-            "Include data/impact statistics",
-            "More technical, less flashy execution"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold tech-futurist aesthetic with electric blue/purple gradients, floating holographic UI elements, sharp geometric transitions, minimalist sans-serif typography, high-contrast motion graphics highlighting feature transformations"
-      },
-      "exampleOutline": [
-        "Hook: Rapid visual teaser of Figma Buzz features",
-        "Problem: Current design workflow limitations",
-        "Solution: Reveal 3 new feature capabilities",
-        "Demonstration: Quick feature walkthrough",
-        "Call-to-Action: Try Figma Buzz now"
-      ],
-      "hashtags": "#FigmaBuzz #DesignTech #CreativeTools #AIDesign #ProductivityHack #UXDesign #CreativeTech #DesignInnovation #WorkflowOptimization #DigitalDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7245606/pexels-photo-7245606.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
-    },
-    {
-      "title": "How to streamline your design system workflow in Figma",
-      "description": "If you’ve ever stared down a blank Figma file while building a new design system, never fear: These new features and plugins will turn that mountain of work into an afternoon task.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/how-to-streamline-your-design-system-workflow-in-figma/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/schema-2025-design-systems-recap/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=N2NwII5mAU4&vl=en"
-        },
-        {
-          "name": "Community",
-          "url": "https://community.weweb.io/t/optimizing-design-system-figma-weweb/20404"
-        },
-        {
-          "name": "Help",
-          "url": "https://help.figma.com/hc/en-us/articles/35794667554839-What-s-new-from-Schema-2025"
-        },
-        {
-          "name": "Uxdesign",
-          "url": "https://uxdesign.cc/dear-llm-heres-how-my-design-system-works-b59fb9a342b7"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/07/coinbase-starts-onboarding-users-again-in-india-plans-for-fiat-on-ramp-for-next-year/"
         }
       ],
       "format": "quick-image",
       "subcategory": "quick-image",
       "hooks": [
-        "Figma Design System Hack: 5 Minutes, Zero Stress",
-        "Crush Your Design System with These Secret Tricks",
-        "Design System Workflow: From Chaos to Clarity"
+        "Coinbase's India comeback: Game changer?",
+        "Crypto's next frontier: India unlocked",
+        "India enters Coinbase's global playbook"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use fast-paced screen recordings of Figma workflow",
-            "Include animated text transitions showing before/after",
-            "Add energetic background music with design rhythm"
+            "Use dynamic map animation showing India's market potential",
+            "Include quick crypto trading motion graphics",
+            "Create fast-paced visual narrative with bold text overlays"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Provocative meme-style design system challenge",
-            "Use high-contrast color blocks for each workflow step",
-            "Include screenshots with clear annotation arrows"
+            "First slide: Striking visual of Coinbase logo with Indian flag",
+            "Use infographic-style slides showing market growth",
+            "Final slide: Clear call-to-action for crypto enthusiasts"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with unexpected design system fail moment",
-            "Use quick jump cuts between Figma interface states",
-            "Include personal reaction/commentary overlay"
+            "Start with unexpected sound bite about market expansion",
+            "Use quick jump cuts between data points",
+            "Incorporate trending meme-style transition effects"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Frame content as professional productivity hack",
-            "Include data/statistic about design system efficiency",
-            "Use more technical, process-oriented visual language"
+            "Add credible data visualization",
+            "Include professional tone with strategic insights",
+            "Use clean, authoritative graphic design"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-energy tech-meets-design aesthetic. Vibrant neon-adjacent color palette with glitch/digital overlay effects. Dynamic geometric typography. Minimal illustrations showing workflow transformation. Dark mode interface references with accent color highlights. Incorporate subtle motion graphics simulating design system evolution."
+        "description": "Bold, tech-forward design with neon-electric color palette. Geometric overlays, futuristic map silhouettes, dynamic gradients suggesting digital transformation. Typography: Sharp, angular sans-serif. Incorporate blockchain-inspired visual motifs with India's vibrant color scheme."
       },
       "exampleOutline": [
-        "Section 1: Provocative Design System Challenge Meme",
-        "Section 2: Common Workflow Frustration Visualization",
-        "Section 3: 3-5 Quick Plugin/Feature Recommendations",
-        "Section 4: Transformative Workflow Insight",
-        "Section 5: Call-to-Experiment CTA"
+        "Hook: Coinbase's surprising India move",
+        "Context: Crypto market challenges",
+        "Core Content: Expansion strategy revealed",
+        "Market Potential Insight",
+        "Future Projection CTA"
       ],
-      "hashtags": "#FigmaDesign #DesignSystem #ProductivityHack #AIDesign #CreativeTech #UXWorkflow #DesignTools #CreativeCode #TechTips #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 11
-    },
-    {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
-        }
-      ],
-      "format": "carousel",
-      "subcategory": "carousel",
-      "hooks": [
-        "How we designed a font that speaks Figma's language",
-        "Typeface revolution: Inside Figma's custom font creation",
-        "When designers become type architects"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use dynamic type animations between slides",
-            "Include quick typography transformation clips",
-            "Add kinetic text movement to maintain engagement"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must have high-contrast, provocative typography",
-            "Use consistent color palette across all slides",
-            "Design slides to create visual narrative flow"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Condense carousel to most dramatic typographic moments",
-            "Add voiceover explaining font design process",
-            "Use quick cuts between design stages"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Add more technical design process details",
-            "Include professional insights about brand typography",
-            "Emphasize strategic design thinking"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 8,
-        "description": "Bold, experimental typography-driven design with high-contrast color transitions. Modernist grid system with playful type interactions. Utilize geometric sans-serif elements, dynamic type transformations, and unexpected color overlays. Reference Swiss design principles with contemporary digital twist."
-      },
-      "exampleOutline": [
-        "Slide 1: Provocative hook about font design",
-        "Slide 2: Figma's design challenge context",
-        "Slide 3: Typography exploration process",
-        "Slide 4: Key design principles revealed",
-        "Slide 5: Final typeface reveal & impact"
-      ],
-      "hashtags": "#FigmaDesign #Typography #CreativeProcess #DesignInnovation #BrandIdentity #AIDesign #CreativeTech #ProductDesign #DesignSystem #TypefaceDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "hashtags": "#Coinbase #CryptoIndia #BlockchainTech #FinTech #GlobalExpansion #CryptoTrading #TechInnovation #StartupEcosystem #DigitalEconomy #InvestmentOpportunity",
       "textureIndex": 12
     },
     {
@@ -320,65 +73,259 @@
       "starred": false,
       "sources": [
         {
-          "name": "TechCrunch AI",
+          "name": "TechCrunch",
           "url": "https://techcrunch.com/2025/12/07/openai-says-its-turned-off-app-suggestions-that-look-like-ads/"
         }
       ],
-      "format": "quick-image",
-      "subcategory": "quick-image",
+      "format": "story",
+      "subcategory": "story",
       "hooks": [
-        "OpenAI's Ad Experiment: What They're Not Telling You",
-        "Behind the Scenes: ChatGPT's Secret Ad Dilemma",
-        "AI's Advertising Tightrope: OpenAI's Candid Moment"
+        "AI Drama: OpenAI's Secret Ad Strategy Revealed",
+        "When AI Meets Marketing: Inside OpenAI's Playbook",
+        "ChatGPT's Hidden Promo Moves: What They're Not Telling You"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use a quick split-screen comparing 'ad-like' vs 'clean' ChatGPT interfaces",
-            "Animate text to highlight key controversy points",
-            "Include a reaction-style overlay to create engagement"
+            "Use quick jump cuts to maintain high energy",
+            "Include text overlays highlighting key points",
+            "Create a narrative arc in 30-60 seconds"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Provocative headline graphic",
-            "Use progressive reveal of OpenAI's statement across slides",
-            "Final slide: Quick takeaway/insight with bold typography"
+            "First slide must have provocative visual metaphor",
+            "Use infographic-style design for complex information",
+            "End with a swipeable call-to-action slide"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with a pattern interrupt visual",
-            "Use fast-paced text transitions",
-            "Include a quick voiceover explaining the context"
+            "Start with unexpected visual or sound design",
+            "Use dynamic motion graphics",
+            "Include subtitles for silent viewing"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Add a more professional, analytical tone",
-            "Include a thought leadership perspective on AI ethics",
-            "Use a clean, data-driven graphic design approach"
+            "Frame as thought leadership perspective",
+            "Use more formal, analytical visual language",
+            "Include professional context and implications"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast color palette with tech-inspired blues and grays, glitch-style text animations, minimalist iconography representing AI and advertising, dynamic geometric overlays, sharp-edged typography with slight digital distortion, incorporate subtle circuit/network graphic elements"
+        "description": "High-contrast cyberpunk-inspired color palette with electric blues and neon accents. Fragmented typography suggesting digital disruption. Glitch-style motion graphics with transparency layers. Minimal but aggressive composition emphasizing information hierarchy. Reference: Blade Runner UI design meets modern data visualization"
       },
       "exampleOutline": [
-        "Section 1: Bold Headline Graphic Capturing Controversy",
-        "Section 2: Quick Context of OpenAI's Admission",
-        "Section 3: Key Quote or Statement Visualization",
-        "Section 4: Rapid Insight/Interpretation",
-        "Section 5: Call-to-Engage (Discussion Prompt)"
+        "Section 1: Provocative Opening - AI Ad Controversy",
+        "Section 2: What Actually Happened at OpenAI",
+        "Section 3: Implications for Tech & User Experience",
+        "Section 4: Insider Perspective on Tech Ethics",
+        "Section 5: Future of AI Transparency"
       ],
-      "hashtags": "#OpenAI #AIEthics #ChatGPT #TechTransparency #AIAdvertising #AIInnovation #TechNews #AITrends #AIInsights #InnovationWatch",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
+      "hashtags": "#OpenAI #AIEthics #TechTrends #ChatGPT #AIMarketing #TechInnovation #AITransparency #DigitalStrategy #TechInsights #FutureOfAI",
+      "textureIndex": 10
+    },
+    {
+      "title": "Pat Gelsinger wants to save Moore&#8217;s Law, with a little help from the Feds",
+      "description": "The company is aiming to produce its first silicon wafers by 2028 and have its first commercial system online by 2029.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/06/pat-gelsinger-wants-to-save-moores-law-with-a-little-help-from-the-feds/"
+        }
+      ],
+      "format": "reel",
+      "subcategory": "reel",
+      "hooks": [
+        "Moore's Law is dying. Here's the rescue plan.",
+        "Silicon's Last Hope: Inside Intel's Bold Move",
+        "Can Government Save Computer Chip Innovation?"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic motion graphics to visualize chip technology",
+            "Include quick animated text transitions between key points",
+            "Use bright, tech-inspired color palette with high contrast"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "Create slide-based visual timeline of Moore's Law evolution",
+            "Use infographic-style design for complex technical concepts",
+            "Ensure each slide has a clear, readable headline"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Open with unexpected visual metaphor about technological innovation",
+            "Use quick-cut editing to maintain high energy",
+            "Include subtle screen recordings or tech animations"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add more technical depth and industry context",
+            "Use more professional, data-driven visual language",
+            "Include potential industry impact statements"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech aesthetic with futuristic blue-silver-white palette. Geometric motion graphics simulating circuit board patterns. Typography should feel precise yet dynamic. Incorporate abstract silicon/chip imagery with overlaid data visualizations. Use rapid transitions mimicking computational speed."
+      },
+      "exampleOutline": [
+        "Hook: Dramatic statement about technological limits",
+        "Problem: Moore's Law slowdown explained visually",
+        "Solution: Pat Gelsinger's federal collaboration strategy",
+        "Impact: What this means for future tech",
+        "Call-to-Action: Follow technological innovation"
+      ],
+      "hashtags": "#MooresLaw #TechInnovation #IntelTechnology #FutureOfComputing #SiliconValley #AIChips #TechPolicy #ComputerScience #Innovation #Technology",
+      "textureIndex": 10
+    },
+    {
+      "title": "Meta reportedly delays mixed reality glasses until 2027",
+      "description": "aMeta lready sells VR headsets and Ray-Ban smart glasses, but these new glasses sound a bit different. Their format factor would reportedly be similar to the Apple Vision Pro, with a puck-like power source.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/06/meta-reportedly-delays-mixed-reality-glasses-until-2027/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "Meta's Mixed Reality Glasses: The Wait Continues 🕰️",
+        "2027: When Tech Dreams Get Delayed 🚧",
+        "Mixed Reality's Unexpected Detour 🛣️"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use a split-screen animation showing timeline expectation vs reality",
+            "Incorporate quick visual transitions mimicking tech glitches",
+            "Add humorous tech delay sound effect"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Dramatic headline with glitch effect",
+            "Use progressive reveal of delay information",
+            "Include a comparative graphic of current vs future tech"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected visual metaphor for tech delay",
+            "Use quick-cut editing style",
+            "Include subtle motion graphics highlighting key information"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as strategic industry insight",
+            "Use more formal, analytical visual approach",
+            "Include subtle data visualization elements"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Glitch-inspired cyberpunk aesthetic with fragmented typography, desaturated blues and grays, overlaid with digital distortion effects. Incorporate tech-breakdown visual metaphors, pixelated edges, and subtle motion blur. Typography should feel both futuristic and slightly fractured."
+      },
+      "exampleOutline": [
+        "Section 1: Bold headline with tech delay shock",
+        "Section 2: Quick context of Meta's original vision",
+        "Section 3: 2027 delay visualization",
+        "Section 4: Potential industry implications",
+        "Section 5: Invitation to discuss future tech"
+      ],
+      "hashtags": "#MetaTech #MixedReality #TechInnovation #FutureGadgets #AITech #VirtualReality #TechDelay #InnovationWatch #TechTrends #ProductDevelopment",
+      "textureIndex": 0
+    },
+    {
+      "title": "Is it time to ‘refound’ your startup?",
+      "description": "Sometimes, founding a startup just once isn’t enough.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/06/is-it-time-to-refound-your-startup/"
+        }
+      ],
+      "format": "carousel",
+      "subcategory": "carousel",
+      "hooks": [
+        "When one startup isn't enough: The 'refounding' revolution",
+        "Startup founders: Your second act starts now",
+        "Pivot or perish? The brutal truth of startup survival"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic split-screen transitions between startup phases",
+            "Include quick founder interview clips for authenticity",
+            "Add high-energy text animations to maintain engagement"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "Design each slide with a clear, standalone visual concept",
+            "Use progressive reveal technique to build narrative tension",
+            "Ensure first slide acts as a compelling visual hook"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Condense carousel content into rapid-fire storytelling format",
+            "Use more direct, urgent language for shorter attention span",
+            "Include quick statistical graphics to support key points"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add more data-driven insights and professional context",
+            "Use more formal typography and corporate color palette",
+            "Include potential networking/connection call-to-action"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-forward aesthetic with futuristic gradient overlays. High-contrast typography in sans-serif, angular layouts suggesting transformation. Color palette of electric blues, deep purples, and metallic accents. Dynamic motion graphics suggesting startup evolution, with glitch-style transitions between slides"
+      },
+      "exampleOutline": [
+        "Slide 1: Provocative hook with startup lifecycle graphic",
+        "Slide 2: Current startup failure statistics",
+        "Slide 3: What 'refounding' actually means",
+        "Slide 4: Key strategic pivot principles",
+        "Slide 5: Call-to-action and further resources"
+      ],
+      "hashtags": "#StartupStrategy #EntrepreneurLife #BusinessPivot #TechInnovation #StartupGrowth #FounderTips #BusinessEvolution #InnovationMindset #EntrepreneurSuccess #StartupCommunity",
+      "textureIndex": 10
     }
   ]
 }
