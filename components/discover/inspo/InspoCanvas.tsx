@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useMemo, useEffect } from 'react';
+import { useRef, useMemo, useEffect, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import * as THREE from 'three';
@@ -9,17 +9,31 @@ import ResourceNodes from './ResourceNodes';
 import type { NormalizedResource } from '@/lib/data/inspo';
 
 /**
+ * Animation configuration for central sphere entrance
+ */
+const SPHERE_ANIMATION = {
+  ENTRANCE_DURATION: 800,  // 800ms fade-in
+  LERP_SPEED: 0.08,        // Smooth interpolation
+};
+
+/**
  * CentralSphere
  * 
  * A sphere made of many small particles using Fibonacci distribution.
  * Creates the iconic particle sphere visualization - the "sun" that
  * resource nodes orbit around.
  * 
- * This is a simplified, fixed version of ParticleSystem locked to sphere mode.
+ * Features entrance fade-in animation on mount.
  */
 function CentralSphere() {
   const meshRef = useRef<THREE.InstancedMesh>(null);
   const groupRef = useRef<THREE.Group>(null);
+  const materialRef = useRef<THREE.MeshBasicMaterial>(null);
+  
+  // Animation state
+  const [isInitialized, setIsInitialized] = useState(false);
+  const entranceStartRef = useRef<number>(Date.now());
+  const currentScaleRef = useRef<number>(0);
   
   // Fixed settings (matching original defaults)
   const particleCount = 2000;
@@ -84,6 +98,8 @@ function CentralSphere() {
         positions[i * 3 + 1] || 0,
         positions[i * 3 + 2] || 0
       );
+      // Start at scale 0 for entrance animation
+      dummy.scale.set(0, 0, 0);
       dummy.updateMatrix();
       meshRef.current.setMatrixAt(i, dummy.matrix);
     }
@@ -95,12 +111,52 @@ function CentralSphere() {
       const colorAttribute = new THREE.InstancedBufferAttribute(colors, 3);
       meshRef.current.geometry.setAttribute('color', colorAttribute);
     }
+    
+    // Mark entrance start
+    entranceStartRef.current = Date.now();
   }, [positions, colors]);
   
-  // Rotate the sphere group
+  // Animation loop - handles entrance animation and rotation
   useFrame((_, delta) => {
-    if (groupRef.current) {
-      groupRef.current.rotation.y += 0.5 * delta * 0.5;
+    if (!groupRef.current || !meshRef.current) return;
+    
+    // Rotate the sphere group
+    groupRef.current.rotation.y += 0.5 * delta * 0.5;
+    
+    // Handle entrance animation
+    const now = Date.now();
+    const timeSinceStart = now - entranceStartRef.current;
+    
+    // Calculate target scale based on entrance progress
+    let targetScale = 1;
+    if (timeSinceStart < SPHERE_ANIMATION.ENTRANCE_DURATION) {
+      const progress = timeSinceStart / SPHERE_ANIMATION.ENTRANCE_DURATION;
+      // Ease-out cubic for smooth deceleration
+      targetScale = 1 - Math.pow(1 - progress, 3);
+    } else if (!isInitialized) {
+      setIsInitialized(true);
+    }
+    
+    // Lerp current scale toward target
+    const currentScale = currentScaleRef.current;
+    const newScale = currentScale + (targetScale - currentScale) * SPHERE_ANIMATION.LERP_SPEED;
+    
+    // Only update matrices if scale changed significantly
+    if (Math.abs(newScale - currentScale) > 0.001) {
+      currentScaleRef.current = newScale;
+      
+      const dummy = new THREE.Object3D();
+      for (let i = 0; i < particleCount; i++) {
+        dummy.position.set(
+          positions[i * 3] || 0,
+          positions[i * 3 + 1] || 0,
+          positions[i * 3 + 2] || 0
+        );
+        dummy.scale.set(newScale, newScale, newScale);
+        dummy.updateMatrix();
+        meshRef.current.setMatrixAt(i, dummy.matrix);
+      }
+      meshRef.current.instanceMatrix.needsUpdate = true;
     }
   });
   
@@ -108,7 +164,7 @@ function CentralSphere() {
     <group ref={groupRef} position={[0, 0, 0]}>
       <instancedMesh ref={meshRef} args={[undefined, undefined, particleCount]}>
         <sphereGeometry args={[particleSize, 8, 8]} />
-        <meshBasicMaterial vertexColors />
+        <meshBasicMaterial ref={materialRef} vertexColors transparent opacity={1} />
       </instancedMesh>
     </group>
   );
