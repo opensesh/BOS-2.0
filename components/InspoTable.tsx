@@ -1,9 +1,73 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { ChevronUp, ChevronDown, ChevronsUpDown, ExternalLink } from 'lucide-react';
 import type { InspoResource, NormalizedResource } from '@/lib/data/inspo';
 import { normalizeResource } from '@/lib/data/inspo';
+
+// Get favicon URL from domain using Google's service
+function getFaviconUrl(url: string): string {
+  try {
+    const domain = new URL(url).hostname;
+    return `https://www.google.com/s2/favicons?domain=${domain}&sz=64`;
+  } catch {
+    return '';
+  }
+}
+
+// Thumbnail component with fallback to favicon
+function ResourceThumbnail({ resource }: { resource: NormalizedResource }) {
+  const [imgError, setImgError] = useState(false);
+  const [faviconError, setFaviconError] = useState(false);
+
+  const faviconUrl = getFaviconUrl(resource.url);
+  const hasThumbnail = resource.thumbnail && !imgError;
+  const hasFavicon = faviconUrl && !faviconError;
+
+  // Fallback: colored initial
+  if (!hasThumbnail && !hasFavicon) {
+    const initial = resource.name.charAt(0).toUpperCase();
+    return (
+      <div className="w-10 h-10 rounded-lg bg-os-surface-dark border border-os-border-dark flex items-center justify-center flex-shrink-0">
+        <span className="text-sm font-medium text-os-text-secondary-dark">{initial}</span>
+      </div>
+    );
+  }
+
+  // Show thumbnail if available
+  if (hasThumbnail) {
+    return (
+      <div className="w-10 h-10 rounded-lg overflow-hidden bg-os-surface-dark border border-os-border-dark flex-shrink-0 relative">
+        <Image
+          src={resource.thumbnail!}
+          alt={resource.name}
+          fill
+          sizes="40px"
+          className="object-cover"
+          onError={() => setImgError(true)}
+        />
+      </div>
+    );
+  }
+
+  // Fallback to favicon
+  return (
+    <div className="w-10 h-10 rounded-lg overflow-hidden bg-os-surface-dark border border-os-border-dark flex items-center justify-center flex-shrink-0">
+      <Image
+        src={faviconUrl}
+        alt={resource.name}
+        width={24}
+        height={24}
+        className="object-contain"
+        onError={() => setFaviconError(true)}
+        unoptimized
+      />
+    </div>
+  );
+}
 
 interface InspoTableProps {
   resources: InspoResource[];
@@ -13,8 +77,10 @@ type SortField = 'name' | 'category' | 'section' | 'pricing';
 type SortDirection = 'asc' | 'desc' | null;
 
 export function InspoTable({ resources: rawResources }: InspoTableProps) {
+  const router = useRouter();
+
   // Normalize resources to handle PascalCase column names from Supabase
-  const resources: NormalizedResource[] = useMemo(() => 
+  const resources: NormalizedResource[] = useMemo(() =>
     rawResources.map(normalizeResource), [rawResources]);
   // Filter state
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
@@ -176,6 +242,11 @@ export function InspoTable({ resources: rawResources }: InspoTableProps) {
         <table className="w-full">
           <thead>
             <tr className="border-b border-os-border-dark">
+              {/* Thumbnail Header */}
+              <th className="w-16 p-4">
+                <span className="sr-only">Thumbnail</span>
+              </th>
+
               {/* Name Header */}
               <th className="text-left p-4">
                 <button
@@ -219,12 +290,17 @@ export function InspoTable({ resources: rawResources }: InspoTableProps) {
                   {getSortIcon('pricing')}
                 </button>
               </th>
+
+              {/* Actions Header */}
+              <th className="w-20 p-4">
+                <span className="sr-only">Actions</span>
+              </th>
             </tr>
           </thead>
           <tbody>
             {filteredAndSortedResources.length === 0 ? (
               <tr>
-                <td colSpan={4} className="p-12 text-center text-os-text-secondary-dark">
+                <td colSpan={6} className="p-12 text-center text-os-text-secondary-dark">
                   No resources match the selected filters.
                 </td>
               </tr>
@@ -232,19 +308,19 @@ export function InspoTable({ resources: rawResources }: InspoTableProps) {
               filteredAndSortedResources.map((resource) => (
                 <tr
                   key={resource.id}
-                  className="border-b border-os-border-dark/50 hover:bg-os-surface-dark/30 transition-colors group"
+                  onClick={() => router.push(`/discover/inspo/${resource.id}`)}
+                  className="border-b border-os-border-dark/50 hover:bg-os-surface-dark/30 transition-colors group cursor-pointer"
                 >
-                  {/* Name Column - Hyperlinked */}
+                  {/* Thumbnail Column */}
                   <td className="p-4">
-                    <a
-                      href={resource.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-os-text-primary-dark hover:text-brand-aperol transition-colors group-hover:underline"
-                    >
-                      <span className="font-medium">{resource.name}</span>
-                      <ExternalLink className="w-3.5 h-3.5 opacity-40 group-hover:opacity-100 transition-opacity" />
-                    </a>
+                    <ResourceThumbnail resource={resource} />
+                  </td>
+
+                  {/* Name Column - Links to detail page */}
+                  <td className="p-4">
+                    <span className="font-medium text-os-text-primary-dark group-hover:text-brand-aperol transition-colors">
+                      {resource.name}
+                    </span>
                   </td>
 
                   {/* Category Column */}
@@ -266,6 +342,20 @@ export function InspoTable({ resources: rawResources }: InspoTableProps) {
                     ) : (
                       <span className="text-os-text-secondary-dark">—</span>
                     )}
+                  </td>
+
+                  {/* Actions Column - External Link */}
+                  <td className="p-4">
+                    <a
+                      href={resource.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-os-surface-dark border border-os-border-dark text-os-text-secondary-dark hover:text-brand-aperol hover:border-brand-aperol/30 transition-all"
+                      title={`Visit ${resource.name}`}
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
                   </td>
                 </tr>
               ))

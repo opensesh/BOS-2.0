@@ -119,8 +119,8 @@ function InspoContent() {
       <Sidebar />
       <main className="flex-1 flex flex-col min-w-0 overflow-hidden bg-os-bg-dark pt-14 lg:pt-0 relative">
         
-        {/* Header */}
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-6 py-6 md:px-12 md:py-8">
+        {/* Header - matches DiscoverLayout padding for consistency */}
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-6 py-8 md:px-12 md:py-12">
           <div className="flex items-center justify-between gap-4">
             {/* Left: Title and Tabs */}
             <div className="flex items-center gap-3">
@@ -199,15 +199,15 @@ function InspoContent() {
 
             {/* 3D Visualization - centered */}
             <div className="relative flex-shrink-0" style={{ height: '40vh', minHeight: '260px', maxHeight: '360px' }}>
-              {/* Gradient fade overlays */}
+              {/* Gradient fade overlays - shorter to show more of the 3D */}
               <div 
-                className="absolute top-0 left-0 right-0 h-16 pointer-events-none z-10"
+                className="absolute top-0 left-0 right-0 h-8 pointer-events-none z-10"
                 style={{
                   background: 'linear-gradient(to bottom, #141414 0%, transparent 100%)'
                 }}
               />
               <div 
-                className="absolute bottom-0 left-0 right-0 h-16 pointer-events-none z-10"
+                className="absolute bottom-0 left-0 right-0 h-8 pointer-events-none z-10"
                 style={{
                   background: 'linear-gradient(to top, #141414 0%, transparent 100%)'
                 }}

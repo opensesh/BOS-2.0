@@ -15,10 +15,21 @@ export interface InspoResource {
   Pricing: string | null;
   Featured: boolean | null;
   OpenSource: boolean | null;
-  Tags: string[] | null;
+  Tags: string[] | string | null; // Can be array or comma-separated string from Supabase
   Count: string | null;
   Tier: number | null;
   thumbnail_url: string | null;
+}
+
+// Helper to safely parse tags from Supabase (might be string or array)
+function parseTags(tags: string[] | string | null): string[] | null {
+  if (!tags) return null;
+  if (Array.isArray(tags)) return tags.length > 0 ? tags : null;
+  if (typeof tags === 'string' && tags.trim()) {
+    const parsed = tags.split(',').map(t => t.trim()).filter(Boolean);
+    return parsed.length > 0 ? parsed : null;
+  }
+  return null;
 }
 
 // Normalized type for component use (lowercase keys)
@@ -50,7 +61,7 @@ export function normalizeResource(resource: InspoResource): NormalizedResource {
     pricing: resource.Pricing ?? null,
     featured: resource.Featured ?? false,
     opensource: resource.OpenSource ?? false,
-    tags: resource.Tags ?? null,
+    tags: parseTags(resource.Tags),
     count: resource.Count ?? null,
     tier: resource.Tier ?? null,
     thumbnail: resource.thumbnail_url ?? null,

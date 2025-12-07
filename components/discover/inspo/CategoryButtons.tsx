@@ -27,7 +27,12 @@ export function CategoryButtons({
         }
       }
     });
-    return Array.from(categorySet).sort();
+    // Sort alphabetically but move "AI" to the end
+    return Array.from(categorySet).sort((a, b) => {
+      if (a.toUpperCase() === 'AI') return 1;
+      if (b.toUpperCase() === 'AI') return -1;
+      return a.localeCompare(b);
+    });
   }, [resources]);
 
   if (categories.length === 0) {
