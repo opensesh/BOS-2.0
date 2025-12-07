@@ -8,7 +8,7 @@ import { Sidebar } from '@/components/Sidebar';
 import { InspoHeader } from '@/components/discover/InspoHeader';
 import { InspoTable } from '@/components/InspoTable';
 import { useInspoStore } from '@/lib/stores/inspo-store';
-import { getInspoResources, type InspoResource } from '@/lib/data/inspo';
+import { getInspoResources, normalizeResource, type InspoResource } from '@/lib/data/inspo';
 
 // Dynamically import the 3D canvas and control panel to avoid SSR issues
 const InspoCanvas = dynamic(
@@ -28,12 +28,17 @@ const ControlPanel = dynamic(
   { ssr: false }
 );
 
+const NodeTooltip = dynamic(
+  () => import('@/components/discover/inspo/NodeTooltip').then(mod => ({ default: mod.NodeTooltip })),
+  { ssr: false }
+);
+
 type DisplayMode = '3d' | 'table';
 
 function InspoContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const { togglePanel } = useInspoStore();
+  const { togglePanel, setResources: setStoreResources } = useInspoStore();
   
   // Display mode state (3D vs Table)
   const [displayMode, setDisplayMode] = useState<DisplayMode>('3d');
@@ -53,6 +58,9 @@ function InspoContent() {
           setFetchError(error.message || 'Failed to load resources');
         } else if (data) {
           setResources(data);
+          // Also set normalized resources in the store for 3D visualization
+          const normalized = data.map(normalizeResource);
+          setStoreResources(normalized);
         }
       } catch (err) {
         console.error('Unexpected error:', err);
@@ -61,7 +69,7 @@ function InspoContent() {
       setIsLoadingData(false);
     }
     fetchResources();
-  }, []);
+  }, [setStoreResources]);
 
   // Sync display mode from URL on mount
   useEffect(() => {
@@ -103,12 +111,14 @@ function InspoContent() {
 
             {/* 3D Visualization - fills remaining space, pulled up to overlap with gradient */}
             <motion.div
-              className="flex-1 w-full -mt-20 md:-mt-28"
+              className="flex-1 w-full -mt-20 md:-mt-28 relative"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
             >
               <InspoCanvas />
+              {/* Tooltip for hovered node */}
+              <NodeTooltip />
             </motion.div>
 
             {/* Control Panel - drawer (only in 3D mode) */}
