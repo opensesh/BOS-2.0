@@ -11,7 +11,10 @@ import { InspoTable } from '@/components/InspoTable';
 import { getInspoResources, normalizeResource, type InspoResource, type NormalizedResource } from '@/lib/data/inspo';
 
 // Dynamically import 3D components to avoid SSR issues
-const InspoCanvas = dynamic(
+const InspoCanvas = dynamic<{
+  resources?: import('@/lib/data/inspo').NormalizedResource[];
+  activeFilter?: string | null;
+}>(
   () => import('@/components/discover/inspo/InspoCanvas'),
   {
     ssr: false,
@@ -209,7 +212,10 @@ function InspoContent() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.4 }}
               >
-                <InspoCanvas />
+                <InspoCanvas 
+                  resources={normalizedResources}
+                  activeFilter={activeCategory}
+                />
               </motion.div>
             </div>
 

@@ -5,12 +5,15 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import * as THREE from 'three';
 import { generateSphereLayout } from '@/lib/utils/particle-layouts';
+import ResourceNodes from './ResourceNodes';
+import type { NormalizedResource } from '@/lib/data/inspo';
 
 /**
  * CentralSphere
  * 
  * A sphere made of many small particles using Fibonacci distribution.
- * Creates the iconic particle sphere visualization.
+ * Creates the iconic particle sphere visualization - the "sun" that
+ * resource nodes orbit around.
  * 
  * This is a simplified, fixed version of ParticleSystem locked to sphere mode.
  */
@@ -112,19 +115,33 @@ function CentralSphere() {
 }
 
 /**
+ * InspoCanvas Props
+ */
+interface InspoCanvasProps {
+  resources?: NormalizedResource[];
+  activeFilter?: string | null;
+}
+
+/**
  * InspoCanvas
  * 
  * Main canvas component with:
- * - Central particle sphere (Fibonacci distribution)
- * - Orbital camera controls
- * - Ready for Phase 2 orbital node positioning
+ * - Central particle sphere (the "sun" - Fibonacci distribution)
+ * - Orbital resource nodes (the "planets" - each resource as a colored sphere)
+ * - Orbital camera controls for 3D navigation
+ * 
+ * Resources are positioned in a spherical shell around the center using
+ * deterministic positioning based on resource ID.
  */
-export default function InspoCanvas() {
+export default function InspoCanvas({ 
+  resources = [], 
+  activeFilter 
+}: InspoCanvasProps) {
   return (
     <Canvas
       className="w-full h-full"
       camera={{ 
-        position: [0, 0, 22], 
+        position: [0, 0, 60], // Pulled back to see orbital nodes
         fov: 60
       }}
       gl={{ alpha: true }}
@@ -132,14 +149,24 @@ export default function InspoCanvas() {
     >
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} intensity={1} />
+      
+      {/* Central particle sphere - the "sun" */}
       <CentralSphere />
       
-      {/* OrbitControls with specified settings */}
+      {/* Orbital resource nodes - the "planets" */}
+      {resources.length > 0 && (
+        <ResourceNodes 
+          resources={resources}
+          activeFilter={activeFilter}
+        />
+      )}
+      
+      {/* OrbitControls with settings for viewing the entire solar system */}
       <OrbitControls
         enableDamping
         dampingFactor={0.05}
-        minDistance={10}
-        maxDistance={100}
+        minDistance={20}
+        maxDistance={150}
         autoRotate={false}
         enablePan={false}
       />
