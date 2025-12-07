@@ -1,5 +1,4 @@
 import { create } from 'zustand';
-import type { NormalizedResource } from '@/lib/data/inspo';
 
 export type ViewMode = 'sphere' | 'galaxy' | 'grid' | 'nebula' | 'starfield' | 'vortex';
 
@@ -13,12 +12,6 @@ interface ParticleSettings {
 interface ColorSettings {
   innerColor: string;
   outerColor: string;
-}
-
-interface ClusterState {
-  centerId: number | null;
-  nearbyIds: number[];
-  isAnimating: boolean;
 }
 
 interface InspoState {
@@ -35,13 +28,6 @@ interface InspoState {
   // Control panel state
   isPanelOpen: boolean;
 
-  // Resources data
-  resources: NormalizedResource[];
-  
-  // Hover and cluster state
-  hoveredNodeId: number | null;
-  clusterState: ClusterState;
-
   // Actions
   setViewMode: (mode: ViewMode) => void;
   setTransitioning: (transitioning: boolean) => void;
@@ -53,10 +39,6 @@ interface InspoState {
   setOuterColor: (color: string) => void;
   setPanelOpen: (open: boolean) => void;
   togglePanel: () => void;
-  setResources: (resources: NormalizedResource[]) => void;
-  setHoveredNodeId: (id: number | null) => void;
-  setClusterState: (state: ClusterState) => void;
-  clearCluster: () => void;
 }
 
 const DEFAULT_PARTICLE_SETTINGS: ParticleSettings = {
@@ -71,21 +53,12 @@ const DEFAULT_COLOR_SETTINGS: ColorSettings = {
   outerColor: '#FE5102', // Aperol (edge)
 };
 
-const DEFAULT_CLUSTER_STATE: ClusterState = {
-  centerId: null,
-  nearbyIds: [],
-  isAnimating: false,
-};
-
 export const useInspoStore = create<InspoState>((set) => ({
   viewMode: 'sphere',
   isTransitioning: false,
   particleSettings: DEFAULT_PARTICLE_SETTINGS,
   colorSettings: DEFAULT_COLOR_SETTINGS,
   isPanelOpen: false,
-  resources: [],
-  hoveredNodeId: null,
-  clusterState: DEFAULT_CLUSTER_STATE,
 
   setViewMode: (mode) => set({ viewMode: mode }),
   setTransitioning: (transitioning) => set({ isTransitioning: transitioning }),
@@ -122,12 +95,4 @@ export const useInspoStore = create<InspoState>((set) => ({
   
   setPanelOpen: (open) => set({ isPanelOpen: open }),
   togglePanel: () => set((state) => ({ isPanelOpen: !state.isPanelOpen })),
-  
-  setResources: (resources) => set({ resources }),
-  setHoveredNodeId: (id) => set({ hoveredNodeId: id }),
-  setClusterState: (clusterState) => set({ clusterState }),
-  clearCluster: () => set({ 
-    hoveredNodeId: null, 
-    clusterState: DEFAULT_CLUSTER_STATE 
-  }),
 }));

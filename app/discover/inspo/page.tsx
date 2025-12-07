@@ -4,11 +4,10 @@ import React, { useEffect, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
-import { Box, Table2 } from 'lucide-react';
 import { Sidebar } from '@/components/Sidebar';
 import { InspoHeader } from '@/components/discover/InspoHeader';
 import { InspoTable } from '@/components/InspoTable';
-import { useInspoStore, ViewMode } from '@/lib/stores/inspo-store';
+import { useInspoStore } from '@/lib/stores/inspo-store';
 import { getInspoResources, type InspoResource } from '@/lib/data/inspo';
 
 // Dynamically import the 3D canvas and control panel to avoid SSR issues
@@ -29,28 +28,28 @@ const ControlPanel = dynamic(
   { ssr: false }
 );
 
-// Valid view modes for URL param validation
-const VALID_VIEW_MODES: ViewMode[] = ['sphere', 'galaxy', 'grid', 'nebula', 'starfield', 'vortex'];
-
 type DisplayMode = '3d' | 'table';
 
 function InspoContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const { viewMode, setViewMode, isTransitioning, togglePanel } = useInspoStore();
+  const { togglePanel } = useInspoStore();
   
   // Display mode state (3D vs Table)
   const [displayMode, setDisplayMode] = useState<DisplayMode>('3d');
   const [resources, setResources] = useState<InspoResource[]>([]);
   const [isLoadingData, setIsLoadingData] = useState(false);
+  const [fetchError, setFetchError] = useState<string | null>(null);
 
   // Fetch inspiration resources on mount
   useEffect(() => {
     async function fetchResources() {
       setIsLoadingData(true);
+      setFetchError(null);
       const { data, error } = await getInspoResources();
       if (error) {
         console.error('Error fetching resources:', error);
+        setFetchError(error.message || 'Failed to load resources');
       } else if (data) {
         setResources(data);
       }
@@ -59,27 +58,13 @@ function InspoContent() {
     fetchResources();
   }, []);
 
-  // Sync URL param with store on mount
+  // Sync display mode from URL on mount
   useEffect(() => {
-    const viewParam = searchParams.get('view') as ViewMode | null;
-    if (viewParam && VALID_VIEW_MODES.includes(viewParam)) {
-      setViewMode(viewParam);
-    }
-    // Check for display mode in URL
     const displayParam = searchParams.get('display') as DisplayMode | null;
     if (displayParam === 'table' || displayParam === '3d') {
       setDisplayMode(displayParam);
     }
-  }, [searchParams, setViewMode]);
-
-  // Handle view mode change - update URL
-  const handleViewModeChange = (mode: ViewMode) => {
-    if (isTransitioning) return;
-    setViewMode(mode);
-    const params = new URLSearchParams(searchParams.toString());
-    params.set('view', mode);
-    router.push(`/discover/inspo?${params.toString()}`, { scroll: false });
-  };
+  }, [searchParams]);
 
   // Handle display mode change
   const handleDisplayModeChange = (mode: DisplayMode) => {
