@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState, Suspense, useMemo } from 'react';
+import React, { useEffect, useState, Suspense, useMemo, useCallback } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
@@ -12,8 +12,10 @@ import { getInspoResources, normalizeResource, type InspoResource, type Normaliz
 
 // Dynamically import 3D components to avoid SSR issues
 const InspoCanvas = dynamic<{
-  resources?: import('@/lib/data/inspo').NormalizedResource[];
+  resources?: NormalizedResource[];
   activeFilter?: string | null;
+  onResourceHover?: (resource: NormalizedResource | null, mousePosition: { x: number; y: number }) => void;
+  onResourceClick?: (resource: NormalizedResource) => void;
 }>(
   () => import('@/components/discover/inspo/InspoCanvas'),
   {
@@ -24,6 +26,12 @@ const InspoCanvas = dynamic<{
       </div>
     )
   }
+);
+
+// Import tooltip component
+const InspoResourceTooltip = dynamic(
+  () => import('@/components/discover/inspo/InspoResourceTooltip'),
+  { ssr: false }
 );
 
 // ControlPanel kept for future scene manipulation features
@@ -61,6 +69,10 @@ function InspoContent() {
   
   // Chat state
   const [isProcessing, setIsProcessing] = useState(false);
+  
+  // Hover state for 3D tooltip
+  const [hoveredResource, setHoveredResource] = useState<NormalizedResource | null>(null);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   // Fetch inspiration resources on mount
   useEffect(() => {
@@ -109,6 +121,22 @@ function InspoContent() {
     // Future: This will filter/search the 3D visualization
     setTimeout(() => setIsProcessing(false), 1000);
   };
+
+  // Handle resource hover from 3D canvas
+  const handleResourceHover = useCallback((
+    resource: NormalizedResource | null,
+    position: { x: number; y: number }
+  ) => {
+    setHoveredResource(resource);
+    setMousePosition(position);
+  }, []);
+
+  // Handle resource click - open in new tab
+  const handleResourceClick = useCallback((resource: NormalizedResource) => {
+    if (resource.url) {
+      window.open(resource.url, '_blank', 'noopener,noreferrer');
+    }
+  }, []);
 
   // Filtered resources based on category
   const filteredResources = useMemo(() => {
@@ -215,8 +243,16 @@ function InspoContent() {
                 <InspoCanvas 
                   resources={normalizedResources}
                   activeFilter={activeCategory}
+                  onResourceHover={handleResourceHover}
+                  onResourceClick={handleResourceClick}
                 />
               </motion.div>
+              
+              {/* Hover Tooltip - rendered outside canvas for proper DOM positioning */}
+              <InspoResourceTooltip
+                resource={hoveredResource}
+                mousePosition={mousePosition}
+              />
             </div>
 
             {/* Bottom spacer - pushes chat up */}

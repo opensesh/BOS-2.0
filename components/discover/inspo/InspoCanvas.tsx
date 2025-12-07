@@ -1,63 +1,46 @@
 'use client';
 
-import { useRef, useMemo, useEffect, useState } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { useRef, useMemo, useEffect, useState, useCallback } from 'react';
+import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import * as THREE from 'three';
 import { generateSphereLayout } from '@/lib/utils/particle-layouts';
-import ResourceNodes from './ResourceNodes';
+import ResourceNodes, { type ResourceNodesHandle } from './ResourceNodes';
 import type { NormalizedResource } from '@/lib/data/inspo';
 
 /**
  * Animation configuration for central sphere entrance
  */
 const SPHERE_ANIMATION = {
-  ENTRANCE_DURATION: 800,  // 800ms fade-in
-  LERP_SPEED: 0.08,        // Smooth interpolation
+  ENTRANCE_DURATION: 800,
+  LERP_SPEED: 0.08,
 };
 
 /**
- * CentralSphere
- * 
- * A sphere made of many small particles using Fibonacci distribution.
- * Creates the iconic particle sphere visualization - the "sun" that
- * resource nodes orbit around.
- * 
- * Features entrance fade-in animation on mount.
+ * CentralSphere - The "sun" that resource nodes orbit around
  */
 function CentralSphere() {
   const meshRef = useRef<THREE.InstancedMesh>(null);
   const groupRef = useRef<THREE.Group>(null);
-  const materialRef = useRef<THREE.MeshBasicMaterial>(null);
   
-  // Animation state
   const [isInitialized, setIsInitialized] = useState(false);
   const entranceStartRef = useRef<number>(Date.now());
   const currentScaleRef = useRef<number>(0);
   
-  // Fixed settings (matching original defaults)
   const particleCount = 2000;
   const radius = 10;
   const particleSize = 0.12;
-  const innerColor = '#FFFAEE'; // Vanilla
-  const outerColor = '#FE5102'; // Aperol
+  const innerColor = '#FFFAEE';
+  const outerColor = '#FE5102';
   
-  // Generate sphere positions using Fibonacci distribution
-  const positions = useMemo(() => 
-    generateSphereLayout(particleCount, radius),
-    []
-  );
-  
-  // Create color objects
+  const positions = useMemo(() => generateSphereLayout(particleCount, radius), []);
   const innerColorObj = useMemo(() => new THREE.Color(innerColor), []);
   const outerColorObj = useMemo(() => new THREE.Color(outerColor), []);
   
-  // Calculate colors based on distance from center
   const colors = useMemo(() => {
     const colorArray = new Float32Array(particleCount * 3);
     const tempColor = new THREE.Color();
     
-    // Find max distance for normalization
     let maxDistance = 0;
     for (let i = 0; i < particleCount; i++) {
       const x = positions[i * 3];
@@ -86,7 +69,6 @@ function CentralSphere() {
     return colorArray;
   }, [positions, innerColorObj, outerColorObj]);
   
-  // Update instanced mesh positions and colors (runs after mount)
   useEffect(() => {
     if (!meshRef.current) return;
     
@@ -98,7 +80,6 @@ function CentralSphere() {
         positions[i * 3 + 1] || 0,
         positions[i * 3 + 2] || 0
       );
-      // Start at scale 0 for entrance animation
       dummy.scale.set(0, 0, 0);
       dummy.updateMatrix();
       meshRef.current.setMatrixAt(i, dummy.matrix);
@@ -106,42 +87,33 @@ function CentralSphere() {
     
     meshRef.current.instanceMatrix.needsUpdate = true;
     
-    // Set instance colors
     if (meshRef.current.geometry) {
       const colorAttribute = new THREE.InstancedBufferAttribute(colors, 3);
       meshRef.current.geometry.setAttribute('color', colorAttribute);
     }
     
-    // Mark entrance start
     entranceStartRef.current = Date.now();
   }, [positions, colors]);
   
-  // Animation loop - handles entrance animation and rotation
   useFrame((_, delta) => {
     if (!groupRef.current || !meshRef.current) return;
     
-    // Rotate the sphere group
     groupRef.current.rotation.y += 0.5 * delta * 0.5;
     
-    // Handle entrance animation
     const now = Date.now();
     const timeSinceStart = now - entranceStartRef.current;
     
-    // Calculate target scale based on entrance progress
     let targetScale = 1;
     if (timeSinceStart < SPHERE_ANIMATION.ENTRANCE_DURATION) {
       const progress = timeSinceStart / SPHERE_ANIMATION.ENTRANCE_DURATION;
-      // Ease-out cubic for smooth deceleration
       targetScale = 1 - Math.pow(1 - progress, 3);
     } else if (!isInitialized) {
       setIsInitialized(true);
     }
     
-    // Lerp current scale toward target
     const currentScale = currentScaleRef.current;
     const newScale = currentScale + (targetScale - currentScale) * SPHERE_ANIMATION.LERP_SPEED;
     
-    // Only update matrices if scale changed significantly
     if (Math.abs(newScale - currentScale) > 0.001) {
       currentScaleRef.current = newScale;
       
@@ -164,10 +136,122 @@ function CentralSphere() {
     <group ref={groupRef} position={[0, 0, 0]}>
       <instancedMesh ref={meshRef} args={[undefined, undefined, particleCount]}>
         <sphereGeometry args={[particleSize, 8, 8]} />
-        <meshBasicMaterial ref={materialRef} vertexColors transparent opacity={1} />
+        <meshBasicMaterial vertexColors transparent opacity={1} />
       </instancedMesh>
     </group>
   );
+}
+
+/**
+ * InteractionController
+ * 
+ * Handles raycasting for mouse hover and click interactions with resource nodes.
+ * Updates cursor style and detects which node is being interacted with.
+ */
+interface InteractionControllerProps {
+  resourceNodesRef: React.RefObject<ResourceNodesHandle | null>;
+  onHover: (index: number | null) => void;
+  onClick: (index: number) => void;
+}
+
+function InteractionController({ 
+  resourceNodesRef, 
+  onHover, 
+  onClick 
+}: InteractionControllerProps) {
+  const { camera, gl } = useThree();
+  const raycaster = useMemo(() => new THREE.Raycaster(), []);
+  const mouse = useMemo(() => new THREE.Vector2(), []);
+  const lastHoveredRef = useRef<number | null>(null);
+  
+  // Set raycaster threshold for instanced meshes
+  raycaster.params.Points = { threshold: 0.5 };
+  
+  useEffect(() => {
+    const canvas = gl.domElement;
+    
+    const handleMouseMove = (event: MouseEvent) => {
+      const rect = canvas.getBoundingClientRect();
+      mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+      mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+    };
+    
+    const handleClick = (event: MouseEvent) => {
+      if (!resourceNodesRef.current) return;
+      
+      const mesh = resourceNodesRef.current.getMesh();
+      if (!mesh) return;
+      
+      const rect = canvas.getBoundingClientRect();
+      mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+      mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+      
+      raycaster.setFromCamera(mouse, camera);
+      const intersects = raycaster.intersectObject(mesh);
+      
+      if (intersects.length > 0 && intersects[0].instanceId !== undefined) {
+        const index = intersects[0].instanceId;
+        const opacity = resourceNodesRef.current.getOpacityAtIndex(index);
+        
+        // Only trigger click if node is visible enough
+        if (opacity >= 0.1) {
+          onClick(index);
+        }
+      }
+    };
+    
+    const handleMouseLeave = () => {
+      if (lastHoveredRef.current !== null) {
+        lastHoveredRef.current = null;
+        onHover(null);
+        canvas.style.cursor = 'default';
+      }
+    };
+    
+    canvas.addEventListener('mousemove', handleMouseMove);
+    canvas.addEventListener('click', handleClick);
+    canvas.addEventListener('mouseleave', handleMouseLeave);
+    
+    return () => {
+      canvas.removeEventListener('mousemove', handleMouseMove);
+      canvas.removeEventListener('click', handleClick);
+      canvas.removeEventListener('mouseleave', handleMouseLeave);
+    };
+  }, [camera, gl, raycaster, mouse, resourceNodesRef, onHover, onClick]);
+  
+  // Perform raycasting on each frame for smooth hover detection
+  useFrame(() => {
+    if (!resourceNodesRef.current) return;
+    
+    const mesh = resourceNodesRef.current.getMesh();
+    if (!mesh) return;
+    
+    raycaster.setFromCamera(mouse, camera);
+    const intersects = raycaster.intersectObject(mesh);
+    
+    let newHovered: number | null = null;
+    
+    if (intersects.length > 0 && intersects[0].instanceId !== undefined) {
+      const index = intersects[0].instanceId;
+      const opacity = resourceNodesRef.current.getOpacityAtIndex(index);
+      
+      // Only hover if node is visible enough
+      if (opacity >= 0.1) {
+        newHovered = index;
+      }
+    }
+    
+    // Update hover state only if changed
+    if (newHovered !== lastHoveredRef.current) {
+      lastHoveredRef.current = newHovered;
+      onHover(newHovered);
+      
+      // Update cursor
+      gl.domElement.style.cursor = newHovered !== null ? 'pointer' : 'default';
+    }
+  });
+  
+  return null;
 }
 
 /**
@@ -176,28 +260,76 @@ function CentralSphere() {
 interface InspoCanvasProps {
   resources?: NormalizedResource[];
   activeFilter?: string | null;
+  onResourceHover?: (resource: NormalizedResource | null, mousePosition: { x: number; y: number }) => void;
+  onResourceClick?: (resource: NormalizedResource) => void;
 }
 
 /**
  * InspoCanvas
  * 
  * Main canvas component with:
- * - Central particle sphere (the "sun" - Fibonacci distribution)
- * - Orbital resource nodes (the "planets" - each resource as a colored sphere)
- * - Orbital camera controls for 3D navigation
- * 
- * Resources are positioned in a spherical shell around the center using
- * deterministic positioning based on resource ID.
+ * - Central particle sphere (the "sun")
+ * - Orbital resource nodes (the "planets")
+ * - Orbital camera controls
+ * - Raycasting for hover/click interactions
  */
 export default function InspoCanvas({ 
   resources = [], 
-  activeFilter 
+  activeFilter,
+  onResourceHover,
+  onResourceClick,
 }: InspoCanvasProps) {
+  const resourceNodesRef = useRef<ResourceNodesHandle>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const mousePosRef = useRef({ x: 0, y: 0 });
+  
+  // Track mouse position for tooltip
+  useEffect(() => {
+    const handleMouseMove = (event: MouseEvent) => {
+      mousePosRef.current = { x: event.clientX, y: event.clientY };
+      
+      // If hovering, update parent with new mouse position
+      if (hoveredIndex !== null && resourceNodesRef.current) {
+        const resource = resourceNodesRef.current.getResourceAtIndex(hoveredIndex);
+        if (resource && onResourceHover) {
+          onResourceHover(resource, mousePosRef.current);
+        }
+      }
+    };
+    
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, [hoveredIndex, onResourceHover]);
+  
+  // Handle hover changes
+  const handleHover = useCallback((index: number | null) => {
+    setHoveredIndex(index);
+    
+    if (index !== null && resourceNodesRef.current) {
+      const resource = resourceNodesRef.current.getResourceAtIndex(index);
+      if (resource && onResourceHover) {
+        onResourceHover(resource, mousePosRef.current);
+      }
+    } else if (onResourceHover) {
+      onResourceHover(null, mousePosRef.current);
+    }
+  }, [onResourceHover]);
+  
+  // Handle click
+  const handleClick = useCallback((index: number) => {
+    if (resourceNodesRef.current && onResourceClick) {
+      const resource = resourceNodesRef.current.getResourceAtIndex(index);
+      if (resource) {
+        onResourceClick(resource);
+      }
+    }
+  }, [onResourceClick]);
+  
   return (
     <Canvas
       className="w-full h-full"
       camera={{ 
-        position: [0, 0, 60], // Pulled back to see orbital nodes
+        position: [0, 0, 60],
         fov: 60
       }}
       gl={{ alpha: true }}
@@ -206,18 +338,24 @@ export default function InspoCanvas({
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} intensity={1} />
       
-      {/* Central particle sphere - the "sun" */}
       <CentralSphere />
       
-      {/* Orbital resource nodes - the "planets" */}
       {resources.length > 0 && (
-        <ResourceNodes 
-          resources={resources}
-          activeFilter={activeFilter}
-        />
+        <>
+          <ResourceNodes 
+            ref={resourceNodesRef}
+            resources={resources}
+            activeFilter={activeFilter}
+            hoveredIndex={hoveredIndex}
+          />
+          <InteractionController
+            resourceNodesRef={resourceNodesRef}
+            onHover={handleHover}
+            onClick={handleClick}
+          />
+        </>
       )}
       
-      {/* OrbitControls with settings for viewing the entire solar system */}
       <OrbitControls
         enableDamping
         dampingFactor={0.05}

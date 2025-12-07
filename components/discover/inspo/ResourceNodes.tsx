@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useMemo, useEffect, useState } from 'react';
+import { useRef, useMemo, useEffect, useState, forwardRef, useImperativeHandle } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import { generateOrbitalPosition } from '@/lib/utils/orbital-layout';
@@ -8,32 +8,19 @@ import type { NormalizedResource } from '@/lib/data/inspo';
 
 /**
  * Category Color Mapping
- * 
- * Each category gets a distinct color for visual identification:
- * - Community: Blue (#3B82F6)
- * - Contractors: Purple (#8B5CF6)
- * - Inspiration: Orange (#FF5102) - matches brand Aperol
- * - Learning: Green (#10B981)
- * - Templates: Amber (#F59E0B)
- * - Tools: Pink (#EC4899)
- * - AI: Cyan (#06B6D4)
  */
 const CATEGORY_COLORS: Record<string, string> = {
-  'Community': '#3B82F6',    // Blue
-  'Contractors': '#8B5CF6',  // Purple
-  'Inspiration': '#FF5102',  // Orange (Aperol)
-  'Learning': '#10B981',     // Green
-  'Templates': '#F59E0B',    // Amber
-  'Tools': '#EC4899',        // Pink
-  'AI': '#06B6D4',           // Cyan
+  'Community': '#3B82F6',
+  'Contractors': '#8B5CF6',
+  'Inspiration': '#FF5102',
+  'Learning': '#10B981',
+  'Templates': '#F59E0B',
+  'Tools': '#EC4899',
+  'AI': '#06B6D4',
 };
 
-// Default color for unknown categories
-const DEFAULT_COLOR = '#9CA3AF'; // Gray
+const DEFAULT_COLOR = '#9CA3AF';
 
-/**
- * Get color for a resource based on its category
- */
 function getCategoryColor(category: string | null): string {
   if (!category) return DEFAULT_COLOR;
   return CATEGORY_COLORS[category] || DEFAULT_COLOR;
@@ -43,240 +30,238 @@ function getCategoryColor(category: string | null): string {
  * Animation configuration
  */
 const ANIMATION = {
-  // Entrance animation timing
-  ENTRANCE_DELAY: 400,        // Delay before nodes start appearing (after central sphere)
-  STAGGER_DELAY: 20,          // Delay between each node's entrance
-  ENTRANCE_DURATION: 600,     // Duration for entrance fade-in
-  
-  // Filter animation
-  FILTER_LERP_SPEED: 0.1,     // Smooth interpolation speed for filter changes
-  
-  // Opacity values
+  ENTRANCE_DELAY: 400,
+  STAGGER_DELAY: 20,
+  ENTRANCE_DURATION: 600,
+  FILTER_LERP_SPEED: 0.1,
+  HOVER_LERP_SPEED: 0.15,     // Snappy hover scale
   VISIBLE_OPACITY: 1.0,
   HIDDEN_OPACITY: 0.0,
+  HOVER_SCALE: 1.3,           // Scale multiplier on hover
+  NORMAL_SCALE: 1.0,
+  MIN_OPACITY_FOR_INTERACTION: 0.1, // Minimum opacity to allow hover/click
 };
+
+export interface ResourceNodesHandle {
+  getMesh: () => THREE.InstancedMesh | null;
+  getResourceAtIndex: (index: number) => NormalizedResource | null;
+  getOpacityAtIndex: (index: number) => number;
+  getGroupRotation: () => THREE.Euler | null;
+}
 
 interface ResourceNodesProps {
   resources: NormalizedResource[];
   activeFilter?: string | null;
+  hoveredIndex?: number | null;
 }
 
 /**
  * ResourceNodes
  * 
  * Renders all resources as individual sphere meshes orbiting the central sphere.
- * Like planets orbiting a sun, each resource has a deterministic position
- * based on its ID, ensuring consistent placement across sessions.
- * 
- * Features:
- * - Fibonacci sphere distribution for even spacing in 3D
- * - Category-based coloring for visual grouping
- * - InstancedMesh for efficient rendering of 100+ nodes
- * - Smooth fade animations for entrance and filtering
- * - Camera stays fixed - only opacity changes on filter
+ * Supports hover visual feedback with scale animation.
  */
-export default function ResourceNodes({ 
-  resources, 
-  activeFilter 
-}: ResourceNodesProps) {
-  const meshRef = useRef<THREE.InstancedMesh>(null);
-  const groupRef = useRef<THREE.Group>(null);
-  
-  // Animation state
-  const [isInitialized, setIsInitialized] = useState(false);
-  const currentOpacitiesRef = useRef<Float32Array | null>(null);
-  const targetOpacitiesRef = useRef<Float32Array | null>(null);
-  const entranceStartTimeRef = useRef<number | null>(null);
-  
-  // Resource node configuration
-  const nodeRadius = 0.5;
-  const orbitalConfig = {
-    minRadius: 15,
-    maxRadius: 50
-  };
-  
-  const resourceCount = resources.length;
-  
-  // Calculate FIXED positions and colors for ALL resources (never changes based on filter)
-  const { positions, colors } = useMemo(() => {
-    const count = resources.length;
-    const posArray = new Float32Array(count * 3);
-    const colorArray = new Float32Array(count * 3);
+const ResourceNodes = forwardRef<ResourceNodesHandle, ResourceNodesProps>(
+  function ResourceNodes({ resources, activeFilter, hoveredIndex }, ref) {
+    const meshRef = useRef<THREE.InstancedMesh>(null);
+    const groupRef = useRef<THREE.Group>(null);
     
-    resources.forEach((resource, index) => {
-      // Get deterministic position based on resource ID
-      // Using full resources.length ensures consistent positions
-      const pos = generateOrbitalPosition(
-        String(resource.id),
-        index,
-        count,
-        orbitalConfig
-      );
+    // Animation state
+    const [isInitialized, setIsInitialized] = useState(false);
+    const currentOpacitiesRef = useRef<Float32Array | null>(null);
+    const targetOpacitiesRef = useRef<Float32Array | null>(null);
+    const currentHoverScalesRef = useRef<Float32Array | null>(null);
+    const entranceStartTimeRef = useRef<number | null>(null);
+    
+    const nodeRadius = 0.5;
+    const orbitalConfig = { minRadius: 15, maxRadius: 50 };
+    const resourceCount = resources.length;
+    
+    // Expose mesh and resource lookup for raycasting
+    useImperativeHandle(ref, () => ({
+      getMesh: () => meshRef.current,
+      getResourceAtIndex: (index: number) => resources[index] || null,
+      getOpacityAtIndex: (index: number) => currentOpacitiesRef.current?.[index] ?? 0,
+      getGroupRotation: () => groupRef.current?.rotation || null,
+    }));
+    
+    // Calculate FIXED positions and colors for ALL resources
+    const { positions, colors } = useMemo(() => {
+      const count = resources.length;
+      const posArray = new Float32Array(count * 3);
+      const colorArray = new Float32Array(count * 3);
       
-      posArray[index * 3] = pos.x;
-      posArray[index * 3 + 1] = pos.y;
-      posArray[index * 3 + 2] = pos.z;
+      resources.forEach((resource, index) => {
+        const pos = generateOrbitalPosition(
+          String(resource.id),
+          index,
+          count,
+          orbitalConfig
+        );
+        
+        posArray[index * 3] = pos.x;
+        posArray[index * 3 + 1] = pos.y;
+        posArray[index * 3 + 2] = pos.z;
+        
+        const colorHex = getCategoryColor(resource.category);
+        const color = new THREE.Color(colorHex);
+        
+        colorArray[index * 3] = color.r;
+        colorArray[index * 3 + 1] = color.g;
+        colorArray[index * 3 + 2] = color.b;
+      });
       
-      // Get color based on category
-      const colorHex = getCategoryColor(resource.category);
-      const color = new THREE.Color(colorHex);
+      return { positions: posArray, colors: colorArray };
+    }, [resources, orbitalConfig.minRadius, orbitalConfig.maxRadius]);
+    
+    // Initialize opacity and hover scale arrays
+    useEffect(() => {
+      if (resourceCount === 0) return;
       
-      colorArray[index * 3] = color.r;
-      colorArray[index * 3 + 1] = color.g;
-      colorArray[index * 3 + 2] = color.b;
-    });
+      if (!currentOpacitiesRef.current || currentOpacitiesRef.current.length !== resourceCount) {
+        currentOpacitiesRef.current = new Float32Array(resourceCount).fill(0);
+        targetOpacitiesRef.current = new Float32Array(resourceCount).fill(ANIMATION.VISIBLE_OPACITY);
+        currentHoverScalesRef.current = new Float32Array(resourceCount).fill(ANIMATION.NORMAL_SCALE);
+        entranceStartTimeRef.current = Date.now();
+        setIsInitialized(false);
+      }
+    }, [resourceCount]);
     
-    return { positions: posArray, colors: colorArray };
-  }, [resources, orbitalConfig.minRadius, orbitalConfig.maxRadius]);
-  
-  // Initialize opacity arrays
-  useEffect(() => {
-    if (resourceCount === 0) return;
-    
-    // Create opacity arrays if they don't exist or size changed
-    if (!currentOpacitiesRef.current || currentOpacitiesRef.current.length !== resourceCount) {
-      // Start all nodes at 0 opacity for entrance animation
-      currentOpacitiesRef.current = new Float32Array(resourceCount).fill(0);
-      targetOpacitiesRef.current = new Float32Array(resourceCount).fill(ANIMATION.VISIBLE_OPACITY);
-      entranceStartTimeRef.current = Date.now();
-      setIsInitialized(false);
-    }
-  }, [resourceCount]);
-  
-  // Update target opacities when filter changes
-  useEffect(() => {
-    if (!targetOpacitiesRef.current || resourceCount === 0) return;
-    
-    resources.forEach((resource, index) => {
-      // If no filter, all visible. If filter, only matching category visible.
-      const shouldBeVisible = !activeFilter || resource.category === activeFilter;
-      targetOpacitiesRef.current![index] = shouldBeVisible 
-        ? ANIMATION.VISIBLE_OPACITY 
-        : ANIMATION.HIDDEN_OPACITY;
-    });
-  }, [activeFilter, resources, resourceCount]);
-  
-  // Update InstancedMesh positions and colors (initial setup)
-  useEffect(() => {
-    if (!meshRef.current || resourceCount === 0) return;
-    
-    const dummy = new THREE.Object3D();
-    
-    for (let i = 0; i < resourceCount; i++) {
-      dummy.position.set(
-        positions[i * 3] || 0,
-        positions[i * 3 + 1] || 0,
-        positions[i * 3 + 2] || 0
-      );
-      // Start with scale 0 for entrance animation
-      dummy.scale.set(0, 0, 0);
-      dummy.updateMatrix();
-      meshRef.current.setMatrixAt(i, dummy.matrix);
-    }
-    
-    meshRef.current.instanceMatrix.needsUpdate = true;
-    
-    // Set instance colors
-    if (meshRef.current.geometry) {
-      const colorAttribute = new THREE.InstancedBufferAttribute(colors, 3);
-      meshRef.current.geometry.setAttribute('color', colorAttribute);
-    }
-  }, [positions, colors, resourceCount]);
-  
-  // Animation loop - handles entrance animation and filter opacity transitions
-  useFrame((_, delta) => {
-    if (!meshRef.current || !groupRef.current || resourceCount === 0) return;
-    if (!currentOpacitiesRef.current || !targetOpacitiesRef.current) return;
-    
-    // Slow orbital rotation for the entire resource cloud
-    groupRef.current.rotation.y += delta * 0.05;
-    
-    const now = Date.now();
-    const entranceStart = entranceStartTimeRef.current || now;
-    const timeSinceStart = now - entranceStart;
-    
-    const dummy = new THREE.Object3D();
-    let hasChanges = false;
-    
-    for (let i = 0; i < resourceCount; i++) {
-      // Calculate entrance delay for this node (staggered appearance)
-      const nodeEntranceDelay = ANIMATION.ENTRANCE_DELAY + (i * ANIMATION.STAGGER_DELAY);
-      const timeSinceNodeStart = timeSinceStart - nodeEntranceDelay;
+    // Update target opacities when filter changes
+    useEffect(() => {
+      if (!targetOpacitiesRef.current || resourceCount === 0) return;
       
-      let targetOpacity = targetOpacitiesRef.current[i];
+      resources.forEach((resource, index) => {
+        const shouldBeVisible = !activeFilter || resource.category === activeFilter;
+        targetOpacitiesRef.current![index] = shouldBeVisible 
+          ? ANIMATION.VISIBLE_OPACITY 
+          : ANIMATION.HIDDEN_OPACITY;
+      });
+    }, [activeFilter, resources, resourceCount]);
+    
+    // Initial mesh setup
+    useEffect(() => {
+      if (!meshRef.current || resourceCount === 0) return;
       
-      // During entrance animation, gradually increase target from 0
-      if (!isInitialized && timeSinceNodeStart < ANIMATION.ENTRANCE_DURATION) {
-        if (timeSinceNodeStart <= 0) {
-          // Node hasn't started entrance yet
-          targetOpacity = 0;
-        } else {
-          // Ease-in-out entrance
-          const entranceProgress = timeSinceNodeStart / ANIMATION.ENTRANCE_DURATION;
-          const easedProgress = entranceProgress < 0.5
-            ? 2 * entranceProgress * entranceProgress
-            : 1 - Math.pow(-2 * entranceProgress + 2, 2) / 2;
-          targetOpacity = easedProgress * targetOpacitiesRef.current[i];
+      const dummy = new THREE.Object3D();
+      
+      for (let i = 0; i < resourceCount; i++) {
+        dummy.position.set(
+          positions[i * 3] || 0,
+          positions[i * 3 + 1] || 0,
+          positions[i * 3 + 2] || 0
+        );
+        dummy.scale.set(0, 0, 0);
+        dummy.updateMatrix();
+        meshRef.current.setMatrixAt(i, dummy.matrix);
+      }
+      
+      meshRef.current.instanceMatrix.needsUpdate = true;
+      
+      if (meshRef.current.geometry) {
+        const colorAttribute = new THREE.InstancedBufferAttribute(colors, 3);
+        meshRef.current.geometry.setAttribute('color', colorAttribute);
+      }
+    }, [positions, colors, resourceCount]);
+    
+    // Animation loop
+    useFrame((_, delta) => {
+      if (!meshRef.current || !groupRef.current || resourceCount === 0) return;
+      if (!currentOpacitiesRef.current || !targetOpacitiesRef.current || !currentHoverScalesRef.current) return;
+      
+      // Slow orbital rotation
+      groupRef.current.rotation.y += delta * 0.05;
+      
+      const now = Date.now();
+      const entranceStart = entranceStartTimeRef.current || now;
+      const timeSinceStart = now - entranceStart;
+      
+      const dummy = new THREE.Object3D();
+      let hasChanges = false;
+      
+      for (let i = 0; i < resourceCount; i++) {
+        // Entrance animation
+        const nodeEntranceDelay = ANIMATION.ENTRANCE_DELAY + (i * ANIMATION.STAGGER_DELAY);
+        const timeSinceNodeStart = timeSinceStart - nodeEntranceDelay;
+        
+        let targetOpacity = targetOpacitiesRef.current[i];
+        
+        if (!isInitialized && timeSinceNodeStart < ANIMATION.ENTRANCE_DURATION) {
+          if (timeSinceNodeStart <= 0) {
+            targetOpacity = 0;
+          } else {
+            const entranceProgress = timeSinceNodeStart / ANIMATION.ENTRANCE_DURATION;
+            const easedProgress = entranceProgress < 0.5
+              ? 2 * entranceProgress * entranceProgress
+              : 1 - Math.pow(-2 * entranceProgress + 2, 2) / 2;
+            targetOpacity = easedProgress * targetOpacitiesRef.current[i];
+          }
+        }
+        
+        // Lerp opacity
+        const currentOpacity = currentOpacitiesRef.current[i];
+        const newOpacity = currentOpacity + (targetOpacity - currentOpacity) * ANIMATION.FILTER_LERP_SPEED;
+        
+        if (Math.abs(newOpacity - currentOpacity) > 0.001) {
+          currentOpacitiesRef.current[i] = newOpacity;
+          hasChanges = true;
+        }
+        
+        // Hover scale animation
+        const isHovered = hoveredIndex === i && newOpacity >= ANIMATION.MIN_OPACITY_FOR_INTERACTION;
+        const targetHoverScale = isHovered ? ANIMATION.HOVER_SCALE : ANIMATION.NORMAL_SCALE;
+        const currentHoverScale = currentHoverScalesRef.current[i];
+        const newHoverScale = currentHoverScale + (targetHoverScale - currentHoverScale) * ANIMATION.HOVER_LERP_SPEED;
+        
+        if (Math.abs(newHoverScale - currentHoverScale) > 0.001) {
+          currentHoverScalesRef.current[i] = newHoverScale;
+          hasChanges = true;
+        }
+        
+        // Final scale = opacity scale * hover scale
+        const finalScale = Math.max(0.001, newOpacity) * newHoverScale;
+        
+        dummy.position.set(
+          positions[i * 3] || 0,
+          positions[i * 3 + 1] || 0,
+          positions[i * 3 + 2] || 0
+        );
+        dummy.scale.set(finalScale, finalScale, finalScale);
+        dummy.updateMatrix();
+        meshRef.current.setMatrixAt(i, dummy.matrix);
+      }
+      
+      if (hasChanges) {
+        meshRef.current.instanceMatrix.needsUpdate = true;
+      }
+      
+      // Check entrance completion
+      if (!isInitialized) {
+        const lastNodeEntranceEnd = ANIMATION.ENTRANCE_DELAY + 
+          ((resourceCount - 1) * ANIMATION.STAGGER_DELAY) + 
+          ANIMATION.ENTRANCE_DURATION;
+        
+        if (timeSinceStart > lastNodeEntranceEnd) {
+          setIsInitialized(true);
         }
       }
-      
-      // Smooth lerp toward target opacity
-      const currentOpacity = currentOpacitiesRef.current[i];
-      const newOpacity = currentOpacity + (targetOpacity - currentOpacity) * ANIMATION.FILTER_LERP_SPEED;
-      
-      // Only update if there's a meaningful change
-      if (Math.abs(newOpacity - currentOpacity) > 0.001) {
-        currentOpacitiesRef.current[i] = newOpacity;
-        hasChanges = true;
-      }
-      
-      // Update instance matrix with scale based on opacity
-      // Scale from 0 to 1 based on opacity for smooth pop-in effect
-      const scale = Math.max(0.001, newOpacity); // Minimum scale to avoid issues
-      
-      dummy.position.set(
-        positions[i * 3] || 0,
-        positions[i * 3 + 1] || 0,
-        positions[i * 3 + 2] || 0
-      );
-      dummy.scale.set(scale, scale, scale);
-      dummy.updateMatrix();
-      meshRef.current.setMatrixAt(i, dummy.matrix);
-    }
+    });
     
-    if (hasChanges) {
-      meshRef.current.instanceMatrix.needsUpdate = true;
-    }
+    if (resourceCount === 0) return null;
     
-    // Check if entrance animation is complete
-    if (!isInitialized) {
-      const lastNodeEntranceEnd = ANIMATION.ENTRANCE_DELAY + 
-        ((resourceCount - 1) * ANIMATION.STAGGER_DELAY) + 
-        ANIMATION.ENTRANCE_DURATION;
-      
-      if (timeSinceStart > lastNodeEntranceEnd) {
-        setIsInitialized(true);
-      }
-    }
-  });
-  
-  // Don't render if no resources
-  if (resourceCount === 0) return null;
-  
-  return (
-    <group ref={groupRef}>
-      <instancedMesh 
-        ref={meshRef} 
-        args={[undefined, undefined, resourceCount]}
-        frustumCulled={false}
-      >
-        <sphereGeometry args={[nodeRadius, 16, 16]} />
-        <meshBasicMaterial 
-          vertexColors 
-          transparent 
-          opacity={1}
-        />
-      </instancedMesh>
-    </group>
-  );
-}
+    return (
+      <group ref={groupRef}>
+        <instancedMesh 
+          ref={meshRef} 
+          args={[undefined, undefined, resourceCount]}
+          frustumCulled={false}
+        >
+          <sphereGeometry args={[nodeRadius, 16, 16]} />
+          <meshBasicMaterial vertexColors transparent opacity={1} />
+        </instancedMesh>
+      </group>
+    );
+  }
+);
+
+export default ResourceNodes;
