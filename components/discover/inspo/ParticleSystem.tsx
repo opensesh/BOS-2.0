@@ -59,18 +59,15 @@ export default function ParticleSystem({ radius = 15 }: ParticleSystemProps) {
   const innerColorObj = useMemo(() => new THREE.Color(innerColor), [innerColor]);
   const outerColorObj = useMemo(() => new THREE.Color(outerColor), [outerColor]);
 
-  // Determine actual particle count (use resources count if available, else default)
-  const actualCount = resources.length > 0 ? Math.min(resources.length, particleCount) : particleCount;
-
-  // Generate all layouts with current count
+  // Generate all layouts with current count from store settings
   const layouts = useMemo(() => ({
-    sphere: generateSphereLayout(actualCount, radius),
-    galaxy: generateGalaxyLayout(actualCount, radius),
-    grid: generateGridLayout(actualCount, 2),
-    nebula: generateNebulaLayout(actualCount, radius),
-    starfield: generateStarfieldLayout(actualCount, radius),
-    vortex: generateVortexLayout(actualCount, radius),
-  }), [actualCount, radius]);
+    sphere: generateSphereLayout(particleCount, radius),
+    galaxy: generateGalaxyLayout(particleCount, radius),
+    grid: generateGridLayout(particleCount, 2),
+    nebula: generateNebulaLayout(particleCount, radius),
+    starfield: generateStarfieldLayout(particleCount, radius),
+    vortex: generateVortexLayout(particleCount, radius),
+  }), [particleCount, radius]);
 
   // Track current positions for transitions
   const [currentPositions, setCurrentPositions] = useState<Float32Array>(layouts.sphere);
@@ -81,7 +78,7 @@ export default function ParticleSystem({ radius = 15 }: ParticleSystemProps) {
   // Initialize node data when positions change
   useEffect(() => {
     const nodes: NodeData[] = [];
-    for (let i = 0; i < actualCount; i++) {
+    for (let i = 0; i < particleCount; i++) {
       const pos = new THREE.Vector3(
         currentPositions[i * 3] || 0,
         currentPositions[i * 3 + 1] || 0,
@@ -93,11 +90,12 @@ export default function ParticleSystem({ radius = 15 }: ParticleSystemProps) {
         currentPosition: pos.clone(),
         targetPosition: pos.clone(),
         scale: 1,
+        // Only assign resource if we have one for this index
         resourceId: resources[i]?.id ?? null,
       });
     }
     nodeDataRef.current = nodes;
-  }, [currentPositions, actualCount, resources]);
+  }, [currentPositions, particleCount, resources]);
 
   // Get target positions based on viewMode
   const getTargetPositions = useCallback((mode: ViewMode): Float32Array => {
@@ -249,12 +247,12 @@ export default function ParticleSystem({ radius = 15 }: ParticleSystemProps) {
 
   // Handle particle count changes
   useEffect(() => {
-    if (prevCountRef.current !== actualCount) {
+    if (prevCountRef.current !== particleCount) {
       const newPositions = getTargetPositions(viewMode);
       setCurrentPositions(newPositions);
-      prevCountRef.current = actualCount;
+      prevCountRef.current = particleCount;
     }
-  }, [actualCount, viewMode, getTargetPositions]);
+  }, [particleCount, viewMode, getTargetPositions]);
 
   // Reset rotation when viewMode changes
   useEffect(() => {
@@ -339,9 +337,9 @@ export default function ParticleSystem({ radius = 15 }: ParticleSystemProps) {
     const nodes = nodeDataRef.current;
     
     // Build position array for color calculation
-    const posArray = new Float32Array(actualCount * 3);
+    const posArray = new Float32Array(particleCount * 3);
     
-    for (let i = 0; i < actualCount; i++) {
+    for (let i = 0; i < particleCount; i++) {
       const node = nodes[i];
       if (node) {
         // Use animated current position if clustering, otherwise use layout position
@@ -380,7 +378,7 @@ export default function ParticleSystem({ radius = 15 }: ParticleSystemProps) {
 
     // Update colors
     if (meshRef.current.geometry) {
-      const colors = calculateColors(posArray, actualCount);
+      const colors = calculateColors(posArray, particleCount);
       const colorAttribute = new THREE.InstancedBufferAttribute(colors, 3);
       meshRef.current.geometry.setAttribute('color', colorAttribute);
     }
@@ -418,7 +416,7 @@ export default function ParticleSystem({ radius = 15 }: ParticleSystemProps) {
     <group ref={groupRef} position={[0, 0, 0]}>
       <instancedMesh 
         ref={meshRef} 
-        args={[undefined, undefined, actualCount]}
+        args={[undefined, undefined, particleCount]}
         frustumCulled={false}
       >
         <sphereGeometry args={[particleSize, 8, 8]} />
