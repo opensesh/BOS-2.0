@@ -19,6 +19,23 @@ const CATEGORY_COLORS: Record<string, string> = {
 
 const DEFAULT_COLOR = '#9CA3AF';
 
+/**
+ * Get favicon URL for a given website URL
+ * Uses Google's favicon service as a reliable fallback
+ */
+function getFaviconUrl(url: string | null): string | null {
+  if (!url) return null;
+  
+  try {
+    const urlObj = new URL(url);
+    const domain = urlObj.hostname;
+    // Use Google's favicon service - reliable and fast
+    return `https://www.google.com/s2/favicons?domain=${domain}&sz=32`;
+  } catch {
+    return null;
+  }
+}
+
 interface InspoResourceTooltipProps {
   resource: NormalizedResource | null;
   mousePosition: { x: number; y: number };
@@ -28,7 +45,7 @@ interface InspoResourceTooltipProps {
  * InspoResourceTooltip
  * 
  * Card-style tooltip that follows the cursor and displays resource details.
- * Uses fixed positioning at document level to avoid clipping.
+ * Includes favicon, category badge, and description.
  */
 export default function InspoResourceTooltip({
   resource,
@@ -45,7 +62,6 @@ export default function InspoResourceTooltip({
   useEffect(() => {
     if (!resource) return;
     
-    // Use requestAnimationFrame for smoother positioning
     requestAnimationFrame(() => {
       if (!tooltipRef.current) {
         setAdjustedPosition({ x: mousePosition.x + OFFSET_X, y: mousePosition.y + OFFSET_Y });
@@ -82,6 +98,9 @@ export default function InspoResourceTooltip({
     ? CATEGORY_COLORS[resource.category] || DEFAULT_COLOR
     : DEFAULT_COLOR;
   
+  // Get favicon URL
+  const faviconUrl = resource ? getFaviconUrl(resource.url) : null;
+  
   // Truncate description to 100 chars
   const truncatedDescription = resource?.description
     ? resource.description.length > 100
@@ -106,29 +125,61 @@ export default function InspoResourceTooltip({
         >
           {/* Card Container */}
           <div className="bg-zinc-900/95 backdrop-blur-sm border border-zinc-800 rounded-lg p-4 shadow-xl max-w-xs">
-            {/* Title */}
-            <h3 className="text-white font-semibold text-base leading-tight mb-2">
-              {resource.name}
-            </h3>
-            
-            {/* Category Badge */}
-            <span 
-              className="inline-flex items-center text-xs px-2 py-1 rounded-full text-white/90"
-              style={{ backgroundColor: categoryColor }}
-            >
-              {resource.category || 'Uncategorized'}
-            </span>
+            {/* Header with Favicon and Title */}
+            <div className="flex items-start gap-3 mb-3">
+              {/* Favicon */}
+              <div 
+                className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 overflow-hidden bg-zinc-800"
+                style={{ 
+                  borderColor: categoryColor,
+                  borderWidth: '2px',
+                  borderStyle: 'solid'
+                }}
+              >
+                {faviconUrl ? (
+                  <img 
+                    src={faviconUrl} 
+                    alt=""
+                    className="w-5 h-5 object-contain"
+                    onError={(e) => {
+                      // Hide broken image
+                      (e.target as HTMLImageElement).style.display = 'none';
+                    }}
+                  />
+                ) : (
+                  <div 
+                    className="w-3 h-3 rounded-full"
+                    style={{ backgroundColor: categoryColor }}
+                  />
+                )}
+              </div>
+              
+              <div className="flex-1 min-w-0">
+                {/* Title */}
+                <h3 className="text-white font-semibold text-base leading-tight">
+                  {resource.name}
+                </h3>
+                
+                {/* Category Badge */}
+                <span 
+                  className="inline-flex items-center text-xs px-2 py-0.5 rounded-full text-white/90 mt-1"
+                  style={{ backgroundColor: categoryColor }}
+                >
+                  {resource.category || 'Uncategorized'}
+                </span>
+              </div>
+            </div>
             
             {/* Description */}
             {truncatedDescription && (
-              <p className="text-zinc-400 text-sm mt-2 leading-relaxed">
+              <p className="text-zinc-400 text-sm leading-relaxed">
                 {truncatedDescription}
               </p>
             )}
             
             {/* Click hint */}
             <p className="text-zinc-500 text-xs mt-3 pt-2 border-t border-zinc-800">
-              Click to open resource →
+              Click to view details →
             </p>
           </div>
         </motion.div>

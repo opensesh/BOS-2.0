@@ -131,12 +131,10 @@ function InspoContent() {
     setMousePosition(position);
   }, []);
 
-  // Handle resource click - open in new tab
+  // Handle resource click - navigate to internal resource page
   const handleResourceClick = useCallback((resource: NormalizedResource) => {
-    if (resource.url) {
-      window.open(resource.url, '_blank', 'noopener,noreferrer');
-    }
-  }, []);
+    router.push(`/discover/inspo/${resource.id}`);
+  }, [router]);
 
   // Filtered resources based on category
   const filteredResources = useMemo(() => {
@@ -213,19 +211,20 @@ function InspoContent() {
         </div>
 
         {displayMode === '3d' ? (
-          /* 3D Explorer Layout: Maximized canvas with bottom controls */
-          <div className="flex-1 flex flex-col min-h-0 relative">
-            {/* 3D Visualization - fills available space */}
+          /* 3D Explorer Layout: Canvas between header and controls */
+          <div className="flex-1 flex flex-col min-h-0">
+            {/* 3D Visualization - takes available space above controls */}
             <div className="flex-1 relative min-h-0">
-              {/* Gradient fade overlays */}
+              {/* Top gradient fade */}
               <div 
-                className="absolute top-0 left-0 right-0 h-12 pointer-events-none z-10"
+                className="absolute top-0 left-0 right-0 h-16 pointer-events-none z-10"
                 style={{
                   background: 'linear-gradient(to bottom, #141414 0%, transparent 100%)'
                 }}
               />
+              {/* Bottom gradient fade - blends into controls area */}
               <div 
-                className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none z-10"
+                className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none z-10"
                 style={{
                   background: 'linear-gradient(to top, #141414 0%, transparent 100%)'
                 }}
@@ -246,9 +245,17 @@ function InspoContent() {
               </motion.div>
             </div>
 
-            {/* Bottom controls - floating over canvas */}
-            <div className="absolute bottom-0 left-0 right-0 z-20">
-              <div className="w-full max-w-2xl mx-auto px-6 pb-4 space-y-3">
+            {/* Bottom controls - fixed height, proper spacing */}
+            <div className="flex-shrink-0 relative z-20 bg-os-bg-dark">
+              {/* Top gradient overlay for seamless blend */}
+              <div 
+                className="absolute -top-8 left-0 right-0 h-8 pointer-events-none"
+                style={{
+                  background: 'linear-gradient(to bottom, transparent 0%, #141414 100%)'
+                }}
+              />
+              
+              <div className="w-full max-w-2xl mx-auto px-6 pt-2 pb-6 space-y-3">
                 {/* Chat Input */}
                 <InspoChat 
                   onSubmit={handleChatSubmit}
