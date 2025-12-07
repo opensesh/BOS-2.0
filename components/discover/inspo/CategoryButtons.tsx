@@ -15,11 +15,11 @@ export function CategoryButtons({
   activeCategory, 
   onCategoryChange 
 }: CategoryButtonsProps) {
-  // Extract unique categories from resources
+  // Extract unique categories from resources (exclude "All" as we add it manually)
   const categories = useMemo(() => {
     const categorySet = new Set<string>();
     resources.forEach(resource => {
-      if (resource.category) {
+      if (resource.category && resource.category.toLowerCase() !== 'all') {
         categorySet.add(resource.category);
       }
     });
@@ -42,47 +42,42 @@ export function CategoryButtons({
   }
 
   return (
-    <div className="flex flex-wrap items-center justify-center gap-2">
+    <div className="flex items-center justify-center gap-1.5">
       {/* All button */}
       <motion.button
         onClick={() => onCategoryChange(null)}
         className={`
-          flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium
+          px-2.5 py-1 rounded-full text-[11px] font-medium
           transition-all duration-200 whitespace-nowrap
           ${activeCategory === null
-            ? 'bg-brand-aperol text-white shadow-md shadow-brand-aperol/25'
-            : 'bg-os-surface-dark/80 text-os-text-secondary-dark hover:text-brand-vanilla border border-os-border-dark/50'
+            ? 'bg-brand-aperol text-white'
+            : 'bg-os-surface-dark/60 text-os-text-secondary-dark hover:text-brand-vanilla border border-os-border-dark/40'
           }
         `}
-        whileHover={{ scale: 1.03 }}
-        whileTap={{ scale: 0.97 }}
+        whileTap={{ scale: 0.95 }}
       >
-        <span>All</span>
-        <span className="opacity-60">({resources.length})</span>
+        All
       </motion.button>
 
       {/* Category buttons */}
       {categories.map((category) => {
         const isActive = activeCategory === category;
-        const count = categoryCounts[category] || 0;
 
         return (
           <motion.button
             key={category}
             onClick={() => onCategoryChange(category)}
             className={`
-              flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium
+              px-2.5 py-1 rounded-full text-[11px] font-medium
               transition-all duration-200 whitespace-nowrap
               ${isActive
-                ? 'bg-brand-aperol text-white shadow-md shadow-brand-aperol/25'
-                : 'bg-os-surface-dark/80 text-os-text-secondary-dark hover:text-brand-vanilla border border-os-border-dark/50'
+                ? 'bg-brand-aperol text-white'
+                : 'bg-os-surface-dark/60 text-os-text-secondary-dark hover:text-brand-vanilla border border-os-border-dark/40'
               }
             `}
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.97 }}
+            whileTap={{ scale: 0.95 }}
           >
-            <span>{category}</span>
-            <span className="opacity-60">({count})</span>
+            {category}
           </motion.button>
         );
       })}

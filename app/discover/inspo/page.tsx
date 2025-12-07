@@ -192,19 +192,22 @@ function InspoContent() {
         </div>
 
         {displayMode === '3d' ? (
-          /* 3D Explorer Layout: Canvas → Categories → Chat */
+          /* 3D Explorer Layout: Canvas centered between header and chat */
           <div className="flex-1 flex flex-col min-h-0">
-            {/* 3D Visualization - fixed smaller height */}
-            <div className="relative flex-shrink-0" style={{ height: '45vh', minHeight: '280px', maxHeight: '400px' }}>
+            {/* Top spacer - pushes 3D down */}
+            <div className="flex-1" />
+
+            {/* 3D Visualization - centered */}
+            <div className="relative flex-shrink-0" style={{ height: '40vh', minHeight: '260px', maxHeight: '360px' }}>
               {/* Gradient fade overlays */}
               <div 
-                className="absolute top-0 left-0 right-0 h-20 pointer-events-none z-10"
+                className="absolute top-0 left-0 right-0 h-16 pointer-events-none z-10"
                 style={{
                   background: 'linear-gradient(to bottom, #141414 0%, transparent 100%)'
                 }}
               />
               <div 
-                className="absolute bottom-0 left-0 right-0 h-20 pointer-events-none z-10"
+                className="absolute bottom-0 left-0 right-0 h-16 pointer-events-none z-10"
                 style={{
                   background: 'linear-gradient(to top, #141414 0%, transparent 100%)'
                 }}
@@ -220,7 +223,7 @@ function InspoContent() {
               </motion.div>
             </div>
 
-            {/* Spacer */}
+            {/* Bottom spacer - pushes chat up */}
             <div className="flex-1" />
 
             {/* Bottom section: Chat → Categories → Count (equal spacing) */}

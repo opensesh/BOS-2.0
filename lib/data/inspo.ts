@@ -18,7 +18,7 @@ export interface InspoResource {
   Tags: string[] | null;
   Count: string | null;
   Tier: number | null;
-  Thumbnail: string | null;
+  thumbnail_url: string | null;
 }
 
 // Normalized type for component use (lowercase keys)
@@ -53,7 +53,7 @@ export function normalizeResource(resource: InspoResource): NormalizedResource {
     tags: resource.Tags ?? null,
     count: resource.Count ?? null,
     tier: resource.Tier ?? null,
-    thumbnail: resource.Thumbnail ?? null,
+    thumbnail: resource.thumbnail_url ?? null,
   };
 }
 

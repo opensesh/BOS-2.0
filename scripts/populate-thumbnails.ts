@@ -34,7 +34,7 @@ interface InspoResource {
   ID: number;
   Name: string;
   URL: string;
-  Thumbnail?: string | null;
+  thumbnail_url?: string | null;
 }
 
 // Type for OGS result
@@ -93,26 +93,10 @@ async function fetchThumbnail(url: string): Promise<string | null> {
 async function main() {
   console.log('🔍 Fetching resources from Supabase...\n');
 
-  // First, try to fetch with Thumbnail column to check if it exists
-  let thumbnailColumnExists = true;
-  const { error: columnCheck } = await supabase
-    .from('Inspiration Design Resources')
-    .select('Thumbnail')
-    .limit(1);
-
-  if (columnCheck?.message?.includes('does not exist')) {
-    thumbnailColumnExists = false;
-    console.log('⚠️  Thumbnail column does not exist yet.');
-    console.log('   Please run this SQL in Supabase Dashboard (SQL Editor):\n');
-    console.log('   ALTER TABLE "Inspiration Design Resources" ADD COLUMN "Thumbnail" TEXT;\n');
-    console.log('   Then run this script again.\n');
-    process.exit(1);
-  }
-
-  // Fetch all resources
+// Fetch all resources
   const { data: resources, error: fetchError } = await supabase
     .from('Inspiration Design Resources')
-    .select('ID, Name, URL, Thumbnail')
+    .select('ID, Name, URL, thumbnail_url')
     .order('ID', { ascending: true });
 
   if (fetchError) {
@@ -127,7 +111,7 @@ async function main() {
 
   // Filter to only resources without thumbnails (resumable)
   const needsThumbnail = (resources as InspoResource[]).filter(
-    r => !r.Thumbnail || r.Thumbnail.trim() === ''
+    r => !r.thumbnail_url || r.thumbnail_url.trim() === ''
   );
 
   const alreadyHas = resources.length - needsThumbnail.length;
@@ -153,7 +137,7 @@ async function main() {
       // Update the database
       const { error: updateError } = await supabase
         .from('Inspiration Design Resources')
-        .update({ Thumbnail: thumbnailUrl })
+        .update({ thumbnail_url: thumbnailUrl })
         .eq('ID', resource.ID);
 
       if (updateError) {
