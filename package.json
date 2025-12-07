@@ -10,6 +10,7 @@
     "generate:brand-index": "npx tsx lib/brand-knowledge/generate.ts",
     "generate:content": "npx tsx scripts/daily-content-generation.ts",
     "fetch-thumbnails": "npx tsx scripts/populate-thumbnails.ts",
+    "capture-screenshots": "npx tsx scripts/capture-screenshots.ts",
     "prebuild": "npm run generate:brand-index"
   },
   "dependencies": {
@@ -26,6 +27,7 @@
     "@vercel/speed-insights": "^1.2.0",
     "ai": "^5.0.104",
     "clsx": "^2.1.1",
+    "d3-force-3d": "^3.0.6",
     "dotenv": "^17.2.3",
     "framer-motion": "^11.15.0",
     "gsap": "^3.13.0",
