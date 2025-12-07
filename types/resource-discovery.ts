@@ -85,16 +85,6 @@ export interface AnimationConfig {
 }
 
 /**
- * Particle appearance settings
- */
-export interface ParticleAppearance {
-  baseSize: number;
-  activeOpacity: number;
-  inactiveOpacity: number;
-  hoverScale: number;
-}
-
-/**
  * Color mapping for categories
  */
 export type CategoryColorMap = Record<string, string>;

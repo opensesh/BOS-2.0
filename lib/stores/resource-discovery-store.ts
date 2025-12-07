@@ -3,13 +3,12 @@ import type {
   ResourceNode, 
   ResourceCluster, 
   CameraTarget, 
-  FilterState,
-  ParticleAppearance 
+  FilterState
 } from '@/types/resource-discovery';
 
 /**
  * Resource Discovery Store
- * Manages state for 3D clustered particle visualization
+ * Manages state for 3D orbital resource visualization
  */
 
 interface ResourceDiscoveryState {
@@ -25,9 +24,6 @@ interface ResourceDiscoveryState {
   // Camera state
   cameraTarget: CameraTarget;
   isAnimating: boolean;
-  
-  // Particle appearance
-  particleAppearance: ParticleAppearance;
   
   // Hover/selection state
   hoveredResourceId: number | null;
@@ -54,23 +50,12 @@ interface ResourceDiscoveryState {
   // Actions - Interaction
   setHoveredResource: (id: number | null) => void;
   setSelectedResource: (id: number | null) => void;
-  
-  // Actions - Appearance
-  setParticleAppearance: (appearance: Partial<ParticleAppearance>) => void;
 }
 
 // Default camera position (overview)
 const DEFAULT_CAMERA: CameraTarget = {
   position: { x: 0, y: 5, z: 35 },
   lookAt: { x: 0, y: 0, z: 0 },
-};
-
-// Default particle appearance
-const DEFAULT_APPEARANCE: ParticleAppearance = {
-  baseSize: 0.3,
-  activeOpacity: 1.0,
-  inactiveOpacity: 0.15,
-  hoverScale: 1.5,
 };
 
 // Default filter state
@@ -89,7 +74,6 @@ export const useResourceDiscoveryStore = create<ResourceDiscoveryState>((set, ge
   filter: DEFAULT_FILTER,
   cameraTarget: DEFAULT_CAMERA,
   isAnimating: false,
-  particleAppearance: DEFAULT_APPEARANCE,
   hoveredResourceId: null,
   selectedResourceId: null,
   
@@ -167,13 +151,6 @@ export const useResourceDiscoveryStore = create<ResourceDiscoveryState>((set, ge
   // Interaction actions
   setHoveredResource: (id) => set({ hoveredResourceId: id }),
   setSelectedResource: (id) => set({ selectedResourceId: id }),
-  
-  // Appearance actions
-  setParticleAppearance: (appearance) => {
-    set({
-      particleAppearance: { ...get().particleAppearance, ...appearance },
-    });
-  },
 }));
 
 /**

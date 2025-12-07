@@ -10,12 +10,23 @@ import { DEFAULT_CATEGORY_COLORS } from '@/types/resource-discovery';
 /**
  * ResourceParticleSystem
  * 
+ * NOTE: This component is preserved for Phase 2 orbital node positioning.
+ * Currently not rendered - will be refactored for orbital layout.
+ * 
  * Renders resource nodes as instanced particles with:
  * - Category-based coloring
  * - Opacity transitions for filtered/unfiltered states
  * - Smooth position updates
  * - Hover detection
  */
+
+// Default particle appearance (hardcoded for Phase 2)
+const PARTICLE_DEFAULTS = {
+  baseSize: 0.3,
+  activeOpacity: 1.0,
+  inactiveOpacity: 0.15,
+  hoverScale: 1.5,
+};
 
 interface ParticleData {
   positions: Float32Array;
@@ -51,7 +62,6 @@ export default function ResourceParticleSystem() {
   // Store state
   const resources = useResourceDiscoveryStore((state) => state.resources);
   const filter = useResourceDiscoveryStore((state) => state.filter);
-  const particleAppearance = useResourceDiscoveryStore((state) => state.particleAppearance);
   const hoveredResourceId = useResourceDiscoveryStore((state) => state.hoveredResourceId);
   const setHoveredResource = useResourceDiscoveryStore((state) => state.setHoveredResource);
   
@@ -78,7 +88,7 @@ export default function ResourceParticleSystem() {
     const opacities = new Float32Array(count);
     const scales = new Float32Array(count);
     
-    const { activeOpacity, inactiveOpacity, baseSize, hoverScale } = particleAppearance;
+    const { activeOpacity, inactiveOpacity, baseSize, hoverScale } = PARTICLE_DEFAULTS;
     
     resources.forEach((resource, i) => {
       // Position
@@ -106,14 +116,14 @@ export default function ResourceParticleSystem() {
     });
     
     return { positions, colors, opacities, scales };
-  }, [resources, activeResourceIds, filter, particleAppearance, hoveredResourceId]);
+  }, [resources, activeResourceIds, filter, hoveredResourceId]);
   
   // Start opacity transition animation when filter changes
   useEffect(() => {
     if (resources.length === 0) return;
     
     const count = resources.length;
-    const { activeOpacity, inactiveOpacity } = particleAppearance;
+    const { activeOpacity, inactiveOpacity } = PARTICLE_DEFAULTS;
     const hasFilter = filter.activeCategory !== null || filter.searchQuery !== '';
     
     // Initialize current opacities if needed

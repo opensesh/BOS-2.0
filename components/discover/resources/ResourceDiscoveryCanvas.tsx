@@ -1,125 +1,53 @@
 'use client';
 
 import { useRef, useEffect, useCallback } from 'react';
-import { Canvas, useThree, useFrame } from '@react-three/fiber';
+import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import * as THREE from 'three';
-import ResourceParticleSystem from './ResourceParticleSystem';
 import { useResourceDiscoveryStore } from '@/lib/stores/resource-discovery-store';
 import { generateClusteredLayout } from '@/lib/utils/force-cluster-layout';
 import { getInspoResources, normalizeResource } from '@/lib/data/inspo';
 
 /**
- * CameraController
+ * CentralSphere
  * 
- * Handles smooth camera transitions when:
- * - Focusing on a category cluster
- * - Resetting to overview position
- * 
- * Uses cubic easing for natural feel
+ * A glowing orange sphere at the origin that rotates independently.
+ * Specs: radius 3, segments 32, color #FF5102, rotation 0.002 rad/frame
  */
-function CameraController() {
-  const { camera } = useThree();
-  const controlsRef = useRef<any>(null);
+function CentralSphere() {
+  const meshRef = useRef<THREE.Mesh>(null);
   
-  const cameraTarget = useResourceDiscoveryStore((state) => state.cameraTarget);
-  const isAnimating = useResourceDiscoveryStore((state) => state.isAnimating);
-  const setAnimating = useResourceDiscoveryStore((state) => state.setAnimating);
-  
-  // Animation state
-  const animationRef = useRef<{
-    startTime: number;
-    duration: number;
-    fromPosition: THREE.Vector3;
-    toPosition: THREE.Vector3;
-    fromLookAt: THREE.Vector3;
-    toLookAt: THREE.Vector3;
-    isRunning: boolean;
-  }>({
-    startTime: 0,
-    duration: 1200, // 1.2s
-    fromPosition: new THREE.Vector3(),
-    toPosition: new THREE.Vector3(),
-    fromLookAt: new THREE.Vector3(),
-    toLookAt: new THREE.Vector3(),
-    isRunning: false,
-  });
-  
-  // Start animation when cameraTarget changes
-  useEffect(() => {
-    if (!isAnimating) return;
-    
-    const { position, lookAt } = cameraTarget;
-    
-    animationRef.current = {
-      startTime: Date.now(),
-      duration: 1200,
-      fromPosition: camera.position.clone(),
-      toPosition: new THREE.Vector3(position.x, position.y, position.z),
-      fromLookAt: controlsRef.current?.target.clone() || new THREE.Vector3(0, 0, 0),
-      toLookAt: new THREE.Vector3(lookAt.x, lookAt.y, lookAt.z),
-      isRunning: true,
-    };
-  }, [cameraTarget, isAnimating, camera]);
-  
-  // Animate camera
+  // Rotate sphere independently at 0.002 rad/frame
   useFrame(() => {
-    const anim = animationRef.current;
-    if (!anim.isRunning) return;
-    
-    const elapsed = Date.now() - anim.startTime;
-    const t = Math.min(elapsed / anim.duration, 1);
-    
-    // Ease-in-out cubic
-    const eased = t < 0.5
-      ? 4 * t * t * t
-      : 1 - Math.pow(-2 * t + 2, 3) / 2;
-    
-    // Interpolate position
-    camera.position.lerpVectors(anim.fromPosition, anim.toPosition, eased);
-    
-    // Interpolate lookAt target
-    if (controlsRef.current) {
-      const newTarget = new THREE.Vector3().lerpVectors(
-        anim.fromLookAt,
-        anim.toLookAt,
-        eased
-      );
-      controlsRef.current.target.copy(newTarget);
-      controlsRef.current.update();
-    }
-    
-    // End animation
-    if (t >= 1) {
-      anim.isRunning = false;
-      setAnimating(false);
+    if (meshRef.current) {
+      meshRef.current.rotation.y += 0.002;
     }
   });
   
   return (
-    <OrbitControls
-      ref={controlsRef}
-      enableDamping
-      dampingFactor={0.05}
-      enablePan={true}
-      panSpeed={0.5}
-      minDistance={8}
-      maxDistance={60}
-      maxPolarAngle={Math.PI * 0.85}
-      enabled={!animationRef.current.isRunning}
-    />
+    <mesh ref={meshRef} position={[0, 0, 0]}>
+      <sphereGeometry args={[3, 32, 32]} />
+      <meshStandardMaterial
+        color="#FF5102"
+        emissive="#FF5102"
+        emissiveIntensity={0.3}
+        roughness={0.4}
+        metalness={0.1}
+      />
+    </mesh>
   );
 }
 
 /**
- * Scene lighting for the particle visualization
+ * Scene lighting for the visualization
  */
 function SceneLighting() {
   return (
     <>
-      <ambientLight intensity={0.6} />
-      <pointLight position={[20, 20, 20]} intensity={0.8} />
-      <pointLight position={[-20, -20, -20]} intensity={0.3} color="#FE5102" />
+      <ambientLight intensity={0.4} />
+      <pointLight position={[20, 20, 20]} intensity={1} />
+      <pointLight position={[-20, -20, -20]} intensity={0.5} color="#FE5102" />
+      <pointLight position={[0, 0, 15]} intensity={0.3} color="#FFFAEE" />
     </>
   );
 }
@@ -128,10 +56,10 @@ function SceneLighting() {
  * ResourceDiscoveryCanvas
  * 
  * Main canvas component that:
- * 1. Fetches resources from Supabase on mount
- * 2. Generates force-directed clustered layout
- * 3. Renders interactive particle visualization
- * 4. Handles camera navigation
+ * 1. Fetches resources from data source on mount
+ * 2. Generates clustered layout for Phase 2
+ * 3. Renders central sphere with orbital camera controls
+ * 4. Provides foundation for orbital node positioning
  */
 export default function ResourceDiscoveryCanvas() {
   const setResources = useResourceDiscoveryStore((state) => state.setResources);
@@ -159,7 +87,7 @@ export default function ResourceDiscoveryCanvas() {
       // Normalize resources
       const normalized = data.map(normalizeResource);
       
-      // Generate clustered layout
+      // Generate clustered layout (ready for Phase 2 orbital positioning)
       const { nodes, clusters } = generateClusteredLayout(normalized);
       
       setResources(nodes);
@@ -207,14 +135,25 @@ export default function ResourceDiscoveryCanvas() {
           powerPreference: 'high-performance'
         }}
         style={{ background: '#141414' }}
-        dpr={[1, 2]} // Responsive pixel ratio
+        dpr={[1, 2]}
       >
         <SceneLighting />
-        <ResourceParticleSystem />
-        <CameraController />
+        <CentralSphere />
         
-        {/* Optional: Add fog for depth perception */}
-        <fog attach="fog" args={['#141414', 30, 80]} />
+        {/* OrbitControls with specified settings */}
+        <OrbitControls
+          enableDamping
+          dampingFactor={0.05}
+          minDistance={10}
+          maxDistance={100}
+          autoRotate={false}
+          enablePan={true}
+          panSpeed={0.5}
+          maxPolarAngle={Math.PI * 0.85}
+        />
+        
+        {/* Fog for depth perception */}
+        <fog attach="fog" args={['#141414', 30, 120]} />
       </Canvas>
     </div>
   );
