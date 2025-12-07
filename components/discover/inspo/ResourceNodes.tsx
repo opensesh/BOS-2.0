@@ -35,9 +35,11 @@ const ANIMATION = {
   ENTRANCE_DURATION: 600,
   FILTER_LERP_SPEED: 0.1,
   HOVER_LERP_SPEED: 0.15,     // Snappy hover scale
+  CLICK_LERP_SPEED: 0.3,      // Fast click pulse
   VISIBLE_OPACITY: 1.0,
   HIDDEN_OPACITY: 0.0,
   HOVER_SCALE: 1.3,           // Scale multiplier on hover
+  CLICK_SCALE: 1.5,           // Scale multiplier on click (pulse)
   NORMAL_SCALE: 1.0,
   MIN_OPACITY_FOR_INTERACTION: 0.1, // Minimum opacity to allow hover/click
 };
@@ -53,16 +55,17 @@ interface ResourceNodesProps {
   resources: NormalizedResource[];
   activeFilter?: string | null;
   hoveredIndex?: number | null;
+  clickedIndex?: number | null;
 }
 
 /**
  * ResourceNodes
  * 
  * Renders all resources as individual sphere meshes orbiting the central sphere.
- * Supports hover visual feedback with scale animation.
+ * Supports hover and click visual feedback with scale animations.
  */
 const ResourceNodes = forwardRef<ResourceNodesHandle, ResourceNodesProps>(
-  function ResourceNodes({ resources, activeFilter, hoveredIndex }, ref) {
+  function ResourceNodes({ resources, activeFilter, hoveredIndex, clickedIndex }, ref) {
     const meshRef = useRef<THREE.InstancedMesh>(null);
     const groupRef = useRef<THREE.Group>(null);
     
@@ -207,18 +210,28 @@ const ResourceNodes = forwardRef<ResourceNodesHandle, ResourceNodesProps>(
           hasChanges = true;
         }
         
-        // Hover scale animation
+        // Hover and click scale animation
         const isHovered = hoveredIndex === i && newOpacity >= ANIMATION.MIN_OPACITY_FOR_INTERACTION;
-        const targetHoverScale = isHovered ? ANIMATION.HOVER_SCALE : ANIMATION.NORMAL_SCALE;
+        const isClicked = clickedIndex === i;
+        
+        // Target scale: clicked > hovered > normal
+        let targetHoverScale = ANIMATION.NORMAL_SCALE;
+        if (isClicked) {
+          targetHoverScale = ANIMATION.CLICK_SCALE;
+        } else if (isHovered) {
+          targetHoverScale = ANIMATION.HOVER_SCALE;
+        }
+        
         const currentHoverScale = currentHoverScalesRef.current[i];
-        const newHoverScale = currentHoverScale + (targetHoverScale - currentHoverScale) * ANIMATION.HOVER_LERP_SPEED;
+        const lerpSpeed = isClicked ? ANIMATION.CLICK_LERP_SPEED : ANIMATION.HOVER_LERP_SPEED;
+        const newHoverScale = currentHoverScale + (targetHoverScale - currentHoverScale) * lerpSpeed;
         
         if (Math.abs(newHoverScale - currentHoverScale) > 0.001) {
           currentHoverScalesRef.current[i] = newHoverScale;
           hasChanges = true;
         }
         
-        // Final scale = opacity scale * hover scale
+        // Final scale = opacity scale * hover/click scale
         const finalScale = Math.max(0.001, newOpacity) * newHoverScale;
         
         dummy.position.set(

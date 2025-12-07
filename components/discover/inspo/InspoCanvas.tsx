@@ -152,28 +152,29 @@ interface InteractionControllerProps {
   resourceNodesRef: React.RefObject<ResourceNodesHandle | null>;
   onHover: (index: number | null) => void;
   onClick: (index: number) => void;
+  onClickAnimation?: (index: number) => void;
 }
 
 function InteractionController({ 
   resourceNodesRef, 
   onHover, 
-  onClick 
+  onClick,
+  onClickAnimation,
 }: InteractionControllerProps) {
   const { camera, gl } = useThree();
   const raycaster = useMemo(() => new THREE.Raycaster(), []);
-  const mouse = useMemo(() => new THREE.Vector2(), []);
+  const mouse = useRef(new THREE.Vector2(-999, -999)); // Start off-screen
   const lastHoveredRef = useRef<number | null>(null);
-  
-  // Set raycaster threshold for instanced meshes
-  raycaster.params.Points = { threshold: 0.5 };
+  const isMouseInCanvasRef = useRef(false);
   
   useEffect(() => {
     const canvas = gl.domElement;
     
     const handleMouseMove = (event: MouseEvent) => {
       const rect = canvas.getBoundingClientRect();
-      mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
-      mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+      mouse.current.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+      mouse.current.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+      isMouseInCanvasRef.current = true;
     };
     
     const handleClick = (event: MouseEvent) => {
@@ -183,10 +184,10 @@ function InteractionController({
       if (!mesh) return;
       
       const rect = canvas.getBoundingClientRect();
-      mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
-      mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+      mouse.current.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+      mouse.current.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
       
-      raycaster.setFromCamera(mouse, camera);
+      raycaster.setFromCamera(mouse.current, camera);
       const intersects = raycaster.intersectObject(mesh);
       
       if (intersects.length > 0 && intersects[0].instanceId !== undefined) {
@@ -195,12 +196,25 @@ function InteractionController({
         
         // Only trigger click if node is visible enough
         if (opacity >= 0.1) {
-          onClick(index);
+          // Trigger click animation first
+          if (onClickAnimation) {
+            onClickAnimation(index);
+          }
+          // Then trigger actual click handler with delay for animation
+          setTimeout(() => {
+            onClick(index);
+          }, 150);
         }
       }
     };
     
+    const handleMouseEnter = () => {
+      isMouseInCanvasRef.current = true;
+    };
+    
     const handleMouseLeave = () => {
+      isMouseInCanvasRef.current = false;
+      mouse.current.set(-999, -999); // Move off-screen
       if (lastHoveredRef.current !== null) {
         lastHoveredRef.current = null;
         onHover(null);
@@ -209,24 +223,26 @@ function InteractionController({
     };
     
     canvas.addEventListener('mousemove', handleMouseMove);
+    canvas.addEventListener('mouseenter', handleMouseEnter);
     canvas.addEventListener('click', handleClick);
     canvas.addEventListener('mouseleave', handleMouseLeave);
     
     return () => {
       canvas.removeEventListener('mousemove', handleMouseMove);
+      canvas.removeEventListener('mouseenter', handleMouseEnter);
       canvas.removeEventListener('click', handleClick);
       canvas.removeEventListener('mouseleave', handleMouseLeave);
     };
-  }, [camera, gl, raycaster, mouse, resourceNodesRef, onHover, onClick]);
+  }, [camera, gl, raycaster, resourceNodesRef, onHover, onClick, onClickAnimation]);
   
   // Perform raycasting on each frame for smooth hover detection
   useFrame(() => {
-    if (!resourceNodesRef.current) return;
+    if (!resourceNodesRef.current || !isMouseInCanvasRef.current) return;
     
     const mesh = resourceNodesRef.current.getMesh();
     if (!mesh) return;
     
-    raycaster.setFromCamera(mouse, camera);
+    raycaster.setFromCamera(mouse.current, camera);
     const intersects = raycaster.intersectObject(mesh);
     
     let newHovered: number | null = null;
@@ -281,6 +297,7 @@ export default function InspoCanvas({
 }: InspoCanvasProps) {
   const resourceNodesRef = useRef<ResourceNodesHandle>(null);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [clickedIndex, setClickedIndex] = useState<number | null>(null);
   const mousePosRef = useRef({ x: 0, y: 0 });
   
   // Track mouse position for tooltip
@@ -315,7 +332,14 @@ export default function InspoCanvas({
     }
   }, [onResourceHover]);
   
-  // Handle click
+  // Handle click animation
+  const handleClickAnimation = useCallback((index: number) => {
+    setClickedIndex(index);
+    // Clear clicked state after animation
+    setTimeout(() => setClickedIndex(null), 200);
+  }, []);
+  
+  // Handle click navigation
   const handleClick = useCallback((index: number) => {
     if (resourceNodesRef.current && onResourceClick) {
       const resource = resourceNodesRef.current.getResourceAtIndex(index);
@@ -347,11 +371,13 @@ export default function InspoCanvas({
             resources={resources}
             activeFilter={activeFilter}
             hoveredIndex={hoveredIndex}
+            clickedIndex={clickedIndex}
           />
           <InteractionController
             resourceNodesRef={resourceNodesRef}
             onHover={handleHover}
             onClick={handleClick}
+            onClickAnimation={handleClickAnimation}
           />
         </>
       )}

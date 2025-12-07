@@ -149,8 +149,8 @@ function InspoContent() {
       <Sidebar />
       <main className="flex-1 flex flex-col min-w-0 overflow-hidden bg-os-bg-dark pt-14 lg:pt-0 relative">
         
-        {/* Header - matches DiscoverLayout padding for consistency */}
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-6 py-8 md:px-12 md:py-12">
+        {/* Header - compact for maximizing canvas space */}
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-6 py-4 md:px-12 md:py-6">
           <div className="flex items-center justify-between gap-4">
             {/* Left: Title and Tabs */}
             <div className="flex items-center gap-3">
@@ -213,22 +213,19 @@ function InspoContent() {
         </div>
 
         {displayMode === '3d' ? (
-          /* 3D Explorer Layout: Canvas centered between header and chat */
-          <div className="flex-1 flex flex-col min-h-0">
-            {/* Top spacer - pushes 3D down */}
-            <div className="flex-1" />
-
-            {/* 3D Visualization - centered */}
-            <div className="relative flex-shrink-0" style={{ height: '40vh', minHeight: '260px', maxHeight: '360px' }}>
-              {/* Gradient fade overlays - shorter to show more of the 3D */}
+          /* 3D Explorer Layout: Maximized canvas with bottom controls */
+          <div className="flex-1 flex flex-col min-h-0 relative">
+            {/* 3D Visualization - fills available space */}
+            <div className="flex-1 relative min-h-0">
+              {/* Gradient fade overlays */}
               <div 
-                className="absolute top-0 left-0 right-0 h-8 pointer-events-none z-10"
+                className="absolute top-0 left-0 right-0 h-12 pointer-events-none z-10"
                 style={{
                   background: 'linear-gradient(to bottom, #141414 0%, transparent 100%)'
                 }}
               />
               <div 
-                className="absolute bottom-0 left-0 right-0 h-8 pointer-events-none z-10"
+                className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none z-10"
                 style={{
                   background: 'linear-gradient(to top, #141414 0%, transparent 100%)'
                 }}
@@ -247,47 +244,46 @@ function InspoContent() {
                   onResourceClick={handleResourceClick}
                 />
               </motion.div>
-              
-              {/* Hover Tooltip - rendered outside canvas for proper DOM positioning */}
-              <InspoResourceTooltip
-                resource={hoveredResource}
-                mousePosition={mousePosition}
-              />
             </div>
 
-            {/* Bottom spacer - pushes chat up */}
-            <div className="flex-1" />
-
-            {/* Bottom section: Chat → Categories → Count (equal spacing) */}
-            <div className="flex-shrink-0 w-full max-w-2xl mx-auto px-6 pb-6 space-y-4">
-              {/* Chat Input */}
-              <InspoChat 
-                onSubmit={handleChatSubmit}
-                isLoading={isProcessing}
-                placeholder="Search or describe what you're looking for..."
-              />
-              
-              {/* Category Buttons */}
-              {isLoadingData ? (
-                <div className="flex justify-center">
-                  <div className="w-5 h-5 border-2 border-brand-aperol border-t-transparent rounded-full animate-spin" />
-                </div>
-              ) : (
-                <CategoryButtons 
-                  resources={normalizedResources}
-                  activeCategory={activeCategory}
-                  onCategoryChange={handleCategoryChange}
+            {/* Bottom controls - floating over canvas */}
+            <div className="absolute bottom-0 left-0 right-0 z-20">
+              <div className="w-full max-w-2xl mx-auto px-6 pb-4 space-y-3">
+                {/* Chat Input */}
+                <InspoChat 
+                  onSubmit={handleChatSubmit}
+                  isLoading={isProcessing}
+                  placeholder="Search or describe what you're looking for..."
                 />
-              )}
-              
-              {/* Resource count */}
-              <p className="text-center text-xs text-os-text-secondary-dark">
-                {activeCategory 
-                  ? `${filteredResources.length} resources in "${activeCategory}"`
-                  : `${normalizedResources.length} inspiration resources`
-                }
-              </p>
+                
+                {/* Category Buttons */}
+                {isLoadingData ? (
+                  <div className="flex justify-center">
+                    <div className="w-5 h-5 border-2 border-brand-aperol border-t-transparent rounded-full animate-spin" />
+                  </div>
+                ) : (
+                  <CategoryButtons 
+                    resources={normalizedResources}
+                    activeCategory={activeCategory}
+                    onCategoryChange={handleCategoryChange}
+                  />
+                )}
+                
+                {/* Resource count */}
+                <p className="text-center text-xs text-os-text-secondary-dark/80">
+                  {activeCategory 
+                    ? `${filteredResources.length} resources in "${activeCategory}"`
+                    : `${normalizedResources.length} inspiration resources`
+                  }
+                </p>
+              </div>
             </div>
+            
+            {/* Tooltip - rendered at page level with fixed positioning */}
+            <InspoResourceTooltip
+              resource={hoveredResource}
+              mousePosition={mousePosition}
+            />
           </div>
         ) : (
           /* Table View */
