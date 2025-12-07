@@ -3,10 +3,10 @@
 import { useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Search, Sparkles } from 'lucide-react';
-import { 
-  useResourceDiscoveryStore, 
-  selectCategories, 
-  selectSections 
+import {
+  useResourceDiscoveryStore,
+  selectCategories,
+  selectSubCategories
 } from '@/lib/stores/resource-discovery-store';
 import { DEFAULT_CATEGORY_COLORS } from '@/types/resource-discovery';
 import { cn } from '@/lib/utils';
@@ -24,7 +24,7 @@ export default function CategoryFilterBar() {
   const filter = useResourceDiscoveryStore((state) => state.filter);
   const resources = useResourceDiscoveryStore((state) => state.resources);
   const setActiveCategory = useResourceDiscoveryStore((state) => state.setActiveCategory);
-  const setActiveSection = useResourceDiscoveryStore((state) => state.setActiveSection);
+  const setActiveSubCategory = useResourceDiscoveryStore((state) => state.setActiveSubCategory);
   const setSearchQuery = useResourceDiscoveryStore((state) => state.setSearchQuery);
   const clearFilters = useResourceDiscoveryStore((state) => state.clearFilters);
   const isLoading = useResourceDiscoveryStore((state) => state.isLoading);
@@ -35,8 +35,8 @@ export default function CategoryFilterBar() {
     [resources]
   );
   
-  const sections = useMemo(() =>
-    selectSections(useResourceDiscoveryStore.getState()),
+  const subCategories = useMemo(() =>
+    selectSubCategories(useResourceDiscoveryStore.getState()),
     [resources, filter.activeCategory]
   );
   
@@ -144,9 +144,9 @@ export default function CategoryFilterBar() {
         </AnimatePresence>
       </div>
       
-      {/* Section sub-filters (when category is active) */}
+      {/* Sub-category sub-filters (when category is active) */}
       <AnimatePresence>
-        {filter.activeCategory && sections.length > 0 && (
+        {filter.activeCategory && subCategories.length > 0 && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
@@ -154,15 +154,15 @@ export default function CategoryFilterBar() {
             className="flex items-center gap-2 overflow-hidden"
           >
             <span className="text-xs text-neutral-500 font-nhtext">
-              Sections:
+              Sub-categories:
             </span>
-            {sections.map((section) => {
-              const isActive = filter.activeSection === section;
-              
+            {subCategories.map((subCategory) => {
+              const isActive = filter.activeSubCategory === subCategory;
+
               return (
                 <button
-                  key={section}
-                  onClick={() => setActiveSection(isActive ? null : section)}
+                  key={subCategory}
+                  onClick={() => setActiveSubCategory(isActive ? null : subCategory)}
                   className={cn(
                     'px-3 py-1 rounded-full text-xs font-nhtext transition-all duration-200',
                     isActive
@@ -170,7 +170,7 @@ export default function CategoryFilterBar() {
                       : 'bg-neutral-800/50 text-neutral-400 hover:bg-neutral-700 hover:text-neutral-200'
                   )}
                 >
-                  {section}
+                  {subCategory}
                 </button>
               );
             })}

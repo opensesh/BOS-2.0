@@ -11,7 +11,7 @@ export interface InspoResource {
   URL: string;
   Description: string | null;
   Category: string | null;
-  Section: string | null;
+  "Sub-category": string | null;
   Pricing: string | null;
   Featured: boolean | null;
   OpenSource: boolean | null;
@@ -40,7 +40,7 @@ export interface NormalizedResource {
   url: string;
   description: string | null;
   category: string | null;
-  section: string | null;
+  subCategory: string | null;
   pricing: string | null;
   featured: boolean;
   opensource: boolean;
@@ -59,7 +59,7 @@ export function normalizeResource(resource: InspoResource): NormalizedResource {
     url: resource.URL ?? '',
     description: resource.Description ?? null,
     category: resource.Category ?? null,
-    section: resource.Section ?? null,
+    subCategory: resource["Sub-category"] ?? null,
     pricing: resource.Pricing ?? null,
     featured: resource.Featured ?? false,
     opensource: resource.OpenSource ?? false,

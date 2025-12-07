@@ -1,6 +1,6 @@
 /**
  * Force-Directed Cluster Layout
- * Uses d3-force-3d to position resource nodes with category/section clustering
+ * Uses d3-force-3d to position resource nodes with category/subCategory clustering
  */
 
 import {
@@ -39,7 +39,7 @@ const DEFAULT_CONFIG: ForceLayoutConfig = {
 
 /**
  * Generates cluster centers arranged in a sphere
- * Categories form major clusters, sections form sub-clusters
+ * Categories form major clusters, subCategories form sub-clusters
  */
 function generateClusterCenters(
   categories: string[],
@@ -67,18 +67,18 @@ function generateClusterCenters(
 }
 
 /**
- * Generates section offsets within a category cluster
- * Creates sub-groupings for sections
+ * Generates subCategory offsets within a category cluster
+ * Creates sub-groupings for subCategories
  */
-function getSectionOffset(
-  sectionIndex: number,
-  totalSections: number,
+function getSubCategoryOffset(
+  subCategoryIndex: number,
+  totalSubCategories: number,
   subRadius: number = 5
 ): { x: number; y: number; z: number } {
-  if (totalSections <= 1) return { x: 0, y: 0, z: 0 };
-  
-  // Arrange sections in a ring around category center
-  const angle = (sectionIndex / totalSections) * Math.PI * 2;
+  if (totalSubCategories <= 1) return { x: 0, y: 0, z: 0 };
+
+  // Arrange subCategories in a ring around category center
+  const angle = (subCategoryIndex / totalSubCategories) * Math.PI * 2;
   
   return {
     x: Math.cos(angle) * subRadius,
@@ -93,7 +93,7 @@ function getSectionOffset(
 function createResourceNode(
   resource: NormalizedResource,
   clusterCenter: { x: number; y: number; z: number },
-  sectionOffset: { x: number; y: number; z: number },
+  subCategoryOffset: { x: number; y: number; z: number },
   clusterId: string,
   clusterIndex: number
 ): ResourceNode {
@@ -103,12 +103,12 @@ function createResourceNode(
     y: (Math.random() - 0.5) * 3,
     z: (Math.random() - 0.5) * 3,
   };
-  
+
   return {
     ...resource,
-    x: clusterCenter.x + sectionOffset.x + jitter.x,
-    y: clusterCenter.y + sectionOffset.y + jitter.y,
-    z: clusterCenter.z + sectionOffset.z + jitter.z,
+    x: clusterCenter.x + subCategoryOffset.x + jitter.x,
+    y: clusterCenter.y + subCategoryOffset.y + jitter.y,
+    z: clusterCenter.z + subCategoryOffset.z + jitter.z,
     clusterId,
     clusterIndex,
   };
@@ -127,29 +127,29 @@ export function generateClusteredLayout(
 ): { nodes: ResourceNode[]; clusters: ResourceCluster[] } {
   const cfg = { ...DEFAULT_CONFIG, ...config };
   
-  // Extract unique categories and sections
+  // Extract unique categories and subCategories
   const categoryMap = new Map<string, Set<string>>();
-  
+
   resources.forEach(r => {
     const category = r.category || 'Uncategorized';
     if (!categoryMap.has(category)) {
       categoryMap.set(category, new Set());
     }
-    if (r.section) {
-      categoryMap.get(category)!.add(r.section);
+    if (r.subCategory) {
+      categoryMap.get(category)!.add(r.subCategory);
     }
   });
-  
+
   const categories = Array.from(categoryMap.keys()).sort();
   const clusterCenters = generateClusterCenters(categories, cfg.clusterRadius);
-  
-  // Track sections per category for offset calculation
-  const sectionIndices = new Map<string, Map<string, number>>();
+
+  // Track subCategories per category for offset calculation
+  const subCategoryIndices = new Map<string, Map<string, number>>();
   categories.forEach(cat => {
-    const sections = Array.from(categoryMap.get(cat) || []).sort();
+    const subCategories = Array.from(categoryMap.get(cat) || []).sort();
     const indexMap = new Map<string, number>();
-    sections.forEach((sec, i) => indexMap.set(sec, i));
-    sectionIndices.set(cat, indexMap);
+    subCategories.forEach((subCat, i) => indexMap.set(subCat, i));
+    subCategoryIndices.set(cat, indexMap);
   });
   
   // Create initial nodes with cluster-based positioning
@@ -158,19 +158,19 @@ export function generateClusteredLayout(
   
   const nodes: ResourceNode[] = resources.map(resource => {
     const category = resource.category || 'Uncategorized';
-    const section = resource.section || '';
-    const clusterId = `${category}::${section}`;
-    
+    const subCategory = resource.subCategory || '';
+    const clusterId = `${category}::${subCategory}`;
+
     if (!clusterIdToIndex.has(clusterId)) {
       clusterIdToIndex.set(clusterId, clusterIdx++);
     }
-    
+
     const center = clusterCenters.get(category) || { x: 0, y: 0, z: 0 };
-    const sectionMap = sectionIndices.get(category);
-    const sectionIdx = sectionMap?.get(section) ?? 0;
-    const totalSections = sectionMap?.size ?? 1;
-    const offset = getSectionOffset(sectionIdx, totalSections);
-    
+    const subCategoryMap = subCategoryIndices.get(category);
+    const subCategoryIdx = subCategoryMap?.get(subCategory) ?? 0;
+    const totalSubCategories = subCategoryMap?.size ?? 1;
+    const offset = getSubCategoryOffset(subCategoryIdx, totalSubCategories);
+
     return createResourceNode(
       resource,
       center,
@@ -214,24 +214,24 @@ export function generateClusteredLayout(
   const clusterData = new Map<string, {
     resources: ResourceNode[];
     category: string;
-    section: string | null;
+    subCategory: string | null;
   }>();
-  
+
   nodes.forEach(node => {
     if (!clusterData.has(node.clusterId)) {
       clusterData.set(node.clusterId, {
         resources: [],
         category: node.category || 'Uncategorized',
-        section: node.section,
+        subCategory: node.subCategory,
       });
     }
     clusterData.get(node.clusterId)!.resources.push(node);
   });
-  
+
   // Calculate cluster centers and create metadata
   const clusters: ResourceCluster[] = Array.from(clusterData.entries()).map(
     ([id, data]) => {
-      const { resources: clusterResources, category, section } = data;
+      const { resources: clusterResources, category, subCategory } = data;
       
       // Calculate centroid of all nodes in cluster
       const center = clusterResources.reduce(
@@ -246,7 +246,7 @@ export function generateClusteredLayout(
       return {
         id,
         category,
-        section,
+        subCategory,
         count: clusterResources.length,
         center,
         color: DEFAULT_CATEGORY_COLORS[category] || DEFAULT_CATEGORY_COLORS.default,

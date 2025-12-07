@@ -54,6 +54,8 @@ export interface ResourceNodesHandle {
 interface ResourceNodesProps {
   resources: NormalizedResource[];
   activeFilter?: string | null;
+  activeSubFilter?: string | null;
+  filteredResourceIds?: number[] | null;
   hoveredIndex?: number | null;
   clickedIndex?: number | null;
 }
@@ -62,10 +64,17 @@ interface ResourceNodesProps {
  * ResourceNodes
  * 
  * Renders all resources as individual sphere meshes orbiting the central sphere.
- * Supports hover and click visual feedback with scale animations.
+ * Supports category, subcategory, and AI-based filtering with smooth animations.
  */
 const ResourceNodes = forwardRef<ResourceNodesHandle, ResourceNodesProps>(
-  function ResourceNodes({ resources, activeFilter, hoveredIndex, clickedIndex }, ref) {
+  function ResourceNodes({ 
+    resources, 
+    activeFilter, 
+    activeSubFilter,
+    filteredResourceIds,
+    hoveredIndex, 
+    clickedIndex 
+  }, ref) {
     const meshRef = useRef<THREE.InstancedMesh>(null);
     const groupRef = useRef<THREE.Group>(null);
     
@@ -130,17 +139,33 @@ const ResourceNodes = forwardRef<ResourceNodesHandle, ResourceNodesProps>(
       }
     }, [resourceCount]);
     
-    // Update target opacities when filter changes
+    // Update target opacities when any filter changes
     useEffect(() => {
       if (!targetOpacitiesRef.current || resourceCount === 0) return;
       
       resources.forEach((resource, index) => {
-        const shouldBeVisible = !activeFilter || resource.category === activeFilter;
+        let shouldBeVisible = true;
+        
+        // AI filter takes priority if set
+        if (filteredResourceIds && filteredResourceIds.length > 0) {
+          shouldBeVisible = filteredResourceIds.includes(resource.id);
+        } else {
+          // Category filter
+          if (activeFilter) {
+            shouldBeVisible = resource.category === activeFilter;
+          }
+          
+          // Subcategory filter (only applies if category matches)
+          if (shouldBeVisible && activeSubFilter) {
+            shouldBeVisible = resource.subCategory === activeSubFilter;
+          }
+        }
+        
         targetOpacitiesRef.current![index] = shouldBeVisible 
           ? ANIMATION.VISIBLE_OPACITY 
           : ANIMATION.HIDDEN_OPACITY;
       });
-    }, [activeFilter, resources, resourceCount]);
+    }, [activeFilter, activeSubFilter, filteredResourceIds, resources, resourceCount]);
     
     // Initial mesh setup
     useEffect(() => {

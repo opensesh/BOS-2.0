@@ -16,7 +16,7 @@ export interface ResourceNode {
   // Content metadata
   description: string | null;
   category: string | null;
-  section: string | null;
+  subCategory: string | null;
   tags: string[] | null;
   
   // Resource attributes
@@ -51,9 +51,9 @@ export interface ResourceNode {
  * Cluster metadata for category/section groupings
  */
 export interface ResourceCluster {
-  id: string; // category-section composite key
+  id: string; // category-subCategory composite key
   category: string;
-  section: string | null;
+  subCategory: string | null;
   count: number;
   center: { x: number; y: number; z: number };
   color: string;
@@ -72,7 +72,7 @@ export interface CameraTarget {
  */
 export interface FilterState {
   activeCategory: string | null;
-  activeSection: string | null;
+  activeSubCategory: string | null;
   searchQuery: string;
 }
 

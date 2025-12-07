@@ -11,19 +11,18 @@ export { default as CategoryFilterBar } from './CategoryFilterBar';
 export { default as ResourceTooltip } from './ResourceTooltip';
 
 // Re-export store and types for convenience
-export { 
+export {
   useResourceDiscoveryStore,
   selectActiveResources,
   selectCategories,
-  selectSections 
+  selectSubCategories
 } from '@/lib/stores/resource-discovery-store';
 
-export type { 
-  ResourceNode, 
-  ResourceCluster, 
+export type {
+  ResourceNode,
+  ResourceCluster,
   CameraTarget,
-  FilterState,
-  ParticleAppearance 
+  FilterState
 } from '@/types/resource-discovery';
 
 export { DEFAULT_CATEGORY_COLORS } from '@/types/resource-discovery';

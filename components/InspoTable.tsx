@@ -73,7 +73,7 @@ interface InspoTableProps {
   resources: InspoResource[];
 }
 
-type SortField = 'name' | 'category' | 'section' | 'pricing';
+type SortField = 'name' | 'category' | 'subCategory' | 'pricing';
 type SortDirection = 'asc' | 'desc' | null;
 
 export function InspoTable({ resources: rawResources }: InspoTableProps) {
@@ -84,7 +84,7 @@ export function InspoTable({ resources: rawResources }: InspoTableProps) {
     rawResources.map(normalizeResource), [rawResources]);
   // Filter state
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
-  const [sectionFilter, setSectionFilter] = useState<string>('all');
+  const [subCategoryFilter, setSubCategoryFilter] = useState<string>('all');
   const [pricingFilter, setPricingFilter] = useState<string>('all');
 
   // Sort state
@@ -94,18 +94,18 @@ export function InspoTable({ resources: rawResources }: InspoTableProps) {
   // Extract unique values for filters
   const filterOptions = useMemo(() => {
     const categories = new Set<string>();
-    const sections = new Set<string>();
+    const subCategories = new Set<string>();
     const pricings = new Set<string>();
 
     resources.forEach((resource) => {
       if (resource.category) categories.add(resource.category);
-      if (resource.section) sections.add(resource.section);
+      if (resource.subCategory) subCategories.add(resource.subCategory);
       if (resource.pricing) pricings.add(resource.pricing);
     });
 
     return {
       categories: Array.from(categories).sort(),
-      sections: Array.from(sections).sort(),
+      subCategories: Array.from(subCategories).sort(),
       pricings: Array.from(pricings).sort(),
     };
   }, [resources]);
@@ -114,9 +114,9 @@ export function InspoTable({ resources: rawResources }: InspoTableProps) {
   const filteredAndSortedResources = useMemo(() => {
     let filtered = resources.filter((resource) => {
       const categoryMatch = categoryFilter === 'all' || resource.category === categoryFilter;
-      const sectionMatch = sectionFilter === 'all' || resource.section === sectionFilter;
+      const subCategoryMatch = subCategoryFilter === 'all' || resource.subCategory === subCategoryFilter;
       const pricingMatch = pricingFilter === 'all' || resource.pricing === pricingFilter;
-      return categoryMatch && sectionMatch && pricingMatch;
+      return categoryMatch && subCategoryMatch && pricingMatch;
     });
 
     // Apply sorting
@@ -131,7 +131,7 @@ export function InspoTable({ resources: rawResources }: InspoTableProps) {
     }
 
     return filtered;
-  }, [resources, categoryFilter, sectionFilter, pricingFilter, sortField, sortDirection]);
+  }, [resources, categoryFilter, subCategoryFilter, pricingFilter, sortField, sortDirection]);
 
   // Handle sort toggle
   const handleSort = (field: SortField) => {
@@ -185,21 +185,21 @@ export function InspoTable({ resources: rawResources }: InspoTableProps) {
             </select>
           </div>
 
-          {/* Section Filter */}
+          {/* Sub-category Filter */}
           <div className="flex flex-col gap-1.5">
-            <label htmlFor="section-filter" className="text-xs font-accent uppercase tracking-wider text-os-text-secondary-dark">
-              Section
+            <label htmlFor="subcategory-filter" className="text-xs font-accent uppercase tracking-wider text-os-text-secondary-dark">
+              Sub-category
             </label>
             <select
-              id="section-filter"
-              value={sectionFilter}
-              onChange={(e) => setSectionFilter(e.target.value)}
+              id="subcategory-filter"
+              value={subCategoryFilter}
+              onChange={(e) => setSubCategoryFilter(e.target.value)}
               className="px-3 py-2 bg-os-surface-dark border border-os-border-dark rounded-lg text-sm text-os-text-primary-dark focus:outline-none focus:ring-2 focus:ring-brand-aperol/50 focus:border-brand-aperol transition-colors cursor-pointer hover:border-brand-aperol/30"
             >
-              <option value="all">All Sections</option>
-              {filterOptions.sections.map((section) => (
-                <option key={section} value={section}>
-                  {section}
+              <option value="all">All Sub-categories</option>
+              {filterOptions.subCategories.map((subCategory) => (
+                <option key={subCategory} value={subCategory}>
+                  {subCategory}
                 </option>
               ))}
             </select>
@@ -269,14 +269,14 @@ export function InspoTable({ resources: rawResources }: InspoTableProps) {
                 </button>
               </th>
 
-              {/* Section Header */}
+              {/* Sub-category Header */}
               <th className="text-left p-4 bg-os-bg-dark">
                 <button
-                  onClick={() => handleSort('section')}
+                  onClick={() => handleSort('subCategory')}
                   className="flex items-center gap-2 text-xs font-accent uppercase tracking-wider text-os-text-secondary-dark hover:text-brand-aperol transition-colors group"
                 >
-                  Section
-                  {getSortIcon('section')}
+                  Sub-category
+                  {getSortIcon('subCategory')}
                 </button>
               </th>
 
@@ -328,9 +328,9 @@ export function InspoTable({ resources: rawResources }: InspoTableProps) {
                     {resource.category || '—'}
                   </td>
 
-                  {/* Section Column */}
+                  {/* Sub-category Column */}
                   <td className="p-4 text-os-text-secondary-dark">
-                    {resource.section || '—'}
+                    {resource.subCategory || '—'}
                   </td>
 
                   {/* Pricing Column */}

@@ -37,7 +37,7 @@ interface ResourceDiscoveryState {
   
   // Actions - Filtering
   setActiveCategory: (category: string | null) => void;
-  setActiveSection: (section: string | null) => void;
+  setActiveSubCategory: (subCategory: string | null) => void;
   setSearchQuery: (query: string) => void;
   clearFilters: () => void;
   
@@ -61,7 +61,7 @@ const DEFAULT_CAMERA: CameraTarget = {
 // Default filter state
 const DEFAULT_FILTER: FilterState = {
   activeCategory: null,
-  activeSection: null,
+  activeSubCategory: null,
   searchQuery: '',
 };
 
@@ -85,8 +85,8 @@ export const useResourceDiscoveryStore = create<ResourceDiscoveryState>((set, ge
   
   // Filter actions
   setActiveCategory: (category) => {
-    set({ 
-      filter: { ...get().filter, activeCategory: category, activeSection: null } 
+    set({
+      filter: { ...get().filter, activeCategory: category, activeSubCategory: null }
     });
     
     // Auto-focus on category cluster if set
@@ -101,8 +101,8 @@ export const useResourceDiscoveryStore = create<ResourceDiscoveryState>((set, ge
     }
   },
   
-  setActiveSection: (section) => {
-    set({ filter: { ...get().filter, activeSection: section } });
+  setActiveSubCategory: (subCategory) => {
+    set({ filter: { ...get().filter, activeSubCategory: subCategory } });
   },
   
   setSearchQuery: (query) => {
@@ -165,8 +165,8 @@ export const selectActiveResources = (state: ResourceDiscoveryState): ResourceNo
       return false;
     }
     
-    // Section filter
-    if (filter.activeSection && resource.section !== filter.activeSection) {
+    // Sub-category filter
+    if (filter.activeSubCategory && resource.subCategory !== filter.activeSubCategory) {
       return false;
     }
     
@@ -194,15 +194,15 @@ export const selectCategories = (state: ResourceDiscoveryState): string[] => {
   return Array.from(categories).sort();
 };
 
-export const selectSections = (state: ResourceDiscoveryState): string[] => {
+export const selectSubCategories = (state: ResourceDiscoveryState): string[] => {
   const { filter, resources } = state;
-  const sections = new Set<string>();
-  
+  const subCategories = new Set<string>();
+
   resources.forEach(r => {
-    // Only show sections for active category
+    // Only show sub-categories for active category
     if (filter.activeCategory && r.category !== filter.activeCategory) return;
-    if (r.section) sections.add(r.section);
+    if (r.subCategory) subCategories.add(r.subCategory);
   });
-  
-  return Array.from(sections).sort();
+
+  return Array.from(subCategories).sort();
 };

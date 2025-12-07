@@ -103,8 +103,8 @@ export default function ResourceDetailPage() {
               );
               score += sharedTags.length * 3;
 
-              // +2 points for same section
-              if (r.section && r.section === found.section) score += 2;
+              // +2 points for same sub-category
+              if (r.subCategory && r.subCategory === found.subCategory) score += 2;
 
               // +1 point for same category
               if (r.category && r.category === found.category) score += 1;
@@ -391,10 +391,10 @@ export default function ResourceDetailPage() {
                     {resource.category}
                   </span>
                 )}
-                {resource.section && (
+                {resource.subCategory && (
                   <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-os-surface-dark text-os-text-secondary-dark text-xs border border-os-border-dark">
                     <Layers className="w-3 h-3" />
-                    {resource.section}
+                    {resource.subCategory}
                   </span>
                 )}
                 {resource.pricing && (
@@ -472,7 +472,7 @@ export default function ResourceDetailPage() {
                             {related.name}
                           </h3>
                           <p className="text-xs text-os-text-secondary-dark truncate">
-                            {related.section || related.category || 'Resource'}
+                            {related.subCategory || related.category || 'Resource'}
                           </p>
                         </div>
 

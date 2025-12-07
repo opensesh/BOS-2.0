@@ -66,11 +66,11 @@ export default function ResourceTooltip() {
                   <span className="text-xs text-neutral-400 font-nhtext">
                     {hoveredResource.category || 'Uncategorized'}
                   </span>
-                  {hoveredResource.section && (
+                  {hoveredResource.subCategory && (
                     <>
                       <span className="text-neutral-600">•</span>
                       <span className="text-xs text-neutral-500 font-nhtext">
-                        {hoveredResource.section}
+                        {hoveredResource.subCategory}
                       </span>
                     </>
                   )}

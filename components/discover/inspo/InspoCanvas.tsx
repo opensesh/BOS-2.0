@@ -276,6 +276,8 @@ function InteractionController({
 interface InspoCanvasProps {
   resources?: NormalizedResource[];
   activeFilter?: string | null;
+  activeSubFilter?: string | null;
+  filteredResourceIds?: number[] | null;
   onResourceHover?: (resource: NormalizedResource | null, mousePosition: { x: number; y: number }) => void;
   onResourceClick?: (resource: NormalizedResource) => void;
 }
@@ -292,6 +294,8 @@ interface InspoCanvasProps {
 export default function InspoCanvas({ 
   resources = [], 
   activeFilter,
+  activeSubFilter,
+  filteredResourceIds,
   onResourceHover,
   onResourceClick,
 }: InspoCanvasProps) {
@@ -370,6 +374,8 @@ export default function InspoCanvas({
             ref={resourceNodesRef}
             resources={resources}
             activeFilter={activeFilter}
+            activeSubFilter={activeSubFilter}
+            filteredResourceIds={filteredResourceIds}
             hoveredIndex={hoveredIndex}
             clickedIndex={clickedIndex}
           />

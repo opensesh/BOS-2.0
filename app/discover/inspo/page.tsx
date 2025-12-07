@@ -14,6 +14,8 @@ import { getInspoResources, normalizeResource, type InspoResource, type Normaliz
 const InspoCanvas = dynamic<{
   resources?: NormalizedResource[];
   activeFilter?: string | null;
+  activeSubFilter?: string | null;
+  filteredResourceIds?: number[] | null;
   onResourceHover?: (resource: NormalizedResource | null, mousePosition: { x: number; y: number }) => void;
   onResourceClick?: (resource: NormalizedResource) => void;
 }>(
@@ -34,12 +36,6 @@ const InspoResourceTooltip = dynamic(
   { ssr: false }
 );
 
-// ControlPanel kept for future scene manipulation features
-// const ControlPanel = dynamic(
-//   () => import('@/components/discover/inspo/ControlPanel'),
-//   { ssr: false }
-// );
-
 // Import InspoChat and CategoryButtons
 const InspoChat = dynamic(
   () => import('@/components/discover/inspo/InspoChat').then(mod => ({ default: mod.InspoChat })),
@@ -51,7 +47,86 @@ const CategoryButtons = dynamic(
   { ssr: false }
 );
 
+// Import AI response component
+const AIFilterResponse = dynamic(
+  () => import('@/components/discover/inspo/AIFilterResponse').then(mod => ({ default: mod.AIFilterResponse })),
+  { ssr: false }
+);
+
 type DisplayMode = '3d' | 'table';
+
+/**
+ * Simple semantic search function
+ * Searches through resource name, description, category, subcategory, and tags
+ * Returns matching resource IDs and a response message
+ */
+function semanticSearch(
+  query: string, 
+  resources: NormalizedResource[]
+): { matchedIds: number[]; message: string } {
+  const queryLower = query.toLowerCase();
+  const queryWords = queryLower.split(/\s+/).filter(w => w.length > 2);
+  
+  // Score each resource based on relevance
+  const scored = resources.map(resource => {
+    let score = 0;
+    const searchText = [
+      resource.name,
+      resource.description,
+      resource.category,
+      resource.subCategory,
+      ...(resource.tags || [])
+    ].filter(Boolean).join(' ').toLowerCase();
+    
+    // Exact phrase match (highest score)
+    if (searchText.includes(queryLower)) {
+      score += 10;
+    }
+    
+    // Word matches
+    queryWords.forEach(word => {
+      if (searchText.includes(word)) {
+        score += 2;
+      }
+      // Partial word match
+      if (searchText.split(/\s+/).some(w => w.startsWith(word))) {
+        score += 1;
+      }
+    });
+    
+    // Boost for name matches
+    if (resource.name?.toLowerCase().includes(queryLower)) {
+      score += 5;
+    }
+    
+    return { resource, score };
+  });
+  
+  // Filter to resources with positive scores, sorted by score
+  const matches = scored
+    .filter(s => s.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .map(s => s.resource);
+  
+  // Generate a natural response message
+  let message = '';
+  if (matches.length === 0) {
+    message = `I couldn't find any resources matching "${query}". Try different keywords or browse the categories below.`;
+  } else if (matches.length === 1) {
+    message = `I found one resource that matches your search. It's "${matches[0].name}" from the ${matches[0].category || 'general'} category.`;
+  } else if (matches.length <= 5) {
+    const categories = [...new Set(matches.map(m => m.category).filter(Boolean))];
+    message = `Great news! I found ${matches.length} resources for you. They span ${categories.length > 1 ? `categories like ${categories.slice(0, 2).join(' and ')}` : `the ${categories[0] || 'various'} category`}.`;
+  } else {
+    const topCategories = [...new Set(matches.slice(0, 10).map(m => m.category).filter(Boolean))];
+    message = `I found ${matches.length} resources related to "${query}". Most are in ${topCategories.slice(0, 2).join(' and ')} categories. The highlighted nodes are your matches!`;
+  }
+  
+  return {
+    matchedIds: matches.map(m => m.id),
+    message
+  };
+}
 
 function InspoContent() {
   const router = useRouter();
@@ -64,11 +139,14 @@ function InspoContent() {
   const [isLoadingData, setIsLoadingData] = useState(false);
   const [fetchError, setFetchError] = useState<string | null>(null);
   
-  // Category filter state
+  // Category and subcategory filter state
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [activeSubCategory, setActiveSubCategory] = useState<string | null>(null);
   
-  // Chat state
+  // AI chat filter state
   const [isProcessing, setIsProcessing] = useState(false);
+  const [aiResponse, setAiResponse] = useState<string | null>(null);
+  const [filteredResourceIds, setFilteredResourceIds] = useState<number[] | null>(null);
   
   // Hover state for 3D tooltip
   const [hoveredResource, setHoveredResource] = useState<NormalizedResource | null>(null);
@@ -111,16 +189,42 @@ function InspoContent() {
   // Handle category change
   const handleCategoryChange = (category: string | null) => {
     setActiveCategory(category);
-    // Future: This will trigger filtering in the 3D visualization
+    setActiveSubCategory(null); // Reset subcategory when category changes
+    // Clear AI filter when manually selecting category
+    setAiResponse(null);
+    setFilteredResourceIds(null);
   };
 
-  // Handle chat submission
-  const handleChatSubmit = (query: string) => {
-    setIsProcessing(true);
-    console.log('Inspo chat query:', query);
-    // Future: This will filter/search the 3D visualization
-    setTimeout(() => setIsProcessing(false), 1000);
+  // Handle subcategory change
+  const handleSubCategoryChange = (subCategory: string | null) => {
+    setActiveSubCategory(subCategory);
+    // Clear AI filter when manually selecting subcategory
+    setAiResponse(null);
+    setFilteredResourceIds(null);
   };
+
+  // Handle chat submission - semantic search
+  const handleChatSubmit = useCallback((query: string) => {
+    setIsProcessing(true);
+    
+    // Clear category filters when using AI search
+    setActiveCategory(null);
+    setActiveSubCategory(null);
+    
+    // Simulate slight delay for natural feel
+    setTimeout(() => {
+      const { matchedIds, message } = semanticSearch(query, normalizedResources);
+      setFilteredResourceIds(matchedIds.length > 0 ? matchedIds : null);
+      setAiResponse(message);
+      setIsProcessing(false);
+    }, 500);
+  }, [normalizedResources]);
+
+  // Dismiss AI response
+  const handleDismissAiResponse = useCallback(() => {
+    setAiResponse(null);
+    setFilteredResourceIds(null);
+  }, []);
 
   // Handle resource hover from 3D canvas
   const handleResourceHover = useCallback((
@@ -136,11 +240,21 @@ function InspoContent() {
     router.push(`/discover/inspo/${resource.id}`);
   }, [router]);
 
-  // Filtered resources based on category
-  const filteredResources = useMemo(() => {
-    if (!activeCategory) return normalizedResources;
-    return normalizedResources.filter(r => r.category === activeCategory);
-  }, [normalizedResources, activeCategory]);
+  // Calculate visible resource count
+  const visibleResourceCount = useMemo(() => {
+    if (filteredResourceIds) {
+      return filteredResourceIds.length;
+    }
+    if (activeSubCategory) {
+      return normalizedResources.filter(r => 
+        r.category === activeCategory && r.subCategory === activeSubCategory
+      ).length;
+    }
+    if (activeCategory) {
+      return normalizedResources.filter(r => r.category === activeCategory).length;
+    }
+    return normalizedResources.length;
+  }, [normalizedResources, activeCategory, activeSubCategory, filteredResourceIds]);
 
   return (
     <div className="flex h-screen bg-os-bg-dark text-os-text-primary-dark font-sans">
@@ -239,6 +353,8 @@ function InspoContent() {
                 <InspoCanvas 
                   resources={normalizedResources}
                   activeFilter={activeCategory}
+                  activeSubFilter={activeSubCategory}
+                  filteredResourceIds={filteredResourceIds}
                   onResourceHover={handleResourceHover}
                   onResourceClick={handleResourceClick}
                 />
@@ -256,11 +372,19 @@ function InspoContent() {
               />
               
               <div className="w-full max-w-2xl mx-auto px-6 pt-2 pb-6 space-y-3">
+                {/* AI Response - appears above chat when active */}
+                <AIFilterResponse
+                  message={aiResponse}
+                  isTyping={isProcessing}
+                  onDismiss={handleDismissAiResponse}
+                  matchCount={filteredResourceIds?.length}
+                />
+                
                 {/* Chat Input */}
                 <InspoChat 
                   onSubmit={handleChatSubmit}
                   isLoading={isProcessing}
-                  placeholder="Search or describe what you're looking for..."
+                  placeholder="Describe what you're looking for... (e.g., 'tools for YouTube creators')"
                 />
                 
                 {/* Category Buttons */}
@@ -272,15 +396,21 @@ function InspoContent() {
                   <CategoryButtons 
                     resources={normalizedResources}
                     activeCategory={activeCategory}
+                    activeSubCategory={activeSubCategory}
                     onCategoryChange={handleCategoryChange}
+                    onSubCategoryChange={handleSubCategoryChange}
                   />
                 )}
                 
                 {/* Resource count */}
                 <p className="text-center text-xs text-os-text-secondary-dark/80">
-                  {activeCategory 
-                    ? `${filteredResources.length} resources in "${activeCategory}"`
-                    : `${normalizedResources.length} inspiration resources`
+                  {filteredResourceIds
+                    ? `${visibleResourceCount} matching resource${visibleResourceCount !== 1 ? 's' : ''}`
+                    : activeSubCategory
+                      ? `${visibleResourceCount} resources in "${activeSubCategory}"`
+                      : activeCategory 
+                        ? `${visibleResourceCount} resources in "${activeCategory}"`
+                        : `${normalizedResources.length} inspiration resources`
                   }
                 </p>
               </div>
