@@ -5,7 +5,11 @@
  * Run with: npm run fetch-thumbnails
  */
 
+import { config } from 'dotenv';
 import { createClient } from '@supabase/supabase-js';
+
+// Load environment variables from .env.local
+config({ path: '.env.local' });
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const ogs = require('open-graph-scraper');
@@ -88,6 +92,22 @@ async function fetchThumbnail(url: string): Promise<string | null> {
 
 async function main() {
   console.log('🔍 Fetching resources from Supabase...\n');
+
+  // First, try to fetch with Thumbnail column to check if it exists
+  let thumbnailColumnExists = true;
+  const { error: columnCheck } = await supabase
+    .from('Inspiration Design Resources')
+    .select('Thumbnail')
+    .limit(1);
+
+  if (columnCheck?.message?.includes('does not exist')) {
+    thumbnailColumnExists = false;
+    console.log('⚠️  Thumbnail column does not exist yet.');
+    console.log('   Please run this SQL in Supabase Dashboard (SQL Editor):\n');
+    console.log('   ALTER TABLE "Inspiration Design Resources" ADD COLUMN "Thumbnail" TEXT;\n');
+    console.log('   Then run this script again.\n');
+    process.exit(1);
+  }
 
   // Fetch all resources
   const { data: resources, error: fetchError } = await supabase

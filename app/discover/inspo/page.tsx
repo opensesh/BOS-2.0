@@ -220,11 +220,22 @@ function InspoContent() {
               </motion.div>
             </div>
 
-            {/* Category Buttons - constrained to match chat width */}
-            <div className="flex-shrink-0 py-4 w-full max-w-2xl mx-auto px-6">
+            {/* Spacer */}
+            <div className="flex-1" />
+
+            {/* Bottom section: Chat → Categories → Count (equal spacing) */}
+            <div className="flex-shrink-0 w-full max-w-2xl mx-auto px-6 pb-6 space-y-4">
+              {/* Chat Input */}
+              <InspoChat 
+                onSubmit={handleChatSubmit}
+                isLoading={isProcessing}
+                placeholder="Search or describe what you're looking for..."
+              />
+              
+              {/* Category Buttons */}
               {isLoadingData ? (
                 <div className="flex justify-center">
-                  <div className="w-6 h-6 border-2 border-brand-aperol border-t-transparent rounded-full animate-spin" />
+                  <div className="w-5 h-5 border-2 border-brand-aperol border-t-transparent rounded-full animate-spin" />
                 </div>
               ) : (
                 <CategoryButtons 
@@ -233,21 +244,9 @@ function InspoContent() {
                   onCategoryChange={handleCategoryChange}
                 />
               )}
-            </div>
-
-            {/* Spacer */}
-            <div className="flex-1" />
-
-            {/* Chat Input - fixed at bottom */}
-            <div className="flex-shrink-0 w-full max-w-2xl mx-auto px-6 pb-8">
-              <InspoChat 
-                onSubmit={handleChatSubmit}
-                isLoading={isProcessing}
-                placeholder="Search or describe what you're looking for..."
-              />
               
               {/* Resource count */}
-              <p className="text-center text-xs text-os-text-secondary-dark mt-3">
+              <p className="text-center text-xs text-os-text-secondary-dark">
                 {activeCategory 
                   ? `${filteredResources.length} resources in "${activeCategory}"`
                   : `${normalizedResources.length} inspiration resources`
