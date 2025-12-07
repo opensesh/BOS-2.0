@@ -220,8 +220,8 @@ function InspoContent() {
               </motion.div>
             </div>
 
-            {/* Category Buttons */}
-            <div className="flex-shrink-0 py-4">
+            {/* Category Buttons - constrained to match chat width */}
+            <div className="flex-shrink-0 py-4 w-full max-w-2xl mx-auto px-6">
               {isLoadingData ? (
                 <div className="flex justify-center">
                   <div className="w-6 h-6 border-2 border-brand-aperol border-t-transparent rounded-full animate-spin" />
