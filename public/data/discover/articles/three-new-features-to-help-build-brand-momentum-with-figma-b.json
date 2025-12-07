@@ -1,17 +1,17 @@
 {
   "id": "three-new-features-to-help-build-brand-momentum-with-figma-b",
   "slug": "three-new-features-to-help-build-brand-momentum-with-figma-b",
-  "title": "Figma Buzz unveils three new features to turn brand assets into a growth engine",
-  "publishedAt": "2025-12-06T16:17:09.223Z",
-  "generatedAt": "2025-12-06T16:17:09.223Z",
-  "totalSources": 20,
+  "title": "Figma Buzz adds three power features to turn brand guidelines into always‑on momentum",
+  "publishedAt": "2025-12-07T16:15:22.034Z",
+  "generatedAt": "2025-12-07T16:15:22.034Z",
+  "totalSources": 18,
   "sections": [
     {
       "id": "section-0",
       "paragraphs": [
         {
           "id": "para-0-0",
-          "content": "Figma has rolled out three new Figma Buzz features—configurable marketing templates tied to design systems, plugin support, and native video trimming—aimed at helping teams ship on-brand marketing assets faster.The update builds on Buzz’s positioning as a dedicated space where marketers can customize designer-built templates without breaking guidelines, spanning everything from social posts to event materials.By connecting templates directly to design system component properties, Buzz now lets marketers switch variations in a controlled way instead of navigating hundreds of separate files.",
+          "content": "Figma has rolled out three major updates to Figma Buzz—configurable templates tied to design systems, in-app plugins, and native video trimming—aimed squarely at helping marketing teams ship more on-brand work, faster.The new configurable templates let brand designers wire marketing layouts directly to component properties from their design systems, so marketers can swap layouts, colors, and copy without hunting through hundreds of variants.Plugin support brings key external tools—like digital asset management, translation, and animation—directly into the Buzz workspace, reducing context switching across apps.At the same time, built-in video trimming gives teams precise control over video length and sequencing inside Buzz, keeping production of social clips, ads, and event promos in a single, collaborative environment.",
           "citations": [
             {
               "primarySource": {
@@ -43,7 +43,7 @@
         },
         {
           "id": "para-0-1",
-          "content": "Analysts see the move as part of Figma’s broader push to turn its platform into a “brand-safe content factory,” giving growth and brand teams industrial-scale production power without sacrificing design control.At Config 2025, commentators framed Buzz as Figma’s answer to Canva for organizations with mature design systems and strict governance needs.Together, the new templates, plugins, and video tools are described as a step toward an end‑to‑end workflow where product design, web, and marketing assets all live on a single canvas-powered stack.",
+          "content": "Analysts see Buzz as Figma’s clearest play yet against Canva, but with a sharper focus on enterprise-grade brand consistency powered by design systems.Figma Buzz is positioned as a dedicated space where non-designers can create campaign assets at scale while designers maintain tight control over what can and cannot be changed.The three new features deepen that positioning by connecting templates more tightly to systemized design, plugging Buzz into the broader martech stack, and acknowledging video as a first-class marketing format.Collectively, they signal Figma’s ambition to be the connective tissue between product design, brand, and growth marketing workflows.",
           "citations": [
             {
               "primarySource": {
@@ -57,16 +57,16 @@
               "additionalSources": [
                 {
                   "id": "source-5",
-                  "name": "designsystems",
-                  "url": "https://designsystems.surf/articles/one-stack-to-rule-them-all-figma-s-2025-power-suite-and-what-it-means-for-your-workflow",
-                  "favicon": "https://www.google.com/s2/favicons?domain=designsystems.surf&sz=32",
+                  "name": "uxplaybook",
+                  "url": "https://uxplaybook.org/articles/figma-config-2025-product-expansion-analysis",
+                  "favicon": "https://www.google.com/s2/favicons?domain=uxplaybook.org&sz=32",
                   "title": "Three new features to help build brand momentum with Figma Buzz"
                 },
                 {
                   "id": "source-6",
-                  "name": "uxplaybook",
-                  "url": "https://uxplaybook.org/articles/figma-config-2025-product-expansion-analysis",
-                  "favicon": "https://www.google.com/s2/favicons?domain=uxplaybook.org&sz=32",
+                  "name": "youtube",
+                  "url": "https://www.youtube.com/watch?v=qLyv9UO51bI",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
                   "title": "Three new features to help build brand momentum with Figma Buzz"
                 }
               ]
@@ -77,18 +77,18 @@
     },
     {
       "id": "section-1",
-      "title": "Configurable, system-connected templates put brand control and speed on the same page",
+      "title": "Design-system templates and plugins: the new backbone of on‑brand production",
       "paragraphs": [
         {
           "id": "para-1-0",
-          "content": "The new configurable marketing templates let designers set up and publish layouts using component properties from their existing design systems, so marketers can toggle options—like layout, imagery, or messaging slots—without ever touching locked brand-defining elements.Figma’s release notes emphasize that this approach removes the need for hundreds of near-duplicate templates, replacing them with a smaller set of smart, flexible bases.In practice, teams can start from a single master template and still produce a wide range of channel-specific assets, while ensuring any design system update cascades automatically into Buzz.",
+          "content": "Figma’s latest release notes frame the Buzz updates as a way to streamline “template to final asset,” starting with configurable marketing templates built on component properties.In practice, that means brand designers can copy templates from Figma Design—complete with component sets and properties—into Buzz, where marketers can browse and switch between variants without touching underlying layout logic.The company has also turned on plugin support inside Buzz, launching with highly requested integrations for digital asset management systems, translation management tools, and motion design.On Figma’s release livestream, product leaders emphasized that this approach keeps brand-approved assets, translations, and animations only a plugin click away, instead of buried in separate systems or manual exports.",
           "citations": [
             {
               "primarySource": {
                 "id": "source-7",
-                "name": "youtube",
-                "url": "https://www.youtube.com/watch?v=qLyv9UO51bI",
-                "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
+                "name": "designsystems",
+                "url": "https://designsystems.surf/articles/one-stack-to-rule-them-all-figma-s-2025-power-suite-and-what-it-means-for-your-workflow",
+                "favicon": "https://www.google.com/s2/favicons?domain=designsystems.surf&sz=32",
                 "title": "Three new features to help build brand momentum with Figma Buzz"
               },
               "additionalCount": 2,
@@ -113,7 +113,7 @@
         },
         {
           "id": "para-1-1",
-          "content": "Figma’s help documentation on Buzz underscores that this template model is meant to mirror how product teams already work in Figma Design, effectively extending system thinking to marketing output.Guides explain that marketers can work in a simplified, focused editing surface, while designers control which properties are exposed and which remain locked, tightening governance without slowing campaigns.This division of responsibilities is pitched as a way to reduce “creative bottlenecks,” letting brand teams focus on system quality while field marketers and channel owners handle day‑to‑day variation creation.",
+          "content": "Figma’s help documentation describes Buzz as a place to “start from a template or from scratch,” but always with the power of the underlying design system available to guide marketers’ choices.Community explainers note that internal plugins can be published privately, allowing enterprises to wire Buzz into bespoke workflows such as regulated-asset approvals, localized content checks, or performance-creative testing pipelines.Developer-oriented coverage from the Figma ecosystem points out that the same plugin model used in Figma Design now extends to Buzz, effectively turning it into a customizable front end for marketing operations.Together, configurable templates and workflow-specific plugins make Buzz less a static template library and more a governed production environment for brand teams.",
           "citations": [
             {
               "primarySource": {
@@ -127,9 +127,9 @@
               "additionalSources": [
                 {
                   "id": "source-11",
-                  "name": "excited",
-                  "url": "https://excited.agency/events/whats-new-in-figma-buzz-sites-grid-draw-make",
-                  "favicon": "https://www.google.com/s2/favicons?domain=excited.agency&sz=32",
+                  "name": "techcrunch",
+                  "url": "https://techcrunch.com/2025/05/07/figma-releases-new-ai-powered-tools-for-creating-sites-app-prototypes-and-marketing-assets/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
                   "title": "Three new features to help build brand momentum with Figma Buzz"
                 },
                 {
@@ -147,11 +147,11 @@
     },
     {
       "id": "section-2",
-      "title": "Plugins and video trimming turn Buzz into a brand content workstation",
+      "title": "Video trimming and brand momentum in Figma’s expanding “design OS”",
       "paragraphs": [
         {
           "id": "para-2-0",
-          "content": "Alongside templates, Buzz now supports plugins that connect directly to digital asset management systems, translation tools, and animation workflows, so teams can pull approved imagery, localized copy, or motion effects into assets without leaving the canvas. Event coverage from agencies notes that this plugin layer effectively imports much of the existing Figma ecosystem into Buzz, while also allowing organizations to build private, workflow-specific extensions. Commentators add that for global brands, the ability to integrate translation management systems inside templates could significantly cut localization cycles and reduce copy-paste errors across regions.",
+          "content": "Tech coverage of Figma’s 2025 product wave highlights Buzz alongside Sites, Draw, and Make as part of a broader “design OS” push that spans marketing, web, and product. Within that lineup, video trimming in Buzz is framed as recognition that video is now central to modern campaigns—whether for social feeds, event pages, or animated ad units. Reporters note that marketers can now import clips, trim them to fit platform time limits, and sync multiple videos directly on the Buzz canvas instead of jumping into a separate editor. Figma’s newsroom materials characterize this as removing yet another layer of friction between creative iteration and final, shippable assets for performance and brand teams alike.",
           "citations": [
             {
               "primarySource": {
@@ -172,9 +172,9 @@
                 },
                 {
                   "id": "source-15",
-                  "name": "figma",
-                  "url": "https://www.figma.com/blog/schema-2025-design-systems-recap/",
-                  "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+                  "name": "webdesignernews",
+                  "url": "https://webdesignernews.com/three-new-features-to-help-build-brand-momentum-with-figma-buzz/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=webdesignernews.com&sz=32",
                   "title": "Three new features to help build brand momentum with Figma Buzz"
                 }
               ]
@@ -183,30 +183,30 @@
         },
         {
           "id": "para-2-1",
-          "content": "Native video trimming rounds out the update by letting users cut clips to exact durations directly in Buzz, a capability product blogs say eliminates frequent jumps to standalone video editors for simple timing tweaks. Analysts argue this matters as social platforms and ad networks increasingly prioritize video, making lightweight editing a necessity for marketing teams operating on tight turnaround times. Looking ahead, experts suggest these features position Buzz as a core node in Figma’s expanding “design OS,” where illustration, sites, AI‑assisted prototyping, and marketing creation all share common systems, assets, and governance.",
+          "content": "Independent design-press recaps of Config 2025 argue that Buzz “lives at the intersection of brand design and growth marketing,” and that video trimming rounds out a toolset built for fast, iterative storytelling across formats. Commentators say the three new features collectively move Buzz beyond simple template editing toward bulk, system-driven content creation that can scale to thousands of personalized variants. They also suggest that as more organizations centralize on Figma’s stack—using Sites for web, Draw for illustration, and Buzz for campaigns—the definition of a design system will increasingly encompass not just UI components but motion, language, and media rules. For brand and marketing leaders, that could make Buzz a crucial lever for turning static guidelines into a living, continuously executed brand presence.",
           "citations": [
             {
               "primarySource": {
                 "id": "source-16",
-                "name": "youtube",
-                "url": "https://www.youtube.com/watch?v=_QFxnkhSzF8",
-                "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
+                "name": "figmalion",
+                "url": "https://figmalion.com/topics/figma-buzz",
+                "favicon": "https://www.google.com/s2/favicons?domain=figmalion.com&sz=32",
                 "title": "Three new features to help build brand momentum with Figma Buzz"
               },
               "additionalCount": 2,
               "additionalSources": [
                 {
                   "id": "source-17",
-                  "name": "webdesignernews",
-                  "url": "https://webdesignernews.com/three-new-features-to-help-build-brand-momentum-with-figma-buzz/",
-                  "favicon": "https://www.google.com/s2/favicons?domain=webdesignernews.com&sz=32",
+                  "name": "investor",
+                  "url": "https://investor.figma.com/news-events/news/default.aspx",
+                  "favicon": "https://www.google.com/s2/favicons?domain=investor.figma.com&sz=32",
                   "title": "Three new features to help build brand momentum with Figma Buzz"
                 },
                 {
                   "id": "source-18",
-                  "name": "figmalion",
-                  "url": "https://figmalion.com/topics/figma-buzz",
-                  "favicon": "https://www.google.com/s2/favicons?domain=figmalion.com&sz=32",
+                  "name": "figma",
+                  "url": "https://www.figma.com/blog/figma-buzz/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
                   "title": "Three new features to help build brand momentum with Figma Buzz"
                 }
               ]
@@ -247,16 +247,16 @@
     },
     {
       "id": "source-5",
-      "name": "designsystems",
-      "url": "https://designsystems.surf/articles/one-stack-to-rule-them-all-figma-s-2025-power-suite-and-what-it-means-for-your-workflow",
-      "favicon": "https://www.google.com/s2/favicons?domain=designsystems.surf&sz=32",
+      "name": "uxplaybook",
+      "url": "https://uxplaybook.org/articles/figma-config-2025-product-expansion-analysis",
+      "favicon": "https://www.google.com/s2/favicons?domain=uxplaybook.org&sz=32",
       "title": "Three new features to help build brand momentum with Figma Buzz"
     },
     {
       "id": "source-6",
-      "name": "uxplaybook",
-      "url": "https://uxplaybook.org/articles/figma-config-2025-product-expansion-analysis",
-      "favicon": "https://www.google.com/s2/favicons?domain=uxplaybook.org&sz=32",
+      "name": "youtube",
+      "url": "https://www.youtube.com/watch?v=qLyv9UO51bI",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
       "title": "Three new features to help build brand momentum with Figma Buzz"
     }
   ],
@@ -291,23 +291,23 @@
     },
     {
       "id": "source-5",
-      "name": "designsystems",
-      "url": "https://designsystems.surf/articles/one-stack-to-rule-them-all-figma-s-2025-power-suite-and-what-it-means-for-your-workflow",
-      "favicon": "https://www.google.com/s2/favicons?domain=designsystems.surf&sz=32",
-      "title": "Three new features to help build brand momentum with Figma Buzz"
-    },
-    {
-      "id": "source-6",
       "name": "uxplaybook",
       "url": "https://uxplaybook.org/articles/figma-config-2025-product-expansion-analysis",
       "favicon": "https://www.google.com/s2/favicons?domain=uxplaybook.org&sz=32",
       "title": "Three new features to help build brand momentum with Figma Buzz"
     },
     {
-      "id": "source-7",
+      "id": "source-6",
       "name": "youtube",
       "url": "https://www.youtube.com/watch?v=qLyv9UO51bI",
       "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
+      "title": "Three new features to help build brand momentum with Figma Buzz"
+    },
+    {
+      "id": "source-7",
+      "name": "designsystems",
+      "url": "https://designsystems.surf/articles/one-stack-to-rule-them-all-figma-s-2025-power-suite-and-what-it-means-for-your-workflow",
+      "favicon": "https://www.google.com/s2/favicons?domain=designsystems.surf&sz=32",
       "title": "Three new features to help build brand momentum with Figma Buzz"
     },
     {
@@ -333,9 +333,9 @@
     },
     {
       "id": "source-11",
-      "name": "excited",
-      "url": "https://excited.agency/events/whats-new-in-figma-buzz-sites-grid-draw-make",
-      "favicon": "https://www.google.com/s2/favicons?domain=excited.agency&sz=32",
+      "name": "techcrunch",
+      "url": "https://techcrunch.com/2025/05/07/figma-releases-new-ai-powered-tools-for-creating-sites-app-prototypes-and-marketing-assets/",
+      "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
       "title": "Three new features to help build brand momentum with Figma Buzz"
     },
     {
@@ -361,41 +361,27 @@
     },
     {
       "id": "source-15",
-      "name": "figma",
-      "url": "https://www.figma.com/blog/schema-2025-design-systems-recap/",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
-      "title": "Three new features to help build brand momentum with Figma Buzz"
-    },
-    {
-      "id": "source-16",
-      "name": "youtube",
-      "url": "https://www.youtube.com/watch?v=_QFxnkhSzF8",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
-      "title": "Three new features to help build brand momentum with Figma Buzz"
-    },
-    {
-      "id": "source-17",
       "name": "webdesignernews",
       "url": "https://webdesignernews.com/three-new-features-to-help-build-brand-momentum-with-figma-buzz/",
       "favicon": "https://www.google.com/s2/favicons?domain=webdesignernews.com&sz=32",
       "title": "Three new features to help build brand momentum with Figma Buzz"
     },
     {
-      "id": "source-18",
+      "id": "source-16",
       "name": "figmalion",
       "url": "https://figmalion.com/topics/figma-buzz",
       "favicon": "https://www.google.com/s2/favicons?domain=figmalion.com&sz=32",
       "title": "Three new features to help build brand momentum with Figma Buzz"
     },
     {
-      "id": "source-19",
+      "id": "source-17",
       "name": "investor",
       "url": "https://investor.figma.com/news-events/news/default.aspx",
       "favicon": "https://www.google.com/s2/favicons?domain=investor.figma.com&sz=32",
       "title": "Three new features to help build brand momentum with Figma Buzz"
     },
     {
-      "id": "source-20",
+      "id": "source-18",
       "name": "figma",
       "url": "https://www.figma.com/blog/figma-buzz/",
       "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
@@ -406,8 +392,8 @@
     "url": "https://cdn.sanity.io/images/599r6htc/regionalized/d8839e0855accfa9c5e71616ce54001870cc455e-3840x2160.png?w=1200&amp;q=70&amp;fit=max&amp;auto=format"
   },
   "sidebarSections": [
-    "Configurable, system-connected templates put brand control and speed on the same page",
-    "Plugins and video trimming turn Buzz into a brand content workstation"
+    "Design-system templates and plugins: the new backbone of on‑brand production",
+    "Video trimming and brand momentum in Figma’s expanding “design OS”"
   ],
   "relatedArticles": []
 }
