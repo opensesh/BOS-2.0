@@ -1,31 +1,11 @@
 'use client';
 
 import { createClient } from './client';
-import type { ChatSession, ChatMessage, SearchHistoryItem, ChatSessionInsert, SearchHistoryInsert } from './types';
-
-// Generate a unique session ID for the browser session
-let browserSessionId: string | null = null;
+import type { ChatSession, ChatMessage, DbChat, DbMessage, ChatInsert, MessageInsert } from './types';
 
 // Track if tables are available (to avoid repeated error logs)
 let tablesChecked = false;
 let tablesAvailable = true;
-
-export function getSessionId(): string {
-  if (typeof window === 'undefined') return 'server';
-  
-  if (!browserSessionId) {
-    // Try to get from sessionStorage first (persists across page reloads in same tab)
-    browserSessionId = sessionStorage.getItem('chat_session_id');
-    
-    if (!browserSessionId) {
-      // Generate new session ID
-      browserSessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      sessionStorage.setItem('chat_session_id', browserSessionId);
-    }
-  }
-  
-  return browserSessionId;
-}
 
 /**
  * Check if Supabase tables are available
@@ -37,33 +17,29 @@ async function checkTablesAvailable(): Promise<boolean> {
   try {
     const supabase = createClient();
     const { error } = await supabase
-      .from('chat_sessions')
+      .from('chats')
       .select('id')
       .limit(1);
 
     tablesChecked = true;
 
-    // Table is available if no error at all
     if (!error) {
       tablesAvailable = true;
       return true;
     }
 
-    // Check for common "table doesn't exist" or permission errors
     const errorMessage = error.message?.toLowerCase() || '';
     const errorCode = error.code || '';
 
-    // These indicate tables don't exist or aren't accessible - gracefully degrade
     const isTableMissing =
       errorMessage.includes('does not exist') ||
       errorMessage.includes('relation') ||
-      errorCode === '42P01' || // PostgreSQL: undefined_table
-      errorCode === 'PGRST116'; // PostgREST: no rows returned (RLS)
+      errorCode === '42P01' ||
+      errorCode === 'PGRST116';
 
     tablesAvailable = false;
 
     if (isTableMissing) {
-      // Only log once, not an error - this is expected during initial setup
       console.info('Chat history: Supabase tables not available. Chat history disabled.');
     }
 
@@ -76,274 +52,316 @@ async function checkTablesAvailable(): Promise<boolean> {
 }
 
 /**
+ * Convert database message to app message format
+ */
+function dbMessageToAppMessage(msg: DbMessage): ChatMessage {
+  return {
+    id: msg.id,
+    role: msg.role as 'user' | 'assistant',
+    content: msg.content,
+    model: msg.model || undefined,
+    timestamp: msg.created_at,
+  };
+}
+
+/**
  * Chat History Service
- * Handles persistence of chat sessions and search history to Supabase
+ * Uses existing `chats` and `messages` tables in Supabase
  */
 export const chatService = {
   /**
-   * Save or update a chat session
+   * Save a new chat session or update existing one
    */
   async saveSession(
     title: string,
     messages: ChatMessage[],
     existingId?: string
   ): Promise<ChatSession | null> {
-    // Check if tables are available
     if (!(await checkTablesAvailable())) {
       return null;
     }
-    
+
     const supabase = createClient();
-    const sessionId = getSessionId();
-    
     const preview = messages.find(m => m.role === 'assistant')?.content.slice(0, 150) || null;
-    
-    if (existingId) {
-      // Update existing session
-      const { data, error } = await supabase
-        .from('chat_sessions')
-        .update({
+
+    try {
+      if (existingId) {
+        // Update existing chat title
+        const { error: updateError } = await supabase
+          .from('chats')
+          .update({ title, updated_at: new Date().toISOString() })
+          .eq('id', existingId);
+
+        if (updateError) {
+          console.error('Error updating chat:', updateError);
+          return null;
+        }
+
+        // Get existing messages to find new ones
+        const { data: existingMessages } = await supabase
+          .from('messages')
+          .select('id')
+          .eq('chat_id', existingId);
+
+        const existingIds = new Set((existingMessages || []).map(m => m.id));
+
+        // Insert only new messages
+        const newMessages = messages.filter(m => !existingIds.has(m.id));
+
+        if (newMessages.length > 0) {
+          const messagesToInsert: MessageInsert[] = newMessages.map(m => ({
+            chat_id: existingId,
+            role: m.role,
+            content: m.content,
+            model: m.model,
+          }));
+
+          const { error: msgError } = await supabase
+            .from('messages')
+            .insert(messagesToInsert);
+
+          if (msgError) {
+            console.error('Error inserting messages:', msgError);
+          }
+        }
+
+        return {
+          id: existingId,
           title,
           preview,
-          messages: messages as unknown as ChatSession['messages'],
+          messages,
+          created_at: new Date().toISOString(),
           updated_at: new Date().toISOString(),
-        })
-        .eq('id', existingId)
+        };
+      }
+
+      // Create new chat (user_id is null for anonymous/demo users)
+      const chatInsert: ChatInsert = { title, user_id: null };
+
+      const { data: chat, error: chatError } = await supabase
+        .from('chats')
+        .insert(chatInsert)
         .select()
         .single();
-      
-      if (error) {
-        console.error('Error updating chat session:', error);
+
+      if (chatError || !chat) {
+        console.error('Error creating chat:', chatError);
         return null;
       }
-      return data as ChatSession;
-    }
-    
-    // Create new session
-    const insert: ChatSessionInsert = {
-      session_id: sessionId,
-      title,
-      preview,
-      messages: messages as unknown as ChatSession['messages'],
-    };
-    
-    const { data, error } = await supabase
-      .from('chat_sessions')
-      .insert(insert)
-      .select()
-      .single();
-    
-    if (error) {
-      console.error('Error creating chat session:', error);
+
+      // Insert all messages
+      if (messages.length > 0) {
+        const messagesToInsert: MessageInsert[] = messages.map(m => ({
+          chat_id: chat.id,
+          role: m.role,
+          content: m.content,
+          model: m.model,
+        }));
+
+        const { error: msgError } = await supabase
+          .from('messages')
+          .insert(messagesToInsert);
+
+        if (msgError) {
+          console.error('Error inserting messages:', msgError);
+        }
+      }
+
+      return {
+        id: chat.id,
+        title: chat.title,
+        preview,
+        messages,
+        created_at: chat.created_at,
+        updated_at: chat.updated_at,
+      };
+    } catch (error) {
+      console.error('Error in saveSession:', error);
       return null;
     }
-    
-    return data as ChatSession;
   },
-  
+
   /**
    * Get all chat sessions (most recent first)
+   * Returns ALL sessions globally for demo visibility
    */
   async getSessions(limit = 50): Promise<ChatSession[]> {
-    // Check if tables are available
     if (!(await checkTablesAvailable())) {
       return [];
     }
-    
+
     const supabase = createClient();
-    
-    const { data, error } = await supabase
-      .from('chat_sessions')
-      .select('*')
-      .order('updated_at', { ascending: false })
-      .limit(limit);
-    
-    if (error) {
-      // Only log if it's an unexpected error (tables should be checked first)
-      if (error.message && !error.message.includes('does not exist')) {
-        console.error('Error fetching chat sessions:', error.message || error.code || 'Unknown error');
+
+    try {
+      // Fetch chats ordered by most recent
+      const { data: chats, error: chatsError } = await supabase
+        .from('chats')
+        .select('*')
+        .order('updated_at', { ascending: false })
+        .limit(limit);
+
+      if (chatsError || !chats) {
+        if (chatsError?.message && !chatsError.message.includes('does not exist')) {
+          console.error('Error fetching chats:', chatsError.message);
+        }
+        return [];
       }
+
+      // Fetch messages for all chats
+      const chatIds = chats.map(c => c.id);
+
+      const { data: allMessages, error: msgError } = await supabase
+        .from('messages')
+        .select('*')
+        .in('chat_id', chatIds)
+        .order('created_at', { ascending: true });
+
+      if (msgError) {
+        console.error('Error fetching messages:', msgError);
+      }
+
+      // Group messages by chat_id
+      const messagesByChat: Record<string, DbMessage[]> = {};
+      for (const msg of allMessages || []) {
+        if (!messagesByChat[msg.chat_id]) {
+          messagesByChat[msg.chat_id] = [];
+        }
+        messagesByChat[msg.chat_id].push(msg);
+      }
+
+      // Transform to ChatSession format
+      return chats.map((chat: DbChat) => {
+        const chatMessages = (messagesByChat[chat.id] || []).map(dbMessageToAppMessage);
+        const preview = chatMessages.find(m => m.role === 'assistant')?.content.slice(0, 150) || null;
+
+        return {
+          id: chat.id,
+          title: chat.title,
+          preview,
+          messages: chatMessages,
+          created_at: chat.created_at,
+          updated_at: chat.updated_at,
+        };
+      });
+    } catch (error) {
+      console.error('Error in getSessions:', error);
       return [];
     }
-    
-    return (data || []) as ChatSession[];
   },
-  
+
   /**
-   * Get a single session by ID
+   * Get a single session by ID with all messages
    */
   async getSession(id: string): Promise<ChatSession | null> {
-    // Check if tables are available
     if (!(await checkTablesAvailable())) {
       return null;
     }
-    
+
     const supabase = createClient();
-    
-    const { data, error } = await supabase
-      .from('chat_sessions')
-      .select('*')
-      .eq('id', id)
-      .single();
-    
-    if (error) {
-      console.error('Error fetching chat session:', error);
+
+    try {
+      // Fetch chat
+      const { data: chat, error: chatError } = await supabase
+        .from('chats')
+        .select('*')
+        .eq('id', id)
+        .single();
+
+      if (chatError || !chat) {
+        console.error('Error fetching chat:', chatError);
+        return null;
+      }
+
+      // Fetch messages
+      const { data: messages, error: msgError } = await supabase
+        .from('messages')
+        .select('*')
+        .eq('chat_id', id)
+        .order('created_at', { ascending: true });
+
+      if (msgError) {
+        console.error('Error fetching messages:', msgError);
+      }
+
+      const chatMessages = (messages || []).map(dbMessageToAppMessage);
+      const preview = chatMessages.find(m => m.role === 'assistant')?.content.slice(0, 150) || null;
+
+      return {
+        id: chat.id,
+        title: chat.title,
+        preview,
+        messages: chatMessages,
+        created_at: chat.created_at,
+        updated_at: chat.updated_at,
+      };
+    } catch (error) {
+      console.error('Error in getSession:', error);
       return null;
     }
-    
-    return data as ChatSession;
   },
-  
+
   /**
-   * Delete a chat session
+   * Delete a chat session and its messages
    */
   async deleteSession(id: string): Promise<boolean> {
-    // Check if tables are available
     if (!(await checkTablesAvailable())) {
       return false;
     }
-    
+
     const supabase = createClient();
-    
-    const { error } = await supabase
-      .from('chat_sessions')
-      .delete()
-      .eq('id', id);
-    
-    if (error) {
-      console.error('Error deleting chat session:', error);
-      return false;
-    }
-    
-    return true;
-  },
-  
-  /**
-   * Log a search query to history
-   */
-  async logSearch(query: string, mode: 'search' | 'research' = 'search'): Promise<void> {
-    // Check if tables are available
-    if (!(await checkTablesAvailable())) {
-      return;
-    }
-    
-    const supabase = createClient();
-    const sessionId = getSessionId();
-    
-    const insert: SearchHistoryInsert = {
-      session_id: sessionId,
-      query,
-      mode,
-    };
-    
-    const { error } = await supabase
-      .from('search_history')
-      .insert(insert);
-    
-    if (error) {
-      console.error('Error logging search:', error);
-    }
-  },
-  
-  /**
-   * Get recent search history
-   */
-  async getSearchHistory(limit = 20): Promise<SearchHistoryItem[]> {
-    // Check if tables are available
-    if (!(await checkTablesAvailable())) {
-      return [];
-    }
-    
-    const supabase = createClient();
-    
-    const { data, error } = await supabase
-      .from('search_history')
-      .select('*')
-      .order('created_at', { ascending: false })
-      .limit(limit);
-    
-    if (error) {
-      console.error('Error fetching search history:', error);
-      return [];
-    }
-    
-    return (data || []) as SearchHistoryItem[];
-  },
-  
-  /**
-   * Get popular/trending searches (aggregated)
-   */
-  async getTrendingSearches(limit = 10): Promise<{ query: string; count: number }[]> {
-    // Check if tables are available
-    if (!(await checkTablesAvailable())) {
-      return [];
-    }
-    
-    const supabase = createClient();
-    
-    // Get searches from the last 7 days, grouped by query
-    const sevenDaysAgo = new Date();
-    sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
-    
-    const { data, error } = await supabase
-      .from('search_history')
-      .select('query')
-      .gte('created_at', sevenDaysAgo.toISOString())
-      .order('created_at', { ascending: false })
-      .limit(500); // Get recent to aggregate
-    
-    if (error) {
-      console.error('Error fetching trending searches:', error);
-      return [];
-    }
-    
-    // Aggregate by query (case-insensitive)
-    const counts: Record<string, { query: string; count: number }> = {};
-    for (const item of data || []) {
-      const key = item.query.toLowerCase().trim();
-      if (!counts[key]) {
-        counts[key] = { query: item.query, count: 0 };
+
+    try {
+      // Delete messages first (foreign key constraint)
+      await supabase
+        .from('messages')
+        .delete()
+        .eq('chat_id', id);
+
+      // Delete chat
+      const { error } = await supabase
+        .from('chats')
+        .delete()
+        .eq('id', id);
+
+      if (error) {
+        console.error('Error deleting chat:', error);
+        return false;
       }
-      counts[key].count++;
+
+      return true;
+    } catch (error) {
+      console.error('Error in deleteSession:', error);
+      return false;
     }
-    
-    // Sort by count and return top results
-    return Object.values(counts)
-      .sort((a, b) => b.count - a.count)
-      .slice(0, limit);
   },
-  
+
   /**
-   * Search existing queries for autocomplete
+   * Log a search query (stub - implement if search_history table exists)
    */
-  async searchQueries(partialQuery: string, limit = 5): Promise<string[]> {
-    // Check if tables are available
-    if (!(await checkTablesAvailable())) {
-      return [];
-    }
-    
-    const supabase = createClient();
-    
-    if (!partialQuery || partialQuery.length < 2) {
-      return [];
-    }
-    
-    const { data, error } = await supabase
-      .from('search_history')
-      .select('query')
-      .ilike('query', `${partialQuery}%`)
-      .order('created_at', { ascending: false })
-      .limit(50);
-    
-    if (error) {
-      console.error('Error searching queries:', error);
-      return [];
-    }
-    
-    // Deduplicate and return unique queries
-    const unique = [...new Set((data || []).map(d => d.query))];
-    return unique.slice(0, limit);
+  async logSearch(_query: string, _mode: 'search' | 'research' = 'search'): Promise<void> {
+    // Search history logging disabled - table may not exist
+  },
+
+  /**
+   * Get recent search history (stub)
+   */
+  async getSearchHistory(_limit = 20): Promise<Array<{ query: string; mode: string; created_at: string }>> {
+    return [];
+  },
+
+  /**
+   * Get trending searches (stub)
+   */
+  async getTrendingSearches(_limit = 10): Promise<Array<{ query: string; count: number }>> {
+    return [];
+  },
+
+  /**
+   * Search queries for autocomplete (stub)
+   */
+  async searchQueries(_partialQuery: string, _limit = 5): Promise<string[]> {
+    return [];
   },
 };
 
-export type { ChatSession, ChatMessage, SearchHistoryItem };
+export type { ChatSession, ChatMessage };
