@@ -167,12 +167,13 @@ export function useChart(symbol: string | null, range: ChartRange = '1d') {
 // Fetch company profile
 export function useCompanyProfile(symbol: string | null) {
   const [data, setData] = useState<CompanyProfile | null>(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(!!symbol); // Start loading if symbol exists
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!symbol) {
       setData(null);
+      setLoading(false);
       return;
     }
 
@@ -181,14 +182,27 @@ export function useCompanyProfile(symbol: string | null) {
       setError(null);
 
       try {
-        const response = await fetch(`/api/finance?action=profile&symbol=${encodeURIComponent(symbol)}`);
+        const response = await fetch(`/api/finance?action=profile&symbol=${encodeURIComponent(symbol.toUpperCase())}`);
+        
         if (!response.ok) {
-          throw new Error('Failed to fetch company profile');
+          const errorData = await response.json().catch(() => ({}));
+          throw new Error(errorData.error || 'Failed to fetch company profile');
         }
+        
         const profile = await response.json();
-        setData(profile);
+        
+        // Validate that we have meaningful data
+        if (profile && (profile.sector || profile.industry || profile.longBusinessSummary)) {
+          setData(profile);
+        } else {
+          // Partial data - still set it but log
+          console.warn('Partial profile data received:', profile);
+          setData(profile);
+        }
       } catch (err) {
+        console.error('Profile fetch error:', err);
         setError(err instanceof Error ? err.message : 'Failed to fetch profile');
+        setData(null);
       } finally {
         setLoading(false);
       }
@@ -400,5 +414,6 @@ export function getRelativeTime(timestamp: number): string {
   
   return formatDate(timestamp);
 }
+
 
 

@@ -27,16 +27,69 @@ import { TieredNewsCard } from '@/components/discover/TieredNewsCard';
 import { MarketWidget } from '@/components/discover/MarketWidget';
 import { WeatherWidget } from '@/components/discover/WeatherWidget';
 
+// Discover Article
+import { ArticleHeader } from '@/components/discover/article/ArticleHeader';
+import { ArticleSidebar } from '@/components/discover/article/ArticleSidebar';
+import { ActionSidebar } from '@/components/discover/article/ActionSidebar';
+import { InlineSourceBadge, InlineSourceChips, type SourceGroup } from '@/components/discover/article/InlineSourceBadge';
+import { RelatedImages } from '@/components/discover/article/RelatedImages';
+import { DiscoverMore } from '@/components/discover/article/DiscoverMore';
+
 // Chat
 import { ChatTabNav, type ChatTab } from '@/components/chat/ChatTabNav';
 import { RelatedQuestions } from '@/components/chat/RelatedQuestions';
+import { ResponseActions } from '@/components/chat/ResponseActions';
+import { InlineCitation } from '@/components/chat/InlineCitation';
+import { OverflowMenu } from '@/components/chat/OverflowMenu';
+import { BrandResourceCard, type BrandResourceCardProps } from '@/components/chat/BrandResourceCard';
+import { SourcePopover } from '@/components/chat/SourcePopover';
+import { BrandSourcePopover, type BrandSourceInfo } from '@/components/chat/BrandSourcePopover';
+import { AttachmentPreview } from '@/components/chat/AttachmentPreview';
+import { ShareModal } from '@/components/chat/ShareModal';
+import { ShortcutModal } from '@/components/chat/ShortcutModal';
+import { LinksView } from '@/components/chat/LinksView';
+import { ImagesView, type ImageResult } from '@/components/chat/ImagesView';
+import { ChatHeader } from '@/components/chat/ChatHeader';
+import { SourcesDrawer } from '@/components/chat/SourcesDrawer';
+import { AnswerView, type SourceInfo, type ContentSection } from '@/components/chat/AnswerView';
+import { ChatContent } from '@/components/chat/ChatContent';
+import { ChatResponse } from '@/components/chat/ChatResponse';
+import { FollowUpInput } from '@/components/chat/FollowUpInput';
 
 // Finance
 import { StockStats } from '@/components/finance/StockStats';
 import { CompanyProfile } from '@/components/finance/CompanyProfile';
+import { LatestNews } from '@/components/finance/LatestNews';
 
 // Spaces
 import { SpaceResourceCards } from '@/components/spaces/SpaceResourceCards';
+import { SpaceReferenceCard, DiscussionCard } from '@/components/spaces/SpaceReferenceCard';
+import { SpaceChatInput } from '@/components/spaces/SpaceChatInput';
+import { CreateSpaceModal } from '@/components/spaces/CreateSpaceModal';
+import { AddLinksModal } from '@/components/spaces/AddLinksModal';
+import { AddFilesModal } from '@/components/spaces/AddFilesModal';
+import { AddTasksModal } from '@/components/spaces/AddTasksModal';
+import { AddInstructionsModal } from '@/components/spaces/AddInstructionsModal';
+import { SpaceArticlesDrawer } from '@/components/spaces/SpaceArticlesDrawer';
+
+// Discover Main
+import { IdeaAccordion } from '@/components/discover/IdeaAccordion';
+import { InspirationCard } from '@/components/discover/InspirationCard';
+import { SettingsDrawer } from '@/components/discover/SettingsDrawer';
+import { DiscoverHeader } from '@/components/discover/DiscoverHeader';
+import { DiscoverTabs } from '@/components/discover/DiscoverTabs';
+import { NewsCard } from '@/components/discover/NewsCard';
+
+// Brand Hub
+import { AddResourceModal } from '@/components/brand-hub/AddResourceModal';
+
+// Brain
+import { BrainSettingsModal } from '@/components/brain/BrainSettingsModal';
+import { MarkdownCodeViewer } from '@/components/brain/MarkdownCodeViewer';
+
+// Core/UI
+import { ModelSelector } from '@/components/ui/model-selector';
+import { ConnectorDropdown } from '@/components/ui/connector-dropdown';
 
 // ============================================
 // DESIGN SYSTEM COMPONENTS
@@ -665,6 +718,901 @@ const RelatedQuestionsDoc: ComponentDoc = {
   variants: [],
 };
 
+// ResponseActions Component
+const mockSourcesForActions: SourceInfo[] = [
+  { id: '1', name: 'TechCrunch', url: 'https://techcrunch.com/article', title: 'Breaking Tech News', snippet: 'Latest developments in technology...' },
+  { id: '2', name: 'The Verge', url: 'https://theverge.com/article', title: 'Design Innovation', snippet: 'New approaches to digital design...' },
+  { id: '3', name: 'Wired', url: 'https://wired.com/article', title: 'Future of AI', snippet: 'How AI is changing industries...' },
+];
+
+const ResponseActionsDemo = ({ showSources }: { showSources: boolean }) => {
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-4 max-w-2xl">
+      <ResponseActions
+        sources={showSources ? mockSourcesForActions : []}
+        content="This is a sample AI response content that can be copied or shared."
+        query="What is brand identity?"
+        showSources={showSources}
+        modelUsed="sonar-pro"
+      />
+    </div>
+  );
+};
+
+const ResponseActionsDoc: ComponentDoc = {
+  id: 'response-actions',
+  name: 'ResponseActions',
+  description: 'Action bar for AI responses with share, export, regenerate, shortcut save, and feedback buttons. Shows source count badge when sources are available.',
+  category: 'application',
+  page: 'Chat',
+  component: ResponseActionsDemo,
+  defaultProps: {
+    showSources: true,
+  },
+  controls: [
+    {
+      name: 'showSources',
+      type: 'boolean',
+      description: 'Whether to show the sources button',
+      defaultValue: true,
+    },
+  ],
+  variants: [
+    { id: 'with-sources', name: 'With Sources', props: { showSources: true } },
+    { id: 'no-sources', name: 'No Sources', props: { showSources: false } },
+  ],
+};
+
+// InlineCitation Component
+const mockCitationSources: SourceInfo[] = [
+  { id: '1', name: 'Wikipedia', url: 'https://wikipedia.org', title: 'Brand Identity Definition', snippet: 'Brand identity encompasses visual elements...' },
+  { id: '2', name: 'Forbes', url: 'https://forbes.com', title: 'Building Strong Brands', snippet: 'Key strategies for brand development...' },
+];
+
+const InlineCitationDemo = ({ additionalCount }: { additionalCount: number }) => {
+  const sources = additionalCount > 0 
+    ? [...mockCitationSources, ...Array(additionalCount).fill(null).map((_, i) => ({
+        id: String(i + 3),
+        name: `Source ${i + 3}`,
+        url: '#',
+        title: `Additional Source ${i + 3}`,
+      }))]
+    : [mockCitationSources[0]];
+  
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-6 max-w-md">
+      <p className="text-os-text-primary-dark text-[15px] leading-relaxed">
+        Brand identity is the collection of visual and messaging elements that represent a company.{' '}
+        <InlineCitation
+          sources={sources}
+          primarySource={sources[0].name}
+          additionalCount={additionalCount}
+        />
+      </p>
+    </div>
+  );
+};
+
+const InlineCitationDoc: ComponentDoc = {
+  id: 'inline-citation',
+  name: 'InlineCitation',
+  description: 'Inline citation chip that appears within text content. Shows primary source name with optional count for additional sources. Hover to reveal source popover.',
+  category: 'application',
+  page: 'Chat',
+  component: InlineCitationDemo,
+  defaultProps: {
+    additionalCount: 2,
+  },
+  controls: [
+    {
+      name: 'additionalCount',
+      type: 'range',
+      description: 'Number of additional sources beyond the primary',
+      defaultValue: 2,
+      min: 0,
+      max: 5,
+      step: 1,
+    },
+  ],
+  variants: [
+    { id: 'single', name: 'Single Source', props: { additionalCount: 0 } },
+    { id: 'multiple', name: 'Multiple Sources', props: { additionalCount: 3 } },
+  ],
+};
+
+// OverflowMenu Component
+const OverflowMenuDemo = ({ threadTitle }: { threadTitle: string }) => {
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-4 flex justify-end">
+      <OverflowMenu
+        threadTitle={threadTitle}
+        content="Sample thread content for export."
+      />
+    </div>
+  );
+};
+
+const OverflowMenuDoc: ComponentDoc = {
+  id: 'overflow-menu',
+  name: 'OverflowMenu',
+  description: 'Dropdown menu with thread actions: bookmark, add to space, rename, export (PDF/Markdown/DOCX), and delete. Shows thread info header.',
+  category: 'application',
+  page: 'Chat',
+  component: OverflowMenuDemo,
+  defaultProps: {
+    threadTitle: 'What is brand identity?',
+  },
+  controls: [
+    {
+      name: 'threadTitle',
+      type: 'text',
+      description: 'Title of the chat thread',
+      defaultValue: 'What is brand identity?',
+    },
+  ],
+  variants: [
+    { id: 'default', name: 'Default', props: { threadTitle: 'What is brand identity?' } },
+    { id: 'long-title', name: 'Long Title', props: { threadTitle: 'How do I create a comprehensive brand strategy for my startup company?' } },
+  ],
+};
+
+// BrandResourceCard Component
+const BrandResourceCardDemo = ({ title, icon }: { title: string; icon: string }) => {
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-6 flex flex-wrap gap-2">
+      <BrandResourceCard
+        title={title}
+        description="Brand resource description"
+        href="/brand/colors"
+        icon={icon}
+      />
+    </div>
+  );
+};
+
+const BrandResourceCardDoc: ComponentDoc = {
+  id: 'brand-resource-card',
+  name: 'BrandResourceCard',
+  description: 'Pill-style link card for brand resources. Displays icon, title, and external link indicator. Used in AI responses to link to brand documentation.',
+  category: 'application',
+  page: 'Chat',
+  component: BrandResourceCardDemo,
+  defaultProps: {
+    title: 'Color System',
+    icon: 'Palette',
+  },
+  controls: [
+    {
+      name: 'title',
+      type: 'text',
+      description: 'Resource title',
+      defaultValue: 'Color System',
+    },
+    {
+      name: 'icon',
+      type: 'select',
+      description: 'Icon to display',
+      defaultValue: 'Palette',
+      options: [
+        { label: 'Palette', value: 'Palette' },
+        { label: 'Type', value: 'Type' },
+        { label: 'Hexagon', value: 'Hexagon' },
+        { label: 'Image', value: 'Image' },
+        { label: 'Layers', value: 'Layers' },
+        { label: 'BookOpen', value: 'BookOpen' },
+      ],
+    },
+  ],
+  variants: [
+    { id: 'typography', name: 'Typography', props: { title: 'Typography', icon: 'Type' } },
+    { id: 'colors', name: 'Colors', props: { title: 'Color System', icon: 'Palette' } },
+    { id: 'imagery', name: 'Imagery', props: { title: 'Photography', icon: 'Image' } },
+  ],
+};
+
+// SourcePopover Component
+const mockPopoverSources: SourceInfo[] = [
+  { id: '1', name: 'TechCrunch', url: 'https://techcrunch.com/article', favicon: 'https://techcrunch.com/favicon.ico', title: 'Breaking: Major Tech Announcement', snippet: 'Latest developments in the tech industry...' },
+  { id: '2', name: 'The Verge', url: 'https://theverge.com/article', favicon: 'https://theverge.com/favicon.ico', title: 'Design Trends 2024', snippet: 'New approaches to digital product design...' },
+  { id: '3', name: 'Wired', url: 'https://wired.com/article', favicon: 'https://wired.com/favicon.ico', title: 'AI Revolution', snippet: 'How artificial intelligence is changing everything...' },
+];
+
+const SourcePopoverDemo = ({ sourceCount }: { sourceCount: number }) => {
+  const sources = mockPopoverSources.slice(0, sourceCount);
+  
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-6 min-h-[300px] flex items-end">
+      <div className="relative">
+        <span className="text-os-text-secondary-dark text-sm">Hover to see sources</span>
+        <SourcePopover sources={sources} />
+      </div>
+    </div>
+  );
+};
+
+const SourcePopoverDoc: ComponentDoc = {
+  id: 'source-popover',
+  name: 'SourcePopover',
+  description: 'Popover panel showing source citations with favicons, titles, and snippets. Appears on hover over citation chips.',
+  category: 'application',
+  page: 'Chat',
+  component: SourcePopoverDemo,
+  defaultProps: {
+    sourceCount: 3,
+  },
+  controls: [
+    {
+      name: 'sourceCount',
+      type: 'range',
+      description: 'Number of sources to display',
+      defaultValue: 3,
+      min: 1,
+      max: 5,
+      step: 1,
+    },
+  ],
+  variants: [
+    { id: 'few-sources', name: 'Few Sources', props: { sourceCount: 2 } },
+    { id: 'many-sources', name: 'Many Sources', props: { sourceCount: 5 } },
+  ],
+};
+
+// BrandSourcePopover Component
+const mockBrandSources: BrandSourceInfo[] = [
+  { id: 'brand-colors', name: 'Color System', type: 'brand-doc', title: 'Brand Color Palette', path: '/brand/colors', snippet: 'Primary, secondary, and accent colors for the brand identity.', href: '/brand/colors' },
+  { id: 'brand-logo', name: 'Logo Assets', type: 'asset', title: 'Logo Package', path: '/public/logos/brandmark.svg', thumbnail: '/logos/brandmark.svg', href: '/brand/logos' },
+];
+
+const BrandSourcePopoverDemo = () => {
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-6 min-h-[300px] flex items-end">
+      <div className="relative">
+        <span className="text-brand-aperol text-sm">Brand source popover</span>
+        <BrandSourcePopover sources={mockBrandSources} />
+      </div>
+    </div>
+  );
+};
+
+const BrandSourcePopoverDoc: ComponentDoc = {
+  id: 'brand-source-popover',
+  name: 'BrandSourcePopover',
+  description: 'Popover for brand-specific sources showing document or asset references. Displays thumbnails for image assets and copy path functionality.',
+  category: 'application',
+  page: 'Chat',
+  component: BrandSourcePopoverDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// AttachmentPreview Component
+const mockAttachments = [
+  { id: '1', file: new File([''], 'screenshot.png', { type: 'image/png' }), preview: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100', type: 'image' as const },
+  { id: '2', file: new File([''], 'design.jpg', { type: 'image/jpeg' }), preview: 'https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=100', type: 'image' as const },
+];
+
+const AttachmentPreviewDemo = ({ compact, error }: { compact: boolean; error: string }) => {
+  return (
+    <div className="bg-os-surface-dark rounded-lg max-w-md">
+      <AttachmentPreview
+        attachments={mockAttachments}
+        onRemove={() => {}}
+        compact={compact}
+        error={error || undefined}
+        onClearError={() => {}}
+      />
+    </div>
+  );
+};
+
+const AttachmentPreviewDoc: ComponentDoc = {
+  id: 'attachment-preview',
+  name: 'AttachmentPreview',
+  description: 'Grid of image attachment thumbnails with remove buttons. Shows error messages and supports compact mode for inline display.',
+  category: 'application',
+  page: 'Chat',
+  component: AttachmentPreviewDemo,
+  defaultProps: {
+    compact: false,
+    error: '',
+  },
+  controls: [
+    {
+      name: 'compact',
+      type: 'boolean',
+      description: 'Use compact thumbnail size',
+      defaultValue: false,
+    },
+    {
+      name: 'error',
+      type: 'text',
+      description: 'Error message to display',
+      defaultValue: '',
+    },
+  ],
+  variants: [
+    { id: 'default', name: 'Default', props: { compact: false, error: '' } },
+    { id: 'compact', name: 'Compact', props: { compact: true, error: '' } },
+    { id: 'with-error', name: 'With Error', props: { compact: false, error: 'File too large. Maximum size is 10MB.' } },
+  ],
+};
+
+// ShareModal Component - Static demo (actual modal uses fixed positioning)
+const ShareModalDemo = ({ isOpen }: { isOpen: boolean }) => {
+  if (!isOpen) {
+    return (
+      <div className="p-4 bg-os-surface-dark rounded-xl border border-os-border-dark text-center">
+        <p className="text-os-text-secondary-dark text-sm">Toggle &apos;isOpen&apos; to see the modal</p>
+      </div>
+    );
+  }
+  
+  // Render modal content inline for demo (avoiding fixed positioning issues)
+  return (
+    <div className="relative bg-black/60 rounded-xl p-6 flex items-center justify-center">
+      <div className="w-80 bg-os-surface-dark rounded-xl border border-os-border-dark shadow-xl overflow-hidden">
+        {/* Header */}
+        <div className="flex items-center justify-between px-4 py-3 border-b border-os-border-dark">
+          <h3 className="text-sm font-semibold text-os-text-primary-dark">Share this Thread</h3>
+          <button className="p-1 rounded hover:bg-os-bg-dark transition-colors">
+            <svg className="w-4 h-4 text-os-text-secondary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        
+        {/* Visibility options */}
+        <div className="p-2">
+          <button className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-os-bg-dark/50 transition-colors">
+            <svg className="w-4 h-4 text-os-text-secondary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+            <div className="text-left">
+              <p className="text-sm font-medium text-os-text-primary-dark">Private</p>
+              <p className="text-xs text-os-text-secondary-dark">Only the author can view</p>
+            </div>
+          </button>
+          
+          <button className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg bg-os-bg-dark transition-colors">
+            <svg className="w-4 h-4 text-brand-aperol" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+            </svg>
+            <div className="text-left flex-1">
+              <p className="text-sm font-medium text-brand-aperol">Anyone with the link</p>
+              <p className="text-xs text-os-text-secondary-dark">Anyone with the link</p>
+            </div>
+            <svg className="w-4 h-4 text-brand-aperol" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            </svg>
+          </button>
+        </div>
+        
+        {/* Share section */}
+        <div className="px-4 pb-4 pt-2">
+          <p className="text-xs font-semibold text-os-text-secondary-dark uppercase tracking-wider mb-2">Share</p>
+          <button className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-os-bg-dark hover:bg-os-bg-dark/80 rounded-lg transition-colors text-sm font-medium text-os-text-primary-dark">
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+            </svg>
+            <span>Copy Link</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const ShareModalDoc: ComponentDoc = {
+  id: 'share-modal',
+  name: 'ShareModal',
+  description: 'Modal dialog for sharing chat threads. Offers private or public visibility options and copy link functionality.',
+  category: 'application',
+  page: 'Chat',
+  component: ShareModalDemo,
+  defaultProps: {
+    isOpen: true,
+  },
+  controls: [
+    {
+      name: 'isOpen',
+      type: 'boolean',
+      description: 'Whether the modal is visible',
+      defaultValue: true,
+    },
+  ],
+  variants: [
+    { id: 'default', name: 'Default', props: { isOpen: true } },
+  ],
+};
+
+// ShortcutModal Component - Static demo (actual modal uses fixed positioning)
+const ShortcutModalDemo = ({ isOpen }: { isOpen: boolean }) => {
+  if (!isOpen) {
+    return (
+      <div className="p-4 bg-os-surface-dark rounded-xl border border-os-border-dark text-center">
+        <p className="text-os-text-secondary-dark text-sm">Toggle &apos;isOpen&apos; to see the modal</p>
+      </div>
+    );
+  }
+  
+  // Render modal content inline for demo (avoiding fixed positioning issues)
+  return (
+    <div className="relative bg-black/60 rounded-xl p-6 flex items-center justify-center">
+      <div className="w-full max-w-xl bg-os-surface-dark rounded-2xl border border-os-border-dark shadow-2xl">
+        {/* Header */}
+        <div className="flex items-center justify-between px-6 py-4 border-b border-os-border-dark">
+          <h2 className="text-lg font-semibold text-os-text-primary-dark">Shortcut</h2>
+          <button className="p-1 rounded-lg hover:bg-os-bg-dark transition-colors">
+            <svg className="w-5 h-5 text-os-text-secondary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        
+        {/* Content */}
+        <div className="px-6 py-5 space-y-5">
+          {/* Shortcut name */}
+          <div>
+            <label className="block text-sm text-os-text-secondary-dark mb-2">Shortcut name</label>
+            <div className="relative">
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-os-text-secondary-dark">/</span>
+              <input
+                type="text"
+                defaultValue="brand-colors"
+                placeholder="my-shortcut"
+                className="w-full bg-os-bg-dark border border-os-border-dark rounded-lg pl-6 pr-4 py-3 text-os-text-primary-dark placeholder:text-os-text-secondary-dark/50 focus:outline-none focus:border-brand-aperol/50"
+              />
+            </div>
+          </div>
+          
+          {/* Instructions */}
+          <div>
+            <label className="block text-sm text-os-text-secondary-dark mb-2">Instructions</label>
+            <textarea
+              placeholder="Enter the instructions for this shortcut..."
+              className="w-full bg-os-bg-dark border border-os-border-dark rounded-lg px-4 py-3 text-os-text-primary-dark placeholder:text-os-text-secondary-dark/50 focus:outline-none focus:border-brand-aperol/50 min-h-[100px] resize-none"
+            />
+          </div>
+          
+          {/* Advanced toggle */}
+          <button className="flex items-center gap-2 text-sm text-os-text-secondary-dark hover:text-os-text-primary-dark transition-colors">
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+            <span>Advanced</span>
+          </button>
+        </div>
+        
+        {/* Footer */}
+        <div className="flex items-center justify-end gap-3 px-6 py-4 border-t border-os-border-dark">
+          <button className="px-4 py-2 text-sm font-medium text-os-text-primary-dark bg-os-bg-dark hover:bg-os-bg-dark/80 rounded-lg transition-colors">
+            Cancel
+          </button>
+          <button className="px-4 py-2 text-sm font-medium bg-brand-vanilla text-brand-charcoal hover:bg-brand-vanilla/90 rounded-lg transition-colors">
+            Save
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const ShortcutModalDoc: ComponentDoc = {
+  id: 'shortcut-modal',
+  name: 'ShortcutModal',
+  description: 'Modal for creating AI shortcuts with custom name, instructions, and advanced options like mode (search/research), model, and source type.',
+  category: 'application',
+  page: 'Chat',
+  component: ShortcutModalDemo,
+  defaultProps: {
+    isOpen: true,
+  },
+  controls: [
+    {
+      name: 'isOpen',
+      type: 'boolean',
+      description: 'Whether the modal is visible',
+      defaultValue: true,
+    },
+  ],
+  variants: [
+    { id: 'default', name: 'Default', props: { isOpen: true } },
+  ],
+};
+
+// LinksView Component
+const mockLinksViewSources: SourceInfo[] = [
+  { id: '1', name: 'MDN Web Docs', url: 'https://developer.mozilla.org/en-US/docs/Web', favicon: 'https://developer.mozilla.org/favicon.ico', title: 'Web Technology for Developers', snippet: 'MDN Web Docs provides information about Open Web technologies including HTML, CSS, and APIs.' },
+  { id: '2', name: 'CSS-Tricks', url: 'https://css-tricks.com/guides', favicon: 'https://css-tricks.com/favicon.ico', title: 'CSS Guides and Tutorials', snippet: 'A comprehensive collection of CSS techniques and best practices.' },
+  { id: '3', name: 'Smashing Magazine', url: 'https://smashingmagazine.com/articles', favicon: 'https://smashingmagazine.com/favicon.ico', title: 'Web Design Articles', snippet: 'Professional resources for web designers and developers.' },
+];
+
+const LinksViewDemo = () => {
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-4 max-w-2xl">
+      <LinksView query="web development best practices" sources={mockLinksViewSources} />
+    </div>
+  );
+};
+
+const LinksViewDoc: ComponentDoc = {
+  id: 'links-view',
+  name: 'LinksView',
+  description: 'Grid view of search result links with favicons, titles, snippets, and source domains. Used in the Links tab of chat responses.',
+  category: 'application',
+  page: 'Chat',
+  component: LinksViewDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// ImagesView Component
+const mockImagesViewImages: ImageResult[] = [
+  { id: '1', url: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400', thumbnailUrl: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=200', title: 'Abstract Design', sourceUrl: 'https://unsplash.com', sourceName: 'Unsplash', width: 400, height: 400 },
+  { id: '2', url: 'https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=400', thumbnailUrl: 'https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=200', title: 'Gradient Art', sourceUrl: 'https://unsplash.com', sourceName: 'Unsplash', width: 400, height: 400 },
+  { id: '3', url: 'https://images.unsplash.com/photo-1557682250-33bd709cbe85?w=400', thumbnailUrl: 'https://images.unsplash.com/photo-1557682250-33bd709cbe85?w=200', title: 'Purple Gradient', sourceUrl: 'https://unsplash.com', sourceName: 'Unsplash', width: 400, height: 400 },
+  { id: '4', url: 'https://images.unsplash.com/photo-1557682260-96773eb01377?w=400', thumbnailUrl: 'https://images.unsplash.com/photo-1557682260-96773eb01377?w=200', title: 'Blue Wave', sourceUrl: 'https://unsplash.com', sourceName: 'Unsplash', width: 400, height: 400 },
+];
+
+const ImagesViewDemo = () => {
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-4 max-w-2xl">
+      <ImagesView query="abstract gradient designs" images={mockImagesViewImages} />
+    </div>
+  );
+};
+
+const ImagesViewDoc: ComponentDoc = {
+  id: 'images-view',
+  name: 'ImagesView',
+  description: 'Grid gallery of image search results with lightbox functionality. Displays thumbnails with source overlay on hover.',
+  category: 'application',
+  page: 'Chat',
+  component: ImagesViewDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// ChatHeader Component
+const ChatHeaderDemo = ({ activeTab, hasLinks, hasImages }: { activeTab: ChatTab; hasLinks: boolean; hasImages: boolean }) => {
+  return (
+    <div className="bg-os-bg-dark rounded-lg overflow-hidden max-w-2xl">
+      <ChatHeader
+        activeTab={activeTab}
+        onTabChange={() => {}}
+        hasLinks={hasLinks}
+        hasImages={hasImages}
+        linksCount={hasLinks ? 8 : 0}
+        imagesCount={hasImages ? 12 : 0}
+        threadTitle="What is brand identity?"
+        onBack={() => {}}
+      />
+    </div>
+  );
+};
+
+const ChatHeaderDoc: ComponentDoc = {
+  id: 'chat-header',
+  name: 'ChatHeader',
+  description: 'Sticky header for chat pages with tab navigation (Answer/Links/Images), back button, overflow menu, and share button.',
+  category: 'application',
+  page: 'Chat',
+  component: ChatHeaderDemo,
+  defaultProps: {
+    activeTab: 'answer',
+    hasLinks: true,
+    hasImages: true,
+  },
+  controls: [
+    {
+      name: 'activeTab',
+      type: 'select',
+      description: 'Currently active tab',
+      defaultValue: 'answer',
+      options: [
+        { label: 'Answer', value: 'answer' },
+        { label: 'Links', value: 'links' },
+        { label: 'Images', value: 'images' },
+      ],
+    },
+    {
+      name: 'hasLinks',
+      type: 'boolean',
+      description: 'Whether links are available',
+      defaultValue: true,
+    },
+    {
+      name: 'hasImages',
+      type: 'boolean',
+      description: 'Whether images are available',
+      defaultValue: true,
+    },
+  ],
+  variants: [
+    { id: 'all-tabs', name: 'All Tabs', props: { activeTab: 'answer', hasLinks: true, hasImages: true } },
+    { id: 'answer-only', name: 'Answer Only', props: { activeTab: 'answer', hasLinks: false, hasImages: false } },
+    { id: 'links-active', name: 'Links Active', props: { activeTab: 'links', hasLinks: true, hasImages: true } },
+  ],
+};
+
+// SourcesDrawer Component - Static demo (actual drawer uses fixed positioning)
+const SourcesDrawerDemo = ({ isOpen }: { isOpen: boolean }) => {
+  if (!isOpen) {
+    return (
+      <div className="p-4 bg-os-surface-dark rounded-xl border border-os-border-dark text-center">
+        <p className="text-os-text-secondary-dark text-sm">Toggle &apos;isOpen&apos; to see the drawer</p>
+      </div>
+    );
+  }
+  
+  // Render drawer content inline for demo (avoiding fixed positioning issues)
+  return (
+    <div className="relative bg-os-bg-dark rounded-xl overflow-hidden flex">
+      {/* Content placeholder */}
+      <div className="flex-1 bg-black/40 min-h-[400px] flex items-center justify-center">
+        <p className="text-os-text-secondary-dark/50 text-sm">Page content behind drawer</p>
+      </div>
+      
+      {/* Drawer panel */}
+      <div className="w-[320px] bg-os-bg-darker border-l border-os-border-dark flex flex-col">
+        {/* Header */}
+        <div className="flex items-center justify-between px-4 py-3 border-b border-os-border-dark">
+          <div className="flex items-center gap-2">
+            <svg className="w-5 h-5 text-os-text-secondary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+            </svg>
+            <h2 className="text-[15px] font-semibold text-os-text-primary-dark">5 sources</h2>
+          </div>
+          <button className="p-1.5 rounded-lg text-os-text-secondary-dark hover:text-os-text-primary-dark hover:bg-os-surface-dark transition-colors">
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        
+        {/* Brand Resources Section */}
+        <div className="border-b border-os-border-dark/50">
+          <div className="px-4 py-2 bg-brand-aperol/5">
+            <div className="flex items-center gap-2">
+              <svg className="w-4 h-4 text-brand-aperol" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+              </svg>
+              <span className="text-xs font-semibold text-brand-aperol uppercase tracking-wider">Brand Resources</span>
+            </div>
+          </div>
+          <div className="px-4 py-3 hover:bg-os-surface-dark/50 transition-colors">
+            <h3 className="text-[14px] font-medium text-os-text-primary-dark">Color System</h3>
+            <p className="text-[13px] text-os-text-secondary-dark mt-0.5">Brand color palette</p>
+          </div>
+        </div>
+        
+        {/* Web Sources Section */}
+        <div className="flex-1 overflow-y-auto">
+          <div className="px-4 py-2 bg-os-surface-dark/30">
+            <span className="text-xs font-semibold text-os-text-secondary-dark uppercase tracking-wider">Web Sources</span>
+          </div>
+          {[
+            { name: 'TechCrunch', title: 'Major Tech Industry Announcement' },
+            { name: 'The Verge', title: 'Design Trends 2024' },
+            { name: 'Wired', title: 'AI and Machine Learning' },
+          ].map((source, idx) => (
+            <div key={idx} className="px-4 py-3 hover:bg-os-surface-dark/50 transition-colors border-b border-os-border-dark/50">
+              <p className="text-xs text-os-text-secondary-dark mb-0.5">{source.name}</p>
+              <h3 className="text-[14px] font-medium text-os-text-primary-dark line-clamp-2">{source.title}</h3>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const SourcesDrawerDoc: ComponentDoc = {
+  id: 'sources-drawer',
+  name: 'SourcesDrawer',
+  description: 'Slide-out drawer showing all sources for an AI response. Organized by type: Brand Resources, Discover (RSS), and Web Sources.',
+  category: 'application',
+  page: 'Chat',
+  component: SourcesDrawerDemo,
+  defaultProps: {
+    isOpen: true,
+  },
+  controls: [
+    {
+      name: 'isOpen',
+      type: 'boolean',
+      description: 'Whether the drawer is visible',
+      defaultValue: true,
+    },
+  ],
+  variants: [
+    { id: 'default', name: 'Default', props: { isOpen: true } },
+  ],
+};
+
+// AnswerView Component
+const mockAnswerSections: ContentSection[] = [
+  { type: 'paragraph', content: 'Brand identity encompasses the visual elements that represent a company, including its logo, color palette, typography, and overall design language.' },
+  { type: 'heading', content: 'Key Components', level: 2 },
+  { type: 'list', content: '', items: ['Logo and brandmark', 'Color system', 'Typography hierarchy', 'Imagery and photography style'] },
+  { type: 'paragraph', content: 'A strong brand identity helps create recognition and trust with your audience while differentiating you from competitors.' },
+];
+
+const mockAnswerSources: SourceInfo[] = [
+  { id: '1', name: 'Wikipedia', url: 'https://wikipedia.org', title: 'Brand Identity' },
+  { id: '2', name: 'HubSpot', url: 'https://hubspot.com', title: 'Building Brand Identity' },
+];
+
+const AnswerViewDemo = ({ isStreaming }: { isStreaming: boolean }) => {
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-4 max-w-2xl">
+      <AnswerView
+        query="What is brand identity?"
+        sections={mockAnswerSections}
+        sources={mockAnswerSources}
+        isStreaming={isStreaming}
+        showCitations={true}
+      />
+    </div>
+  );
+};
+
+const AnswerViewDoc: ComponentDoc = {
+  id: 'answer-view',
+  name: 'AnswerView',
+  description: 'Main AI response renderer that displays structured content with headings, paragraphs, lists, and inline citations. Supports streaming state.',
+  category: 'application',
+  page: 'Chat',
+  component: AnswerViewDemo,
+  defaultProps: {
+    isStreaming: false,
+  },
+  controls: [
+    {
+      name: 'isStreaming',
+      type: 'boolean',
+      description: 'Show streaming/loading indicator',
+      defaultValue: false,
+    },
+  ],
+  variants: [
+    { id: 'default', name: 'Complete', props: { isStreaming: false } },
+    { id: 'streaming', name: 'Streaming', props: { isStreaming: true } },
+  ],
+};
+
+// ChatContent Component
+const mockChatContent = `Brand identity is the collection of all elements that a company creates to portray the right image to its consumers.
+
+## Key Elements
+
+Brand identity includes your logo, color palette, typography, and overall visual language. These elements work together to create a cohesive and recognizable presence.
+
+## Why It Matters
+
+A strong brand identity helps build trust, creates recognition, and differentiates you from competitors in the marketplace.`;
+
+const ChatContentDemo = ({ isStreaming }: { isStreaming: boolean }) => {
+  return (
+    <div className="bg-os-surface-dark rounded-lg max-w-2xl">
+      <ChatContent
+        query="What is brand identity?"
+        content={mockChatContent}
+        sources={mockAnswerSources}
+        isStreaming={isStreaming}
+        modelUsed="sonar-pro"
+        onFollowUpClick={() => {}}
+        onRegenerate={() => {}}
+        isLastResponse={true}
+      />
+    </div>
+  );
+};
+
+const ChatContentDoc: ComponentDoc = {
+  id: 'chat-content',
+  name: 'ChatContent',
+  description: 'Complete chat message container that combines AnswerView, ResponseActions, and RelatedQuestions. Handles content parsing and resource extraction.',
+  category: 'application',
+  page: 'Chat',
+  component: ChatContentDemo,
+  defaultProps: {
+    isStreaming: false,
+  },
+  controls: [
+    {
+      name: 'isStreaming',
+      type: 'boolean',
+      description: 'Show streaming state',
+      defaultValue: false,
+    },
+  ],
+  variants: [
+    { id: 'complete', name: 'Complete Response', props: { isStreaming: false } },
+    { id: 'streaming', name: 'Streaming', props: { isStreaming: true } },
+  ],
+};
+
+// ChatResponse Component
+const ChatResponseDemo = () => {
+  return (
+    <div className="bg-os-bg-dark rounded-lg max-w-3xl h-[500px] overflow-hidden">
+      <ChatResponse
+        query="What is brand identity and how do I build one?"
+        content={mockChatContent}
+        sources={mockAnswerSources}
+        images={mockImagesViewImages}
+        isStreaming={false}
+        modelUsed="sonar-pro"
+        onFollowUpClick={() => {}}
+        onRegenerate={() => {}}
+      />
+    </div>
+  );
+};
+
+const ChatResponseDoc: ComponentDoc = {
+  id: 'chat-response',
+  name: 'ChatResponse',
+  description: 'Full chat response component with sticky tab header and scrollable content. Combines ChatTabNav, AnswerView, LinksView, and ImagesView.',
+  category: 'application',
+  page: 'Chat',
+  component: ChatResponseDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// FollowUpInput Component
+const FollowUpInputDemo = ({ isLoading, placeholder }: { isLoading: boolean; placeholder: string }) => {
+  return (
+    <div className="bg-os-bg-dark rounded-lg p-4 max-w-3xl">
+      <FollowUpInput
+        onSubmit={() => {}}
+        isLoading={isLoading}
+        placeholder={placeholder}
+        selectedModel="auto"
+        onModelChange={() => {}}
+      />
+    </div>
+  );
+};
+
+const FollowUpInputDoc: ComponentDoc = {
+  id: 'follow-up-input',
+  name: 'FollowUpInput',
+  description: 'Full-featured chat input with search/research toggle, model selector, connector dropdown, file attachments, voice input, and submit button.',
+  category: 'application',
+  page: 'Chat',
+  component: FollowUpInputDemo,
+  defaultProps: {
+    isLoading: false,
+    placeholder: 'Ask a follow-up',
+  },
+  controls: [
+    {
+      name: 'isLoading',
+      type: 'boolean',
+      description: 'Disable input during loading',
+      defaultValue: false,
+    },
+    {
+      name: 'placeholder',
+      type: 'text',
+      description: 'Input placeholder text',
+      defaultValue: 'Ask a follow-up',
+    },
+  ],
+  variants: [
+    { id: 'default', name: 'Default', props: { isLoading: false, placeholder: 'Ask a follow-up' } },
+    { id: 'loading', name: 'Loading', props: { isLoading: true, placeholder: 'Ask a follow-up' } },
+    { id: 'custom-placeholder', name: 'Custom Placeholder', props: { isLoading: false, placeholder: 'Ask about brand guidelines...' } },
+  ],
+};
+
 // ============================================
 // APPLICATION COMPONENTS - DISCOVER
 // ============================================
@@ -734,21 +1682,24 @@ const NewsCardDoc: ComponentDoc = {
 
 // TieredNewsCard Component
 const TieredNewsCardDemo = ({
-  title,
-  summary,
-  tier,
-  variant,
+  title = 'The Future of AI in Design',
+  summary = 'Artificial intelligence is transforming how designers work.',
+  tier = 'featured',
+  variant = 'compact',
 }: {
-  title: string;
-  summary: string;
-  tier: 'featured' | 'summary' | 'quick';
-  variant: 'featured' | 'compact';
+  title?: string;
+  summary?: string;
+  tier?: 'featured' | 'summary' | 'quick';
+  variant?: 'featured' | 'compact';
 }) => {
+  const safeTitle = title || 'News Article';
+  const safeSummary = summary || 'Article summary text.';
+  
   const mockItem = {
     id: 'demo-1',
     slug: 'demo-article',
-    title,
-    summary,
+    title: safeTitle,
+    summary: safeSummary,
     sources: [
       { id: '1', name: 'TechCrunch', url: 'https://techcrunch.com' },
       { id: '2', name: 'The Verge', url: 'https://theverge.com' },
@@ -756,13 +1707,18 @@ const TieredNewsCardDemo = ({
     ],
     publishedAt: '2 hours ago',
     category: 'weekly-update' as const,
-    tier,
-    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800',
+    tier: tier || 'featured',
+    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400',
   };
 
+  // Use appropriate max-width based on variant
+  const containerClass = variant === 'featured' 
+    ? 'w-full max-w-2xl' 
+    : 'w-full max-w-xs';
+
   return (
-    <div className="max-w-md">
-      <TieredNewsCard item={mockItem} variant={variant} />
+    <div className={containerClass}>
+      <TieredNewsCard item={mockItem} variant={variant || 'compact'} />
     </div>
   );
 };
@@ -825,33 +1781,38 @@ const TieredNewsCardDoc: ComponentDoc = {
 
 // IdeaCard Component
 const IdeaCardDemo = ({
-  title,
-  description,
-  category,
-  variant,
+  title = 'Behind-the-scenes look at our design process',
+  description = 'Show the messy middle of creating something great.',
+  category = 'short-form',
+  variant = 'compact',
 }: {
-  title: string;
-  description: string;
-  category: 'short-form' | 'long-form' | 'blog';
-  variant: 'featured' | 'compact';
+  title?: string;
+  description?: string;
+  category?: 'short-form' | 'long-form' | 'blog';
+  variant?: 'featured' | 'compact';
 }) => {
+  // Ensure title is never undefined to prevent getFormatLabel error
+  const safeTitle = title || 'Content Idea';
+  const safeDescription = description || 'Idea description';
+  
   const mockItem = {
     id: 'demo-idea-1',
     slug: 'demo-idea',
-    title,
-    description,
+    title: safeTitle,
+    description: safeDescription,
     sources: [
       { id: '1', name: 'Source 1', url: '#' },
       { id: '2', name: 'Source 2', url: '#' },
     ],
-    category,
+    category: category || 'short-form',
     isPrompt: true as const,
     textureIndex: 3,
+    format: 'reel' as const, // Provide explicit format to avoid title parsing
   };
 
   return (
-    <div className="max-w-md">
-      <IdeaCard item={mockItem} variant={variant} />
+    <div className="w-full max-w-sm">
+      <IdeaCard item={mockItem} variant={variant || 'compact'} />
     </div>
   );
 };
@@ -939,6 +1900,198 @@ const WeatherWidgetDoc: ComponentDoc = {
 };
 
 // ============================================
+// APPLICATION COMPONENTS - DISCOVER ARTICLE
+// ============================================
+
+// ArticleHeader Component
+const ArticleHeaderDemo = ({ title, sourceCount }: { title: string; sourceCount: number }) => {
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-6 max-w-2xl">
+      <ArticleHeader
+        title={title}
+        publishedAt="2 hours ago"
+        sourceCount={sourceCount}
+      />
+    </div>
+  );
+};
+
+const ArticleHeaderDoc: ComponentDoc = {
+  id: 'article-header',
+  name: 'ArticleHeader',
+  description: 'Header section for discover articles showing title, publication time, and source count. Uses display font for the title.',
+  category: 'application',
+  page: 'Discover',
+  component: ArticleHeaderDemo,
+  defaultProps: {
+    title: 'The Future of AI in Design: How Machine Learning is Transforming Creative Work',
+    sourceCount: 12,
+  },
+  controls: [
+    {
+      name: 'title',
+      type: 'text',
+      description: 'Article title',
+      defaultValue: 'The Future of AI in Design',
+      required: true,
+    },
+    {
+      name: 'sourceCount',
+      type: 'range',
+      description: 'Number of sources',
+      defaultValue: 12,
+      min: 1,
+      max: 50,
+      step: 1,
+    },
+  ],
+  variants: [
+    { id: 'few-sources', name: 'Few Sources', props: { title: 'Quick Update', sourceCount: 3 } },
+    { id: 'many-sources', name: 'Many Sources', props: { title: 'Comprehensive Report', sourceCount: 45 } },
+  ],
+};
+
+// ArticleSidebar Component
+const ArticleSidebarDemo = () => {
+  const summaryPoints = [
+    'Key Findings & Overview',
+    'Industry Impact Analysis',
+    'Future Predictions',
+    'Expert Opinions',
+  ];
+  
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-6 max-w-xs">
+      <ArticleSidebar summaryPoints={summaryPoints} />
+    </div>
+  );
+};
+
+const ArticleSidebarDoc: ComponentDoc = {
+  id: 'article-sidebar',
+  name: 'ArticleSidebar',
+  description: 'Section navigation sidebar for articles. Displays summary points as clickable links that scroll to corresponding sections.',
+  category: 'application',
+  page: 'Discover',
+  component: ArticleSidebarDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// ActionSidebar Component
+const ActionSidebarDoc: ComponentDoc = {
+  id: 'action-sidebar',
+  name: 'ActionSidebar',
+  description: 'Floating sidebar with article actions: Save, Share, Copy, and Report. Shows tooltips on hover. Hidden on mobile.',
+  category: 'application',
+  page: 'Discover',
+  component: ActionSidebar,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// InlineSourceBadge Component
+const mockInlineSources = [
+  { id: '1', name: 'TechCrunch', url: 'https://techcrunch.com', favicon: 'https://techcrunch.com/favicon.ico' },
+  { id: '2', name: 'The Verge', url: 'https://theverge.com', favicon: 'https://theverge.com/favicon.ico' },
+  { id: '3', name: 'Wired', url: 'https://wired.com', favicon: 'https://wired.com/favicon.ico' },
+];
+
+const InlineSourceBadgeDemo = () => {
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-6 max-w-lg">
+      <p className="text-os-text-primary-dark text-base leading-relaxed">
+        According to recent industry reports, AI adoption in creative fields has increased by 45% this year.{' '}
+        <InlineSourceBadge sources={mockInlineSources} primarySourceName="techcrunch" />
+      </p>
+    </div>
+  );
+};
+
+const InlineSourceBadgeDoc: ComponentDoc = {
+  id: 'inline-source-badge',
+  name: 'InlineSourceBadge',
+  description: 'Inline citation badge that shows source name and count. Displays a popover with full source list on hover.',
+  category: 'application',
+  page: 'Discover',
+  component: InlineSourceBadgeDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// RelatedImages Component
+const RelatedImagesDemo = () => {
+  const mockImages = [
+    'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400',
+    'https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=400',
+  ];
+  
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-4 max-w-lg">
+      <RelatedImages images={mockImages} />
+    </div>
+  );
+};
+
+const RelatedImagesDoc: ComponentDoc = {
+  id: 'related-images',
+  name: 'RelatedImages',
+  description: 'Grid of related images for articles. Displays 2-column layout with hover zoom effect.',
+  category: 'application',
+  page: 'Discover',
+  component: RelatedImagesDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// DiscoverMore Component - Static demo (uses async data loading)
+const DiscoverMoreDemo = () => {
+  return (
+    <div className="bg-os-surface-dark rounded-lg p-4 max-w-3xl">
+      <div className="border-t border-os-border-dark/50 pt-8">
+        <h3 className="text-lg font-display font-bold text-brand-vanilla mb-6">Discover more</h3>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {[
+            { title: 'AI Design Tools Comparison', sources: 8 },
+            { title: 'Future of Creative Work', sources: 12 },
+            { title: 'Machine Learning in UX', sources: 6 },
+            { title: 'Design System Trends', sources: 15 },
+          ].map((article, idx) => (
+            <div key={idx} className="group flex flex-col gap-2.5 p-2.5 bg-os-surface-dark/60 hover:bg-os-surface-dark rounded-xl border border-os-border-dark/50 hover:border-os-border-dark transition-all">
+              <div className="aspect-[16/10] bg-gradient-to-br from-os-surface-dark to-os-bg-dark rounded-lg flex items-center justify-center">
+                <span className="text-xl">📰</span>
+              </div>
+              <div className="flex flex-col gap-1.5">
+                <h4 className="text-xs font-medium text-brand-vanilla group-hover:text-brand-aperol transition-colors leading-snug line-clamp-2">
+                  {article.title}
+                </h4>
+                <span className="text-[10px] text-os-text-secondary-dark">{article.sources} sources</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const DiscoverMoreDoc: ComponentDoc = {
+  id: 'discover-more',
+  name: 'DiscoverMore',
+  description: 'Related articles grid shown at the bottom of article pages. Loads articles dynamically and displays them in a responsive 2x4 grid.',
+  category: 'application',
+  page: 'Discover',
+  component: DiscoverMoreDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// ============================================
 // APPLICATION COMPONENTS - FINANCE
 // ============================================
 
@@ -961,6 +2114,9 @@ const StockStatsDemo = () => {
     trailingPE: 30.5,
     epsTrailingTwelveMonths: 6.40,
     currency: 'USD',
+    longName: 'Apple Inc.',
+    exchange: 'NASDAQ',
+    quoteType: 'EQUITY',
   };
 
   return (
@@ -987,6 +2143,7 @@ const CompanyProfileDemo = () => {
   const mockProfile = {
     symbol: 'AAPL',
     shortName: 'Apple Inc.',
+    longName: 'Apple Inc.',
     longBusinessSummary: 'Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, Mac, iPad, and wearables, home and accessories.',
     sector: 'Technology',
     industry: 'Consumer Electronics',
@@ -1015,6 +2172,512 @@ const CompanyProfileDoc: ComponentDoc = {
   category: 'application',
   page: 'Finance',
   component: CompanyProfileDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// LatestNews Component
+const LatestNewsDemo = () => {
+  const mockNews = [
+    {
+      uuid: '1',
+      title: 'Tech Company Announces Major AI Initiative',
+      link: 'https://example.com/news/1',
+      publisher: 'Reuters',
+      providerPublishTime: Math.floor(Date.now() / 1000) - 1800, // 30 min ago
+    },
+    {
+      uuid: '2',
+      title: 'Q3 Earnings Beat Analyst Expectations',
+      link: 'https://example.com/news/2',
+      publisher: 'Bloomberg',
+      providerPublishTime: Math.floor(Date.now() / 1000) - 3600, // 1 hour ago
+    },
+  ];
+  
+  return (
+    <div className="bg-os-surface-dark rounded-xl p-4 max-w-md">
+      <LatestNews news={mockNews} />
+    </div>
+  );
+};
+
+const LatestNewsDoc: ComponentDoc = {
+  id: 'latest-news',
+  name: 'LatestNews',
+  description: 'Displays latest news articles for a stock with source, title, and timestamp. Shows skeleton loading state while fetching.',
+  category: 'application',
+  page: 'Finance',
+  component: LatestNewsDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// ============================================
+// APPLICATION COMPONENTS - DISCOVER MAIN
+// ============================================
+
+// IdeaAccordion Component - Static demo
+const IdeaAccordionDemo = () => {
+  return (
+    <div className="bg-os-surface-dark rounded-xl p-4 max-w-3xl">
+      <div className="rounded-xl border border-os-border-dark/50 bg-os-surface-dark/20 overflow-hidden">
+        <button className="w-full flex items-center justify-between px-4 py-3 hover:bg-os-surface-dark/30 transition-colors">
+          <div className="flex items-center gap-3">
+            <svg className="w-5 h-5 text-brand-aperol" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <span className="text-base font-semibold text-brand-vanilla">Short-Form</span>
+            <span className="px-2 py-0.5 rounded-full bg-os-surface-dark text-xs text-os-text-secondary-dark">3</span>
+          </div>
+          <svg className="w-5 h-5 text-os-text-secondary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  );
+};
+
+const IdeaAccordionDoc: ComponentDoc = {
+  id: 'idea-accordion',
+  name: 'IdeaAccordion',
+  description: 'Expandable accordion sections for organizing content ideas by type (Short-Form, Long-Form, Blog). Each section shows idea cards with thumbnails, descriptions, and source chips.',
+  category: 'application',
+  page: 'Discover',
+  component: IdeaAccordionDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// InspirationCard Component - Static demo
+const InspirationCardDemo = ({ variant }: { variant: 'featured' | 'compact' }) => {
+  return (
+    <div className={`bg-os-surface-dark rounded-xl p-4 ${variant === 'featured' ? 'max-w-2xl' : 'max-w-xs'}`}>
+      <div className="group flex flex-col gap-3 p-3 rounded-xl bg-transparent hover:bg-os-surface-dark/30 transition-colors">
+        <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-gradient-to-br from-os-surface-dark to-os-bg-dark flex items-center justify-center">
+          <span className="text-2xl">💡</span>
+        </div>
+        <div className="flex flex-col gap-2">
+          <h3 className="text-sm font-medium text-brand-vanilla group-hover:text-brand-aperol transition-colors leading-snug line-clamp-3">
+            Creative Campaign Ideas for Social Media Marketing
+          </h3>
+          <div className="flex items-center gap-1.5">
+            <div className="flex -space-x-1.5">
+              {[1, 2, 3].map((_, idx) => (
+                <div key={idx} className="w-5 h-5 rounded-full bg-os-surface-dark border border-os-bg-dark flex items-center justify-center">
+                  <span className="text-[8px] text-os-text-secondary-dark font-bold">S</span>
+                </div>
+              ))}
+            </div>
+            <span className="text-xs text-os-text-secondary-dark">5 sources</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const InspirationCardDoc: ComponentDoc = {
+  id: 'inspiration-card',
+  name: 'InspirationCard',
+  description: 'Card component for displaying content inspiration with image, title, sources, and actions. Supports featured (large) and compact variants.',
+  category: 'application',
+  page: 'Discover',
+  component: InspirationCardDemo,
+  defaultProps: { variant: 'compact' },
+  controls: [
+    {
+      name: 'variant',
+      type: 'select',
+      description: 'Card display variant',
+      defaultValue: 'compact',
+      options: [
+        { label: 'Featured', value: 'featured' },
+        { label: 'Compact', value: 'compact' },
+      ],
+    },
+  ],
+  variants: [
+    { id: 'compact', name: 'Compact', props: { variant: 'compact' } },
+    { id: 'featured', name: 'Featured', props: { variant: 'featured' } },
+  ],
+};
+
+// SettingsDrawer Component - Static demo
+const SettingsDrawerDemo = ({ isOpen }: { isOpen: boolean }) => {
+  if (!isOpen) {
+    return (
+      <div className="p-4 bg-os-surface-dark rounded-xl border border-os-border-dark text-center">
+        <p className="text-os-text-secondary-dark text-sm">Toggle &apos;isOpen&apos; to see the drawer</p>
+      </div>
+    );
+  }
+  
+  return (
+    <div className="relative bg-os-bg-dark rounded-xl overflow-hidden flex min-h-[400px]">
+      <div className="flex-1 bg-black/40 flex items-center justify-center">
+        <p className="text-os-text-secondary-dark/50 text-sm">Page content</p>
+      </div>
+      <div className="w-[300px] bg-os-surface-dark border-l border-os-border-dark flex flex-col">
+        <div className="flex items-center justify-between px-6 h-14 border-b border-os-border-dark">
+          <span className="font-display font-semibold text-brand-vanilla">Settings</span>
+          <button className="p-1.5 rounded-lg text-os-text-secondary-dark hover:text-brand-vanilla">
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div className="flex-1 p-4">
+          <p className="text-sm text-os-text-secondary-dark">Settings content here...</p>
+        </div>
+        <div className="px-4 py-3 border-t border-os-border-dark">
+          <p className="text-[10px] text-os-text-secondary-dark text-center">
+            Press <kbd className="px-1.5 py-0.5 rounded bg-os-border-dark text-brand-vanilla font-mono">ESC</kbd> to close
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const SettingsDrawerDoc: ComponentDoc = {
+  id: 'settings-drawer',
+  name: 'SettingsDrawer',
+  description: 'Slide-out drawer for settings panels. Closes on ESC key or backdrop click. Renders children content in scrollable area.',
+  category: 'application',
+  page: 'Discover',
+  component: SettingsDrawerDemo,
+  defaultProps: { isOpen: true },
+  controls: [
+    {
+      name: 'isOpen',
+      type: 'boolean',
+      description: 'Whether the drawer is visible',
+      defaultValue: true,
+    },
+  ],
+  variants: [
+    { id: 'open', name: 'Open', props: { isOpen: true } },
+  ],
+};
+
+// DiscoverHeader Component - Static demo
+const DiscoverHeaderDemo = () => {
+  return (
+    <div className="bg-os-surface-dark rounded-xl p-4 max-w-3xl">
+      <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center gap-3">
+          <h1 className="text-xl font-display font-bold text-brand-vanilla">Discover</h1>
+          <div className="flex items-center bg-os-surface-dark/50 rounded-full p-1">
+            <button className="px-4 py-1.5 rounded-full text-sm font-medium bg-brand-aperol text-white">News</button>
+            <button className="px-4 py-1.5 rounded-full text-sm font-medium text-os-text-secondary-dark">Ideas</button>
+            <button className="px-4 py-1.5 rounded-full text-sm font-medium text-os-text-secondary-dark">Inspo</button>
+          </div>
+        </div>
+        <div className="flex items-center gap-2">
+          <button className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium bg-os-surface-dark/60 text-os-text-secondary-dark border border-os-border-dark/30">
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+            </svg>
+            <span>All Topics</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const DiscoverHeaderDoc: ComponentDoc = {
+  id: 'discover-header',
+  name: 'DiscoverHeader',
+  description: 'Header for the Discover page with tab navigation (News/Ideas/Inspo), filter dropdown, sort options, saved articles, and settings buttons.',
+  category: 'application',
+  page: 'Discover',
+  component: DiscoverHeaderDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// DiscoverTabs Component - Static demo
+const DiscoverTabsDemo = () => {
+  return (
+    <div className="bg-os-surface-dark rounded-xl p-4">
+      <div className="flex items-center bg-os-surface-dark/50 rounded-full p-1 w-fit">
+        <button className="px-4 py-1.5 rounded-full text-sm font-medium bg-brand-aperol text-white transition-all">
+          News
+        </button>
+        <button className="px-4 py-1.5 rounded-full text-sm font-medium text-os-text-secondary-dark hover:text-brand-vanilla transition-all">
+          Ideas
+        </button>
+        <button className="px-4 py-1.5 rounded-full text-sm font-medium text-os-text-secondary-dark hover:text-brand-vanilla transition-all">
+          Inspo
+        </button>
+      </div>
+    </div>
+  );
+};
+
+const DiscoverTabsDoc: ComponentDoc = {
+  id: 'discover-tabs',
+  name: 'DiscoverTabs',
+  description: 'Tab navigation for switching between News, Ideas, and Inspiration content on the Discover page.',
+  category: 'application',
+  page: 'Discover',
+  component: DiscoverTabsDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// ============================================
+// APPLICATION COMPONENTS - BRAND HUB
+// ============================================
+
+// AddResourceModal Component - Static demo
+const AddResourceModalDemo = ({ isOpen }: { isOpen: boolean }) => {
+  if (!isOpen) {
+    return (
+      <div className="p-4 bg-os-surface-dark rounded-xl border border-os-border-dark text-center">
+        <p className="text-os-text-secondary-dark text-sm">Toggle &apos;isOpen&apos; to see the modal</p>
+      </div>
+    );
+  }
+  
+  return (
+    <div className="relative bg-black/60 rounded-xl p-6 flex items-center justify-center">
+      <div className="w-full max-w-md bg-os-surface-dark rounded-xl border border-os-border-dark shadow-xl overflow-hidden">
+        <div className="flex items-center justify-between p-4 border-b border-os-border-dark">
+          <h2 className="text-lg font-semibold text-os-text-primary-dark">Add Resource</h2>
+          <button className="p-1 rounded hover:bg-os-bg-dark transition-colors">
+            <svg className="w-4 h-4 text-os-text-secondary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div className="p-4 space-y-4">
+          <div>
+            <label className="block text-sm font-medium text-os-text-primary-dark mb-1.5">Name <span className="text-red-500">*</span></label>
+            <input type="text" placeholder="e.g., Brand Assets Drive" className="w-full px-3 py-2 rounded-lg bg-os-border-dark border border-os-border-dark text-os-text-primary-dark" />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-os-text-primary-dark mb-1.5">URL <span className="text-red-500">*</span></label>
+            <input type="url" placeholder="https://example.com" className="w-full px-3 py-2 rounded-lg bg-os-border-dark border border-os-border-dark text-os-text-primary-dark" />
+          </div>
+        </div>
+        <div className="flex justify-end gap-3 p-4 border-t border-os-border-dark">
+          <button className="px-4 py-2 rounded-lg text-sm font-medium text-os-text-primary-dark bg-os-border-dark">Cancel</button>
+          <button className="px-4 py-2 rounded-lg text-sm font-medium text-white bg-brand-aperol">Add Resource</button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const AddResourceModalDoc: ComponentDoc = {
+  id: 'add-resource-modal',
+  name: 'AddResourceModal',
+  description: 'Modal for adding or editing brand resources. Includes name and URL fields with validation.',
+  category: 'application',
+  page: 'Brand Hub',
+  component: AddResourceModalDemo,
+  defaultProps: { isOpen: true },
+  controls: [
+    {
+      name: 'isOpen',
+      type: 'boolean',
+      description: 'Whether the modal is visible',
+      defaultValue: true,
+    },
+  ],
+  variants: [
+    { id: 'default', name: 'Default', props: { isOpen: true } },
+  ],
+};
+
+// ============================================
+// APPLICATION COMPONENTS - BRAIN
+// ============================================
+
+// BrainSettingsModal Component - Static demo
+const BrainSettingsModalDemo = ({ isOpen }: { isOpen: boolean }) => {
+  if (!isOpen) {
+    return (
+      <div className="p-4 bg-os-surface-dark rounded-xl border border-os-border-dark text-center">
+        <p className="text-os-text-secondary-dark text-sm">Toggle &apos;isOpen&apos; to see the modal</p>
+      </div>
+    );
+  }
+  
+  return (
+    <div className="relative bg-black/60 rounded-xl p-4 flex items-center justify-center">
+      <div className="w-full max-w-2xl bg-os-bg-dark border border-os-border-dark rounded-2xl shadow-2xl">
+        <div className="flex items-center justify-between p-6 border-b border-os-border-dark">
+          <div>
+            <h2 className="text-xl font-display font-bold text-brand-vanilla">Brain Settings</h2>
+            <p className="text-sm text-os-text-secondary-dark">Configure your brand knowledge base</p>
+          </div>
+          <button className="p-2 rounded-lg hover:bg-os-surface-dark transition-colors">
+            <svg className="w-5 h-5 text-os-text-secondary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div className="p-6">
+          <div className="grid grid-cols-3 gap-4">
+            {['Brand Guidelines', 'Writing Styles', 'Skills'].map((title, idx) => (
+              <button key={idx} className="relative p-4 rounded-xl border bg-os-surface-dark/50 border-os-border-dark hover:border-os-text-secondary-dark text-left transition-all">
+                <div className="p-2 rounded-lg bg-brand-aperol/10 w-fit mb-3">
+                  <svg className="w-5 h-5 text-brand-aperol" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+                <h3 className="font-display font-medium text-brand-vanilla mb-1">{title}</h3>
+                <p className="text-xs text-os-text-secondary-dark">Configure {title.toLowerCase()}</p>
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const BrainSettingsModalDoc: ComponentDoc = {
+  id: 'brain-settings-modal',
+  name: 'BrainSettingsModal',
+  description: 'Modal for configuring brand knowledge base settings including Brand Guidelines, Writing Styles, and Skills. Features file upload zones.',
+  category: 'application',
+  page: 'Brain',
+  component: BrainSettingsModalDemo,
+  defaultProps: { isOpen: true },
+  controls: [
+    {
+      name: 'isOpen',
+      type: 'boolean',
+      description: 'Whether the modal is visible',
+      defaultValue: true,
+    },
+  ],
+  variants: [
+    { id: 'default', name: 'Default', props: { isOpen: true } },
+  ],
+};
+
+// MarkdownCodeViewer Component
+const MarkdownCodeViewerDemo = () => {
+  const sampleMarkdown = `# Brand Guidelines
+
+## Colors
+- Primary: #FE5102 (Aperol)
+- Background: #FFFAEE (Vanilla)
+- Text: #191919 (Charcoal)
+
+## Typography
+Use **Neue Haas Grotesk** for headings.
+Use \`monospace\` for code blocks.
+
+### Example Usage
+| Element | Font | Weight |
+|---------|------|--------|
+| H1 | Display Pro | Bold |
+| Body | Text Pro | Regular |`;
+
+  return (
+    <div className="max-w-2xl">
+      <MarkdownCodeViewer
+        filename="brand-guidelines.md"
+        content={sampleMarkdown}
+      />
+    </div>
+  );
+};
+
+const MarkdownCodeViewerDoc: ComponentDoc = {
+  id: 'markdown-code-viewer',
+  name: 'MarkdownCodeViewer',
+  description: 'Code viewer for markdown files with syntax highlighting, line numbers, copy and download functionality. Scrollable with max height.',
+  category: 'application',
+  page: 'Brain',
+  component: MarkdownCodeViewerDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// ============================================
+// APPLICATION COMPONENTS - CORE/UI
+// ============================================
+
+// ModelSelector Component
+const ModelSelectorDemo = () => {
+  return (
+    <div className="bg-os-surface-dark rounded-xl p-4 flex items-center justify-center min-h-[200px]">
+      <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-os-bg-dark border border-os-border-dark">
+        <span className="text-xs font-medium text-os-text-secondary-dark">Auto</span>
+        <svg className="w-3 h-3 text-os-text-secondary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+    </div>
+  );
+};
+
+const ModelSelectorDoc: ComponentDoc = {
+  id: 'model-selector',
+  name: 'ModelSelector',
+  description: 'Dropdown selector for choosing AI models. Shows current model with description. Supports Auto mode which selects best model automatically.',
+  category: 'application',
+  page: 'Core',
+  component: ModelSelectorDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// ConnectorDropdown Component - Static demo
+const ConnectorDropdownDemo = () => {
+  return (
+    <div className="bg-os-surface-dark rounded-xl p-4 flex items-center justify-center min-h-[250px]">
+      <div className="bg-os-surface-dark border border-os-border-dark rounded-xl shadow-xl w-64 p-2">
+        <div className="px-3 py-2 border-b border-os-border-dark mb-2">
+          <span className="text-xs font-semibold text-os-text-secondary-dark uppercase tracking-wide">Connectors</span>
+        </div>
+        {[
+          { icon: '🌐', name: 'Web', desc: 'Search the internet', enabled: true },
+          { icon: '🎨', name: 'Brand', desc: 'Brand assets', enabled: true },
+          { icon: '🧠', name: 'Brain', desc: 'Knowledge base', enabled: true },
+          { icon: '🧭', name: 'Discover', desc: 'Curated content', enabled: false },
+        ].map((c, idx) => (
+          <button key={idx} className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg ${c.enabled ? 'text-brand-aperol bg-brand-aperol/10' : 'text-os-text-secondary-dark hover:bg-os-bg-dark'} transition-colors`}>
+            <span className="text-lg">{c.icon}</span>
+            <div className="flex-1 text-left">
+              <p className="text-sm font-medium">{c.name}</p>
+              <p className="text-xs text-os-text-secondary-dark">{c.desc}</p>
+            </div>
+            {c.enabled && (
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            )}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const ConnectorDropdownDoc: ComponentDoc = {
+  id: 'connector-dropdown',
+  name: 'ConnectorDropdown',
+  description: 'Dropdown for toggling data source connectors (Web, Brand, Brain, Discover). Shows enabled/disabled state with checkmarks.',
+  category: 'application',
+  page: 'Core',
+  component: ConnectorDropdownDemo,
   defaultProps: {},
   controls: [],
   variants: [],
@@ -1158,6 +2821,454 @@ const SpaceResourceCardsDoc: ComponentDoc = {
   variants: [],
 };
 
+// SpaceReferenceCard Component
+const SpaceReferenceCardDemo = () => {
+  return (
+    <div className="max-w-md">
+      <SpaceReferenceCard
+        spaceTitle="Brand Guidelines"
+        spaceSlug="brand-guidelines"
+        spaceIcon="📐"
+        discussionTitle="Color palette discussion"
+        onNavigate={() => {}}
+      />
+    </div>
+  );
+};
+
+const SpaceReferenceCardDoc: ComponentDoc = {
+  id: 'space-reference-card',
+  name: 'SpaceReferenceCard',
+  description: 'Reference card shown at top of space chat responses. Links back to the parent space with icon, title, and discussion context.',
+  category: 'application',
+  page: 'Spaces',
+  component: SpaceReferenceCardDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// DiscussionCard Component
+const DiscussionCardDemo = () => {
+  return (
+    <div className="max-w-md">
+      <DiscussionCard
+        id="demo-discussion"
+        title="Color palette deep dive"
+        preview="We explored the primary and secondary colors for the brand refresh..."
+        messageCount={12}
+        updatedAt={new Date().toISOString()}
+        spaceSlug="brand-guidelines"
+        onClick={() => {}}
+      />
+    </div>
+  );
+};
+
+const DiscussionCardDoc: ComponentDoc = {
+  id: 'discussion-card',
+  name: 'DiscussionCard',
+  description: 'Card for displaying recent discussions within a space. Shows title, preview, message count, and time since last update.',
+  category: 'application',
+  page: 'Spaces',
+  component: DiscussionCardDemo,
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
+// CreateSpaceModal Component - Static demo
+const CreateSpaceModalDemo = ({ isOpen }: { isOpen: boolean }) => {
+  if (!isOpen) {
+    return (
+      <div className="p-4 bg-os-surface-dark rounded-xl border border-os-border-dark text-center">
+        <p className="text-os-text-secondary-dark text-sm">Toggle &apos;isOpen&apos; to see the modal</p>
+      </div>
+    );
+  }
+  
+  return (
+    <div className="relative bg-black/60 rounded-xl p-6 flex items-center justify-center min-h-[400px]">
+      <div className="w-full max-w-lg bg-os-surface-dark rounded-2xl border border-os-border-dark shadow-2xl">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-os-border-dark">
+          <h2 className="text-lg font-semibold text-os-text-primary-dark">Create a Space</h2>
+          <button className="p-1 rounded-lg hover:bg-os-bg-dark transition-colors">
+            <svg className="w-5 h-5 text-os-text-secondary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div className="p-6 space-y-4">
+          <div>
+            <label className="block text-sm font-medium text-brand-vanilla mb-2">Title</label>
+            <input type="text" placeholder="e.g., Marketing Research" className="w-full px-4 py-3 rounded-xl bg-os-bg-dark border border-os-border-dark text-brand-vanilla placeholder:text-os-text-secondary-dark" />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-brand-vanilla mb-2">Description</label>
+            <textarea rows={3} placeholder="What is this space for?" className="w-full px-4 py-3 rounded-xl bg-os-bg-dark border border-os-border-dark text-brand-vanilla placeholder:text-os-text-secondary-dark resize-none" />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-brand-vanilla mb-3">Icon</label>
+            <div className="flex flex-wrap gap-2">
+              {['🚀', '💼', '📊', '🎨', '📚', '🔬', '💡', '🎯'].map((icon) => (
+                <button key={icon} className="w-10 h-10 rounded-xl bg-os-border-dark hover:bg-os-surface-dark text-2xl flex items-center justify-center">{icon}</button>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="flex items-center justify-end gap-3 px-6 py-4 border-t border-os-border-dark">
+          <button className="px-5 py-2.5 rounded-xl text-sm font-medium text-os-text-primary-dark bg-os-border-dark">Cancel</button>
+          <button className="px-5 py-2.5 rounded-xl text-sm font-medium text-white bg-brand-aperol">Create Space</button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const CreateSpaceModalDoc: ComponentDoc = {
+  id: 'create-space-modal',
+  name: 'CreateSpaceModal',
+  description: 'Modal dialog for creating new spaces. Includes title, description, and emoji icon picker with preset options.',
+  category: 'application',
+  page: 'Spaces',
+  component: CreateSpaceModalDemo,
+  defaultProps: {
+    isOpen: true,
+  },
+  controls: [
+    {
+      name: 'isOpen',
+      type: 'boolean',
+      description: 'Whether the modal is visible',
+      defaultValue: true,
+    },
+  ],
+  variants: [],
+};
+
+// AddLinksModal Component - Static demo
+const AddLinksModalDemo = ({ isOpen }: { isOpen: boolean }) => {
+  if (!isOpen) {
+    return (
+      <div className="p-4 bg-os-surface-dark rounded-xl border border-os-border-dark text-center">
+        <p className="text-os-text-secondary-dark text-sm">Toggle &apos;isOpen&apos; to see the modal</p>
+      </div>
+    );
+  }
+  
+  return (
+    <div className="relative bg-black/60 rounded-xl p-6 flex items-center justify-center min-h-[350px]">
+      <div className="w-full max-w-md bg-os-surface-dark rounded-2xl border border-os-border-dark shadow-2xl">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-os-border-dark">
+          <h2 className="text-lg font-semibold text-os-text-primary-dark">Add Links</h2>
+          <button className="p-1 rounded-lg hover:bg-os-bg-dark transition-colors">
+            <svg className="w-5 h-5 text-os-text-secondary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div className="p-6 space-y-4">
+          <div>
+            <label className="block text-sm font-medium text-os-text-primary-dark mb-1.5">URL <span className="text-red-500">*</span></label>
+            <input type="url" placeholder="https://example.com" className="w-full px-3 py-2.5 rounded-xl bg-os-border-dark border border-os-border-dark text-os-text-primary-dark placeholder:text-os-text-secondary-dark" />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-os-text-primary-dark mb-1.5">Title <span className="text-os-text-secondary-dark font-normal">(optional)</span></label>
+            <input type="text" placeholder="Link title" className="w-full px-3 py-2.5 rounded-xl bg-os-border-dark border border-os-border-dark text-os-text-primary-dark placeholder:text-os-text-secondary-dark" />
+          </div>
+          <button className="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-xl text-sm font-medium text-white bg-brand-aperol">
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" /></svg>
+            Add Link
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const AddLinksModalDoc: ComponentDoc = {
+  id: 'add-links-modal',
+  name: 'AddLinksModal',
+  description: 'Modal for adding URL links to a space. Supports URL, title, and description fields with validation and existing links display.',
+  category: 'application',
+  page: 'Spaces',
+  component: AddLinksModalDemo,
+  defaultProps: {
+    isOpen: true,
+  },
+  controls: [
+    {
+      name: 'isOpen',
+      type: 'boolean',
+      description: 'Whether the modal is visible',
+      defaultValue: true,
+    },
+  ],
+  variants: [],
+};
+
+// AddFilesModal Component - Static demo
+const AddFilesModalDemo = ({ isOpen }: { isOpen: boolean }) => {
+  if (!isOpen) {
+    return (
+      <div className="p-4 bg-os-surface-dark rounded-xl border border-os-border-dark text-center">
+        <p className="text-os-text-secondary-dark text-sm">Toggle &apos;isOpen&apos; to see the modal</p>
+      </div>
+    );
+  }
+  
+  return (
+    <div className="relative bg-black/60 rounded-xl p-6 flex items-center justify-center min-h-[300px]">
+      <div className="w-full max-w-md bg-os-surface-dark rounded-2xl border border-os-border-dark shadow-2xl">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-os-border-dark">
+          <h2 className="text-lg font-semibold text-os-text-primary-dark">Add Files</h2>
+          <button className="p-1 rounded-lg hover:bg-os-bg-dark transition-colors">
+            <svg className="w-5 h-5 text-os-text-secondary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div className="p-6">
+          <div className="border-2 border-dashed border-os-border-dark rounded-xl p-8 text-center hover:border-brand-aperol/50 transition-colors cursor-pointer">
+            <svg className="w-10 h-10 text-os-text-secondary-dark mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+            </svg>
+            <p className="text-sm text-os-text-secondary-dark mb-1">Drag and drop files here, or click to browse</p>
+            <p className="text-xs text-os-text-secondary-dark/70">PDF, images, documents up to 10MB</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const AddFilesModalDoc: ComponentDoc = {
+  id: 'add-files-modal',
+  name: 'AddFilesModal',
+  description: 'Modal for uploading files to a space. Features drag-and-drop zone, file type icons, and existing files list with remove functionality.',
+  category: 'application',
+  page: 'Spaces',
+  component: AddFilesModalDemo,
+  defaultProps: {
+    isOpen: true,
+  },
+  controls: [
+    {
+      name: 'isOpen',
+      type: 'boolean',
+      description: 'Whether the modal is visible',
+      defaultValue: true,
+    },
+  ],
+  variants: [],
+};
+
+// AddTasksModal Component - Static demo
+const AddTasksModalDemo = ({ isOpen }: { isOpen: boolean }) => {
+  if (!isOpen) {
+    return (
+      <div className="p-4 bg-os-surface-dark rounded-xl border border-os-border-dark text-center">
+        <p className="text-os-text-secondary-dark text-sm">Toggle &apos;isOpen&apos; to see the modal</p>
+      </div>
+    );
+  }
+  
+  return (
+    <div className="relative bg-black/60 rounded-xl p-6 flex items-center justify-center min-h-[350px]">
+      <div className="w-full max-w-md bg-os-surface-dark rounded-2xl border border-os-border-dark shadow-2xl">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-os-border-dark">
+          <h2 className="text-lg font-semibold text-os-text-primary-dark">Add Tasks</h2>
+          <button className="p-1 rounded-lg hover:bg-os-bg-dark transition-colors">
+            <svg className="w-5 h-5 text-os-text-secondary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div className="p-6 space-y-4">
+          <div>
+            <label className="block text-sm font-medium text-os-text-primary-dark mb-1.5">Task title</label>
+            <input type="text" placeholder="What needs to be done?" className="w-full px-3 py-2.5 rounded-xl bg-os-border-dark border border-os-border-dark text-os-text-primary-dark placeholder:text-os-text-secondary-dark" />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-os-text-primary-dark mb-1.5">Description</label>
+            <textarea rows={2} placeholder="Add details..." className="w-full px-3 py-2.5 rounded-xl bg-os-border-dark border border-os-border-dark text-os-text-primary-dark placeholder:text-os-text-secondary-dark resize-none" />
+          </div>
+          <button className="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-xl text-sm font-medium text-white bg-brand-aperol">
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" /></svg>
+            Add Task
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const AddTasksModalDoc: ComponentDoc = {
+  id: 'add-tasks-modal',
+  name: 'AddTasksModal',
+  description: 'Modal for creating tasks within a space. Includes title, description, and assignee fields with task list management.',
+  category: 'application',
+  page: 'Spaces',
+  component: AddTasksModalDemo,
+  defaultProps: {
+    isOpen: true,
+  },
+  controls: [
+    {
+      name: 'isOpen',
+      type: 'boolean',
+      description: 'Whether the modal is visible',
+      defaultValue: true,
+    },
+  ],
+  variants: [],
+};
+
+// AddInstructionsModal Component - Static demo
+const AddInstructionsModalDemo = ({ isOpen }: { isOpen: boolean }) => {
+  if (!isOpen) {
+    return (
+      <div className="p-4 bg-os-surface-dark rounded-xl border border-os-border-dark text-center">
+        <p className="text-os-text-secondary-dark text-sm">Toggle &apos;isOpen&apos; to see the modal</p>
+      </div>
+    );
+  }
+  
+  return (
+    <div className="relative bg-black/60 rounded-xl p-6 flex items-center justify-center min-h-[350px]">
+      <div className="w-full max-w-lg bg-os-surface-dark rounded-2xl border border-os-border-dark shadow-2xl">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-os-border-dark">
+          <h2 className="text-lg font-semibold text-os-text-primary-dark">Add Instructions</h2>
+          <button className="p-1 rounded-lg hover:bg-os-bg-dark transition-colors">
+            <svg className="w-5 h-5 text-os-text-secondary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div className="p-6 space-y-4">
+          <p className="text-sm text-os-text-secondary-dark">Add custom instructions for the AI when working in this space.</p>
+          <div>
+            <label className="block text-sm font-medium text-os-text-primary-dark mb-1.5">Instructions</label>
+            <textarea rows={6} placeholder="Example: Always respond in a formal tone..." className="w-full px-3 py-2.5 rounded-xl bg-os-border-dark border border-os-border-dark text-os-text-primary-dark placeholder:text-os-text-secondary-dark resize-none" />
+          </div>
+        </div>
+        <div className="flex items-center justify-end gap-3 px-6 py-4 border-t border-os-border-dark">
+          <button className="px-4 py-2 rounded-xl text-sm font-medium text-os-text-primary-dark bg-os-border-dark">Cancel</button>
+          <button className="px-4 py-2 rounded-xl text-sm font-medium text-white bg-brand-aperol">Save</button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const AddInstructionsModalDoc: ComponentDoc = {
+  id: 'add-instructions-modal',
+  name: 'AddInstructionsModal',
+  description: 'Modal for adding AI instructions to a space. Instructions are applied to all conversations within the space.',
+  category: 'application',
+  page: 'Spaces',
+  component: AddInstructionsModalDemo,
+  defaultProps: {
+    isOpen: true,
+  },
+  controls: [
+    {
+      name: 'isOpen',
+      type: 'boolean',
+      description: 'Whether the modal is visible',
+      defaultValue: true,
+    },
+  ],
+  variants: [],
+};
+
+// SpaceArticlesDrawer Component - Static demo
+const SpaceArticlesDrawerDemo = ({ isOpen }: { isOpen: boolean }) => {
+  if (!isOpen) {
+    return (
+      <div className="p-4 bg-os-surface-dark rounded-xl border border-os-border-dark text-center">
+        <p className="text-os-text-secondary-dark text-sm">Toggle &apos;isOpen&apos; to see the drawer</p>
+      </div>
+    );
+  }
+  
+  return (
+    <div className="relative bg-os-bg-dark rounded-xl overflow-hidden flex min-h-[400px]">
+      <div className="flex-1 bg-black/40 flex items-center justify-center">
+        <p className="text-os-text-secondary-dark/50 text-sm">Page content</p>
+      </div>
+      <div className="w-[320px] bg-os-bg-darker border-l border-os-border-dark flex flex-col">
+        <div className="flex items-center justify-between px-5 h-12 border-b border-os-border-dark">
+          <div className="flex items-center gap-2">
+            <svg className="w-4 h-4 text-brand-aperol" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+            </svg>
+            <span className="font-display font-semibold text-brand-vanilla">Add Articles</span>
+            <span className="px-2 py-0.5 rounded-full bg-os-surface-dark text-xs text-os-text-secondary-dark">12</span>
+          </div>
+        </div>
+        <div className="px-5 py-3 border-b border-os-border-dark/50">
+          <div className="relative">
+            <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-os-text-secondary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+            <input type="text" placeholder="Search articles..." className="w-full pl-10 pr-4 py-2 text-sm bg-os-surface-dark border border-os-border-dark rounded-lg text-os-text-primary-dark placeholder:text-os-text-secondary-dark" />
+          </div>
+        </div>
+        <div className="flex-1 overflow-y-auto">
+          {['AI Trends 2024', 'Design System Best Practices', 'Brand Strategy'].map((title, idx) => (
+            <div key={idx} className="px-5 py-4 border-b border-os-border-dark/50 hover:bg-os-surface-dark/30 transition-colors">
+              <h3 className="text-sm font-medium text-brand-vanilla mb-1">{title}</h3>
+              <p className="text-xs text-os-text-secondary-dark">Dec {idx + 1} • 5 sources</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const SpaceArticlesDrawerDoc: ComponentDoc = {
+  id: 'space-articles-drawer',
+  name: 'SpaceArticlesDrawer',
+  description: 'Slide-out drawer for browsing and adding Discover articles to a space. Features search, sorting, filtering by category, and add/remove functionality.',
+  category: 'application',
+  page: 'Spaces',
+  component: SpaceArticlesDrawerDemo,
+  defaultProps: {
+    isOpen: true,
+  },
+  controls: [
+    {
+      name: 'isOpen',
+      type: 'boolean',
+      description: 'Whether the drawer is visible',
+      defaultValue: true,
+    },
+  ],
+  variants: [],
+};
+
+// SpaceChatInput Component
+const SpaceChatInputDoc: ComponentDoc = {
+  id: 'space-chat-input',
+  name: 'SpaceChatInput',
+  description: 'Full-featured chat input for space pages. Matches homepage style with search/research toggle, model selector, connectors, attachments, and voice input.',
+  category: 'application',
+  page: 'Spaces',
+  component: () => (
+    <div className="relative bg-os-bg-dark rounded-xl p-4 max-w-3xl">
+      <div className="text-center text-os-text-secondary-dark text-sm p-8 border border-dashed border-os-border-dark rounded-xl">
+        <p>SpaceChatInput uses fixed positioning.</p>
+        <p className="text-xs mt-2">View in the Spaces page for the full experience.</p>
+      </div>
+    </div>
+  ),
+  defaultProps: {},
+  controls: [],
+  variants: [],
+};
+
 // ============================================
 // REGISTER ALL COMPONENTS
 // ============================================
@@ -1188,21 +3299,72 @@ export function initializeRegistry() {
     Chat: [
       ChatTabNavDoc,
       RelatedQuestionsDoc,
+      ResponseActionsDoc,
+      InlineCitationDoc,
+      OverflowMenuDoc,
+      BrandResourceCardDoc,
+      SourcePopoverDoc,
+      BrandSourcePopoverDoc,
+      AttachmentPreviewDoc,
+      ShareModalDoc,
+      ShortcutModalDoc,
+      LinksViewDoc,
+      ImagesViewDoc,
+      ChatHeaderDoc,
+      SourcesDrawerDoc,
+      AnswerViewDoc,
+      ChatContentDoc,
+      ChatResponseDoc,
+      FollowUpInputDoc,
     ],
     Discover: [
+      // Main components
       NewsCardDoc,
       TieredNewsCardDoc,
       IdeaCardDoc,
       MarketWidgetDoc,
       WeatherWidgetDoc,
+      IdeaAccordionDoc,
+      InspirationCardDoc,
+      SettingsDrawerDoc,
+      DiscoverHeaderDoc,
+      DiscoverTabsDoc,
+      // Article components
+      ArticleHeaderDoc,
+      ArticleSidebarDoc,
+      ActionSidebarDoc,
+      InlineSourceBadgeDoc,
+      RelatedImagesDoc,
+      DiscoverMoreDoc,
     ],
     Finance: [
       StockStatsDoc,
       CompanyProfileDoc,
+      LatestNewsDoc,
     ],
     Spaces: [
       SpaceCardDoc,
       SpaceResourceCardsDoc,
+      SpaceReferenceCardDoc,
+      DiscussionCardDoc,
+      SpaceChatInputDoc,
+      CreateSpaceModalDoc,
+      AddLinksModalDoc,
+      AddFilesModalDoc,
+      AddTasksModalDoc,
+      AddInstructionsModalDoc,
+      SpaceArticlesDrawerDoc,
+    ],
+    'Brand Hub': [
+      AddResourceModalDoc,
+    ],
+    Brain: [
+      BrainSettingsModalDoc,
+      MarkdownCodeViewerDoc,
+    ],
+    Core: [
+      ModelSelectorDoc,
+      ConnectorDropdownDoc,
     ],
   };
 }

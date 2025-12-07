@@ -286,16 +286,38 @@ export function SearchResearchToggle({
 export function SearchResearchSuggestions({
   mode,
   onQueryClick,
+  suggestions: externalSuggestions,
+  inputValue = '',
+  isLoading = false,
 }: {
   mode: 'search' | 'research';
   onQueryClick?: (query: string, submit?: boolean) => void;
+  suggestions?: string[];
+  inputValue?: string;
+  isLoading?: boolean;
 }) {
   const CurrentIcon = mode === 'search' ? Search : Orbit;
-  
-  // Use immediate fallback suggestions - no loading, instant display
-  const suggestions = mode === 'search' 
-    ? FALLBACK_SEARCH_SUGGESTIONS 
+
+  // Use external suggestions if provided, otherwise fallback
+  const fallbackSuggestions = mode === 'search'
+    ? FALLBACK_SEARCH_SUGGESTIONS
     : FALLBACK_RESEARCH_SUGGESTIONS;
+
+  const suggestions = externalSuggestions && externalSuggestions.length > 0
+    ? externalSuggestions
+    : fallbackSuggestions;
+
+  // Filter suggestions based on input if we're using fallbacks
+  const filteredSuggestions = inputValue && !externalSuggestions?.length
+    ? suggestions.filter(s =>
+        s.toLowerCase().includes(inputValue.toLowerCase())
+      )
+    : suggestions;
+
+  // Show all suggestions if no matches found
+  const displaySuggestions = filteredSuggestions.length > 0
+    ? filteredSuggestions
+    : suggestions;
 
   return (
     <motion.div
@@ -305,27 +327,36 @@ export function SearchResearchSuggestions({
       animate="visible"
       exit="exit"
     >
-      {/* Suggestions List - immediate display */}
-      <div className="space-y-0.5">
-        {suggestions.map((suggestion, index) => (
-          <motion.button
-            key={`${mode}-${index}`}
-            variants={suggestionItem}
-            type="button"
-            onClick={() => onQueryClick?.(suggestion, true)}
-            whileHover={{ x: 4, backgroundColor: 'rgba(255, 255, 255, 0.05)' }}
-            whileTap={{ scale: 0.98 }}
-            className="w-full text-left px-2 py-2 rounded-lg transition-colors group"
-          >
-            <div className="flex items-start space-x-3">
-              <CurrentIcon className="w-4 h-4 text-os-text-secondary-dark group-hover:text-brand-aperol mt-0.5 flex-shrink-0" />
-              <span className="text-sm text-os-text-primary-dark group-hover:text-brand-aperol">
-                {suggestion}
-              </span>
-            </div>
-          </motion.button>
-        ))}
-      </div>
+      {/* Loading indicator */}
+      {isLoading && (
+        <div className="flex items-center justify-center py-2">
+          <div className="w-4 h-4 border-2 border-brand-aperol border-t-transparent rounded-full animate-spin" />
+        </div>
+      )}
+
+      {/* Suggestions List */}
+      {!isLoading && (
+        <div className="space-y-0.5">
+          {displaySuggestions.map((suggestion, index) => (
+            <motion.button
+              key={`${mode}-${suggestion}-${index}`}
+              variants={suggestionItem}
+              type="button"
+              onClick={() => onQueryClick?.(suggestion, true)}
+              whileHover={{ x: 4, backgroundColor: 'rgba(255, 255, 255, 0.05)' }}
+              whileTap={{ scale: 0.98 }}
+              className="w-full text-left px-2 py-2 rounded-lg transition-colors group"
+            >
+              <div className="flex items-start space-x-3">
+                <CurrentIcon className="w-4 h-4 text-os-text-secondary-dark group-hover:text-brand-aperol mt-0.5 flex-shrink-0" />
+                <span className="text-sm text-os-text-primary-dark group-hover:text-brand-aperol">
+                  {suggestion}
+                </span>
+              </div>
+            </motion.button>
+          ))}
+        </div>
+      )}
     </motion.div>
   );
 }

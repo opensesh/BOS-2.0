@@ -21,12 +21,24 @@ export function CompanyProfile({ profile, loading }: CompanyProfileProps) {
           <div className="h-3 w-5/6 bg-os-surface-dark rounded" />
           <div className="h-3 w-4/6 bg-os-surface-dark rounded" />
         </div>
+        <div className="grid grid-cols-2 gap-3">
+          {[1, 2, 3, 4].map((i) => (
+            <div key={i} className="space-y-1">
+              <div className="h-2 w-12 bg-os-surface-dark rounded" />
+              <div className="h-3 w-20 bg-os-surface-dark rounded" />
+            </div>
+          ))}
+        </div>
       </div>
     );
   }
 
   if (!profile) {
-    return null;
+    return (
+      <div className="text-sm text-os-text-secondary-dark">
+        <p>Company profile information is not available for this symbol.</p>
+      </div>
+    );
   }
 
   const details = [
@@ -137,5 +149,6 @@ export function CompanyProfileSidebar({ profile }: { profile: Profile | null }) 
     </div>
   );
 }
+
 
 

@@ -2,8 +2,7 @@
 
 import React, { useState, useMemo } from 'react';
 import { ChevronUp, ChevronDown, ChevronsUpDown, ExternalLink } from 'lucide-react';
-import type { InspoResource, NormalizedResource } from '@/lib/data/inspo';
-import { normalizeResource } from '@/lib/data/inspo';
+import type { InspoResource } from '@/lib/data/inspo';
 
 interface InspoTableProps {
   resources: InspoResource[];
@@ -12,11 +11,7 @@ interface InspoTableProps {
 type SortField = 'name' | 'category' | 'section' | 'pricing';
 type SortDirection = 'asc' | 'desc' | null;
 
-export function InspoTable({ resources: rawResources }: InspoTableProps) {
-  // Normalize resources to handle PascalCase column names from Supabase
-  const resources: NormalizedResource[] = useMemo(() => 
-    rawResources.map(normalizeResource), [rawResources]);
-
+export function InspoTable({ resources }: InspoTableProps) {
   // Filter state
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
   const [sectionFilter, setSectionFilter] = useState<string>('all');

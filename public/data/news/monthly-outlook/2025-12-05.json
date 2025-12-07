@@ -1,7 +1,21 @@
 {
   "type": "monthly-outlook",
-  "date": "2025-12-05T00:21:53.658Z",
+  "date": "2025-12-05T16:19:34.374Z",
   "updates": [
+    {
+      "title": "Keeping creativity flowing when times are tough",
+      "description": "Building a culture where everyone feels safe and encouraged to contribute is no small task. We are always interested in the ways teams use Figma to do just that—brainstorm, ideate, team-build—and it’s one of the many reasons we launched FigJam. Here, Senior Illustrator Alek Mackie shares how he stays creative and productive.",
+      "timestamp": "07/15/2021, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/keeping-creativity-flowing/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/keeping-creativity-flowing/",
+      "topicCategory": "general-tech"
+    },
     {
       "title": "Behind the Plugins: Yitong Zhang, Product Designer @ Coinbase",
       "description": "In today’s segment of “Behind the Plugins,” I’m sitting down with Yitong Zhang, Product Designer at Coinbase. Yitong joined Coinbase’s design team of 16 to help the digital currency platform create an open financial system for the world. Embarking on this big mission meant that Coinbase’s teams also had to open up their design process to be more inclusive of their partners. Find out what he is building with the Figma API and get to know the creator behind the plugin. This article is part 3 of a ",
@@ -17,46 +31,32 @@
       "topicCategory": "general-tech"
     },
     {
-      "title": "EU investigating Meta over policy change that bans rival AI chatbots from WhatsApp",
-      "description": "The European Commission is launching an antitrust investigation into Meta's move to ban other AI companies from using WhatsApp's business tools to offer their own AI chatbots to users.",
-      "timestamp": "12/04/2025, 2:02 PM",
+      "title": "How we shaped the visual identity for Config 2025",
+      "description": "From giant inflatable glyphs to welcoming soundscapes, Figma’s Brand Studio designed an immersive conference that celebrated the spirit of makership at every turn.",
+      "timestamp": "07/03/2025, 12:00 AM",
       "sources": [
         {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2025/12/04/eu-investigating-meta-over-policy-change-that-bans-rival-ai-chatbots-from-whatsapp/"
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/how-we-shaped-the-visual-identity-for-config-2025/"
         }
       ],
       "tier": "quick",
-      "sourceUrl": "https://techcrunch.com/2025/12/04/eu-investigating-meta-over-policy-change-that-bans-rival-ai-chatbots-from-whatsapp/",
+      "sourceUrl": "https://www.figma.com/blog/how-we-shaped-the-visual-identity-for-config-2025/",
+      "topicCategory": "branding"
+    },
+    {
+      "title": "How to plug in and power up your designer-developer handoff with Figma and Jira",
+      "description": "Product development teams from Ingka Group, One.com, and Condé Nast share the tools and tips for achieving that elusive design-development flow state.",
+      "timestamp": "02/07/2024, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/designer-developer-handoff-with-figma-and-jira/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/designer-developer-handoff-with-figma-and-jira/",
       "topicCategory": "general-tech"
-    },
-    {
-      "title": "Nexus isn’t going all in on AI, keeping half of its new $700M fund for India startups",
-      "description": "Nexus Venture Partners manages $3.2 billion in capital across its funds and has invested in more than 130 companies over the years.",
-      "timestamp": "12/04/2025, 11:00 AM",
-      "sources": [
-        {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2025/12/04/nexus-isnt-going-all-in-on-ai-keeping-its-new-700m-fund-balanced-with-india-bets/"
-        }
-      ],
-      "tier": "quick",
-      "sourceUrl": "https://techcrunch.com/2025/12/04/nexus-isnt-going-all-in-on-ai-keeping-its-new-700m-fund-balanced-with-india-bets/",
-      "topicCategory": "startup-business"
-    },
-    {
-      "title": "Micro1, a Scale AI competitor, touts crossing $100M ARR",
-      "description": "Micro1 started the year with roughly $7 million ARR. Now, it claims to have surpassed $100 million in ARR, double what it reported in September.",
-      "timestamp": "12/04/2025, 10:45 PM",
-      "sources": [
-        {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2025/12/04/micro1-a-scale-ai-competitor-touts-crossing-100m-arr/"
-        }
-      ],
-      "tier": "quick",
-      "sourceUrl": "https://techcrunch.com/2025/12/04/micro1-a-scale-ai-competitor-touts-crossing-100m-arr/",
-      "topicCategory": "ai-creative"
     }
   ]
 }

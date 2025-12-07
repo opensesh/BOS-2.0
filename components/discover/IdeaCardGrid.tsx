@@ -35,57 +35,131 @@ function getCategoryInfo(category: IdeaCardData['category']) {
   }
 }
 
-// Get format label based on title keywords
-function getFormatLabel(title: string, category: IdeaCardData['category']): string {
-  const lowerTitle = title.toLowerCase();
+// Get display label from format/subcategory
+function getFormatLabel(item: IdeaCardData): string {
+  // Use subcategory if available, otherwise format, otherwise fallback
+  const formatValue = item.subcategory || item.format;
   
-  if (lowerTitle.includes('carousel')) return 'Carousel';
-  if (lowerTitle.includes('reel')) return 'Reel';
-  if (lowerTitle.includes('story')) return 'Story';
-  if (lowerTitle.includes('thread')) return 'Thread';
-  if (lowerTitle.includes('video')) return 'Video';
-  if (lowerTitle.includes('tutorial')) return 'Tutorial';
-  if (lowerTitle.includes('guide')) return 'Guide';
-  if (lowerTitle.includes('listicle')) return 'Listicle';
+  if (!formatValue) {
+    const defaults: Record<string, string> = {
+      'short-form': 'Reel',
+      'long-form': 'Video',
+      'blog': 'Article',
+    };
+    return defaults[item.category] || 'Content';
+  }
   
-  const defaults: Record<string, string> = {
-    'short-form': 'Reel',
-    'long-form': 'Video',
-    'blog': 'Article',
+  // Map format values to display labels
+  const formatLabels: Record<string, string> = {
+    'reel': 'Reel',
+    'carousel': 'Carousel',
+    'story': 'Story',
+    'quick-image': 'Quick Image',
+    'video': 'Video',
+    'tutorial': 'Tutorial',
+    'livestream': 'Livestream',
+    'documentary': 'Documentary',
+    'article': 'Article',
+    'listicle': 'Listicle',
+    'case-study': 'Case Study',
+    'case-study-deep-dive': 'Case Study',
+    'guide': 'Guide',
+    'thread': 'Thread',
+    'instructional': 'Instructional',
+    'leadership': 'Leadership',
+    'framework': 'Framework',
+    'thought-leadership': 'Thought Leadership',
+    'visionary': 'Visionary',
+    'explanatory': 'Explanatory',
   };
-  return defaults[category] || 'Content';
+  
+  return formatLabels[formatValue] || formatValue.charAt(0).toUpperCase() + formatValue.slice(1);
 }
 
 // Get format-specific icon for badge overlay
-function getFormatIcon(formatLabel: string) {
-  switch (formatLabel.toLowerCase()) {
+function getFormatIcon(item: IdeaCardData) {
+  const formatValue = item.subcategory || item.format || '';
+  
+  switch (formatValue.toLowerCase()) {
+    // Short-form formats
     case 'reel':
-    case 'video':
-    case 'tutorial':
       return Play;
     case 'carousel':
       return Square;
     case 'story':
       return ImageIcon;
+    case 'quick-image':
+      return ImageIcon;
+    // Long-form formats
+    case 'video':
+    case 'tutorial':
+    case 'livestream':
+    case 'documentary':
+    case 'instructional':
+    case 'leadership':
+    case 'framework':
+    case 'thought-leadership':
+      return Play;
+    // Blog formats
     case 'article':
     case 'guide':
     case 'listicle':
+    case 'case-study':
+    case 'case-study-deep-dive':
+    case 'thread':
+    case 'visionary':
+    case 'explanatory':
       return BookOpen;
     default:
       return Video;
   }
 }
 
+// Map subcategory to specific texture index for visual consistency
+function getTextureForSubcategory(item: IdeaCardData): number {
+  const formatValue = item.subcategory || item.format || '';
+  
+  // Map each subcategory to a specific texture (0-12)
+  const textureMap: Record<string, number> = {
+    // Short-form (warm tones)
+    'reel': 1,
+    'carousel': 4,
+    'story': 7,
+    'quick-image': 10,
+    // Long-form (mid tones)
+    'video': 2,
+    'tutorial': 5,
+    'livestream': 8,
+    'documentary': 11,
+    'instructional': 2,
+    'leadership': 5,
+    'framework': 8,
+    'thought-leadership': 11,
+    // Blog (cool tones)
+    'article': 3,
+    'listicle': 6,
+    'case-study': 9,
+    'case-study-deep-dive': 9,
+    'guide': 12,
+    'thread': 0,
+    'visionary': 3,
+    'explanatory': 6,
+  };
+  
+  // Use mapped texture or fall back to assigned texture or derive from title
+  return textureMap[formatValue.toLowerCase()] ?? item.textureIndex ?? getTextureIndexFromString(item.title);
+}
+
 // IdeaCard Component - uses sonic line textures
 function IdeaCard({ item }: { item: IdeaCardData }) {
   const slug = item.slug || generateSlug(item.title);
   const categoryInfo = getCategoryInfo(item.category);
-  const formatLabel = getFormatLabel(item.title, item.category);
+  const formatLabel = getFormatLabel(item);
   const CategoryIcon = categoryInfo.icon;
-  const FormatIcon = getFormatIcon(formatLabel);
+  const FormatIcon = getFormatIcon(item);
   
-  // Get texture - use pre-assigned index or derive from title
-  const textureIndex = item.textureIndex ?? getTextureIndexFromString(item.title);
+  // Get texture mapped to subcategory for visual consistency
+  const textureIndex = getTextureForSubcategory(item);
   const textureUrl = getTextureByIndex(textureIndex);
 
   // Clean title - remove format prefix if present

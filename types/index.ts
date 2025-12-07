@@ -253,6 +253,9 @@ export interface IdeaCardData {
   // Content format (e.g., 'reel', 'carousel', 'video', 'article')
   format?: ContentFormat;
   
+  // Content subcategory defines the approach/style
+  subcategory?: ContentSubcategory;
+  
   // Rich creative brief fields (optional for backwards compatibility)
   hooks?: string[];                    // 2-3 attention-grabbing hook ideas
   platformTips?: PlatformTip[];        // Platform-specific execution guidance
@@ -263,6 +266,43 @@ export interface IdeaCardData {
   // Visual design fields (pre-generated during content creation)
   pexelsImageUrl?: string;             // Pexels image URL for card thumbnail
   textureIndex?: number;               // Index 1-13 for sonic line background texture
+}
+
+/**
+ * Inspiration card data - similar to IdeaCardData but for inspiration content
+ * Used for generated content briefs with rich creative direction
+ */
+export interface InspirationCardData {
+  id: string;
+  slug: string;
+  title: string;
+  description: string;
+  sources: Array<{ id?: string; name: string; url: string }>;
+  publishedAt?: string;
+  imageUrl?: string;
+  category: 'short-form' | 'long-form' | 'blog';
+  starred?: boolean;
+  
+  // Content format and subcategory
+  format?: ContentFormat;
+  subcategory?: ContentSubcategory;
+  
+  // Rich creative brief fields
+  hooks?: string[];
+  platformTips?: Array<{
+    platform: string;
+    tips: string[];
+  }>;
+  visualDirection?: {
+    rating: number;
+    description: string;
+  };
+  exampleOutline?: string[];
+  hashtags?: string;
+  
+  // Visual design fields
+  pexelsImageUrl?: string;
+  textureIndex?: number;
 }
 
 export interface WeatherData {
@@ -349,7 +389,7 @@ export interface IdeaItem {
   title: string;
   description: string;
   starred?: boolean;
-  sources: Array<{ name: string; url: string }>;
+  sources: Array<{ id?: string; name: string; url: string }>;
   
   // Content format (e.g., 'reel', 'carousel', 'video', 'article')
   format?: ContentFormat;
