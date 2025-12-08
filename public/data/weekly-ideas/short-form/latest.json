@@ -1,383 +1,330 @@
 {
   "type": "short-form",
-  "date": "2025-12-08T16:21:11.914Z",
+  "date": "2025-12-08T16:28:30.667Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "&#8216;ONE RULE&#8217;: Trump says he&#8217;ll sign an executive order blocking state AI laws despite bipartisan pushback",
+      "description": "“I will be doing a ONE RULE Executive Order this week,” Trump posted on social media. “You can’t expect a company to get 50 Approvals every time they want to do something.”",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/products/page/3"
-        }
-      ],
-      "format": "reel",
-      "subcategory": "reel",
-      "hooks": [
-        "Design templates that flex, don't break 🔥",
-        "Unlock Figma's secret marketing template hack",
-        "Brand templates: Your design superpower revealed"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick jump cuts between template examples",
-            "Add text overlay for each key tip",
-            "Include screen recording of Figma workflow"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "Each slide focuses on one template design principle",
-            "Use high-contrast graphics to highlight tips",
-            "Include visual before/after examples"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with dramatic problem statement",
-            "Use cursor tracking to show Figma techniques",
-            "End with clear, actionable takeaway"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Add professional context about template design",
-            "Include data/stats about template efficiency",
-            "Use more technical language and insights"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 8,
-        "description": "High-energy, dynamic motion graphics. Neon-tech color palette with deep blues and electric accent colors. Dynamic typography with sliding/morphing text. Quick, rhythmic transitions showing template transformations. Minimal, clean Figma interface overlays with dramatic zoom/highlight effects."
-      },
-      "exampleOutline": [
-        "Hook: Provocative template design challenge",
-        "Problem: Rigid vs. flexible brand guidelines",
-        "8 rapid-fire template design tips",
-        "Live Figma workflow demonstration",
-        "Call-to-experiment and follow for more"
-      ],
-      "hashtags": "#FigmaDesign #BrandTemplates #AIDesign #CreativeWorkflow #DesignTips #ProductivityHacks #MarketingDesign #TemplateDesign #UIUXTips #CreativeTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8014542/pexels-photo-8014542.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 11
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Forum",
-          "url": "https://forum.figma.com/product-updates-3/new-features-in-figma-buzz-46631"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/three-new-features-to-help-build-brand-momentum-with-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/figma-buzz"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/newsroom/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/shorts/Sf_5xBPH1TM"
-        }
-      ],
-      "format": "quick-image",
-      "subcategory": "quick-image",
-      "hooks": [
-        "Design Faster: Figma Buzz's Game-Changing Features",
-        "3 Hacks That Will Transform Your Design Workflow",
-        "Figma Just Leveled Up Your Creative Toolkit"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick screen recordings of Figma Buzz features",
-            "Create fast-paced transitions between feature demonstrations",
-            "Add dynamic text overlays highlighting key benefits"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Attention-grabbing visual of all 3 features",
-            "Use minimalist design with bold color contrasts",
-            "Each slide focuses on one feature with clear icon/visual"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected visual metaphor for design speed",
-            "Use quick cuts between feature demonstrations",
-            "Include subtle motion graphics to highlight key points"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame features as professional productivity enhancers",
-            "Use clean, corporate-friendly design aesthetic",
-            "Include brief text explanation of each feature's business impact"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-energy, tech-forward visual style with neon accents, dynamic geometric shapes, transparent overlays. Use futuristic sans-serif typography, subtle glitch effects. Color palette: electric blue, deep purple, bright cyan. Incorporate abstract design elements that suggest speed and innovation."
-      },
-      "exampleOutline": [
-        "Section 1: Bold, Provocative Hook",
-        "Section 2: Current Design Workflow Pain Points",
-        "Section 3: Figma Buzz Features Breakdown",
-        "Section 4: Potential Workflow Transformation",
-        "Section 5: Call-to-Explore/Learn More"
-      ],
-      "hashtags": "#FigmaBuzz #DesignTips #AIDesign #CreativeTech #ProductivityHacks #DesignWorkflow #UXDesign #CreativeTools #TechInnovation #DesignCommunity",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8014542/pexels-photo-8014542.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 5
-    },
-    {
-      "title": "How to streamline your design system workflow in Figma",
-      "description": "If you’ve ever stared down a blank Figma file while building a new design system, never fear: These new features and plugins will turn that mountain of work into an afternoon task.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/how-to-streamline-your-design-system-workflow-in-figma/"
-        },
-        {
-          "name": "Figmentor",
-          "url": "https://figmentor.io/blog/hidden-figma-features-for-designers-2025"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/schema-2025-design-systems-recap/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=N2NwII5mAU4&vl=en"
-        },
-        {
-          "name": "Community",
-          "url": "https://community.weweb.io/t/optimizing-design-system-figma-weweb/20404"
-        },
-        {
-          "name": "Designsystemscollective",
-          "url": "https://www.designsystemscollective.com/design-system-trends-that-are-actually-worth-following-in-2025-44a405348687"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/08/one-rule-trump-says-hell-sign-an-executive-order-blocking-state-ai-laws-despite-bipartisan-pushback/"
         }
       ],
       "format": "carousel",
       "subcategory": "carousel",
       "hooks": [
-        "Design Systems: Your Figma Workflow Superpower 🚀",
-        "Crush Figma Design Systems in Half the Time",
-        "Secret Figma Tricks Pros Don't Want You to Know"
+        "AI Laws: Trump's One-Rule Revolution Incoming 🚨",
+        "The Executive Order Rewriting AI Regulation",
+        "Trump vs. State AI Laws: Game Changer?"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick screen recordings of Figma workflow",
-            "Create dynamic transitions between system building steps",
-            "Add text overlay explaining key moments"
+            "Use dynamic text animations between slides",
+            "Create quick cuts highlighting key policy points",
+            "Include subtle motion graphics to maintain engagement"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide must have bold, attention-grabbing visual",
-            "Use consistent color palette across all slides",
-            "Make each slide a self-contained micro-lesson"
+            "Use first slide as provocative visual headline",
+            "Create data-driven infographic style progression",
+            "Ensure each slide tells a micro-story"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Condense carousel content into rapid-fire tutorial",
-            "Use more technical language and detailed screenshare",
-            "Add technical annotations and callouts"
+            "Extract most controversial carousel slide for short",
+            "Add voiceover explaining complex policy nuances",
+            "Use quick visual transitions"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Add more context about professional impact",
-            "Include data/statistics about design system efficiency",
-            "Use more formal, thought leadership tone"
+            "Add more technical policy language",
+            "Include professional citation references",
+            "Use more formal design aesthetic"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast tech-inspired aesthetic with neon accent colors, dynamic geometric overlays, clean sans-serif typography, subtle motion graphics showing workflow transitions, minimalist isometric design elements with a futuristic color palette of deep blues, electric teals, and bright coral highlights"
+        "description": "High-contrast futuristic color palette (deep blues, electric oranges), geometric typography, abstract tech-policy iconography, layered translucent graphic elements suggesting complexity and interconnectedness, minimalist but provocative visual design"
       },
       "exampleOutline": [
-        "Slide 1: Bold hook with provocative design system challenge",
-        "Slide 2: Current design system pain points",
-        "Slide 3-5: Top Figma workflow optimization techniques",
-        "Slide 6: Key plugin recommendations",
-        "Slide 7: Call-to-action and next steps"
+        "Slide 1: Bold headline + provocative visual",
+        "Slide 2: Current AI regulation landscape",
+        "Slide 3: Trump's 'One Rule' executive order overview",
+        "Slide 4: Potential policy implications",
+        "Slide 5: Call-to-action/further exploration"
       ],
-      "hashtags": "#FigmaDesign #DesignSystems #ProductDesign #AIDesign #CreativeTech #DesignWorkflow #UXDesign #DesignTools #CreativeStrategy #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 1
-    },
-    {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
-        }
-      ],
-      "format": "carousel",
-      "subcategory": "carousel",
-      "hooks": [
-        "How Figma redesigned typography from scratch",
-        "The secret behind Figma's brand new font",
-        "Inside Figma's radical type transformation"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick transitions between font examples",
-            "Include animated typography reveals",
-            "Keep visual pace fast and dynamic"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must have bold visual hook",
-            "Use high-contrast font comparisons",
-            "Include behind-the-scenes design process slides"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Compress narrative into 60-second type story",
-            "Use kinetic typography animations",
-            "Highlight most dramatic design transformations"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Add more technical design context",
-            "Include professional design rationale",
-            "Emphasize strategic brand evolution"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 8,
-        "description": "Bold, experimental typography-focused design. High-contrast color palette with geometric, modular compositions. Dynamic motion graphics showing font evolution. Clean, technical aesthetic with unexpected color interruptions. Minimal but striking visual narrative."
-      },
-      "exampleOutline": [
-        "Slide 1: Provocative hook & visual teaser",
-        "Slide 2: Why Figma needed a new typeface",
-        "Slide 3: Design challenges & constraints",
-        "Slide 4: Key visual transformation moments",
-        "Slide 5: Final reveal & brand impact"
-      ],
-      "hashtags": "#DesignInnovation #Typography #FigmaDesign #BrandIdentity #CreativeProcess #AIDesign #ProductDesign #GraphicDesign #BrandEvolution #CreativeTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "hashtags": "#AIPolicy #TrumpExecutiveOrder #AIRegulation #TechPolicy #AILaws #FutureOfTech #PolicyInnovation #AIEthics #TechGovernance #AIFreedom",
       "textureIndex": 4
     },
     {
-      "title": "OpenAI boasts enterprise win days after internal ‘code red’ on Google threat",
-      "description": "ChatGPT Enterprise usage grew 8x year-over-year as workers report saving an hour daily, but OpenAI faces competitive pressure from Anthropic and questions about cost sustainability.",
+      "title": "Paramount goes to war with Netflix for Warner Bros. Discovery with hostile $108.4B bid",
+      "description": "Paramount Skydance on Monday launched a hostile, $108.4 billion bid to buy Warner Bros. Discovery, days after Warner Bros. agreed to be acquired by Netflix for $82.7 billion.",
       "starred": false,
       "sources": [
         {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2025/12/08/openai-boasts-enterprise-win-days-after-internal-code-red-on-google-threat/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/08/paramount-goes-to-war-with-netflix-for-warner-bros-discovery-with-hostile-108-4b-bid/"
         }
       ],
       "format": "story",
       "subcategory": "story",
       "hooks": [
-        "AI's Enterprise Explosion: 8x Growth in One Year 🚀",
-        "ChatGPT's Secret Weapon: Saving Workers One Hour Daily",
-        "Code Red at OpenAI: The Enterprise AI Takeover"
+        "Media Titans Clash: $108B Battleground Revealed!",
+        "Hollywood's Biggest Power Move Just Dropped 🔥",
+        "Billion-Dollar Showdown: Paramount vs. Netflix Exposed"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick-cut transitions between key stats",
-            "Incorporate dynamic motion graphics for data visualization",
-            "Include subtle screen recordings of enterprise AI in action"
+            "Use dynamic motion graphics to visualize company logos/battle",
+            "Create quick transition effects between key financial numbers",
+            "Include animated percentage/dollar value overlays for engagement"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "Each slide focuses on one key data point or insight",
-            "Use consistent color-coded design language across slides",
-            "Include a provocative question or stat on first slide to drive engagement"
+            "Design each slide with a clear hierarchy of information",
+            "Use consistent color coding for Paramount/Netflix/Warner Bros",
+            "Include one key statistic or quote per slide for digestibility"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Open with a pattern interrupt statistic",
-            "Use voiceover with dynamic text animations",
-            "Include a clear value proposition within first 3 seconds"
+            "Start with a provocative question about media industry disruption",
+            "Use fast-paced editing to maintain viewer attention",
+            "Include text overlays highlighting key financial figures"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Add more detailed context and professional insights",
-            "Include expert quote or commentary",
-            "Use more formal, data-driven visual approach"
+            "Emphasize strategic implications over sensationalism",
+            "Include expert commentary or potential industry impact",
+            "Use more professional, data-driven visual approach"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast tech-futuristic palette with electric blues and deep purples. Geometric, angular compositions suggesting digital transformation. Typography: sharp, sans-serif with occasional glitch effects. Incorporate abstract data visualization elements with fluid motion graphics. Aesthetic references: Cyberpunk design, modern tech infographics, minimal futurism."
+        "description": "High-contrast tech-inspired aesthetic with metallic silver/electric blue palette. Geometric overlay graphics representing corporate 'battle'. Sharp angular typography. Dynamic motion graphics simulating financial data streams. Futuristic tech-news inspired visual language with subtle glitch/digital artifact effects."
       },
       "exampleOutline": [
-        "Section 1: Attention-grabbing headline stat about AI growth",
-        "Section 2: Context of enterprise AI competitive landscape",
-        "Section 3: OpenAI's specific enterprise growth metrics",
-        "Section 4: Implications for workers and productivity",
-        "Section 5: Call-to-action exploring AI's potential"
+        "Story 1: Dramatic Hook & Initial Conflict",
+        "Story 2: Financial Breakdown of Bid",
+        "Story 3: Strategic Implications",
+        "Story 4: Potential Industry Disruption",
+        "Story 5: Call-to-Action & Further Exploration"
       ],
-      "hashtags": "#AIEnterprise #ChatGPT #FutureOfWork #AIProductivity #TechInnovation #EnterpriseAI #AIGrowth #TechTrends #WorkplaceTech #AIRevolution",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7245606/pexels-photo-7245606.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "hashtags": "#MediaTech #CorporateBattles #StreamingWars #TechInvestment #MediaMergers #BusinessStrategy #EntertainmentIndustry #TechNews #InvestmentInsights #MediaDisruption",
+      "textureIndex": 11
+    },
+    {
+      "title": "IBM to acquire Confluent for $11B as it seeks to bolster its data offerings",
+      "description": "IBM is buying data infrastructure company Confluent for $11 billion in cash in a bid to to bolster its data and automation products as ever more companies move their tech operations to the cloud and deploy AI technology.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/08/ibm-to-acquire-confluent-for-11b-as-it-seeks-to-bolster-its-data-offerings/"
+        }
+      ],
+      "format": "reel",
+      "subcategory": "reel",
+      "hooks": [
+        "Big Tech's $11B Chess Move: IBM's Data Power Play",
+        "Confluent: The $11B Cloud Revolution Trigger",
+        "IBM's Billion-Dollar Bet on Future Data"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic split-screen animations to show IBM/Confluent logos",
+            "Create fast-paced transitions between data visuals",
+            "Include bold text overlays highlighting key acquisition numbers"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Dramatic headline with acquisition value",
+            "Use infographic-style slides showing tech ecosystem impact",
+            "Final slide: Clear takeaway/industry implication"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected visual metaphor about data/acquisition",
+            "Use rapid-fire text animations",
+            "Include quick expert soundbite or voiceover"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "More professional tone, deeper strategic context",
+            "Include subtle corporate color palette",
+            "Add credible data visualization"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy tech aesthetic with electric blue/charcoal gradients, dynamic geometric transitions, futuristic data flow animations, sans-serif bold typography, motion graphics showing interconnected tech ecosystems"
+      },
+      "exampleOutline": [
+        "Hook: Dramatic acquisition headline",
+        "Quick context: Why data infrastructure matters",
+        "IBM + Confluent: Strategic breakdown",
+        "Industry transformation insight",
+        "Future prediction/call to explore"
+      ],
+      "hashtags": "#IBM #DataInfrastructure #TechAcquisition #CloudComputing #AITech #EnterpriseTech #DataStrategy #TechInnovation #BusinessTrends #IndustryInsights",
+      "textureIndex": 10
+    },
+    {
+      "title": "Adobe launches content creation hub in Premiere mobile for YouTube Shorts creators",
+      "description": "The company says the space is designed to give creators everything they need to produce viral videos, grow their audience, and tap into trends, whether it's creating day-in-the-life vlogs, travel videos, or behind-the-scenes clips.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/08/adobe-launches-content-creation-hub-in-premiere-mobile-for-youtube-shorts-creators/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "Adobe Just Transformed YouTube Shorts Creation Forever 🚀",
+        "Mobile Video Editing Gets a Massive Upgrade 📱",
+        "Creators: Your Viral Toolkit Has Arrived 🎥"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic screen recording showcasing Premiere mobile interface",
+            "Include split-screen comparison of before/after editing",
+            "Add quick text overlays highlighting key features"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Provocative statistic about short-form content",
+            "Use mockup screens showing tool capabilities",
+            "Final slide: Clear call-to-action for downloading app"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected visual transition",
+            "Use creator POV narrative style",
+            "Include rapid-fire feature demonstration"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as professional productivity enhancement",
+            "Use data-driven visual storytelling",
+            "Emphasize creator economy implications"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast cyberpunk-inspired color palette, glitch/digital overlay effects, bold sans-serif typography, dynamic diagonal compositions, animated UI elements suggesting technological innovation and speed"
+      },
+      "exampleOutline": [
+        "Attention-grabbing visual hook",
+        "Quick problem statement about content creation challenges",
+        "Adobe Premiere mobile key features snapshot",
+        "Transformative potential for creators",
+        "Download/explore call-to-action"
+      ],
+      "hashtags": "#AdobeCreative #ContentCreation #YouTubeShorts #CreatorEconomy #MobileEditing #AICreativity #VideoProduction #DigitalMedia #TechInnovation #CreatorTools",
+      "textureIndex": 4
+    },
+    {
+      "title": "Hinge&#8217;s new AI feature helps daters move beyond boring small talk",
+      "description": "Hinge launched “Convo Starters,” a feature powered by AI that provides personalized tips for initiating meaningful conversations.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/08/hinges-new-ai-feature-helps-daters-start-better-convos-moving-beyond-boring-small-talk/"
+        }
+      ],
+      "format": "carousel",
+      "subcategory": "carousel",
+      "hooks": [
+        "AI Dating Coach: Killing Boring Conversations Forever",
+        "Dating App Levels Up with Conversation Magic",
+        "Smart Chats: When AI Meets Romance"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick-cut transitions between carousel slides",
+            "Add dynamic text animations to highlight key points",
+            "Include a voiceover explaining the AI feature"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have bold, attention-grabbing graphic",
+            "Use consistent color palette across all slides",
+            "Ensure each slide tells a micro-story about conversation improvement"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Condense carousel content into 60-second narrative",
+            "Use screen recordings showing Hinge's AI feature",
+            "Add energetic background music"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as professional networking communication innovation",
+            "Add data points about conversation success rates",
+            "Use more formal, analytical tone"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Modern, playful tech aesthetic with soft gradients. Vibrant coral and electric blue color palette. Clean sans-serif typography with rounded edges. Animated icons showing conversation transformation. Minimal illustration style with character-driven graphics representing dating interactions."
+      },
+      "exampleOutline": [
+        "Slide 1: Provocative Hook & AI Conversation Problem",
+        "Slide 2: Hinge's AI Solution Explained",
+        "Slide 3: How 'Convo Starters' Actually Work",
+        "Slide 4: Real-World Example of Improved Chat",
+        "Slide 5: Call-to-Action & App Download"
+      ],
+      "hashtags": "#AIDateCoach #DatingTips #TechInnovation #HingeApp #AIMatching #SmartDating #RelationshipTech #AIConverstions #ModernDating #TechLove",
       "textureIndex": 9
     }
   ]

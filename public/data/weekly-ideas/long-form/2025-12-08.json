@@ -1,264 +1,211 @@
 {
   "type": "long-form",
-  "date": "2025-12-08T16:21:11.914Z",
+  "date": "2025-12-08T16:29:10.402Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "&#8216;ONE RULE&#8217;: Trump says he&#8217;ll sign an executive order blocking state AI laws despite bipartisan pushback",
+      "description": "“I will be doing a ONE RULE Executive Order this week,” Trump posted on social media. “You can’t expect a company to get 50 Approvals every time they want to do something.”",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/products/page/3"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/08/one-rule-trump-says-hell-sign-an-executive-order-blocking-state-ai-laws-despite-bipartisan-pushback/"
         }
       ],
       "format": "livestream",
       "subcategory": "leadership",
       "hooks": [
-        "Design Templates That Marketing Will Actually Love",
-        "Crack the Code: Flexible Brand Templates in Figma",
-        "How Pros Build Scalable Design Systems"
+        "Trump's AI Executive Order: Game Changer or Power Grab?",
+        "50 State Laws vs. One Presidential Rule",
+        "Inside Trump's Controversial AI Regulatory Playbook"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
             "Enable live chat for real-time audience interaction",
-            "Pre-promote Q&A segments to boost engagement",
-            "Use stream annotations to highlight key template techniques"
+            "Prepare pre-screened Q&A questions to maintain flow",
+            "Use multi-camera setup for dynamic visual engagement"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Dynamic split-screen layout with Figma interface + presenter, bold geometric typography, electric blue/charcoal color palette, animated transitions highlighting template flexibility, clean motion graphics demonstrating template mechanics"
+        "description": "High-contrast red/blue political color palette, dynamic infographic overlays, animated legal/policy icons, split-screen news footage, bold sans-serif typography with motion tracking, minimalist yet dramatic design suggesting complexity and tension"
       },
       "exampleOutline": [
-        "Intro: Live Stream Energy & Personal Design Challenge",
-        "Why Marketing Needs Flexible Templates",
-        "8 Technical & Strategic Template Design Techniques",
-        "Live Q&A: Audience Template Challenges",
-        "Closing: Actionable Next Steps & Community Challenge"
+        "Opening: Live Stream Introduction & Breaking News Context",
+        "Detailed Executive Order Analysis",
+        "State vs. Federal AI Regulation Breakdown",
+        "Potential Industry & Tech Sector Implications",
+        "Live Q&A and Audience Interaction Segment"
       ],
-      "hashtags": "#FigmaDesign #DesignSystems #BrandTemplates #CreativeWorkflow #DesignTips #ProductDesign #UIDesign #TemplateDesign #CreativeTech #DesignStrategy",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 11
+      "hashtags": "#AIRegulation #TrumpExecutiveOrder #AIPolicy #TechLaw #AIGovernance #StateLaws #FederalRegulation #AIEthics #TechPolicy #PoliticalTech",
+      "textureIndex": 2
     },
     {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
+      "title": "This week on How I AI: Which AI model is the best designer? and ChatGPT agent mode, the “little helper” that transformed recruiting",
+      "description": "Your weekly listens from How I AI, part of the Lenny's Podcast Network",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Forum",
-          "url": "https://forum.figma.com/product-updates-3/new-features-in-figma-buzz-46631"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/three-new-features-to-help-build-brand-momentum-with-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/figma-buzz"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/newsroom/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/shorts/Sf_5xBPH1TM"
-        }
-      ],
-      "format": "tutorial",
-      "subcategory": "instructional",
-      "hooks": [
-        "Supercharge Your Figma Workflow in 3 Mind-Blowing Steps",
-        "Unlock Secret Figma Buzz Features Designers Need Now",
-        "3 Game-Changing Tools to Elevate Your Design Game"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use clear on-screen annotations for each step",
-            "Include picture-in-picture screen recordings showing exact clicks",
-            "Create chapter markers for easy navigation between feature demonstrations"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, dynamic visual style with high-contrast color palette (electric blue, deep charcoal, bright accent colors). Utilize sharp geometric transitions between steps. Typography should be clean and modern with slight technical edge. Incorporate motion graphics that highlight each feature's mechanics. Aesthetic reference: blend of Apple design documentation and futuristic UI showcases."
-      },
-      "exampleOutline": [
-        "Section 1: High-Energy Intro - Why These Figma Features Matter",
-        "Section 2: Context - Design Workflow Challenges Today",
-        "Section 3: Feature Walkthrough - Detailed Step-by-Step Breakdown",
-        "Section 4: Pro Tips and Hidden Capabilities",
-        "Section 5: Call-to-Action and Future Exploration"
-      ],
-      "hashtags": "#FigmaTips #DesignWorkflow #AIDesign #CreativeTech #ProductivityHacks #DesignTools #FigmaBuzz #UXDesign #DesignStrategy #CreativeWorkflow",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
-    },
-    {
-      "title": "How to streamline your design system workflow in Figma",
-      "description": "If you’ve ever stared down a blank Figma file while building a new design system, never fear: These new features and plugins will turn that mountain of work into an afternoon task.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/how-to-streamline-your-design-system-workflow-in-figma/"
-        },
-        {
-          "name": "Figmentor",
-          "url": "https://figmentor.io/blog/hidden-figma-features-for-designers-2025"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/schema-2025-design-systems-recap/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=N2NwII5mAU4&vl=en"
-        },
-        {
-          "name": "Community",
-          "url": "https://community.weweb.io/t/optimizing-design-system-figma-weweb/20404"
-        },
-        {
-          "name": "Designsystemscollective",
-          "url": "https://www.designsystemscollective.com/design-system-trends-that-are-actually-worth-following-in-2025-44a405348687"
-        }
-      ],
-      "format": "livestream",
-      "subcategory": "leadership",
-      "hooks": [
-        "Design Systems Unlocked: Figma Workflow Masterclass Live!",
-        "Crush Your Figma Design System in 60 Minutes",
-        "Live: Turn Chaos into Design System Magic"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Schedule stream 1-2 weeks in advance with teaser graphics",
-            "Use YouTube Community tab to build pre-event anticipation",
-            "Enable live chat for real-time audience interaction and Q&A"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-energy digital workspace aesthetic with dynamic Figma-inspired color palette (blues, purples, electric accents). Split-screen design showing live coding/interface with presenter. Motion graphics highlighting workflow transitions. Sharp, modern sans-serif typography. Animated UI elements that demonstrate design system principles in real-time."
-      },
-      "exampleOutline": [
-        "Section 1: High-Energy Stream Introduction & Audience Connection",
-        "Section 2: Current Design System Pain Points",
-        "Section 3: Live Figma Workflow Demonstration",
-        "Section 4: Advanced Techniques & Pro Tips",
-        "Section 5: Interactive Q&A and Audience Challenge"
-      ],
-      "hashtags": "#Figma #DesignSystems #ProductDesign #UXWorkflow #AIDesign #DesignTips #CreativeCoding #DesignTech #WorkflowOptimization #DesignStrategy",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
-    },
-    {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
-        }
-      ],
-      "format": "documentary",
-      "subcategory": "framework",
-      "hooks": [
-        "How Figma reinvented typography from scratch",
-        "The secret font behind design's biggest platform",
-        "When designers design their own language"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use archival/behind-the-scenes B-roll of design process",
-            "Include designer interview clips with high production value",
-            "Create chapter markers highlighting key design moments"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 8,
-        "description": "High-contrast monochromatic palette with editorial typography. Kinetic motion graphics revealing letterform construction. Clean, modernist composition with dynamic type reveals. Reference: Helvetica documentary mixed with AIGA design aesthetic. Incorporate technical sketches, hand-drawn type explorations, and precision grid animations."
-      },
-      "exampleOutline": [
-        "Opening: Provocative type design challenge introduction",
-        "Design Problem: Limitations of existing typefaces",
-        "Creative Process: Figma's typographic research and iteration",
-        "Technical Insights: Font engineering breakthrough moments",
-        "Future Vision: How custom type transforms brand experience"
-      ],
-      "hashtags": "#Figma #Typography #DesignSystem #BrandIdentity #CreativeProcess #TypeDesign #ProductDesign #DesignInnovation #FontDesign #CreativeTechnology",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 5
-    },
-    {
-      "title": "OpenAI boasts enterprise win days after internal ‘code red’ on Google threat",
-      "description": "ChatGPT Enterprise usage grew 8x year-over-year as workers report saving an hour daily, but OpenAI faces competitive pressure from Anthropic and questions about cost sustainability.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2025/12/08/openai-boasts-enterprise-win-days-after-internal-code-red-on-google-threat/"
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/this-week-on-how-i-ai-which-ai-model"
         }
       ],
       "format": "video",
       "subcategory": "thought-leadership",
       "hooks": [
-        "OpenAI's Enterprise Gamechanger: 8x Growth Revealed!",
-        "How ChatGPT is Rewriting Enterprise Productivity",
-        "Code Red: Inside OpenAI's Battle for Market Dominance"
+        "This changes everything about This week on...",
+        "What nobody tells you about This week on",
+        "We tested this so you don't have to"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use screen recordings of enterprise dashboard comparisons",
-            "Include picture-in-picture commentary with data visualizations",
-            "Create dynamic motion graphics showing growth metrics"
+            "Optimize for YouTube's algorithm by posting at peak hours",
+            "Use native features specific to YouTube",
+            "Engage with comments in the first hour"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 5,
+        "description": "Modern, clean aesthetic with brand colors. Professional but approachable. Consider subtle motion graphics to add visual interest."
+      },
+      "exampleOutline": [
+        "Hook: Visual + compelling statement (5s)",
+        "Context: Why this matters (1-2 min)",
+        "Core Value: Main teaching (3-5 min)",
+        "Deep Dive: Technical details (2-3 min)",
+        "Conclusion: Next steps + CTA (30s)"
+      ],
+      "hashtags": "#design #creativecoding #AIdesign #designsystems #UXdesign #branding #creativetechnology #opensession #designtips #workflow",
+      "textureIndex": 11
+    },
+    {
+      "title": "Booking.com’s agent strategy: Disciplined, modular and already delivering 2× accuracy",
+      "description": "When many enterprises weren’t even thinking about agentic behaviors or infrastructures, Booking.com had already “stumbled” into them with its homegrown conversational recommendation system. \n\nThis early experimentation has allowed the company to take a step back and avoid getting swept up in the frantic AI agent hype. Instead, it is taking a disciplined, layered, modular approach to model development: small, travel-specific models for cheap, fast inference; larger large language models (LLMs) fo",
+      "starred": false,
+      "sources": [
+        {
+          "name": "VentureBeat AI",
+          "url": "https://venturebeat.com/ai/booking-coms-agent-strategy-disciplined-modular-and-already-delivering-2"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "How Booking.com quietly revolutionized AI travel recommendations",
+        "The secret AI strategy beating Silicon Valley's hype",
+        "Travel AI: A masterclass in disciplined innovation"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use archival travel footage as B-roll to illustrate Booking.com's journey",
+            "Include motion graphics showing technical architecture of recommendation system",
+            "Create chapter markers highlighting key technical insights"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast tech-inspired color palette (deep blues, electric whites, accent oranges). Dynamic split-screen compositions. Futuristic typography with clean sans-serif fonts. Animated data transitions. Sleek, modern tech documentary aesthetic with Silicon Valley design influences."
+        "description": "Cool, tech-forward documentary aesthetic with deep blue and slate gray color palette. Infographic-style technical visualizations. Clean sans-serif typography with subtle technical wireframe overlays. Dynamic camera movements simulating data flow. Minimal but sophisticated motion design emphasizing information hierarchy."
       },
       "exampleOutline": [
-        "Opening: Dramatic enterprise productivity metric reveal",
-        "Context: OpenAI's current market position and challenges",
-        "Deep Dive: 8x growth breakdown and enterprise impact",
-        "Competitive Analysis: OpenAI vs Google/Anthropic strategies",
-        "Future Outlook: Sustainability and potential enterprise AI trends"
+        "Opening: Cinematic travel scene revealing AI's transformative potential",
+        "Context: Traditional travel recommendation challenges",
+        "Booking.com's Modular AI Strategy: Technical Deep Dive",
+        "Competitive Advantage: 2x Accuracy Case Study",
+        "Future of Travel Tech: Closing Vision and Call to Action"
       ],
-      "hashtags": "#OpenAI #AI #EnterpriseAI #ChatGPT #TechInnovation #ProductivityHack #AIStrategy #BusinessTech #FutureOfWork #AIEnterprise",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 12
+      "hashtags": "#AITravel #BookingcomAI #TravelTech #ArtificialIntelligence #MachineLearning #TravelInnovation #AIRecommendations #IntelligentTravel #TechStrategy #FutureOfTravel",
+      "textureIndex": 4
+    },
+    {
+      "title": "ChatGPT agent mode: The “little helper” that transformed recruiting, crafted user personas, and solved parking nightmares | Michal Peled (Honeybook)",
+      "description": "Watch now | &#127897;&#65039; Michal Peled on using ChatGPT agent mode to automate LinkedIn recruiting, creating AI personas from customer research, and building practical AI tools that solve real business problems",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/chatgpt-agent-mode-the-little-helper"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "ChatGPT Agent Mode: 3 Business Hacks in 10 Minutes",
+        "Transform Recruiting with AI's Secret Weapon",
+        "One ChatGPT Trick That Solves Everything"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use screen recording to demonstrate each agent mode step",
+            "Include live demonstrations of actual prompts and outputs",
+            "Create chapter markers for each specific use case"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech-inspired color palette with electric blue and charcoal gray. Dynamic split-screen compositions showing prompt inputs and AI outputs. Modern sans-serif typography with sharp, clean lines. Animated transition graphics between use cases. Subtle glitch/tech overlay effects to emphasize AI innovation."
+      },
+      "exampleOutline": [
+        "Section 1: What is ChatGPT Agent Mode? (Hook)",
+        "Section 2: LinkedIn Recruiting Automation Walkthrough",
+        "Section 3: User Persona Generation Technique",
+        "Section 4: Practical Business Problem Solving",
+        "Section 5: Next Steps & Implementation Strategy"
+      ],
+      "hashtags": "#ChatGPT #AITutorial #BusinessHacks #AIRecruitment #ProductivityTips #AIAgentMode #TechInnovation #WorksmartNotHard #AITools #BusinessStrategy",
+      "textureIndex": 7
+    },
+    {
+      "title": "Hinge&#8217;s new AI feature helps daters move beyond boring small talk",
+      "description": "Hinge launched “Convo Starters,” a feature powered by AI that provides personalized tips for initiating meaningful conversations.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/08/hinges-new-ai-feature-helps-daters-start-better-convos-moving-beyond-boring-small-talk/"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "AI is Transforming Dating: Hinge's Radical New Approach",
+        "Beyond Small Talk: How AI Reimagines Connection",
+        "The End of Awkward First Messages"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use cinematic b-roll of real dating scenarios",
+            "Include interview-style testimonials from actual Hinge users",
+            "Create dynamic motion graphics explaining AI technology"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Modern, sleek documentary aesthetic with warm color palette (soft blues, muted oranges). Utilize split-screen techniques, data visualization overlays. Typography should feel contemporary and approachable - sans-serif, clean lines. Incorporate subtle AI-inspired graphic elements suggesting connection and technology. Motion should feel fluid and intelligent, with smooth transitions highlighting human-AI interaction."
+      },
+      "exampleOutline": [
+        "Opening: Emotional Personal Story of Dating Struggle",
+        "Context: Current Dating Communication Challenges",
+        "Tech Exploration: How Hinge's AI Actually Works",
+        "Real-World Impact: User Transformation Stories",
+        "Future Vision: AI and Human Connection"
+      ],
+      "hashtags": "#AIDating #HingeTech #DatingInnovation #AIRelationships #ModernLove #TechDating #AIConnections #DatingApp #RelationshipTechnology #ArtificialIntelligence",
+      "textureIndex": 2
     }
   ]
 }
