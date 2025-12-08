@@ -1,9 +1,9 @@
 {
   "id": "how-to-streamline-your-design-system-workflow-in-figma",
   "slug": "how-to-streamline-your-design-system-workflow-in-figma",
-  "title": "Figma’s 2025 Upgrades Are Rewriting How Teams Build and Run Design Systems",
-  "publishedAt": "2025-12-07T16:16:55.485Z",
-  "generatedAt": "2025-12-07T16:16:55.485Z",
+  "title": "How to Streamline Your Design System Workflow in Figma in 2025",
+  "publishedAt": "2025-12-08T16:20:49.773Z",
+  "generatedAt": "2025-12-08T16:20:49.773Z",
   "totalSources": 10,
   "sections": [
     {
@@ -11,23 +11,23 @@
       "paragraphs": [
         {
           "id": "para-0-0",
-          "content": "Figma is rolling out a wave of design‑system‑focused upgrades that promise to cut iteration time and reduce the pain of maintaining large libraries. A full rewrite of its design systems architecture now makes actions like updating variables or switching modes 30–60% faster, with heavy state swaps dropping from 3500ms to 350ms in some cases.New authoring tools, including a fullscreen variables modal and drag‑and‑drop reordering of modes and collections without breaking IDs, directly target long‑standing workflow bottlenecks for design system teams.Together with responsive layout enhancements and hidden power features like Smart Selection and conditional prototyping, the updates position Figma as a faster, more resilient foundation for systematized product design.",
+          "content": "Figma’s 2025 updates have transformed how teams manage and scale design systems, with major performance gains, expanded variable modes, and AI-powered tools that cut iteration time and reduce friction. A 2024 study found that using Figma Variables alone can reduce design iteration time by around 30%, while Smart Selection slashes layer selection time by about 40%.These improvements are built on a complete rewrite of Figma’s design systems architecture, which now delivers 30–60% faster variable updates and near-instant state swaps in complex files.For design teams, this means smoother editing, faster feedback loops, and more time spent on creative work rather than maintenance.",
           "citations": [
             {
               "primarySource": {
-                "id": "source-2",
-                "name": "figma",
-                "url": "https://www.figma.com/blog/schema-2025-design-systems-recap/",
+                "id": "source-1",
+                "name": "Figma Blog",
+                "url": "https://www.figma.com/blog/how-to-streamline-your-design-system-workflow-in-figma/",
                 "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
                 "title": "How to streamline your design system workflow in Figma"
               },
               "additionalCount": 1,
               "additionalSources": [
                 {
-                  "id": "source-4",
-                  "name": "figma",
-                  "url": "https://www.figma.com/blog/config-2025-recap/",
-                  "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+                  "id": "source-2",
+                  "name": "figmentor",
+                  "url": "https://figmentor.io/blog/hidden-figma-features-for-designers-2025",
+                  "favicon": "https://www.google.com/s2/favicons?domain=figmentor.io&sz=32",
                   "title": "How to streamline your design system workflow in Figma"
                 }
               ]
@@ -36,7 +36,38 @@
         },
         {
           "id": "para-0-1",
-          "content": "Beyond performance, Figma is tightening the connection between design and code through its new Code Connect UI, which links components to GitHub repositories and uses AI suggestions to map the right files with minimal manual setup.Auto Documentation and the Variables and Styles List widget now generate and update system documentation frames directly on the canvas, turning what was once a static chore into a living, queryable inventory of tokens and styles.At the same time, Figma leadership and industry voices are sketching a future where AI‑assisted systems validate designs in real time, nudge teams back to standards, and act as collaborators rather than static reference libraries.",
+          "content": "Beyond raw performance, Figma has introduced powerful organizational and collaboration features that make design systems more flexible and easier to maintain at scale. Teams can now reorder modes and collections via drag-and-drop without breaking dependencies, and variable paints can be hidden to keep the workspace clean.New integrations like Code Connect allow direct linking of Figma components to GitHub repositories, with AI suggesting matching code files to bridge the design-to-code gap.These changes position Figma not just as a design tool, but as a central hub for end-to-end product development workflows.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-4",
+                "name": "figma",
+                "url": "https://www.figma.com/blog/config-2025-recap/",
+                "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+                "title": "How to streamline your design system workflow in Figma"
+              },
+              "additionalCount": 1,
+              "additionalSources": [
+                {
+                  "id": "source-3",
+                  "name": "figma",
+                  "url": "https://www.figma.com/blog/schema-2025-design-systems-recap/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+                  "title": "How to streamline your design system workflow in Figma"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-1",
+      "title": "Leveraging Variables, Modes, and Performance Gains",
+      "paragraphs": [
+        {
+          "id": "para-1-0",
+          "content": "Figma’s expanded variable modes—up to 10 for Professional plans and 20 for Organization plans—enable teams to manage multiple themes, product lines, or branding variants within a single system.By defining tokens like `Primary Color` or `Typography Scale` as variables, designers can update a single value and see changes propagate across all linked components and instances.This centralized control is especially valuable in large systems, where a 2024 study showed that using Variables reduced design iteration time by roughly 30%.",
           "citations": [
             {
               "primarySource": {
@@ -58,57 +89,26 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "section-1",
-      "title": "Performance, Variables, and Documentation: The New Backbone of System Workflows",
-      "paragraphs": [
-        {
-          "id": "para-1-0",
-          "content": "Under the hood, Figma’s design systems rewrite consolidates components, variables, and related features onto a single data foundation, yielding dramatic speed gains for everyday system work.According to Figma’s Schema 2025 recap, variable updates and mode switches are now 30–60% faster, and complex state swaps that once took 2500–3500ms have dropped to as low as 350–450ms, particularly in files with thousands of instances.These improvements are already live, giving teams a noticeably more responsive editing experience when working across large, multi‑brand libraries that previously strained performance.",
-          "citations": [
-            {
-              "primarySource": {
-                "id": "source-8",
-                "name": "help",
-                "url": "https://help.figma.com/hc/en-us/articles/35794667554839-What-s-new-from-Schema-2025",
-                "favicon": "https://www.google.com/s2/favicons?domain=help.figma.com&sz=32",
-                "title": "How to streamline your design system workflow in Figma"
-              },
-              "additionalCount": 1,
-              "additionalSources": [
-                {
-                  "id": "source-1",
-                  "name": "Figma Blog",
-                  "url": "https://www.figma.com/blog/how-to-streamline-your-design-system-workflow-in-figma/",
-                  "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
-                  "title": "How to streamline your design system workflow in Figma"
-                }
-              ]
-            }
-          ]
         },
         {
           "id": "para-1-1",
-          "content": "On the authoring side, Figma has overhauled how designers create and manage variables and collections, opening a fullscreen modal that surfaces all subscribed collections and supports inline variable creation.Crucially, teams can now drag and drop modes and collections to reorder them while preserving IDs, avoiding the sync breaks and rework that used to accompany rebrands or structural overhauls.To keep systems visible and auditable, Figma’s Auto Documentation feature now generates documentation frames cataloging variables by collection and mode, while the Variables and Styles List widget lets teams pull a live, updatable inventory of tokens onto the canvas at the press of a button.",
+          "content": "Under the hood, Figma has completely rewritten its design systems architecture, resulting in dramatically faster instance updates and mode switching.Actions like updating variables or swapping modes are now 30–60% faster, and complex state swaps that once took several seconds now complete in under 500ms, depending on complexity.This performance boost is critical for teams working with thousands of component instances, as it keeps files responsive and reduces the lag that previously disrupted workflows.",
           "citations": [
             {
               "primarySource": {
-                "id": "source-3",
-                "name": "figmentor",
-                "url": "https://figmentor.io/blog/hidden-figma-features-for-designers-2025",
-                "favicon": "https://www.google.com/s2/favicons?domain=figmentor.io&sz=32",
+                "id": "source-7",
+                "name": "designsystemscollective",
+                "url": "https://www.designsystemscollective.com/design-system-trends-that-are-actually-worth-following-in-2025-44a405348687",
+                "favicon": "https://www.google.com/s2/favicons?domain=www.designsystemscollective.com&sz=32",
                 "title": "How to streamline your design system workflow in Figma"
               },
               "additionalCount": 1,
               "additionalSources": [
                 {
-                  "id": "source-7",
-                  "name": "uxplanet",
-                  "url": "https://uxplanet.org/10-must-try-figma-plugins-to-boost-your-workflow-in-2025-aa57fc729d5d",
-                  "favicon": "https://www.google.com/s2/favicons?domain=uxplanet.org&sz=32",
+                  "id": "source-8",
+                  "name": "uxdesign",
+                  "url": "https://uxdesign.cc/dear-llm-heres-how-my-design-system-works-b59fb9a342b7",
+                  "favicon": "https://www.google.com/s2/favicons?domain=uxdesign.cc&sz=32",
                   "title": "How to streamline your design system workflow in Figma"
                 }
               ]
@@ -119,27 +119,27 @@
     },
     {
       "id": "section-2",
-      "title": "From Design to Code: Integrated Handoff and AI‑Assisted System Governance",
+      "title": "AI, Organization, and Design-to-Code Integration",
       "paragraphs": [
         {
           "id": "para-2-0",
-          "content": "Figma’s new Code Connect UI is designed to narrow the gap between design and implementation by wiring design tokens and components directly to a team’s codebase.The interface connects Figma to GitHub repositories and introduces AI‑powered suggestions that help teams quickly identify the correct code file to map to each component, even for designers without deep engineering expertise.This approach aims to reduce the maintenance overhead that has historically plagued design systems, where documentation and code drift apart despite shared intentions.",
+          "content": "AI is playing an increasingly active role in Figma workflows, with features like Smart Selection using machine learning to predict and highlight the most relevant elements when editing nested frames.This reduces the time spent manually hunting through layers by about 40%, making editing faster and less error-prone.Additionally, AI-powered checks can nudge designers back into alignment with the system, automatically applying corrections to keep designs consistent without breaking flow.",
           "citations": [
             {
               "primarySource": {
                 "id": "source-9",
-                "name": "designsystemscollective",
-                "url": "https://www.designsystemscollective.com/design-system-trends-that-are-actually-worth-following-in-2025-44a405348687",
-                "favicon": "https://www.google.com/s2/favicons?domain=www.designsystemscollective.com&sz=32",
+                "name": "uxplanet",
+                "url": "https://uxplanet.org/10-must-try-figma-plugins-to-boost-your-workflow-in-2025-aa57fc729d5d",
+                "favicon": "https://www.google.com/s2/favicons?domain=uxplanet.org&sz=32",
                 "title": "How to streamline your design system workflow in Figma"
               },
               "additionalCount": 1,
               "additionalSources": [
                 {
                   "id": "source-10",
-                  "name": "uxdesign",
-                  "url": "https://uxdesign.cc/dear-llm-heres-how-my-design-system-works-b59fb9a342b7",
-                  "favicon": "https://www.google.com/s2/favicons?domain=uxdesign.cc&sz=32",
+                  "name": "help",
+                  "url": "https://help.figma.com/hc/en-us/articles/35794667554839-What-s-new-from-Schema-2025",
+                  "favicon": "https://www.google.com/s2/favicons?domain=help.figma.com&sz=32",
                   "title": "How to streamline your design system workflow in Figma"
                 }
               ]
@@ -148,7 +148,7 @@
         },
         {
           "id": "para-2-1",
-          "content": "Looking ahead, Figma and industry practitioners are framing design systems less as static libraries and more as active collaborators embedded in daily work.Talks at Schema emphasize that “whoever finally bridges the gap between design and code is going to win,” outlining a trajectory where real‑time validation, intent‑aware components, and AI‑driven nudges keep work aligned to system rules as it is created.Best‑practice guides now center Figma variables as the connective tissue of this future, arguing that well‑modeled tokens and modes are what allow both humans and AI tools to interpret and enforce design logic across platforms.",
+          "content": "On the organizational side, Figma now lets teams reorder modes and collections via drag-and-drop, eliminating the need to delete and recreate them and preventing broken dependencies.This quality-of-life improvement is especially valuable when rebranding or restructuring large systems, as it preserves IDs and keeps designs in sync.Looking ahead, tighter integration with codebases via Code Connect and tools like Figma Make will continue to blur the line between design and production, enabling more seamless handoffs and faster iteration.",
           "citations": []
         }
       ]
@@ -164,16 +164,16 @@
     },
     {
       "id": "source-2",
-      "name": "figma",
-      "url": "https://www.figma.com/blog/schema-2025-design-systems-recap/",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+      "name": "figmentor",
+      "url": "https://figmentor.io/blog/hidden-figma-features-for-designers-2025",
+      "favicon": "https://www.google.com/s2/favicons?domain=figmentor.io&sz=32",
       "title": "How to streamline your design system workflow in Figma"
     },
     {
       "id": "source-3",
-      "name": "figmentor",
-      "url": "https://figmentor.io/blog/hidden-figma-features-for-designers-2025",
-      "favicon": "https://www.google.com/s2/favicons?domain=figmentor.io&sz=32",
+      "name": "figma",
+      "url": "https://www.figma.com/blog/schema-2025-design-systems-recap/",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "How to streamline your design system workflow in Figma"
     },
     {
@@ -208,16 +208,16 @@
     },
     {
       "id": "source-2",
-      "name": "figma",
-      "url": "https://www.figma.com/blog/schema-2025-design-systems-recap/",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+      "name": "figmentor",
+      "url": "https://figmentor.io/blog/hidden-figma-features-for-designers-2025",
+      "favicon": "https://www.google.com/s2/favicons?domain=figmentor.io&sz=32",
       "title": "How to streamline your design system workflow in Figma"
     },
     {
       "id": "source-3",
-      "name": "figmentor",
-      "url": "https://figmentor.io/blog/hidden-figma-features-for-designers-2025",
-      "favicon": "https://www.google.com/s2/favicons?domain=figmentor.io&sz=32",
+      "name": "figma",
+      "url": "https://www.figma.com/blog/schema-2025-design-systems-recap/",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "How to streamline your design system workflow in Figma"
     },
     {
@@ -243,30 +243,30 @@
     },
     {
       "id": "source-7",
-      "name": "uxplanet",
-      "url": "https://uxplanet.org/10-must-try-figma-plugins-to-boost-your-workflow-in-2025-aa57fc729d5d",
-      "favicon": "https://www.google.com/s2/favicons?domain=uxplanet.org&sz=32",
-      "title": "How to streamline your design system workflow in Figma"
-    },
-    {
-      "id": "source-8",
-      "name": "help",
-      "url": "https://help.figma.com/hc/en-us/articles/35794667554839-What-s-new-from-Schema-2025",
-      "favicon": "https://www.google.com/s2/favicons?domain=help.figma.com&sz=32",
-      "title": "How to streamline your design system workflow in Figma"
-    },
-    {
-      "id": "source-9",
       "name": "designsystemscollective",
       "url": "https://www.designsystemscollective.com/design-system-trends-that-are-actually-worth-following-in-2025-44a405348687",
       "favicon": "https://www.google.com/s2/favicons?domain=www.designsystemscollective.com&sz=32",
       "title": "How to streamline your design system workflow in Figma"
     },
     {
-      "id": "source-10",
+      "id": "source-8",
       "name": "uxdesign",
       "url": "https://uxdesign.cc/dear-llm-heres-how-my-design-system-works-b59fb9a342b7",
       "favicon": "https://www.google.com/s2/favicons?domain=uxdesign.cc&sz=32",
+      "title": "How to streamline your design system workflow in Figma"
+    },
+    {
+      "id": "source-9",
+      "name": "uxplanet",
+      "url": "https://uxplanet.org/10-must-try-figma-plugins-to-boost-your-workflow-in-2025-aa57fc729d5d",
+      "favicon": "https://www.google.com/s2/favicons?domain=uxplanet.org&sz=32",
+      "title": "How to streamline your design system workflow in Figma"
+    },
+    {
+      "id": "source-10",
+      "name": "help",
+      "url": "https://help.figma.com/hc/en-us/articles/35794667554839-What-s-new-from-Schema-2025",
+      "favicon": "https://www.google.com/s2/favicons?domain=help.figma.com&sz=32",
       "title": "How to streamline your design system workflow in Figma"
     }
   ],
@@ -274,8 +274,8 @@
     "url": "https://cdn.sanity.io/images/599r6htc/regionalized/12d066e9b919acb3a4922d67d94e263da76b374d-2560x1440.png?w=1200&amp;q=70&amp;fit=max&amp;auto=format"
   },
   "sidebarSections": [
-    "Performance, Variables, and Documentation: The New Backbone of System Workflows",
-    "From Design to Code: Integrated Handoff and AI‑Assisted System Governance"
+    "Leveraging Variables, Modes, and Performance Gains",
+    "AI, Organization, and Design-to-Code Integration"
   ],
   "relatedArticles": []
 }
