@@ -1,230 +1,170 @@
 {
   "type": "long-form",
-  "date": "2025-12-09T16:21:44.605Z",
+  "date": "2025-12-09T16:28:50.447Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Microsoft to invest $17.5B in India by 2029 as AI race accelerates",
+      "description": "The latest is Microsoft's largest investment in Asia.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/figma-buzz"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=FPpzI7z_U-o"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/branding/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/09/microsoft-to-invest-17-5b-in-india-by-2029-as-ai-race-accelerates/"
         }
       ],
       "format": "tutorial",
       "subcategory": "instructional",
       "hooks": [
-        "Figma Templates That Flex Without Breaking Brand",
-        "Design Once, Scale Everywhere: Figma Template Secrets",
-        "Build Bulletproof Brand Templates in Figma Now"
+        "Microsoft's $17.5B India Play: AI Strategy Decoded",
+        "Cracking the Code: Microsoft's Billion-Dollar AI Roadmap",
+        "How Big Tech Wins: Microsoft's India Masterplan"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use screen recording with cursor highlight for precise Figma steps",
-            "Include picture-in-picture walkthrough of actual template building process",
-            "Create chapter markers for each template design technique"
+            "Use screen recording to break down investment strategy visually",
+            "Create chapter markers for each key investment segment",
+            "Include dynamic infographics showing investment timeline and impact"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, dynamic Figma-inspired color palette with electric blue and charcoal gray. Sharp, angular typography with motion-driven graphic overlays. Experimental composition using grid breakouts and dynamic type scaling. Incorporate Figma UI elements as graphic motifs. Use smooth transitions between tutorial sections."
+        "description": "High-contrast tech-inspired design with deep blue and electric orange accents. Geometric data visualization overlays. Clean, angular typography with technical precision. Motion graphics that simulate digital mapping and investment flow. Minimalist but dynamic visual storytelling with technical elegance."
       },
       "exampleOutline": [
-        "Opening: Why Template Design Matters in Branding",
-        "The Marketing-Design Collaboration Challenge",
-        "8 Step-by-Step Template Design Techniques",
-        "Advanced Flexibility vs. Brand Consistency Strategies",
-        "Call-to-Action: Download Starter Template Kit"
+        "Section 1: Attention-Grabbing AI Investment Landscape Overview",
+        "Section 2: Unpacking Microsoft's Strategic Investment Motivation",
+        "Section 3: Step-by-Step Breakdown of $17.5B Investment Strategy",
+        "Section 4: Future Implications for Tech and AI Ecosystem",
+        "Section 5: Key Takeaways and Actionable Insights"
       ],
-      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystem #CreativeWorkflow #UIDesign #DesignTips #ProductDesign #BrandIdentity #TemplateDesign #AIDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 11
+      "hashtags": "#MicrosoftAI #TechInvestment #AIStrategy #IndiaTech #MicrosoftIndia #AIRace #TechInnovation #GlobalTech #InvestmentInsights #AIFuture",
+      "textureIndex": 12
     },
     {
-      "title": "Claude Code is coming to Slack, and that’s a bigger deal than it sounds",
-      "description": "Anthropic launches Claude Code in Slack, letting developers delegate coding tasks from chat threads. It's part of a shift toward AI-embedded collaboration that could reshape software workflows.",
+      "title": "India proposes charging OpenAI, Google for training AI on copyrighted content",
+      "description": "India has given OpenAI, Google, and other AI firms 30 days to respond to its proposed royalty system for training on copyrighted content.",
       "starred": false,
       "sources": [
         {
           "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2025/12/08/claude-code-is-coming-to-slack-and-thats-a-bigger-deal-than-it-sounds/"
-        },
-        {
-          "name": "Techzine",
-          "url": "https://www.techzine.eu/news/collaboration/137123/anthropic-integrates-claude-code-with-slack/"
-        },
-        {
-          "name": "Cryptorank",
-          "url": "https://cryptorank.io/news/feed/f5a2a-claude-code-slack-developer-workflow"
-        },
-        {
-          "name": "Techloy",
-          "url": "https://www.techloy.com/claude-code-is-coming-to-slack-to-automate-coding-workflows-for-developers/"
-        },
-        {
-          "name": "Eweek",
-          "url": "https://www.eweek.com/news/anthropic-claude-code-slack-integration/"
-        },
-        {
-          "name": "Autogpt",
-          "url": "https://autogpt.net/anthropic-brings-claude-code-into-slack/"
-        }
-      ],
-      "format": "documentary",
-      "subcategory": "framework",
-      "hooks": [
-        "AI is rewriting how developers collaborate forever",
-        "Inside Slack's game-changing AI coding revolution",
-        "When AI meets workplace: A developer's new reality"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use cinematic B-roll of developers in tech environments",
-            "Incorporate dynamic screen recordings showing Claude Code in action",
-            "Include expert talking head interviews with tech leaders"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 8,
-        "description": "High-contrast tech-noir aesthetic with deep blues and electric teals, angular motion graphics overlaying real-world coding scenes, futuristic sans-serif typography with subtle glitch effects, clean parallax transitions simulating technological progression, minimalist yet dynamic visual storytelling"
-      },
-      "exampleOutline": [
-        "Opening: Dramatic montage of current developer workflow challenges",
-        "Context: The limitations of traditional collaboration tools",
-        "Claude Code Reveal: Technical capabilities and workflow transformation",
-        "Industry Impact: Broader implications for software development",
-        "Future Vision: AI-embedded collaborative ecosystems"
-      ],
-      "hashtags": "#AIInnovation #SlackAI #DeveloperTools #FutureOfWork #TechInnovation #AICollaboration #CodeAutomation #WorkplaceTech #AnthropicAI #ProductivityHack",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 1
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Forum",
-          "url": "https://forum.figma.com/product-updates-3/new-features-in-figma-buzz-46631"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/three-new-features-to-help-build-brand-momentum-with-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/newsroom/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/figma-buzz"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/shorts/Sf_5xBPH1TM"
+          "url": "https://techcrunch.com/2025/12/09/india-proposes-charging-openai-google-for-training-ai-on-copyrighted-content/"
         }
       ],
       "format": "livestream",
       "subcategory": "leadership",
       "hooks": [
-        "Live: Figma Buzz's Game-Changing Design Features Revealed!",
-        "Design Faster: Figma Buzz's Secret Weapon Unleashed",
-        "Breaking: 3 Tools That'll Transform Your Design Workflow"
+        "AI's Legal Battle: India vs Tech Giants",
+        "Exclusive: How India Wants to Tax AI",
+        "Royalty Revolution: AI Training Gets Expensive"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Enable live chat interaction during stream for real-time engagement",
-            "Use multi-stream setup with screen sharing and face camera",
-            "Prepare pre-submitted Q&A questions to maintain stream momentum"
+            "Enable live chat for real-time audience interaction",
+            "Prepare pre-submitted Q&A questions as backup",
+            "Use YouTube's live polling feature to engage viewers"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Dynamic split-screen layout with high-contrast electric blue and charcoal gray color palette. Bold sans-serif typography with motion-tracked animated transitions. Picture-in-picture design showcasing live presenter alongside Figma interface. Animated graphic overlays highlighting key feature moments. Sleek, tech-forward aesthetic with subtle glitch/digital texture effects."
+        "description": "High-contrast color palette with tech-inspired blues and oranges. Dynamic split-screen layout showing live presenter and supporting graphics. Animated legal/tech iconography. Clean, modern motion design with sharp transitions. Typography should feel authoritative but approachable - sans-serif with geometric precision."
       },
       "exampleOutline": [
-        "Section 1: High-Energy Stream Introduction & Personal Connection",
-        "Section 2: Current Design Workflow Challenges",
-        "Section 3: Deep Dive into Figma Buzz's 3 New Features",
-        "Section 4: Live Demonstration & Real-World Application",
-        "Section 5: Community Q&A and Closing Insights"
+        "Opening: Breaking News Intro & Context",
+        "Detailed Policy Breakdown",
+        "Implications for AI Companies & Creators",
+        "Global Tech Policy Trends Comparison",
+        "Live Q&A Session & Audience Insights"
       ],
-      "hashtags": "#FigmaBuzz #DesignTools #CreativeWorkflow #AIDesign #ProductivityHacks #DesignTips #CreativeTech #UIUXDesign #DesignInnovation #WorksmartNotHard",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 2
+      "hashtags": "#AIPolicy #TechLaw #OpenAI #GoogleAI #AIEthics #IndiaTech #AIRegulation #CopyrightAI #TechPolicy #AITraining",
+      "textureIndex": 5
     },
     {
-      "title": "How to streamline your design system workflow in Figma",
-      "description": "If you’ve ever stared down a blank Figma file while building a new design system, never fear: These new features and plugins will turn that mountain of work into an afternoon task.",
+      "title": "Anthropic and Accenture sign multi-year AI strategic partnership",
+      "description": "The two companies are launching the Accenture Anthropic Business Group to bring Anthropic's AI to Accenture's employees.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/how-to-streamline-your-design-system-workflow-in-figma/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/09/anthropic-and-accenture-sign-multi-year-ai-strategic-partnership/"
         }
       ],
       "format": "tutorial",
       "subcategory": "instructional",
       "hooks": [
-        "Design Systems in Figma: Your Ultimate Speed Hack",
-        "Turn Chaos into Order: Figma Design System Workflow",
-        "5 Tricks to Master Figma Design Systems Fast"
+        "How Anthropic + Accenture Will Transform Enterprise AI",
+        "AI Partnership Secrets: Inside Anthropic's Enterprise Strategy",
+        "Build Enterprise AI: Anthropic's Game-Changing Playbook"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use screen recordings with live cursor tracking",
-            "Include chapter markers for easy navigation",
-            "Use picture-in-picture for personal connection and demonstration"
+            "Use screen recordings showing actual partnership interface",
+            "Include PiP expert commentary for credibility",
+            "Create clear chapter markers for tutorial navigation"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Dynamic, tech-forward aesthetic with clean Figma-inspired blue and white color palette. High-contrast typography with bold sans-serif headings. Animated transitions between workflow steps. Subtle motion graphics highlighting key interface elements. Grid-based composition emphasizing systematic design principles."
+        "description": "Dynamic blue-gray corporate palette with electric accent colors. Geometric motion graphics showing interconnected enterprise systems. Clean, technical typography with subtle tech-inspired animations. Sleek infographic transitions emphasizing step-by-step learning. Minimalist illustrations of AI/human collaboration."
       },
       "exampleOutline": [
-        "Section 1: High-Energy Hook - Why Design Systems Matter",
-        "Section 2: Current Design System Challenges",
-        "Section 3: Step-by-Step Workflow Optimization Techniques",
-        "Section 4: Pro Tips and Hidden Figma Features",
-        "Section 5: Call-to-Action and Next Steps"
+        "Introduction: Partnership Landscape Overview",
+        "Context: Enterprise AI Challenges",
+        "Step-by-Step: Implementing Anthropic AI in Accenture",
+        "Technical Deep Dive: Integration Mechanisms",
+        "Future Implications & Actionable Insights"
       ],
-      "hashtags": "#FigmaDesign #DesignSystems #ProductDesign #UIDesign #DesignWorkflow #CreativeProcess #DesignTips #AdobeXD #Prototyping #DesignTechnology",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
+      "hashtags": "#AI #EnterpriseAI #Anthropic #Accenture #ArtificialIntelligence #BusinessStrategy #TechInnovation #AIPartnership #CorporateTech #FutureOfWork",
+      "textureIndex": 0
+    },
+    {
+      "title": "Pebble&#8217;s founder introduces a $75 AI smart ring for recording brief notes with a press of a button",
+      "description": "After rebooting the Pebble smartwatch, founder Eric Migicovsky is expanding his company's device lineup with a new smart wearable: an AI-powered smart ring known as Index 01. Named for the finger where the ring is meant to be worn, the new $75 ring is not meant to be a competitor to the always-on, always-listening AI devices, like the AI pendant Friend, but instead offers a way to record quick notes and reminders with a press of a button on the ring's side.\n\nAI only comes into play via the open ",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/09/pebbles-founder-introduces-a-75-ai-smart-ring-for-recording-brief-notes-with-a-press-of-a-button/"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "The $75 AI Ring That Could Change Everything",
+        "One Button, Infinite Possibilities: Meet Index 01",
+        "Pebble's Founder Reinvents Wearable Technology"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use cinematic B-roll of hands interacting with ring",
+            "Include founder interview with dynamic lighting and composition",
+            "Create chapter markers highlighting technical and design insights"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast minimalist aesthetic with tech-futurist color palette (deep blues, electric whites, silver accents). Clean, angular compositions emphasizing the ring's minimalist design. Typography: sans-serif, geometric, with subtle motion graphics revealing technical specifications. Incorporate subtle holographic/translucent overlays to suggest AI intelligence."
+      },
+      "exampleOutline": [
+        "Opening: Dramatic reveal of Index 01 ring",
+        "Context: The problem with current note-taking technologies",
+        "Deep Dive: Eric Migicovsky's design philosophy and innovation",
+        "Technical Breakdown: How the ring's one-button AI works",
+        "Future Vision: Implications for wearable technology"
+      ],
+      "hashtags": "#AIRing #WearableTech #Innovation #Pebble #SmartDevice #TechDesign #FutureOfTech #WearableAI #TechInnovation #ProductDesign",
+      "textureIndex": 2
     },
     {
       "title": "Mistral AI surfs vibe coding tailwinds with new coding models",
@@ -239,34 +179,33 @@
       "format": "video",
       "subcategory": "thought-leadership",
       "hooks": [
-        "French AI is rewriting coding's future",
-        "Mistral's game-changing dev models explained",
-        "Inside the code revolution: Mistral's new AI"
+        "How Mistral AI is Rewriting Coding's Future",
+        "French AI's Radical New Coding Breakthrough",
+        "Devstral 2: The Coding Model That Changes Everything"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use screen recordings of actual Devstral 2 code generation",
-            "Include side-by-side comparisons with existing coding models",
+            "Use screen recording of actual Devstral 2 interface",
+            "Include side-by-side code comparison demos",
             "Create dynamic code animation transitions between segments"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-energy tech aesthetic with electric blue/deep purple gradient backgrounds, dynamic code visualization with holographic overlay effects, sleek sans-serif typography, fast-paced motion graphics showing code generation in real-time, minimalist but high-tech visual language reminiscent of cyberpunk design"
+        "description": "High-contrast electric blue and deep indigo color palette, futuristic tech-inspired motion graphics, sleek sans-serif typography with dynamic code-like animated text reveals, picture-in-picture developer workspace overlays, subtle glitch/tech transition effects"
       },
       "exampleOutline": [
-        "Opening: Dramatic AI coding demonstration",
-        "Context: Current limitations in developer AI tools",
-        "Mistral's Approach: Devstral 2 technical breakdown",
-        "Comparative Analysis: How it differs from competitors",
-        "Future Implications: What this means for developers"
+        "Opening: Provocative AI coding landscape overview",
+        "Mistral AI's Competitive Context",
+        "Devstral 2 Technical Capabilities Deep Dive",
+        "Potential Industry Impact & Innovation",
+        "Call-to-Action: Explore Mistral AI Resources"
       ],
-      "hashtags": "#MistralAI #CodeGeneration #AIInnovation #SoftwareDevelopment #TechTrends #AIModels #DeveloperTools #FrenchTech #CodingAI #TechInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 8
+      "hashtags": "#MistralAI #CodingAI #AIInnovation #TechBreakthrough #DeveloperTools #AIModels #FrenchTech #CodeGeneration #MachineLearning #SoftwareDevelopment",
+      "textureIndex": 12
     }
   ]
 }
