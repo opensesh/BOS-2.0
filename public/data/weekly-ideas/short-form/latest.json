@@ -1,363 +1,330 @@
 {
   "type": "short-form",
-  "date": "2025-12-10T16:22:59.617Z",
+  "date": "2025-12-10T16:28:30.102Z",
   "ideas": [
     {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
+      "title": "Amazon changes how copyright protection is applied to Kindle Direct&#8217;s self-published ebooks",
+      "description": "Amazon says its Kindle Direct DRM-free titles will be available as PDFs and EPUB files going forward.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Visla",
-          "url": "https://www.visla.us/blog/news/figma-transforms-itself-with-new-ai-features-at-config-2025/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/welcome-weavy-to-figma/"
-        },
-        {
-          "name": "Mezha",
-          "url": "https://mezha.net/eng/bukvy/figma-launches-ai-powered-image-editing-features-for-designers/"
-        }
-      ],
-      "format": "quick-image",
-      "subcategory": "quick-image",
-      "hooks": [
-        "AI just revolutionized image editing in Figma 🚀",
-        "3 mind-blowing Figma image tools drop today",
-        "Design precision just got superpowered 🤯"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use fast-paced screen recordings showing tool transitions",
-            "Include side-by-side before/after image edits",
-            "Add energetic music that matches editing rhythm"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Teaser graphic with tool icons",
-            "Use clean, high-contrast design comparisons",
-            "Include minimal text explaining each tool's superpower"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected visual glitch/transition",
-            "Use screen capture with dynamic cursor movements",
-            "Highlight 3 tools in rapid succession"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame as professional workflow enhancement",
-            "Include data/efficiency metrics",
-            "Use more technical, detailed visual explanation"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-energy cyberpunk-inspired design with neon gradients, sharp geometric transitions, holographic UI elements. Incorporate glitch effects, transparent overlays. Typography should feel futuristic yet readable. Color palette: electric blue, deep purple, bright cyan. Emphasize motion and transformation between editing states."
-      },
-      "exampleOutline": [
-        "Section 1: Provocative visual hook",
-        "Section 2: Design workflow pain point",
-        "Section 3: Quick demo of 3 AI tools",
-        "Section 4: Transformative potential revealed",
-        "Section 5: Try now / Learn more CTA"
-      ],
-      "hashtags": "#FigmaAI #DesignTech #CreativeTech #AIDesign #ProductivityHack #DesignTools #CreativeWorkflow #TechInnovation #AICreativity #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8014542/pexels-photo-8014542.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
-    },
-    {
-      "title": "Google’s first AI glasses expected next year",
-      "description": "Google is working on various types of AI-powered glasses — one model is designed for screen-free assistance, using built-in speakers, microphones, and cameras to allow the user to communicate with Gemini and take photos. The other model has an in-lens display — which is only visible to the person wearing the glasses — that can show turn-by-turn directions or closed captioning.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2025/12/09/googles-first-ai-glasses-expected-next-year/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=g1wSDK7Jfs0"
-        }
-      ],
-      "format": "quick-image",
-      "subcategory": "quick-image",
-      "hooks": [
-        "AI Glasses: The Future Watching You Watch",
-        "Google's Secret Weapon: Glasses That Think",
-        "Invisible Tech, Visible Revolution"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick jump cuts between glasses mockup and real-world scenarios",
-            "Start with dramatic close-up of glasses frame",
-            "Include subtle motion graphic overlays showing AI interaction"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Provocative teaser image of glasses",
-            "Use progressive reveal of features across slides",
-            "Final slide includes call-to-action and speculation"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Open with unexpected POV perspective through glasses lens",
-            "Use text overlays to highlight key technological features",
-            "Include rapid-fire visual metaphors for AI capabilities"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame as professional technological breakthrough",
-            "Include data visualization of potential market impact",
-            "Use more technical language and industry context"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 8,
-        "description": "Cyberpunk-meets-minimalism aesthetic. High-contrast metallic grays with electric blue accents. Futuristic, slightly translucent typography. Dynamic angular compositions suggesting technological movement. Glitch-inspired graphic elements. Semi-transparent glass/tech overlay effects."
-      },
-      "exampleOutline": [
-        "Section 1: Provocative Visual Hook",
-        "Section 2: Technology Disruption Context",
-        "Section 3: Google's AI Glasses Capabilities",
-        "Section 4: Potential Real-World Implications",
-        "Section 5: Speculative Future Invitation"
-      ],
-      "hashtags": "#AIGlasses #GoogleTech #FutureOfWearables #AIInnovation #TechTrends #WearableTech #ArtificialIntelligence #NextGenTech #InnovationWatch #TechFuture",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 9
-    },
-    {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/products/page/3"
-        }
-      ],
-      "format": "story",
-      "subcategory": "story",
-      "hooks": [
-        "Design Templates That Work Smarter, Not Harder 🚀",
-        "Unlock Figma's Secret Brand Scaling Superpowers",
-        "Build Flexible Brand Templates in 8 Easy Steps"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick screen transitions between template examples",
-            "Add dynamic motion graphics highlighting key template areas",
-            "Include fast-paced voiceover explaining template strategies"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "Create a slide-by-slide breakdown of template principles",
-            "Use consistent color-coded design for each template tip",
-            "Include interactive swipe-up annotations on key insights"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Begin with unexpected visual template transformation",
-            "Use split-screen comparisons of rigid vs flexible designs",
-            "Add quick text overlays explaining complex concepts"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame content as professional design methodology",
-            "Include data-driven insights about template efficiency",
-            "Use more technical language and design process details"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-energy, experimental design aesthetic with dynamic gradients, floating geometric shapes, and translucent overlays. Use a vibrant color palette with electric blues, deep purples, and neon accents. Typography should feel modern and slightly disruptive - sans-serif with unexpected weight shifts. Incorporate subtle motion graphics that suggest template flexibility and technological innovation."
-      },
-      "exampleOutline": [
-        "Section 1: Attention-grabbing visual showing template chaos/transformation",
-        "Section 2: Problem statement - design limitations in brand scaling",
-        "Section 3: 8 sequential template design principles",
-        "Section 4: Real-world template success case study snippet",
-        "Section 5: Call-to-action with free resource link"
-      ],
-      "hashtags": "#FigmaDesign #BrandTemplates #AIDesign #CreativeTools #DesignSystem #ProductivityHacks #DesignStrategy #BrandIdentity #CreativeTips #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8014528/pexels-photo-8014528.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 10
-    },
-    {
-      "title": "Why Cursor’s CEO believes OpenAI, Anthropic competition won’t crush his startup",
-      "description": "After reaching $1 billion in annualized revenue, Anysphere CEO Michael Truell explained the features his company is focused on building out.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2025/12/09/why-cursors-ceo-believes-openai-anthropic-competition-wont-crush-his-startup/"
-        }
-      ],
-      "format": "reel",
-      "subcategory": "reel",
-      "hooks": [
-        "AI Startups: How Cursor Survives Big Tech Giants",
-        "Billion-Dollar Startup's Secret Weapon Revealed",
-        "David vs Goliath: Small AI Startup's Bold Move"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use dynamic text overlays highlighting key startup stats",
-            "Create quick visual transitions between startup founder and competitive landscape",
-            "Include motion graphics showing AI competitive landscape"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must capture startup valuation dramatically",
-            "Use infographic-style slides comparing startup vs big tech",
-            "Final slide includes clear call-to-action or learning moment"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected visual metaphor about startup competition",
-            "Use fast-paced editing to maintain viewer attention",
-            "Include founder soundbite or key quote as centerpiece"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame content as professional insight/thought leadership",
-            "Use more technical language and data-driven approach",
-            "Include subtle personal branding element for founder"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast tech-inspired color palette (deep blues, electric teals, stark whites), geometric motion graphics showing competitive landscape, futuristic sans-serif typography, dynamic split-screen and overlay animations suggesting complexity and innovation"
-      },
-      "exampleOutline": [
-        "Hook: Startup survival in AI giants' world",
-        "Quick context of Cursor's $1B milestone",
-        "Key competitive advantages explained visually",
-        "Founder's strategic perspective highlighted",
-        "Future potential and call-to-learn more"
-      ],
-      "hashtags": "#AIStartups #TechInnovation #StartupStrategy #AICompetition #CursorAI #TechFounders #InnovationEconomy #AITrends #StartupLife #TechInsights",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 5
-    },
-    {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/10/amazon-changes-how-copyright-protection-is-applied-to-kindle-directs-self-published-ebooks/"
         }
       ],
       "format": "carousel",
       "subcategory": "carousel",
       "hooks": [
-        "Design nerds: How we crafted Figma's perfect typeface",
-        "Typography secret: Inside Figma's brand evolution",
-        "Beyond pixels: The story of Figma Sans"
+        "Amazon's Kindle Bombshell: eBook Revolution Incoming 💥",
+        "Self-Publishers: Your Digital Rights Just Changed Forever",
+        "Free Your eBooks: Amazon's Radical New Move"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick cuts between typeface development stages",
-            "Include designer interview snippets for human connection",
-            "Add dynamic text animations showcasing font details"
+            "Use quick animated transitions between slides",
+            "Add dynamic text overlays highlighting key changes",
+            "Include a voiceover explaining the transformation"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide must have bold, attention-grabbing font sample",
-            "Use slide transitions to simulate design process progression",
-            "Include annotated design details on each slide"
+            "First slide must have maximum visual intrigue",
+            "Use data visualization for copyright/file format changes",
+            "Create infographic-style design with clear hierarchy"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Compress story into 60-second visual narrative",
-            "Use voiceover to explain technical design choices",
-            "Include before/after comparisons of typeface development"
+            "Compress narrative into 60-second storytelling arc",
+            "Use screen recordings showing new file options",
+            "Add energetic background music"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Add professional context about brand design strategy",
-            "Include technical design rationale and process insights",
-            "Highlight collaborative community-driven approach"
+            "Frame as industry transformation, not just news",
+            "Include expert commentary perspective",
+            "Use more formal, analytical visual language"
           ]
         }
       ],
       "visualDirection": {
-        "rating": 8,
-        "description": "Bold, experimental typography-focused design with high-contrast color palette. Geometric compositions highlighting letterform details. Dynamic motion graphics simulating type design process. Clean, technical aesthetic with playful experimental elements. Color scheme of deep blues, bright corals, and neutral grays. Typography-as-art approach with close-up type details and process visualizations."
+        "rating": 7,
+        "description": "Bold, tech-futurist aesthetic with electric blue/deep purple gradient background. Geometric typography overlaid on abstract digital texture. Minimal but high-contrast design with clean iconography representing file formats and digital transformation. Incorporate subtle glitch/digital distortion effects."
       },
       "exampleOutline": [
-        "Slide 1: Provocative hook about typeface design",
-        "Slide 2: Why Figma needed a custom typeface",
-        "Slide 3: Design constraints and creative challenges",
-        "Slide 4: Key visual development stages",
-        "Slide 5: Final typeface showcase and design philosophy"
+        "Slide 1: Provocative Hook/Visual Teaser",
+        "Slide 2: Amazon's Specific Policy Change",
+        "Slide 3: What DRM-Free Actually Means",
+        "Slide 4: Impact for Self-Published Authors",
+        "Slide 5: Call-to-Action/Next Steps"
       ],
-      "hashtags": "#DesignTips #Typography #FigmaDesign #BrandIdentity #CreativeProcess #AIDesign #ProductDesign #TypeDesign #BrandEvolution #DesignCommunity",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "hashtags": "#AmazonKindle #eBookRevolution #SelfPublishing #DigitalRights #TechNews #BookTech #PublishingInnovation #CreatorEconomy #AIContent #FutureOfBooks",
+      "textureIndex": 3
+    },
+    {
+      "title": "ChatGPT is Apple&#8217;s most downloaded app of 2025 in the US",
+      "description": "This is ChatGPT's first year as the No. 1 app on the U.S. App Store by downloads.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/10/chatgpt-is-apples-most-downloaded-app-of-2025-in-the-us/"
+        }
+      ],
+      "format": "carousel",
+      "subcategory": "carousel",
+      "hooks": [
+        "ChatGPT: The App That Conquered America's Smartphones",
+        "How AI Became America's Most Downloaded App",
+        "2025's Digital Revolution: ChatGPT Takes Over"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic text animations between slides",
+            "Include quick statistic reveals with motion graphics",
+            "Create smooth slide transitions that feel like a story"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have a striking visual statistic",
+            "Use square 1:1 or 4:5 aspect ratio for maximum readability",
+            "Design each slide as a standalone visual that connects to overall narrative"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Condense carousel content into 60-second narrative arc",
+            "Add voiceover explaining key points",
+            "Use fast-paced editing to maintain viewer engagement"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add more detailed professional context about AI adoption",
+            "Include industry analysis and potential implications",
+            "Use more formal, data-driven language"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast color palette with electric blue and deep navy. Futuristic, tech-inspired typography with glitch/digital overlay effects. Minimalist infographic style with bold numerical treatments. Incorporate subtle AI/circuit-like background textures. Use geometric shapes to frame statistics and key insights."
+      },
+      "exampleOutline": [
+        "Section 1: Bold headline with app download statistic",
+        "Section 2: Context of AI app market in 2025",
+        "Section 3: ChatGPT's growth trajectory and user impact",
+        "Section 4: What this means for technology adoption",
+        "Section 5: Call-to-action about AI's future"
+      ],
+      "hashtags": "#ChatGPT #AIRevolution #TechTrends #AppStore #ArtificialIntelligence #TechInnovation #DigitalTransformation #FutureOfTech #AIApp #TechnologyNews",
+      "textureIndex": 10
+    },
+    {
+      "title": "Amazon now offers same-day delivery of perishable groceries in 2,300 US cities",
+      "description": "The e-commerce giant says it will expand the service to additional cities in 2026.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/10/amazon-now-offers-same-day-delivery-of-perishable-groceries-in-2300-us-cities/"
+        }
+      ],
+      "format": "reel",
+      "subcategory": "reel",
+      "hooks": [
+        "Amazon's grocery game just changed forever 🚀",
+        "Same-day delivery revolution hits 2,300 cities 🛒",
+        "Instant groceries: The future is now 🥬"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use fast-paced jump cuts to maintain energy",
+            "Include dynamic text overlays highlighting key stats",
+            "Incorporate motion graphics showing delivery process"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have shocking stat/headline",
+            "Use infographic-style slides with clean data visualization",
+            "Final slide should include call-to-action or key takeaway"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Open with unexpected visual metaphor about speed",
+            "Use voiceover to explain complex logistics quickly",
+            "Include surprising b-roll of delivery technology"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as industry disruption narrative",
+            "Include professional insights about e-commerce trends",
+            "Use more technical, data-driven language"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy, tech-forward aesthetic with electric blue and neon accent colors. Dynamic diagonal compositions, floating holographic delivery icons, rapid transitions between urban/tech scenes. Modern sans-serif typography with slight motion. Blend of realistic delivery imagery and abstract geometric overlays."
+      },
+      "exampleOutline": [
+        "Hook: Shocking delivery speed statistic",
+        "Problem: Traditional grocery shopping limitations",
+        "Solution: Amazon's nationwide same-day delivery",
+        "Impact: How this changes consumer experience",
+        "Call-to-Action: Explore new delivery options"
+      ],
+      "hashtags": "#AmazonDelivery #FutureOfGroceries #TechInnovation #EcommerceTrends #SmartDelivery #AILogistics #ConsumerTech #RetailRevolution #SpeedyGroceries #InnovationNation",
+      "textureIndex": 8
+    },
+    {
+      "title": "Oboe raises $16 million from a16z for its AI-powered course generation platform",
+      "description": "Oboe has raised $16 million in funding for its learning app. The company now lets users generate unlimited courses for free.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/10/oboe-raises-16-million-from-a16z-for-its-ai-powered-course-generation-platform/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "AI Just Democratized Course Creation Forever 🚀",
+        "Unlimited Learning: $16M Funding Drops",
+        "Course Generation Goes Viral with AI"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic text overlay animation",
+            "Show funding amount with dramatic reveal",
+            "Include quick AI course generation demo"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Dramatic funding announcement",
+            "Include investor logo (a16z) prominently",
+            "Use infographic-style slides explaining platform"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected visual metaphor",
+            "Use quick cuts between funding/platform screens",
+            "Include founder or product screenshot"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "More professional, data-driven visual approach",
+            "Highlight potential impact on professional learning",
+            "Include credible source quote/screenshot"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold futuristic design with electric blue/neon accent colors, floating holographic UI elements, clean sans-serif typography, dynamic motion graphics showing course generation process, minimal but high-tech aesthetic blending tech startup energy with educational innovation"
+      },
+      "exampleOutline": [
+        "Hook: Funding Breakthrough Splash",
+        "Problem: Traditional Course Creation Limitations",
+        "Solution: Oboe's AI Platform",
+        "Key Insight: Democratizing Learning Technology",
+        "Call to Action: Explore Platform"
+      ],
+      "hashtags": "#AILearning #EdTech #CourseCreation #AIEducation #FutureOfLearning #StartupFunding #TechInnovation #OnlineCourses #LearningTechnology #AITools",
+      "textureIndex": 11
+    },
+    {
+      "title": "Google launches managed MCP servers that let AI agents simply plug into its tools",
+      "description": "Google is rolling out managed MCP servers to make its services “agent-ready by design,” starting with Maps and BigQuery, aiming to simplify messy integrations and help AI agents use real tools.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/10/google-is-going-all-in-on-mcp-servers-agent-ready-by-design/"
+        }
+      ],
+      "format": "story",
+      "subcategory": "story",
+      "hooks": [
+        "AI Agents Just Got Their Google Superpower 🚀",
+        "Google's Secret Weapon for Smart Agents Revealed",
+        "MCP Servers: The AI Integration Game Changer"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick screen transitions to simulate 'plugging in'",
+            "Animate tech connection metaphors dynamically",
+            "Include text overlays explaining complex concepts quickly"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "Create slide progression showing agent integration stages",
+            "Use isometric design for technical visualizations",
+            "Add bite-sized technical explanations on each slide"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with provocative question about AI limitations",
+            "Use split-screen comparisons of before/after integration",
+            "Include rapid-fire technical graphics"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as strategic technology evolution",
+            "Include potential enterprise impact statistics",
+            "Use more detailed technical language"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Cyberpunk-inspired tech aesthetic with neon blues/purples, glowing circuit-like transitions, isometric grid backgrounds, floating holographic UI elements, high-contrast typography in sharp geometric fonts, subtle motion graphics suggesting seamless digital integration"
+      },
+      "exampleOutline": [
+        "Section 1: Provocative Hook - What's Blocking AI Agents?",
+        "Section 2: The Integration Problem Visualized",
+        "Section 3: Google's MCP Server Solution",
+        "Section 4: Real-World Impact Demonstration",
+        "Section 5: Future of Intelligent Systems CTA"
+      ],
+      "hashtags": "#AIInnovation #GoogleTech #AIAgents #TechTrends #FutureOfComputing #MachineLearning #TechInnovation #AIIntegration #GoogleCloud #IntelligentSystems",
       "textureIndex": 6
     }
   ]

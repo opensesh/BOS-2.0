@@ -1,244 +1,211 @@
 {
   "type": "long-form",
-  "date": "2025-12-10T16:22:59.617Z",
+  "date": "2025-12-10T16:29:15.512Z",
   "ideas": [
     {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
+      "title": "ElevenLabs just hit a $6.6B valuation. Its CEO says the real money isn&#8217;t in voice anymore.",
+      "description": "ElevenLabs&#160;has made a name for&#160;itself&#160;building realistic AI voices.&#160;&#160; What started as two Polish engineers annoyed by terrible movie dubbing has grown into a profitable company now valued at $6.6 billion, doubling from just nine months ago. The company recently announced a $100 million tender offer led by Sequoia and ICONIQ, with participation from a16z and others, as [&#8230;]",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Visla",
-          "url": "https://www.visla.us/blog/news/figma-transforms-itself-with-new-ai-features-at-config-2025/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/welcome-weavy-to-figma/"
-        },
-        {
-          "name": "Mezha",
-          "url": "https://mezha.net/eng/bukvy/figma-launches-ai-powered-image-editing-features-for-designers/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/elevenlabs-just-hit-a-6-6b-valuation-its-ceo-says-the-real-money-isnt-in-voice-anymore/"
         }
       ],
       "format": "livestream",
       "subcategory": "leadership",
       "hooks": [
-        "AI is transforming Figma: 3 game-changing editing tools revealed!",
-        "Design faster: Figma's new AI image magic unleashed",
-        "Never edit images the same way again"
+        "AI Voice Gold Rush: ElevenLabs' Surprising Pivot",
+        "Billion-Dollar Voice Tech: What's Next?",
+        "Beyond Voice: ElevenLabs' Secret Strategy Revealed"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use live chat for real-time audience interaction during tool demonstrations",
-            "Enable live Q&A segments between tool explanations",
-            "Prepare pre-submitted audience questions about AI image editing"
+            "Use live chat to crowdsource Q&A questions in real-time",
+            "Enable Super Chat to increase viewer engagement",
+            "Create a dynamic lower-third graphic with real-time valuation tracker"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-energy dynamic visuals with neon-accented tech color palette, floating holographic UI elements, rapid screen transitions showcasing tool capabilities, bold sans-serif typography with motion-tracked text animations, clean futuristic composition emphasizing precision and speed"
+        "description": "Futuristic tech-noir palette with electric blue and deep charcoal accents. Dynamic motion graphics showing valuation growth with animated data visualization. Clean, angular typography with glitch-inspired transitions. Picture-in-picture split screen for live commentary and supporting graphics. Subtle holographic overlay elements to emphasize tech innovation theme."
       },
       "exampleOutline": [
-        "Section 1: High-energy livestream intro & audience welcome",
-        "Section 2: Current image editing pain points in design",
-        "Section 3: Detailed walkthrough of 3 new AI tools",
-        "Section 4: Live demonstration and real-time audience interaction",
-        "Section 5: Future of AI in design closing CTA"
+        "Section 1: High-Energy Live Stream Intro & Personal Connection",
+        "Section 2: ElevenLabs Journey - From Startup to $6.6B",
+        "Section 3: Decoding the AI Voice Market Shifts",
+        "Section 4: Future Predictions & Strategic Insights",
+        "Section 5: Interactive Q&A and Community Engagement"
       ],
-      "hashtags": "#FigmaAI #DesignTools #AIDesign #CreativeTech #ImageEditing #DesignInnovation #AICreativity #ProductDesign #TechLivestream #CreativeWorkflow",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7245606/pexels-photo-7245606.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 2
+      "hashtags": "#AIVoiceTech #ElevenLabs #StartupSuccess #AIInnovation #TechValuation #VoiceAI #StartupStrategy #AITrends #InvestmentInsights #TechPodcast",
+      "textureIndex": 9
     },
     {
-      "title": "Google’s first AI glasses expected next year",
-      "description": "Google is working on various types of AI-powered glasses — one model is designed for screen-free assistance, using built-in speakers, microphones, and cameras to allow the user to communicate with Gemini and take photos. The other model has an in-lens display — which is only visible to the person wearing the glasses — that can show turn-by-turn directions or closed captioning.",
+      "title": "ChatGPT is Apple&#8217;s most downloaded app of 2025 in the US",
+      "description": "This is ChatGPT's first year as the No. 1 app on the U.S. App Store by downloads.",
       "starred": false,
       "sources": [
         {
           "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2025/12/09/googles-first-ai-glasses-expected-next-year/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=g1wSDK7Jfs0"
-        }
-      ],
-      "format": "tutorial",
-      "subcategory": "instructional",
-      "hooks": [
-        "AI Glasses: Your Personal Tech Revolution Starts Here",
-        "Decode Google's Next-Gen Wearable Tech in 5 Steps",
-        "Future-Proof Your Tech: Google's AI Glasses Unveiled"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use screen recording to simulate glasses interface",
-            "Include side-by-side comparison of current vs future tech",
-            "Create chapter markers for each tutorial step"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast tech-futuristic aesthetic with electric blue and charcoal gray. Dynamic motion graphics simulating AR overlay. Clean, geometric typography with subtle transparency. Incorporate holographic UI elements and smooth transitions between tutorial steps. Reference Cyberpunk 2077 UI and Apple product reveal aesthetics."
-      },
-      "exampleOutline": [
-        "Introduction: The AI Glasses Revolution",
-        "Understanding Google's Two AI Glasses Models",
-        "Step-by-Step Breakdown of Technical Features",
-        "Potential Use Cases and Future Implications",
-        "How to Prepare for Wearable AI Technology"
-      ],
-      "hashtags": "#AIGlasses #GoogleTech #WearableTech #FutureTechnology #ArtificialIntelligence #TechTutorial #InnovationGuide #AIWearables #TechInnovation #FutureOfTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
-    },
-    {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/products/page/3"
-        }
-      ],
-      "format": "documentary",
-      "subcategory": "framework",
-      "hooks": [
-        "Design Templates That Survive Corporate Brand Chaos",
-        "Figma Secrets: How Pro Designers Create Unbreakable Templates",
-        "Brand Guardrails: Templates That Never Compromise"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use cinematic B-roll showing real design team workflows",
-            "Include dynamic screen recordings with designer commentary",
-            "Create chapter markers for each template strategy tip"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast color palette with deep navy and electric blue accents. Dynamic split-screen compositions showing template before/after states. Animated typography revealing design principles. Clean, modern motion graphics with technical precision. Reference visual style: Vox design documentaries, Apple product launch videos."
-      },
-      "exampleOutline": [
-        "Cold Open: Designer Struggling with Broken Brand Template",
-        "The Hidden Complexity of Corporate Design Systems",
-        "8 Strategic Template Design Principles",
-        "Case Studies: Successful Template Implementation",
-        "Final Call-to-Action: Transform Your Design Workflow"
-      ],
-      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystem #CreativeWorkflow #ProductDesign #DesignTips #AIDesign #CreativeTech #TemplateDesign #DesignStrategy",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
-    },
-    {
-      "title": "Why Cursor’s CEO believes OpenAI, Anthropic competition won’t crush his startup",
-      "description": "After reaching $1 billion in annualized revenue, Anysphere CEO Michael Truell explained the features his company is focused on building out.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2025/12/09/why-cursors-ceo-believes-openai-anthropic-competition-wont-crush-his-startup/"
+          "url": "https://techcrunch.com/2025/12/10/chatgpt-is-apples-most-downloaded-app-of-2025-in-the-us/"
         }
       ],
       "format": "video",
       "subcategory": "thought-leadership",
       "hooks": [
-        "AI Startup Defies Tech Giants: Cursor's Bold Strategy",
-        "How This $1B Startup Outsmarts OpenAI",
-        "Billion-Dollar AI Underdog: The Insider's Playbook"
+        "ChatGPT: How One App Conquered the App Store in 2025",
+        "The AI App That Broke Every Download Record",
+        "Inside ChatGPT's Explosive Rise to #1"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use dynamic screen recordings showing Cursor's interface",
-            "Create picture-in-picture with CEO interview segments",
-            "Design engaging chapter markers highlighting key insights"
+            "Use screen recordings showing App Store download charts",
+            "Include picture-in-picture with AI/tech commentary",
+            "Create dynamic motion graphics illustrating download trends"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, tech-forward aesthetic with electric blue and deep charcoal color palette. Dynamic motion graphics overlaying startup footage. Modern sans-serif typography with aggressive angular cuts. Animated data visualizations showing startup growth. High-contrast visual language that suggests innovation and disruption."
+        "description": "Bold, tech-futuristic aesthetic with electric blue and deep purple color palette. Dynamic motion graphics showing app download trajectories. Clean, sans-serif typography with slight digital distortion. Incorporate holographic UI elements and animated data visualizations. Aesthetic references: Cyberpunk design, Apple marketing visuals, tech futurism"
       },
       "exampleOutline": [
-        "Cold Open: Dramatic startup growth statistic",
-        "Context: AI competitive landscape overview",
-        "Michael Truell's Strategic Vision: Key Differentiators",
-        "Technical Deep Dive: Cursor's Unique Product Features",
-        "Future Projection & Audience Call-to-Action"
+        "Opening: Dramatic reveal of ChatGPT's download milestone",
+        "Context: AI's transformative year and market disruption",
+        "Deep Dive: How ChatGPT changed user expectations",
+        "Analysis: Implications for tech and AI ecosystem",
+        "Closing: Future predictions and call to engagement"
       ],
-      "hashtags": "#AIStartup #TechInnovation #CursorAI #StartupStrategy #AICompetition #TechCEO #AITechnology #InnovationInsights #StartupSuccess #AIFuture",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 6
+      "hashtags": "#ChatGPT #AIRevolution #TechTrends #AppStoreSucess #ArtificialIntelligence #TechInnovation #DownloadRecord #AIApp #OpenAI #TechFuture",
+      "textureIndex": 4
     },
     {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
+      "title": "Google launches managed MCP servers that let AI agents simply plug into its tools",
+      "description": "Google is rolling out managed MCP servers to make its services “agent-ready by design,” starting with Maps and BigQuery, aiming to simplify messy integrations and help AI agents use real tools.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/10/google-is-going-all-in-on-mcp-servers-agent-ready-by-design/"
         }
       ],
       "format": "documentary",
       "subcategory": "framework",
       "hooks": [
-        "How a font redesigned Figma's entire brand identity",
-        "The secret language of design: Figma Sans revealed",
-        "Typography that transformed a product design platform"
+        "AI Agents' New Highway: Google's Radical Server Revolution",
+        "Inside Google's Master Plan for AI Tool Integration",
+        "How Google Is Rewriting AI's Infrastructure Rulebook"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use archival/behind-the-scenes footage of design process",
-            "Include expert talking head interviews with Figma designers",
-            "Create dynamic motion graphics showing typeface evolution"
+            "Use archival/tech footage as B-roll to illustrate server infrastructure",
+            "Include dynamic screen recordings of actual MCP server interfaces",
+            "Create visual metaphors comparing old vs new AI integration models"
           ]
         }
       ],
       "visualDirection": {
-        "rating": 8,
-        "description": "High-contrast color palette with Figma's brand blues and grays. Dynamic split-screen compositions showing type design process. Kinetic typography animations revealing font construction. Clean, technical aesthetic with moments of creative surprise. Reference: Swiss design modernism meets contemporary tech visualization."
+        "rating": 7,
+        "description": "High-tech cyberpunk aesthetic with deep blues/electric teals, translucent data overlays, dynamic grid-based compositions, futuristic sans-serif typography, motion graphics simulating data flow and network connections, subtle glitch/digital artifact effects to emphasize technological transformation"
       },
       "exampleOutline": [
-        "Cold open: Dramatic reveal of typeface design process",
-        "The design challenge: Why Figma needed a custom font",
-        "Behind-the-scenes of font creation with design team",
-        "How Figma Sans reflects product and community evolution",
-        "Future of design tools and brand identity closing"
+        "Cold Open: Dramatic visualization of current AI integration challenges",
+        "Historical Context: Evolution of AI infrastructure limitations",
+        "Google's MCP Server Breakthrough: Technical Deep Dive",
+        "Implications for AI Developers and Future Technology",
+        "Call-to-Action: Explore Google's New AI Integration Ecosystem"
       ],
-      "hashtags": "#FigmaSans #DesignSystem #Typography #BrandIdentity #ProductDesign #CreativeProcess #TypeDesign #DesignTech #BehindTheScenes #CreativeCommunity",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
+      "hashtags": "#GoogleAI #AIInfrastructure #TechInnovation #AIServers #MachineLearning #GoogleCloud #AIIntegration #TechTrends #FutureOfComputing #AIArchitecture",
+      "textureIndex": 11
+    },
+    {
+      "title": "The AI that scored 95% — until consultants learned it was AI",
+      "description": "Presented by SAPWhen SAP ran a quiet internal experiment to gauge consultant attitudes toward AI, the results were striking. Five teams were asked to validate answers to more than 1,000 business requirements completed by SAP’s AI co-pilot, Joule for Consultants — a workload that would normally take several weeks.Four teams were told the analysis had been completed by junior interns fresh out of school. They reviewed the material, found it impressive, and rated the work about 95% accurate.The fif",
+      "starred": false,
+      "sources": [
+        {
+          "name": "VentureBeat AI",
+          "url": "https://venturebeat.com/ai/the-ai-that-scored-95-until-consultants-learned-it-was-ai"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "How AI Fooled Top Consultants: Exact Playbook",
+        "AI Scoring 95%: Insider Validation Secrets",
+        "Cracking the AI Performance Evaluation Code"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use side-by-side screen comparisons of AI vs human work",
+            "Include interactive timestamps for key methodology steps",
+            "Incorporate animated graphics showing percentage breakdowns"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast blue and white color palette with dynamic geometric overlays. Typography using sharp, technical sans-serif fonts. Motion graphics highlighting percentage comparisons with fluid, data-driven animations. Clean, technical aesthetic with subtle futuristic undertones. Incorporate transparent data visualization layers and subtle parallax effects."
+      },
+      "exampleOutline": [
+        "Introduction: SAP's Surprising AI Validation Experiment",
+        "Context: Traditional Consultant Evaluation Challenges",
+        "Step-by-Step: AI Performance Validation Methodology",
+        "Key Insights: How AI Outperformed Human Expectations",
+        "Actionable Takeaways: Implementing AI Evaluation Strategies"
+      ],
+      "hashtags": "#AIInnovation #BusinessTechnology #AIConsulting #SAPTech #AIPerformance #FutureOfWork #TechTutorial #AIEvaluation #InnovationStrategy #EnterpriseAI",
+      "textureIndex": 4
+    },
+    {
+      "title": "OpenAI report reveals a 6x productivity gap between AI power users and everyone else",
+      "description": "The tools are available to everyone. The subscription is company-wide. The training sessions have been held. And yet, in offices from Wall Street to Silicon Valley, a stark divide is opening between workers who have woven artificial intelligence into the fabric of their daily work and colleagues who have barely touched it.The gap is not small. According to a new report from OpenAI analyzing usage patterns across its more than one million business customers, workers at the 95th percentile of AI a",
+      "starred": false,
+      "sources": [
+        {
+          "name": "VentureBeat AI",
+          "url": "https://venturebeat.com/ai/openai-report-reveals-a-6x-productivity-gap-between-ai-power-users-and"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "6x Productivity Gap: Are You Leaving Money on the Table?",
+        "AI Power Users vs. Everyone Else: The Shocking Truth",
+        "Unlock Your AI Potential: The Hidden Productivity Hack"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use live chat to engage audience during real-time analysis",
+            "Prepare interactive polling questions about AI usage",
+            "Have pre-prepared screen shares of key OpenAI report data"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dynamic split-screen design with data visualizations, animated productivity comparisons, bold typography in high-contrast blue and white, motion graphics showing workflow transformations, clean tech-forward aesthetic with subtle futuristic elements"
+      },
+      "exampleOutline": [
+        "Live Stream Intro: Teaser of Productivity Gap Findings",
+        "Deep Dive: OpenAI Report Methodology and Context",
+        "Key Insights: Breaking Down the 6x Productivity Difference",
+        "Live Audience Interaction: Q&A and Real-world Examples",
+        "Closing: Actionable Strategies to Close the AI Productivity Gap"
+      ],
+      "hashtags": "#AIProductivity #OpenAI #WorkplaceTechnology #AITools #FutureOfWork #ProductivityHacks #AIInnovation #WorkSmarterNotHarder #AITrends #BusinessIntelligence",
+      "textureIndex": 9
     }
   ]
 }
