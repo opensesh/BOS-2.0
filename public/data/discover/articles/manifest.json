@@ -1,15 +1,20 @@
 {
-  "generated": "2025-12-10T16:22:43.983Z",
+  "generated": "2025-12-11T16:21:46.495Z",
   "articles": [
     {
       "slug": "introducing-three-new-tools-for-precise-image-editing-in-fig",
-      "title": "Figma Debuts Three AI Image Tools Aimed at Precise, In‑Canvas Editing",
-      "sourceCount": 7
+      "title": "Figma unveils three new AI image tools to bring precise editing directly onto the canvas",
+      "sourceCount": 6
+    },
+    {
+      "slug": "turn-your-prompts-into-visual-assets-and-slide-decks-with-th",
+      "title": "From Prompt to Presentation: How Figma’s ChatGPT App Turns Ideas Into Visual Assets and Slide Decks",
+      "sourceCount": 10
     },
     {
       "slug": "8-tips-for-designers-building-branded-templates-in-figma-buz",
-      "title": "Eight Essential Tips for Building Branded Templates in Figma Buzz",
-      "sourceCount": 9
+      "title": "How Figma Buzz Is Rewriting the Rulebook for Branded Templates: 8 Essential Tips for Designers",
+      "sourceCount": 11
     }
   ]
 }

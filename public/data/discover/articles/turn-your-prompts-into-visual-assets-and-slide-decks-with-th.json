@@ -1,0 +1,281 @@
+{
+  "id": "turn-your-prompts-into-visual-assets-and-slide-decks-with-th",
+  "slug": "turn-your-prompts-into-visual-assets-and-slide-decks-with-th",
+  "title": "From Prompt to Presentation: How Figma’s ChatGPT App Turns Ideas Into Visual Assets and Slide Decks",
+  "publishedAt": "2025-12-11T16:20:07.697Z",
+  "generatedAt": "2025-12-11T16:20:07.697Z",
+  "totalSources": 10,
+  "sections": [
+    {
+      "id": "section-0",
+      "paragraphs": [
+        {
+          "id": "para-0-0",
+          "content": "Figma is expanding its ChatGPT app so users can turn plain-language prompts into **visual assets and full slide decks** without leaving the chat interface.The integration builds on earlier support for FigJam diagrams, now adding presentation-ready outputs like slides, posters, and social graphics generated directly from conversational input.By connecting a Figma account to ChatGPT, teams can go from brainstorm transcripts or rough notes to structured decks and branded visuals in a few turns of dialogue.The move reflects a broader push to fuse AI-driven content generation with professional design tools, compressing what used to be multi-step workflows into a single conversational loop.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-1",
+                "name": "Figma Blog",
+                "url": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/",
+                "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+                "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT"
+              },
+              "additionalCount": 1,
+              "additionalSources": [
+                {
+                  "id": "source-2",
+                  "name": "techresearchonline",
+                  "url": "https://techresearchonline.com/news/figma-ai-image-editing-update-2025/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=techresearchonline.com&sz=32",
+                  "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "para-0-1",
+          "content": "Figma’s new capabilities arrive as AI-powered design becomes a competitive battleground, with Adobe, Canva, and others racing to plug their tools into ChatGPT’s emerging app ecosystem.Adobe has integrated Photoshop, Express, and Acrobat into ChatGPT, signaling how creative software vendors see conversational interfaces as a new distribution channel for their services.For marketers and small teams, these integrations promise agency-grade creative output—slides, campaigns, and visual systems—produced at a fraction of the traditional time and cost.Analysts say the pace of adoption suggests ChatGPT is fast becoming a central hub for both productivity and creative work, rather than just a text-only assistant.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-4",
+                "name": "emarketer",
+                "url": "https://www.emarketer.com/content/figma-s-new-ai-tools-give-small-teams-big-agency-power",
+                "favicon": "https://www.google.com/s2/favicons?domain=www.emarketer.com&sz=32",
+                "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT"
+              },
+              "additionalCount": 1,
+              "additionalSources": [
+                {
+                  "id": "source-5",
+                  "name": "morningstar",
+                  "url": "https://www.morningstar.com/news/dow-jones/202512105054/adobe-integrates-with-chatgpt-as-companies-flock-to-openai-chatbots-app-program",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.morningstar.com&sz=32",
+                  "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-1",
+      "title": "Inside the Figma–ChatGPT Workflow: From Brainstorms to Diagrams and Decks",
+      "paragraphs": [
+        {
+          "id": "para-1-0",
+          "content": "The Figma app in ChatGPT was first introduced to turn live conversations into **FigJam diagrams** such as flow charts, sequence diagrams, state diagrams, and Gantt charts.Users can ask ChatGPT to analyze a brainstorm, upload PDFs or sketches, and have the app generate structured diagrams that map user journeys, system states, or launch timelines.Figma describes the integration as a way to “turn your ChatGPT brainstorms into FigJam diagrams,” effectively transforming free-form discussion into decision-ready visual artifacts.Powered by Figma’s MCP server, the app supports remote access to workspaces so that diagrams created via ChatGPT can immediately be edited and collaborated on inside Figma.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-6",
+                "name": "openai",
+                "url": "https://openai.com/index/introducing-apps-in-chatgpt/",
+                "favicon": "https://www.google.com/s2/favicons?domain=openai.com&sz=32",
+                "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT"
+              },
+              "additionalCount": 1,
+              "additionalSources": [
+                {
+                  "id": "source-7",
+                  "name": "performancemarketingworld",
+                  "url": "https://www.performancemarketingworld.com/article/1942771/new-app-store-moment-why-chatgpt-apps-signal-next-platform-shift",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.performancemarketingworld.com&sz=32",
+                  "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "para-1-1",
+          "content": "Figma is now extending that same pipeline to **visual assets and slide decks**, allowing ChatGPT to generate presentations, social posts, invitations, digital ads, and posters as Figma documents from a single prompt. According to Figma’s product notes, ChatGPT can produce multi-slide layouts that reflect the structure of a conversation—such as problem, insights, proposal, and roadmap—while users refine content and styling iteratively in chat. Tech coverage of the broader app rollout highlights Figma as one of the flagship creative tools in ChatGPT, alongside Canva and Spotify, that demonstrate how conversational prompts can trigger complex app workflows behind the scenes. Tutorials show that once the Figma app is invoked, users can chain tasks—first diagramming a product strategy, then converting that logic into a client-ready slide deck—without leaving the ChatGPT thread.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-3",
+                "name": "techloy",
+                "url": "https://www.techloy.com/figma-adds-long-requested-ai-editing-tools-that-cut-out-the-need-for-photoshop-and-canva/",
+                "favicon": "https://www.google.com/s2/favicons?domain=www.techloy.com&sz=32",
+                "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT"
+              },
+              "additionalCount": 1,
+              "additionalSources": [
+                {
+                  "id": "source-8",
+                  "name": "figma",
+                  "url": "https://www.figma.com/release-notes/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+                  "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-2",
+      "title": "Democratizing Design: Efficiency Gains, Market Shift, and What Comes Next",
+      "paragraphs": [
+        {
+          "id": "para-2-0",
+          "content": "Industry analysts say Figma’s ChatGPT integration is part of a larger **democratization of design**, giving small teams “big-agency power” by automating repetitive production work. Recent Figma AI updates—like on-canvas background removal, object isolation, and image expansion—further reduce the need to jump between Photoshop-style editors and presentation tools, especially when combined with ChatGPT’s text generation. Marketing and content teams can now scale localized campaigns and personalized visuals far faster, as ChatGPT handles messaging while Figma templates the look and feel. Experts note that this is less about flashy “type-a-prompt, get-an-image” tricks and more about shaving friction from everyday workflows like editing images, laying out slides, and maintaining consistent visual systems.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-9",
+                "name": "techcrunch",
+                "url": "https://techcrunch.com/2025/10/24/how-to-use-the-new-chatgpt-app-integrations-including-spotify-figma-canva-and-others/",
+                "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
+                "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT"
+              },
+              "additionalCount": 1,
+              "additionalSources": [
+                {
+                  "id": "source-10",
+                  "name": "figma",
+                  "url": "https://www.figma.com/blog/turn-your-chatgpt-brainstorms-into-figjam-diagrams/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+                  "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "para-2-1",
+          "content": "OpenAI frames apps like Figma inside ChatGPT as evidence of a **platform shift** from click-driven software to conversation-centered experiences, where prompts orchestrate multiple tools at once. Executives and commentators describe this as an “app store moment,” with ChatGPT acting as an operating layer that routes user intent—such as “plan the launch and build the deck”—into specialized services like Figma, Adobe, or Canva. Looking ahead, both companies signal more capabilities on the way, from richer slide-generation features in Figma to broader availability of ChatGPT apps across regions and enterprise environments. As monetization and discovery mature, observers expect a wave of niche creative and productivity apps to follow Figma’s lead, turning ChatGPT into a central dashboard for planning, designing, and presenting work.",
+          "citations": []
+        }
+      ]
+    }
+  ],
+  "sourceCards": [
+    {
+      "id": "source-1",
+      "name": "Figma Blog",
+      "url": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+      "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT"
+    },
+    {
+      "id": "source-2",
+      "name": "techresearchonline",
+      "url": "https://techresearchonline.com/news/figma-ai-image-editing-update-2025/",
+      "favicon": "https://www.google.com/s2/favicons?domain=techresearchonline.com&sz=32",
+      "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT"
+    },
+    {
+      "id": "source-3",
+      "name": "techloy",
+      "url": "https://www.techloy.com/figma-adds-long-requested-ai-editing-tools-that-cut-out-the-need-for-photoshop-and-canva/",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.techloy.com&sz=32",
+      "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT"
+    },
+    {
+      "id": "source-4",
+      "name": "emarketer",
+      "url": "https://www.emarketer.com/content/figma-s-new-ai-tools-give-small-teams-big-agency-power",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.emarketer.com&sz=32",
+      "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT"
+    },
+    {
+      "id": "source-5",
+      "name": "morningstar",
+      "url": "https://www.morningstar.com/news/dow-jones/202512105054/adobe-integrates-with-chatgpt-as-companies-flock-to-openai-chatbots-app-program",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.morningstar.com&sz=32",
+      "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT"
+    },
+    {
+      "id": "source-6",
+      "name": "openai",
+      "url": "https://openai.com/index/introducing-apps-in-chatgpt/",
+      "favicon": "https://www.google.com/s2/favicons?domain=openai.com&sz=32",
+      "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT"
+    }
+  ],
+  "allSources": [
+    {
+      "id": "source-1",
+      "name": "Figma Blog",
+      "url": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+      "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT"
+    },
+    {
+      "id": "source-2",
+      "name": "techresearchonline",
+      "url": "https://techresearchonline.com/news/figma-ai-image-editing-update-2025/",
+      "favicon": "https://www.google.com/s2/favicons?domain=techresearchonline.com&sz=32",
+      "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT"
+    },
+    {
+      "id": "source-3",
+      "name": "techloy",
+      "url": "https://www.techloy.com/figma-adds-long-requested-ai-editing-tools-that-cut-out-the-need-for-photoshop-and-canva/",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.techloy.com&sz=32",
+      "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT"
+    },
+    {
+      "id": "source-4",
+      "name": "emarketer",
+      "url": "https://www.emarketer.com/content/figma-s-new-ai-tools-give-small-teams-big-agency-power",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.emarketer.com&sz=32",
+      "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT"
+    },
+    {
+      "id": "source-5",
+      "name": "morningstar",
+      "url": "https://www.morningstar.com/news/dow-jones/202512105054/adobe-integrates-with-chatgpt-as-companies-flock-to-openai-chatbots-app-program",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.morningstar.com&sz=32",
+      "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT"
+    },
+    {
+      "id": "source-6",
+      "name": "openai",
+      "url": "https://openai.com/index/introducing-apps-in-chatgpt/",
+      "favicon": "https://www.google.com/s2/favicons?domain=openai.com&sz=32",
+      "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT"
+    },
+    {
+      "id": "source-7",
+      "name": "performancemarketingworld",
+      "url": "https://www.performancemarketingworld.com/article/1942771/new-app-store-moment-why-chatgpt-apps-signal-next-platform-shift",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.performancemarketingworld.com&sz=32",
+      "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT"
+    },
+    {
+      "id": "source-8",
+      "name": "figma",
+      "url": "https://www.figma.com/release-notes/",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+      "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT"
+    },
+    {
+      "id": "source-9",
+      "name": "techcrunch",
+      "url": "https://techcrunch.com/2025/10/24/how-to-use-the-new-chatgpt-app-integrations-including-spotify-figma-canva-and-others/",
+      "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
+      "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT"
+    },
+    {
+      "id": "source-10",
+      "name": "figma",
+      "url": "https://www.figma.com/blog/turn-your-chatgpt-brainstorms-into-figjam-diagrams/",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+      "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT"
+    }
+  ],
+  "heroImage": {
+    "url": "https://cdn.sanity.io/images/599r6htc/regionalized/bbbd715863ae9596492a6b6eda14af49a9b802de-2400x1260.png?w=1200&amp;q=70&amp;fit=max&amp;auto=format"
+  },
+  "sidebarSections": [
+    "Inside the Figma–ChatGPT Workflow: From Brainstorms to Diagrams and Decks",
+    "Democratizing Design: Efficiency Gains, Market Shift, and What Comes Next"
+  ],
+  "relatedArticles": []
+}
