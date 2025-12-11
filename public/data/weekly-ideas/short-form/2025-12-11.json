@@ -1,243 +1,70 @@
 {
   "type": "short-form",
-  "date": "2025-12-11T16:21:58.088Z",
+  "date": "2025-12-11T16:31:11.120Z",
   "ideas": [
     {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
+      "title": "Ford and SK On are ending their U.S. battery joint venture",
+      "description": "The factories live on; the joint venture will not.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/ai/"
-        },
-        {
-          "name": "Varindia",
-          "url": "https://www.varindia.com/news/figma-launches-ai-powered-image-editing-tools-to-streamline-indian-design-workflows"
-        }
-      ],
-      "format": "carousel",
-      "subcategory": "carousel",
-      "hooks": [
-        "AI Tools That Make Image Editing Look Effortless 🔥",
-        "Figma Just Leveled Up Your Design Workflow",
-        "3 Mind-Blowing AI Image Tools Designers Need"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick transitions between tool demonstrations",
-            "Include text overlays explaining each tool's function",
-            "Keep pace dynamic with upbeat background music"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must have bold, attention-grabbing graphic",
-            "Use consistent design language across all slides",
-            "Include clear before/after comparisons on each tool slide"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected visual or quick demo",
-            "Use screen recording with engaging commentary",
-            "Add dramatic zoom effects on key features"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame tools as professional productivity enhancers",
-            "Include data/efficiency metrics about each tool",
-            "Use more technical, workflow-oriented language"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast color palette with electric blue and deep charcoal, geometric/modular slide layouts, floating UI elements, subtle gradient backgrounds, motion-design inspired transitions, clean sans-serif typography with technical precision"
-      },
-      "exampleOutline": [
-        "Slide 1: Bold Hook & Visual Teaser",
-        "Slide 2: Problem Statement in Design Context",
-        "Slide 3: First AI Tool Deep Dive",
-        "Slide 4: Second AI Tool Deep Dive",
-        "Slide 5: Final Tool + Workflow Impact"
-      ],
-      "hashtags": "#AIDesign #FigmaTools #CreativeTech #DesignInnovation #AICreativity #ProductivityHack #DesignTips #CreativeAI #FigmaUpdate #DesignWorkflow",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7767791/pexels-photo-7767791.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 3
-    },
-    {
-      "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT",
-      "description": "We’re expanding the capabilities of the Figma app in ChatGPT, so you can turn your ideas into creative assets and presentations that you can polish in Figma Buzz and Figma Slides.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/"
-        },
-        {
-          "name": "Techbuzz",
-          "url": "https://www.techbuzz.ai/articles/figma-surges-7-as-openai-demos-chatgpt-integration-at-devday"
-        },
-        {
-          "name": "Economictimes",
-          "url": "https://economictimes.com/news/international/us/figma-soars-12-after-sam-altmans-chatgpt-shoutout-heres-what-sent-the-stock-flying/articleshow/124391112.cms"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/10/24/how-to-use-the-new-chatgpt-app-integrations-including-spotify-figma-canva-and-others/"
-        },
-        {
-          "name": "Morningstar",
-          "url": "https://www.morningstar.com/news/marketwatch/20251006365/figma-and-these-stocks-are-up-after-openai-showed-ai-might-not-eat-software-after-all"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/turn-your-chatgpt-brainstorms-into-figjam-diagrams/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/11/ford-and-sk-on-are-ending-their-u-s-battery-joint-venture/"
         }
       ],
       "format": "reel",
       "subcategory": "reel",
       "hooks": [
-        "Turn ChatGPT prompts into Figma designs instantly!",
-        "Design magic: ChatGPT meets Figma in seconds",
-        "AI just transformed how you create designs"
+        "EV Battery Giants Split: What It Means for You",
+        "Ford & SK On Breakup: Electric Shock Wave?",
+        "Inside the Battery Industry's Biggest Divorce"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use screen recording to demo actual workflow",
-            "Add text overlay showing key transformation steps",
-            "Include rapid-fire visual transitions between prompt and design"
+            "Use dynamic split-screen graphics to show Ford and SK On logos",
+            "Include quick text animations highlighting key facts",
+            "Create fast-paced transitions to maintain viewer engagement"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Dramatic before/after comparison",
-            "Use sequential slides showing step-by-step process",
-            "Final slide includes clear call-to-action and app link"
+            "First slide: Provocative headline with bold typography",
+            "Use infographic-style slides with clean, minimal design",
+            "Final slide includes call-to-action and industry context"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Open with unexpected visual surprise/pattern interrupt",
-            "Use dynamic cursor/interaction animations",
-            "Include subtle sound design to enhance engagement"
+            "Start with unexpected visual metaphor about business partnerships",
+            "Use screen recordings or animated data visualizations",
+            "Add voiceover with authoritative but conversational tone"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Add professional context about workflow efficiency",
-            "Include brief expert commentary text overlay",
-            "Highlight productivity/time-saving aspects"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 8,
-        "description": "High-energy motion design with neon-tech color palette (blues/purples/electric accents). Dynamic screen capture with animated annotations. Sleek, futuristic typography. Quick-cut transitions. Blend of realistic interface and abstract graphic elements."
-      },
-      "exampleOutline": [
-        "Hook: Shocking design transformation moment",
-        "Problem: Traditional design workflows are slow",
-        "Solution: ChatGPT Figma app integration demo",
-        "Proof: 30-second rapid workflow showcase",
-        "CTA: Try integration now"
-      ],
-      "hashtags": "#AIDesign #FigmaAI #ChatGPT #DesignTech #CreativeCoding #ProductivityHack #AITools #DesignInnovation #TechTips #CreativeAI",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
-    },
-    {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/figma-buzz"
-        }
-      ],
-      "format": "reel",
-      "subcategory": "reel",
-      "hooks": [
-        "Design templates that marketing teams actually want to use",
-        "Unlock Figma's secret template superpowers",
-        "Brand flexibility without breaking design rules"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use fast-paced text transitions to highlight key template tips",
-            "Include screen recordings of Figma template editing",
-            "Add dynamic motion graphics to illustrate template flexibility"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Bold statement about template design",
-            "Use consistent color-coded slides for each tip",
-            "Include clean, minimalist screenshots of Figma interface"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected visual metaphor about design flexibility",
-            "Use split-screen technique to show before/after template designs",
-            "Include quick voiceover explaining key concepts"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Add more technical depth to template design explanation",
-            "Include professional case study references",
-            "Use more formal, thought leadership tone"
+            "More data-driven, professional visual approach",
+            "Include industry expert quote or analysis",
+            "Emphasize strategic implications over dramatic storytelling"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-energy digital aesthetic with neon accent colors, dynamic motion graphics, clean sans-serif typography, rapid transitions, screen capture overlays with animated design elements, futuristic tech-inspired visual language"
+        "description": "High-contrast electric blue and charcoal gray color palette. Geometric, angular compositions mimicking circuit board aesthetics. Dynamic motion graphics with quick cuts. Typography: sans-serif, bold, with technical precision. Incorporate electric/circuit visual metaphors to represent industry disruption."
       },
       "exampleOutline": [
-        "Hook: Provocative statement about template design limitations",
-        "Problem: Why most brand templates fail",
-        "8 Quick Tips for Flexible Templates",
-        "Live Figma demonstration of key concepts",
-        "Call-to-action: Follow for more design insights"
+        "Hook: Dramatic industry split reveal",
+        "Context: Ford and SK On joint venture background",
+        "Key Details: Why the partnership is ending",
+        "Industry Impact: What this means for EV market",
+        "Future Outlook: Implications for electric vehicle production"
       ],
-      "hashtags": "#FigmaDesign #AITemplates #BrandDesign #CreativeTools #DesignTips #ProductivityHacks #MarketingDesign #AICreativity #DesignSystem #BrandTemplates",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7767791/pexels-photo-7767791.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "hashtags": "#EVIndustry #ElectricVehicles #FordTech #BatteryInnovation #AutoTech #SustainableMobility #IndustryNews #TechBreakup #ElectricFuture #BusinessStrategy",
       "textureIndex": 8
     },
     {
@@ -246,131 +73,259 @@
       "starred": false,
       "sources": [
         {
-          "name": "TechCrunch AI",
+          "name": "TechCrunch",
           "url": "https://techcrunch.com/2025/12/11/disney-signs-deal-with-openai-to-allow-sora-to-generate-ai-videos-featuring-its-characters/"
         }
       ],
-      "format": "story",
-      "subcategory": "story",
+      "format": "carousel",
+      "subcategory": "carousel",
       "hooks": [
-        "Disney + AI: The Future of Entertainment Unleashed",
-        "Sora: Rewriting Hollywood's Creative Playbook",
-        "When Mickey Mouse Meets Machine Learning"
+        "Disney + OpenAI: The Future of Animated Storytelling",
+        "AI Will Remake Entertainment Forever",
+        "Sora: Disney's New Digital Storyteller"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick, dynamic cuts between Disney character and AI visuals",
-            "Include motion graphics showing AI generation process",
-            "Keep pace fast, under 30 seconds with high energy"
+            "Use dynamic text transitions between slides",
+            "Add quick Disney character animation snippets",
+            "Maintain high-energy pacing, 3-4 second per slide"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Provocative comparison image of traditional vs AI animation",
-            "Use infographic-style slides with clear data points",
-            "Final slide includes clear call-to-action/discussion prompt"
+            "First slide must have bold, attention-grabbing visual",
+            "Use consistent color palette inspired by Disney branding",
+            "Include one clear data point or surprising statistic per slide"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Open with unexpected visual transformation of classic character",
-            "Use text overlays to explain complex AI concept",
-            "End with a thought-provoking question about future of creativity"
+            "Condense carousel to most provocative 3-4 slides",
+            "Add voiceover narration explaining key points",
+            "Include quick visual comparison of traditional vs AI animation"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Frame as industry transformation narrative",
-            "Include expert commentary snippet",
-            "Emphasize strategic implications for media/entertainment"
+            "Add more technical context about AI generation",
+            "Include potential industry impact analysis",
+            "Use more professional, analytical tone"
           ]
         }
       ],
       "visualDirection": {
         "rating": 8,
-        "description": "High-contrast color palette mixing Disney's classic red/black with futuristic electric blue; glitch-inspired typography; motion graphics showing algorithmic deconstruction/reconstruction of characters; blend of nostalgic and hypermodern aesthetic; incorporate pixelated/generative art elements"
+        "description": "Vibrant Disney-inspired color palette with futuristic gradient overlays, clean sans-serif typography, abstract technological background suggesting AI creativity, motion graphics showing transformation between traditional and AI-generated animation styles"
       },
       "exampleOutline": [
-        "Headline: Disney's AI Revolution Begins",
-        "Context: Traditional Entertainment Meets Machine Learning",
-        "Core Content: Sora's Capabilities & Disney Partnership",
-        "Key Insight: Implications for Creative Industries",
-        "Future Speculation: What's Next?"
+        "Slide 1: Bold hook with Disney/OpenAI logos",
+        "Slide 2: Context of AI video generation technology",
+        "Slide 3: What Sora can actually do",
+        "Slide 4: Potential impact on entertainment industry",
+        "Slide 5: Call-to-action and future prediction"
       ],
-      "hashtags": "#AI #Disney #MachineLearning #CreativeTech #EntertainmentInnovation #SoraAI #MediaFuture #AICreativity #TechInnovation #DigitalTransformation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7767791/pexels-photo-7767791.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 2
+      "hashtags": "#Disney #OpenAI #AIAnimation #FutureOfEntertainment #CreativeTechnology #MovieMaking #AIInnovation #SoraAI #DigitalStorytelling #MediaTech",
+      "textureIndex": 9
     },
     {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
+      "title": "On Me raises $6M to shake up the gift card industry",
+      "description": "On Me raises $6 million for its digital gift card platform that lets users purchase cards categorized by interests rather than being restricted to specific retailers.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/11/on-me-raises-6m-to-shake-up-the-gift-card-industry/"
         }
       ],
       "format": "quick-image",
       "subcategory": "quick-image",
       "hooks": [
-        "Design at Lightspeed: Figma Buzz Just Leveled Up 🚀",
-        "3 Game-Changing Features Designers Need Right Now",
-        "Figma's Secret Weapon for Brand Momentum Revealed"
+        "Gift Cards Just Got a Major Upgrade 💳✨",
+        "Bye Boring Gift Cards, Hello Personalization! 🎁",
+        "Startup Reimagines How We Give Gifts Online 🚀"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick jump cuts between feature highlights",
-            "Add dynamic text overlays showing each new feature",
-            "Include screen recordings of actual Figma Buzz interface"
+            "Use quick transitions between gift card mockups",
+            "Include animated dollar bill or cash flow graphic",
+            "Add text overlay highlighting $6M funding milestone"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Provocative visual summary of all 3 features",
-            "Use consistent color blocking between slides",
-            "Last slide: Clear call-to-action with Figma link"
+            "First slide: Dramatic funding announcement",
+            "Use slide-by-slide breakdown of platform innovation",
+            "Final slide: Call-to-action or founder quote"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with unexpected visual metaphor about design speed",
-            "Use rapid-fire voiceover explaining features",
-            "Include quick demo transitions between features"
+            "Open with surprising gift card industry statistic",
+            "Use dynamic screen splits showing old vs new model",
+            "Rapid-fire explanation of platform's unique value"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Add professional context about workflow efficiency",
-            "Include data point about time saved using new features",
-            "Use more formal, insight-driven language"
+            "Frame as entrepreneurial innovation story",
+            "Include founder headshot or company logo",
+            "Use more professional, data-driven language"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-energy cyberpunk-inspired color palette with electric blues and neon accents, dynamic diagonal compositions, futuristic sans-serif typography, animated glitch effects highlighting transition between features, minimalist tech-forward aesthetic with sharp geometric elements"
+        "description": "Bold, tech-forward design with neon gradient overlays, floating 3D gift card icons, futuristic typography. Mix of digital illustration and photographic elements. Color palette: electric blue, vibrant purple, white. Incorporate motion graphics showing transformation/flow."
       },
       "exampleOutline": [
-        "Hook: Attention-grabbing visual/statement about design evolution",
-        "Problem: Current design workflow limitations",
-        "Solution: Three Figma Buzz features with rapid visual explanations",
-        "Impact: How these features transform design process",
-        "Call-to-Action: Explore Figma Buzz now"
+        "Hook: Disruptive Funding Announcement",
+        "Problem: Traditional Gift Card Limitations",
+        "Solution: On Me's Interest-Based Platform",
+        "Key Innovation: Personalized Gift Experiences",
+        "Call-to-Action: Learn More/Explore Platform"
       ],
-      "hashtags": "#FigmaBuzz #DesignTips #AIDesign #CreativeTech #ProductivityHack #DesignTools #UXDesign #MarketingDesign #CreativeWorkflow #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 6
+      "hashtags": "#GiftCards #StartupFunding #TechInnovation #DigitalGifts #Entrepreneurship #AIStartup #FutureOfGifting #TechCrunch #VentureCapital #InnovativeSolutions",
+      "textureIndex": 11
+    },
+    {
+      "title": "TIME names ‘Architects of AI’ its Person of the Year",
+      "description": "TIME Magazine has named the 'Architects of AI' its Person of the Year, who include Jensen Huang, Elon Musk, Sam Altman, Mark Zuckerberg,  Lisa Su, Dario Amodei, Demis Hassabis, and Fei-Fei Li",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/11/time-names-architects-of-ai-its-person-of-the-year/"
+        }
+      ],
+      "format": "story",
+      "subcategory": "story",
+      "hooks": [
+        "AI's Power Players: Who's Shaping Our Digital Future?",
+        "Meet the Minds Behind Today's AI Revolution",
+        "Tech Titans Rewriting Human Potential"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick portrait-style cuts of each AI architect",
+            "Include dynamic lower-thirds with names/roles",
+            "Create fast-paced transitions between subjects"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Bold graphic with TIME logo",
+            "Each subsequent slide features one architect's profile",
+            "Use consistent visual template across slides"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with provocative question about AI's impact",
+            "Use kinetic typography for key facts",
+            "Include subtle background motion graphics"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add professional context about industry transformation",
+            "Include data visualization of AI's growth",
+            "Maintain more serious, analytical tone"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "High-contrast cyberpunk-inspired palette with electric blues and neon accents. Futuristic sans-serif typography. Layered, translucent graphic elements suggesting digital interconnectedness. Subtle glitch/digital artifact effects. Minimalist portrait compositions with technological overlay."
+      },
+      "exampleOutline": [
+        "Section 1: Dramatic TIME Magazine Cover Reveal",
+        "Section 2: Why These Architects Matter",
+        "Section 3: Individual Leader Highlights",
+        "Section 4: Collective Impact on Technology",
+        "Section 5: Future Prediction & Call to Engage"
+      ],
+      "hashtags": "#AIInnovators #TimeMagazine #TechLeaders #ArtificialIntelligence #FutureOfTech #AIRevolution #TechTitans #InnovationImpact #AIArchitects #TechInnovation",
+      "textureIndex": 5
+    },
+    {
+      "title": "Security flaws in Freedom Chat app exposed users&#8217; phone numbers and PINs",
+      "description": "The founder of Freedom Chat said the company has reset user PINs and released a new version to app stores.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/11/security-flaws-in-freedom-chat-app-exposed-users-phone-numbers-and-pins/"
+        }
+      ],
+      "format": "carousel",
+      "subcategory": "carousel",
+      "hooks": [
+        "Privacy Nightmare: Freedom Chat's Secret Data Leak",
+        "Your Phone Number Just Got Hacked",
+        "Tech App Exposes User Data: What You Need to Know"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick animated transitions between slides",
+            "Add dynamic text overlays highlighting key security risks",
+            "Include a dramatic sound effect for first slide"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "Design each slide with high contrast security-themed graphics",
+            "Use progressive reveal of information across slides",
+            "Ensure first slide is visually provocative to encourage swipes"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Compress story into fastest possible narrative arc",
+            "Use screen recordings to demonstrate vulnerability",
+            "Add urgent voiceover with technical credibility"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add more technical depth and professional context",
+            "Include potential business/professional implications of data leak",
+            "Use more formal, authoritative language"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dark cyberpunk color palette with electric blue/deep charcoal accents. Glitch-style typography with fragmented data visualizations. Incorporate abstract network/matrix background suggesting digital vulnerability. Use sharp geometric shapes suggesting breakdown of digital security. Minimal but high-impact visual metaphors of data exposure."
+      },
+      "exampleOutline": [
+        "Slide 1: Provocative Hook & Visual Alert",
+        "Slide 2: What Happened - Data Breach Overview",
+        "Slide 3: Specific User Risks Exposed",
+        "Slide 4: Technical Breakdown of Vulnerability",
+        "Slide 5: Protective Actions Users Should Take"
+      ],
+      "hashtags": "#CyberSecurity #DataPrivacy #TechAlert #AppSecurity #DigitalRisks #TechNews #PrivacyMatters #HackAlert #UserProtection #TechTips",
+      "textureIndex": 2
     }
   ]
 }

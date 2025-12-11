@@ -1,256 +1,211 @@
 {
   "type": "long-form",
-  "date": "2025-12-11T16:21:58.088Z",
+  "date": "2025-12-11T16:31:53.216Z",
   "ideas": [
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": true,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/ai/"
-        },
-        {
-          "name": "Varindia",
-          "url": "https://www.varindia.com/news/figma-launches-ai-powered-image-editing-tools-to-streamline-indian-design-workflows"
-        }
-      ],
-      "format": "livestream",
-      "subcategory": "leadership",
-      "hooks": [
-        "AI Image Magic: Figma's New Editing Revolution",
-        "3 Tools That Will Transform Your Design Workflow",
-        "Precision Editing Just Got Insanely Easier"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Prepare live Q&A segment with pre-submitted audience questions",
-            "Use multi-camera setup to show screen and presenter simultaneously",
-            "Enable real-time chat interaction during live demonstration"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Dynamic split-screen layout with live demo on one side, presenter on other. Vibrant tech-inspired color palette of deep blues and electric teals. Modern, clean typography with motion-graphic transitions. Animated cursor and highlight effects to showcase tool precision. Minimal but energetic aesthetic that feels cutting-edge and approachable."
-      },
-      "exampleOutline": [
-        "Live Stream Opening: High-energy introduction to new Figma tools",
-        "Problem Context: Current image editing challenges designers face",
-        "Tool Demonstration: Live walkthrough of 3 new AI editing features",
-        "Real-World Impact: How these tools transform creative workflows",
-        "Live Q&A: Interactive audience engagement and tool exploration"
-      ],
-      "hashtags": "#FigmaAI #DesignTools #CreativeTech #AIDesign #ImageEditing #ProductivityHack #DesignInnovation #CreativeWorkflow #TechTips #DesignCommunity",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7245606/pexels-photo-7245606.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 5
-    },
-    {
-      "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT",
-      "description": "We’re expanding the capabilities of the Figma app in ChatGPT, so you can turn your ideas into creative assets and presentations that you can polish in Figma Buzz and Figma Slides.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/"
-        },
-        {
-          "name": "Techbuzz",
-          "url": "https://www.techbuzz.ai/articles/figma-surges-7-as-openai-demos-chatgpt-integration-at-devday"
-        },
-        {
-          "name": "Economictimes",
-          "url": "https://economictimes.com/news/international/us/figma-soars-12-after-sam-altmans-chatgpt-shoutout-heres-what-sent-the-stock-flying/articleshow/124391112.cms"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/10/24/how-to-use-the-new-chatgpt-app-integrations-including-spotify-figma-canva-and-others/"
-        },
-        {
-          "name": "Morningstar",
-          "url": "https://www.morningstar.com/news/marketwatch/20251006365/figma-and-these-stocks-are-up-after-openai-showed-ai-might-not-eat-software-after-all"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/turn-your-chatgpt-brainstorms-into-figjam-diagrams/"
-        }
-      ],
-      "format": "livestream",
-      "subcategory": "leadership",
-      "hooks": [
-        "Design Magic: ChatGPT Meets Figma in Real-Time",
-        "Turn Prompts into Slides Without Leaving ChatGPT",
-        "Live: AI Design Workflow Revolution Starts Now"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Enable live chat interaction during stream",
-            "Prepare pre-submitted Q&A questions in advance",
-            "Use multi-screen setup with Figma, ChatGPT, and webcam"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-energy dynamic motion graphics, electric blue and neon accent color palette, fluid typography with animated transitions, split-screen design showing real-time prompt-to-design transformation, minimalist tech-forward aesthetic with dynamic composition"
-      },
-      "exampleOutline": [
-        "Intro: Welcome & Stream Purpose",
-        "Demonstration: Figma App in ChatGPT Workflow",
-        "Live Tutorial: Creating Slides & Assets",
-        "Real-Time Q&A with Audience Interaction",
-        "Closing: Key Takeaways & Future Possibilities"
-      ],
-      "hashtags": "#AIDesign #FigmaTips #ChatGPTWorkflow #DesignTech #CreativeAI #ProductivityHacks #AITools #DesignInnovation #TechTutorial #WorkflowOptimization",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7245606/pexels-photo-7245606.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 2
-    },
-    {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/figma-buzz"
-        }
-      ],
-      "format": "documentary",
-      "subcategory": "framework",
-      "hooks": [
-        "Design Templates That Don't Break Your Brand",
-        "Figma Buzz: The Secret to Scalable Branding",
-        "How Pro Designers Build Flexible Brand Systems"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use dynamic B-roll of template editing in action",
-            "Include expert talking head segments with screen recordings",
-            "Create chapter markers for each template design tip"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, modern aesthetic with high-contrast color palette. Dynamic motion graphics showing template transformations. Clean, technical typography with fluid transitions. Incorporate design grid overlays and animated brand system visualizations. Reference Apple design documentation and Figma's own brand guidelines for visual inspiration."
-      },
-      "exampleOutline": [
-        "Opening: Designer's Brand Challenge Montage",
-        "Problem: Why Rigid Templates Fail Brands",
-        "8 Strategic Template Design Tips",
-        "Case Study: Successful Brand Template Examples",
-        "Closing: Future of Adaptive Design Systems"
-      ],
-      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystems #CreativeStrategy #ProductDesign #UIDesign #DesignTips #BrandIdentity #TemplateDesign #CreativeTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 5
-    },
     {
       "title": "Disney signs deal with OpenAI to allow Sora to generate AI videos featuring its characters",
       "description": "Disney says that alongside the agreement, it will \"become a major customer of OpenAI,\" as it will use its APIs to build new products, tools, and experiences, including for Disney+.",
-      "starred": false,
+      "starred": true,
       "sources": [
         {
           "name": "TechCrunch AI",
           "url": "https://techcrunch.com/2025/12/11/disney-signs-deal-with-openai-to-allow-sora-to-generate-ai-videos-featuring-its-characters/"
         }
       ],
-      "format": "video",
-      "subcategory": "thought-leadership",
+      "format": "tutorial",
+      "subcategory": "instructional",
       "hooks": [
-        "Disney + OpenAI: The Future of Entertainment is Here",
-        "Sora's Magic: Disney's AI Revolution Begins",
-        "How Disney Just Transformed Movie Making Forever"
+        "Disney + OpenAI: How to Make Your Own Sora Videos",
+        "Unlock Disney Character AI: A Step-by-Step Walkthrough",
+        "AI Video Magic: Disney's Secret Sora Playbook Revealed"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use dynamic screen recordings showing Sora video generation",
-            "Include side-by-side comparisons of traditional vs AI character generation",
-            "Create animated chapter markers to highlight key discussion points"
+            "Use screen recordings showing Sora interface",
+            "Include picture-in-picture demos of AI video generation",
+            "Create clear chapter markers for tutorial steps"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, futuristic aesthetic with electric blue and deep navy color palette. Dynamic motion graphics simulating AI generation processes. Clean, sans-serif typography with technological undertones. Picture-in-picture style showcasing Disney character transformations. Animated transition effects suggesting technological evolution."
+        "description": "Dynamic cyberpunk-inspired color palette with electric blues and neon accents. Dynamic split-screen compositions showcasing AI generation process. Bold, futuristic sans-serif typography. Animated transition effects mimicking digital morphing. References: Blade Runner UI, modern tech documentaries"
       },
       "exampleOutline": [
-        "Opening: Dramatic reveal of Disney-OpenAI partnership",
-        "Context: Current state of AI in entertainment",
-        "Core Content: Detailed breakdown of Sora's capabilities",
-        "Implications: What this means for content creation",
-        "Closing CTA: Explore future of AI in media"
+        "Section 1: Disney-OpenAI Partnership Reveal",
+        "Section 2: Understanding Sora's Character Generation Capabilities",
+        "Section 3: Step-by-Step Sora Video Creation Process",
+        "Section 4: Creative Limitations and Ethical Considerations",
+        "Section 5: Future of AI in Entertainment"
       ],
-      "hashtags": "#AIEntertainment #DisneyTech #OpenAI #SoraAI #FutureOfMedia #AIVideo #MovieMaking #TechInnovation #CreativeAI #MediaTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "hashtags": "#AIVideo #DisneyTech #SoraAI #CreativeAI #MovieMaking #OpenAI #TechInnovation #AICreativity #FutureOfEntertainment #DigitalVideo",
       "textureIndex": 10
     },
     {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
+      "title": "TIME names ‘Architects of AI’ its Person of the Year",
+      "description": "TIME Magazine has named the 'Architects of AI' its Person of the Year, who include Jensen Huang, Elon Musk, Sam Altman, Mark Zuckerberg,  Lisa Su, Dario Amodei, Demis Hassabis, and Fei-Fei Li",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/11/time-names-architects-of-ai-its-person-of-the-year/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "Who Really Controls the Future of AI?",
+        "The Secret Names Shaping Global Technology",
+        "AI's Power Players: Inside TIME's Exclusive List"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dynamic lower-thirds with headshots of featured AI leaders",
+            "Include animated infographics showing their company/technology connections",
+            "Create chapter markers highlighting each key figure's contribution"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech-futuristic palette with deep blues and electric teals. Sharp, geometric motion graphics revealing portraits. Sans-serif typography with technical precision. Picture-in-picture design showing interview clips, product screenshots, and dynamic data visualizations. Subtle holographic/digital overlay effects suggesting technological innovation."
+      },
+      "exampleOutline": [
+        "Dramatic Opening: TIME Magazine Announcement",
+        "Who Are the 'Architects of AI'?",
+        "Deep Dive: Individual Leader Profiles & Impact",
+        "Interconnected Technology Landscape Visualization",
+        "Future Implications & Call to Engage"
+      ],
+      "hashtags": "#AI #Technology #Innovation #TimePersonOfTheYear #ArtificialIntelligence #FutureOfTech #JensenHuang #SamAltman #MachineLearning #TechLeaders",
+      "textureIndex": 5
+    },
+    {
+      "title": "Marble enters the race to bring AI to tax work, armed with $9 million and a free research tool",
+      "description": "Marble, a startup building artificial intelligence agents for tax professionals, has raised $9 million in seed funding as the accounting industry grapples with a deepening labor shortage and mounting regulatory complexity.The round, led by Susa Ventures with participation from MXV Capital and Konrad Capital, positions Marble to compete in a market where AI adoption has lagged significantly behind other knowledge industries like law and software development.&quot;When we looked at the economy and",
+      "starred": false,
+      "sources": [
+        {
+          "name": "VentureBeat AI",
+          "url": "https://venturebeat.com/ai/marble-enters-the-race-to-bring-ai-to-tax-work-armed-with-usd9-million-and-a"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "AI Transforms Tax Work: $9M Startup's Bold Mission",
+        "Inside Marble: The AI Revolution in Accounting",
+        "Breaking: How AI Solves Tax Industry's Biggest Challenge"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use cinematic B-roll of tax offices and tech environments",
+            "Include expert interview clips with founders/investors",
+            "Create dynamic motion graphics explaining AI workflow"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast blue and white color palette, sleek tech-inspired typography, dynamic split-screen transitions, infographic overlays with data visualization, clean minimalist design with occasional bold graphic elements representing AI and technology"
+      },
+      "exampleOutline": [
+        "Cold Open: Dramatic scene showing tax professional's overwhelming workload",
+        "Industry Context: Current challenges in tax and accounting",
+        "Marble's Solution: AI technology and funding breakthrough",
+        "Technical Deep Dive: How AI transforms tax workflow",
+        "Future Implications and Call to Action"
+      ],
+      "hashtags": "#AIinAccounting #TechStartup #FutureOfWork #AIRevolution #MarbleTech #InvestmentNews #TaxTech #ArtificialIntelligence #StartupFunding #BusinessInnovation",
+      "textureIndex": 7
+    },
+    {
+      "title": "Interest in Spoor&#8217;s bird monitoring AI software is soaring",
+      "description": "Spoor's computer vision software can help wind farms, and other industries, track bird populations and migration patterns.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/11/interest-in-spoors-bird-monitoring-ai-software-is-soaring/"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "How AI is saving birds at wind farms",
+        "Bird conservation meets cutting-edge computer vision",
+        "Wildlife tracking revolution: AI changes everything"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Enable live chat for real-time audience interaction",
+            "Prepare pre-submitted Q&A questions as backup",
+            "Use multi-camera setup for dynamic live presentation"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast green and blue color palette representing nature and technology. Dynamic split-screen visuals showing bird migration data and AI tracking interfaces. Clean, technical typography with organic motion graphics. Incorporate live data visualization elements. Use picture-in-picture to show real-time AI tracking alongside presenter."
+      },
+      "exampleOutline": [
+        "Section 1: Dramatic AI conservation intro",
+        "Section 2: Wind farm ecological challenges",
+        "Section 3: Spoor's AI monitoring technology breakdown",
+        "Section 4: Live demo of tracking software",
+        "Section 5: Open Q&A and audience interaction"
+      ],
+      "hashtags": "#ArtificialIntelligence #BirdConservation #WildlifeTech #CleanEnergy #AIForGood #ComputerVision #SustainableTech #EcologicalAI #WindFarms #WildlifeProtection",
+      "textureIndex": 8
+    },
+    {
+      "title": "Opera wants you to pay $20 a month to use its AI-powered browser Neon",
+      "description": "Following a couple of months' testing, Opera has finally made its AI-powered browser, Neon, available to the public — though you'll have to shell out for a $19.90-per-month subscription to use it.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/11/opera-wants-you-to-pay-20-a-month-to-use-its-ai-powered-browser-neon/"
         }
       ],
       "format": "tutorial",
       "subcategory": "instructional",
       "hooks": [
-        "Transform Figma Buzz with 3 game-changing features",
-        "Design faster: Figma Buzz's secret productivity hacks",
-        "Unlock marketing magic: Figma Buzz's new toolkit"
+        "Is Opera's $20 AI Browser Worth Your Money?",
+        "Neon Browser: AI Revolution or Expensive Gimmick?",
+        "Decode Opera's AI Browser: Full Tutorial Revealed"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use chapter markers to break down each feature clearly",
-            "Include side-by-side screen recordings showing before/after workflows",
-            "Create dynamic PIP overlays demonstrating key clicks and interactions"
+            "Use screen recordings of actual Neon browser interface",
+            "Include side-by-side comparisons with standard browsers",
+            "Create chapter markers for each key feature exploration"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, dynamic visual style with high-contrast design system colors. Clean, modern typography with animated transitions between feature demonstrations. Use split-screen and motion graphics to highlight workflow improvements. Aesthetic references: Figma's design language, minimal tech interfaces, dynamic product reveal animations."
+        "description": "High-contrast tech aesthetic with futuristic blue-gray color palette. Dynamic split-screen compositions showing browser interfaces. Sleek motion graphics highlighting AI features. Sharp, sans-serif typography with technical precision. Incorporate subtle glitch/digital overlay effects to emphasize AI theme."
       },
       "exampleOutline": [
-        "Section 1: High-energy intro showcasing Figma Buzz's potential",
-        "Section 2: Current design workflow pain points",
-        "Section 3: Deep dive into 3 new features (step-by-step walkthrough)",
-        "Section 4: Real-world application and productivity gains",
-        "Section 5: Call-to-action with implementation strategy"
+        "Section 1: Dramatic Browser AI Landscape Overview",
+        "Section 2: What Makes Neon Different? Core Problems",
+        "Section 3: Detailed Feature Walkthrough & Pricing Analysis",
+        "Section 4: Pros, Cons, and Real-World Use Cases",
+        "Section 5: Recommendation + Future Browser Technology Insights"
       ],
-      "hashtags": "#FigmaBuzz #DesignWorkflow #ProductivityHacks #MarketingDesign #AIDesign #CreativeTech #DesignTools #UIUXTips #DesignInnovation #CreativeWorkflow",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 5
+      "hashtags": "#AIBrowser #OperaNeon #TechTutorial #BrowserInnovation #AITechnology #WebTools #SoftwareReview #TechTrends #ProductivityHacks #AIAssistant",
+      "textureIndex": 6
     }
   ]
 }
