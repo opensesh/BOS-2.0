@@ -1,30 +1,30 @@
 {
   "id": "8-tips-for-designers-building-branded-templates-in-figma-buz",
   "slug": "8-tips-for-designers-building-branded-templates-in-figma-buz",
-  "title": "How Figma Buzz Is Rewriting the Rulebook for Branded Templates: 8 Essential Tips for Designers",
-  "publishedAt": "2025-12-11T16:21:46.493Z",
-  "generatedAt": "2025-12-11T16:21:46.493Z",
-  "totalSources": 11,
+  "title": "Eight essential tips for building brand‑safe, scalable templates in Figma Buzz",
+  "publishedAt": "2025-12-12T16:17:52.708Z",
+  "generatedAt": "2025-12-12T16:17:52.708Z",
+  "totalSources": 8,
   "sections": [
     {
       "id": "section-0",
       "paragraphs": [
         {
           "id": "para-0-0",
-          "content": "Figma’s new Buzz workspace is pushing template design beyond static layouts, giving brand teams tools to lock core elements while still letting marketers customize content at scale.The company’s official guidance centers on eight practical tips, from using auto layout and component variants to structuring text layers for CSV-driven bulk creation.These techniques are designed to keep campaigns flexible—across social, display, and print—without sacrificing typography, color, or logo consistency.For designers, the shift reframes templates as configurable products rather than finished graphics, with editing experiences tailored specifically to non-design collaborators.",
+          "content": "Figma is positioning Buzz as a dedicated workspace where brand and marketing teams can create on‑brand static assets from configurable templates instead of starting from scratch for every request.In this model, designers author templates in Figma Design or directly in Buzz, then decide exactly which text, image, and component fields marketers can edit through a focused editing experience.The official “8 Tips for Designers Building Branded Templates in Figma Buzz” guide stresses that template design is different from one‑off design work, and must prioritize editor experience, responsive behavior, and Bulk Create compatibility.Community style‑guide files and other shared resources in Figma’s ecosystem offer additional reference points for how to structure layers, components, and naming conventions for reusable brand systems.",
           "citations": [
             {
               "primarySource": {
-                "id": "source-1",
-                "name": "Figma Blog",
-                "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/",
-                "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+                "id": "source-2",
+                "name": "youtube",
+                "url": "https://www.youtube.com/watch?v=vqLE9Nt9DNU",
+                "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
                 "title": "8 tips for designers building branded templates in Figma Buzz"
               },
               "additionalCount": 1,
               "additionalSources": [
                 {
-                  "id": "source-2",
+                  "id": "source-3",
                   "name": "figma",
                   "url": "https://www.figma.com/community/design-inspirations/style-guides",
                   "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
@@ -36,20 +36,20 @@
         },
         {
           "id": "para-0-1",
-          "content": "Industry tutorials and conference sessions are reinforcing Figma’s message, showing how Buzz templates plug into design systems and real-time collaboration to streamline marketing workflows.Creators walk through practical examples like social ad sets and event promos, demonstrating how auto layout, variants, and locked brand assets reduce rework and review cycles.At the same time, third-party guides position Buzz as a faster, more controlled alternative to generic content tools, especially for teams managing multiple brands or regions.Together, these perspectives frame Figma Buzz as both a design environment and a governance layer for modern branded content.",
+          "content": "Recent product updates have deepened Buzz’s role in Figma’s broader plan to connect design systems directly to marketing execution, with templates now tied to component properties, plugin access, and advanced media handling.Figma’s “Three New Features” announcement highlights configurable templates built on design systems, allowing marketers to switch layout, color, and logo variants from a single template set instead of hunting through hundreds of files.Config 2025 recaps frame Buzz alongside other production‑oriented launches, emphasizing bulk asset creation from data connections and better template discovery so brand teams can ship consistent campaigns faster.Together, these moves underscore Figma’s bet that disciplined template design—using auto layout, variants, and clear brand controls—can reduce review cycles while preserving brand integrity at scale.",
           "citations": [
             {
               "primarySource": {
-                "id": "source-4",
-                "name": "youtube",
-                "url": "https://www.youtube.com/watch?v=23lJ2YAnlC8",
-                "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
+                "id": "source-5",
+                "name": "figma",
+                "url": "https://www.figma.com/blog/config-2025-recap/",
+                "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
                 "title": "8 tips for designers building branded templates in Figma Buzz"
               },
               "additionalCount": 1,
               "additionalSources": [
                 {
-                  "id": "source-5",
+                  "id": "source-6",
                   "name": "youtube",
                   "url": "https://www.youtube.com/watch?v=CfwmtYrHN0g",
                   "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
@@ -63,26 +63,26 @@
     },
     {
       "id": "section-1",
-      "title": "Inside the 8 Core Tips: From Auto Layout to Bulk Brand Asset Creation",
+      "title": "Inside Figma’s eight tips: from auto layout to locked layers",
       "paragraphs": [
         {
           "id": "para-1-0",
-          "content": "Figma’s own playbook for Buzz starts with building templates that respond cleanly to real-world content, urging designers to lean on auto layout so text boxes expand and elements reflow without breaking the grid.The guidance also stresses separating each editable text field into its own clearly labeled layer—“Event Title” or “CTA Button Text”—so CSV or spreadsheet imports map reliably to specific inputs.Component variants are another pillar, allowing designers to package options like alternate logo lockups, background treatments, or CTAs inside a single component set rather than spawning dozens of near-duplicate frames.Underpinning all of this is disciplined naming and file organization, which determines whether busy marketers can actually find the right template when a campaign is due.",
+          "content": "The core Figma blog on “8 Tips for Designers Building Branded Templates in Figma Buzz” argues that “auto layout is the backbone of responsive template design,” urging designers to set up text boxes and containers that expand gracefully as content changes length.The post instructs creators to separate text layers for each unique input—especially when different font styles or sizes are involved—because Bulk Create maps CSV or XLSX columns to individual layers and can break if multiple fields are combined.It also recommends descriptive layer naming like “Event Title,” “CTA Button Text,” or “Speaker Photo,” sometimes with example formats such as “Date of Event (e.g. July 10, 2025)” to guide non‑designers using the Edit Content panel.Community style‑guide templates, which expose typography scales, color tokens, and logo usage rules, mirror these practices and give teams concrete examples of modular, clearly labeled structures that translate well into Buzz templates.",
           "citations": [
             {
               "primarySource": {
-                "id": "source-6",
-                "name": "creativecorner",
-                "url": "https://www.creativecorner.studio/blog/15-best-figma-website-templates",
-                "favicon": "https://www.google.com/s2/favicons?domain=www.creativecorner.studio&sz=32",
+                "id": "source-1",
+                "name": "Figma Blog",
+                "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/",
+                "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
                 "title": "8 tips for designers building branded templates in Figma Buzz"
               },
               "additionalCount": 1,
               "additionalSources": [
                 {
-                  "id": "source-7",
+                  "id": "source-4",
                   "name": "figma",
-                  "url": "https://www.figma.com/community/file/1556932642168617746/figma-carousel-post-design-2025-branding-how-to-make-your-brand-stand-out",
+                  "url": "https://www.figma.com/blog/new-features-in-figma-buzz/",
                   "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
                   "title": "8 tips for designers building branded templates in Figma Buzz"
                 }
@@ -92,23 +92,23 @@
         },
         {
           "id": "para-1-1",
-          "content": "Buzz also bakes in scaling mechanics, with official docs and tutorials walking teams through bulk asset creation using spreadsheet-connected templates for social, display, and one-pager campaigns.Designers are encouraged to define which fields stay editable—headlines, subheads, CTAs, and imagery—while locking logos, core color styles, and typography to preserve brand equity.Figma’s newer Buzz features tie those templates back to design systems via component properties, so marketers can toggle layouts or colorways from a curated set instead of improvising.Help-center guidance rounds out the picture by outlining publishing flows and template picker behavior, ensuring these carefully structured assets surface in dedicated “From your team” sections where non-designers naturally start their work.",
+          "content": "Another major pillar is the use of component variants so marketers can swap approved options—such as horizontal versus vertical logo lockups, alternative illustration colorways, or layout variations—through properties instead of editing raw layers.Figma’s feature update notes that marketing templates in Buzz are now connected to design systems, meaning component sets and properties authored in Figma Design “automatically work” when pasted into Buzz, powering dropdowns and toggles in the Change layout panel.The tips also stress locking non‑editable layers to create brand controls: logos, core backgrounds, and key layout elements stay fixed, while only unlocked text and images surface in the Edit Content panel for a streamlined, lower‑risk editing experience.Designers are urged to thoroughly test templates by opening them in Buzz’s focused editing view, checking which layers appear as editable, and stress‑testing with long headlines, swapped images, and resized frames to catch issues like overlapping text or distorted media before publishing.",
           "citations": [
             {
               "primarySource": {
-                "id": "source-9",
+                "id": "source-7",
                 "name": "figma",
-                "url": "https://www.figma.com/blog/new-features-in-figma-buzz/",
+                "url": "https://www.figma.com/community/file/1556932642168617746/figma-carousel-post-design-2025-branding-how-to-make-your-brand-stand-out",
                 "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
                 "title": "8 tips for designers building branded templates in Figma Buzz"
               },
               "additionalCount": 1,
               "additionalSources": [
                 {
-                  "id": "source-3",
-                  "name": "figma",
-                  "url": "https://www.figma.com/blog/config-2025-recap/",
-                  "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+                  "id": "source-8",
+                  "name": "paddlecreative",
+                  "url": "https://www.paddlecreative.co.uk/blog/best-15-figma-templates",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.paddlecreative.co.uk&sz=32",
                   "title": "8 tips for designers building branded templates in Figma Buzz"
                 }
               ]
@@ -119,49 +119,17 @@
     },
     {
       "id": "section-2",
-      "title": "Balancing Control and Creativity: How Teams Are Operationalizing Brand in Buzz",
+      "title": "Balancing control and flexibility: how teams are adopting Buzz templates",
       "paragraphs": [
         {
           "id": "para-2-0",
-          "content": "Design leaders and product teams behind Buzz consistently frame brand controls as “guardrails, not roadblocks,” arguing that locking should be strategic rather than absolute.In conference talks, Figma designers describe how predefined choices for colors, layouts, and fonts let them relax other editing limits, presenting marketers with curated menus instead of open-ended tooling.External guides echo that philosophy, advising brands to start with robust guidelines—logo sets, type scales, tone of voice—and then reflect those rules directly inside editable Buzz templates.For many organizations, this approach is emerging as a middle ground between ad-hoc Canva-style editing and tightly locked artwork routed through overburdened design teams.",
-          "citations": [
-            {
-              "primarySource": {
-                "id": "source-8",
-                "name": "paddlecreative",
-                "url": "https://www.paddlecreative.co.uk/blog/best-15-figma-templates",
-                "favicon": "https://www.google.com/s2/favicons?domain=www.paddlecreative.co.uk&sz=32",
-                "title": "8 tips for designers building branded templates in Figma Buzz"
-              },
-              "additionalCount": 1,
-              "additionalSources": [
-                {
-                  "id": "source-10",
-                  "name": "figma",
-                  "url": "https://www.figma.com/community/file/1490247876925428279/the-ultimate-brand-guidelines-template",
-                  "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
-                  "title": "8 tips for designers building branded templates in Figma Buzz"
-                }
-              ]
-            }
-          ]
+          "content": "Figma’s learn and help materials describe brand controls in Buzz as “guardrails, not roadblocks,” encouraging teams to lock only what is truly critical to consistency while leaving room for marketers to adapt messaging and visuals to their channels.When a template includes guidelines, users see a pink outline and lock icon, and can update unlocked text and images through the Edit Content panel—or remove guidelines entirely if they need full editing access, a compromise that recognizes differing levels of design maturity.Independent explainers contrast Buzz’s approach with more consumer‑oriented tools, arguing that deep integration with design systems and precise locking makes Buzz better suited for organizations that care about governance and reuse across campaigns.They note, however, that this power comes with an upfront cost: designers must invest time in planning locking strategies, documenting which templates to use when, and educating teams on what can and cannot be changed.",
+          "citations": []
         },
         {
           "id": "para-2-1",
-          "content": "Analysts and practitioners expect Buzz’s model to influence how design systems are documented and consumed, with more teams treating templates as the primary interface to their brand rather than static PDFs.Community-created brand guideline kits and style-guide files are already being adapted into Buzz-friendly systems, giving smaller teams a shortcut to professional, locked-but-flexible frameworks.As Figma continues to expand Buzz with features like closer plugin integration, richer media handling, and more granular publishing controls, designers are likely to fold even more of the marketing lifecycle into a single environment.For brands navigating fragmented channels and high content velocity, the eight tips now circulating around Figma Buzz read less like a how-to list and more like an emerging standard for on-brand creation at scale.",
-          "citations": [
-            {
-              "primarySource": {
-                "id": "source-11",
-                "name": "clickup",
-                "url": "https://clickup.com/blog/figma-brand-guidelines-templates/",
-                "favicon": "https://www.google.com/s2/favicons?domain=clickup.com&sz=32",
-                "title": "8 tips for designers building branded templates in Figma Buzz"
-              },
-              "additionalCount": 0,
-              "additionalSources": []
-            }
-          ]
+          "content": "Forward‑looking commentary around Figma’s Config 2025 announcements suggests Buzz will continue to evolve as a central hub for production‑ready brand assets, particularly as more features like video trimming, plugin workflows, and internal extensions mature.The product team emphasizes that templates should “make room for variation,” enabling marketers to pick layouts for Instagram versus LinkedIn, swap CTAs, or localize content, all while staying anchored to shared components and properties.Observers expect agencies and in‑house design ops teams to lean heavily on Bulk Create and data connections for seasonal or high‑volume campaigns, using disciplined text‑layer separation and naming to avoid formatting failures at scale.As more organizations adopt Buzz, experts say success will hinge on treating these eight tips not as optional optimizations but as a baseline checklist for any template intended to deliver consistent, on‑brand output under real‑world marketing pressures.",
+          "citations": []
         }
       ]
     }
@@ -176,37 +144,37 @@
     },
     {
       "id": "source-2",
+      "name": "youtube",
+      "url": "https://www.youtube.com/watch?v=vqLE9Nt9DNU",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
+      "title": "8 tips for designers building branded templates in Figma Buzz"
+    },
+    {
+      "id": "source-3",
       "name": "figma",
       "url": "https://www.figma.com/community/design-inspirations/style-guides",
       "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
     },
     {
-      "id": "source-3",
+      "id": "source-4",
+      "name": "figma",
+      "url": "https://www.figma.com/blog/new-features-in-figma-buzz/",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+      "title": "8 tips for designers building branded templates in Figma Buzz"
+    },
+    {
+      "id": "source-5",
       "name": "figma",
       "url": "https://www.figma.com/blog/config-2025-recap/",
       "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
     },
     {
-      "id": "source-4",
-      "name": "youtube",
-      "url": "https://www.youtube.com/watch?v=23lJ2YAnlC8",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
-      "title": "8 tips for designers building branded templates in Figma Buzz"
-    },
-    {
-      "id": "source-5",
+      "id": "source-6",
       "name": "youtube",
       "url": "https://www.youtube.com/watch?v=CfwmtYrHN0g",
       "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
-      "title": "8 tips for designers building branded templates in Figma Buzz"
-    },
-    {
-      "id": "source-6",
-      "name": "creativecorner",
-      "url": "https://www.creativecorner.studio/blog/15-best-figma-website-templates",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.creativecorner.studio&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
     }
   ],
@@ -220,37 +188,37 @@
     },
     {
       "id": "source-2",
+      "name": "youtube",
+      "url": "https://www.youtube.com/watch?v=vqLE9Nt9DNU",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
+      "title": "8 tips for designers building branded templates in Figma Buzz"
+    },
+    {
+      "id": "source-3",
       "name": "figma",
       "url": "https://www.figma.com/community/design-inspirations/style-guides",
       "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
     },
     {
-      "id": "source-3",
+      "id": "source-4",
+      "name": "figma",
+      "url": "https://www.figma.com/blog/new-features-in-figma-buzz/",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+      "title": "8 tips for designers building branded templates in Figma Buzz"
+    },
+    {
+      "id": "source-5",
       "name": "figma",
       "url": "https://www.figma.com/blog/config-2025-recap/",
       "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
     },
     {
-      "id": "source-4",
-      "name": "youtube",
-      "url": "https://www.youtube.com/watch?v=23lJ2YAnlC8",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
-      "title": "8 tips for designers building branded templates in Figma Buzz"
-    },
-    {
-      "id": "source-5",
+      "id": "source-6",
       "name": "youtube",
       "url": "https://www.youtube.com/watch?v=CfwmtYrHN0g",
       "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
-      "title": "8 tips for designers building branded templates in Figma Buzz"
-    },
-    {
-      "id": "source-6",
-      "name": "creativecorner",
-      "url": "https://www.creativecorner.studio/blog/15-best-figma-website-templates",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.creativecorner.studio&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
     },
     {
@@ -266,35 +234,14 @@
       "url": "https://www.paddlecreative.co.uk/blog/best-15-figma-templates",
       "favicon": "https://www.google.com/s2/favicons?domain=www.paddlecreative.co.uk&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
-    },
-    {
-      "id": "source-9",
-      "name": "figma",
-      "url": "https://www.figma.com/blog/new-features-in-figma-buzz/",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
-      "title": "8 tips for designers building branded templates in Figma Buzz"
-    },
-    {
-      "id": "source-10",
-      "name": "figma",
-      "url": "https://www.figma.com/community/file/1490247876925428279/the-ultimate-brand-guidelines-template",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
-      "title": "8 tips for designers building branded templates in Figma Buzz"
-    },
-    {
-      "id": "source-11",
-      "name": "clickup",
-      "url": "https://clickup.com/blog/figma-brand-guidelines-templates/",
-      "favicon": "https://www.google.com/s2/favicons?domain=clickup.com&sz=32",
-      "title": "8 tips for designers building branded templates in Figma Buzz"
     }
   ],
   "heroImage": {
     "url": "https://cdn.sanity.io/images/599r6htc/regionalized/bccc680cc37f12685ef585b45f538eda221fb2c6-3840x2160.png?w=1200&amp;q=70&amp;fit=max&amp;auto=format"
   },
   "sidebarSections": [
-    "Inside the 8 Core Tips: From Auto Layout to Bulk Brand Asset Creation",
-    "Balancing Control and Creativity: How Teams Are Operationalizing Brand in Buzz"
+    "Inside Figma’s eight tips: from auto layout to locked layers",
+    "Balancing control and flexibility: how teams are adopting Buzz templates"
   ],
   "relatedArticles": []
 }
