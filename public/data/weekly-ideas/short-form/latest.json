@@ -1,372 +1,331 @@
 {
   "type": "short-form",
-  "date": "2025-12-12T16:20:17.590Z",
+  "date": "2025-12-12T16:26:12.873Z",
   "ideas": [
     {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
+      "title": "Flaw in photo booth maker’s website exposes customers’ pictures",
+      "description": "Hama Film makes photo booths that upload pictures and videos online. But their backend systems have a simple flaw that allows anyone to download customer pictures.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/release-notes/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/12/flaw-in-photo-booth-makers-website-exposes-customers-pictures/"
         }
       ],
       "format": "reel",
       "subcategory": "reel",
       "hooks": [
-        "Design Faster: Figma's New AI Image Editing Magic!",
-        "Precision Editing Just Got Superpowered in Figma",
-        "3 AI Tools That Will Transform Your Design Workflow"
+        "Privacy Hack: Photo Booth Leak Exposed Everything",
+        "Your Selfies Are NOT Safe Online",
+        "One Click: How Hackers See Your Pics"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick screen recordings showing actual tool functionality",
-            "Include dynamic text overlays highlighting key features",
-            "Create fast-paced transitions between tool demonstrations"
+            "Use screen recording to demonstrate vulnerability",
+            "Include rapid text transitions highlighting key risks",
+            "Add dramatic sound effect when revealing security breach"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Bold teaser graphic with tool names",
-            "Use swipe-friendly graphics showing before/after edits",
-            "Final slide includes clear call-to-action and link"
+            "First slide: Shocking statistic about data exposure",
+            "Use infographic-style slides showing breach mechanics",
+            "Final slide with clear protective recommendations"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with unexpected visual that grabs attention",
-            "Use text-to-speech voiceover for technical explanation",
-            "Include rapid visual demonstrations of each tool"
+            "Start with provocative visual metaphor about digital privacy",
+            "Use quick cuts to maintain high energy",
+            "Include timestamped annotations explaining technical details"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Frame as professional productivity enhancement",
-            "Include more detailed technical context",
-            "Use more polished, corporate-style screen recordings"
+            "Frame as professional cybersecurity learning opportunity",
+            "Include expert commentary overlay",
+            "Link to deeper technical analysis"
           ]
         }
       ],
       "visualDirection": {
-        "rating": 7,
-        "description": "High-energy cyberpunk-inspired color palette with electric blues and neon accents, dynamic motion graphics showing tool transformations, clean san-serif typography with subtle glitch effects, rapid-cut editing style mimicking tech innovation"
+        "rating": 8,
+        "description": "Dark cyberpunk color palette (deep blues/blacks), glitch effects simulating data breach, sharp geometric typography, rapid digital transition animations, mix of technical graphics and human-centric imagery"
       },
       "exampleOutline": [
-        "Hook: Stunning visual reveal of AI tools",
-        "Problem: Current design workflow limitations",
-        "Solution: Three breakthrough Figma AI tools",
-        "Demonstration: Quick feature walkthrough",
-        "Call-to-Action: Try new Figma features now"
+        "Quick shocking visual of exposed photos",
+        "Explain Hama Film's website vulnerability",
+        "Demonstrate how easy breach occurs",
+        "Privacy implications and risks",
+        "Protective steps for users"
       ],
-      "hashtags": "#FigmaAI #DesignTechnology #CreativeTech #AIDesign #ProductivityHack #DesignTools #CreativeWorkflow #TechInnovation #UIDesign #AdobeAlternative",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7245606/pexels-photo-7245606.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
+      "hashtags": "#Cybersecurity #PrivacyAlert #DataBreach #TechTips #HackingExposed #OnlineSafety #WebSecurity #DigitalPrivacy #PhotoBooth #TechNews",
+      "textureIndex": 10
     },
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Zevo wants to add robotaxis to its car-share fleet, starting with newcomer Tensor",
+      "description": "As robotaxi adoption continues, wild ideas like personal ownership and renting them out are starting to pop up again.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/products/page/3"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/12/zevo-wants-to-add-robotaxis-to-its-car-share-fleet-starting-with-newcomer-tensor/"
         }
       ],
       "format": "carousel",
       "subcategory": "carousel",
       "hooks": [
-        "Design Templates That Won't Break Your Brand's Soul 🎨",
-        "Figma Hack: Make Templates That Actually Work",
-        "Brand Flexibility: The Secret Designers Don't Talk About"
+        "Robotaxis: The Future of Car Sharing?",
+        "Zevo's Wild Plan to Disrupt Transportation",
+        "Own a Robotaxi? The Future is Here"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use dynamic transitions between slides to maintain flow",
-            "Start with high-contrast visual that stops scrolling",
-            "Include quick motion graphics to highlight key points"
+            "Use dynamic motion graphics to show robotaxi transformation",
+            "Create quick cuts between current and future car sharing models",
+            "Include surprise element to hook viewers in first 2 seconds"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide must communicate entire concept visually",
-            "Use consistent color palette across all 8-10 slides",
-            "Create visual hierarchy with bold typography and icons"
+            "First slide must have bold, eye-catching visualization of robotaxi concept",
+            "Use progressive reveal of information across slides",
+            "End with clear call-to-action or thought-provoking question"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Condense carousel content into rapid-fire voiceover",
-            "Add kinetic text animations",
-            "Use screen recordings of Figma interface"
+            "Compress carousel narrative into 60-second storytelling arc",
+            "Use text overlays to explain complex concepts quickly",
+            "Add energetic background music to maintain engagement"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Add more technical depth in slide captions",
-            "Include professional case study references",
-            "Use more corporate-friendly visual language"
+            "Frame content as professional innovation insight",
+            "Include data points about robotaxi market potential",
+            "Maintain more serious, analytical tone"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, experimental design with neon-adjacent color palette. High-contrast geometric typography. Isometric design elements. Blend of digital interface screenshots with abstract graphic overlays. Incorporate Figma UI elements as design motifs. Use clean, sharp-edged illustrations with subtle gradient transitions."
+        "description": "Futuristic cyberpunk-inspired color palette with electric blues and neon accents. Dynamic, asymmetrical compositions featuring semi-transparent robotaxi silhouettes. Bold, geometric sans-serif typography with slight motion blur. Incorporate tech-inspired grid elements and holographic overlay effects."
       },
       "exampleOutline": [
-        "Slide 1: Provocative hook & visual metaphor",
-        "Slide 2: Problem statement - template limitations",
-        "Slides 3-6: Core design principles",
-        "Slide 7: Key strategic insight",
-        "Slide 8: Call-to-action & next steps"
+        "Slide 1: Provocative Hook & Visual Concept",
+        "Slide 2: Current Car Sharing Landscape",
+        "Slide 3: Zevo's Robotaxi Innovation",
+        "Slide 4: Potential Market Disruption",
+        "Slide 5: Future Implications & Call-to-Action"
       ],
-      "hashtags": "#FigmaDesign #BrandTemplates #AIDesign #CreativeTools #DesignSystem #ProductDesign #UXTips #DesignStrategy #CreativeTech #DigitalDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 12
-    },
-    {
-      "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT",
-      "description": "We’re expanding the capabilities of the Figma app in ChatGPT, so you can turn your ideas into creative assets and presentations that you can polish in Figma Buzz and Figma Slides.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/"
-        },
-        {
-          "name": "Techbuzz",
-          "url": "https://www.techbuzz.ai/articles/figma-surges-7-as-openai-demos-chatgpt-integration-at-devday"
-        },
-        {
-          "name": "Morningstar",
-          "url": "https://www.morningstar.com/news/marketwatch/20251006365/figma-and-these-stocks-are-up-after-openai-showed-ai-might-not-eat-software-after-all"
-        },
-        {
-          "name": "Techloy",
-          "url": "https://www.techloy.com/figma-adds-long-requested-ai-editing-tools-that-cut-out-the-need-for-photoshop-and-canva/"
-        },
-        {
-          "name": "Openai",
-          "url": "https://openai.com/index/introducing-apps-in-chatgpt/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/release-notes/"
-        }
-      ],
-      "format": "story",
-      "subcategory": "story",
-      "hooks": [
-        "AI turns your prompts into design magic 🚀",
-        "Design faster with ChatGPT + Figma",
-        "Create slides in seconds, no design skills needed"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick screen recordings showing transformation",
-            "Add dynamic text overlays highlighting key steps",
-            "Include rapid-fire transition effects between screens"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must show dramatic before/after",
-            "Use consistent color palette across slides",
-            "Include actionable tip on each slide"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected visual demonstration",
-            "Use voiceover explaining process simultaneously",
-            "Include split-screen showing AI vs manual design"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame as professional productivity hack",
-            "Include data/stats about time saved",
-            "Use more technical language and workflow explanation"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 8,
-        "description": "High-energy cyberpunk-inspired design aesthetic with neon gradients, glitch effects, futuristic typography. Dark background with electric blue/magenta accent colors. Dynamic motion graphics showing instant transformation. Clean, high-contrast interface mockups with subtle animated elements."
-      },
-      "exampleOutline": [
-        "Hook: Provocative AI design transformation visual",
-        "Problem: Traditional design is slow and complex",
-        "Solution: ChatGPT Figma app workflow",
-        "Demonstration: Live 30-second asset creation",
-        "Call-to-Action: Try the integration now"
-      ],
-      "hashtags": "#AIDesign #FigmaAI #CreativeTech #DesignHacks #AITools #ProductivityTips #ChatGPT #DesignInnovation #TechTips #CreativeAI",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "hashtags": "#RobotaxiRevolution #FutureOfTransport #AIAutomation #MobilityInnovation #TechDisruption #CarSharing #AutonomousVehicles #ZevoTech #SmartMobility #FutureTransportation",
       "textureIndex": 0
     },
     {
-      "title": "Google launched its deepest AI research agent yet — on the same day OpenAI dropped GPT-5.2",
-      "description": "For the first time, developers can embed Google's Deep Research tool, based on Gemini 3 Pro, into their own apps.",
+      "title": "Reddit argues it isn&#8217;t like other social platforms in case against Australia&#8217;s social media ban",
+      "description": "Reddit, one of the world's largest social platforms, is arguing that it doesn't meet the definition of \"social media platforms\" as it seeks to overturn Australia's law banning children under 16 years of age from social media.",
       "starred": false,
       "sources": [
         {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2025/12/11/google-launched-its-deepest-ai-research-agent-yet-on-the-same-day-openai-dropped-gpt-5-2/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/12/reddit-argues-it-isnt-like-other-social-platforms-in-case-against-australias-social-media-ban/"
         }
       ],
       "format": "quick-image",
       "subcategory": "quick-image",
       "hooks": [
-        "AI Titans Clash: Google vs OpenAI Showdown!",
-        "Devs, Your New AI Superpower Just Dropped 🚀",
-        "One Day, Two AI Game-Changers"
+        "Reddit vs Australia: The Social Media Loophole 🕵️",
+        "Wait, Reddit isn't social media? 🤯",
+        "How Reddit is dodging the ban hammer 🔨"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick jump cuts between Google and OpenAI logos",
-            "Animate key stats with dynamic motion graphics",
-            "Include a surprise visual reveal of the tech comparison"
+            "Use a split-screen meme format comparing Reddit to other platforms",
+            "Create a quick animated text overlay explaining the legal nuance",
+            "Use a playful, fast-paced editing style to maintain viewer engagement"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Provocative comparison visual",
-            "Use progressive reveal of technical details across slides",
-            "Final slide: Clear call-to-action for developers"
+            "First slide: Provocative headline with Reddit logo",
+            "Use each slide to break down a key point of the legal argument",
+            "Final slide: Thought-provoking question or call to action"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with high-energy sound effect",
-            "Use text overlays to highlight key technical differences",
-            "Create rapid-fire visual comparison sequence"
+            "Start with a dramatic text reveal about the legal challenge",
+            "Use quick cuts and meme-style graphics",
+            "Include a voiceover explaining the key points succinctly"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Add more technical depth in post text",
-            "Use professional, data-driven visual design",
-            "Include potential industry impact insights"
+            "Frame the content as a professional legal insight",
+            "Use a more serious, analytical tone",
+            "Include a professional graphic explaining the legal distinction"
           ]
         }
       ],
       "visualDirection": {
-        "rating": 8,
-        "description": "High-contrast cyberpunk-inspired color palette (electric blue, neon purple, deep black). Fragmented geometric compositions suggesting technological complexity. Bold, angular typography with glitch/digital artifact effects. Animated elements suggesting technological dynamism and rapid innovation."
+        "rating": 7,
+        "description": "Bold, high-contrast design with a playful tech-legal aesthetic. Use a color palette of deep blues and electric orange. Typography should be bold and slightly disruptive, with graphic elements that suggest legal documents and tech interfaces. Incorporate meme-like visual elements with sharp, witty graphic treatments."
       },
       "exampleOutline": [
-        "Opening: Dramatic AI Showdown Visual",
-        "Context: Two Tech Giants' Simultaneous Launches",
-        "Technical Breakdown: Key Features Comparison",
-        "Developer Opportunity Highlight",
-        "Call-to-Explore/Learn More"
+        "Section 1: Attention-grabbing headline/visual hook",
+        "Section 2: Quick explanation of Reddit's unique platform status",
+        "Section 3: Key legal argument visualization",
+        "Section 4: Surprising twist or implication",
+        "Section 5: Call to learn more or share opinion"
       ],
-      "hashtags": "#AIInnovation #GoogleAI #OpenAI #TechTitans #AIResearch #DeveloperTools #EmergingTech #AIFrontiers #InnovationAlert #TechDisruption",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7767791/pexels-photo-7767791.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 11
+      "hashtags": "#Reddit #SocialMedia #LegalTech #InternetLaw #TechNews #AIEthics #DigitalRegulation #SocialPlatforms #TechPolicy #InternetFreedom",
+      "textureIndex": 12
     },
     {
-      "title": "OpenAI fires back at Google with GPT-5.2 after ‘code red’ memo",
-      "description": "OpenAI just launched GPT-5.2, a frontier model aimed at developers and professionals, pushing reasoning and coding benchmarks as it races Google’s Gemini 3 while grappling with compute costs and no generator.",
+      "title": "World launches its &#8216;super app,&#8217; including crypto pay and encrypted chat features",
+      "description": "Tools for Humanity, the company behind the app, is seeking to expand its \"real human network.\"",
       "starred": false,
       "sources": [
         {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2025/12/11/openai-fires-back-at-google-with-gpt-5-2-after-code-red-memo/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/11/world-launches-its-super-app-including-crypto-pay-and-encrypted-chat-features/"
         }
       ],
-      "format": "reel",
-      "subcategory": "reel",
+      "format": "carousel",
+      "subcategory": "carousel",
       "hooks": [
-        "AI War: OpenAI Just Dropped GPT-5.2 🚀",
-        "Google's Nightmare: OpenAI's New AI Weapon",
-        "Developers, Get Ready for GPT-5.2's Insane Upgrade"
+        "World's First Super App: Privacy Meets Possibility",
+        "Crypto, Chat, Connect: The Network Revolution",
+        "One App to Rule Them All?"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use fast-paced text animations to highlight key stats",
-            "Include dynamic visual comparisons between GPT-5.2 and Gemini",
-            "Create a scrolling infographic-style visual progression"
+            "Use fast-paced transitions between slides",
+            "Include dynamic motion graphics showing app features",
+            "Create a narrative arc within 30 seconds"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide must have provocative comparison graphic",
-            "Use swipe-friendly data visualization",
-            "End with call-to-action slide about AI development"
+            "First slide must have provocative visual hook",
+            "Use consistent color palette across slides",
+            "Progressive reveal of information with each slide"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with unexpected visual metaphor for AI competition",
-            "Use quick-cut editing to maintain high energy",
-            "Include subtle screen recordings of GPT-5.2 capabilities"
+            "Extract most dynamic carousel slides for short",
+            "Add energetic voiceover explaining key concepts",
+            "Include quick visual comparisons to existing apps"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Frame content as professional technology insight",
-            "Use more technical language and data points",
-            "Include expert commentary or analytical perspective"
+            "Add more technical depth to carousel content",
+            "Include professional implications of the super app",
+            "Use more data-driven visualizations"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast cyberpunk-inspired color palette with electric blues and deep purples. Geometric, fractured typography suggesting network complexity. Glitch-style motion graphics revealing app features. Blend of technical wireframe elements with fluid, organic transitions. Minimalist but futuristic aesthetic reminiscent of cutting-edge tech interfaces."
+      },
+      "exampleOutline": [
+        "Slide 1: Provocative Hook/Visual Overview",
+        "Slide 2: What Makes a Super App?",
+        "Slide 3: Crypto Payment Features",
+        "Slide 4: Encrypted Communication Capabilities",
+        "Slide 5: Future of Connected Networks"
+      ],
+      "hashtags": "#SuperApp #TechInnovation #CryptoTech #DigitalPrivacy #FutureOfConnection #AINetworks #CommunicationTech #DecentralizedApp #TechTrends #GlobalNetwork",
+      "textureIndex": 6
+    },
+    {
+      "title": "Stanford&#8217;s star reporter takes on Silicon Valley&#8217;s &#8216;money-soaked&#8217; startup culture",
+      "description": "His reporting on a Stanford University president put Theo Baker on the map, but his upcoming book may cement his reputation as the rare young journalist willing to challenge Silicon Valley's startup machine.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/11/stanfords-star-reporter-takes-on-silicon-valleys-money-soaked-startup-culture/"
+        }
+      ],
+      "format": "story",
+      "subcategory": "story",
+      "hooks": [
+        "Silicon Valley's Dark Side: One Reporter's Explosive Investigation",
+        "Startup Culture Unmasked: The Story They Don't Want Told",
+        "Who Really Controls Tech's Money Machine?"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic text overlays highlighting investigative quotes",
+            "Include quick cuts of Theo Baker speaking/reporting",
+            "Add subtle motion graphics to emphasize key revelations"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must create immediate intrigue about investigation",
+            "Use infographic-style slides breaking down startup culture stats",
+            "Final slide should prompt engagement/book pre-order"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with most controversial/surprising investigation finding",
+            "Use dramatic b-roll of Silicon Valley landscapes",
+            "Include direct quote that challenges startup narrative"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame story as professional accountability journalism",
+            "Highlight Baker's investigative methodology",
+            "Connect narrative to broader tech ethics discussion"
           ]
         }
       ],
       "visualDirection": {
         "rating": 8,
-        "description": "High-contrast cyberpunk-inspired color palette (deep blues, electric teals, sharp oranges). Dynamic motion graphics with glitch effects. Typography that feels both technical and futuristic - sharp angles, minimal sans-serif. Rapid visual transitions mimicking AI processing. Incorporate abstract circuit/network overlay graphics."
+        "description": "High-contrast monochromatic palette with electric blue/charcoal gray accents. Aggressive, documentary-style typography using sans-serif fonts. Dynamic diagonal compositions suggesting investigative tension. Incorporate glitch/data overlay effects to symbolize technological disruption. Reference aesthetic of 'The Social Dilemma' documentary mixed with WIRED magazine design language."
       },
       "exampleOutline": [
-        "Opening: Provocative AI competition statement",
-        "Context: OpenAI vs Google landscape",
-        "GPT-5.2 Key Features Breakdown",
-        "Developer Implications and Potential",
-        "Future of AI Technology Prediction"
+        "Section 1: Provocative Investigation Teaser",
+        "Section 2: Silicon Valley's Hidden Power Structures",
+        "Section 3: Theo Baker's Investigative Journey",
+        "Section 4: Key Systemic Revelations",
+        "Section 5: Call to Critical Thinking"
       ],
-      "hashtags": "#OpenAI #AITech #GPT5 #AIDevelopment #TechInnovation #AICompetition #FutureOfAI #TechNews #MachineLearning #CodeRed",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 6
+      "hashtags": "#TechJournalism #SiliconValley #StartupCulture #InvestigativeReporting #TechEthics #MediaDisruption #TheoBarker #BookReveal #TechCriticism #InnovationWatch",
+      "textureIndex": 5
     }
   ]
 }
