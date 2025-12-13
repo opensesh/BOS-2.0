@@ -1,253 +1,211 @@
 {
   "type": "long-form",
-  "date": "2025-12-13T16:18:59.895Z",
+  "date": "2025-12-13T16:24:48.632Z",
   "ideas": [
     {
-      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't",
-      "description": "Figma designer–turned–product manager Nikolas Klein worked on building prototyping tools for seven years. Then AI changed the game.",
+      "title": "OK, what&#8217;s going on with LinkedIn&#8217;s algo?",
+      "description": "Women ran an experiment to see if LinkedIn's new algo was being sexist and thought they proved it. But there's more complexity involved, experts say.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/hard-problems-are-still-hard/"
-        },
-        {
-          "name": "Robotics",
-          "url": "https://robotics.ee/2025/10/page/6/?wtime=seek_to_second_number"
-        },
-        {
-          "name": "Podcasts",
-          "url": "https://podcasts.apple.com/ke/podcast/open-source-security/id1151833659"
-        },
-        {
-          "name": "Rfleury",
-          "url": "https://www.rfleury.com/feed"
-        },
-        {
-          "name": "Datarobot",
-          "url": "https://www.datarobot.com/blog/agentic-ai-enterprise-design/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/ai/"
-        }
-      ],
-      "format": "video",
-      "subcategory": "thought-leadership",
-      "hooks": [
-        "AI Won't Solve Design's Hardest Problems",
-        "Tools Change, But Real Work Remains",
-        "The Truth About AI in Design"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use picture-in-picture for personal narrative moments",
-            "Create dynamic screen recordings showing tool evolution",
-            "Add chapter markers for clear navigation"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast color palette with deep blues and electric oranges. Dynamic split-screen compositions showing design tool interfaces. Kinetic typography with smooth motion graphics. Clean, technical aesthetic with unexpected visual interruptions. Incorporate AI-generated visual glitches and transitions to represent technological disruption."
-      },
-      "exampleOutline": [
-        "Opening: Personal Story of Design Transformation",
-        "The AI Hype vs. Design Reality",
-        "Case Studies: Where AI Actually Helps",
-        "What Remains Fundamentally Human in Design",
-        "Call to Embrace Tools, Not Replace Craft"
-      ],
-      "hashtags": "#AIDesign #DesignTech #ProductManagement #CreativeTech #FutureOfWork #DesignInnovation #AITools #CreativeStrategy #DesignThinking #TechTrends",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
-    },
-    {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/products/page/3"
-        }
-      ],
-      "format": "livestream",
-      "subcategory": "leadership",
-      "hooks": [
-        "Design Templates That Sell Themselves in Figma",
-        "Unlock Scalable Brand Systems in 8 Steps",
-        "Figma Templating: Marketing Meets Design Magic"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Enable live chat for real-time audience interaction",
-            "Prepare pre-submitted Q&A questions as backup",
-            "Use picture-in-picture during screen sharing for personality connection"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Dynamic split-screen layout with live presenter and Figma workspace. High-contrast brand colors (electric blue, charcoal gray). Clean, modern sans-serif typography. Animated graphic transitions between template examples. Subtle motion design highlighting template flexibility."
-      },
-      "exampleOutline": [
-        "Live Stream Intro: Personal Design Challenge Story",
-        "Why Most Templates Fail: Marketing Perspective",
-        "8 Strategic Template Design Principles",
-        "Live Demonstration & Real-Time Template Breakdown",
-        "Community Q&A and Closing Insights"
-      ],
-      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystem #CreativeWorkflow #ProductDesign #AIDesign #DesignStrategy #TemplateDesign #CreativeTips #DesignCommunity",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 11
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=rxODDWM4VMU"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/ai/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/12/ok-whats-going-on-with-linkedins-algo/"
         }
       ],
       "format": "tutorial",
       "subcategory": "instructional",
       "hooks": [
-        "Transform Images in Figma: 3 Pro AI Editing Tricks",
-        "Unlock Precision: Figma's New AI Image Tools Revealed",
-        "Design Faster: Figma's Breakthrough Image Editing Techniques"
+        "LinkedIn's Algorithm: Exposed Step-by-Step",
+        "Cracking the LinkedIn Bias Code",
+        "How Women Decoded LinkedIn's Secret Algorithm"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use screen recordings with clear cursor tracking for each step",
-            "Include picture-in-picture overlay showing before/after comparisons",
-            "Add chapter markers for each unique image editing technique"
+            "Use screen recordings showing actual LinkedIn interface",
+            "Create clear chapter markers for each algorithmic investigation step",
+            "Include picture-in-picture expert commentary during technical breakdown"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, technical aesthetic with clean Figma-inspired color palette. High-contrast typography with dynamic motion graphics. Use a mix of screen recordings and animated overlays. Color scheme: deep blues, bright accent colors, clean white backgrounds. Incorporate subtle futuristic design elements that highlight AI precision."
+        "description": "High-contrast blue and white color palette with data visualization overlays. Dynamic motion graphics showing algorithmic flow. Clean, technical typography with bold sans-serif headings. Animated data points and network connection visualizations. Minimalist infographic style with technical precision."
       },
       "exampleOutline": [
-        "Introduction: The Image Editing Revolution in Figma",
-        "Problem: Current Limitations in Image Editing Workflows",
-        "Tool 1: Precision AI Editing Technique Walkthrough",
-        "Tool 2: Advanced Image Manipulation Strategies",
-        "Tool 3: Workflow Optimization with New Figma Features",
-        "Conclusion: Transforming Design Efficiency"
+        "Introduction: The LinkedIn Algorithm Mystery",
+        "Problem Statement: Potential Algorithmic Bias",
+        "Step-by-Step Experimental Methodology",
+        "Data Analysis and Findings",
+        "Implications and Recommendations"
       ],
-      "hashtags": "#FigmaAI #DesignTips #AIDesign #CreativeWorkflow #ImageEditing #DesignTechnology #CreativeTech #FigmaTutorial #AITools #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
+      "hashtags": "#LinkedInAlgorithm #AIBias #TechEthics #DataScience #AlgorithmicTransparency #WomenInTech #TechCritique #AIResearch #SocialMediaAlgorithms #TechEquity",
+      "textureIndex": 4
     },
     {
-      "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT",
-      "description": "We’re expanding the capabilities of the Figma app in ChatGPT, so you can turn your ideas into creative assets and presentations that you can polish in Figma Buzz and Figma Slides.",
+      "title": "Trump’s AI executive order promises &#8216;one rulebook&#8217; — startups may get legal limbo instead",
+      "description": "Trump signed an AI executive order targeting state laws and promising one national rulebook. Critics warn it could trigger court battles and prolong uncertainty for startups while Congress debates federal rules.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/"
-        }
-      ],
-      "format": "tutorial",
-      "subcategory": "instructional",
-      "hooks": [
-        "Turn ChatGPT Prompts into Pro Design Assets Instantly",
-        "Design Faster: Figma + ChatGPT Magic Revealed",
-        "One Click: From Text to Stunning Presentations"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use screen recording with cursor tracking for precise tutorial steps",
-            "Include chapter markers for easy navigation between Figma app steps",
-            "Highlight mouse clicks and keyboard shortcuts with visual animations"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, dynamic design with electric blue and charcoal color palette. Clean, geometric motion graphics showing transformation from text to visual asset. Sharp, modern sans-serif typography with subtle gradient overlays. Animated UI reveal transitions highlighting key interaction points. Minimal but high-energy visual style that communicates speed and precision."
-      },
-      "exampleOutline": [
-        "Opening: Demonstrate problem of manual design creation",
-        "Context: Explain limitations of traditional design workflows",
-        "Step-by-Step Walkthrough: Figma App in ChatGPT Tutorial",
-        "Advanced Techniques: Pro Tips and Optimization Strategies",
-        "Closing: Future of AI-assisted Design Workflows"
-      ],
-      "hashtags": "#AIDesign #ChatGPT #Figma #DesignTips #CreativeAI #ProductivityHack #DesignTechnology #AITools #UXDesign #CreativeCoding",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7903783/pexels-photo-7903783.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 1
-    },
-    {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/12/trumps-ai-executive-order-promises-one-rulebook-startups-may-get-legal-limbo-instead/"
         }
       ],
       "format": "documentary",
       "subcategory": "framework",
       "hooks": [
-        "How one typeface changed Figma forever",
-        "The secret design story behind Figma Sans",
-        "Typography that rewrote design's visual language"
+        "AI Rules: Trump's Gamble That Could Break Startups",
+        "One Rulebook to Bind Them: AI's Legal Minefield",
+        "Startup Survival: The Hidden AI Regulation Trap"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use high-quality archival/behind-the-scenes footage of design process",
-            "Include designer interview clips with dynamic b-roll",
-            "Create chapter markers showing typeface evolution stages"
+            "Use archival footage of tech hearings and Trump executive actions",
+            "Include dynamic infographics explaining regulatory complexity",
+            "Create chapter markers for complex legal narrative"
           ]
         }
       ],
       "visualDirection": {
-        "rating": 8,
-        "description": "Bold, experimental typography-driven aesthetic. High-contrast black/white with strategic color accents. Dynamic kinetic typography animations revealing letterform details. Grid-based compositions mimicking precise type design. Incorporate macro/micro type exploration visuals. Reference Swiss design precision meets modern digital fluidity."
+        "rating": 7,
+        "description": "High-contrast blue/gray palette representing legal/tech tension. Geometric typography suggesting structure/regulation. Dynamic motion graphics simulating regulatory flowcharts. Split-screen archival/contemporary footage. Subtle glitch effects symbolizing technological disruption."
       },
       "exampleOutline": [
-        "Cold Open: Dramatic reveal of Figma Sans letterforms",
-        "Design Challenge: Limitations of previous visual identity",
-        "Creative Process: Interviews with type designers and brand team",
-        "Technical Deep Dive: Typeface design methodology",
-        "Future Impact: How custom typography transforms brand storytelling"
+        "Cold Open: Dramatic AI regulation soundbite",
+        "Historical Context: Rise of AI and regulatory challenges",
+        "Trump's Executive Order: Detailed policy breakdown",
+        "Startup Impact Analysis: Potential legal and economic consequences",
+        "Expert Commentary and Future Predictions"
       ],
-      "hashtags": "#FigmaDesign #Typography #BrandIdentity #CreativeProcess #DesignStory #TypeDesign #GraphicDesign #BehindTheScenes #CreativeTech #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 6
+      "hashtags": "#AIRegulation #TechPolicy #StartupLaw #ArtificialIntelligence #TechTrends #LegalTech #AIEthics #PolicyInnovation #TechStartups #ExecutiveOrder",
+      "textureIndex": 7
+    },
+    {
+      "title": "You can now have more fluid and expressive conversations when you go Live with Search.",
+      "description": "&lt;img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Searchlive_thumb.max-600x600.format-webp.webp\"&gt;When you go Live with Search, you can have a back-and-forth voice conversation in AI Mode to get real-time help and quickly find relevant sites across the web. And now, …",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Google AI Blog",
+          "url": "https://blog.google/products/search/live-audio-gemini-model-update/"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "AI Search Just Got Way More Conversational",
+        "Talk to Search Like a Real Assistant",
+        "Your Voice, Search's Instant Intelligence"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Enable live chat interaction during stream",
+            "Use picture-in-picture for real-time demonstrations",
+            "Create interactive polling during live segments"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dynamic blue-teal gradient background, floating holographic UI elements simulating search interactions. Clean sans-serif typography with motion-tracked text reveals. Minimalist iconography representing voice/search interactions. Subtle particle animations suggesting real-time data flow. High-contrast color palette emphasizing technological fluidity."
+      },
+      "exampleOutline": [
+        "Section 1: Dramatic Live Search Interaction Reveal",
+        "Section 2: Current Search Limitations Breakdown",
+        "Section 3: Gemini AI Voice Conversation Mechanics",
+        "Section 4: Practical Use Case Demonstrations",
+        "Section 5: Future of Conversational Search Preview"
+      ],
+      "hashtags": "#AISearch #GoogleAI #VoiceAssistant #TechInnovation #SearchTechnology #AIConversation #FutureOfSearch #VoiceAI #SearchLive #GeminiAI",
+      "textureIndex": 9
+    },
+    {
+      "title": "Bringing state-of-the-art Gemini translation capabilities to Google Translate",
+      "description": "&lt;img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Translate-Blog-121125.max-600x600.format-webp.webp\"&gt;We’re bringing Gemini’s state-of-the-art translation model to Google Translate for text, and more new features.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Google AI Blog",
+          "url": "https://blog.google/products/search/gemini-capabilities-translation-upgrades/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "AI Just Transformed Google Translate Forever",
+        "Gemini's Mind-Blowing Translation Revolution",
+        "How Google is Rewriting Language Barriers"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use screen recordings of actual translation demos",
+            "Include picture-in-picture with presenter explaining technical nuances",
+            "Create dynamic chapter markers for easy navigation"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-forward aesthetic with electric blue and deep indigo color palette. Dynamic motion graphics showing translation transformations. Clean, sans-serif typography with sharp geometric elements. Animated language transition effects. Minimal but high-energy visual style mimicking AI's precision and creativity."
+      },
+      "exampleOutline": [
+        "Section 1: Dramatic AI Translation Hook (5-10s)",
+        "Section 2: Current Translation Limitations (1-2min)",
+        "Section 3: Gemini's Technical Translation Breakthrough (3-4min)",
+        "Section 4: Real-World Impact & Examples (2-3min)",
+        "Section 5: Future of Language Technology CTA (30-60s)"
+      ],
+      "hashtags": "#GoogleTranslate #AITranslation #GeminiAI #LanguageTech #AIInnovation #Translation #MachineLearning #TechBreakthrough #AILanguage #IntelligentTranslation",
+      "textureIndex": 8
+    },
+    {
+      "title": "Google Translate now lets you hear real-time translations in your headphones",
+      "description": "The real-time headphone translations experience keeps each speaker’s tone, emphasis, and cadence intact, so it’s easier to follow the conversation and tell who’s saying what.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/12/google-translate-now-lets-you-hear-real-time-translations-in-your-headphones/"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "Real-Time Translation Magic in Your Headphones",
+        "Google's AI Language Barrier Breakthrough",
+        "Translate Conversations Like a Pro"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use picture-in-picture to show device screen and presenter",
+            "Create chapter markers for each step of translation process",
+            "Include live demo of translation feature in real conversation"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dynamic motion graphics showcasing translation process, vibrant tech-inspired color palette (electric blues, clean whites), floating typography with translation language transitions, animated sound wave/language connection visualizations, sleek minimal interface overlays"
+      },
+      "exampleOutline": [
+        "Introduction: The Language Translation Revolution",
+        "How Real-Time Translation Actually Works",
+        "Step-by-Step: Setting Up Google Translate Headphone Feature",
+        "Pro Tips and Hidden Capabilities",
+        "Future of AI Language Technology"
+      ],
+      "hashtags": "#GoogleTranslate #AILanguage #RealTimeTranslation #TechInnovation #LanguageTech #AITools #TranslationMagic #GlobalCommunication #TechTutorial #LanguageLearning",
+      "textureIndex": 11
     }
   ]
 }
