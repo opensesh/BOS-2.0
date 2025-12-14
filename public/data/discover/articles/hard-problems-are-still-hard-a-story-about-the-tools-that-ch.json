@@ -1,17 +1,17 @@
 {
   "id": "hard-problems-are-still-hard-a-story-about-the-tools-that-ch",
   "slug": "hard-problems-are-still-hard-a-story-about-the-tools-that-ch",
-  "title": "Hard Problems Are Still Hard: How Changing Tools Keep Colliding With the Same Old Work",
-  "publishedAt": "2025-12-13T16:15:08.084Z",
-  "generatedAt": "2025-12-13T16:15:08.084Z",
-  "totalSources": 15,
+  "title": "Hard Problems Are Still Hard: How AI Agents Change the Tools—but Not the Work",
+  "publishedAt": "2025-12-14T16:17:17.660Z",
+  "generatedAt": "2025-12-14T16:17:17.660Z",
+  "totalSources": 18,
   "sections": [
     {
       "id": "section-0",
       "paragraphs": [
         {
           "id": "para-0-0",
-          "content": "Figma’s December 2025 post “Hard problems are still hard: A story about the tools that change and the work that doesn’t” captures a growing sentiment across tech: artificial intelligence is transforming workflows, but not dissolving the underlying difficulty of the work itself.In that piece, Figma product manager Nikolas Klein recounts building new AI-powered image editing tools and concludes that even with powerful models, core design challenges like judgment, trade‑offs, and context remain stubbornly human.A similar refrain appears in robotics coverage, where commentators note that as agentic AI systems spread through automation and manufacturing, they intensify long‑standing problems of planning, safety, and integration rather than resolving them.Together these perspectives frame a 2025 reality in which tools change quickly, yet the hardest problems in software, design, and robotics continue to resist easy fixes.",
+          "content": "In late 2025, a growing chorus across robotics, AI, and design is rallying around a blunt refrain: **“hard problems are still hard.”**Robotics commentators note that despite rapid advances in autonomy and agentic AI, basic real‑world challenges—like robust perception, long‑horizon planning, and safe navigation in unstructured environments—continue to block large‑scale deployment.Industry surveys and forecasts show that high implementation cost and reliability concerns remain the top barriers to rolling out autonomous systems, even as compute and model capabilities accelerate.This context has turned the phrase into a kind of reality check on AI hype, framing new tools as powerful but fundamentally constrained.",
           "citations": [
             {
               "primarySource": {
@@ -21,7 +21,7 @@
                 "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
                 "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
               },
-              "additionalCount": 1,
+              "additionalCount": 2,
               "additionalSources": [
                 {
                   "id": "source-2",
@@ -29,56 +29,7 @@
                   "url": "https://robotics.ee/2025/10/page/5/",
                   "favicon": "https://www.google.com/s2/favicons?domain=robotics.ee&sz=32",
                   "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "para-0-1",
-          "content": "Beyond Figma, the phrase “hard problems are still hard” now anchors broader debates about AI’s real limits, from the mechanics of deploying agentic systems in enterprises to enduring gaps in AI reliability and accuracy.Commenters on forums such as TravellerRPG argue that despite striking advances in language and image models, progress on genuinely hard AI problems—like robust reasoning or dependable perception—remains modest once systems are pushed outside narrow demos.At the same time, Figma’s own AI roadmap, including credits systems and integrations that promise faster work, underscores how commercial tools are racing to wrap these imperfect capabilities in usable product experiences rather than claiming to have solved creativity itself.The tension between accelerated tooling and persistent difficulty has become a defining storyline for how practitioners and investors judge the next wave of AI products.",
-          "citations": [
-            {
-              "primarySource": {
-                "id": "source-4",
-                "name": "mastodon",
-                "url": "https://mastodon.social/@andrewnez",
-                "favicon": "https://www.google.com/s2/favicons?domain=mastodon.social&sz=32",
-                "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
-              },
-              "additionalCount": 1,
-              "additionalSources": [
-                {
-                  "id": "source-5",
-                  "name": "figma",
-                  "url": "https://www.figma.com/blog/ai/",
-                  "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
-                  "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "section-1",
-      "title": "Design, AI, and the Stubbornness of Real Creative Work",
-      "paragraphs": [
-        {
-          "id": "para-1-0",
-          "content": "Figma’s flagship essay argues that while AI now handles tasks like image cleanup and layout suggestions, it does not answer the hardest design questions about what to build, for whom, and why.The post situates these challenges alongside other Figma writing on AI, which stresses that tools can reduce friction in production but cannot replace the need for understanding user context and orchestrating complex collaboration.Outside consumer design, a Manning book chapter on large language models uses nearly identical language—“hard problems are still hard”—to describe why LLMs follow S‑curves of diminishing returns and remain bounded by data, compute, and fundamental computational limits.That chapter warns against assuming generative models will spontaneously self‑improve into general problem‑solvers, arguing instead that they are best deployed on “fuzzy” tasks where approximate answers are acceptable rather than on problems demanding precision and guarantees.",
-          "citations": [
-            {
-              "primarySource": {
-                "id": "source-8",
-                "name": "manning",
-                "url": "https://www.manning.com/preview/how-large-language-models-work/chapter-7",
-                "favicon": "https://www.google.com/s2/favicons?domain=www.manning.com&sz=32",
-                "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
-              },
-              "additionalCount": 1,
-              "additionalSources": [
+                },
                 {
                   "id": "source-3",
                   "name": "robotics",
@@ -91,23 +42,30 @@
           ]
         },
         {
-          "id": "para-1-1",
-          "content": "In software engineering, game developer Ryan Fleury reaches a parallel conclusion in his exploration of multithreading and mutation, writing that “hard problems are still hard” even after he adopted better abstractions.Fleury explains that once concurrency enters the picture, seemingly simple tasks become complex because programmers must manage data races, shared state, and opaque interactions that invalidate many single‑threaded intuitions.His proposed response is not a new silver‑bullet tool but deliberate constraint: designing systems and APIs that make unsafe patterns impossible and force engineers to grapple with complexity up front rather than during late‑stage rewrites.This echoes the LLM analysis, which suggests that tools can shift where the effort lands, but do not remove the need for careful system design and human reasoning about edge cases and failure modes.",
+          "id": "para-0-1",
+          "content": "The same theme is surfacing far beyond robotics labs, from Figma’s product and design community to enterprise AI strategists and software engineers.Designers like Figma’s Nikolas Klein argue that while AI-native tools and real‑time collaboration platforms reshape workflows, the core work of defining strategy, aligning stakeholders, and making judgment calls has not become easier.Investors and founders, meanwhile, are explicitly looking for “hard problems” to back in 2025—from industrial robotics to lab automation—on the premise that tooling gains have not yet dissolved structural bottlenecks.Together, these perspectives position agentic AI as an accelerant for human expertise, not a substitute for the deeply contextual, constraint‑laden work that remains stubbornly hard.",
           "citations": [
             {
               "primarySource": {
-                "id": "source-10",
-                "name": "rfleury",
-                "url": "https://www.rfleury.com/p/multi-threading-and-mutation",
-                "favicon": "https://www.google.com/s2/favicons?domain=www.rfleury.com&sz=32",
+                "id": "source-4",
+                "name": "mastodon",
+                "url": "https://mastodon.social/@andrewnez",
+                "favicon": "https://www.google.com/s2/favicons?domain=mastodon.social&sz=32",
                 "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
               },
-              "additionalCount": 1,
+              "additionalCount": 2,
               "additionalSources": [
+                {
+                  "id": "source-5",
+                  "name": "figma",
+                  "url": "https://www.figma.com/blog/everything/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+                  "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+                },
                 {
                   "id": "source-6",
                   "name": "figma",
-                  "url": "https://www.figma.com/blog/",
+                  "url": "https://www.figma.com/blog/maker-stories/",
                   "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
                   "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
                 }
@@ -118,28 +76,105 @@
       ]
     },
     {
-      "id": "section-2",
-      "title": "Robots, Agentic AI, and the Long Tail of Unsolved Problems",
+      "id": "section-1",
+      "title": "From Agentic AI to Humanoids: Robotics Meets the Limits of the Real World",
       "paragraphs": [
         {
-          "id": "para-2-0",
-          "content": "Robotics reporting in late 2025 repeatedly illustrates how impressive demos mask unresolved fundamentals, from perception to planning. A Robotics.ee archive for October highlights ongoing work on planetary exploration robots and emphasizes that coping with uncertainty—noisy sensors, unpredictable terrain, and limited communication—is a core, unsolved challenge despite better hardware and algorithms.Another Robotics.ee piece from December, based on interviews with autonomous vehicle safety staff, describes how teams still struggle to manage and share safety data effectively, suggesting that organizational and socio‑technical hurdles remain as stubborn as purely technical ones.A Manning chapter on LLM limits reinforces this picture by noting that while models can aid code generation and high‑level reasoning in robotics stacks, they do not magically solve long‑horizon control or formal safety verification, where guarantees and rigorous testing are still required.",
+          "id": "para-1-0",
+          "content": "Robotics roadmaps for 2025 and beyond openly acknowledge that core constraints—cost, safety, and performance in messy environments—are proving resistant to quick AI fixes.Even as autonomy improves, many robots still struggle outdoors, on rough terrain, or in unpredictable settings, and surveys of robotics developers identify high implementation cost as the single biggest barrier to wider adoption.Detailed polling of product developers and industrial designers finds that 73.4% cite cost as the top obstacle, while roughly half highlight safety and reliability in dynamic, human‑filled spaces as a central unsolved challenge.These numbers echo expert interviews and public talks in which roboticists emphasize that tasks that feel trivial to humans—like folding laundry or reliably grasping varied household objects—remain disproportionately difficult for machines.",
           "citations": [
             {
               "primarySource": {
                 "id": "source-7",
+                "name": "figma",
+                "url": "https://www.figma.com/blog/ai/",
+                "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+                "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+              },
+              "additionalCount": 2,
+              "additionalSources": [
+                {
+                  "id": "source-8",
+                  "name": "figma",
+                  "url": "https://www.figma.com/blog/design/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+                  "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+                },
+                {
+                  "id": "source-9",
+                  "name": "figma",
+                  "url": "https://www.figma.com/blog/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+                  "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "para-1-1",
+          "content": "Analysts tracking robotics trends say this tension is shaping where robots will actually appear over the next decade: factories and warehouses long before living rooms. Their surveys show deep skepticism about near‑term humanoid robots in elder care or domestic chores, with only small minorities of experts expecting such systems to be ready soon, despite intense investment. At the same time, investors are looking for “industrial robotic leapfrogging” and lab automation plays, betting that focused, structured environments can yield real gains even as general‑purpose autonomy lags.Across these domains, the message is consistent: new AI agents, digital twins, and better simulation pipelines help, but they run into the same old walls of physics, safety standards, and economic viability that have defined robotics for years.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-10",
+                "name": "manning",
+                "url": "https://www.manning.com/preview/how-large-language-models-work/chapter-7",
+                "favicon": "https://www.google.com/s2/favicons?domain=www.manning.com&sz=32",
+                "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+              },
+              "additionalCount": 2,
+              "additionalSources": [
+                {
+                  "id": "source-11",
+                  "name": "datarobot",
+                  "url": "https://www.datarobot.com/blog/agentic-ai-enterprise-design/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.datarobot.com&sz=32",
+                  "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+                },
+                {
+                  "id": "source-12",
+                  "name": "rfleury",
+                  "url": "https://www.rfleury.com/p/multi-threading-and-mutation",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.rfleury.com&sz=32",
+                  "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-2",
+      "title": "Design, Software, and Security: When Better Tools Don’t Erase the Hard Parts",
+      "paragraphs": [
+        {
+          "id": "para-2-0",
+          "content": "In digital product work, Figma’s own blog has turned “hard problems are still hard” into a narrative about AI-augmented design rather than AI‑replaced designers.Nikolas Klein’s Maker Story recounts a complex rebrand where modern tools—cloud collaboration, shared design systems, and emerging AI features—smoothed execution but did not simplify the underlying challenges of brand definition, cross‑functional alignment, and timing a funding round.Adjacent Figma posts on AI image editing, design systems in the AI era, and the blurring boundaries between designers, developers, and product managers all stress that while AI can speed up production work, it doesn’t resolve ambiguity or make trade‑offs for teams.That same framing appears in broader technical writing and podcasts, where engineers and security experts use the phrase to describe multi‑threading pitfalls, long‑term maintenance burdens, and open‑source supply‑chain risks that persist despite more sophisticated languages and tooling.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-13",
                 "name": "travellerrpg",
                 "url": "https://www.travellerrpg.com/threads/raw-personalities-in-computers.39219/page-2",
                 "favicon": "https://www.google.com/s2/favicons?domain=www.travellerrpg.com&sz=32",
                 "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
               },
-              "additionalCount": 1,
+              "additionalCount": 2,
               "additionalSources": [
                 {
-                  "id": "source-9",
-                  "name": "datarobot",
-                  "url": "https://www.datarobot.com/blog/agentic-ai-enterprise-design/",
-                  "favicon": "https://www.google.com/s2/favicons?domain=www.datarobot.com&sz=32",
+                  "id": "source-14",
+                  "name": "player",
+                  "url": "https://player.fm/series/open-source-security/tarmageddon-with-alex-zenla",
+                  "favicon": "https://www.google.com/s2/favicons?domain=player.fm&sz=32",
+                  "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+                },
+                {
+                  "id": "source-15",
+                  "name": "opensourcesecurity",
+                  "url": "https://opensourcesecurity.io/tag/kubernetes/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=opensourcesecurity.io&sz=32",
                   "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
                 }
               ]
@@ -148,23 +183,30 @@
         },
         {
           "id": "para-2-1",
-          "content": "Enterprise AI commentary pushes this argument into the boardroom, with DataRobot’s discussion of agentic AI warning that moving from static assistants to autonomous workflows actually sharpens problems around governance, reliability, and aligning systems with business value.The company cites research showing that most generative‑AI pilots fail to yield measurable impact at scale, attributing this not just to immature models but to difficult design and integration work that automation cannot shortcut.Security‑focused outlets such as Open Source Security further remind practitioners that even as AI‑driven tools promise to detect vulnerabilities faster, longstanding issues like dependency risk and long‑term maintenance—highlighted in their discussions of Kubernetes and related projects—continue to demand sustained expert attention. Across these domains, the message is consistent: new tools, from robot sensors to generative agents, can change who does which part of the work and how quickly, but the deepest problems of safety, coordination, and judgment remain as hard as ever.",
+          "content": "Enterprise AI strategists have begun codifying this into a design principle: agentic AI should be treated as a powerful system component, not a magic product that dissolves organizational and computational constraints. Commentaries on “agentic AI in the enterprise” argue that most failed pilots stem not from weak models but from underestimating integration complexity, governance, and the need for human judgment in high‑stakes decisions. Educational material on large language models similarly warns that computational limits and S‑curves of diminishing returns mean many NP‑hard and real‑world planning problems will not be “solved” by scale alone, even if subsets become more tractable. Security podcasts and industry blogs extend the lesson further, showing how vulnerabilities in mature ecosystems like Kubernetes and the wider open‑source stack keep surfacing, underscoring that better tools can shift where the work happens—but not the fact that someone still has to wrestle with the hard parts.",
           "citations": [
             {
               "primarySource": {
-                "id": "source-11",
-                "name": "opensourcesecurity",
-                "url": "https://opensourcesecurity.io/tag/kubernetes/",
-                "favicon": "https://www.google.com/s2/favicons?domain=opensourcesecurity.io&sz=32",
+                "id": "source-16",
+                "name": "rfleury",
+                "url": "https://www.rfleury.com/feed",
+                "favicon": "https://www.google.com/s2/favicons?domain=www.rfleury.com&sz=32",
                 "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
               },
-              "additionalCount": 1,
+              "additionalCount": 2,
               "additionalSources": [
                 {
-                  "id": "source-12",
-                  "name": "player",
-                  "url": "https://player.fm/series/open-source-security/tarmageddon-with-alex-zenla",
-                  "favicon": "https://www.google.com/s2/favicons?domain=player.fm&sz=32",
+                  "id": "source-17",
+                  "name": "opensourcesecurity",
+                  "url": "https://opensourcesecurity.io",
+                  "favicon": "https://www.google.com/s2/favicons?domain=opensourcesecurity.io&sz=32",
+                  "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+                },
+                {
+                  "id": "source-18",
+                  "name": "opensourcesecurity",
+                  "url": "https://opensourcesecurity.io/posts/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=opensourcesecurity.io&sz=32",
                   "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
                 }
               ]
@@ -206,14 +248,14 @@
     {
       "id": "source-5",
       "name": "figma",
-      "url": "https://www.figma.com/blog/ai/",
+      "url": "https://www.figma.com/blog/everything/",
       "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
     },
     {
       "id": "source-6",
       "name": "figma",
-      "url": "https://www.figma.com/blog/",
+      "url": "https://www.figma.com/blog/maker-stories/",
       "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
     }
@@ -250,75 +292,96 @@
     {
       "id": "source-5",
       "name": "figma",
-      "url": "https://www.figma.com/blog/ai/",
+      "url": "https://www.figma.com/blog/everything/",
       "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
     },
     {
       "id": "source-6",
       "name": "figma",
-      "url": "https://www.figma.com/blog/",
+      "url": "https://www.figma.com/blog/maker-stories/",
       "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
     },
     {
       "id": "source-7",
-      "name": "travellerrpg",
-      "url": "https://www.travellerrpg.com/threads/raw-personalities-in-computers.39219/page-2",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.travellerrpg.com&sz=32",
+      "name": "figma",
+      "url": "https://www.figma.com/blog/ai/",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
     },
     {
       "id": "source-8",
+      "name": "figma",
+      "url": "https://www.figma.com/blog/design/",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    },
+    {
+      "id": "source-9",
+      "name": "figma",
+      "url": "https://www.figma.com/blog/",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    },
+    {
+      "id": "source-10",
       "name": "manning",
       "url": "https://www.manning.com/preview/how-large-language-models-work/chapter-7",
       "favicon": "https://www.google.com/s2/favicons?domain=www.manning.com&sz=32",
       "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
     },
     {
-      "id": "source-9",
+      "id": "source-11",
       "name": "datarobot",
       "url": "https://www.datarobot.com/blog/agentic-ai-enterprise-design/",
       "favicon": "https://www.google.com/s2/favicons?domain=www.datarobot.com&sz=32",
       "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
     },
     {
-      "id": "source-10",
+      "id": "source-12",
       "name": "rfleury",
       "url": "https://www.rfleury.com/p/multi-threading-and-mutation",
       "favicon": "https://www.google.com/s2/favicons?domain=www.rfleury.com&sz=32",
       "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
     },
     {
-      "id": "source-11",
-      "name": "opensourcesecurity",
-      "url": "https://opensourcesecurity.io/tag/kubernetes/",
-      "favicon": "https://www.google.com/s2/favicons?domain=opensourcesecurity.io&sz=32",
+      "id": "source-13",
+      "name": "travellerrpg",
+      "url": "https://www.travellerrpg.com/threads/raw-personalities-in-computers.39219/page-2",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.travellerrpg.com&sz=32",
       "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
     },
     {
-      "id": "source-12",
+      "id": "source-14",
       "name": "player",
       "url": "https://player.fm/series/open-source-security/tarmageddon-with-alex-zenla",
       "favicon": "https://www.google.com/s2/favicons?domain=player.fm&sz=32",
       "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
     },
     {
-      "id": "source-13",
+      "id": "source-15",
+      "name": "opensourcesecurity",
+      "url": "https://opensourcesecurity.io/tag/kubernetes/",
+      "favicon": "https://www.google.com/s2/favicons?domain=opensourcesecurity.io&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    },
+    {
+      "id": "source-16",
       "name": "rfleury",
       "url": "https://www.rfleury.com/feed",
       "favicon": "https://www.google.com/s2/favicons?domain=www.rfleury.com&sz=32",
       "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
     },
     {
-      "id": "source-14",
+      "id": "source-17",
       "name": "opensourcesecurity",
       "url": "https://opensourcesecurity.io",
       "favicon": "https://www.google.com/s2/favicons?domain=opensourcesecurity.io&sz=32",
       "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
     },
     {
-      "id": "source-15",
+      "id": "source-18",
       "name": "opensourcesecurity",
       "url": "https://opensourcesecurity.io/posts/",
       "favicon": "https://www.google.com/s2/favicons?domain=opensourcesecurity.io&sz=32",
@@ -329,8 +392,8 @@
     "url": "https://cdn.sanity.io/images/599r6htc/regionalized/afa86c16ecca710fd451f4bea41582d647779152-6142x4724.jpg?w=1200&amp;q=70&amp;fit=max&amp;auto=format"
   },
   "sidebarSections": [
-    "Design, AI, and the Stubbornness of Real Creative Work",
-    "Robots, Agentic AI, and the Long Tail of Unsolved Problems"
+    "From Agentic AI to Humanoids: Robotics Meets the Limits of the Real World",
+    "Design, Software, and Security: When Better Tools Don’t Erase the Hard Parts"
   ],
   "relatedArticles": []
 }
