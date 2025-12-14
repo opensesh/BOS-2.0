@@ -1,380 +1,331 @@
 {
   "type": "short-form",
-  "date": "2025-12-14T16:19:09.108Z",
+  "date": "2025-12-14T16:23:48.540Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "India&#8217;s Spinny lines up $160M funding to acquire GoMechanic, sources say",
+      "description": "Spinny is set to be valued at about $1.8 billion post-money in its latest funding round.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/products/page/3"
-        }
-      ],
-      "format": "reel",
-      "subcategory": "reel",
-      "hooks": [
-        "Design templates that marketing teams actually want to use",
-        "Figma templates: Break rules without breaking brand guidelines",
-        "8 secrets to creating flexible design systems"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick text transitions between template tips",
-            "Show before/after examples in split-screen motion",
-            "Include dynamic mouse/cursor interactions to demonstrate Figma workflow"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must visualize core template challenge",
-            "Use numbered slides with clear hierarchy",
-            "Include minimal text, maximize visual metaphors"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected visual metaphor about design flexibility",
-            "Use screen recording with high-energy cursor movements",
-            "Include subtle sound design highlighting key transitions"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Add more contextual professional insights",
-            "Include subtle data visualization elements",
-            "Slightly more formal tone with technical depth"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-energy digital design aesthetic with neon accent colors, dynamic motion graphics, quick-cut transitions, floating UI elements, transparent overlays showcasing design system flexibility, minimalist sans-serif typography with bold weights"
-      },
-      "exampleOutline": [
-        "Hook: Provocative statement about design template challenges",
-        "Problem: Why most templates fail marketing teams",
-        "8 rapid-fire tips for creating flexible templates",
-        "Live Figma demonstration of core principles",
-        "Call-to-action: Download template framework"
-      ],
-      "hashtags": "#FigmaDesign #DesignSystems #CreativeTemplates #ProductivityHacks #AIDesign #MarketingDesign #DigitalWorkflow #DesignTips #CreativeTech #AICreativity",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 6
-    },
-    {
-      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't",
-      "description": "Figma designer–turned–product manager Nikolas Klein worked on building prototyping tools for seven years. Then AI changed the game.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/hard-problems-are-still-hard/"
-        },
-        {
-          "name": "Robotics",
-          "url": "https://robotics.ee/2025/10/page/6/?wtime=seek_to_second_number"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/maker-stories/"
-        },
-        {
-          "name": "Podcasts",
-          "url": "https://podcasts.apple.com/ke/podcast/open-source-security/id1151833659"
-        },
-        {
-          "name": "Rfleury",
-          "url": "https://www.rfleury.com/feed"
-        },
-        {
-          "name": "Datarobot",
-          "url": "https://www.datarobot.com/blog/agentic-ai-enterprise-design/"
-        }
-      ],
-      "format": "reel",
-      "subcategory": "reel",
-      "hooks": [
-        "Design tools change. The work stays the same.",
-        "AI won't replace designers. It transforms them.",
-        "7 years in design. One big realization."
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use fast-paced transitions between design tool screenshots",
-            "Add dynamic text overlay highlighting key transformations",
-            "Include personal reaction shots to create human connection"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must visualize design evolution dramatically",
-            "Use progressive reveal of AI/design tool comparisons",
-            "Final slide includes clear personal takeaway/insight"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Open with unexpected visual metaphor about change",
-            "Use screen recordings mixed with talking head segments",
-            "Rapid-fire bullet points with high-energy delivery"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "More analytical tone, include specific design process insights",
-            "Reference industry research or expert quotes",
-            "Use more professional visual design aesthetic"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast color palette (deep blues/electric oranges), dynamic geometric transitions, typography that 'breaks' and reassembles, motion graphics showing tool/workflow transformations, minimalist yet energetic design system with tech-forward aesthetic"
-      },
-      "exampleOutline": [
-        "Hook: Provocative statement about design evolution",
-        "Personal Story: 7 years of design tool experience",
-        "AI Impact: How tools are fundamentally changing",
-        "Core Insight: Human creativity remains essential",
-        "Call-to-Action: Embrace change, not fear"
-      ],
-      "hashtags": "#AIDesign #DesignTech #CreativeAI #ProductDesign #DesignTools #FutureOfWork #CreativeTechnology #DesignInnovation #AICreativity #DesignTransformation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 5
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Techloy",
-          "url": "https://www.techloy.com/figma-adds-long-requested-ai-editing-tools-that-cut-out-the-need-for-photoshop-and-canva/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=ieJERX9Wkro"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/release-notes/"
-        }
-      ],
-      "format": "carousel",
-      "subcategory": "carousel",
-      "hooks": [
-        "AI Just Transformed Figma Image Editing Forever 🚀",
-        "3 Game-Changing Tools Designers Need Now",
-        "Photoshop Who? Figma's New AI Magic 🔮"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick transitions between tool demonstrations",
-            "Include dynamic text overlays explaining each feature",
-            "Keep total video under 90 seconds"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must have a bold, attention-grabbing graphic",
-            "Use consistent color palette across all slides",
-            "Include clear, minimal text explaining each tool"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with a provocative before/after comparison",
-            "Use screen recording with clear cursor movements",
-            "Add energetic background music"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame tools as professional productivity enhancers",
-            "Include data on time/effort saved",
-            "Use more technical, detailed language"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, futuristic design with electric blue and deep purple gradients. Minimal geometric shapes framing AI tool screenshots. Sleek san-serif typography with slight motion blur. Cyberpunk-inspired aesthetic with clean, technological feel."
-      },
-      "exampleOutline": [
-        "Slide 1: Bold Hook & Hero Graphic",
-        "Slide 2: Problem Statement - Design Workflow Challenges",
-        "Slide 3: Tool 1 - Object Removal Demo",
-        "Slide 4: Tool 2 - Image Extension Capabilities",
-        "Slide 5: Tool 3 - Precision Editing Features"
-      ],
-      "hashtags": "#FigmaAI #DesignTools #AIDesign #CreativeTech #ProductivityHack #UIDesign #GraphicDesign #AICreativity #DesignInnovation #TechTools",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
-    },
-    {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
-        }
-      ],
-      "format": "story",
-      "subcategory": "story",
-      "hooks": [
-        "Designing a typeface that speaks Figma's language",
-        "How one font captures an entire design community",
-        "Behind the pixels: Crafting Figma Sans"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick typographic animations to showcase font details",
-            "Include behind-the-scenes design process clips",
-            "Transition between slides with kinetic typography movements"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must show dramatic before/after font comparison",
-            "Use square 1:1 slides with high-contrast typography",
-            "Include design process sketches and iterations"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Open with unexpected visual of font creation",
-            "Use rapid-cut design process montage",
-            "Include designer interview snippet for human connection"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame as design leadership and brand evolution story",
-            "Include technical design decision rationales",
-            "Highlight collaborative community-driven design process"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 8,
-        "description": "High-contrast geometric aesthetic with modular typography, transitioning between technical blueprint style and fluid design language. Utilize sharp grid-based layouts with unexpected color breaks. Incorporate motion graphics that deconstruct letterforms. Color palette: deep navy, electric blue, white, with metallic accent highlights. Typography should demonstrate font's flexibility through animated transformations."
-      },
-      "exampleOutline": [
-        "Opening: Dramatic font reveal/transformation",
-        "Design Challenge: Why Figma needed a custom typeface",
-        "Creative Process: Sketches, iterations, design principles",
-        "Technical Insights: Font engineering details",
-        "Community Impact: How the typeface represents designers"
-      ],
-      "hashtags": "#DesignType #CreativeTech #FontDesign #FigmaDesign #TypeSpecimen #BrandIdentity #CreativeProcess #AIDesign #DesignInnovation #TypeTuesday",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 10
-    },
-    {
-      "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT",
-      "description": "We’re expanding the capabilities of the Figma app in ChatGPT, so you can turn your ideas into creative assets and presentations that you can polish in Figma Buzz and Figma Slides.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/13/indias-spinny-lines-up-160m-funding-to-acquire-gomechanic-sources-say/"
         }
       ],
       "format": "quick-image",
       "subcategory": "quick-image",
       "hooks": [
-        "Design magic: Figma + ChatGPT = Instant Creative Superpowers 🚀",
-        "Turn Text into Stunning Slides in Seconds 🎨",
-        "Your AI Design Assistant is Here! 💡"
+        "Startup Funding Frenzy: Spinny's $160M Game-Changer 🚀",
+        "Tech Titans Collide: Spinny Acquires GoMechanic",
+        "India's Auto Tech Revolution: $1.8B Valuation Incoming"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick screen recording of Figma app in ChatGPT",
-            "Show transformation from text to visual in 3-4 rapid cuts",
-            "Include dynamic text overlays highlighting key features"
+            "Use dynamic car/tech animation transitions",
+            "Create fast-paced visual storytelling with funding stats",
+            "Incorporate startup founder silhouettes or brand logos"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Dramatic before/after visual comparison",
-            "Use numbered slides to break down feature steps",
-            "Final slide includes clear call-to-action and link"
+            "First slide: Bold funding headline with startup logos",
+            "Use infographic-style slides showing valuation growth",
+            "Final slide: Provocative future prediction about Indian tech"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with unexpected visual metaphor for AI design",
-            "Use fast-paced editing to maintain energy",
-            "Include text captions for sound-off viewing"
+            "Start with unexpected sound effect or music drop",
+            "Use split-screen startup comparison visuals",
+            "Add rapid-fire text overlays highlighting key numbers"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Frame as professional productivity hack",
-            "Include data point about design efficiency",
-            "Use more technical language and workflow context"
+            "More data-driven, analytical visual approach",
+            "Include professional commentary or insight overlay",
+            "Use clean, corporate-style graphic design"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast cyberpunk-inspired color palette with electric blue and neon accents, dynamic diagonal compositions, futuristic sans-serif typography, glitch/motion graphics transitions showing AI-powered transformation, minimalist but high-energy aesthetic"
+        "description": "Bold, tech-forward design with electric blue and neon accent colors. Geometric typography with angular car/tech silhouettes. Dynamic motion graphics showing funding trajectory. Futuristic yet approachable aesthetic blending startup energy with professional polish."
       },
       "exampleOutline": [
-        "Opening: Provocative visual of text morphing into design",
-        "Problem: Design creation is slow and complicated",
-        "Solution: Figma + ChatGPT app breakthrough",
-        "Demonstration: Rapid asset creation process",
-        "Call-to-Action: Try the app now"
+        "Section 1: Attention-grabbing funding headline",
+        "Section 2: Quick market context for Spinny/GoMechanic",
+        "Section 3: Key funding and acquisition stats",
+        "Section 4: Potential industry impact visualization",
+        "Section 5: Call-to-action about startup innovation"
       ],
-      "hashtags": "#AIDesign #FigmaAI #ChatGPTTools #DesignTech #CreativeAI #ProductivityHack #AICreativity #DesignInnovation #TechTips #AITools",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
+      "hashtags": "#SpinnyFunding #StartupIndia #TechAcquisition #AutoTech #IndianStartups #VentureCapital #TechInnovation #FundingNews #GoMechanic #TechGrowth",
+      "textureIndex": 6
+    },
+    {
+      "title": "DoorDash driver faces felony charges after allegedly spraying customers’ food",
+      "description": "A woman is facing felony charges in Evansville, Indiana over a DoorDash delivery in which she allegedly sprayed the food with a substance that made the customers vomit.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/13/doordash-driver-faces-felony-charges-after-allegedly-spraying-customers-food/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "DoorDash Gone Wild: Delivery Nightmare Turns Criminal",
+        "When Food Delivery Gets Seriously Illegal",
+        "Shocking Delivery: From Meal to Felony"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dramatic zoom effect on meme/image",
+            "Add text overlay with shocking headline",
+            "Include quick legal/news graphic transition"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Provocative headline image",
+            "Use sequential slides to build story tension",
+            "Final slide: Actionable takeaway or legal insight"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Open with sensationalist news-style intro",
+            "Use quick cuts between text/imagery",
+            "Add subtle sound effect for emphasis"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as professional risk management lesson",
+            "Use more formal, analytical tone",
+            "Include potential business implications"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast crime scene aesthetic. Dark red/black color palette. Glitch-style typography. Meme-inspired graphic overlay. Sharp geometric elements suggesting legal/investigative mood. Slightly distressed texture to enhance dramatic feel."
+      },
+      "exampleOutline": [
+        "Shocking Headline Graphic",
+        "Quick Context: DoorDash Delivery Incident",
+        "Key Details: Felony Charges Explained",
+        "Legal Implications Highlight",
+        "Call-to-Action: Stay Informed"
+      ],
+      "hashtags": "#DoorDash #FoodDelivery #LegalTrouble #WTF #CustomerSafety #DeliveryFail #TrueCrime #Viral #WeirdNews #Justice",
+      "textureIndex": 9
+    },
+    {
+      "title": "AI data center boom could be bad news for other infrastructure projects",
+      "description": "Improvements to roads, bridges, and other infrastructure could take a hit as data center construction accelerates.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/13/ai-data-center-boom-could-be-bad-news-for-other-infrastructure-projects/"
+        }
+      ],
+      "format": "reel",
+      "subcategory": "reel",
+      "hooks": [
+        "AI's dark side: Stealing infrastructure's spotlight?",
+        "Data centers are eating our roads alive",
+        "When AI builds, bridges crumble"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic split-screen comparing data center vs infrastructure construction",
+            "Incorporate quick animated infographic transitions",
+            "Add trending sound/voiceover with technical undertone"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Shocking statistic visualization",
+            "Use consistent color palette representing tech/infrastructure",
+            "Progressive reveal of data center impact across slides"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with provocative visual metaphor",
+            "Use quick cuts between data center/infrastructure scenes",
+            "Include professional but energetic voiceover narration"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "More data-driven, professional tone",
+            "Include expert quote or research citation",
+            "Focus on economic implications"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast cyberpunk-inspired palette (deep blues/electric oranges), geometric data visualizations, dynamic motion graphics showing infrastructure 'dissolving', technical typography with glitch effects, futuristic but slightly dystopian aesthetic"
+      },
+      "exampleOutline": [
+        "Quick shocking visual of construction site transforming",
+        "AI data center growth statistics overlay",
+        "Resource allocation comparison graphic",
+        "Potential economic and infrastructure consequences",
+        "Call-to-action: Learn more about tech's infrastructure impact"
+      ],
+      "hashtags": "#AIInfrastructure #TechTrends #DataCenters #FutureOfInfrastructure #TechEconomics #InnovationImpact #AIBoom #InfrastructureChallenge #TechPolicy #EconomicTrends",
+      "textureIndex": 8
+    },
+    {
+      "title": "Forget About “Radical Candor” – Try Radical Humanity Instead with Alison Rand",
+      "description": "DesignOps used to be the hot new buzzword, but now it needs a rebrand.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Design Better",
+          "url": "https://designbetterpodcast.com/p/forget-about-radical-candor-try-radical"
+        }
+      ],
+      "format": "carousel",
+      "subcategory": "carousel",
+      "hooks": [
+        "DesignOps Needs a Humanity Makeover",
+        "Beyond Radical Candor: A Design Revolution",
+        "Rewriting the Rules of Design Leadership"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick cuts between slides to maintain energy",
+            "Include dynamic text animations to highlight key points",
+            "Create a narrative arc that builds curiosity between slides"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "Design each slide with a clear, standalone visual message",
+            "Use consistent color palette across all slides",
+            "Ensure first slide has maximum stopping power"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Condense carousel content into rapid-fire key insights",
+            "Add voiceover to explain visual transitions",
+            "Use text overlays to reinforce main points"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add professional context and deeper insights",
+            "Include more detailed explanatory text",
+            "Focus on leadership and strategic implications"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, contemporary design with high-contrast color palette. Geometric typography with organic, fluid transitions. Gradient backgrounds suggesting transformation. Minimalist illustrations that break traditional design grid. Color scheme of deep navy, electric orange, and soft white. Typography that feels both technical and human - sharp edges with rounded corners."
+      },
+      "exampleOutline": [
+        "Slide 1: Provocative Hook - 'DesignOps Needs a Humanity Makeover'",
+        "Slide 2: The Problem with Traditional Design Leadership",
+        "Slide 3: What 'Radical Humanity' Actually Means",
+        "Slide 4: Key Principles of Human-Centered Design Management",
+        "Slide 5: Call to Action and Transformative Potential"
+      ],
+      "hashtags": "#DesignOps #DesignLeadership #HumanCenteredDesign #WorkplaceCulture #DesignInnovation #LeadershipStrategy #CreativeCulture #TeamDynamics #DesignThinking #PeopleFirst",
+      "textureIndex": 7
+    },
+    {
+      "title": "A comprehensive list of 2025 tech layoffs",
+      "description": "A complete list of all the known layoffs in tech, from Big Tech to startups, broken down by month throughout 2025.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/12/tech-layoffs-2025-list/"
+        }
+      ],
+      "format": "story",
+      "subcategory": "story",
+      "hooks": [
+        "Tech Layoffs 2025: The Shocking Reality",
+        "Who Survived the Tech Industry Bloodbath?",
+        "2025's Brutal Tech Layoff Landscape Revealed"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic animated graphs showing layoff percentages",
+            "Create quick visual transitions between company stats",
+            "Include bold, eye-catching text overlays with key numbers"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "Each slide focuses on one month's layoff summary",
+            "Use consistent color-coded design for easy scanning",
+            "Include comparative graphics between different tech companies"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with most dramatic layoff statistic",
+            "Use rapid-fire editing style",
+            "Include emotional human impact angle"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add professional analysis of layoff trends",
+            "Include expert commentary snippets",
+            "Provide actionable insights for career navigation"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dark mode color palette with electric blue and red accents. Futuristic data visualization style with transparent overlays. Dynamic motion graphics showing cascading layoff percentages. Sharp, angular typography with high-contrast white text. Incorporate glitch/digital decay effects to symbolize industry disruption."
+      },
+      "exampleOutline": [
+        "Opening: Dramatic layoff headline statistic",
+        "Context: Tech industry transformation in 2025",
+        "Detailed monthly breakdown of layoffs",
+        "Key insights: Patterns and predictions",
+        "Call-to-action: Career resilience strategies"
+      ],
+      "hashtags": "#TechLayoffs2025 #TechIndustry #CareerTrends #AIEconomy #TechJobs #IndustryInsights #StartupLife #WorkplaceTrends #TechCareers #ProfessionalDevelopment",
+      "textureIndex": 11
     }
   ]
 }

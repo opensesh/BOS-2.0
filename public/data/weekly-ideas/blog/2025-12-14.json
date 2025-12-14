@@ -1,340 +1,291 @@
 {
   "type": "blog",
-  "date": "2025-12-14T16:19:09.108Z",
+  "date": "2025-12-14T16:25:23.489Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Why humans are AI’s biggest bottleneck (and what’s coming in 2026) | Alexander Embiricos (OpenAI Codex Product Lead)",
+      "description": "OpenAI's Codex lead on 20x growth, how the Sora Android app hit #1 in 18 day, and why the best way to use AI coding tools is giving them your hardest problems.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/products/page/3"
-        }
-      ],
-      "format": "guide",
-      "subcategory": "instructional",
-      "hooks": [
-        "Design Templates That Work, Not Just Look Good",
-        "Figma Buzz: Your Brand's Flexible Design Playground",
-        "Crack the Code: Scalable Brand Templates Unveiled"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Include real-time template editing screenshots",
-            "Add personal experimentation narrative",
-            "Use interactive inline annotations"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Optimize headers for SEO keywords",
-            "Include data-driven case study examples",
-            "Create clear, scannable section breaks"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Target design managers and creative directors",
-            "Include professional template implementation statistics",
-            "Add credibility through brand logos/testimonials"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Dynamic grid-based layout with modular design elements, bold geometric typography, electric blue and charcoal color palette, subtle motion graphics highlighting template flexibility, minimalist Swiss design inspiration with tech-forward edge"
-      },
-      "exampleOutline": [
-        "Introduction: The Template Design Challenge",
-        "Why Flexible Branding Matters",
-        "8 Strategic Template Design Principles",
-        "Advanced Implementation Techniques",
-        "Future of Scalable Design Systems"
-      ],
-      "hashtags": "#FigmaDesign #BrandTemplates #CreativeWorkflow #AIDesign #DesignSystem #ProductDesign #UXStrategy #DesignInnovation #CreativeTech #BrandScaling",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 1
-    },
-    {
-      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't",
-      "description": "Figma designer–turned–product manager Nikolas Klein worked on building prototyping tools for seven years. Then AI changed the game.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/hard-problems-are-still-hard/"
-        },
-        {
-          "name": "Robotics",
-          "url": "https://robotics.ee/2025/10/page/6/?wtime=seek_to_second_number"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/maker-stories/"
-        },
-        {
-          "name": "Podcasts",
-          "url": "https://podcasts.apple.com/ke/podcast/open-source-security/id1151833659"
-        },
-        {
-          "name": "Rfleury",
-          "url": "https://www.rfleury.com/feed"
-        },
-        {
-          "name": "Datarobot",
-          "url": "https://www.datarobot.com/blog/agentic-ai-enterprise-design/"
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/why-humans-are-ais-biggest-bottleneck"
         }
       ],
       "format": "article",
       "subcategory": "visionary",
       "hooks": [
-        "AI Won't Replace Design—It'll Redesign Everything",
-        "Tools Change, Hard Problems Remain Constant",
-        "When Prototyping Gets an AI Upgrade"
+        "AI's Dirty Secret: Humans Are Holding Back Innovation",
+        "Why Developers Are the Real AI Bottleneck",
+        "2026: When AI Outpaces Human Problem-Solving"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Use interactive inline annotations to break down complex design concepts",
-            "Include real-time experiment screenshots showing AI tool progression",
-            "Create a poll asking readers about their AI design tool experiences"
+            "Use inline code snippets to break up technical explanations",
+            "Include real-time experiment screenshots or personal workflow examples",
+            "Add interactive polls about AI adoption challenges"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Optimize headline for SEO with keywords like 'AI design workflow'",
-            "Include data visualizations comparing traditional vs AI design processes",
-            "Use canonical links to prevent duplicate content penalties"
+            "Optimize headline for SEO with specific keywords",
+            "Use data visualizations to illustrate key points",
+            "Include expert quotes to add credibility"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Tag relevant design and AI thought leaders in post",
-            "Include professional statistics about AI design tool adoption",
-            "Craft a compelling first-comment with additional industry insights"
+            "Frame insights as professional development opportunity",
+            "Use industry-specific metrics and benchmarks",
+            "Include direct actionable advice for tech leaders"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast cyberpunk-inspired palette with electric blues and deep purples. Dynamic asymmetric layouts featuring translucent design tool overlays. Typography with sharp, technical edges. Animated state transitions showing design tool morphing. References: Blade Runner UI, Figma's design system, Spotify's data visualizations"
+        "description": "Bold, futuristic design with high-contrast blue-gray color palette. Dynamic geometric overlays representing human-AI interaction. Clean sans-serif typography with occasional algorithmic pattern backgrounds. Subtle motion graphics showing computational flow. Cyberpunk-inspired aesthetic with clean, professional execution."
       },
       "exampleOutline": [
-        "Opening: The Design Tool Paradox",
-        "How AI is Reshaping Design Workflows",
-        "Case Study: Nikolas Klein's Prototyping Journey",
-        "The Unchanging Core of Creative Problem Solving",
-        "Future of Design: Collaboration, Not Replacement"
+        "Introduction: The Human Limitation in AI Advancement",
+        "Current State of AI: Growth and Constraints",
+        "Codex Case Study: Breaking Through Human Bottlenecks",
+        "2026 Predictions: AI's Transformative Potential",
+        "Actionable Strategies for Developers and Leaders"
       ],
-      "hashtags": "#AIDesign #DesignTech #ProductManagement #CreativeTech #FutureOfWork #DesignInnovation #AIWorkflow #PrototypingTools #CreativeAI #DesignStrategy",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 2
+      "hashtags": "#AIInnovation #FutureOfTech #MachineLearning #SoftwareDevelopment #AIStrategy #TechTrends #CodexAI #ProductivityHacks #InnovationInsights #TechLeadership",
+      "textureIndex": 12
     },
     {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
+      "title": "Why most enterprise AI coding pilots underperform (Hint: It's not the model)",
+      "description": "Gen AI in software engineering has moved well beyond autocomplete. The emerging frontier is agentic coding: AI systems capable of planning changes, executing them across multiple steps and iterating based on feedback. Yet despite the excitement around “AI agents that code,” most enterprise deployments underperform. The limiting factor is no longer the model. It’s context: The structure, history and intent surrounding the code being changed. In other words, enterprises are now facing a systems de",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Techloy",
-          "url": "https://www.techloy.com/figma-adds-long-requested-ai-editing-tools-that-cut-out-the-need-for-photoshop-and-canva/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=ieJERX9Wkro"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/release-notes/"
-        }
-      ],
-      "format": "thread",
-      "subcategory": "explanatory",
-      "hooks": [
-        "AI just revolutionized image editing in Figma 🚀",
-        "3 game-changing tools designers can't ignore today",
-        "Photoshop who? Figma's new AI is here 💥"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Cross-promote thread with a deeper dive newsletter",
-            "Include behind-the-scenes screenshots of testing process",
-            "Offer exclusive extended analysis for subscribers"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Create long-form companion piece with technical details",
-            "Include SEO-optimized headers matching thread structure",
-            "Add comprehensive tool comparison chart"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Frame tools through professional workflow optimization lens",
-            "Include industry impact statistics",
-            "Add expert commentary on AI design implications"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast color palette with electric blue and charcoal gray, dynamic geometric transitions between thread slides, futuristic sans-serif typography, subtle glitch/digital artifact motion effects, minimal iOS-inspired design aesthetic with sharp edges"
-      },
-      "exampleOutline": [
-        "Section 1: Provocative Hook + Context",
-        "Section 2: Problem in Current Design Workflow",
-        "Section 3: Introduce 3 Specific AI Tools",
-        "Section 4: Rapid Use Case Demonstrations",
-        "Section 5: Future of Design CTA"
-      ],
-      "hashtags": "#AIDesign #FigmaUpdate #CreativeTech #DesignInnovation #AITools #ProductDesign #UXDesign #CreativeWorkflow #TechInnovation #DesignTrends",
-      "pexelsImageUrl": "https://images.pexels.com/photos/12214868/pexels-photo-12214868.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
-    },
-    {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
-        }
-      ],
-      "format": "case-study",
-      "subcategory": "case-study-deep-dive",
-      "hooks": [
-        "How Figma designed a typeface that tells its own story",
-        "Typography meets product design: Figma's radical type experiment",
-        "Beyond pixels: The making of Figma Sans"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Include real-time design process screenshots",
-            "Use interactive annotations to highlight key design decisions",
-            "Create a poll asking readers about their typeface preferences"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Optimize for SEO with detailed technical typography breakdown",
-            "Include comparative visual analysis of type iterations",
-            "Add expert quotes from Figma design team"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Frame typeface design as strategic brand innovation",
-            "Include professional metrics on brand perception impact",
-            "Highlight cross-functional collaboration in design process"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, experimental typography-focused layout with dynamic grid compositions, showcasing type evolution through layered, translucent type specimens. Utilize high-contrast color palette with unexpected type treatments. Incorporate motion graphics demonstrating type flexibility and design process. Reference Swiss design principles with contemporary digital twist."
-      },
-      "exampleOutline": [
-        "The Design Challenge: Why Figma Needed Its Own Typeface",
-        "Design Brief: Brand Identity and Typographic Expression",
-        "Creative Process: From Concept to Executable Font",
-        "Technical Insights: Typography as Product Design",
-        "Future of Brand Communication: Lessons Learned"
-      ],
-      "hashtags": "#FigmaSans #DesignSystem #Typography #BrandIdentity #ProductDesign #AIDesign #CreativeProcess #TypeDesign #BrandInnovation #DesignTechnology",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
-    },
-    {
-      "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT",
-      "description": "We’re expanding the capabilities of the Figma app in ChatGPT, so you can turn your ideas into creative assets and presentations that you can polish in Figma Buzz and Figma Slides.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/"
+          "name": "VentureBeat AI",
+          "url": "https://venturebeat.com/ai/why-most-enterprise-ai-coding-pilots-underperform-hint-its-not-the-model"
         }
       ],
       "format": "listicle",
       "subcategory": "explanatory",
       "hooks": [
-        "5 AI-Powered Design Tricks Figma Just Unleashed",
-        "Transform ChatGPT Prompts into Stunning Visual Assets",
-        "Figma + ChatGPT: The Design Workflow Revolution"
+        "5 Hidden Reasons Enterprise AI Coding Fails",
+        "Why Your AI Coding Pilot Is Falling Short",
+        "The Surprising Truth About Enterprise AI Development"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Include real-time screen recording of workflow",
-            "Add personal commentary between list items",
-            "Use conversational annotations explaining each trick"
+            "Include real-time experiment screenshots of AI coding attempts",
+            "Use inline code snippets to break up text",
+            "Add personal anecdote about a specific AI coding challenge"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Add SEO-friendly subheadings for each list item",
-            "Include comparative screenshots showing before/after",
-            "Optimize meta description with numerical promise"
+            "Optimize headline for SEO with specific keywords",
+            "Include data visualizations of AI coding performance",
+            "Add expert quotes to increase credibility"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Add professional context about workflow efficiency",
-            "Include potential productivity/time-saving statistics",
-            "Frame list as professional skill development"
+            "Frame insights as actionable enterprise strategy",
+            "Include statistics from recent industry reports",
+            "Use professional tone with technical depth"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, futuristic color palette with electric blues and deep purples. Dynamic diagonal grid compositions. Floating, semi-transparent UI elements. Clean sans-serif typography with slight motion-blur effects. Incorporate abstract geometric shapes representing AI/design intersection."
+        "description": "Bold, technical aesthetic with circuit-board-inspired background gradients. Use deep blues and electric teals. Typography should feel precise but dynamic. Incorporate subtle glitch/digital artifact effects. Infographic-style illustrations breaking down complex AI concepts. Motion graphics showing code transformation process. Clean, futuristic feel that suggests cutting-edge technology without feeling unapproachable."
       },
       "exampleOutline": [
-        "Introduction: The ChatGPT-Figma Design Revolution",
-        "The Design Productivity Challenge",
-        "5 Breakthrough Design Workflow Techniques",
-        "Future of AI-Assisted Design Creation",
-        "Call-to-Action: Start Your Design Transformation"
+        "Introduction: The AI Coding Landscape",
+        "Context: Why Traditional Approaches Fail",
+        "5 Critical Insights About Enterprise AI Coding",
+        "Key Systemic Challenges in AI Development",
+        "Future-Proofing Your AI Coding Strategy"
       ],
-      "hashtags": "#AIDesign #FigmaAI #ChatGPTWorkflow #DesignTechnology #CreativeAI #ProductivityHacks #DesignInnovation #AITools #CreativeTech #WorkflowOptimization",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 9
+      "hashtags": "#AIEngineering #EnterpriseAI #SoftwareDevelopment #TechInnovation #AIStrategy #CodingTips #TechTrends #AITransformation #SoftwareEngineering #InnovationInsights",
+      "textureIndex": 6
+    },
+    {
+      "title": "AI data center boom could be bad news for other infrastructure projects",
+      "description": "Improvements to roads, bridges, and other infrastructure could take a hit as data center construction accelerates.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/13/ai-data-center-boom-could-be-bad-news-for-other-infrastructure-projects/"
+        }
+      ],
+      "format": "thread",
+      "subcategory": "explanatory",
+      "hooks": [
+        "AI's Hungry Data Centers: Infrastructure's Hidden Crisis",
+        "Massive AI Boom = Infrastructure Apocalypse?",
+        "Data Centers Are Eating Our Infrastructure Budget"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use thread screenshots as visual companion to newsletter",
+            "Expand thread insights into deeper long-form analysis",
+            "Offer exclusive data/research not in Twitter thread"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Create SEO-friendly article expanding thread insights",
+            "Include data visualizations from thread content",
+            "Link back to original thread for engagement"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Add professional commentary and industry context",
+            "Include expert quotes and statistical references",
+            "Frame thread as thought leadership piece"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast infographic style with electric blue/charcoal gray palette. Dynamic geometric transitions between thread images. Bold sans-serif typography. Minimal data center/infrastructure silhouette illustrations. Animated percentage/financial impact overlays."
+      },
+      "exampleOutline": [
+        "Section 1: Provocative AI infrastructure investment hook",
+        "Section 2: Data center construction volume statistics",
+        "Section 3: Comparative infrastructure investment breakdown",
+        "Section 4: Potential economic and urban development implications",
+        "Section 5: Call-to-action for policy/investment awareness"
+      ],
+      "hashtags": "#AIInfrastructure #TechEconomics #DataCenters #InfrastructureInvestment #TechPolicy #AIBoom #EconomicTrends #UrbanDevelopment #TechInnovation #FutureOfInfrastructure",
+      "textureIndex": 6
+    },
+    {
+      "title": "🧠 Community Wisdom: The ROI of “wrapped” campaigns, identifying early product-market-fit, working with a non-PM manager, using Google AI Studio for rapid prototyping, and more",
+      "description": "Community Wisdom 165",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/community-wisdom-the-roi-of-wrapped"
+        }
+      ],
+      "format": "guide",
+      "subcategory": "instructional",
+      "hooks": [
+        "Unlock Community Wisdom: Your Ultimate Product Strategy Guide",
+        "5 Insider Secrets Top Product Minds Never Share",
+        "Community-Driven Insights: Crack the Product Success Code"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use interactive poll to engage readers on community insights",
+            "Include real-time annotation and commentary in margins",
+            "Create a companion audio walkthrough for key sections"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Optimize with SEO-friendly headers and clear section breaks",
+            "Include expert quote callouts for additional credibility",
+            "Add detailed internal and external linking strategy"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Use professional data visualizations to highlight insights",
+            "Tag mentioned community experts and thought leaders",
+            "Include clear, actionable professional development takeaways"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, dynamic layout with fractured grid design, vibrant tech-inspired color palette (electric blues, deep purples, accent neon greens). Typography: modern sans-serif with geometric accents. Motion graphics showing interconnected network of insights. Aesthetic references: Figma design system, Stripe marketing visuals, future-forward tech interfaces."
+      },
+      "exampleOutline": [
+        "Introduction: The Power of Collective Product Intelligence",
+        "Context: Why Community Wisdom Matters in Modern Product Development",
+        "Comprehensive Insights: Tactical Strategies from Top Practitioners",
+        "Deep Dive: Analyzing Patterns and Breakthrough Moments",
+        "Future Outlook: Evolving Community-Driven Product Creation"
+      ],
+      "hashtags": "#ProductStrategy #CommunityWisdom #AIInnovation #TechInsights #ProductManagement #InnovationTactics #StartupGrowth #DesignThinking #TechCommunity #ProductDevelopment",
+      "textureIndex": 3
+    },
+    {
+      "title": "Forget About “Radical Candor” – Try Radical Humanity Instead with Alison Rand",
+      "description": "DesignOps used to be the hot new buzzword, but now it needs a rebrand.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Design Better",
+          "url": "https://designbetterpodcast.com/p/forget-about-radical-candor-try-radical"
+        }
+      ],
+      "format": "case-study",
+      "subcategory": "case-study-deep-dive",
+      "hooks": [
+        "How Radical Humanity Transforms Design Leadership",
+        "Beyond Candor: A New Design Management Paradigm",
+        "Reimagining Team Dynamics in Design Ecosystems"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use real-time annotation/commentary alongside case study insights",
+            "Include interactive poll about reader's current team dynamics",
+            "Add personal reflection on case study learnings"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Include data visualizations of team performance metrics",
+            "Add SEO-optimized subheadings for scannable content",
+            "Link to additional resources and research studies"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Highlight professional credentials of case study protagonist",
+            "Include quantitative impact statements",
+            "Optimize for professional network engagement and sharing"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, dynamic layout with fractured geometric typography, warm humanistic color palette (terracotta, soft blues, warm grays), subtle motion graphics showing team interaction, minimalist infographic elements, human-centered illustration style with soft edges"
+      },
+      "exampleOutline": [
+        "Section 1: The Limitation of Traditional Leadership Models",
+        "Section 2: Introducing Radical Humanity Framework",
+        "Section 3: Alison Rand's Transformative Case Study",
+        "Section 4: Tactical Implementation Strategies",
+        "Section 5: Future of Empathetic Design Leadership"
+      ],
+      "hashtags": "#DesignLeadership #RadicalHumanity #TeamCulture #DesignOps #WorkplaceCulture #LeadershipInnovation #DesignThinking #HumanCenteredDesign #TeamDynamics #CreativeCulture",
+      "textureIndex": 12
     }
   ]
 }
