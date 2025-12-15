@@ -1,380 +1,331 @@
 {
   "type": "short-form",
-  "date": "2025-12-15T16:24:25.255Z",
+  "date": "2025-12-15T16:31:24.913Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Netflix responds to concerns about WBD deal",
+      "description": "Industry concerns over Netflix acquiring Warner Bros has led executives to address fears regarding jobs and theatrical releases.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/products/page/3"
-        }
-      ],
-      "format": "quick-image",
-      "subcategory": "quick-image",
-      "hooks": [
-        "Design Templates That Don't Break Your Brand",
-        "Figma Secrets: Build Bulletproof Brand Templates",
-        "Flex Your Brand Without Losing Identity"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use dynamic text reveals for each template tip",
-            "Include quick visual transitions between points",
-            "Add subtle motion graphics to emphasize key concepts"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "Create a slide-by-slide template breakdown",
-            "Use consistent color blocking for visual hierarchy",
-            "Include a final summary slide with key takeaways"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with a provocative design failure example",
-            "Use rapid-fire editing style",
-            "Include on-screen text for key points"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Add professional context about template strategy",
-            "Include a more detailed explanation of design principles",
-            "Use a more formal, authoritative tone"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, high-contrast design with geometric overlays. Use a vibrant color palette with electric blues and deep purples. Typography should be clean and modern, with unexpected text placements. Incorporate subtle glitch effects and geometric grid lines to represent template flexibility. Visual mood: tech-forward, experimental, but still professional."
-      },
-      "exampleOutline": [
-        "Section 1: Provocative Hook About Template Failures",
-        "Section 2: The Hidden Cost of Rigid Branding",
-        "Section 3: 8 Tactical Template Design Strategies",
-        "Section 4: Transformative Design Mindset Shift",
-        "Section 5: Call to Experiment and Evolve"
-      ],
-      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystem #CreativeStrategy #AIDesign #ProductDesign #BrandIdentity #DesignTips #CreativeTech #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 10
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Techloy",
-          "url": "https://www.techloy.com/figma-adds-long-requested-ai-editing-tools-that-cut-out-the-need-for-photoshop-and-canva/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/ai/"
-        },
-        {
-          "name": "Theaiinsider",
-          "url": "https://theaiinsider.tech/2025/12/12/figma-introduces-new-ai-powered-image-editing-suite-to-streamline-design-workflows/"
-        }
-      ],
-      "format": "quick-image",
-      "subcategory": "quick-image",
-      "hooks": [
-        "Figma just leveled up image editing forever 🚀",
-        "3 AI tools that kill Photoshop workflow",
-        "Design magic: Figma's new image editing superpowers"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick screen recording of tool in action",
-            "Add dynamic text overlays showing before/after",
-            "Include reaction-style voiceover highlighting key features"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Dramatic transformation screenshot",
-            "Use numbered slides for each tool feature",
-            "Final slide: Clear call-to-action with tool link"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected visual glitch/transformation",
-            "Use rapid-cut editing to showcase tool speed",
-            "Include designer's surprised/excited reaction"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame as professional workflow optimization",
-            "Include data/efficiency metrics",
-            "Use more technical, detailed explanation"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast cyberpunk-inspired aesthetic with neon blue/magenta color palette, glitch effects, dynamic typography that suggests technological breakthrough. Incorporate visual metaphors of transformation, with sharp geometric transitions between image states. Use futuristic, slightly distorted typography that implies cutting-edge technology."
-      },
-      "exampleOutline": [
-        "Section 1: Attention-grabbing visual transformation",
-        "Section 2: Problem of complex image editing",
-        "Section 3: Three AI tool capabilities",
-        "Section 4: Speed/efficiency insight",
-        "Section 5: Try now / Learn more CTA"
-      ],
-      "hashtags": "#FigmaAI #DesignTech #AITools #CreativeWorkflow #ImageEditing #ProductivityHack #DesignInnovation #AIDesign #CreativeTech #FigmaUpdate",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 8
-    },
-    {
-      "title": "Mirelo raises $41M from Index and a16z to solve AI video’s silent problem",
-      "description": "Mirelo, a German startup that is building AI to add synced sound effects to videos, has raised a $41 million seed round led by Index Ventures and Andreessen Horowitz.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2025/12/15/mirelo-raises-41m-from-index-and-a16z-to-solve-ai-videos-silent-problem/"
-        },
-        {
-          "name": "Technews180",
-          "url": "https://technews180.com/funding-news/mirelo-raises-41m-seed-round-led-by-a16z-and-index-ventures/"
-        },
-        {
-          "name": "Founderstoday",
-          "url": "https://www.founderstoday.news/mirelo-lands-41-million-investment/"
-        },
-        {
-          "name": "Techfundingnews",
-          "url": "https://techfundingnews.com/mirelo-raises-41m-seed-index-a16z-ai-sound-videos/"
-        },
-        {
-          "name": "Indexventures",
-          "url": "https://www.indexventures.com/perspectives/musicians-turned-ai-researchers-at-mirelo-raise-41m-to-unmute-videos-games-and-beyond/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/15/netflix-responds-to-concerns-about-wbd-deal/"
         }
       ],
       "format": "carousel",
       "subcategory": "carousel",
       "hooks": [
-        "AI is about to make every video sound epic 🔊",
-        "Silent videos? Not anymore. Meet Mirelo's magic 🎬",
-        "$41M to solve video's biggest sound problem 💡"
+        "Netflix's WBD Deal: Industry Tremors or Transformation?",
+        "Hollywood's Next Big Shift: What Netflix Knows",
+        "Inside the Warner Bros-Netflix Merger: The Real Story"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick sound design transitions between slides",
-            "Include dynamic text animations synced with audio",
-            "Create a visual rhythm matching startup's innovation"
+            "Use dynamic motion graphics to highlight key stats",
+            "Create quick cuts between industry expert quotes",
+            "Add subtle animation to keep viewer engagement high"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide must have provocative visual/statistic",
-            "Use consistent color palette across all slides",
-            "Design each slide as a mini-infographic"
+            "Use square 1:1 or 4:5 aspect ratio for maximum readability",
+            "First slide must have a provocative visual hook",
+            "Use consistent color palette across all slides for brand cohesion"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Extract most compelling 60-second narrative arc",
-            "Use voiceover to explain complex technical concept",
-            "Add subtitles for accessibility and engagement"
+            "Condense carousel content into 60-second narrative arc",
+            "Use text overlays to highlight key points",
+            "Include a clear call-to-action at video end"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Frame content as professional innovation insight",
-            "Include founder/investor quotes for credibility",
-            "Add data-driven visual comparisons"
+            "Add more detailed industry context",
+            "Use more professional tone and data-driven language",
+            "Include potential professional implications of the merger"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Futuristic cyberpunk-inspired color palette with electric blues and neon accents, geometric typography with motion blur, abstract sound wave visualizations, dynamic slide transitions suggesting technological fluidity"
+        "description": "Bold, tech-forward visual aesthetic with deep blue and electric orange color palette. Dynamic geometric transitions between slides. Modern sans-serif typography with strong hierarchy. Incorporate abstract network/connection graphics to symbolize industry interconnectedness. Use high-contrast design with subtle motion graphics."
       },
       "exampleOutline": [
-        "Slide 1: Provocative hook + startup name",
-        "Slide 2: The silent video problem explained",
-        "Slide 3: How Mirelo's AI solves this",
-        "Slide 4: Funding details & investor logos",
-        "Slide 5: Future potential & call-to-action"
+        "Slide 1: Provocative headline and key visual hook",
+        "Slide 2: Context of Netflix-WBD merger",
+        "Slide 3: Key industry concerns breakdown",
+        "Slide 4: Netflix's official response highlights",
+        "Slide 5: Potential industry implications and future outlook"
       ],
-      "hashtags": "#AIInnovation #TechFunding #VideoTech #AISound #StartupNews #IndexVentures #AIVideo #TechInnovation #FutureOfMedia #AIStartup",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 11
+      "hashtags": "#Netflix #MediaMerger #WBD #EntertainmentIndustry #MediaTech #StreamingWars #IndustryInsights #ContentStrategy #MediaDisruption #TechNews",
+      "textureIndex": 4
     },
     {
-      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't",
-      "description": "Figma designer–turned–product manager Nikolas Klein worked on building prototyping tools for seven years. Then AI changed the game.",
+      "title": "Facebook Messenger&#8217;s desktop app is no more",
+      "description": "The app remains usable via the web, Facebook app, and through the mobile app for iOS and Android.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/hard-problems-are-still-hard/"
-        }
-      ],
-      "format": "story",
-      "subcategory": "story",
-      "hooks": [
-        "AI won't replace designers—it transforms how we work",
-        "Design tools evolve. The creative challenge remains.",
-        "Behind the pixels: How AI reshapes design work"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick jump cuts to maintain Story Series energy",
-            "Include personal POV shots of designer talking",
-            "Add dynamic text overlays highlighting key insights"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must visually explain the core transformation",
-            "Use data visualizations to show tool evolution",
-            "Create a narrative arc across 5-7 slides"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected statement to grab attention",
-            "Use screen recordings of design tool transitions",
-            "Include designer's personal reflection moment"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame as professional learning opportunity",
-            "Include more technical design process details",
-            "Use more formal, thought leadership tone"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast color palette with tech-inspired blues and electric accent colors. Minimal but dynamic composition with floating UI elements. Typography: bold, sans-serif with slight technical geometric undertones. Motion graphics showing tool transformation, with smooth morphing transitions between design states."
-      },
-      "exampleOutline": [
-        "Section 1: Provocative AI design tools teaser",
-        "Section 2: Design work complexity context",
-        "Section 3: Nikolas Klein's personal design journey",
-        "Section 4: How AI amplifies—not replaces—design thinking",
-        "Section 5: Call to embrace technological evolution"
-      ],
-      "hashtags": "#AIDesign #DesignTech #CreativeTechnology #ProductDesign #AITools #DesignInnovation #TechCreativity #FutureOfWork #DesignThinking #CreativeAI",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 5
-    },
-    {
-      "title": "Grok got crucial facts wrong about Bondi Beach shooting",
-      "description": "Grok, the chatbot built by Elon Musk’s xAI and popularized on his social media platform X, appears to have repeatedly spread misinformation about today’s mass shooting at Bondi Beach in Australia.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2025/12/14/grok-gets-the-facts-wrong-about-bondi-beach-shooting/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/15/facebook-messengers-desktop-app-is-no-more/"
         }
       ],
       "format": "reel",
       "subcategory": "reel",
       "hooks": [
-        "AI Fails: Grok's Shocking Bondi Beach Misinformation",
-        "When AI Gets the News Dangerously Wrong",
-        "Elon Musk's Grok: Truth or Total Disaster?"
+        "Facebook Messenger Desktop App: Gone Forever?",
+        "RIP Desktop Messenger: What You Need to Know",
+        "Messenger's Big Change: Desktop Users Beware!"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use fast-paced text transitions to highlight key misinformation points",
-            "Create a split-screen comparing actual facts vs. Grok's claims",
-            "Incorporate dramatic sound effects to emphasize errors"
+            "Use quick, dynamic transitions between scenes",
+            "Include text overlay to highlight key information",
+            "Create a visually engaging screen recording of the app"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Provocative headline with bold typography",
-            "Use infographic-style slides to break down specific inaccuracies",
-            "Final slide: Call-to-action for critical AI consumption"
+            "First slide: Shocking headline with app screenshot",
+            "Use progressive reveal of information across slides",
+            "Include a final slide with alternative messaging options"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with a pattern interrupt visual or statement",
-            "Use quick cuts and dynamic text animations",
-            "Ensure subtitles are clear for silent viewing"
+            "Start with a pattern interrupt visual",
+            "Use rapid-fire information delivery",
+            "Include clear on-screen text and graphics"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "More serious tone, focus on professional implications",
-            "Include expert quote or credible source",
-            "Emphasize potential risks of unchecked AI information"
+            "Frame as a professional communication update",
+            "Provide more detailed context about the change",
+            "Use a more formal, informative tone"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast color palette with electric blue and warning red. Dynamic, glitch-like typography that fragments and reconstructs. Overlapping graphic elements suggesting information distortion. Incorporate digital artifact and data visualization aesthetics. Use sharp, angular compositions with sudden visual breaks to mirror AI error concept."
+        "description": "Bold, tech-forward aesthetic with a minimalist color palette. Use a mix of blue (Facebook's brand color) and neutral grays. Implement dynamic motion graphics with quick cuts. Typography should be clean and modern, with bold sans-serif fonts. Incorporate smartphone and desktop device mockups with animated transitions. Create a slightly futuristic, high-contrast visual style that feels both informative and slightly provocative."
       },
       "exampleOutline": [
-        "Shocking AI Mistake Reveal (0-5 seconds)",
-        "Grok's Specific Misinformation Explained (10-20 seconds)",
-        "Real Facts vs. AI Hallucination (15-25 seconds)",
-        "Broader Implications for AI Reliability (20-30 seconds)",
-        "Call to Critical Thinking (30-35 seconds)"
+        "Hook: Dramatic reveal of Messenger desktop app status",
+        "Quick context: What's changing and why",
+        "Alternative messaging methods (web, mobile apps)",
+        "Quick pro tip for users",
+        "Call-to-action: How to adapt"
       ],
-      "hashtags": "#AIFails #TechEthics #AImisinformation #GrokAI #ElonMusk #AINews #TechTruth #AIWatch #MediaLiteracy #TechCriticism",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
+      "hashtags": "#FacebookMessenger #TechNews #DigitalCommunication #AppUpdate #SocialMedia #TechTips #MessengerApp #DesktopApps #CommunicationTech #SocialMediaUpdate",
+      "textureIndex": 11
+    },
+    {
+      "title": "Tesla starts testing robotaxis in Austin with no safety driver",
+      "description": "It's one of the last big steps before the company can truly claim it's operating a robotaxi service, and start to take on Waymo.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/15/tesla-starts-testing-robotaxis-in-austin-with-no-safety-driver/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "Robotaxis Are Here: Tesla's Driverless Revolution Begins 🚗🤖",
+        "No Driver, No Problem: Austin's AI Taxi Takeover",
+        "Tesla's Autonomous Future Lands in Austin Today"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use split-screen animation showing human vs. robotaxi",
+            "Include dynamic text overlay highlighting key stats",
+            "Create quick transition effects mimicking tech evolution"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Bold headline with futuristic robotaxi graphic",
+            "Use progressive reveal of technological details",
+            "Final slide: Call-to-action with learning resource link"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected visual metaphor about autonomy",
+            "Use quick-cut editing to maintain high energy",
+            "Include subtle motion graphics explaining technology"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as professional technology breakthrough",
+            "Include data visualization of autonomous driving progress",
+            "Highlight potential industry transformation"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast cyberpunk-inspired color palette (neon blues, electric whites, deep blacks). Geometric, angular composition suggesting technological precision. Futuristic sans-serif typography with subtle glitch effects. Minimal animation suggesting technological motion and disruption."
+      },
+      "exampleOutline": [
+        "Provocative Visual Hook: Robotaxi in Austin Streets",
+        "Context: Traditional Taxi Industry Disruption",
+        "Technology Showcase: How Autonomous Driving Works",
+        "Potential Impact: Future of Urban Transportation",
+        "Call-to-Action: Learn More About AI Mobility"
+      ],
+      "hashtags": "#Tesla #AutonomousVehicles #AIDriving #FutureOfTransport #Innovation #TechRevolution #Robotaxi #ArtificialIntelligence #Austin #MobilityTech",
+      "textureIndex": 8
+    },
+    {
+      "title": "Snapchat rolls out its end-of-year Recaps",
+      "description": "The Recap is a short video that offers a personalized look at highlights from Snaps, Stories, and Chats, showing how users connected and expressed themselves throughout the year.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/15/snapchat-rolls-out-its-end-of-year-recaps/"
+        }
+      ],
+      "format": "story",
+      "subcategory": "story",
+      "hooks": [
+        "Your Year in Snaps: Memories Reimagined",
+        "Snapchat's Time Machine: 2024 Unveiled",
+        "Decode Your Digital Year in 30 Seconds"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick transitions between Snapchat Recap screenshots",
+            "Add dynamic text overlays highlighting key moments",
+            "Include reaction-style voiceover explaining Recap features"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Teaser of Snapchat Recap concept",
+            "Use slide-by-slide breakdown of Recap features",
+            "Final slide: Clear call-to-action to check personal Recap"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Open with surprising personal Recap statistic",
+            "Use screen recording of actual Recap experience",
+            "Add energetic music to maintain viewer engagement"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame Recap as digital storytelling innovation",
+            "Highlight professional networking insights",
+            "Discuss potential marketing/personal branding implications"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, futuristic color palette with neon accents. Layered, translucent graphics mimicking digital memories. Dynamic typography with glitch/digital artifact effects. Incorporate Snapchat's playful yellow with deep digital blues. Animated data visualization elements. Aesthetic blend of cyberpunk and nostalgic digital scrapbooking."
+      },
+      "exampleOutline": [
+        "Section 1: Snapchat Recap Teaser Moment",
+        "Section 2: What Makes Your Digital Year Unique",
+        "Section 3: Breakdown of Recap Features",
+        "Section 4: Personal Connection & Storytelling",
+        "Section 5: How to Access Your Personal Recap"
+      ],
+      "hashtags": "#SnapchatRecap #DigitalMemories #YearInReview #TechTrends #SocialMedia #PersonalStory #DigitalNarratives #TechInnovation #SocialTech #YearEnd2024",
+      "textureIndex": 9
+    },
+    {
+      "title": "First Voyage raises $2.5M for its AI companion helps you build habits",
+      "description": "First Voyage has raised $2.5 million in a seed funding round from a16z speed run, SignalFire, True Global, and other investors.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/15/first-voyage-raises-2-5m-for-its-ai-companion-helps-you-build-habits/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "AI Habit Coach Just Raised $2.5M 🚀",
+        "The Future of Personal Growth is Here",
+        "Your AI Companion: Funding Breakthrough"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick, dynamic text transitions",
+            "Include animated funding graphics",
+            "Create a narrative arc in 15-second format"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Shocking funding stat",
+            "Use investor logos as design elements",
+            "Progressive reveal of key information"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected visual metaphor",
+            "Use quick-cut editing style",
+            "Highlight key numbers dramatically"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "More professional, data-driven approach",
+            "Include founder quote or insight",
+            "Emphasize professional growth angle"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy gradient background, futuristic tech-inspired typography, dynamic geometric shapes representing growth/progress, minimalist color palette with electric blue and deep purple accents, subtle motion graphics suggesting AI intelligence and forward momentum"
+      },
+      "exampleOutline": [
+        "Hook: Funding Breakthrough Announcement",
+        "Context: AI Habit Transformation Challenge",
+        "Core Content: First Voyage's Unique Approach",
+        "Key Insight: How AI Enables Personal Growth",
+        "CTA: Explore Future of Personal Development"
+      ],
+      "hashtags": "#AICompanion #FutureOfGrowth #StartupFunding #AITech #PersonalDevelopment #TechInnovation #AIStartup #HabitBuilder #VentureCapital #InnovationEconomy",
+      "textureIndex": 10
     }
   ]
 }
