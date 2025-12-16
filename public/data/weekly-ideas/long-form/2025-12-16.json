@@ -1,210 +1,47 @@
 {
   "type": "long-form",
-  "date": "2025-12-16T16:23:43.745Z",
+  "date": "2025-12-16T16:30:39.818Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Databricks raises $4B at $134B valuation as its AI business heats up",
+      "description": "The data intelligence company has just raised more than $4 billion in a Series L funding round at a $134 billion valuation — up 34% from the $100 billion valuation that it achieved just three months ago.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/products/page/3"
-        }
-      ],
-      "format": "video",
-      "subcategory": "thought-leadership",
-      "hooks": [
-        "Design Templates That Don't Break Your Brand's Soul",
-        "Figma Secrets: Make Flexible Brand Templates",
-        "How Pro Designers Lock Down Brand Consistency"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use chapter markers to help viewers navigate complex content",
-            "Include picture-in-picture screen recordings to demonstrate Figma techniques",
-            "Create dynamic motion graphics to illustrate template flexibility concepts"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, dynamic visual aesthetic with high-contrast brand colors. Experimental typography with clean, technical screen recordings. Animated transitions between template states. Motion graphics illustrating design system flexibility. Clean, technical aesthetic with playful design system illustrations."
-      },
-      "exampleOutline": [
-        "Hook: Dramatic brand template failure scenario (30s)",
-        "Problem: Why most templates fail (1-2min)",
-        "8 Technical Template Design Principles (4-5min)",
-        "Live Figma Demonstration of Principles (2-3min)",
-        "Closing CTA: Template Design Masterclass (30s)"
-      ],
-      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystems #ProductDesign #UIDesign #DesignTips #CreativeDirection #BrandIdentity #DesignWorkflow #TemplateDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 11
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Techloy",
-          "url": "https://www.techloy.com/figma-adds-long-requested-ai-editing-tools-that-cut-out-the-need-for-photoshop-and-canva/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=ieJERX9Wkro"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/ai/"
-        }
-      ],
-      "format": "video",
-      "subcategory": "thought-leadership",
-      "hooks": [
-        "3 AI Tools That Will Transform Your Figma Workflow",
-        "Photoshop Killer? Figma's New Image Editing Magic",
-        "Design Faster: Figma's Secret AI Editing Weapons"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use screen recording with high-quality cursor tracking",
-            "Include picture-in-picture demonstrations of each tool",
-            "Create clear chapter markers for easy navigation"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast tech-forward aesthetic with electric blue and deep charcoal color palette. Dynamic motion graphics showcasing tool transformations. Clean, modern sans-serif typography with subtle futuristic edges. Animated transitions highlighting precision and speed of AI tools. Minimal design with high-impact visual demonstrations."
-      },
-      "exampleOutline": [
-        "Section 1: Provocative Hook + Quick AI Context (30s)",
-        "Section 2: Current Design Workflow Limitations (1-2min)",
-        "Section 3: Deep Dive into 3 New Figma AI Tools (4-5min)",
-        "Section 4: Real-World Workflow Transformation Examples (2min)",
-        "Section 5: Call-to-Action & Future of Design Tools (30s)"
-      ],
-      "hashtags": "#Figma #AIDesign #CreativeTech #DesignTools #ProductivityHack #AIWorkflow #UXDesign #CreativeAI #DesignTips #TechInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
-    },
-    {
-      "title": "Super Peach by Pentagram",
-      "description": "Restaurant brand Momofuku began life with its New York Noodle Bar in 2004 and in the two decades since, has opened more than 15 restaurants across North America, each building on founder chef David Chang’s vision of boundary-pushing cuisine. Since its naissance Momofuku “became known for reshaping Asian-American cuisine and challenging dining conventions with a bold and innovative approach,” according\nThe post Super Peach by Pentagram appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/16/super-peach-restaurant-branding-by-pentagram/"
-        },
-        {
-          "name": "Pentagram",
-          "url": "https://www.pentagram.com/work/super-peach"
-        },
-        {
-          "name": "Brandarchive",
-          "url": "https://brandarchive.substack.com/p/pentagram-studio-nari"
-        },
-        {
-          "name": "Bpando",
-          "url": "https://bpando.org"
-        }
-      ],
-      "format": "livestream",
-      "subcategory": "leadership",
-      "hooks": [
-        "How Pentagram Reimagined Restaurant Branding Forever",
-        "Design Secrets Behind Super Peach's Visual Identity",
-        "Branding Masterclass: Pentagram's Restaurant Revolution"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use live chat for real-time audience interaction during design breakdown",
-            "Prepare screen-share capability to show design process details",
-            "Enable Super Chat for deeper audience engagement"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 8,
-        "description": "Bold, experimental color palette inspired by Super Peach's vibrant identity. Dynamic motion graphics showcasing brand evolution. High-contrast typography with playful geometric transitions. Split-screen design comparisons. Kinetic animation revealing design layers. Reference mood: contemporary digital design meets culinary aesthetic."
-      },
-      "exampleOutline": [
-        "Introduction: Super Peach Brand Story",
-        "Pentagram's Design Philosophy & Approach",
-        "Visual Identity Deep Dive",
-        "Design Process & Decision Making",
-        "Live Q&A: Audience Design Questions"
-      ],
-      "hashtags": "#BrandDesign #RestaurantBranding #PentagramDesign #VisualIdentity #CreativeBranding #DesignThinking #BrandStrategy #GraphicDesign #RestaurantMarketing #CreativeDirection",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7903783/pexels-photo-7903783.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
-    },
-    {
-      "title": "Creative Commons announces tentative support for AI ‘pay-to-crawl’ systems",
-      "description": "The organization offered support for this idea of an AI marketplace, and  suggested several guiding principles.",
-      "starred": false,
-      "sources": [
-        {
           "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2025/12/15/creative-commons-announces-tentative-support-for-ai-pay-to-crawl-systems/"
+          "url": "https://techcrunch.com/2025/12/16/databricks-raises-4b-at-134b-valuation-as-its-ai-business-heats-up/"
         }
       ],
-      "format": "tutorial",
-      "subcategory": "instructional",
+      "format": "documentary",
+      "subcategory": "framework",
       "hooks": [
-        "How AI Will Pay Creators: A New Roadmap",
-        "Creative Commons' Bold AI Licensing Strategy",
-        "Unlocking Fair AI Training: Step-by-Step Guide"
+        "AI's Billion-Dollar Rocket: Databricks' Insane Growth Story",
+        "How One Company Is Rewriting Tech Valuation Rules",
+        "Silicon Valley's Latest Unicorn: The $134B AI Disruptor"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use chapter markers to break down complex AI licensing steps",
-            "Include side-by-side comparisons of current vs proposed AI crawling models",
-            "Incorporate visual flowcharts explaining the 'pay-to-crawl' concept"
+            "Use cinematic B-roll of tech headquarters and data centers",
+            "Include dynamic financial graphics showing valuation trajectory",
+            "Incorporate expert interview clips for documentary authenticity"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, technical aesthetic with electric blue and deep gray color palette. Dynamic motion graphics showing AI data flows. Clean, sans-serif typography with technical overlay elements. Infographic-style transitions between tutorial steps. Geometric background patterns suggesting digital interconnectedness."
+        "description": "High-contrast blue and silver color palette, sleek motion graphics illustrating financial growth, modern sans-serif typography with technical overlay animations, dynamic camera movements suggesting momentum and innovation, blend of archival footage and contemporary tech visualizations"
       },
       "exampleOutline": [
-        "Introduction: The AI Content Licensing Challenge",
-        "Current Landscape of AI Training Data",
-        "Creative Commons' Proposed 'Pay-to-Crawl' Framework",
-        "Step-by-Step Implementation Strategy",
-        "Future Implications for Creators and AI Companies"
+        "Opening: Dramatic financial growth visualization",
+        "Context: Databricks' market position and AI strategy",
+        "Deep Dive: Funding round implications for tech ecosystem",
+        "Expert Analysis: What $134B valuation really means",
+        "Future Projection: AI investment landscape transformation"
       ],
-      "hashtags": "#AIEthics #CreativeCommons #AILicensing #ContentCreators #TechInnovation #AITraining #DataEconomy #CreatorRights #AIPolicy #TechLaw",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 9
+      "hashtags": "#Databricks #AIInvestment #TechUnicorn #StartupFunding #AITech #SiliconValley #VentureCapital #TechInnovation #AIStartups #BusinessGrowth",
+      "textureIndex": 3
     },
     {
       "title": "Adobe Firefly now supports prompt-based video editing, adds more third-party models",
@@ -216,37 +53,159 @@
           "url": "https://techcrunch.com/2025/12/16/adobe-firefly-now-supports-prompt-based-video-editing-adds-more-third-party-models/"
         }
       ],
-      "format": "documentary",
-      "subcategory": "framework",
+      "format": "livestream",
+      "subcategory": "leadership",
       "hooks": [
-        "AI Video Editing: The Future is Now",
-        "Adobe's Firefly: Rewriting Creative Boundaries",
-        "How AI is Transforming Video Production"
+        "AI Video Editing: Adobe Firefly's Game-Changing Update",
+        "Prompt Magic: Inside Adobe's Latest Firefly Revolution",
+        "Future of Video Editing Just Dropped 🔥"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use cinematic B-roll to illustrate AI video editing process",
-            "Include side-by-side comparisons of traditional vs. AI editing",
-            "Create chapter markers for clear narrative flow"
+            "Enable live chat interaction during stream for real-time audience engagement",
+            "Prepare pre-screened Q&A questions to maintain flow",
+            "Use YouTube Premieres to build anticipation before live event"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "High-energy motion graphics with dynamic split-screen transitions, electric blue and neon accent color palette, futuristic sans-serif typography, floating holographic UI elements showcasing Firefly interface, rapid-cut B-roll demonstrating video editing capabilities"
+      },
+      "exampleOutline": [
+        "Section 1: High-Energy Intro & Live Stream Setup",
+        "Section 2: Adobe Firefly's Current Landscape & Context",
+        "Section 3: Deep Dive into Prompt-Based Video Editing",
+        "Section 4: Third-Party Model Integration Insights",
+        "Section 5: Live Q&A + Future Predictions Segment"
+      ],
+      "hashtags": "#AdobeFirefly #AIVideoEditing #CreativeTech #VideoAI #MachinelearningTools #AICreativity #TechInnovation #CreativeAI #VideoEditing #AdobeInnovation",
+      "textureIndex": 5
+    },
+    {
+      "title": "Zencoder drops Zenflow, a free AI orchestration tool that pits Claude against OpenAI’s models to catch coding errors",
+      "description": "Zencoder, the Silicon Valley startup that builds AI-powered coding agents, released a free desktop application on Monday that it says will fundamentally change how software engineers interact with artificial intelligence — moving the industry beyond the freewheeling era of &quot;vibe coding&quot; toward a more disciplined, verifiable approach to AI-assisted development.The product, called Zenflow, introduces what the company describes as an &quot;AI orchestration layer&quot; that coordinates mul",
+      "starred": false,
+      "sources": [
+        {
+          "name": "VentureBeat AI",
+          "url": "https://venturebeat.com/ai/zencoder-drops-zenflow-a-free-ai-orchestration-tool-that-pits-claude-against"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "AI Coding Errors? This Tool Changes Everything",
+        "Level Up Your Code with AI Orchestration",
+        "Build Smarter: The Ultimate AI Coding Hack"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use screen recording with live code demonstration",
+            "Include split-screen showing AI models side-by-side",
+            "Add chapter markers for each step of tutorial"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast color palette with deep blues and electric teals, dynamic split-screen compositions, modern sans-serif typography with technical overlay graphics, fluid motion transitions showcasing AI transformation, minimalist tech-documentary aesthetic inspired by WIRED and MIT Technology Review visual styles"
+        "description": "High-contrast tech palette with deep blues and electric teals, dynamic grid-based layout, futuristic sans-serif typography, animated code transition effects, clean technical aesthetic with subtle glitch/tech overlay elements"
       },
       "exampleOutline": [
-        "Opening: Dramatic AI video transformation sequence",
-        "Context: Current limitations in video editing",
-        "Adobe Firefly's Revolutionary Features: Prompt-based editing, third-party model integration",
-        "Technical Deep Dive: How the technology works",
-        "Future Implications: Democratizing creative production"
+        "Introduction: What is AI Orchestration?",
+        "Problem: Current Challenges in AI-Assisted Coding",
+        "Zenflow Tool Walkthrough: Step-by-Step Installation",
+        "Comparative AI Model Demonstration",
+        "Advanced Techniques and Error Catching Strategies"
       ],
-      "hashtags": "#AdobeFirefly #AIVideoEditing #CreativeTech #AIInnovation #VideoProduction #TechTrends #AICreativity #FutureOfMedia #DigitalCreation #TechDocumentary",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "hashtags": "#AICode #CodeTutorial #ZenFlow #AIEngineering #SoftwareDevelopment #CodingTips #AITools #ProgrammingHacks #TechInnovation #AIAssistance",
       "textureIndex": 12
+    },
+    {
+      "title": "Zoom says it aced AI’s hardest exam. Critics say it copied off its neighbors.",
+      "description": "Zoom Video Communications, the company best known for keeping remote workers connected during the pandemic, announced last week that it had achieved the highest score ever recorded on one of artificial intelligence&#x27;s most demanding tests — a claim that sent ripples of surprise, skepticism, and genuine curiosity through the technology industry.The San Jose-based company said its AI system scored 48.1 percent on the Humanity&#x27;s Last Exam, a benchmark designed by subject-matter experts wor",
+      "starred": false,
+      "sources": [
+        {
+          "name": "VentureBeat AI",
+          "url": "https://venturebeat.com/ai/zoom-says-it-aced-ais-hardest-exam-critics-say-it-copied-off-its-neighbors"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "AI Cheating Scandal: Zoom's Shocking Test Score Exposed",
+        "Did Zoom Fake Its AI Exam Results?",
+        "The Truth Behind Zoom's Controversial AI Claim"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dynamic screen recordings showing exam details",
+            "Include picture-in-picture reaction shots for dramatic effect",
+            "Create chapter markers to break down complex narrative"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, investigative visual style with high-contrast red/blue color palette. Animated infographic overlays showcasing test scores. Glitch-inspired transition effects to emphasize 'digital investigation'. Typography should feel technical but urgent - sans-serif with sharp edges. Incorporate data visualization elements that look like forensic evidence tracking."
+      },
+      "exampleOutline": [
+        "Opening: Dramatic reveal of Zoom's AI test claim",
+        "Context: What is the 'Humanity's Last Exam'?",
+        "Investigation: Breakdown of Zoom's controversial score",
+        "Expert Analysis: Potential implications of alleged cheating",
+        "Conclusion: Broader lessons for AI ethics and transparency"
+      ],
+      "hashtags": "#ZoomAI #AIEthics #TechScandal #ArtificialIntelligence #TechInvestigation #AITesting #InnovationWatch #TechCriticism #AIResearch #DataIntegrity",
+      "textureIndex": 9
+    },
+    {
+      "title": "How to build your PM second brain with ChatGPT",
+      "description": "Use AI to amplify your craft, not replace it",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/how-to-build-your-pm-second-brain"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "AI: Your Secret Weapon for Product Management",
+        "How ChatGPT Transforms Product Managers' Workflow",
+        "Build Your Ultimate PM Intelligence System"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use cinematic B-roll of product managers working",
+            "Include expert interview clips for credibility",
+            "Create dynamic screen recordings with commentary overlay"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Modern tech-documentary aesthetic with deep blue and electric accent colors. Clean, futuristic typography with sans-serif geometric fonts. Dynamic motion graphics showing AI workflow transitions. Picture-in-picture split screens demonstrating tool interactions. Subtle holographic/data visualization elements to enhance tech storytelling."
+      },
+      "exampleOutline": [
+        "Opening: Personal story of PM workflow challenge",
+        "Problem: Traditional knowledge management limitations",
+        "Solution: ChatGPT as intelligent workflow amplifier",
+        "Technical Deep Dive: Practical implementation strategies",
+        "Future Vision: AI-augmented product management"
+      ],
+      "hashtags": "#AIForPM #ProductManagement #ChatGPT #TechWorkflow #AITools #ProductStrategy #CareerTips #InnovationTechnology #WorkSmart #ProfessionalDevelopment",
+      "textureIndex": 7
     }
   ]
 }

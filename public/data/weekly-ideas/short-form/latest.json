@@ -1,372 +1,331 @@
 {
   "type": "short-form",
-  "date": "2025-12-16T16:23:43.745Z",
+  "date": "2025-12-16T16:29:57.709Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Canadian peer-to-Peer clothing rental company Rax is expanding to the U.S.",
+      "description": "Rax is a peer-to-peer clothing rental company that won top consumer pitch at Disrupt this year.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/products/page/3"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/16/canadian-peer-to-peer-clothing-rental-company-rax-is-expanding-to-the-u-s/"
         }
       ],
-      "format": "quick-image",
-      "subcategory": "quick-image",
+      "format": "story",
+      "subcategory": "story",
       "hooks": [
-        "Design Templates That Don't Break Your Brand 🚀",
-        "Figma Secrets: Flexible Branding Without Chaos",
-        "Make Your Brand Flexible, Not Fragile 💡"
+        "Rent Your Wardrobe, Expand Your Style Empire 🌟",
+        "Fashion Disrupt: Rax Takes Over America 🚀",
+        "Your Closet, Now a Global Fashion Playground 👗"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick text transitions between template tips",
-            "Include dynamic mockups showing before/after template scenarios",
-            "Add motion graphics highlighting key design principles"
+            "Use quick transitions between clothing rental scenes",
+            "Include dynamic text overlays highlighting expansion stats",
+            "Feature user transformation clips to showcase rental impact"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "Create each slide as a distinct template rule visual",
-            "Use consistent color-coded graphic system across slides",
-            "Ensure first slide has bold, provocative headline"
+            "First slide: Bold headline with Rax logo",
+            "Use infographic-style slides showing U.S. market potential",
+            "Final slide: Clear call-to-action with download link"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Open with unexpected visual metaphor about brand flexibility",
-            "Use rapid-cut editing between template examples",
-            "Include designer voiceover explaining core concepts"
+            "Start with high-energy founder interview clip",
+            "Use split-screen comparisons of Canadian vs U.S. markets",
+            "Include fast-paced B-roll of clothing exchanges"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Frame content as professional design strategy",
-            "Include data/statistics about template effectiveness",
-            "Use more technical, precise language and graphics"
+            "Focus on business model innovation narrative",
+            "Include startup growth metrics and expansion strategy",
+            "Use professional, data-driven storytelling approach"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-energy design with vibrant gradient backgrounds, sharp geometric overlays, playful typography that breaks traditional grid, bold color contrasts (electric blue, coral, deep purple), dynamic diagonal compositions, subtle motion graphics suggesting flexibility and movement"
+        "description": "Bold, dynamic color palette with electric blues and vibrant corals. Dynamic motion graphics showing clothing transformations. Modern sans-serif typography with slight motion blur. Geometric transitions between scenes. Urban, tech-forward aesthetic blending fashion and digital innovation."
       },
       "exampleOutline": [
-        "Hook: Provocative design template challenge",
-        "Problem: Brand consistency vs. creative flexibility",
-        "8 Quick Template Design Rules",
-        "Key Insight: Design as strategic framework",
-        "Call-to-Action: Download template guide"
+        "Section 1: Rax Disrupt Pitch Highlight Moment",
+        "Section 2: Problem with Traditional Fashion Consumption",
+        "Section 3: How Peer-to-Peer Rental Solves This",
+        "Section 4: U.S. Expansion Strategy Teaser",
+        "Section 5: Download/Join Call-to-Action"
       ],
-      "hashtags": "#DesignTemplates #FigmaDesign #BrandingTips #CreativeStrategy #DesignSystems #AIDesign #ProductDesign #BrandFlexibility #DesignInnovation #CreativeTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 6
+      "hashtags": "#RaxFashion #PeerToPeerStyle #FashionTech #SustainableFashion #StartupExpansion #RentalRevolution #FashionInnovation #TechDisrupt #SustainableWardrobe #FashionTechStartup",
+      "textureIndex": 7
     },
     {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
+      "title": "Instagram brings Reels to the big screen, starting with Amazon Fire TV",
+      "description": "By bringing Reels to TVs, Instagram can better compete with YouTube, which largely dominates the TV space.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Techloy",
-          "url": "https://www.techloy.com/figma-adds-long-requested-ai-editing-tools-that-cut-out-the-need-for-photoshop-and-canva/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=ieJERX9Wkro"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/ai/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/16/instagram-brings-reels-to-the-big-screen-starting-with-amazon-fire-tv/"
         }
       ],
       "format": "reel",
       "subcategory": "reel",
       "hooks": [
-        "AI just transformed Figma image editing forever 🚀",
-        "3 mind-blowing Figma tools designers NEED to know",
-        "Photoshop who? Figma's new AI is insane 🤯"
+        "Instagram's TV takeover: Reels go big screen!",
+        "YouTube's nightmare: Reels invade your living room",
+        "TV just got a social media upgrade"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use rapid screen recordings showing tool functionality",
-            "Add dynamic text overlays highlighting key features",
-            "Include emoji reactions to create engagement"
+            "Use dynamic screen transition effects to simulate TV interface",
+            "Keep text overlays large and readable on mobile screens",
+            "Incorporate quick cuts mimicking channel switching"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Provocative before/after image",
-            "Use consistent color palette across slides",
-            "Progressive reveal of tool capabilities"
+            "First slide: Dramatic before/after of social media on TV",
+            "Use infographic-style slides explaining platform expansion",
+            "Final slide: Call-to-action or thought-provoking question"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with unexpected visual demonstration",
-            "Use voiceover explaining technical details quickly",
-            "Include screen capture with high-contrast highlights"
+            "Open with unexpected visual metaphor about media convergence",
+            "Use high-energy transitions between content segments",
+            "Include quick sound effects for engagement"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Frame as professional workflow enhancement",
-            "Use more technical language and design process context",
-            "Include credibility markers like potential time savings"
+            "Frame as strategic media platform evolution",
+            "Include data points about short-form video consumption",
+            "Maintain professional yet innovative tone"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-energy cyberpunk-inspired design with neon accents, glitch transitions, dynamic screen recordings, futuristic typography, dark mode aesthetic with electric blue and magenta highlights, motion graphics showing tool transformations"
+        "description": "Bold, tech-futuristic color palette with electric blues and deep purples. Geometric motion graphics simulating digital interfaces. High-contrast typography with glitch/digital overlay effects. Dynamic split-screen and transition animations suggesting media transformation. Minimalist yet energetic design language."
       },
       "exampleOutline": [
-        "Hook: Dramatic AI editing reveal",
-        "Problem: Current image editing limitations",
-        "Solution: Three new Figma AI tools",
-        "Demonstration: Quick tool walkthrough",
-        "Call-to-Action: Try new features now"
+        "Hook: Dramatic TV/Reels visual mashup",
+        "Problem: Traditional TV's declining relevance",
+        "Solution: Instagram's platform expansion strategy",
+        "Implications: Changing media consumption landscape",
+        "CTA: Explore new viewing possibilities"
       ],
-      "hashtags": "#FigmaAI #DesignTech #CreativeTech #AIDesign #ProductivityHack #DesignTools #CreativeWorkflow #TechInnovation #AICreativity #DesignTips",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7767791/pexels-photo-7767791.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "hashtags": "#InstagramReels #SocialMediaTrends #TVTech #DigitalMedia #ContentEvolution #MediaInnovation #StreamingTechnology #SocialTV #VideoContent #TechTrends",
       "textureIndex": 10
     },
     {
-      "title": "Super Peach by Pentagram",
-      "description": "Restaurant brand Momofuku began life with its New York Noodle Bar in 2004 and in the two decades since, has opened more than 15 restaurants across North America, each building on founder chef David Chang’s vision of boundary-pushing cuisine. Since its naissance Momofuku “became known for reshaping Asian-American cuisine and challenging dining conventions with a bold and innovative approach,” according\nThe post Super Peach by Pentagram appeared first on BP&O - Branding, Packaging and Opinion.",
+      "title": "Apple TV adds support for Google Cast even as Netflix ditches the feature",
+      "description": "The tech giant's adoption of Google Cast signals its interest in making Apple TV a more competitive streaming service at a time when the market is seeing increased consolidation.",
       "starred": false,
       "sources": [
         {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/16/super-peach-restaurant-branding-by-pentagram/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/16/apple-tv-adds-support-for-google-cast-even-as-netflix-ditches-the-feature/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "Tech Giants Play Musical Chairs: Streaming Edition",
+        "Google Cast: The Streaming War's Latest Twist",
+        "Apple vs Netflix: Casting Chaos Unleashed"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use split-screen animation to show Apple and Netflix logos",
+            "Create quick, dynamic transitions between streaming platform icons",
+            "Incorporate subtle motion graphics to highlight key points"
+          ]
         },
         {
-          "name": "Pentagram",
-          "url": "https://www.pentagram.com/work/super-peach"
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Provocative headline with bold typography",
+            "Use each slide to break down a key aspect of the streaming shift",
+            "Final slide: Unexpected twist or thought-provoking question"
+          ]
         },
         {
-          "name": "Brandarchive",
-          "url": "https://brandarchive.substack.com/p/pentagram-studio-nari"
+          "platform": "YouTube Short",
+          "tips": [
+            "Open with a pattern interrupt using unexpected visual metaphor",
+            "Use quick-cut editing to maintain high energy",
+            "Incorporate text overlay to reinforce key messaging"
+          ]
         },
         {
-          "name": "Bpando",
-          "url": "https://bpando.org"
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as a strategic technology trend analysis",
+            "Use more formal, insight-driven visual approach",
+            "Include subtle data visualization elements"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, high-contrast color palette with electric blue and neon accents. Asymmetrical composition with tech-inspired geometric overlays. Typography that feels both futuristic and disruptive. Animated glitch effects to symbolize technological shift. Minimalist icons representing streaming platforms with dynamic motion."
+      },
+      "exampleOutline": [
+        "Hook: Provocative headline about streaming technology",
+        "Quick context of Apple and Netflix's diverging strategies",
+        "Key insight about Google Cast's strategic importance",
+        "Unexpected implication of this technological shift",
+        "Call-to-action: Engage with the conversation"
+      ],
+      "hashtags": "#StreamingWars #TechInnovation #AppleTV #Netflix #GoogleCast #TechTrends #DigitalMedia #StreamingTechnology #TechStrategy #InnovationInsights",
+      "textureIndex": 9
+    },
+    {
+      "title": "Hacking group says it&#8217;s extorting Pornhub after stealing users’ viewing data",
+      "description": "The Scattered Lapsus$ Hunters hacking collective stole Pornhub premium users’ data, including email addresses and viewing history.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/16/hacking-group-says-its-extorting-pornhub-after-stealing-users-viewing-data/"
+        }
+      ],
+      "format": "story",
+      "subcategory": "story",
+      "hooks": [
+        "Privacy Nightmare: Hackers Expose Your Pornhub Secrets",
+        "When Hackers Know Too Much: Pornhub Breach",
+        "Your Data Just Got Leaked... Everywhere"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use blur/pixel effect for sensitive content",
+            "Create dramatic voiceover with tech-thriller tone",
+            "Use quick cuts to build tension"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "Use infographic-style slides with minimal text",
+            "Create visual progression of data breach concept",
+            "Include anonymous/silhouette design elements"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Open with shocking statistic animation",
+            "Use cyberpunk-inspired visual aesthetic",
+            "Emphasize data vulnerability through graphic design"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as cybersecurity professional insight",
+            "Use more serious, analytical tone",
+            "Include potential business/enterprise implications"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "Dark cyberpunk palette (deep blacks, electric blues, neon accents). Glitch/data corruption visual effects. Angular typography. Silhouetted figures. Pixelated transition animations. Minimal but high-tech aesthetic mimicking data breach visualization."
+      },
+      "exampleOutline": [
+        "Section 1: Shocking Headline/Data Breach Teaser",
+        "Section 2: What Actually Happened",
+        "Section 3: Scale of Personal Risk",
+        "Section 4: Potential Consequences",
+        "Section 5: Protective Recommendations"
+      ],
+      "hashtags": "#Cybersecurity #DataPrivacy #HackingNews #TechAlert #InternetSafety #DigitalRisk #DataBreach #OnlineSecurity #PrivacyMatters #TechTips",
+      "textureIndex": 0
+    },
+    {
+      "title": "India&#8217;s Digantara raises $50M for space-based missile defence tech",
+      "description": "With this funding, Digantara has raised $64.5 million in total.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/16/indias-digantara-raises-50m-for-space-based-missile-defence-tech/"
         }
       ],
       "format": "carousel",
       "subcategory": "carousel",
       "hooks": [
-        "Pentagram's Peach: Design That Breaks Restaurant Branding Rules",
-        "How One Brand Reimagined Restaurant Visual Identity",
-        "The Future of Restaurant Branding is Bold"
+        "Space Defense Tech: India's $50M Game-Changer",
+        "Missiles, Meet Your Match: Digantara's Revolution",
+        "How India Is Rewriting Space Security Rules"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use dynamic transitions between carousel slides",
-            "Create quick visual reveals of design elements",
-            "Add subtle motion graphics to maintain engagement"
+            "Use dynamic motion graphics showing satellite movement",
+            "Include quick text animations highlighting key numbers",
+            "Create rapid transitions between defense tech visuals"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide must have high-contrast visual impact",
-            "Use square 1:1 or 4:5 aspect ratio",
-            "Ensure each slide tells part of a narrative progression"
+            "Use infographic-style slides with clean, technical design",
+            "First slide must have bold visual hook",
+            "Ensure each slide tells a micro-story about tech progression"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Compress carousel narrative into 60-second storytelling",
-            "Use voiceover to explain design philosophy",
-            "Include text overlays for key design insights"
+            "Compress narrative into 60-second high-energy storytelling",
+            "Use voiceover explaining complex tech simply",
+            "Include b-roll of satellite/defense technology footage"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Add professional commentary on design strategy",
-            "Include designer/creative director quotes",
-            "Highlight business and brand transformation implications"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 8,
-        "description": "Bold, experimental color palette with unexpected peach and magenta gradients. Asymmetrical typography with overlapping design elements. High-contrast geometric shapes. Dynamic composition that feels both playful and sophisticated. References: Pentagram's avant-garde design language, Swiss modernist design, contemporary digital art"
-      },
-      "exampleOutline": [
-        "Section 1: Provocative design hook/visual reveal",
-        "Section 2: Traditional restaurant branding limitations",
-        "Section 3: Super Peach's innovative design approach",
-        "Section 4: Key visual and strategic design insights",
-        "Section 5: Call-to-action and design exploration invitation"
-      ],
-      "hashtags": "#RestaurantDesign #BrandingInnovation #GraphicDesign #PentagramDesign #CreativeBranding #DesignTrends #RestaurantBranding #VisualIdentity #CreativeDirection #BoldDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7245606/pexels-photo-7245606.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 6
-    },
-    {
-      "title": "Creative Commons announces tentative support for AI ‘pay-to-crawl’ systems",
-      "description": "The organization offered support for this idea of an AI marketplace, and  suggested several guiding principles.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2025/12/15/creative-commons-announces-tentative-support-for-ai-pay-to-crawl-systems/"
-        }
-      ],
-      "format": "story",
-      "subcategory": "story",
-      "hooks": [
-        "AI's New Payment Frontier: Creative Commons Speaks",
-        "Pay-to-Crawl: The Future of AI Data?",
-        "Creative Commons Drops Radical AI Marketplace Blueprint"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick-cut animation transitions between story slides",
-            "Include motion graphics explaining complex AI concepts",
-            "Ensure text is large and readable in vertical format"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must have provocative graphic/statistic",
-            "Use consistent color palette across all slides",
-            "Include one key takeaway per slide"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected visual metaphor",
-            "Use voiceover to explain technical nuances",
-            "Include subtitles for maximum comprehension"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame as thought leadership perspective",
-            "Include data-driven insights",
-            "Use more formal, professional tone"
+            "Add more technical depth and industry context",
+            "Include expert quote or strategic analysis",
+            "Use more formal, authoritative tone"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Experimental cyberpunk-adjacent palette with electric blues and neon accents. Dynamic geometric layouts suggesting data flow. Typography: Sharp sans-serif, asymmetrical text placement. Animated data visualization elements. Aesthetic references: Blade Runner UI, abstract digital art"
+        "description": "High-contrast tech aesthetic with deep navy and electric blue palette. Geometric, angular compositions mimicking satellite/defense tech. Futuristic sans-serif typography. Subtle holographic/digital overlay effects. Motion graphics showing orbital trajectories and technological interconnectedness."
       },
       "exampleOutline": [
-        "Opening: Provocative AI marketplace visual",
-        "Problem: Current AI data acquisition challenges",
-        "Solution: Creative Commons' proposed framework",
-        "Key Principles: Pay-to-crawl ecosystem",
-        "Future Implications: What this means for creators"
+        "Slide 1: Bold hook + key visual",
+        "Slide 2: Digantara funding context",
+        "Slide 3: Space defense technology overview",
+        "Slide 4: Technical innovation breakdown",
+        "Slide 5: Future implications and call-to-engage"
       ],
-      "hashtags": "#AIEthics #CreativeCommons #AIMarketplace #DataEconomy #AIInnovation #TechPolicy #CreatorRights #AIFuture #DataCrawling #TechTrends",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8014528/pexels-photo-8014528.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
-    },
-    {
-      "title": "Adobe Firefly now supports prompt-based video editing, adds more third-party models",
-      "description": "Adobe is updating its AI video-generation app, Firefly, with a new video editor that supports precise prompt-based edits, as well as adding new third-party models for image and video generation, including Black Forest Labs' FLUX.2 and Topaz Astra.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2025/12/16/adobe-firefly-now-supports-prompt-based-video-editing-adds-more-third-party-models/"
-        }
-      ],
-      "format": "story",
-      "subcategory": "story",
-      "hooks": [
-        "AI Video Editing: Adobe Firefly's Game-Changing Update",
-        "Prompt Magic: Transform Videos with One Sentence",
-        "Future of Editing: AI Takes Control"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick, dynamic cuts to showcase video editing transitions",
-            "Include side-by-side before/after comparisons",
-            "Leverage text overlays to explain complex features quickly"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Dramatic before/after video edit screenshot",
-            "Use numbered slides to break down feature steps",
-            "Include a swipe-up CTA for more detailed tutorial"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with a pattern-interrupt visual of impossible video edit",
-            "Use screen recording to demonstrate actual tool usage",
-            "End with a clear value proposition teaser"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame as professional workflow enhancement",
-            "Include technical details about third-party model integration",
-            "Use more formal, insight-driven narrative approach"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 8,
-        "description": "Futuristic cyberpunk color palette with electric blues and neon accents, fractured geometric compositions suggesting video editing complexity, holographic text treatments, dynamic motion graphics showing AI-powered transformations, clean yet aggressive typography with sharp angular cuts"
-      },
-      "exampleOutline": [
-        "Section 1: Attention-grabbing visual of impossible video edit",
-        "Section 2: Problem with current video editing workflows",
-        "Section 3: How Adobe Firefly solves the problem",
-        "Section 4: Mind-blowing example of prompt-based editing",
-        "Section 5: Call-to-action to explore the tool"
-      ],
-      "hashtags": "#AdobeFirefly #AIVideoEditing #CreativeTech #VideoProduction #AITools #CreativeAI #DigitalDesign #TechInnovation #VideoEditing #AICreativity",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7245606/pexels-photo-7245606.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
+      "hashtags": "#SpaceTech #DefenseTechnology #IndianInnovation #AIDefense #SpaceSecurity #TechFunding #EmergingTech #SatelliteTechnology #GlobalSecurity #InnovationMatters",
+      "textureIndex": 2
     }
   ]
 }
