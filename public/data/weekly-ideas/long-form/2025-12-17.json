@@ -1,248 +1,211 @@
 {
   "type": "long-form",
-  "date": "2025-12-17T16:24:11.277Z",
+  "date": "2025-12-17T16:30:00.450Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Gemini 3 Flash: frontier intelligence built for speed",
+      "description": "&lt;img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3_flash_model_blog_heade.max-600x600.format-webp.webp\"&gt;Gemini 3 Flash offers frontier intelligence built for speed at a fraction of the cost.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/products/page/3"
+          "name": "Google AI Blog",
+          "url": "https://blog.google/products/gemini/gemini-3-flash/"
         }
       ],
-      "format": "video",
-      "subcategory": "thought-leadership",
+      "format": "documentary",
+      "subcategory": "framework",
       "hooks": [
-        "Design Templates That Won't Break Your Brand",
-        "Figma Secrets: Make Templates That Actually Work",
-        "Brand Guidelines Without the Creativity Handcuffs"
+        "AI Speed Revolution: Gemini 3 Flash Unleashed",
+        "Frontier Intelligence Meets Lightning-Fast Performance",
+        "The Future of AI: Faster, Smarter, Cheaper"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use picture-in-picture screen recordings to demonstrate Figma workflow",
-            "Create dynamic chapter markers for easy navigation",
-            "Include B-roll of real design scenarios to maintain visual interest"
+            "Use cinematic B-roll of data centers and AI infrastructure",
+            "Incorporate dynamic screen recordings of Gemini 3 Flash in action",
+            "Create chapter markers highlighting technical performance insights"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Dynamic, high-contrast color palette with deep blues and energetic orange accents. Experimental typography with clean, modern grid layouts. Incorporate motion graphics that reveal template mechanics. Use split-screen and zoom transitions to highlight design details. Aesthetic: Modern design tech meets creative flexibility."
+        "description": "High-contrast blue and white color palette with electric accent colors. Sleek, futuristic motion graphics overlaying technical footage. Dynamic typography with angular, high-tech feel. Utilize split-screen and rapid transition effects to emphasize speed. Visual references: MKBHD tech reviews, Apple product launch videos, cutting-edge tech documentaries"
       },
       "exampleOutline": [
-        "Hook: Provocative statement about template design challenges",
-        "Problem: Why most branded templates fail",
-        "8 Strategic Tips for Flexible Template Design",
-        "Live Figma Demonstration of Principles",
-        "Actionable Takeaways and Community Call to Action"
+        "Section 1: Cold Open - Dramatic AI Performance Demonstration",
+        "Section 2: The AI Performance Problem in Modern Computing",
+        "Section 3: Gemini 3 Flash - Technical Deep Dive",
+        "Section 4: Real-World Impact and Potential Applications",
+        "Section 5: Future of AI Performance Call-to-Action"
       ],
-      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystem #CreativeWorkflow #ProductDesign #UIDesign #DesignTips #BrandIdentity #CreativeStrategy #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
+      "hashtags": "#AI #GeminiFlash #ArtificialIntelligence #TechInnovation #MachineLearning #GoogleAI #TechDocumentary #AIPerformance #FutureOfTech #IntelligentComputing",
+      "textureIndex": 8
     },
     {
-      "title": "Google’s vibe-coding tool Opal comes to Gemini",
+      "title": "Google launches Gemini 3 Flash, makes it the default model in the Gemini app",
+      "description": "Google is making Gemini 3 Flash the default model in the Gemini app and oAI model for Search",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/17/google-launches-gemini-3-flash-makes-it-the-default-model-in-the-gemini-app/"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "Gemini 3 Flash: Your AI Search Revolution Starts Here",
+        "Google's New AI: 5 Game-Changing Steps You Need to Know",
+        "Unlock Gemini 3 Flash: The Ultimate Search Transformation"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use screen recording to demonstrate Gemini 3 Flash interface",
+            "Create clear chapter markers for each tutorial step",
+            "Include picture-in-picture for contextual explanations and visual interest"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, dynamic visual approach with high-contrast blue and white color palette. Geometric motion graphics showing AI transformation. Clean, technical typography with rounded sans-serif fonts. Animated step-by-step transitions with subtle parallax effects. Reference aesthetic: Modern tech interface design with Apple and Google design language influences."
+      },
+      "exampleOutline": [
+        "Introduction: Why Gemini 3 Flash Matters",
+        "Context: Google's AI Search Evolution",
+        "Step-by-Step: Navigating the New Gemini App Interface",
+        "Advanced Techniques: Maximizing Search Capabilities",
+        "Future Implications and Learning Recommendations"
+      ],
+      "hashtags": "#GoogleAI #GeminiFLash #AISearch #TechTutorial #AIInnovation #SearchTechnology #GoogleTips #AILearning #TechTrends #AIUpdate",
+      "textureIndex": 8
+    },
+    {
+      "title": "Mozilla&#8217;s new CEO says AI is coming to Firefox, but will remain a choice",
+      "description": "Mozilla has appointed Anthony Enzor-DeMeo as its CEO, as the Firefox developer scrambles to adapt in a rapidly changing browser market.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/17/mozillas-new-ceo-says-ai-is-coming-to-firefox-but-will-remain-a-choice/"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "Firefox's AI Revolution: What Users Need to Know",
+        "AI in Your Browser: Mozilla's Radical New Strategy",
+        "The Future of Browsing Just Got Smarter"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Enable live chat for real-time audience interaction during Q&A",
+            "Use YouTube's community tab to pre-announce live stream and gather questions",
+            "Prepare pre-submitted audience questions to maintain stream momentum"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dynamic tech-forward visual aesthetic with futuristic blue-grey color palette, holographic overlay elements, clean sans-serif typography. Incorporate animated AI/circuit-like graphic transitions. Picture-in-picture layout with host and dynamic information graphics. Motion design that feels cutting-edge but not overwhelming."
+      },
+      "exampleOutline": [
+        "Introduction: Meet Mozilla's New CEO & AI Vision",
+        "Current Browser Landscape & Challenges",
+        "Mozilla's AI Integration Strategy",
+        "User Choice & Privacy Considerations",
+        "Live Q&A: Audience Questions & Interactive Insights"
+      ],
+      "hashtags": "#MozillaAI #FirefoxUpdate #AIBrowser #TechInnovation #WebTechnology #BrowserFuture #AIPrivacy #TechTrends #MozillaCEO #InternetTechnology",
+      "textureIndex": 10
+    },
+    {
+      "title": "Google&#8217;s vibe-coding tool Opal comes to Gemini",
       "description": "The company on Wednesday said it is integrating the tool, which lets you build AI-powered mini apps, inside the Gemini web app, allowing users to create their own custom apps.",
       "starred": false,
       "sources": [
         {
           "name": "TechCrunch AI",
           "url": "https://techcrunch.com/2025/12/17/googles-vibe-coding-tool-opal-comes-to-gemini/"
-        },
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "Google's Secret App Builder Just Got Wild",
+        "Create Custom Apps in 60 Seconds with Gemini",
+        "AI App Development: No Code Required"
+      ],
+      "platformTips": [
         {
-          "name": "Testingcatalog",
-          "url": "https://www.testingcatalog.com/google-started-rolling-out-super-gems-from-opal-inside-gemini/"
-        },
+          "platform": "YouTube",
+          "tips": [
+            "Use screen recording to demonstrate Opal tool live",
+            "Include picture-in-picture of presenter for personal connection",
+            "Add dynamic chapter markers for easy navigation"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy tech aesthetic with electric blue and charcoal accents, dynamic motion graphics showing code transformation, sleek sans-serif typography, animated UI transitions highlighting app creation process, minimal but energetic composition with tech-forward visual metaphors"
+      },
+      "exampleOutline": [
+        "Intro: Shocking AI App Creation Revolution",
+        "What is Opal? Google's New Secret Weapon",
+        "Live Demonstration: Building a Mini App in Real-Time",
+        "Technical Deep Dive: How Gemini Makes This Possible",
+        "Future of No-Code Development Revealed"
+      ],
+      "hashtags": "#GoogleAI #NoCode #AITools #TechInnovation #GeminiAI #AppDevelopment #AITutorial #TechTrends #CodelessApps #AIRevolution",
+      "textureIndex": 7
+    },
+    {
+      "title": "Full Tutorial: Build Your AI Coach to Improve Your Health and Fitness in 2026",
+      "description": "A step-by-step guide to hiring a AI health coach that gives you personalized advice",
+      "starred": false,
+      "sources": [
         {
-          "name": "Prnewswire",
-          "url": "https://www.prnewswire.com/news-releases/optimizely-opal-available-in-gemini-enterprise-from-google-cloud-bringing-enterprise-grade-ai-agents-to-marketing-teams-302586588.html"
-        },
-        {
-          "name": "Oodaloop",
-          "url": "https://oodaloop.com/briefs/technology/googles-vibe-coding-tool-opal-comes-to-gemini/"
-        },
-        {
-          "name": "Bitcoinworld",
-          "url": "https://bitcoinworld.co.in/google-opal-gemini-vibe-coding/"
-        },
-        {
-          "name": "Findarticles",
-          "url": "https://www.findarticles.com/opal-mini-app-builder-added-to-gemini-web/"
+          "name": "Peter Yang (Creator Economy)",
+          "url": "https://creatoreconomy.so/p/full-tutorial-build-your-ai-coach-to-improve-your-health-and-fitness"
         }
       ],
       "format": "tutorial",
       "subcategory": "instructional",
       "hooks": [
-        "Build Custom AI Apps in Minutes with Google Opal",
-        "Gemini's Secret Weapon: One-Click App Creation",
-        "Unlock AI Mini-Apps: Google's Opal Tutorial Revealed"
+        "Build Your Personal AI Health Coach in 60 Minutes",
+        "Transform Fitness with Custom AI Assistant Today",
+        "Hack Your Health: DIY AI Coach Tutorial"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use screen recording to demonstrate every Opal step",
-            "Include picture-in-picture for personal reaction/explanation",
-            "Create clear chapter markers for each app-building phase"
+            "Use clear, numbered chapter markers for tutorial steps",
+            "Include picture-in-picture screen recordings showing exact process",
+            "Add animated graphics explaining complex technical steps"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-energy tech aesthetic with electric blue and neon accents, dynamic split-screen transitions, futuristic sans-serif typography, motion-tracked UI highlights, clean minimal interfaces with punchy graphic overlays showcasing app creation process"
+        "description": "High-energy, futuristic color palette with electric blues and clean whites. Dynamic motion graphics showing AI transformation. Modern sans-serif typography with technical overlay animations. Clean, technical aesthetic with human-centered warmth. Integrate subtle health/fitness imagery with tech visualization."
       },
       "exampleOutline": [
-        "Introduction: What is Google Opal?",
-        "Understanding Gemini's New App-Building Environment",
-        "Step-by-Step: Creating Your First AI Mini-App",
-        "Advanced Techniques and Pro Tips",
-        "Future of No-Code AI Development Conclusion"
+        "Introduction: Why AI Health Coaching Matters",
+        "Setup: Required Tools and Technologies",
+        "Step-by-Step AI Coach Configuration",
+        "Advanced Customization Techniques",
+        "Implementation and Optimization Strategies"
       ],
-      "hashtags": "#GoogleOpal #AIAppBuilder #GeminiAI #NoCodeDevelopment #AITutorial #TechInnovation #AITools #WebDevelopment #GoogleCloud #AICreation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 10
-    },
-    {
-      "title": "OpenAI continues on its ‘code red’ warpath with new image generation model",
-      "description": "OpenAI rolls out GPT Image 1.5 for ChatGPT, promising 4x faster generation, better instruction-following, and precise edits. The launch  escalates its rivalry with Google Gemini.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2025/12/16/openai-continues-on-its-code-red-warpath-with-new-image-generation-model/"
-        },
-        {
-          "name": "Openai",
-          "url": "https://openai.com/index/introducing-4o-image-generation/"
-        }
-      ],
-      "format": "documentary",
-      "subcategory": "framework",
-      "hooks": [
-        "AI's Image Revolution: OpenAI's Secret Weapon Revealed",
-        "How OpenAI is Rewriting Visual Creation Rules",
-        "The Image Generation Arms Race Explodes"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use cinematic B-roll of AI image generation process",
-            "Include side-by-side comparisons of image generations",
-            "Create dynamic motion graphics to illustrate technical improvements"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast tech-documentary aesthetic with deep blues and electric accents. Sleek, futuristic typography with sharp-edged sans-serif fonts. Dynamic split-screen compositions showing AI image generation. Incorporate glitch effects and subtle digital texture overlays. Use high-contrast imagery with a cool, technological color palette emphasizing blues, grays, and electric highlights."
-      },
-      "exampleOutline": [
-        "Opening Sequence: Dramatic reveal of AI image generation capabilities",
-        "Context: The current state of AI image technology",
-        "Deep Dive: OpenAI's GPT Image 1.5 breakthrough features",
-        "Comparative Analysis: How it compares to existing models",
-        "Future Implications: What this means for creative industries"
-      ],
-      "hashtags": "#AIImageGeneration #OpenAI #AITechnology #CreativeAI #ImageAI #TechInnovation #AIBreakthrough #MachineLearning #AIDesign #TechFuture",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 2
-    },
-    {
-      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't",
-      "description": "Figma designer–turned–product manager Nikolas Klein worked on building prototyping tools for seven years. Then AI changed the game.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/hard-problems-are-still-hard/"
-        }
-      ],
-      "format": "documentary",
-      "subcategory": "framework",
-      "hooks": [
-        "Design Tools Evolve, But Great Work Remains Constant",
-        "When AI Meets Design: A Transformative Journey",
-        "Seven Years, One Radical Design Shift"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use cinematic B-roll of design workspaces",
-            "Include personal interview-style moments with Nikolas Klein",
-            "Create dynamic screen recordings showing tool evolution"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Sleek, modern documentary aesthetic with high-contrast color palette. Muted teals and grays with occasional bright accent colors. Dynamic typography with subtle motion graphics. Blend of professional interview framing and fluid design tool screen captures. Aesthetic inspired by Apple documentary style: clean, intelligent, slightly minimalist."
-      },
-      "exampleOutline": [
-        "Section 1: Cold Open - Nikolas Klein's Design Journey",
-        "Section 2: The Pre-AI Design Landscape Context",
-        "Section 3: AI's Radical Transformation of Design Tools",
-        "Section 4: What Remains Unchanged in Great Design",
-        "Section 5: Future of Design: Tools vs. Creativity"
-      ],
-      "hashtags": "#AIDesign #DesignTech #ProductManagement #CreativeTech #FigmaDesign #DesignInnovation #AITools #CreativeProcess #DesignEvolution #TechTrends",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        }
-      ],
-      "format": "livestream",
-      "subcategory": "leadership",
-      "hooks": [
-        "AI Tools That Transform Figma Image Editing Forever",
-        "3 Mind-Blowing Figma Image Tricks You Can't Miss",
-        "Design Faster: Next-Level Figma Image Editing Revealed"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Enable live chat for real-time audience interaction",
-            "Prepare pre-submitted Q&A questions as backup",
-            "Use stream preview thumbnails with high-contrast design graphics"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-energy motion graphics with electric blue and deep charcoal color palette. Dynamic split-screen demonstrations highlighting tool transitions. Bold, geometric sans-serif typography with animated callouts. Clean, futuristic interface overlays showing precision editing in real-time. Incorporate subtle glitch/tech-inspired animation transitions between segments."
-      },
-      "exampleOutline": [
-        "Section 1: High-Energy Live Stream Introduction & Tool Preview",
-        "Section 2: Current Image Editing Pain Points in Design",
-        "Section 3: Deep Dive - 3 New AI Image Editing Tools",
-        "Section 4: Live Demonstration & Workflow Integration",
-        "Section 5: Open Q&A with Audience Interaction"
-      ],
-      "hashtags": "#FigmaDesign #AITools #CreativeWorkflow #DesignTips #ImageEditing #ProductivityHacks #UXDesign #TechInnovation #DesignTechnology #CreativeCoding",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7903783/pexels-photo-7903783.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 6
+      "hashtags": "#AIHealth #FitnessTech #PersonalCoach #AITutorial #HealthInnovation #TechWellness #AIAssistant #FitnessGoals #HealthTech #PersonalDevelopment",
+      "textureIndex": 11
     }
   ]
 }
