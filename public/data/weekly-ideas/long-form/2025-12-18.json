@@ -1,248 +1,211 @@
 {
   "type": "long-form",
-  "date": "2025-12-18T16:24:54.291Z",
+  "date": "2025-12-18T16:31:17.005Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Inside Kaggle's AI Agents intensive course with Google",
+      "description": "&lt;img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/kaggle_AI_intensive_hero.max-600x600.format-webp.webp\"&gt;Kaggle’s AI Agents Intensive with Google brought learners together in a no-cost course to build and deploy the next frontier of AI.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/products/page/3"
+          "name": "Google AI Blog",
+          "url": "https://blog.google/technology/developers/ai-agents-intensive-recap/"
         }
       ],
       "format": "documentary",
       "subcategory": "framework",
       "hooks": [
-        "Design Templates That Scale: The Hidden Marketing Playbook",
-        "How Pro Designers Create Bulletproof Brand Templates",
-        "Figma's Secret Weapon: Flexible Brand Systems Revealed"
+        "AI Agents: Google's Secret Learning Revolution",
+        "Inside Kaggle's Groundbreaking AI Training Experiment",
+        "How Google Transforms Learners into AI Pioneers"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use cinematic B-roll of designers collaborating",
-            "Include dynamic screen recordings with zoom/highlight effects",
-            "Create chapter markers for each template strategy tip"
+            "Use archival/behind-the-scenes Google AI footage as B-roll",
+            "Include expert interview snippets with subtle motion graphics",
+            "Create chapter markers highlighting key learning moments"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Modern design documentary aesthetic: High-contrast color palette (deep navy/bright teal), clean sans-serif typography, motion-tracked screen captures, interview-style talking head segments with design workspace backgrounds, subtle parallax graphic overlays showcasing template flexibility"
+        "description": "Dynamic blue-gray color palette with electric accent colors. Cinematic documentary framing with subtle technological overlay graphics. Clean sans-serif typography with technical data visualization elements. Smooth motion transitions suggesting technological progression. Reference aesthetic: WIRED documentary style meets modern tech storytelling"
       },
       "exampleOutline": [
-        "Opening Sequence: Designer workflow montage with narrative voiceover",
-        "The Marketing Challenge: Why Rigid Templates Fail",
-        "8 Strategic Template Design Techniques",
-        "Case Study: Successful Brand Template Transformation",
-        "Call-to-Action: Community Template Challenge"
+        "Opening: Dramatic montage of AI agent prototypes",
+        "Context: Explaining the AI agent learning challenge",
+        "Deep Dive: Kaggle's innovative training methodology",
+        "Case Studies: Breakthrough student projects",
+        "Future Vision: Implications for AI development"
       ],
-      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystem #CreativeStrategy #ProductDesign #AIDesign #TemplateDesign #MarketingDesign #DesignTips #CreativeTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
-    },
-    {
-      "title": "4P’s by Base Saigon",
-      "description": "What with it being the season to be jolly and all that, it feels almost contrarian to not be as positive as I usually am in covering projects for BP&O – after all, it’s about showcasing the very best in brand design and packaging. But in the spirit of the ‘O’ for ‘Opinion’, it’s tricky to be as nigh-on-unanimously gushing\nThe post 4P’s by Base Saigon appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/18/4ps-branding-by-base-design-saigon/"
-        },
-        {
-          "name": "Bpando",
-          "url": "https://bpando.org"
-        }
-      ],
-      "format": "tutorial",
-      "subcategory": "instructional",
-      "hooks": [
-        "Design Like a Pro: 4P's Brand Strategy Breakdown",
-        "Unlock Branding Secrets: Base Saigon's 4P Method",
-        "Transform Your Design Process in 5 Minutes"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use screen recording to show design process in real-time",
-            "Include picture-in-picture with designer commentary",
-            "Add chapter markers for easy navigation of tutorial steps"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, experimental design aesthetic with dynamic typography. Use vibrant color palette inspired by Base Saigon's branding. Incorporate motion graphics that break traditional grid layouts. Utilize high-contrast color combinations and asymmetrical compositions. Integrate graphic overlays that highlight key design principles and steps."
-      },
-      "exampleOutline": [
-        "Introduction: What are the 4P's of Branding?",
-        "Context: Design Challenges in Modern Branding",
-        "Step-by-Step: Breaking Down the 4P Methodology",
-        "Case Study: Base Saigon's Design Approach",
-        "Practical Takeaways and Implementation Strategy"
-      ],
-      "hashtags": "#BrandDesign #DesignTutorial #CreativeBranding #GraphicDesign #DesignStrategy #BrandIdentity #CreativeProcess #DesignTips #BrandingHacks #CreativeWorkflow",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "hashtags": "#AIAgents #GoogleAI #MachineLearning #TechEducation #AITraining #KaggleChallenge #AIInnovation #DeepLearning #TechDocumentary #AIFrontiers",
       "textureIndex": 7
     },
     {
-      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't",
-      "description": "Figma designer–turned–product manager Nikolas Klein worked on building prototyping tools for seven years. Then AI changed the game.",
+      "title": "Peripheral Labs taps into self-driving car sensors to bring sports fans right into the game",
+      "description": "The startup has raised a $3.6 million seed round led by Khosla Ventures.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/hard-problems-are-still-hard/"
-        },
-        {
-          "name": "Robotics",
-          "url": "https://robotics.ee/2025/10/page/6/?wtime=seek_to_second_number"
-        },
-        {
-          "name": "Petervanmiller",
-          "url": "https://petervanmiller.net/about/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/maker-stories/"
-        },
-        {
-          "name": "Podcasts",
-          "url": "https://podcasts.apple.com/ke/podcast/open-source-security/id1151833659"
-        },
-        {
-          "name": "Rfleury",
-          "url": "https://www.rfleury.com/feed"
-        }
-      ],
-      "format": "documentary",
-      "subcategory": "framework",
-      "hooks": [
-        "Tools Change. Design's Soul Remains.",
-        "When AI Transforms Design: One Story",
-        "Design's Heartbeat: Beyond Technological Shifts"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use cinematic b-roll of design workspaces",
-            "Include personal interview-style direct-to-camera segments",
-            "Incorporate subtle motion graphics to illustrate design evolution"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Muted tech-inspired color palette with deep grays and electric blue accents. Asymmetric composition emphasizing human narrative. Clean, modern sans-serif typography with subtle technical overlay graphics. Smooth, contemplative camera movements. Aesthetic references: Apple design documentaries, MKBHD production style."
-      },
-      "exampleOutline": [
-        "Opening: Personal narrative of design transformation",
-        "Context: Seven-year design tool journey pre-AI",
-        "Technological Shift: AI's radical design intervention",
-        "Human Element: What remains constant in design",
-        "Future Vision: Adapting without losing creative essence"
-      ],
-      "hashtags": "#AIDesign #DesignEvolution #CreativeTechnology #DesignTools #FigmaInnovation #ProductDesign #AICreativity #DesignFuture #TechInnovation #CreativeProcess",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 1
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/18/peripheral-labs-taps-into-self-driving-car-sensors-to-bring-sports-fans-right-into-the-game/"
         }
       ],
       "format": "livestream",
       "subcategory": "leadership",
       "hooks": [
-        "AI Just Transformed Image Editing in Figma Forever",
-        "3 Mind-Blowing Tools That Redefine Design Precision",
-        "Figma's New AI: Your Creative Workflow Supercharged"
+        "How AI sensors are revolutionizing sports fan experiences",
+        "Self-driving tech meets sports: A game-changing breakthrough",
+        "Inside Peripheral Labs' $3.6M vision for immersive sports"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Enable live chat for real-time audience interaction",
-            "Create interactive poll during stream about tool preferences",
-            "Use multi-camera setup to show screen and presenter simultaneously"
+            "Use live chat to engage audience during stream",
+            "Prepare pre-submitted Q&A questions to maintain flow",
+            "Enable live super chat for real-time audience interaction"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Dynamic, futuristic aesthetic with deep blue and electric teal color palette. Clean, high-contrast typography with subtle motion graphics. Split-screen design showing live tool demonstrations and presenter. Minimal but energetic visual language that feels cutting-edge and approachable."
+        "description": "Dynamic split-screen layout with technical graphics overlaying sports footage. High-contrast blue and electric orange color palette. Futuristic sans-serif typography with motion-tracked animated elements. Incorporate AR-style sensor visualization graphics. Clean, tech-forward aesthetic that blends sports and innovation visuals."
       },
       "exampleOutline": [
-        "Section 1: High-Energy Live Stream Introduction & Personal Connection",
-        "Section 2: Current Design Workflow Challenges",
-        "Section 3: Deep Dive into 3 New AI Image Editing Tools",
-        "Section 4: Live Demonstration & Real-World Use Cases",
-        "Section 5: Open Q&A and Community Engagement"
+        "Introduction: Peripheral Labs breakthrough announcement",
+        "Context: Current limitations in sports fan experiences",
+        "Technical Deep Dive: How self-driving sensors work in sports",
+        "Innovation Insights: Potential future applications",
+        "Live Q&A: Audience interaction and expert panel discussion"
       ],
-      "hashtags": "#AIDesign #FigmaTools #CreativeTech #DesignInnovation #AICreativity #ProductDesign #UXDesign #CreativeWorkflow #DesignTips #TechInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 5
+      "hashtags": "#AIinSports #TechInnovation #SelfDrivingTech #SportsTech #FanExperience #StartupInnovation #AITechnology #SportsInnovation #TechStartup #FutureOfSports",
+      "textureIndex": 2
     },
     {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
+      "title": "Luma releases a new AI model that lets users generate a video from a start  and end frame",
+      "description": "Luma AI's new model is available through the company's Dream Machine platform.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/18/luma-releases-a-new-ai-model-that-lets-users-generate-a-video-from-a-start-and-end-frame/"
         }
       ],
-      "format": "video",
-      "subcategory": "thought-leadership",
+      "format": "tutorial",
+      "subcategory": "instructional",
       "hooks": [
-        "How Figma redesigned typography from scratch",
-        "The secret font behind Figma's brand evolution",
-        "Designing a typeface that breaks all rules"
+        "Create Mind-Blowing Videos with Just Two Frames",
+        "AI Video Magic: Start and End, We Fill Between",
+        "Transform Images into Cinematic Stories Instantly"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use screen recordings of font design process",
-            "Include picture-in-picture of designer interviews",
-            "Create dynamic typography animations as B-roll"
+            "Use screen recording to show exact Dream Machine workflow",
+            "Include picture-in-picture reactions demonstrating video generation",
+            "Create chapter markers for each step of tutorial process"
           ]
         }
       ],
       "visualDirection": {
-        "rating": 8,
-        "description": "Bold, experimental typography-driven design. High-contrast color palette with Figma's signature blue. Kinetic motion graphics showcasing type transformation. Dynamic split-screen compositions highlighting design evolution. Typography becomes the visual narrative, with animated letterforms and design process visualizations."
+        "rating": 7,
+        "description": "High-contrast cyberpunk-inspired color palette with electric blues and deep purples. Dynamic split-screen compositions showing before/after video generations. Futuristic sans-serif typography with angular motion graphics. Animated frame transitions that simulate video generation process. Clean, technical aesthetic with subtle technological texture overlays."
       },
       "exampleOutline": [
-        "Opening: Dramatic typography reveal",
-        "Context: Figma's brand transformation challenges",
-        "Design Journey: From concept to final typeface",
-        "Technical Deep Dive: Font design principles",
-        "Future Vision: What custom typography means"
+        "Introduction: What is Dream Machine AI?",
+        "Understanding Start and End Frame Requirements",
+        "Step-by-Step Dream Machine Video Generation Process",
+        "Advanced Techniques and Pro Tips",
+        "Future of AI Video Creation Insights"
       ],
-      "hashtags": "#Figma #Typography #DesignSystem #BrandIdentity #CreativeProcess #FontDesign #ProductDesign #AdobeAlternative #UIDesign #CreativeTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
+      "hashtags": "#AIVIDEO #LumaAI #VideoGeneration #AICreativity #TechTutorial #CreativeAI #MachineLearning #VideoMagic #AIInnovation #ContentCreation",
+      "textureIndex": 2
+    },
+    {
+      "title": "Vibe-coding startup Lovable raises $330M at a $6.6B valuation",
+      "description": "Lovable has seen its valuation more than triple just five months after the company's last funding round in July.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/18/vibe-coding-startup-lovable-raises-330m-at-a-6-6b-valuation/"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "How Lovable Builds $6.6B Startup: Exact Blueprint",
+        "Vibe-Coding Success: 3x Valuation Hack Revealed",
+        "Startup Funding Secrets: Lovable's Playbook Exposed"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use screen recordings of actual startup pitch deck",
+            "Include picture-in-picture founder interview segments",
+            "Create clear chapter markers for tutorial progression"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy tech aesthetic with electric blue/charcoal gray gradient backgrounds, dynamic motion graphics showing funding progression, clean sans-serif typography, animated startup growth visualizations, Silicon Valley-inspired design language with subtle futuristic elements"
+      },
+      "exampleOutline": [
+        "Section 1: Startup Funding Landscape Overview",
+        "Section 2: Lovable's Unique Value Proposition",
+        "Section 3: Step-by-Step Fundraising Strategy",
+        "Section 4: Key Investor Attraction Techniques",
+        "Section 5: Action Steps for Founders"
+      ],
+      "hashtags": "#startupfunding #venturecapital #techstartup #entrepreneurship #aitech #fundingstrategies #businessgrowth #innovationhacks #techtrends #startupsuccess",
+      "textureIndex": 12
+    },
+    {
+      "title": "Amazon&#8217;s new Alexa+ feature adds conversational AI to Ring doorbells",
+      "description": "Amazon said that the feature uses the Ring doorbell's video descriptions to determine who the person in front the camera is based on their uniform, actions, and what they are holding.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/18/amazons-new-alexa-feature-adds-conversational-ai-to-ring-doorbells/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "AI Doorbell: When Your Ring Knows Who's There",
+        "Amazon's Creepy-Cool Alexa Upgrade for Ring",
+        "Future of Home Security: AI Meets Doorbell"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use picture-in-picture for live Ring doorbell demo",
+            "Include screen recordings of AI recognition process",
+            "Create chapter markers for easy navigation"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dynamic tech-futuristic aesthetic with deep blue/electric cyan color palette. Clean, angular motion graphics showing AI recognition overlay. High-contrast typography with technical data visualization. Blend of sleek tech UI and human-centric design elements. Subtle holographic/scanning effect for AI detection visualizations."
+      },
+      "exampleOutline": [
+        "Intro: Shocking AI Doorbell Technology Reveal",
+        "Context: Current Home Security Limitations",
+        "Deep Dive: How Amazon's Alexa+ Works",
+        "Technical Breakdown: AI Recognition Mechanics",
+        "Future Implications & Privacy Considerations"
+      ],
+      "hashtags": "#AmazonAI #SmartHome #RingDoorbell #AITechnology #HomeSecurityInnovation #TechNews #FutureOfAI #SmartTech #AIPrivacy #TechInnovation",
+      "textureIndex": 3
     }
   ]
 }

@@ -1,368 +1,331 @@
 {
   "type": "short-form",
-  "date": "2025-12-18T16:24:54.291Z",
+  "date": "2025-12-18T16:30:35.658Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Tech provider for NHS England confirms data breach",
+      "description": "U.K.-based healthcare tech provider DXS International said it discovered and contained a data breach on Sunday. A ransomware gang took credit for the breach.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/products/page/3"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/18/tech-provider-for-nhs-england-confirms-data-breach/"
         }
       ],
       "format": "reel",
       "subcategory": "reel",
       "hooks": [
-        "Design templates that won't break your brand's soul 🔥",
-        "Figma templates: Marketing's secret weapon revealed",
-        "Make templates that flex without falling apart 💥"
+        "Healthcare Data Hack: What You're Not Being Told",
+        "NHS Breach: The Cyber Nightmare Unfolding",
+        "Ransomware Hits Healthcare: Secrets Exposed"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick text transitions between template tips",
-            "Include screen recordings of actual Figma workflows",
-            "Add dynamic motion graphics behind text explanations"
+            "Use dramatic text overlay with red/black cybersecurity color palette",
+            "Create quick cuts between data breach imagery and NHS logo",
+            "Include animated glitch effects to simulate cyber intrusion"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "Create slide-by-slide template walkthrough",
-            "Use high-contrast mockups showing before/after states",
-            "Include minimal text with strong visual examples"
+            "First slide: Provocative headline with breach statistics",
+            "Use infographic-style slides explaining data breach mechanics",
+            "Final slide: Personal cybersecurity action steps"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with provocative design challenge statement",
-            "Use rapid-cut editing between template examples",
-            "Include verbal explanation synchronized with visual demo"
+            "Start with high-tension sound design mimicking system alert",
+            "Use screen recording/hacking simulation visuals",
+            "Rapid-fire information delivery with technical graphics"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Frame content as professional design strategy",
-            "Include more technical depth in explanation",
-            "Reference specific business impact of flexible templates"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-energy digital design aesthetic with neon-edged UI elements, dynamic motion graphics, quick transitions between template states, dark mode color palette with electric blue/purple accents, sans-serif typography with technical precision"
-      },
-      "exampleOutline": [
-        "Hook: Provocative design template challenge",
-        "Problem: Rigid brand templates kill creativity",
-        "Solution: 8 strategic template design approaches",
-        "Key Techniques: Editing guardrails, flexible layouts",
-        "Call-to-Action: Download template framework"
-      ],
-      "hashtags": "#DesignTemplates #FigmaDesign #BrandSystem #CreativeWorkflow #AIDesign #ProductDesign #DesignTips #UIUXDesign #CreativeTech #DesignStrategy",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7767791/pexels-photo-7767791.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 11
-    },
-    {
-      "title": "4P’s by Base Saigon",
-      "description": "What with it being the season to be jolly and all that, it feels almost contrarian to not be as positive as I usually am in covering projects for BP&O – after all, it’s about showcasing the very best in brand design and packaging. But in the spirit of the ‘O’ for ‘Opinion’, it’s tricky to be as nigh-on-unanimously gushing\nThe post 4P’s by Base Saigon appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/18/4ps-branding-by-base-design-saigon/"
-        },
-        {
-          "name": "Bpando",
-          "url": "https://bpando.org"
-        }
-      ],
-      "format": "carousel",
-      "subcategory": "carousel",
-      "hooks": [
-        "Design Secrets: 4 Principles That Transform Brands",
-        "How Top Designers Think: The 4P Framework",
-        "Crack the Code: 4 Principles of Killer Branding"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick transitions between 4P principles",
-            "Include dynamic motion graphics for each principle",
-            "Add text overlay with key takeaways"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "Design each slide as a standalone visual lesson",
-            "Use consistent color palette across slides",
-            "Create a visual progression that builds curiosity"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Compress 4P principles into rapid-fire insights",
-            "Use high-energy voiceover explaining principles",
-            "Include visual metaphors for each principle"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Add more context and professional insights",
-            "Include case study references",
-            "Use more formal, thought-leadership tone"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, experimental design with high-contrast color palette. Angular geometric compositions. Modern sans-serif typography with dynamic text animations. Gradient overlays. Minimalist icons representing each principle. Color scheme: deep navy, electric blue, bright coral, with white negative space. Incorporate subtle motion graphics that reveal each principle progressively."
-      },
-      "exampleOutline": [
-        "Slide 1: Attention-grabbing hook with provocative visual",
-        "Slide 2: Introduction to 4P Framework",
-        "Slide 3-6: Individual Principle Breakdown",
-        "Slide 7: Key Insights/Takeaways",
-        "Slide 8: Call-to-Action and Community Engagement"
-      ],
-      "hashtags": "#BrandDesign #CreativeStrategy #DesignPrinciples #BrandingTips #CreativeCommunity #DesignThinking #MarketingInsights #BrandIdentity #CreativeProcess #DesignEducation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7767791/pexels-photo-7767791.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 9
-    },
-    {
-      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't",
-      "description": "Figma designer–turned–product manager Nikolas Klein worked on building prototyping tools for seven years. Then AI changed the game.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/hard-problems-are-still-hard/"
-        },
-        {
-          "name": "Robotics",
-          "url": "https://robotics.ee/2025/10/page/6/?wtime=seek_to_second_number"
-        },
-        {
-          "name": "Petervanmiller",
-          "url": "https://petervanmiller.net/about/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/maker-stories/"
-        },
-        {
-          "name": "Podcasts",
-          "url": "https://podcasts.apple.com/ke/podcast/open-source-security/id1151833659"
-        },
-        {
-          "name": "Rfleury",
-          "url": "https://www.rfleury.com/feed"
-        }
-      ],
-      "format": "story",
-      "subcategory": "story",
-      "hooks": [
-        "AI changed design. But did it REALLY solve anything?",
-        "Design tools evolve. The work stays the same.",
-        "What happens when AI rewrites your entire workflow?"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use dynamic split-screen transitions between tool/human states",
-            "Integrate real designer audio voiceover for authenticity",
-            "Create visual metaphors showing tool transformation"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must have provocative visual contrast",
-            "Use before/after design tool graphics",
-            "Progressive reveal of insights across slides"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected visual pattern interrupt",
-            "Use rapid-cut design tool demonstration",
-            "Include subtle screen recording elements"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Add more technical depth and professional context",
-            "Include specific designer testimonial quotes",
-            "Highlight career progression implications"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast cyberpunk-inspired color palette (deep blues/electric oranges), glitch-style typography transitions, layered design tool interface animations, abstract geometric overlays representing technological evolution, minimalist but dynamic motion graphics"
-      },
-      "exampleOutline": [
-        "Section 1: Provocative AI Design Tool Intro",
-        "Section 2: Design Workflow Challenge Reveal",
-        "Section 3: Nikolas Klein's Transformation Story",
-        "Section 4: Universal Design Problem Insight",
-        "Section 5: Future of Creative Work Call-to-Action"
-      ],
-      "hashtags": "#AIDesign #CreativeTech #DesignTools #FutureOfWork #ProductDesign #TechInnovation #CreativeAI #DesignWorkflow #ProductManagement #InnovationStrategy",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        }
-      ],
-      "format": "story",
-      "subcategory": "story",
-      "hooks": [
-        "AI Image Editing: Figma Just Leveled Up 🚀",
-        "3 Tools That Will Transform Your Design Workflow",
-        "Design Precision Meets AI Magic in Figma"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick screen recordings demonstrating actual tool functionality",
-            "Include text overlay explaining each tool's unique capability",
-            "Create rapid transitions between tool demonstrations"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Dramatic before/after visual comparison",
-            "Use square 1:1 format with clean, high-contrast graphics",
-            "Each slide focuses on one specific tool's unique feature"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected visual pattern interrupt",
-            "Use designer POV perspective for authenticity",
-            "Include quick tutorial-style screen capture moments"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame tools in professional workflow context",
-            "Include brief technical explanation of AI methodology",
-            "Use more formal, insight-driven narrative approach"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast cyber-minimal aesthetic with electric blue/white color palette. Dynamic motion graphics showing tool transformations. Clean, sans-serif typography with subtle glitch/tech overlay effects. Incorporate abstract geometric shapes representing precision and AI technology."
-      },
-      "exampleOutline": [
-        "Section 1: Attention-grabbing tool reveal moment",
-        "Section 2: Current design workflow pain points",
-        "Section 3: Detailed tool capabilities demonstration",
-        "Section 4: Workflow efficiency breakthrough insight",
-        "Section 5: Call-to-explore in Figma"
-      ],
-      "hashtags": "#FigmaDesign #AITools #CreativeTech #DesignInnovation #ProductivityHack #AIDesign #CreativeWorkflow #FigmaUpdate #DesignTips #TechInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8014528/pexels-photo-8014528.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
-    },
-    {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
-        }
-      ],
-      "format": "quick-image",
-      "subcategory": "quick-image",
-      "hooks": [
-        "Fonts that tell a story: Inside Figma's design revolution",
-        "When designers become type designers 🔤✨",
-        "The secret language of brand typography revealed"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick typography transition animations",
-            "Include behind-the-scenes sketching clips",
-            "Highlight type design process in 3-5 fast cuts"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Bold typography reveal",
-            "Include design process screenshots",
-            "Final slide: Call-to-explore Figma Sans"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected type animation",
-            "Use voiceover explaining design choices",
-            "Include rapid visual transitions between type iterations"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame as professional design evolution story",
-            "Include technical design decision insights",
-            "Highlight collaborative design process"
+            "More detailed technical explanation of breach mechanics",
+            "Include expert commentary quote graphic",
+            "Professional tone with data visualization"
           ]
         }
       ],
       "visualDirection": {
         "rating": 8,
-        "description": "Bold, experimental typography-driven design. High-contrast color palette with digital glitch effects. Dynamic motion graphics showing type transformation. Modern, tech-forward aesthetic blending analog sketch and digital precision. Incorporate geometric sans-serif elements with unexpected color breaks."
+        "description": "High-contrast cybersecurity aesthetic: dark background with neon digital elements, glitch animations, technical overlay graphics, red/black/electric blue color palette, fragmented typography suggesting system disruption"
       },
       "exampleOutline": [
-        "Hook: Provocative typography statement",
-        "Problem: Design limitations in current fonts",
-        "Solution: Figma Sans creation process",
-        "Key Insight: Typography as brand storytelling",
-        "CTA: Explore Figma's design resources"
+        "Hook: Dramatic cyber breach reveal",
+        "Context: NHS technology vulnerability",
+        "Core Content: Breach details and implications",
+        "Key Insight: Systemic cybersecurity risks",
+        "CTA: Protect your personal data"
       ],
-      "hashtags": "#DesignInnovation #Typography #FigmaDesign #CreativeTech #BrandIdentity #GraphicDesign #AIDesign #CreativeProcess #TypeDesign #ProductDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 9
+      "hashtags": "#Cybersecurity #DataBreach #NHSHack #TechSecurity #CyberCrime #HealthTech #DataPrivacy #Ransomware #CyberRisk #TechnologyNews",
+      "textureIndex": 1
+    },
+    {
+      "title": "Peripheral Labs taps into self-driving car sensors to bring sports fans right into the game",
+      "description": "The startup has raised a $3.6 million seed round led by Khosla Ventures.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/18/peripheral-labs-taps-into-self-driving-car-sensors-to-bring-sports-fans-right-into-the-game/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "Self-Driving Tech Turns Sports into Immersive Experience 🚗🏈",
+        "Sensors That Put You in the Game's Front Row",
+        "Tech Revolution: Watching Sports Will Never Be the Same"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use split-screen animation showing car sensors and sports view",
+            "Create quick transitions between tech and game perspectives",
+            "Include dynamic text overlays highlighting key innovation points"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Provocative comparison of traditional vs new viewing",
+            "Include graphic breakdown of sensor technology",
+            "Final slide: Clear call-to-action and startup information"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Open with unexpected visual metaphor connecting cars and sports",
+            "Use rapid-fire visual transitions",
+            "Include quick investor credibility moment (Khosla Ventures logo)"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as technology innovation with professional tone",
+            "Include startup funding details prominently",
+            "Use more technical language and industry context"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast cyberpunk-inspired palette with electric blues and neon accents. Dynamic diagonal compositions suggesting motion. Futuristic sans-serif typography. Animated sensor-like graphic overlays. Blend of technical schematics and sports imagery with glitch/tech filter effects."
+      },
+      "exampleOutline": [
+        "Provocative Visual Hook: Sensor/Sports Mashup",
+        "Problem: Limited Sports Viewing Experience",
+        "Peripheral Labs' Innovative Solution",
+        "How Self-Driving Tech Transforms Viewing",
+        "Call-to-Learn More About Future of Sports Tech"
+      ],
+      "hashtags": "#AITech #SportsTech #InnovationUnleashed #FutureOfViewing #SelfDrivingInnovation #TechStartup #SportsInnovation #AIRevolution #TechFrontiers #KhoslaVentures",
+      "textureIndex": 10
+    },
+    {
+      "title": "No keynotes, no BS — why this year&#8217;s best tech talks happened over cocktails at StrictlyVC",
+      "description": "Impactful talks and connections happen at StrictlyVC. Read the full 2025 recap and join the 2026 waitlist to get access to the lowest ticket prices.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/18/no-keynotes-no-bs-why-this-years-best-tech-talks-happened-over-cocktails-at-strictlyvc/"
+        }
+      ],
+      "format": "story",
+      "subcategory": "story",
+      "hooks": [
+        "Tech talks that actually matter (no keynote boredom)",
+        "Where real innovation happens: beyond the stage",
+        "Cocktails > Conferences: The StrictlyVC insider secret"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use fast-paced jump cuts between interview snippets",
+            "Add dynamic text overlays highlighting key quotes",
+            "Include subtle background motion graphics"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have provocative visual/stat",
+            "Use consistent color gradient across slides",
+            "Progressive reveal of insights across 6-8 slides"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected visual/soundbite",
+            "Use vertical interview/reaction shots",
+            "Include rapid-fire text transitions"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as professional networking insight",
+            "Use more formal, data-driven language",
+            "Include executive perspective quotes"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold tech-noir aesthetic with deep charcoal backgrounds, electric blue/cyan accents, glitch-style typography, semi-transparent layered graphics suggesting insider/exclusive content, minimal but high-contrast design with angular composition"
+      },
+      "exampleOutline": [
+        "Opening: Provocative statement about traditional conferences",
+        "Context: Why StrictlyVC is different",
+        "Key Moments: Top 3 unexpected conversations",
+        "Insider Insights: What really happened",
+        "Future/CTA: 2026 Waitlist Signup"
+      ],
+      "hashtags": "#techinsider #innovationtalks #strictlyvc #techconference #startupculture #venturecapital #networkingtips #techtrends #futureoftech #eventinsights",
+      "textureIndex": 6
+    },
+    {
+      "title": "Rivian rolls out new &#8216;Universal Hands-Free&#8217; driving feature",
+      "description": "The driver assistance software is available on Rivian's for Gen 2 R1 cars and works on 3.5 million miles of North American roads. But it doesn't slow or stop for traffic lights or stop signs.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/18/rivian-rolls-out-new-universal-hands-free-driving-feature/"
+        }
+      ],
+      "format": "carousel",
+      "subcategory": "carousel",
+      "hooks": [
+        "Hands-Free Driving: The Future is Now 🚗✨",
+        "Rivian's Game-Changing Autopilot Just Dropped 🤯",
+        "Driving Revolution: No Hands, No Problem 🌐"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick cuts between Rivian interior and road scenes",
+            "Include dynamic motion graphics showing hands-free interface",
+            "Add text overlays highlighting key feature differences"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Dramatic hook visual with bold typography",
+            "Use infographic-style slides to explain technical details",
+            "Final slide: Clear call-to-action and brand positioning"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Condense carousel content into 60-second narrative arc",
+            "Use high-energy transitions between feature explanations",
+            "Include subtle product branding throughout"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add more technical depth and industry context",
+            "Use more professional, data-driven visual language",
+            "Emphasize innovation and technological breakthrough"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Futuristic automotive design aesthetic with high-contrast electric blue and silver color palette. Dynamic diagonal compositions, transparent tech overlays, sleek sans-serif typography. Incorporate subtle holographic and motion design elements to suggest cutting-edge technology."
+      },
+      "exampleOutline": [
+        "Slide 1: Attention-grabbing hook visual with key feature headline",
+        "Slide 2: Brief explanation of hands-free technology",
+        "Slide 3: Coverage map of 3.5 million miles",
+        "Slide 4: Technical limitations (no traffic light/stop sign interaction)",
+        "Slide 5: Future potential and brand vision CTA"
+      ],
+      "hashtags": "#RivianTech #AutonomousDriving #FutureOfTransport #ElectricVehicles #TechInnovation #AIDriverAssist #SmartCars #MobileTech #AutoPilot #FutureTravel",
+      "textureIndex": 8
+    },
+    {
+      "title": "Apple opens up its App Store to competition in Japan",
+      "description": "Epic Games CEO says Fortnite won't return to Japan, though, because the new rules still require high fees.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/18/apple-opens-up-its-app-store-to-competition-in-japan/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "Apple's App Store Showdown: Japan Changes Everything",
+        "Epic vs Apple: The Japan Remix",
+        "App Store Drama: Japan Drops the Hammer"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use split-screen animation comparing old vs new App Store rules",
+            "Include quick text overlays with key statistics",
+            "Create a dynamic transition between Apple and Epic logos"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Provocative headline with Apple/Epic logos",
+            "Use infographic-style slides to break down key changes",
+            "Final slide with clear takeaway or call-to-action"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected visual metaphor for market disruption",
+            "Use fast-paced editing to maintain viewer attention",
+            "Include quick cuts between news headlines and graphics"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "More serious, data-driven visual approach",
+            "Include professional context about market implications",
+            "Use clean, authoritative design language"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast color palette with tech-inspired blues and grays, dynamic geometric composition, bold sans-serif typography, motion graphics showing competitive tension between Apple and Epic logos, minimalist tech-news aesthetic with sharp-edged design elements"
+      },
+      "exampleOutline": [
+        "Opening Hook: Dramatic visual representing App Store disruption",
+        "Context: Japan's regulatory intervention",
+        "Core Content: Specific rule changes",
+        "Key Insight: Future of digital marketplaces",
+        "Call-to-Action: Explore implications"
+      ],
+      "hashtags": "#AppStore #AppleTech #JapanTech #EpicGames #TechRegulation #DigitalMarkets #TechPolicy #AppEconomy #InnovationLaw #TechNews",
+      "textureIndex": 8
     }
   ]
 }
