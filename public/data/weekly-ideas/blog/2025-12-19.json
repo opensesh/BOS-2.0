@@ -1,338 +1,291 @@
 {
   "type": "blog",
-  "date": "2025-12-19T16:22:01.664Z",
+  "date": "2025-12-19T16:28:52.801Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Meta is developing a new image and video model for a 2026 release, report says",
+      "description": "The company is working on an image and video model and new text-based model, which aids with coding.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/issue/221"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/19/meta-is-developing-a-new-image-and-video-model-for-a-2026-release-report-says/"
         }
       ],
       "format": "thread",
       "subcategory": "explanatory",
       "hooks": [
-        "Design templates that scale without breaking brand rules",
-        "Figma Buzz: Your secret weapon for flexible branding",
-        "How top designers create foolproof brand templates"
+        "Meta's AI Game-Changer: 2026 Image & Video Revolution 🚀",
+        "Breaking: Meta's Secret AI Models Set to Redefine Creativity",
+        "AI Insider: Meta's Next-Gen Visual & Coding Models Leaked"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Create companion deep-dive post expanding thread insights",
-            "Include behind-the-scenes screenshots of template creation process",
-            "Offer free template download as subscriber incentive"
+            "Use thread as teaser for full deep-dive newsletter",
+            "Create companion graphic showing Meta's AI evolution",
+            "Offer exclusive behind-the-scenes insights not in thread"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Add comprehensive SEO meta description matching thread content",
-            "Include detailed case study examples not in thread",
-            "Create infographic summarizing key template design principles"
+            "Expand thread into long-form SEO-optimized article",
+            "Include technical diagrams explaining model capabilities",
+            "Add expert commentary and industry context"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Add professional context about template design's business impact",
-            "Include data/statistics about brand consistency ROI",
-            "Highlight enterprise-level template design strategies"
+            "Frame thread as professional AI industry analysis",
+            "Include potential enterprise implementation strategies",
+            "Add credibility with industry expert quotes/perspectives"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold geometric compositions with high-contrast color palette (navy/coral). Clean sans-serif typography with dynamic angular elements. Animated transitions between thread slides. Subtle motion graphics highlighting template flexibility. Aesthetic references: Swiss design, Bauhaus principles, modern data visualization"
+        "description": "Bold, futuristic design with electric blue and gradient accents. Dynamic, fragmented typography suggesting AI complexity. Geometric motion graphics showing model transformation. Cyberpunk-inspired visual aesthetic with clean, technical overlay. Incorporate abstract neural network visualizations."
       },
       "exampleOutline": [
-        "Thread Opener: Bold statement about template design challenge",
-        "Problem: Brand inconsistency & design bottlenecks",
-        "8 Tactical Tips for Scalable Templates",
-        "Key Transformation: From rigid to flexible design",
-        "Call-to-Action: Free template framework download"
+        "Thread Opener: Shocking Meta AI Revelation 🤯",
+        "Context: Why This Matters for Tech/Creativity",
+        "Deep Dive: Model Capabilities & Breakthrough",
+        "Industry Implications & Future Predictions",
+        "Call-to-Action: Join the AI Revolution"
       ],
-      "hashtags": "#FigmaDesign #BrandTemplates #CreativeWorkflow #DesignSystem #AIDesign #ProductDesign #UXDesign #DesignStrategy #CreativeTech #BrandingTips",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 10
+      "hashtags": "#MetaAI #AIInnovation #FutureOfCreativity #TechNews #AIModels #MachineLearning #ArtificialIntelligence #InnovationTech #AIResearch #TechTrends",
+      "textureIndex": 6
     },
     {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
+      "title": "40 of our most helpful AI tips from 2025",
+      "description": "&lt;img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI_Tips_hero.max-600x600.format-webp.webp\"&gt;Learn more about the AI tips and tools Google shared in 2025.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/solutions/ai-photo-editing-app-builder/"
-        }
-      ],
-      "format": "listicle",
-      "subcategory": "explanatory",
-      "hooks": [
-        "3 AI Tools That Revolutionize Figma Image Editing",
-        "Precision Editing Just Got Insanely Faster",
-        "Design Workflows Transformed: Figma's New AI Magic"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Include real-time screen recordings of tools in action",
-            "Add personal commentary on workflow improvements",
-            "Create interactive poll about reader's current editing challenges"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Use SEO-friendly headers for each tool description",
-            "Include comparative screenshots demonstrating before/after",
-            "Link to deeper technical explanations of AI mechanisms"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Emphasize professional productivity gains",
-            "Include data on time/efficiency improvements",
-            "Tag Figma and design thought leaders in post"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast cyberpunk-inspired color palette with electric blues and neon accents. Dynamic, asymmetrical layouts showcasing tool interfaces. Animated GIFs demonstrating precise editing moments. Typography with sharp, technical sans-serif fonts. Incorporate subtle holographic/glitch effects to highlight AI transformation."
-      },
-      "exampleOutline": [
-        "Introduction: The Future of Design is Here",
-        "The Current Editing Pain Points",
-        "Tool 1: Precision Object Removal",
-        "Tool 2: Intelligent Image Extension",
-        "Tool 3: Context-Aware Editing Features",
-        "How These Tools Transform Creative Workflows",
-        "Call-to-Action: Start Your AI Design Journey"
-      ],
-      "hashtags": "#FigmaAI #DesignTechnology #AICreativity #ImageEditing #CreativeTools #ProductivityHacks #DesignInnovation #AIDesign #CreativeTech #FigmaUpdates",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 11
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Forrester",
-          "url": "https://www.forrester.com/blogs/figma-config-2025-in-an-ai-world-design-matters-more-than-ever/"
-        },
-        {
-          "name": "7span",
-          "url": "https://7span.com/blog/figma-buzz"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/"
-        },
-        {
-          "name": "Designsystems",
-          "url": "https://designsystems.surf/articles/one-stack-to-rule-them-all-figma-s-2025-power-suite-and-what-it-means-for-your-workflow"
-        }
-      ],
-      "format": "case-study",
-      "subcategory": "case-study-deep-dive",
-      "hooks": [
-        "Figma Buzz: 3 Features Transforming Design Workflows",
-        "How Designers Win with Figma's New Tools",
-        "Unlocking Creative Potential: Figma Buzz Secrets"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Include real-time experiment screenshots of new features",
-            "Use interactive GIFs to demonstrate workflow changes",
-            "Add personal commentary on feature impact"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Include detailed step-by-step implementation walkthrough",
-            "Add comparative charts showing workflow efficiency gains",
-            "Embed expert quotes from design leaders"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Highlight professional productivity metrics",
-            "Include enterprise-level implementation strategies",
-            "Use data visualizations to demonstrate ROI"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, dynamic design with electric blue and charcoal color palette. Isometric product illustrations, dynamic grid layouts, motion-enhanced infographics showing workflow transformations. Clean Brutalist typography with sharp, angular design system references."
-      },
-      "exampleOutline": [
-        "Opening: Provocative Feature Introduction",
-        "Problem: Current Design Workflow Limitations",
-        "Solution: Detailed Figma Buzz Feature Breakdown",
-        "Impact Analysis: Productivity and Creative Potential",
-        "Future Implications and Strategic Recommendations"
-      ],
-      "hashtags": "#FigmaBuzz #DesignInnovation #AIDesign #CreativeTech #WorkflowOptimization #ProductivityHacks #DesignSystem #CreativeTools #FigmaUpdates #DigitalDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 11
-    },
-    {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
-        }
-      ],
-      "format": "article",
-      "subcategory": "visionary",
-      "hooks": [
-        "Typography: Where Design Gets Its Voice",
-        "Beyond Pixels: Crafting Figma's Brand Language",
-        "When Fonts Tell More Than Words"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Include interactive type specimen demonstrations",
-            "Use inline audio/video of design process",
-            "Create subscriber-exclusive behind-the-scenes sketches"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Optimize with SEO-friendly headings about type design",
-            "Include professional designer quote pullouts",
-            "Add technical design process infographics"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Highlight professional development insights",
-            "Include data about brand transformation impact",
-            "Tag Figma designers and brand leaders"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold typographic exploration with dynamic grid layouts, high-contrast color transitions, animated type specimens, Swiss design influenced with contemporary digital minimalism, embedded motion graphics showing font evolution"
-      },
-      "exampleOutline": [
-        "The Genesis of Brand Expression",
-        "Why Typography Matters in Product Identity",
-        "Designing Figma Sans: Technical Journey",
-        "Design Philosophy Behind Each Letterform",
-        "Future of Brand Communication"
-      ],
-      "hashtags": "#TypeDesign #BrandIdentity #DesignSystems #FigmaDesign #ProductBranding #CreativeProcess #VisualLanguage #AIDesign #Typography #BrandStory",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5438813/pexels-photo-5438813.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
-    },
-    {
-      "title": "4P’s by Base Saigon",
-      "description": "What with it being the season to be jolly and all that, it feels almost contrarian to not be as positive as I usually am in covering projects for BP&O – after all, it’s about showcasing the very best in brand design and packaging. But in the spirit of the ‘O’ for ‘Opinion’, it’s tricky to be as nigh-on-unanimously gushing\nThe post 4P’s by Base Saigon appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/18/4ps-branding-by-base-design-saigon/"
+          "name": "Google AI Blog",
+          "url": "https://blog.google/technology/ai/ai-tips-2025/"
         }
       ],
       "format": "guide",
       "subcategory": "instructional",
       "hooks": [
-        "Decode Design: Base Saigon's 4P Revolution",
-        "Beyond Branding: The 4P Strategic Masterclass",
-        "Design Transformation: Unveiling Base Saigon's Framework"
+        "40 AI Tips That Will Transform Your Work Forever",
+        "The Future of Work: AI Secrets Unveiled",
+        "Breakthrough AI Strategies You Can't Ignore in 2025"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Use interactive inline annotations to explain complex concepts",
-            "Include real-time design experiment screenshots",
-            "Create a reader poll about framework applicability"
+            "Use interactive tooltips to expand on complex AI tips",
+            "Include real-time reader poll about most interesting tip",
+            "Add personal commentary between tips to maintain narrative flow"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Optimize headers for SEO with keyword-rich titles",
-            "Embed design process infographics",
-            "Include expert quotes to boost credibility"
+            "Optimize headers for SEO with precise AI-related keywords",
+            "Include downloadable infographic summarizing key tips",
+            "Add expert quotes to validate comprehensive approach"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Add professional case study screenshots",
-            "Include quantitative impact metrics",
-            "Tag relevant design and strategy thought leaders"
+            "Frame tips as professional development insights",
+            "Include data visualization of AI impact",
+            "Add direct LinkedIn connection/networking call-to-action"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, dynamic visual language with geometric typography, vibrant teal and coral color palette, isometric design elements, motion-activated hover states, minimalist yet energetic Swiss design inspiration with contemporary digital overlay"
+        "description": "High-contrast futuristic color palette (deep blues, electric teals, bright accents). Dynamic geometric layouts with subtle holographic overlays. Sans-serif typography with sharp, clean lines. Animated transition effects between tip sections. Subtle motion graphics illustrating AI concepts."
       },
       "exampleOutline": [
-        "Introduction: The Design Strategy Paradigm Shift",
-        "Understanding the 4P Methodology Context",
-        "Deep Dive: Comprehensive 4P Framework Breakdown",
-        "Case Studies: Real-World 4P Implementations",
-        "Future of Strategic Design Thinking"
+        "Introduction: The AI Revolution Landscape",
+        "Context: Why These 40 Tips Matter",
+        "Comprehensive Tip Breakdown (Grouped by Theme)",
+        "Strategic Implementation Framework",
+        "Future Predictions and Next Steps"
       ],
-      "hashtags": "#DesignStrategy #BrandTransformation #CreativeFramework #DesignInnovation #StrategicDesign #BaseDesign #BrandingTips #CreativeProblemSolving #DesignThinking #BusinessInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 10
+      "hashtags": "#AIInnovation #FutureOfWork #TechTips #AIStrategy #WorkplaceTechnology #InnovationInsights #AITrends #ProfessionalDevelopment #TechLeadership #AITools",
+      "textureIndex": 11
+    },
+    {
+      "title": "5 ways AI agents will transform the way we work in 2026",
+      "description": "&lt;img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Blog_Header_xCoMYQ5.max-600x600.format-webp.webp\"&gt;Today, Google Cloud dropped its 2026 AI Agent Trends Report.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Google AI Blog",
+          "url": "https://blog.google/products/google-cloud/ai-business-trends-report-2026/"
+        }
+      ],
+      "format": "case-study",
+      "subcategory": "case-study-deep-dive",
+      "hooks": [
+        "AI Agents: The Workforce Revolution Starts Now",
+        "Work Transformed: 5 AI Agent Breakthrough Predictions",
+        "Future of Work: AI's Radical Workplace Takeover"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Include real-time experiment screenshots of AI agent interactions",
+            "Use interactive poll to engage readers on AI predictions",
+            "Share personal workflow transformation anecdotes"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Include data visualizations from Google Cloud report",
+            "Add SEO-optimized subheadings for readability",
+            "Embed expert quote breakouts for credibility"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Target executive/leadership audience with strategic insights",
+            "Include professional case study examples from enterprise adoption",
+            "Add credibility with industry statistics and research citations"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dynamic futuristic color palette (electric blue, deep purple, metallic silver), isometric geometric compositions representing AI workflow interactions, modern sans-serif typography with subtle motion graphics, holographic overlay effects suggesting technological transformation"
+      },
+      "exampleOutline": [
+        "Introduction: The AI Agent Workplace Revolution",
+        "Current Workplace Limitations & Challenges",
+        "5 Transformative AI Agent Predictions for 2026",
+        "Case Studies: Real-World Implementation Insights",
+        "Call-to-Action: Preparing Your Organization"
+      ],
+      "hashtags": "#AIWorkforce #FutureOfWork #AIAgents #WorkplaceTechnology #GoogleCloud #AIInnovation #BusinessTransformation #TechTrends #WorkplaceAI #DigitalTransformation",
+      "textureIndex": 8
+    },
+    {
+      "title": "OpenAI is reportedly trying to raise $100B at an $830B valuation",
+      "description": "The ChatGPT maker is aiming to raise the funding by the end of the first quarter in 2026, and the company may ask sovereign wealth funds to invest in the round.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/19/openai-is-reportedly-trying-to-raise-100b-at-an-830b-valuation/"
+        }
+      ],
+      "format": "article",
+      "subcategory": "visionary",
+      "hooks": [
+        "OpenAI's $100B Moonshot: The Future Reshaping Investment",
+        "Trillion-Dollar AI: Inside OpenAI's Massive Funding Play",
+        "When AI Meets Sovereign Wealth: A $830B Gamble"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Include real-time commentary and personal industry insights",
+            "Embed interactive visualizations of funding trends",
+            "Use personal narrative to contextualize the funding news"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Deep dive into historical tech funding comparisons",
+            "Include expert quote annotations and credibility markers",
+            "Optimize for SEO with strategic keyword integration"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame article for professional investor/tech executive audience",
+            "Include data-driven charts and professional analysis",
+            "Highlight potential enterprise and economic implications"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, futuristic design with dynamic gradient backgrounds, translucent data visualization overlays, minimalist tech-inspired typography, subtle motion graphics suggesting technological acceleration, color palette of deep blues, electric teals, and metallic silvers"
+      },
+      "exampleOutline": [
+        "Section 1: Provocative Opening - The $100B AI Inflection Point",
+        "Section 2: Contextualizing OpenAI's Unprecedented Valuation Landscape",
+        "Section 3: Sovereign Wealth Funds: The New Tech Investors",
+        "Section 4: Strategic Implications of Massive AI Investment",
+        "Section 5: Future Forecast and Call to Engagement"
+      ],
+      "hashtags": "#OpenAI #AIInvestment #TechFunding #ArtificialIntelligence #InvestmentTrends #AIEconomy #TechInnovation #SovereignWealthFunds #FutureOfTech #AIStartups",
+      "textureIndex": 5
+    },
+    {
+      "title": "ChatGPT launches an app store, lets developers know it&#8217;s open for business",
+      "description": "OpenAI is looking to populate its flagship chatbot with a host of new user experiences.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/18/chatgpt-launches-an-app-store-lets-developers-know-its-open-for-business/"
+        }
+      ],
+      "format": "listicle",
+      "subcategory": "explanatory",
+      "hooks": [
+        "5 Mind-Blowing Ways ChatGPT's App Store Changes Everything",
+        "OpenAI's New Playground: Developers' Ultimate Opportunity",
+        "The ChatGPT Ecosystem Just Got Massive Upgrade"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use personal experiment/early access angle",
+            "Include real-time developer reaction screenshots",
+            "Make listicle feel like insider scoop"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Include SEO-friendly subheadings for each list item",
+            "Add technical credibility with developer quotes",
+            "Create clear visual hierarchy with numbered sections"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame as professional opportunity/industry shift",
+            "Include potential revenue/monetization insights",
+            "Use data-driven language and statistics"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech-futuristic design with glitch/holographic overlays, dynamic grid layout, bold sans-serif typography in electric blue/deep purple palette, subtle motion graphics highlighting each listicle item, clean geometric icons representing app ecosystem"
+      },
+      "exampleOutline": [
+        "Introduction: ChatGPT's Game-Changing App Store Moment",
+        "The Ecosystem Transformation Context",
+        "5 Key Developer Opportunities/Features",
+        "Potential Industry Impact Analysis",
+        "Future Prediction and Call-to-Action"
+      ],
+      "hashtags": "#ChatGPT #OpenAI #AIInnovation #TechDevelopment #AIAppStore #AIEcosystem #TechTrends #DeveloperOpportunity #AIStartups #InnovationEconomy",
+      "textureIndex": 0
     }
   ]
 }
