@@ -1,368 +1,331 @@
 {
   "type": "short-form",
-  "date": "2025-12-20T16:19:36.949Z",
+  "date": "2025-12-20T16:24:29.294Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Sequoia partner spreads debunked Brown shooting theory, testing new leadership",
+      "description": "The newest episode raises questions about whether Sequoia's new leadership -- managing partners Alfred Lin and Pat Grady, who took over last month -- can or will rein in Maguire's social media activity.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/issue/221"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/19/sequoia-partner-spreads-debunked-brown-shooting-theory-testing-new-leadership/"
         }
       ],
       "format": "quick-image",
       "subcategory": "quick-image",
       "hooks": [
-        "Design Templates That Don't Break Your Brand's Soul 💥",
-        "Figma Hack: Make Templates That Flex, Never Snap 🔧",
-        "Brand Guidelines Without The Creativity Handcuffs 🚀"
+        "Sequoia's Social Media Firestorm: Leadership Under Fire",
+        "Tech Giant's Controversial Post Sparks Outrage",
+        "When VC Partners Cross the Line"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use rapid-fire text transitions matching template edit moments",
-            "Include quick visual before/after brand template demos",
-            "Add dynamic cursor/editing overlay to show template flexibility"
+            "Use high-contrast text overlay to highlight key controversy",
+            "Create a fast-paced visual timeline of the incident",
+            "Include subtle motion graphics to maintain viewer engagement"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: provocative template breakdown graphic",
-            "Use progressive reveal of template editing capabilities",
-            "Include annotated design system screenshots"
+            "First slide: Provocative headline with bold typography",
+            "Use each slide to break down different aspects of the controversy",
+            "Final slide: Thought-provoking conclusion or call to reflection"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with unexpected template transformation moment",
-            "Use screen recording with high-energy editing",
-            "Include quick voiceover explaining template philosophy"
+            "Open with a shocking sound bite or visual",
+            "Use quick cuts to maintain high-energy pacing",
+            "Incorporate text animations to emphasize key points"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Frame as professional design systems strategy",
-            "Include enterprise-level template architecture insights",
-            "Use more technical, detailed visual explanations"
+            "Frame content as a professional leadership case study",
+            "Use more formal, analytical tone",
+            "Include potential leadership learning points"
           ]
         }
       ],
       "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast cyberpunk-inspired color palette with glitch/tech overlay effects, sharp geometric typography, dynamic grid-based compositions featuring translucent design system layers, integrate subtle motion graphics showing template transformation"
+        "rating": 8,
+        "description": "High-contrast color palette with deep reds and grays. Experimental typography with overlapping text layers. Dynamic composition using geometric shapes to create tension. Incorporate glitch effects to symbolize disruption. Minimalist design with sharp, angular elements to represent conflict and sharp decision-making."
       },
       "exampleOutline": [
-        "Hook: Provocative Template Design Challenge",
-        "Problem: Rigid Brand Guidelines Kill Creativity",
-        "Solution: 8 Strategic Template Design Principles",
-        "Key Technique: Flexible Design Systems",
-        "Call-to-Action: Download Template Framework"
+        "Section 1: Provocative Headline/Visual Hook",
+        "Section 2: Brief Controversy Context",
+        "Section 3: Leadership Accountability Highlight",
+        "Section 4: Broader Industry Implications",
+        "Section 5: Reflective Call to Action"
       ],
-      "hashtags": "#DesignSystems #FigmaDesign #BrandTemplates #CreativeStrategy #AIDesign #ProductDesign #DesignTips #BrandIdentity #TemplateDesign #CreativeTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 12
+      "hashtags": "#VCDrama #TechLeadership #SocialMediaControversy #SequoiaCapital #IndustryEthics #StartupCulture #VentureCapital #TechAccountability #LeadershipFails #InnovationEthics",
+      "textureIndex": 1
     },
     {
-      "title": "OpenAI adds new teen safety rules to ChatGPT as lawmakers weigh AI standards for minors",
-      "description": "OpenAI updated its guidelines for how its AI models should behave with users under 18, and published new AI literacy resources for teens and parents. Still, questions remain about how well policies translate into practice.",
+      "title": "Ex-Splunk execs&#8217; startup Resolve AI hits $1 billion valuation with Series A",
+      "description": "The round was led by Lightspeed Venture Partners, according to people familiar with the deal.",
       "starred": false,
       "sources": [
         {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2025/12/19/openai-adds-new-teen-safety-rules-to-models-as-lawmakers-weigh-ai-standards-for-minors/"
-        },
-        {
-          "name": "Cdn",
-          "url": "https://cdn.openai.com/pdf/OAI%20Teen%20Safety%20Blueprint.pdf"
-        },
-        {
-          "name": "Openai",
-          "url": "https://openai.com/index/teen-safety-freedom-and-privacy/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/19/ex-splunk-execs-startup-resolve-ai-hits-1-billion-valuation-with-series-a/"
         }
       ],
-      "format": "reel",
-      "subcategory": "reel",
+      "format": "story",
+      "subcategory": "story",
       "hooks": [
-        "AI's Teen Safety Revolution: What Parents Need to Know",
-        "ChatGPT's New Rules: Protecting Gen Z Online",
-        "Behind OpenAI's Teen Safety Playbook"
+        "AI Startup Breaks Billion-Dollar Barrier 🚀",
+        "From Splunk to $1B: The AI Revolution",
+        "Tech Founders' Crazy Valuation Hack Revealed"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick text overlays to highlight key safety points",
-            "Include dynamic motion graphics to illustrate teen AI interactions",
-            "Keep pace fast - max 3-5 second per concept"
+            "Use dynamic motion graphics to visualize $1B milestone",
+            "Create quick cuts between founder interviews and data visualizations",
+            "Include subtle animated percentage/growth indicators"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide must have provocative teen AI safety statistic",
-            "Use infographic-style slides with clean, bold typography",
-            "Final slide should include clear call-to-action/resource link"
+            "First slide must have shocking valuation graphic",
+            "Use infographic-style slides showing startup journey",
+            "Final slide includes clear call-to-engage"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with unexpected/pattern-interrupt visual about AI safety",
-            "Use professional but energetic presenter style",
-            "Include subtitles for accessibility and silent viewing"
+            "Start with unexpected startup funding statistic",
+            "Use text overlays to highlight key numbers",
+            "Include founder soundbite or quick interview clip"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Frame as thought leadership on responsible AI development",
-            "Include expert quote or research citation",
-            "Use more formal, authoritative tone than other platforms"
+            "Add more detailed context about venture capital landscape",
+            "Include professional insights about AI startup trends",
+            "Use more formal, data-driven storytelling approach"
           ]
         }
       ],
       "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast cyberpunk-inspired palette with neon blues/purples, glitch-style typography transitions, abstract digital safety iconography, motion-tracked text animations suggesting digital protection, minimalist but dynamic compositions that feel both technical and approachable"
+        "rating": 8,
+        "description": "High-contrast tech-futuristic aesthetic with electric blue/deep purple gradients, geometric data visualization elements, floating holographic numbers, sleek sans-serif typography, minimal but dynamic motion design with subtle 3D depth"
       },
       "exampleOutline": [
-        "Provocative Hook: Surprising Teen AI Safety Statistic",
-        "Quick Context: Why Teen Online Safety Matters",
-        "OpenAI's New Approach: 3 Key Protection Strategies",
-        "Real-World Implications: What This Means for Families",
-        "Call-to-Action: Learn More About Responsible AI"
+        "Section 1: Shocking Valuation Reveal",
+        "Section 2: Founders' Background Context",
+        "Section 3: AI Technology Breakthrough",
+        "Section 4: Funding Journey Insights",
+        "Section 5: Future Potential & Invitation"
       ],
-      "hashtags": "#AITeen #AIEducation #AIEthics #TechSafety #GenerationZ #AILiteracy #ParentingTips #TechInnovation #DigitalProtection #AIResponsibility",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "hashtags": "#AIStartup #VentureCapital #TechInnovation #StartupSuccess #AIRevolution #FundingMilestone #TechFounders #InnovationEconomy #AITech #BusinessGrowth",
       "textureIndex": 3
     },
     {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
+      "title": "Rocket Lab wins another defense-related space contract",
+      "description": "The $816 million contract follows a separate $515 million — both awarded by the U.S. Space Development Agency.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/solutions/ai-photo-editing-app-builder/"
-        }
-      ],
-      "format": "story",
-      "subcategory": "story",
-      "hooks": [
-        "AI Editing Magic: Figma Just Leveled Up 🚀",
-        "Design Faster: 3 New Figma Tools Revealed",
-        "Precision Meets AI: Figma's Latest Update"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick screen recordings showing tool transitions",
-            "Include text overlays explaining each tool's function",
-            "Create a fast-paced, dynamic visual narrative"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Dramatic before/after image comparison",
-            "Use consistent color palette across slides",
-            "Include concise, punchy text explanations per slide"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with a provocative design challenge",
-            "Demonstrate tool capabilities in first 3 seconds",
-            "Use professional voiceover with energetic tone"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame tools as professional productivity enhancers",
-            "Include data/efficiency metrics",
-            "Use more technical, detailed explanation"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-energy digital aesthetic with electric blue and deep purple gradients, futuristic motion graphics, sans-serif typography with slight technical angles, animated UI elements showcasing tool transformations, minimal but dynamic composition emphasizing technological innovation"
-      },
-      "exampleOutline": [
-        "Section 1: Attention-grabbing design problem/challenge",
-        "Section 2: Introduce Figma's new AI tools",
-        "Section 3: Demonstrate each tool's unique capability",
-        "Section 4: Quick workflow transformation insight",
-        "Section 5: Call-to-action to explore tools"
-      ],
-      "hashtags": "#FigmaAI #DesignTech #CreativeTools #AIDesign #ProductivityHack #UXDesign #TechInnovation #DesignTips #AIToolkit #CreativeCoding",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 2
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        }
-      ],
-      "format": "story",
-      "subcategory": "story",
-      "hooks": [
-        "Design Faster: Figma Buzz's Game-Changing Features Revealed",
-        "Unlock Marketing Magic with Figma's New Tools",
-        "3 Hacks to Supercharge Your Design Workflow"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick transitions between feature highlights",
-            "Include dynamic screen recordings of Figma Buzz",
-            "Add text overlays to explain complex features quickly"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must visually tease all three features",
-            "Use consistent color coding for each feature slide",
-            "Include a 'swipe up to learn more' graphic"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with a provocative design challenge",
-            "Use rapid-fire feature demonstration clips",
-            "End with clear value proposition call-to-action"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame features as professional productivity enhancers",
-            "Include brief case study or efficiency metric",
-            "Use more technical, detailed language"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, tech-forward aesthetic with electric blue and charcoal gray color palette. Dynamic motion graphics showing feature transitions. Clean, sans-serif typography with slight futuristic edge. Incorporate glitch/digital overlay effects to suggest cutting-edge technology. Use split-screen and rapid transition animations."
-      },
-      "exampleOutline": [
-        "Section 1: Attention-grabbing design workflow problem",
-        "Section 2: Introduce Figma Buzz as solution",
-        "Section 3: First feature deep dive (marketing templates)",
-        "Section 4: Second feature breakdown (design system integration)",
-        "Section 5: Final feature reveal (video trimming capabilities)"
-      ],
-      "hashtags": "#FigmaBuzz #DesignTips #CreativeTools #AIDesign #MarketingTemplates #ProductivityHacks #DesignWorkflow #CreativeTech #UIUXDesign #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 11
-    },
-    {
-      "title": "Hardware’s brutal week: iRobot, Luminar, and Rad Power go bankrupt",
-      "description": "The hardware world had a brutal week, with iRobot, Luminar, and Rad Power Bikes all filing for bankruptcy.  Each company faces its own mix of tariff pressures, supply chain issues, and shifting markets, but together they tell a larger story about the challenges of building physical products in an era of global trade tensions and […]",
-      "starred": false,
-      "sources": [
-        {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/podcast/hardwares-brutal-week-irobot-luminar-and-rad-power-go-bankrupt/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/19/rocket-lab-wins-another-defense-related-space-contract/"
         }
       ],
       "format": "carousel",
       "subcategory": "carousel",
       "hooks": [
-        "Hardware Apocalypse: 3 Startups Crumble Overnight",
-        "When Tech Dreams Hit Reality's Wall",
-        "Startup Graveyard: The Hardware Bloodbath"
+        "Space Contracts: Rocket Lab's Billion-Dollar Defense Leap",
+        "How Rocket Lab Just Scored $816M in Space",
+        "Defense Tech Revolution: Rocket Lab's Stellar Win"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use rapid-fire text transitions between company logos",
-            "Include dynamic financial/bankruptcy graphics",
-            "Create a dramatic voiceover explaining market shifts"
+            "Use dynamic motion graphics showing rocket/contract growth",
+            "Include quick animated stats about contract value",
+            "Create a fast-paced narrative arc in 30 seconds"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Provocative headline with striking visual",
-            "Use infographic-style slides with clean data visualization",
-            "Final slide includes actionable takeaway/insight"
+            "First slide must have high-contrast visual impact",
+            "Use infographic-style slides to break down contract details",
+            "Ensure each slide tells a micro-story about space tech"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Condensed 60-second narrative arc of startup challenges",
-            "Use motion graphics to illustrate financial pressures",
-            "Include quick expert commentary/soundbite"
+            "Add voiceover explaining contract significance",
+            "Use screen transitions between space/tech visuals",
+            "Include quick text overlays for key information"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "More analytical, data-driven approach to storytelling",
-            "Include potential industry implications",
-            "Frame as thought leadership perspective"
+            "Add more technical context about defense contract",
+            "Include professional insights about space industry trends",
+            "Use more data-driven, analytical visual approach"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Dark moody palette with electric blue/red accents, fragmented geometric layouts suggesting disruption, sans-serif typography with sharp angles, animated financial decline graphs, minimalist tech-industrial aesthetic with glitch effects"
+        "description": "Bold, futuristic color palette with deep blues and electric teals. Geometric typography with angular rocket/contract visualizations. Dynamic motion graphics showing contract growth. Blend of technical infographic and artistic abstraction. Clean, high-contrast design with subtle gradient backgrounds."
       },
       "exampleOutline": [
-        "Slide 1: Provocative headline + shocking visual",
-        "Slide 2: Quick company breakdown (iRobot)",
-        "Slide 3: Luminar's market challenges",
-        "Slide 4: Rad Power Bikes context",
-        "Slide 5: Broader industry implications/insights"
+        "Section 1: Eye-catching title/hook slide with rocket graphic",
+        "Section 2: Contract value visualization",
+        "Section 3: Rocket Lab company context",
+        "Section 4: Defense sector implications",
+        "Section 5: Future potential/call to explore"
       ],
-      "hashtags": "#StartupFail #TechCrisis #HardwareTech #InnovationChallenges #TechLayoffs #StartupEconomy #AITech #IndustryTrends #VentureCapital #TechDisruption",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8014542/pexels-photo-8014542.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 2
+      "hashtags": "#RocketLab #SpaceTech #DefenseContracts #SpaceIndustry #Innovation #Technology #Aerospace #StartupSuccess #FutureOfSpace #TechNews",
+      "textureIndex": 7
+    },
+    {
+      "title": "Building venture-backable companies in heavily regulated spaces",
+      "description": "This week on Build Mode, Startup Battlefield editor Isabelle Johannessen spoke to two founders who are working to make progress in industries ripe for disruption, despite the regulatory headaches that might have deterred many other people.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/19/building-venture-backable-companies-in-heavily-regulated-spaces/"
+        }
+      ],
+      "format": "story",
+      "subcategory": "story",
+      "hooks": [
+        "Cracking the Code: Startups Winning in Regulation Hell",
+        "Venture Gold: Thriving Where Others Fear Regulation",
+        "Disruption Playbook: Navigating Regulatory Landmines Successfully"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick-cut transitions between regulatory challenge and startup solution",
+            "Include animated graphics highlighting regulatory barriers",
+            "Use founder interview clips with dynamic text overlays"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "Each slide represents a different regulatory challenge/strategy",
+            "Use infographic-style design with clean, bold typography",
+            "Include data points and visual metaphors on each slide"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with provocative statistic about regulatory complexity",
+            "Use founder soundbites as primary narrative driver",
+            "Include rapid-fire motion graphics explaining key concepts"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame content as thought leadership piece",
+            "Use more technical language and detailed insights",
+            "Include professional case study references"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast color palette with electric blue and deep charcoal. Geometric, angular composition suggesting complexity. Bold sans-serif typography with technical overlay graphics. Dynamic motion design suggesting breakthrough/disruption. Futuristic tech-startup aesthetic blending data visualization with human narrative."
+      },
+      "exampleOutline": [
+        "Section 1: Hook - Regulatory Landscape Challenge",
+        "Section 2: Why Most Startups Fail in Regulated Spaces",
+        "Section 3: Case Study: Successful Regulatory Navigation Strategies",
+        "Section 4: Key Founder Insights and Tactical Approaches",
+        "Section 5: Call-to-Action: Reimagine Regulatory Constraints"
+      ],
+      "hashtags": "#StartupDisruption #RegulatoryInnovation #VentureCapital #TechStartups #EntrepreneurshipStrategy #IndustryTransformation #AIRegulation #BusinessInnovation #ScaleupTips #FutureOfBusiness",
+      "textureIndex": 10
+    },
+    {
+      "title": "Former Patagonia CEO Rose Marcario resigns from Rivian&#8217;s board",
+      "description": "Marcario joined the board in 2021, and will maintain her position as chair overseeing the Rivian Foundation, which made its first grants last year.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/19/former-patagonia-ceo-rose-marcario-resigns-from-rivians-board/"
+        }
+      ],
+      "format": "reel",
+      "subcategory": "reel",
+      "hooks": [
+        "Corporate Leadership Shift: What Really Happens Behind Boardrooms?",
+        "Why Top Executives Exit Suddenly",
+        "Inside Silicon Valley's Latest Power Move"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick cuts between headlines and executive headshots",
+            "Add dynamic text overlays revealing key transition details",
+            "Create energetic transitions between information segments"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Provocative headline with Marcario's image",
+            "Use infographic-style slides explaining board dynamics",
+            "Final slide: Personal reflection/leadership lesson"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected visual metaphor about leadership change",
+            "Use professional B-roll of corporate environments",
+            "Include subtle motion graphics explaining resignation context"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame story as professional development insight",
+            "Use more data-driven visual approach",
+            "Include subtle industry credibility markers"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast corporate blue/gray palette with electric accent colors. Dynamic typography with angular transitions. Modern minimalist design with subtle tech-inspired motion graphics. Clean, professional aesthetic with unexpected visual interrupts."
+      },
+      "exampleOutline": [
+        "Hook: Dramatic leadership transition announcement",
+        "Context: Marcario's background at Patagonia and Rivian",
+        "Core Details: Board resignation specifics",
+        "Insight: What this means for tech leadership",
+        "Call-to-Action: Follow leadership evolution"
+      ],
+      "hashtags": "#Leadership #CorporateChange #TechIndustry #BoardRoom #ExecutiveTransition #BusinessStrategy #Innovation #RivianFoundation #CareerInsights #ProfessionalDevelopment",
+      "textureIndex": 10
     }
   ]
 }

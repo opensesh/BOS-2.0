@@ -1,72 +1,234 @@
 {
   "type": "blog",
-  "date": "2025-12-20T16:19:36.949Z",
+  "date": "2025-12-20T16:26:02.827Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Ex-Splunk execs&#8217; startup Resolve AI hits $1 billion valuation with Series A",
+      "description": "The round was led by Lightspeed Venture Partners, according to people familiar with the deal.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/19/ex-splunk-execs-startup-resolve-ai-hits-1-billion-valuation-with-series-a/"
+        }
+      ],
+      "format": "case-study",
+      "subcategory": "case-study-deep-dive",
+      "hooks": [
+        "AI Startups: The $1B Valuation Playbook Revealed",
+        "How Ex-Splunk Leaders Cracked the Funding Code",
+        "Resolve AI: Turning Enterprise Insights into Billions"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use real-time annotations to break down funding journey",
+            "Include inline screenshots of key investor communications",
+            "Create interactive funding timeline graphic"
+          ]
         },
         {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/issue/221"
+          "platform": "Medium",
+          "tips": [
+            "Deep dive into technical innovation behind valuation",
+            "Include data visualizations of startup growth metrics",
+            "Optimize with comprehensive SEO keywords around AI funding"
+          ]
         },
         {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Highlight professional network insights from founding team",
+            "Include quotes from industry leaders about startup potential",
+            "Provide actionable takeaways for aspiring enterprise AI founders"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-forward design with dynamic infographics. Dark mode color palette (deep blues, electric teals). Isometric illustrations of startup journey. Modern sans-serif typography with high-contrast geometric elements. Animated funding milestone transitions."
+      },
+      "exampleOutline": [
+        "Section 1: Breakthrough Moment - Resolve AI's Origin Story",
+        "Section 2: Enterprise AI Market Landscape Challenge",
+        "Section 3: Strategic Pivots and Technical Innovation",
+        "Section 4: Lightspeed's Investment Thesis Decoded",
+        "Section 5: Future Predictions and Call to Action"
+      ],
+      "hashtags": "#AIStartups #VentureCapital #TechInnovation #EnterpiseAI #StartupFunding #SplunkAlumni #AITechnology #InvestmentStrategy #TechLeadership #InnovationEconomy",
+      "textureIndex": 1
+    },
+    {
+      "title": "Cursor continues acquisition spree with Graphite deal",
+      "description": "Graphite is an AI code review assistant that was last valued at $290 million.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/19/cursor-continues-acquisition-spree-with-graphite-deal/"
+        }
+      ],
+      "format": "listicle",
+      "subcategory": "explanatory",
+      "hooks": [
+        "5 Mind-Blowing Secrets Behind Cursor's AI Acquisition Spree",
+        "Why Graphite's $290M Valuation Matters for Tech Innovators",
+        "Decoding Cursor's Strategic AI Code Review Power Move"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use numbered subheadings to break down listicle points visually",
+            "Include personal anecdote or real-world observation about AI acquisitions",
+            "Add interactive elements like inline polls or quick thought experiments"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Optimize headline for SEO with clear numeric promise",
+            "Include data visualizations comparing Cursor and Graphite metrics",
+            "Add expert quotes or industry insights between list items"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame listicle as professional development/strategic insights",
+            "Use corporate-friendly language highlighting business implications",
+            "Include potential career or investment learning opportunities"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dynamic tech-futurist aesthetic with geometric code-like overlays, deep navy and electric blue color palette, fractured grid layouts, subtle motion graphics suggesting algorithmic movement, typography with sharp angular edges suggesting precision and innovation"
+      },
+      "exampleOutline": [
+        "Section 1: Provocative Opening - Why This Acquisition Matters",
+        "Section 2: Context of AI Code Review Market",
+        "Section 3: 5 Key Insights About Cursor's Strategic Move",
+        "Section 4: Future Implications for Tech Ecosystem",
+        "Section 5: Call-to-Action: How Professionals Can Leverage This Trend"
+      ],
+      "hashtags": "#AIAcquisition #TechInnovation #CursorAI #SoftwareDevelopment #AITrends #CodeReview #StartupStrategy #TechInvestment #AITechnology #InnovationEconomy",
+      "textureIndex": 1
+    },
+    {
+      "title": "Yann LeCun confirms his new &#8216;world model&#8217; startup, reportedly seeks $5B+ valuation",
+      "description": "Renowned AI scientist Yann LeCun confirmed on Thursday the worst-kept secret in the tech world: that he had indeed launched a new startup. Although he did say he will not be running the new company as its CEO.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/19/yann-lecun-confirms-his-new-world-model-startup-reportedly-seeks-5b-valuation/"
         }
       ],
       "format": "thread",
       "subcategory": "explanatory",
       "hooks": [
-        "Design templates that scale without losing your brand's soul 🚀",
-        "Figma Buzz: The secret to flexible brand design systems",
-        "How to create templates that marketing teams actually love"
+        "AI Legend Yann LeCun's Secret $5B Startup Revealed 🚀",
+        "Inside LeCun's Groundbreaking World Model Venture 🧠",
+        "Tech's Biggest AI Bet: LeCun's Next-Level Startup"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
             "Use thread as teaser for full deep-dive newsletter",
-            "Include behind-the-scenes screenshot of template creation",
-            "Link to expanded version with more technical details"
+            "Include behind-the-scenes research notes",
+            "Offer exclusive subscriber insights about the startup"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Expand thread into long-form SEO-optimized article",
-            "Add data visualizations of template flexibility metrics",
-            "Include expert quotes from design leaders"
+            "Expand thread into comprehensive long-form analysis",
+            "Include academic and technical context",
+            "Add expert commentary and industry implications"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Frame thread as professional design strategy guide",
-            "Add corporate case study examples",
-            "Include performance metrics from template implementations"
+            "Frame thread as professional industry trend analysis",
+            "Include potential investment and career implications",
+            "Highlight networking opportunities around AI innovation"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast geometric design with modular grid overlay. Electric blue and charcoal color palette. Dynamic typography that suggests flexibility. Animated transitions between template states. Clean, tech-forward aesthetic with subtle motion graphics demonstrating template adaptability."
+        "description": "High-contrast tech-noir aesthetic with glitch-inspired graphic overlays, deep navy and electric blue color palette, futuristic sans-serif typography, subtle parallax motion graphics, geometric data visualization elements"
       },
       "exampleOutline": [
-        "Thread Opener: Bold statement about template design challenge",
-        "Problem: Why most design systems fail",
-        "8 tactical tips for creating flexible templates",
-        "Real-world case study/example",
-        "Call-to-action & community invitation"
+        "Thread Opener: Shocking AI Startup Announcement 🔥",
+        "Who is Yann LeCun? Quick Expert Background",
+        "World Model Concept: What Makes This Different",
+        "Startup Details: $5B Valuation & Key Insights",
+        "Future of AI: What This Means for Tech"
       ],
-      "hashtags": "#DesignSystems #FigmaTips #BrandDesign #AIDesign #CreativeStrategy #ProductDesign #DesignTemplates #WorkflowOptimization #CreativeTech #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 6
+      "hashtags": "#AIInnovation #YannLeCun #AIStartup #TechRevolution #MachineLearning #DeepLearning #AIResearch #FutureOfAI #TechInnovation #WorldModel",
+      "textureIndex": 1
+    },
+    {
+      "title": "Hardware&#8217;s brutal week: iRobot, Luminar, and Rad Power go bankrupt",
+      "description": "The hardware world had a brutal week, with iRobot, Luminar, and Rad Power Bikes all filing for bankruptcy.&#160; Each company faces its own mix of tariff pressures, supply chain issues, and shifting markets, but together they tell a larger story about the challenges of building physical products in an era of global trade tensions and [&#8230;]",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/hardwares-brutal-week-irobot-luminar-and-rad-power-go-bankrupt/"
+        }
+      ],
+      "format": "article",
+      "subcategory": "visionary",
+      "hooks": [
+        "Hardware's Apocalypse: When Innovation Meets Bankruptcy",
+        "3 Tech Titans' Fatal Business Mistakes Revealed",
+        "The Day Hardware Dreams Died"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Include real-time data visualizations of bankruptcy trends",
+            "Add interactive timeline of company failures",
+            "Use personal anecdotes about startup challenges"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Deep-dive into root cause analysis",
+            "Include expert quotes and industry perspectives",
+            "Optimize with SEO-friendly subheadings"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Focus on professional lessons and strategic insights",
+            "Include executive-level analysis of market shifts",
+            "Highlight actionable takeaways for tech entrepreneurs"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dark, moody color palette with deep blues and grays. Fractured, deconstructed typography suggesting breakdown. Infographic-style data visualizations with sharp geometric overlays. Incorporate subtle glitch effects to represent technological disruption. Reference visual styles of WIRED and MIT Technology Review."
+      },
+      "exampleOutline": [
+        "The Hardware Apocalypse: Introduction",
+        "Market Context: Global Tech Challenges",
+        "Company Autopsies: iRobot, Luminar, Rad Power",
+        "Systemic Failures in Hardware Innovation",
+        "Future of Hardware: Survival Strategies"
+      ],
+      "hashtags": "#TechFail #HardwareInnovation #StartupLessons #TechBankruptcy #InnovationChallenges #AITech #ProductDesign #EntrepreneurLife #TechTrends #BusinessStrategy",
+      "textureIndex": 5
     },
     {
       "title": "OpenAI adds new teen safety rules to ChatGPT as lawmakers weigh AI standards for minors",
@@ -76,253 +238,54 @@
         {
           "name": "TechCrunch AI",
           "url": "https://techcrunch.com/2025/12/19/openai-adds-new-teen-safety-rules-to-models-as-lawmakers-weigh-ai-standards-for-minors/"
-        },
-        {
-          "name": "Cdn",
-          "url": "https://cdn.openai.com/pdf/OAI%20Teen%20Safety%20Blueprint.pdf"
-        },
-        {
-          "name": "Openai",
-          "url": "https://openai.com/index/teen-safety-freedom-and-privacy/"
-        }
-      ],
-      "format": "case-study",
-      "subcategory": "case-study-deep-dive",
-      "hooks": [
-        "AI Safety: The Teen Digital Frontier Reimagined",
-        "OpenAI's Bold Move: Protecting Young Minds Online",
-        "When AI Meets Youth: A Critical Safety Experiment"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Use interactive polls about teen AI experiences",
-            "Include personal narrative/experiment elements",
-            "Create real-time annotation of policy changes"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Deep-dive into technical policy nuances",
-            "Include expert quotes and research citations",
-            "Create clear, scannable infographic summaries"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Frame as professional policy analysis",
-            "Include industry impact statistics",
-            "Target policy makers and tech executives"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Futuristic digital safety aesthetic. Neon blue/purple gradient overlay. Geometric typography representing digital protection. Animated data flow visualizations. Silhouette of teen with digital shield motif. Clean, technical, slightly dystopian design language."
-      },
-      "exampleOutline": [
-        "Introduction: The Rising AI-Youth Intersection",
-        "Current Digital Landscape for Teens",
-        "OpenAI's New Safety Framework Breakdown",
-        "Comparative Analysis with Existing Policies",
-        "Future Implications and Recommendations"
-      ],
-      "hashtags": "#AISafety #TeenTech #DigitalProtection #AIEthics #YouthInnovation #TechPolicy #AIEducation #OnlineSafety #FutureOfLearning #ResponsibleAI",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 1
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/solutions/ai-photo-editing-app-builder/"
-        }
-      ],
-      "format": "article",
-      "subcategory": "visionary",
-      "hooks": [
-        "AI Image Editing Revolution: Figma's New Creative Superpowers",
-        "Design Faster, Edit Smarter: Figma's AI Breakthrough",
-        "Precision Meets Possibility: Figma's Image Editing Transforms"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Include real-time screen recordings of tool usage",
-            "Add personal experimentation narrative with the new tools",
-            "Create interactive annotations showing before/after editing"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Optimize with SEO-friendly headers and subheaders",
-            "Include comparative screenshots of traditional vs. AI editing",
-            "Add expert quotes from design community about tool impact"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Highlight professional productivity gains",
-            "Include data-driven insights on time/efficiency savings",
-            "Showcase potential enterprise/workflow implications"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Dynamic, high-contrast design with futuristic gradient overlays. Clean, sans-serif typography with bold callouts. Animated screen transitions showing editing transformations. Minimalist color palette with electric blue and deep charcoal accents. Incorporate subtle motion graphics demonstrating AI editing precision."
-      },
-      "exampleOutline": [
-        "Section 1: The Creative Bottleneck in Design",
-        "Section 2: How AI is Transforming Image Editing Workflows",
-        "Section 3: Deep Dive into Figma's Three New Tools",
-        "Section 4: Practical Applications and Future Implications",
-        "Section 5: How Designers Can Immediately Leverage These Tools"
-      ],
-      "hashtags": "#FigmaAI #DesignTechnology #CreativeTools #AIDesign #ImageEditing #ProductivityHack #DesignInnovation #CreativeTech #AIWorkflow #DesignTools",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 8
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
         }
       ],
       "format": "guide",
       "subcategory": "instructional",
       "hooks": [
-        "Unlock Figma's Hidden Power: 3 Game-Changing Features",
-        "Design Faster, Smarter: Figma Buzz's Secret Weapons",
-        "Transform Your Workflow: Figma's Ultimate Momentum Toolkit"
+        "AI Safety Revolution: Protecting Teens in the Digital Age",
+        "Teens, AI, and Safety: What You Need to Know",
+        "OpenAI's New Playbook for Teenage Digital Wellness"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Use real-time screen recordings of feature demos",
-            "Include personal experimentation notes and workflow insights",
-            "Create interactive poll about reader's current design challenges"
+            "Include personal narrative about AI interactions with younger users",
+            "Use interactive polls to engage reader participation",
+            "Create a downloadable teen AI safety checklist as bonus content"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Optimize with SEO-friendly headings about Figma features",
-            "Include comparative screenshots showing before/after workflows",
-            "Add expert commentary from design professionals"
+            "Optimize with SEO-friendly headers and clear section breaks",
+            "Include expert quotes and academic research citations",
+            "Add inline graphics explaining complex AI safety concepts"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Highlight professional productivity gains quantitatively",
-            "Include testimonials from design team leaders",
-            "Connect features to broader design industry trends"
+            "Frame as professional insights for parents and educators",
+            "Include data visualizations about teen AI usage",
+            "Highlight potential workplace/educational implications of AI safety"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, dynamic visual design with high-contrast color palette (electric blue, deep charcoal, white). Isometric product illustrations showing feature interactions. Dynamic typography with angular cuts. Subtle motion graphics demonstrating workflow transitions. Clean, tech-forward aesthetic with experimental edge."
+        "description": "High-contrast digital palette with electric blues and soft teals, dynamic geometric infographics, modern sans-serif typography, subtle motion animations highlighting key statistics, minimalist iconography representing teen digital interactions"
       },
       "exampleOutline": [
-        "Introduction: The Design Acceleration Challenge",
-        "Current Workflow Bottlenecks in Creative Production",
-        "Deep Dive: Figma Buzz's Three Revolutionary Features",
-        "Practical Implementation Strategies for Design Teams",
-        "Future of Collaborative Design Workflows"
+        "Introduction: The New Digital Landscape for Teens",
+        "Understanding AI Risks and Opportunities for Minors",
+        "OpenAI's Updated Safety Guidelines: A Deep Dive",
+        "Practical Strategies for Parents and Educators",
+        "Future of AI Safety: Emerging Trends and Recommendations"
       ],
-      "hashtags": "#FigmaDesign #AICreativity #DesignTech #WorkflowOptimization #CreativeTools #DesignInnovation #ProductivityHacks #DesignSystem #MarketingDesign #CreativeTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 9
-    },
-    {
-      "title": "Hardware’s brutal week: iRobot, Luminar, and Rad Power go bankrupt",
-      "description": "The hardware world had a brutal week, with iRobot, Luminar, and Rad Power Bikes all filing for bankruptcy.  Each company faces its own mix of tariff pressures, supply chain issues, and shifting markets, but together they tell a larger story about the challenges of building physical products in an era of global trade tensions and […]",
-      "starred": false,
-      "sources": [
-        {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/podcast/hardwares-brutal-week-irobot-luminar-and-rad-power-go-bankrupt/"
-        }
-      ],
-      "format": "listicle",
-      "subcategory": "explanatory",
-      "hooks": [
-        "3 Hardware Startups That Crumbled This Week",
-        "When Tech Dreams Hit Reality: Hardware's Bankruptcy Boom",
-        "The Dark Side of Innovation: Startup Collapse Explained"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Use personal tone like you're sharing insider insights",
-            "Include real-time commentary on breaking industry trends",
-            "Add interactive poll about reader's hardware startup predictions"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Optimize SEO with clear, keyword-rich subheadings",
-            "Include data visualizations of startup failure trends",
-            "Link to deeper industry analysis resources"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Frame as professional industry analysis, not gossip",
-            "Include quotes from industry experts",
-            "Provide actionable insights for entrepreneurs"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, high-contrast infographic style with deconstructed tech imagery. Use dark navy and electric orange color palette. Incorporate glitch/breakdown visual metaphors. Typography should feel technical but approachable - sharp sans-serif with slight angular edges. Animate transition between company sections with digital 'breakdown' effect."
-      },
-      "exampleOutline": [
-        "Section 1: Dramatic Opening - The Week Hardware Died",
-        "Section 2: Market Context & Systemic Challenges",
-        "Section 3: Deep Dive into Each Company's Collapse",
-        "Section 4: Broader Implications for Hardware Innovation",
-        "Section 5: Future Prediction & Call to Action"
-      ],
-      "hashtags": "#HardwareTech #StartupFail #TechInnovation #EntrepreneurLife #AITechnology #IndustryTrends #TechCrisis #InnovationChallenges #StartupEcosystem #TechInsights",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 2
+      "hashtags": "#AISafety #TeenTech #DigitalWellness #AIEducation #ParentingTips #TechEthics #OpenAI #AILiteracy #YouthProtection #EmergingTechnology",
+      "textureIndex": 3
     }
   ]
 }
