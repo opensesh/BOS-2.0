@@ -1,0 +1,332 @@
+{
+  "type": "short-form",
+  "date": "2025-12-19T16:27:10.594Z",
+  "ideas": [
+    {
+      "title": "Meta is developing a new image and video model for a 2026 release, report says",
+      "description": "The company is working on an image and video model and new text-based model, which aids with coding.",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/19/meta-is-developing-a-new-image-and-video-model-for-a-2026-release-report-says/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "Meta's AI Revolution: Image & Video Model Coming 2026",
+        "Future of AI: Meta's Secret Visual Intelligence Project",
+        "Breaking: Meta's Next-Gen AI Model Leaked"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic split-screen revealing Meta's AI concept",
+            "Incorporate glitch/tech overlay effects for visual intrigue",
+            "Create quick visual timeline of AI model evolution"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Provocative teaser image with Meta logo",
+            "Use infographic-style slides showing model capabilities",
+            "Include comparative graphics showing current vs future AI"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Open with dramatic tech-reveal animation",
+            "Use rapid-cut visuals demonstrating AI model potential",
+            "Include quick expert-style commentary voiceover"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as professional technology breakthrough",
+            "Include data visualization of potential industry impact",
+            "Use more formal, analytical visual approach"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast cyberpunk-inspired color palette (deep blues, electric teals, sharp whites), geometric fragmented compositions suggesting AI complexity, sleek futuristic typography with transparent/overlay elements, subtle glitch/digital artifact animations suggesting technological emergence"
+      },
+      "exampleOutline": [
+        "Hook: Provocative AI breakthrough statement",
+        "Context: Meta's current AI landscape",
+        "Core Content: 2026 Model Capabilities",
+        "Key Insight: Potential Industry Transformation",
+        "CTA: Follow for Future Updates"
+      ],
+      "hashtags": "#MetaAI #ArtificialIntelligence #TechInnovation #AIModel #FutureOfTech #MachineLearning #TechNews #AIResearch #InnovationWatch #TechnologyTrends",
+      "textureIndex": 4
+    },
+    {
+      "title": "Krafton hikes India bet with new $670M fund",
+      "description": "Called the Unicorn Growth Fund, the investment vehicle is a collaboration between Krafton and South Korean internet conglomerate Naver, and investor Mirae Asset. It aims to deploy around $669.3 million over four years.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/19/krafton-hikes-india-bet-with-new-670m-fund/"
+        }
+      ],
+      "format": "story",
+      "subcategory": "story",
+      "hooks": [
+        "Gaming Giant's Massive India Investment Revealed!",
+        "Krafton's $670M Bet on India's Tech Future",
+        "Unicorn Growth Fund: Tech's Next Big Move"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic map animation showing India-Korea tech connection",
+            "Include quick animated stats to maintain viewer interest",
+            "Use text overlays that pop and move with graphics"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have eye-catching investment graphic",
+            "Use consistent color palette across all slides",
+            "Progressive reveal of key investment details"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Fast-paced editing with quick scene transitions",
+            "Use gaming/tech visual metaphors",
+            "Include surprising fact in first 3 seconds"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "More data-driven, analytical presentation style",
+            "Include expert quote or industry context",
+            "Use more professional, subdued motion graphics"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold tech-futuristic aesthetic with neon-electric color palette. Dynamic geometric transitions between slides. Minimalist typography with high-contrast colors. Incorporate subtle gaming/tech circuit board textures. Use diagonal compositions and asymmetric layout. Animate percentage/investment numbers with digital glitch effect."
+      },
+      "exampleOutline": [
+        "Section 1: Dramatic Investment Reveal",
+        "Section 2: Krafton & Naver Partnership Context",
+        "Section 3: $670M Fund Breakdown",
+        "Section 4: India Tech Ecosystem Impact",
+        "Section 5: Future Predictions & Call to Engage"
+      ],
+      "hashtags": "#Krafton #IndianTech #GameIndustry #TechInvestment #StartupFunding #GameDev #AITech #InnovationEconomy #GlobalTech #VentureCapital",
+      "textureIndex": 9
+    },
+    {
+      "title": "Hacks, thefts and disruption: The worst data breaches of 2025",
+      "description": "TechCrunch looks back at the biggest data breaches, disruptive cyberattacks, and damaging hacks of 2025, from the raiding of U.S. government databases to a hack every month in South Korea.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/19/hacks-thefts-and-disruption-the-worst-data-breaches-of-2025/"
+        }
+      ],
+      "format": "carousel",
+      "subcategory": "carousel",
+      "hooks": [
+        "Cyber Chaos: 2025's Biggest Data Breaches Exposed",
+        "Digital Warfare: When Hackers Ruled the Internet",
+        "Hack Attack: The Year Cybersecurity Crumbled"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use fast-paced motion graphics to show data breach impacts",
+            "Create dramatic visual transitions between breach examples",
+            "Include bold text overlays with shocking statistics"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Dramatic headline with provocative visual",
+            "Use infographic-style slides with clean data visualizations",
+            "Create a storytelling arc across 7-10 slides"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Condense carousel content into rapid-fire narrative",
+            "Use screen recordings to show breach impacts",
+            "Add urgent, dynamic sound design"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add more technical depth to breach explanations",
+            "Include professional tone and expert commentary",
+            "Highlight business and economic implications"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "Dark cyberpunk color palette (deep blues, electric greens, stark reds). Glitch-inspired typography with data visualization overlays. Fragmented, broken digital aesthetic mimicking compromised systems. Incorporate binary code, network diagrams, and abstract digital decay elements. High-contrast, sharp-edged graphic design with subtle motion effects."
+      },
+      "exampleOutline": [
+        "Slide 1: Provocative headline and opening hook",
+        "Slide 2: Total number of breaches in 2025",
+        "Slide 3: Most significant government database breach",
+        "Slide 4: South Korea's monthly hack breakdown",
+        "Slide 5: Economic impact of cyber attacks",
+        "Slide 6: Key takeaways and cybersecurity recommendations"
+      ],
+      "hashtags": "#Cybersecurity #DataBreach #CyberAttack #TechSecurity #InternetSafety #HackingNews #CyberCrime #DigitalRisk #TechTrends #CyberWarfare",
+      "textureIndex": 4
+    },
+    {
+      "title": "OpenAI is reportedly trying to raise $100B at an $830B valuation",
+      "description": "The ChatGPT maker is aiming to raise the funding by the end of the first quarter in 2026, and the company may ask sovereign wealth funds to invest in the round.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/19/openai-is-reportedly-trying-to-raise-100b-at-an-830b-valuation/"
+        }
+      ],
+      "format": "reel",
+      "subcategory": "reel",
+      "hooks": [
+        "$100B Valuation: AI's Wildest Funding Round Yet",
+        "OpenAI's Billion-Dollar Moonshot Revealed",
+        "Tech's Biggest Bet: $830B Valuation Incoming"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic motion graphics to visualize billion-dollar figures",
+            "Create quick cuts between financial charts and AI imagery",
+            "Incorporate trending text animation styles to boost engagement"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "Break down valuation into digestible financial infographic slides",
+            "Use consistent color palette representing tech/finance aesthetic",
+            "First slide must have provocative headline to drive swipes"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected visual metaphor about scale of investment",
+            "Use quick transitions to maintain high-energy pacing",
+            "Include text overlays explaining complex financial concepts"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame content as thought leadership perspective",
+            "Use more professional tone and data-driven visualization",
+            "Include potential strategic implications of massive funding"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech-futuristic palette (deep blues, electric teals, metallic silvers). Dynamic motion graphics with floating financial data points. Sharp, geometric typography. Blend of abstract tech visualization and concrete financial charts. Minimal but energetic composition with rapid visual transitions."
+      },
+      "exampleOutline": [
+        "Provocative Hook: Massive Funding Reveal",
+        "Context: OpenAI's Current Market Position",
+        "Core Content: $100B Fundraising Details",
+        "Strategic Implications: What This Means",
+        "Future Speculation/Call-to-Engage"
+      ],
+      "hashtags": "#OpenAI #AIFunding #TechInvestment #ArtificialIntelligence #StartupValuation #TechTrends #ChatGPT #AIInnovation #VentureCapital #FutureOfTech",
+      "textureIndex": 2
+    },
+    {
+      "title": "TikTok agrees to deal to cede control of US business to American investor group",
+      "description": "The deal closes a long-running drama in which U.S. authorities have sought to compel ByteDance to divest.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/18/tiktok-agrees-to-deal-to-cede-control-of-u-s-business-to-american-investor-group/"
+        }
+      ],
+      "format": "carousel",
+      "subcategory": "carousel",
+      "hooks": [
+        "TikTok's US Future: A Radical Ownership Twist",
+        "ByteDance's Power Move: Who Really Wins?",
+        "Inside TikTok's American Investor Takeover"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic text transitions between slides",
+            "Start with a provocative visual statistic",
+            "Include quick animated arrows/highlights"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have maximum visual intrigue",
+            "Use clean, infographic-style design for data",
+            "Ensure each slide tells a micro-story"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Add dramatic voiceover narration",
+            "Use quick scene cuts between key points",
+            "Include subtle motion graphics"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add more detailed contextual explanation",
+            "Use more professional, analytical tone",
+            "Include potential business implications"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, high-contrast color palette with electric blue and deep charcoal. Geometric, tech-inspired typography with angular transitions. Dynamic infographic style with subtle parallax motion. Clean, futuristic aesthetic reminiscent of Bloomberg/WIRED design language."
+      },
+      "exampleOutline": [
+        "Opening: Dramatic TikTok ownership headline",
+        "Context: ByteDance's current ownership landscape",
+        "Key Details: Investor group composition",
+        "Implications: What this means for users",
+        "Future Outlook: Tech industry transformation"
+      ],
+      "hashtags": "#TikTok #TechNews #SocialMedia #InvestorGroup #ByteDance #TechPolicy #AITech #DigitalTransformation #SocialMediaTrends #TechInvestment",
+      "textureIndex": 11
+    }
+  ]
+}

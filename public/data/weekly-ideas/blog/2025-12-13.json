@@ -1,0 +1,291 @@
+{
+  "type": "blog",
+  "date": "2025-12-13T16:25:41.671Z",
+  "ideas": [
+    {
+      "title": "Forget About “Radical Candor” – Try Radical Humanity Instead with Alison Rand",
+      "description": "DesignOps used to be the hot new buzzword, but now it needs a rebrand.",
+      "starred": true,
+      "sources": [
+        {
+          "name": "Design Better",
+          "url": "https://designbetterpodcast.com/p/forget-about-radical-candor-try-radical"
+        }
+      ],
+      "format": "thread",
+      "subcategory": "explanatory",
+      "hooks": [
+        "Design Leadership's Hidden Superpower: Radical Humanity",
+        "Beyond Radical Candor: How Designers Actually Connect",
+        "The Leadership Hack No One's Talking About"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use thread screenshots as a teaser for full newsletter",
+            "Create a companion deep-dive article expanding thread insights",
+            "Offer exclusive downloadable framework mentioned in thread"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Repurpose thread as SEO-optimized long-form article",
+            "Add data visualizations to support thread arguments",
+            "Include expert quotes to enhance credibility"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Add professional context and industry-specific examples",
+            "Include leadership statistics to validate thread claims",
+            "Create a more formal, structured version of thread insights"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, high-contrast color palette with electric blue and soft coral accents. Dynamic typography with staggered text blocks. Minimal illustrative elements showing human connection. Subtle motion graphics highlighting key points. Clean, modern Swiss design influence with unexpected geometric interruptions."
+      },
+      "exampleOutline": [
+        "Thread Opener: Provocative statement about design leadership",
+        "Problem: Traditional leadership models are broken",
+        "Core Concept: What 'Radical Humanity' really means",
+        "Practical Framework: 3-4 key implementation strategies",
+        "Personal Call-to-Action: How to start today"
+      ],
+      "hashtags": "#DesignLeadership #RadicalHumanity #WorkplaceCulture #DesignOps #LeadershipInnovation #TeamBuilding #CreativeCommunication #PeopleFirst #OrganizationalDesign #WorkplaceWellbeing",
+      "textureIndex": 9
+    },
+    {
+      "title": "OK, what&#8217;s going on with LinkedIn&#8217;s algo?",
+      "description": "Women ran an experiment to see if LinkedIn's new algo was being sexist and thought they proved it. But there's more complexity involved, experts say.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/12/ok-whats-going-on-with-linkedins-algo/"
+        }
+      ],
+      "format": "guide",
+      "subcategory": "instructional",
+      "hooks": [
+        "LinkedIn's Algorithm: The Hidden Gender Bias Experiment",
+        "Decoding Social Media's Invisible Discrimination",
+        "When AI Plays Favorites: The LinkedIn Story"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use real-time data visualization of experiment findings",
+            "Include interactive polling to engage readers",
+            "Break down complex algorithm concepts into digestible chunks"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Optimize SEO with detailed technical breakdown",
+            "Include expert quotes and external research citations",
+            "Create clear section headers for scannable content"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Use professional tone with data-driven insights",
+            "Include direct implications for professional networking",
+            "Add credibility with statistical evidence and research links"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast data visualization with bold geometric infographics, using a color palette of electric blue, deep purple, and stark white. Typography should feel technical yet approachable - clean sans-serif with occasional algorithmic/circuit-board inspired graphic elements. Incorporate subtle motion graphics showing algorithmic flow and potential bias points."
+      },
+      "exampleOutline": [
+        "Introduction: The Algorithmic Bias Question",
+        "Methodology: How the Experiment Was Conducted",
+        "Detailed Findings: Breaking Down LinkedIn's Algorithm",
+        "Expert Perspectives on Algorithmic Fairness",
+        "Recommendations and Future Implications"
+      ],
+      "hashtags": "#AIEthics #LinkedInAlgorithm #TechDiversity #AlgorithmicBias #WomenInTech #SocialMediaResearch #DataScience #AIFairness #TechInclusion #NetworkingTips",
+      "textureIndex": 2
+    },
+    {
+      "title": "Trump’s AI executive order promises &#8216;one rulebook&#8217; — startups may get legal limbo instead",
+      "description": "Trump signed an AI executive order targeting state laws and promising one national rulebook. Critics warn it could trigger court battles and prolong uncertainty for startups while Congress debates federal rules.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/12/trumps-ai-executive-order-promises-one-rulebook-startups-may-get-legal-limbo-instead/"
+        }
+      ],
+      "format": "case-study",
+      "subcategory": "case-study-deep-dive",
+      "hooks": [
+        "AI Regulation: Trump's Order Creates Startup Legal Minefield",
+        "Decoding the AI Executive Order's Hidden Startup Impact",
+        "One Rulebook, Multiple Risks: AI's Regulatory Crossroads"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use real-time annotation/commentary in margins",
+            "Include interactive legal timeline graphic",
+            "Embed startup founder reaction quotes"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Deep-dive with hyperlinked legal references",
+            "Create SEO-optimized sections with clear headers",
+            "Include expert interview pullout quotes"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame as professional policy analysis",
+            "Include data visualizations of potential legal impacts",
+            "Target tech policy and startup leadership audiences"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, high-contrast design with legal/tech hybrid aesthetic. Dark navy and electric blue color palette. Geometric typography with technical wireframe overlays. Motion graphics showing regulatory complexity. Sharp-edged infographics breaking down legal implications."
+      },
+      "exampleOutline": [
+        "Opening: Provocative AI Regulation Landscape Overview",
+        "Context: Trump's Executive Order - Full Legal Breakdown",
+        "Startup Impact Analysis: Risks and Opportunities",
+        "Future Scenario Mapping: Potential Regulatory Outcomes",
+        "Strategic Recommendations for Tech Founders"
+      ],
+      "hashtags": "#AIRegulation #TechPolicy #StartupLaw #AIExecutiveOrder #TechInnovation #LegalTech #AIPolicy #StartupStrategy #TechRegulations #InnovationLaw",
+      "textureIndex": 7
+    },
+    {
+      "title": "You can now have more fluid and expressive conversations when you go Live with Search.",
+      "description": "&lt;img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Searchlive_thumb.max-600x600.format-webp.webp\"&gt;When you go Live with Search, you can have a back-and-forth voice conversation in AI Mode to get real-time help and quickly find relevant sites across the web. And now, …",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Google AI Blog",
+          "url": "https://blog.google/products/search/live-audio-gemini-model-update/"
+        }
+      ],
+      "format": "listicle",
+      "subcategory": "explanatory",
+      "hooks": [
+        "AI Conversations Just Got Way More Fluid",
+        "Search's Voice Revolution: 5 Game-Changing Features",
+        "How AI is Transforming Live Search Interactions"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use personal experiment/screenshot of live interaction",
+            "Add real-time commentary about user experience",
+            "Include audio/video snippet demonstrating feature"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Include SEO-optimized headers for each feature",
+            "Add comparative screenshots from before/after",
+            "Link to original Google blog for credibility"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame features as professional productivity enhancement",
+            "Include data/statistics about AI search efficiency",
+            "Target professional use cases and implications"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, dynamic layout with vibrant tech-inspired color palette. Futuristic illustrations showing voice/AI interaction. Dynamic typography with motion-based transitions. Clean, high-contrast design with geometric elements representing conversation flow. Incorporate subtle sound wave/voice interaction graphics."
+      },
+      "exampleOutline": [
+        "Section 1: Transformative Power of AI-Powered Voice Search",
+        "Section 2: The Current Search Interaction Limitations",
+        "Section 3: 5 Breakthrough Live Search Features",
+        "Section 4: Future of Conversational AI Technology",
+        "Section 5: How Professionals Can Leverage These Innovations"
+      ],
+      "hashtags": "#AISearch #VoiceTechnology #GoogleAI #SearchInnovation #AIConversations #TechTrends #FutureOfSearch #AIAssistant #VoiceInteraction #InnovativeTech",
+      "textureIndex": 4
+    },
+    {
+      "title": "Bringing state-of-the-art Gemini translation capabilities to Google Translate",
+      "description": "&lt;img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Translate-Blog-121125.max-600x600.format-webp.webp\"&gt;We’re bringing Gemini’s state-of-the-art translation model to Google Translate for text, and more new features.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Google AI Blog",
+          "url": "https://blog.google/products/search/gemini-capabilities-translation-upgrades/"
+        }
+      ],
+      "format": "article",
+      "subcategory": "visionary",
+      "hooks": [
+        "AI Translation Revolution: Gemini Transforms Google Translate",
+        "Breaking Language Barriers with Cutting-Edge AI",
+        "Inside Google's Next-Level Translation Technology"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Include real-time experiment screenshots of translation capabilities",
+            "Add personal narrative about language learning challenges",
+            "Use interactive polls to engage readers about translation experiences"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Optimize headline for SEO with key technical terms",
+            "Include in-depth technical breakdown of Gemini's translation model",
+            "Add comparative data visualizations of translation accuracy"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Highlight professional implications of advanced translation technology",
+            "Include quotes from AI and language industry experts",
+            "Emphasize business and global communication benefits"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dynamic, futuristic color palette with deep blues and electric teals. Geometric typography with subtle motion graphics showing language transformation. Clean, technical aesthetic with human-centric illustrations of global communication. Incorporate subtle neural network-inspired background patterns. Use sleek, modern infographic elements to explain translation technology."
+      },
+      "exampleOutline": [
+        "The Language Barrier's Final Frontier: Introducing Gemini Translations",
+        "The Global Communication Challenge: Why Translation Matters",
+        "Gemini's Technical Breakthrough: How AI Transforms Translation",
+        "Real-World Impact: Translation Beyond Words",
+        "Future of Communication: What's Next for AI Translation"
+      ],
+      "hashtags": "#AITranslation #GeminiAI #GoogleTranslate #LanguageTech #AIInnovation #GlobalCommunication #MachineLearning #TechBreakthrough #AILanguage #InnovationInsights",
+      "textureIndex": 9
+    }
+  ]
+}

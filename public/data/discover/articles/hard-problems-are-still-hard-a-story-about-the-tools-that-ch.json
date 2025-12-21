@@ -1,0 +1,427 @@
+{
+  "id": "hard-problems-are-still-hard-a-story-about-the-tools-that-ch",
+  "slug": "hard-problems-are-still-hard-a-story-about-the-tools-that-ch",
+  "title": "Hard Problems Are Still Hard: AI Tools Transform Workflows But Leave Core Design Challenges Intact",
+  "publishedAt": "2025-12-18T16:24:44.128Z",
+  "generatedAt": "2025-12-18T16:24:44.128Z",
+  "totalSources": 22,
+  "sections": [
+    {
+      "id": "section-0",
+      "paragraphs": [
+        {
+          "id": "para-0-0",
+          "content": "The essay \"Hard problems are still hard: A story about the tools that change and the work that doesn't\" by Peter Van Miller, published December 16, 2025, argues that agentic AI and generative tools accelerate prototyping and development but fail to resolve fundamental issues in design and product creation.It emphasizes enduring challenges like understanding user context, designing within constraints, and aligning technology with business value, even as platforms like V0 enable non-designers to build rapidly.This piece has gained traction in UX newsletters and robotics discussions, framing AI as a productivity booster that heightens rather than erases systemic difficulties.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-3",
+                "name": "robotics",
+                "url": "https://robotics.ee/2025/10/page/5/",
+                "favicon": "https://www.google.com/s2/favicons?domain=robotics.ee&sz=32",
+                "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+              },
+              "additionalCount": 2,
+              "additionalSources": [
+                {
+                  "id": "source-7",
+                  "name": "petervanmiller",
+                  "url": "https://petervanmiller.net/portfolio/eagle1/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=petervanmiller.net&sz=32",
+                  "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+                },
+                {
+                  "id": "source-4",
+                  "name": "uxdesignweekly",
+                  "url": "https://uxdesignweekly.com/author/totoros/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=uxdesignweekly.com&sz=32",
+                  "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "para-0-1",
+          "content": "Figma's related \"Maker Stories\" essay from December 12, 2025, echoes this by noting AI expansions like image-editing tools and ChatGPT integrations broaden who can ship work but demand stronger systems thinking and judgment.Industry surveys from 2024-2025 show high AI tool adoption among designers yet only modest gains in metrics like cross-team coordination and user trust.These writings caution that while tools lower transactional costs, organizational and human-centered problems persist unchanged.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-5",
+                "name": "uxdesignweekly",
+                "url": "https://uxdesignweekly.com",
+                "favicon": "https://www.google.com/s2/favicons?domain=uxdesignweekly.com&sz=32",
+                "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+              },
+              "additionalCount": 2,
+              "additionalSources": [
+                {
+                  "id": "source-1",
+                  "name": "Figma Blog",
+                  "url": "https://www.figma.com/blog/hard-problems-are-still-hard/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+                  "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+                },
+                {
+                  "id": "source-2",
+                  "name": "robotics",
+                  "url": "https://robotics.ee/2025/10/page/6/?wtime=seek_to_second_number",
+                  "favicon": "https://www.google.com/s2/favicons?domain=robotics.ee&sz=32",
+                  "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-1",
+      "title": "Agentic AI Amplifies Enduring Design Hurdles",
+      "paragraphs": [
+        {
+          "id": "para-1-0",
+          "content": "The essay identifies core hard problems such as identifying unmet needs, ensuring compatibility with architectures, and tying tech to value, which agentic AI makes more urgent without solving.DataRobot's analysis aligns, stating agentic AI shifts software to dynamic systems, increasing needs for governance and quality amid blurred roles like designers writing code.UX Design Weekly curations position this as a call to shift from surface outputs to substrate work focusing on human needs and dynamics.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-8",
+                "name": "datarobot",
+                "url": "https://www.datarobot.com/blog/agentic-ai-enterprise-design/",
+                "favicon": "https://www.google.com/s2/favicons?domain=www.datarobot.com&sz=32",
+                "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+              },
+              "additionalCount": 2,
+              "additionalSources": [
+                {
+                  "id": "source-6",
+                  "name": "petervanmiller",
+                  "url": "https://petervanmiller.net/about/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=petervanmiller.net&sz=32",
+                  "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+                },
+                {
+                  "id": "source-9",
+                  "name": "figma",
+                  "url": "https://www.figma.com/blog/maker-stories/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+                  "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "para-1-1",
+          "content": "Figma's principles urge leaders to build systems over products and exercise judgment alongside AI execution. Robotics.ee commentary from October 2025 warns agentic systems heighten safety, specification, and alignment challenges in socio-technical integration.Practitioner case studies highlight teams accelerating prototypes with AI yet failing on user adoption due to silos and poor metrics.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-10",
+                "name": "figma",
+                "url": "https://www.figma.com/blog/ai/",
+                "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+                "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+              },
+              "additionalCount": 2,
+              "additionalSources": [
+                {
+                  "id": "source-11",
+                  "name": "heydesigner",
+                  "url": "https://heydesigner.com",
+                  "favicon": "https://www.google.com/s2/favicons?domain=heydesigner.com&sz=32",
+                  "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+                },
+                {
+                  "id": "source-12",
+                  "name": "figma",
+                  "url": "https://www.figma.com/blog/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+                  "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-2",
+      "title": "Industry Perspectives on Tools Versus Human Judgment",
+      "paragraphs": [
+        {
+          "id": "para-2-0",
+          "content": "Optimists in UX newsletters argue tools reduce routine friction, freeing energy for core issues like prototyping and iteration. HeyDesigner captures designer anxiety over role blurring but excitement for empowerment, urging preservation of craft and intentionality.DataRobot stresses governance for scalability and accessibility risks when anyone ships prototypes.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-13",
+                "name": "petervanmiller",
+                "url": "https://petervanmiller.net/portfolio/subthought/",
+                "favicon": "https://www.google.com/s2/favicons?domain=petervanmiller.net&sz=32",
+                "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+              },
+              "additionalCount": 2,
+              "additionalSources": [
+                {
+                  "id": "source-14",
+                  "name": "manning",
+                  "url": "https://www.manning.com/preview/how-large-language-models-work/chapter-7",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.manning.com&sz=32",
+                  "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+                },
+                {
+                  "id": "source-15",
+                  "name": "rfleury",
+                  "url": "https://www.rfleury.com/p/multi-threading-and-mutation",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.rfleury.com&sz=32",
+                  "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "para-2-1",
+          "content": "Manning's analysis on LLMs notes S-curves of diminishing returns due to hardware limits, reinforcing no infinite self-improvement for hard computational problems.Ryan Fleury applies the theme to multi-threading, advising early rewrites for constraints over reusability myths.Forward insights predict rising demand for critical thinking and taste as AI automates basics, per NNGroup's 2025 reckoning.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-16",
+                "name": "travellerrpg",
+                "url": "https://www.travellerrpg.com/threads/raw-personalities-in-computers.39219/page-2",
+                "favicon": "https://www.google.com/s2/favicons?domain=www.travellerrpg.com&sz=32",
+                "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+              },
+              "additionalCount": 2,
+              "additionalSources": [
+                {
+                  "id": "source-17",
+                  "name": "opensourcesecurity",
+                  "url": "https://opensourcesecurity.io/tag/kubernetes/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=opensourcesecurity.io&sz=32",
+                  "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+                },
+                {
+                  "id": "source-18",
+                  "name": "rfleury",
+                  "url": "https://www.rfleury.com/feed",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.rfleury.com&sz=32",
+                  "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sourceCards": [
+    {
+      "id": "source-1",
+      "name": "Figma Blog",
+      "url": "https://www.figma.com/blog/hard-problems-are-still-hard/",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    },
+    {
+      "id": "source-2",
+      "name": "robotics",
+      "url": "https://robotics.ee/2025/10/page/6/?wtime=seek_to_second_number",
+      "favicon": "https://www.google.com/s2/favicons?domain=robotics.ee&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    },
+    {
+      "id": "source-3",
+      "name": "robotics",
+      "url": "https://robotics.ee/2025/10/page/5/",
+      "favicon": "https://www.google.com/s2/favicons?domain=robotics.ee&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    },
+    {
+      "id": "source-4",
+      "name": "uxdesignweekly",
+      "url": "https://uxdesignweekly.com/author/totoros/",
+      "favicon": "https://www.google.com/s2/favicons?domain=uxdesignweekly.com&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    },
+    {
+      "id": "source-5",
+      "name": "uxdesignweekly",
+      "url": "https://uxdesignweekly.com",
+      "favicon": "https://www.google.com/s2/favicons?domain=uxdesignweekly.com&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    },
+    {
+      "id": "source-6",
+      "name": "petervanmiller",
+      "url": "https://petervanmiller.net/about/",
+      "favicon": "https://www.google.com/s2/favicons?domain=petervanmiller.net&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    }
+  ],
+  "allSources": [
+    {
+      "id": "source-1",
+      "name": "Figma Blog",
+      "url": "https://www.figma.com/blog/hard-problems-are-still-hard/",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    },
+    {
+      "id": "source-2",
+      "name": "robotics",
+      "url": "https://robotics.ee/2025/10/page/6/?wtime=seek_to_second_number",
+      "favicon": "https://www.google.com/s2/favicons?domain=robotics.ee&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    },
+    {
+      "id": "source-3",
+      "name": "robotics",
+      "url": "https://robotics.ee/2025/10/page/5/",
+      "favicon": "https://www.google.com/s2/favicons?domain=robotics.ee&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    },
+    {
+      "id": "source-4",
+      "name": "uxdesignweekly",
+      "url": "https://uxdesignweekly.com/author/totoros/",
+      "favicon": "https://www.google.com/s2/favicons?domain=uxdesignweekly.com&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    },
+    {
+      "id": "source-5",
+      "name": "uxdesignweekly",
+      "url": "https://uxdesignweekly.com",
+      "favicon": "https://www.google.com/s2/favicons?domain=uxdesignweekly.com&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    },
+    {
+      "id": "source-6",
+      "name": "petervanmiller",
+      "url": "https://petervanmiller.net/about/",
+      "favicon": "https://www.google.com/s2/favicons?domain=petervanmiller.net&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    },
+    {
+      "id": "source-7",
+      "name": "petervanmiller",
+      "url": "https://petervanmiller.net/portfolio/eagle1/",
+      "favicon": "https://www.google.com/s2/favicons?domain=petervanmiller.net&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    },
+    {
+      "id": "source-8",
+      "name": "datarobot",
+      "url": "https://www.datarobot.com/blog/agentic-ai-enterprise-design/",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.datarobot.com&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    },
+    {
+      "id": "source-9",
+      "name": "figma",
+      "url": "https://www.figma.com/blog/maker-stories/",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    },
+    {
+      "id": "source-10",
+      "name": "figma",
+      "url": "https://www.figma.com/blog/ai/",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    },
+    {
+      "id": "source-11",
+      "name": "heydesigner",
+      "url": "https://heydesigner.com",
+      "favicon": "https://www.google.com/s2/favicons?domain=heydesigner.com&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    },
+    {
+      "id": "source-12",
+      "name": "figma",
+      "url": "https://www.figma.com/blog/",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    },
+    {
+      "id": "source-13",
+      "name": "petervanmiller",
+      "url": "https://petervanmiller.net/portfolio/subthought/",
+      "favicon": "https://www.google.com/s2/favicons?domain=petervanmiller.net&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    },
+    {
+      "id": "source-14",
+      "name": "manning",
+      "url": "https://www.manning.com/preview/how-large-language-models-work/chapter-7",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.manning.com&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    },
+    {
+      "id": "source-15",
+      "name": "rfleury",
+      "url": "https://www.rfleury.com/p/multi-threading-and-mutation",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.rfleury.com&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    },
+    {
+      "id": "source-16",
+      "name": "travellerrpg",
+      "url": "https://www.travellerrpg.com/threads/raw-personalities-in-computers.39219/page-2",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.travellerrpg.com&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    },
+    {
+      "id": "source-17",
+      "name": "opensourcesecurity",
+      "url": "https://opensourcesecurity.io/tag/kubernetes/",
+      "favicon": "https://www.google.com/s2/favicons?domain=opensourcesecurity.io&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    },
+    {
+      "id": "source-18",
+      "name": "rfleury",
+      "url": "https://www.rfleury.com/feed",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.rfleury.com&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    },
+    {
+      "id": "source-19",
+      "name": "player",
+      "url": "https://player.fm/series/open-source-security/tarmageddon-with-alex-zenla",
+      "favicon": "https://www.google.com/s2/favicons?domain=player.fm&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    },
+    {
+      "id": "source-20",
+      "name": "castbox",
+      "url": "https://castbox.fm/channel/Open-Source-Security-id965963",
+      "favicon": "https://www.google.com/s2/favicons?domain=castbox.fm&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    },
+    {
+      "id": "source-21",
+      "name": "infosec",
+      "url": "https://infosec.exchange/@joshbressers",
+      "favicon": "https://www.google.com/s2/favicons?domain=infosec.exchange&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    },
+    {
+      "id": "source-22",
+      "name": "opensourcesecurity",
+      "url": "https://opensourcesecurity.io/posts/",
+      "favicon": "https://www.google.com/s2/favicons?domain=opensourcesecurity.io&sz=32",
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't"
+    }
+  ],
+  "heroImage": {
+    "url": "https://cdn.sanity.io/images/599r6htc/regionalized/afa86c16ecca710fd451f4bea41582d647779152-6142x4724.jpg?w=1200&amp;q=70&amp;fit=max&amp;auto=format"
+  },
+  "sidebarSections": [
+    "Agentic AI Amplifies Enduring Design Hurdles",
+    "Industry Perspectives on Tools Versus Human Judgment"
+  ],
+  "relatedArticles": []
+}

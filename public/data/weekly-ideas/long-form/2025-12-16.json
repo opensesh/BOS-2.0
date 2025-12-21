@@ -1,0 +1,211 @@
+{
+  "type": "long-form",
+  "date": "2025-12-16T16:30:39.818Z",
+  "ideas": [
+    {
+      "title": "Databricks raises $4B at $134B valuation as its AI business heats up",
+      "description": "The data intelligence company has just raised more than $4 billion in a Series L funding round at a $134 billion valuation — up 34% from the $100 billion valuation that it achieved just three months ago.",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/16/databricks-raises-4b-at-134b-valuation-as-its-ai-business-heats-up/"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "AI's Billion-Dollar Rocket: Databricks' Insane Growth Story",
+        "How One Company Is Rewriting Tech Valuation Rules",
+        "Silicon Valley's Latest Unicorn: The $134B AI Disruptor"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use cinematic B-roll of tech headquarters and data centers",
+            "Include dynamic financial graphics showing valuation trajectory",
+            "Incorporate expert interview clips for documentary authenticity"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast blue and silver color palette, sleek motion graphics illustrating financial growth, modern sans-serif typography with technical overlay animations, dynamic camera movements suggesting momentum and innovation, blend of archival footage and contemporary tech visualizations"
+      },
+      "exampleOutline": [
+        "Opening: Dramatic financial growth visualization",
+        "Context: Databricks' market position and AI strategy",
+        "Deep Dive: Funding round implications for tech ecosystem",
+        "Expert Analysis: What $134B valuation really means",
+        "Future Projection: AI investment landscape transformation"
+      ],
+      "hashtags": "#Databricks #AIInvestment #TechUnicorn #StartupFunding #AITech #SiliconValley #VentureCapital #TechInnovation #AIStartups #BusinessGrowth",
+      "textureIndex": 3
+    },
+    {
+      "title": "Adobe Firefly now supports prompt-based video editing, adds more third-party models",
+      "description": "Adobe is updating its AI video-generation app, Firefly, with a new video editor that supports precise prompt-based edits, as well as adding new third-party models for image and video generation, including Black Forest Labs' FLUX.2 and Topaz Astra.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/16/adobe-firefly-now-supports-prompt-based-video-editing-adds-more-third-party-models/"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "AI Video Editing: Adobe Firefly's Game-Changing Update",
+        "Prompt Magic: Inside Adobe's Latest Firefly Revolution",
+        "Future of Video Editing Just Dropped 🔥"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Enable live chat interaction during stream for real-time audience engagement",
+            "Prepare pre-screened Q&A questions to maintain flow",
+            "Use YouTube Premieres to build anticipation before live event"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "High-energy motion graphics with dynamic split-screen transitions, electric blue and neon accent color palette, futuristic sans-serif typography, floating holographic UI elements showcasing Firefly interface, rapid-cut B-roll demonstrating video editing capabilities"
+      },
+      "exampleOutline": [
+        "Section 1: High-Energy Intro & Live Stream Setup",
+        "Section 2: Adobe Firefly's Current Landscape & Context",
+        "Section 3: Deep Dive into Prompt-Based Video Editing",
+        "Section 4: Third-Party Model Integration Insights",
+        "Section 5: Live Q&A + Future Predictions Segment"
+      ],
+      "hashtags": "#AdobeFirefly #AIVideoEditing #CreativeTech #VideoAI #MachinelearningTools #AICreativity #TechInnovation #CreativeAI #VideoEditing #AdobeInnovation",
+      "textureIndex": 5
+    },
+    {
+      "title": "Zencoder drops Zenflow, a free AI orchestration tool that pits Claude against OpenAI’s models to catch coding errors",
+      "description": "Zencoder, the Silicon Valley startup that builds AI-powered coding agents, released a free desktop application on Monday that it says will fundamentally change how software engineers interact with artificial intelligence — moving the industry beyond the freewheeling era of &quot;vibe coding&quot; toward a more disciplined, verifiable approach to AI-assisted development.The product, called Zenflow, introduces what the company describes as an &quot;AI orchestration layer&quot; that coordinates mul",
+      "starred": false,
+      "sources": [
+        {
+          "name": "VentureBeat AI",
+          "url": "https://venturebeat.com/ai/zencoder-drops-zenflow-a-free-ai-orchestration-tool-that-pits-claude-against"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "AI Coding Errors? This Tool Changes Everything",
+        "Level Up Your Code with AI Orchestration",
+        "Build Smarter: The Ultimate AI Coding Hack"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use screen recording with live code demonstration",
+            "Include split-screen showing AI models side-by-side",
+            "Add chapter markers for each step of tutorial"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech palette with deep blues and electric teals, dynamic grid-based layout, futuristic sans-serif typography, animated code transition effects, clean technical aesthetic with subtle glitch/tech overlay elements"
+      },
+      "exampleOutline": [
+        "Introduction: What is AI Orchestration?",
+        "Problem: Current Challenges in AI-Assisted Coding",
+        "Zenflow Tool Walkthrough: Step-by-Step Installation",
+        "Comparative AI Model Demonstration",
+        "Advanced Techniques and Error Catching Strategies"
+      ],
+      "hashtags": "#AICode #CodeTutorial #ZenFlow #AIEngineering #SoftwareDevelopment #CodingTips #AITools #ProgrammingHacks #TechInnovation #AIAssistance",
+      "textureIndex": 12
+    },
+    {
+      "title": "Zoom says it aced AI’s hardest exam. Critics say it copied off its neighbors.",
+      "description": "Zoom Video Communications, the company best known for keeping remote workers connected during the pandemic, announced last week that it had achieved the highest score ever recorded on one of artificial intelligence&#x27;s most demanding tests — a claim that sent ripples of surprise, skepticism, and genuine curiosity through the technology industry.The San Jose-based company said its AI system scored 48.1 percent on the Humanity&#x27;s Last Exam, a benchmark designed by subject-matter experts wor",
+      "starred": false,
+      "sources": [
+        {
+          "name": "VentureBeat AI",
+          "url": "https://venturebeat.com/ai/zoom-says-it-aced-ais-hardest-exam-critics-say-it-copied-off-its-neighbors"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "AI Cheating Scandal: Zoom's Shocking Test Score Exposed",
+        "Did Zoom Fake Its AI Exam Results?",
+        "The Truth Behind Zoom's Controversial AI Claim"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dynamic screen recordings showing exam details",
+            "Include picture-in-picture reaction shots for dramatic effect",
+            "Create chapter markers to break down complex narrative"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, investigative visual style with high-contrast red/blue color palette. Animated infographic overlays showcasing test scores. Glitch-inspired transition effects to emphasize 'digital investigation'. Typography should feel technical but urgent - sans-serif with sharp edges. Incorporate data visualization elements that look like forensic evidence tracking."
+      },
+      "exampleOutline": [
+        "Opening: Dramatic reveal of Zoom's AI test claim",
+        "Context: What is the 'Humanity's Last Exam'?",
+        "Investigation: Breakdown of Zoom's controversial score",
+        "Expert Analysis: Potential implications of alleged cheating",
+        "Conclusion: Broader lessons for AI ethics and transparency"
+      ],
+      "hashtags": "#ZoomAI #AIEthics #TechScandal #ArtificialIntelligence #TechInvestigation #AITesting #InnovationWatch #TechCriticism #AIResearch #DataIntegrity",
+      "textureIndex": 9
+    },
+    {
+      "title": "How to build your PM second brain with ChatGPT",
+      "description": "Use AI to amplify your craft, not replace it",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/how-to-build-your-pm-second-brain"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "AI: Your Secret Weapon for Product Management",
+        "How ChatGPT Transforms Product Managers' Workflow",
+        "Build Your Ultimate PM Intelligence System"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use cinematic B-roll of product managers working",
+            "Include expert interview clips for credibility",
+            "Create dynamic screen recordings with commentary overlay"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Modern tech-documentary aesthetic with deep blue and electric accent colors. Clean, futuristic typography with sans-serif geometric fonts. Dynamic motion graphics showing AI workflow transitions. Picture-in-picture split screens demonstrating tool interactions. Subtle holographic/data visualization elements to enhance tech storytelling."
+      },
+      "exampleOutline": [
+        "Opening: Personal story of PM workflow challenge",
+        "Problem: Traditional knowledge management limitations",
+        "Solution: ChatGPT as intelligent workflow amplifier",
+        "Technical Deep Dive: Practical implementation strategies",
+        "Future Vision: AI-augmented product management"
+      ],
+      "hashtags": "#AIForPM #ProductManagement #ChatGPT #TechWorkflow #AITools #ProductStrategy #CareerTips #InnovationTechnology #WorkSmart #ProfessionalDevelopment",
+      "textureIndex": 7
+    }
+  ]
+}

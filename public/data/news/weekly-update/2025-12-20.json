@@ -1,6 +1,6 @@
 {
   "type": "weekly-update",
-  "date": "2025-12-21T16:19:22.871Z",
+  "date": "2025-12-20T16:19:36.947Z",
   "updates": [
     {
       "title": "8 tips for designers building branded templates in Figma Buzz",
@@ -12,18 +12,40 @@
           "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
         },
         {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+          "name": "Figmalion",
+          "url": "https://figmalion.com/issue/221"
         },
         {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/products/page/3"
+          "name": "Figma",
+          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
         }
       ],
       "tier": "featured",
       "sourceUrl": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/",
       "topicCategory": "design-ux",
       "totalSources": 8
+    },
+    {
+      "title": "OpenAI adds new teen safety rules to ChatGPT as lawmakers weigh AI standards for minors",
+      "description": "OpenAI updated its guidelines for how its AI models should behave with users under 18, and published new AI literacy resources for teens and parents. Still, questions remain about how well policies translate into practice.",
+      "timestamp": "12/19/2025, 5:51 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/19/openai-adds-new-teen-safety-rules-to-models-as-lawmakers-weigh-ai-standards-for-minors/"
+        },
+        {
+          "name": "Cdn",
+          "url": "https://cdn.openai.com/pdf/OAI%20Teen%20Safety%20Blueprint.pdf"
+        },
+        {
+          "name": "Openai",
+          "url": "https://openai.com/index/teen-safety-freedom-and-privacy/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/2025/12/19/openai-adds-new-teen-safety-rules-to-models-as-lawmakers-weigh-ai-standards-for-minors/",
+      "topicCategory": "ai-creative"
     },
     {
       "title": "Introducing three new tools for precise image editing in Figma",
@@ -54,7 +76,7 @@
       "tier": "featured",
       "sourceUrl": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/",
       "topicCategory": "design-ux",
-      "totalSources": 8
+      "totalSources": 7
     },
     {
       "title": "Three new features to help build brand momentum with Figma Buzz",
@@ -64,46 +86,25 @@
         {
           "name": "Figma Blog",
           "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "7span",
-          "url": "https://7span.com/blog/figma-buzz"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=0lSS7m3Lh0g"
-        },
-        {
-          "name": "Designsystems",
-          "url": "https://designsystems.surf/articles/one-stack-to-rule-them-all-figma-s-2025-power-suite-and-what-it-means-for-your-workflow"
-        },
-        {
-          "name": "Blog",
-          "url": "https://blog.logrocket.com/ux-design/figma-config-2025-whats-new-whats-next/"
-        }
-      ],
-      "tier": "featured",
-      "sourceUrl": "https://www.figma.com/blog/new-features-in-figma-buzz/",
-      "topicCategory": "design-ux",
-      "totalSources": 23
-    },
-    {
-      "title": "OpenAI adds new teen safety rules to ChatGPT as lawmakers weigh AI standards for minors",
-      "description": "OpenAI updated its guidelines for how its AI models should behave with users under 18, and published new AI literacy resources for teens and parents. Still, questions remain about how well policies translate into practice.",
-      "timestamp": "12/19/2025, 5:51 PM",
-      "sources": [
-        {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2025/12/19/openai-adds-new-teen-safety-rules-to-models-as-lawmakers-weigh-ai-standards-for-minors/"
         }
       ],
       "tier": "quick",
-      "sourceUrl": "https://techcrunch.com/2025/12/19/openai-adds-new-teen-safety-rules-to-models-as-lawmakers-weigh-ai-standards-for-minors/",
-      "topicCategory": "ai-creative"
+      "sourceUrl": "https://www.figma.com/blog/new-features-in-figma-buzz/",
+      "topicCategory": "design-ux"
+    },
+    {
+      "title": "Hardware’s brutal week: iRobot, Luminar, and Rad Power go bankrupt",
+      "description": "The hardware world had a brutal week, with iRobot, Luminar, and Rad Power Bikes all filing for bankruptcy.  Each company faces its own mix of tariff pressures, supply chain issues, and shifting markets, but together they tell a larger story about the challenges of building physical products in an era of global trade tensions and […]",
+      "timestamp": "12/19/2025, 6:18 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/hardwares-brutal-week-irobot-luminar-and-rad-power-go-bankrupt/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/podcast/hardwares-brutal-week-irobot-luminar-and-rad-power-go-bankrupt/",
+      "topicCategory": "general-tech"
     },
     {
       "title": "Just our type: The story of creating Figma Sans",
@@ -120,17 +121,17 @@
       "topicCategory": "branding"
     },
     {
-      "title": "New York Governor Kathy Hochul signs RAISE Act to regulate AI safety",
-      "description": "The bill will require large AI developers to publish information about their safety protocols and report safety incidents to the state within 72 hours.",
-      "timestamp": "12/20/2025, 6:20 PM",
+      "title": "From Roombas to e-bikes, why are hardware startups going bankrupt?",
+      "description": "The hardware world had a brutal week, with iRobot, Luminar, and Rad Power Bikes all filing for bankruptcy.  Each company faces its own mix of tariff pressures, supply chain issues, and shifting markets, but together they tell a larger story about the challenges of building physical products in an era of global trade tensions and cheap overseas competition. From […]",
+      "timestamp": "12/19/2025, 1:00 PM",
       "sources": [
         {
           "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2025/12/20/new-york-governor-kathy-hochul-signs-raise-act-to-regulate-ai-safety/"
+          "url": "https://techcrunch.com/video/from-roombas-to-e-bikes-why-are-hardware-startups-going-bankrupt/"
         }
       ],
       "tier": "quick",
-      "sourceUrl": "https://techcrunch.com/2025/12/20/new-york-governor-kathy-hochul-signs-raise-act-to-regulate-ai-safety/",
+      "sourceUrl": "https://techcrunch.com/video/from-roombas-to-e-bikes-why-are-hardware-startups-going-bankrupt/",
       "topicCategory": "general-tech"
     },
     {
@@ -146,20 +147,6 @@
       "tier": "quick",
       "sourceUrl": "https://www.figma.com/blog/figma-on-figma-evolving-our-visual-language/",
       "topicCategory": "branding"
-    },
-    {
-      "title": "Keeping creativity flowing when times are tough",
-      "description": "Building a culture where everyone feels safe and encouraged to contribute is no small task. We are always interested in the ways teams use Figma to do just that—brainstorm, ideate, team-build—and it’s one of the many reasons we launched FigJam. Here, Senior Illustrator Alek Mackie shares how he stays creative and productive.",
-      "timestamp": "07/15/2021, 12:00 AM",
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/keeping-creativity-flowing/"
-        }
-      ],
-      "tier": "quick",
-      "sourceUrl": "https://www.figma.com/blog/keeping-creativity-flowing/",
-      "topicCategory": "general-tech"
     }
   ]
 }

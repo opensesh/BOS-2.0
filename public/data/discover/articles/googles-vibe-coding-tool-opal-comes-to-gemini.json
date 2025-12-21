@@ -1,0 +1,399 @@
+{
+  "id": "googles-vibe-coding-tool-opal-comes-to-gemini",
+  "slug": "googles-vibe-coding-tool-opal-comes-to-gemini",
+  "title": "Google’s Opal vibe‑coding tool lands inside Gemini, turning the chatbot into a no‑code app studio",
+  "publishedAt": "2025-12-17T16:21:19.314Z",
+  "generatedAt": "2025-12-17T16:21:19.314Z",
+  "totalSources": 18,
+  "sections": [
+    {
+      "id": "section-0",
+      "paragraphs": [
+        {
+          "id": "para-0-0",
+          "content": "Google has integrated its experimental vibe-coding tool **Opal** directly into the Gemini web app, allowing users to build AI-powered mini-apps—known as **Gems**—through natural language and a visual editor.The integration means anyone using Gemini on the web can now describe a tool they want, like a learning coach or brainstorming assistant, and have Opal assemble it as a reusable Gem without writing code.Opal converts plain-language descriptions into chained steps that combine prompts, models and tools, all managed from the existing Gems interface inside Gemini.The move elevates Gemini from a general-purpose chatbot to a lightweight app-building environment aimed at non-coders and everyday users.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-1",
+                "name": "TechCrunch AI",
+                "url": "https://techcrunch.com/2025/12/17/googles-vibe-coding-tool-opal-comes-to-gemini/",
+                "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
+                "title": "Google’s vibe-coding tool Opal comes to Gemini"
+              },
+              "additionalCount": 2,
+              "additionalSources": [
+                {
+                  "id": "source-2",
+                  "name": "youreverydayai",
+                  "url": "https://www.youreverydayai.com/google-opal-the-simplest-vibe-coding-ever-how-to-use-it/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.youreverydayai.com&sz=32",
+                  "title": "Google’s vibe-coding tool Opal comes to Gemini"
+                },
+                {
+                  "id": "source-3",
+                  "name": "careeraheadonline",
+                  "url": "https://careeraheadonline.com/google-integrates-opal-vibe-coding-tool-into-gemini/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=careeraheadonline.com&sz=32",
+                  "title": "Google’s vibe-coding tool Opal comes to Gemini"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "para-0-1",
+          "content": "Hands-on coverage shows Opal’s Gemini integration includes a canvas-style visual editor that lays out each step of a mini-app, letting users rearrange logic and link components with drag-and-drop controls.Reviewers say the system can turn a short prompt into a functioning mini-app in under a minute, with the option to jump into an Advanced Editor at opal.google.com for deeper customization.Early analysis positions this as Google’s most accessible “vibe‑coding” experience to date, contrasting it with more developer-centric tools that still expose code.Commentators also note that by chaining Gemini models, image and audio tools in one place, Opal gives Gemini a stronger answer to rival no‑code AI platforms.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-4",
+                "name": "youtube",
+                "url": "https://www.youtube.com/watch?v=JCt93jzIBZ8",
+                "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
+                "title": "Google’s vibe-coding tool Opal comes to Gemini"
+              },
+              "additionalCount": 2,
+              "additionalSources": [
+                {
+                  "id": "source-5",
+                  "name": "designwithai",
+                  "url": "https://designwithai.substack.com/p/vibe-coding-with-google-ai-studio",
+                  "favicon": "https://www.google.com/s2/favicons?domain=designwithai.substack.com&sz=32",
+                  "title": "Google’s vibe-coding tool Opal comes to Gemini"
+                },
+                {
+                  "id": "source-6",
+                  "name": "blog",
+                  "url": "https://blog.google/technology/ai/google-ai-updates-november-2025/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=blog.google&sz=32",
+                  "title": "Google’s vibe-coding tool Opal comes to Gemini"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-1",
+      "title": "Inside Opal’s no‑code engine: how Gemini now builds mini‑apps from a prompt",
+      "paragraphs": [
+        {
+          "id": "para-1-0",
+          "content": "Google’s broader AI roadmap has framed vibe-coding as central to Gemini 3, which the company calls its “most powerful agentic and vibe coding model yet,” designed to turn ideas into interactive tools.Opal sits on top of this stack as a visual workflow builder: users describe what they want, while Gemini models decompose that request into steps like data gathering, reasoning, and output formatting.Google’s AI Studio materials describe Opal as a way to “vibe code with Gemini,” chaining prompts, models and tools so that multi-step flows—from research to generation—can be authored entirely in natural language.Developer documentation further underscores that these flows are shareable mini-apps, intended to be remixed and iterated on rather than treated as static one-off chats.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-7",
+                "name": "aistudio",
+                "url": "https://aistudio.google.com/vibe-code",
+                "favicon": "https://www.google.com/s2/favicons?domain=aistudio.google.com&sz=32",
+                "title": "Google’s vibe-coding tool Opal comes to Gemini"
+              },
+              "additionalCount": 2,
+              "additionalSources": [
+                {
+                  "id": "source-8",
+                  "name": "developers",
+                  "url": "https://developers.googleblog.com/introducing-opal/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=developers.googleblog.com&sz=32",
+                  "title": "Google’s vibe-coding tool Opal comes to Gemini"
+                },
+                {
+                  "id": "source-9",
+                  "name": "indianexpress",
+                  "url": "https://indianexpress.com/article/technology/artificial-intelligence/google-gemini-web-opal-ai-vibe-coding-mini-apps-10424757/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=indianexpress.com&sz=32",
+                  "title": "Google’s vibe-coding tool Opal comes to Gemini"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "para-1-1",
+          "content": "Indian tech coverage of the Gemini web rollout notes that Opal’s editor now includes a mode that automatically turns a user’s written prompt into a list of discrete steps, making it easier to understand and adjust how the mini-app works. Android-focused reports add that on the Gemini web interface, Opal’s capabilities appear under a Labs-branded “Build AI apps” banner in the Gems tab, even if the Opal name itself is downplayed for mainstream users. In practice, users see pre-built Gems—like learning coaches or coding partners—alongside their own creations, with Opal quietly powering any new mini-apps or “Super Gems” they set up. The same reports highlight that while the feature remains experimental and region-limited, it marks a clear step in Google’s pattern of migrating successful Labs experiments into the core Gemini experience.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-10",
+                "name": "androidcentral",
+                "url": "https://www.androidcentral.com/apps-software/ai/gemini-can-now-build-you-custom-mini-apps-with-this-experimental-gem",
+                "favicon": "https://www.google.com/s2/favicons?domain=www.androidcentral.com&sz=32",
+                "title": "Google’s vibe-coding tool Opal comes to Gemini"
+              },
+              "additionalCount": 2,
+              "additionalSources": [
+                {
+                  "id": "source-11",
+                  "name": "gemini",
+                  "url": "https://gemini.google/latest-news/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=gemini.google&sz=32",
+                  "title": "Google’s vibe-coding tool Opal comes to Gemini"
+                },
+                {
+                  "id": "source-12",
+                  "name": "oodaloop",
+                  "url": "https://oodaloop.com/briefs/technology/googles-vibe-coding-tool-opal-comes-to-gemini/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=oodaloop.com&sz=32",
+                  "title": "Google’s vibe-coding tool Opal comes to Gemini"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-2",
+      "title": "A new front in the vibe‑coding race—and what it means for users",
+      "paragraphs": [
+        {
+          "id": "para-2-0",
+          "content": "Google’s official Gemini news hub presents Opal’s arrival as part of a wave of product updates that push “agentic” and personalized experiences deeper into everyday tools. Briefings for analysts emphasize that by letting users encapsulate repeat workflows as Gems, Gemini can function less like a one-off chatbot and more like a catalog of tailored assistants. Industry write-ups describe this as Google’s answer to custom GPTs and other no-code AI builders, but with tighter ties to its own ecosystem of models and services. Security- and strategy-focused newsletters, meanwhile, stress that Opal’s mini-apps could quickly proliferate inside organizations, raising questions about governance, logging and standardization even as they promise major productivity gains.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-13",
+                "name": "bitcoinworld",
+                "url": "https://bitcoinworld.co.in/google-opal-gemini-vibe-coding/",
+                "favicon": "https://www.google.com/s2/favicons?domain=bitcoinworld.co.in&sz=32",
+                "title": "Google’s vibe-coding tool Opal comes to Gemini"
+              },
+              "additionalCount": 2,
+              "additionalSources": [
+                {
+                  "id": "source-14",
+                  "name": "blog",
+                  "url": "https://blog.google/products/gemini/gemini-3-examples-demos/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=blog.google&sz=32",
+                  "title": "Google’s vibe-coding tool Opal comes to Gemini"
+                },
+                {
+                  "id": "source-15",
+                  "name": "cloud",
+                  "url": "https://cloud.google.com/discover/what-is-vibe-coding",
+                  "favicon": "https://www.google.com/s2/favicons?domain=cloud.google.com&sz=32",
+                  "title": "Google’s vibe-coding tool Opal comes to Gemini"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "para-2-1",
+          "content": "Google’s own demo materials for Gemini 3 showcase scenarios where a single natural-language brief leads to a full workflow spanning research, generation and interactive UI, hinting at where Opal could evolve next. Cloud documentation on vibe-coding suggests future tools will increasingly let non-developers compose not just prompts but full, agentic applications that can act across services and data sources. Analysts say this positions Gemini and Opal at the center of a larger shift, where AI models become the primary interface for both building and running software-like experiences. At the same time, they warn enterprises to treat Opal-built Gems as real applications—subject to review, monitoring and access controls—as vibe-coding moves from experiment to everyday practice.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-16",
+                "name": "vocal",
+                "url": "https://vocal.media/futurism/understanding-google-opal-for-ai-app-development-in-2026",
+                "favicon": "https://www.google.com/s2/favicons?domain=vocal.media&sz=32",
+                "title": "Google’s vibe-coding tool Opal comes to Gemini"
+              },
+              "additionalCount": 2,
+              "additionalSources": [
+                {
+                  "id": "source-17",
+                  "name": "youtube",
+                  "url": "https://www.youtube.com/watch?v=2aA9rZ10-F8",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
+                  "title": "Google’s vibe-coding tool Opal comes to Gemini"
+                },
+                {
+                  "id": "source-18",
+                  "name": "opal",
+                  "url": "https://opal.google",
+                  "favicon": "https://www.google.com/s2/favicons?domain=opal.google&sz=32",
+                  "title": "Google’s vibe-coding tool Opal comes to Gemini"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sourceCards": [
+    {
+      "id": "source-1",
+      "name": "TechCrunch AI",
+      "url": "https://techcrunch.com/2025/12/17/googles-vibe-coding-tool-opal-comes-to-gemini/",
+      "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
+      "title": "Google’s vibe-coding tool Opal comes to Gemini"
+    },
+    {
+      "id": "source-2",
+      "name": "youreverydayai",
+      "url": "https://www.youreverydayai.com/google-opal-the-simplest-vibe-coding-ever-how-to-use-it/",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.youreverydayai.com&sz=32",
+      "title": "Google’s vibe-coding tool Opal comes to Gemini"
+    },
+    {
+      "id": "source-3",
+      "name": "careeraheadonline",
+      "url": "https://careeraheadonline.com/google-integrates-opal-vibe-coding-tool-into-gemini/",
+      "favicon": "https://www.google.com/s2/favicons?domain=careeraheadonline.com&sz=32",
+      "title": "Google’s vibe-coding tool Opal comes to Gemini"
+    },
+    {
+      "id": "source-4",
+      "name": "youtube",
+      "url": "https://www.youtube.com/watch?v=JCt93jzIBZ8",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
+      "title": "Google’s vibe-coding tool Opal comes to Gemini"
+    },
+    {
+      "id": "source-5",
+      "name": "designwithai",
+      "url": "https://designwithai.substack.com/p/vibe-coding-with-google-ai-studio",
+      "favicon": "https://www.google.com/s2/favicons?domain=designwithai.substack.com&sz=32",
+      "title": "Google’s vibe-coding tool Opal comes to Gemini"
+    },
+    {
+      "id": "source-6",
+      "name": "blog",
+      "url": "https://blog.google/technology/ai/google-ai-updates-november-2025/",
+      "favicon": "https://www.google.com/s2/favicons?domain=blog.google&sz=32",
+      "title": "Google’s vibe-coding tool Opal comes to Gemini"
+    }
+  ],
+  "allSources": [
+    {
+      "id": "source-1",
+      "name": "TechCrunch AI",
+      "url": "https://techcrunch.com/2025/12/17/googles-vibe-coding-tool-opal-comes-to-gemini/",
+      "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
+      "title": "Google’s vibe-coding tool Opal comes to Gemini"
+    },
+    {
+      "id": "source-2",
+      "name": "youreverydayai",
+      "url": "https://www.youreverydayai.com/google-opal-the-simplest-vibe-coding-ever-how-to-use-it/",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.youreverydayai.com&sz=32",
+      "title": "Google’s vibe-coding tool Opal comes to Gemini"
+    },
+    {
+      "id": "source-3",
+      "name": "careeraheadonline",
+      "url": "https://careeraheadonline.com/google-integrates-opal-vibe-coding-tool-into-gemini/",
+      "favicon": "https://www.google.com/s2/favicons?domain=careeraheadonline.com&sz=32",
+      "title": "Google’s vibe-coding tool Opal comes to Gemini"
+    },
+    {
+      "id": "source-4",
+      "name": "youtube",
+      "url": "https://www.youtube.com/watch?v=JCt93jzIBZ8",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
+      "title": "Google’s vibe-coding tool Opal comes to Gemini"
+    },
+    {
+      "id": "source-5",
+      "name": "designwithai",
+      "url": "https://designwithai.substack.com/p/vibe-coding-with-google-ai-studio",
+      "favicon": "https://www.google.com/s2/favicons?domain=designwithai.substack.com&sz=32",
+      "title": "Google’s vibe-coding tool Opal comes to Gemini"
+    },
+    {
+      "id": "source-6",
+      "name": "blog",
+      "url": "https://blog.google/technology/ai/google-ai-updates-november-2025/",
+      "favicon": "https://www.google.com/s2/favicons?domain=blog.google&sz=32",
+      "title": "Google’s vibe-coding tool Opal comes to Gemini"
+    },
+    {
+      "id": "source-7",
+      "name": "aistudio",
+      "url": "https://aistudio.google.com/vibe-code",
+      "favicon": "https://www.google.com/s2/favicons?domain=aistudio.google.com&sz=32",
+      "title": "Google’s vibe-coding tool Opal comes to Gemini"
+    },
+    {
+      "id": "source-8",
+      "name": "developers",
+      "url": "https://developers.googleblog.com/introducing-opal/",
+      "favicon": "https://www.google.com/s2/favicons?domain=developers.googleblog.com&sz=32",
+      "title": "Google’s vibe-coding tool Opal comes to Gemini"
+    },
+    {
+      "id": "source-9",
+      "name": "indianexpress",
+      "url": "https://indianexpress.com/article/technology/artificial-intelligence/google-gemini-web-opal-ai-vibe-coding-mini-apps-10424757/",
+      "favicon": "https://www.google.com/s2/favicons?domain=indianexpress.com&sz=32",
+      "title": "Google’s vibe-coding tool Opal comes to Gemini"
+    },
+    {
+      "id": "source-10",
+      "name": "androidcentral",
+      "url": "https://www.androidcentral.com/apps-software/ai/gemini-can-now-build-you-custom-mini-apps-with-this-experimental-gem",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.androidcentral.com&sz=32",
+      "title": "Google’s vibe-coding tool Opal comes to Gemini"
+    },
+    {
+      "id": "source-11",
+      "name": "gemini",
+      "url": "https://gemini.google/latest-news/",
+      "favicon": "https://www.google.com/s2/favicons?domain=gemini.google&sz=32",
+      "title": "Google’s vibe-coding tool Opal comes to Gemini"
+    },
+    {
+      "id": "source-12",
+      "name": "oodaloop",
+      "url": "https://oodaloop.com/briefs/technology/googles-vibe-coding-tool-opal-comes-to-gemini/",
+      "favicon": "https://www.google.com/s2/favicons?domain=oodaloop.com&sz=32",
+      "title": "Google’s vibe-coding tool Opal comes to Gemini"
+    },
+    {
+      "id": "source-13",
+      "name": "bitcoinworld",
+      "url": "https://bitcoinworld.co.in/google-opal-gemini-vibe-coding/",
+      "favicon": "https://www.google.com/s2/favicons?domain=bitcoinworld.co.in&sz=32",
+      "title": "Google’s vibe-coding tool Opal comes to Gemini"
+    },
+    {
+      "id": "source-14",
+      "name": "blog",
+      "url": "https://blog.google/products/gemini/gemini-3-examples-demos/",
+      "favicon": "https://www.google.com/s2/favicons?domain=blog.google&sz=32",
+      "title": "Google’s vibe-coding tool Opal comes to Gemini"
+    },
+    {
+      "id": "source-15",
+      "name": "cloud",
+      "url": "https://cloud.google.com/discover/what-is-vibe-coding",
+      "favicon": "https://www.google.com/s2/favicons?domain=cloud.google.com&sz=32",
+      "title": "Google’s vibe-coding tool Opal comes to Gemini"
+    },
+    {
+      "id": "source-16",
+      "name": "vocal",
+      "url": "https://vocal.media/futurism/understanding-google-opal-for-ai-app-development-in-2026",
+      "favicon": "https://www.google.com/s2/favicons?domain=vocal.media&sz=32",
+      "title": "Google’s vibe-coding tool Opal comes to Gemini"
+    },
+    {
+      "id": "source-17",
+      "name": "youtube",
+      "url": "https://www.youtube.com/watch?v=2aA9rZ10-F8",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
+      "title": "Google’s vibe-coding tool Opal comes to Gemini"
+    },
+    {
+      "id": "source-18",
+      "name": "opal",
+      "url": "https://opal.google",
+      "favicon": "https://www.google.com/s2/favicons?domain=opal.google&sz=32",
+      "title": "Google’s vibe-coding tool Opal comes to Gemini"
+    }
+  ],
+  "heroImage": {
+    "url": "https://techcrunch.com/wp-content/uploads/2025/07/Google-Opal.jpg?resize=1200,675"
+  },
+  "sidebarSections": [
+    "Inside Opal’s no‑code engine: how Gemini now builds mini‑apps from a prompt",
+    "A new front in the vibe‑coding race—and what it means for users"
+  ],
+  "relatedArticles": []
+}

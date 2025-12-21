@@ -1,0 +1,62 @@
+{
+  "type": "monthly-outlook",
+  "date": "2025-12-17T16:24:11.276Z",
+  "updates": [
+    {
+      "title": "Figma on Figma: Evolving our visual language",
+      "description": "Figma’s visual identity has gotten a bold refresh. From playful primitives to a vibrant new palette, we’re unveiling our latest brand evolution—one that speaks to all product builders.",
+      "timestamp": "09/16/2024, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/figma-on-figma-evolving-our-visual-language/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/figma-on-figma-evolving-our-visual-language/",
+      "topicCategory": "branding"
+    },
+    {
+      "title": "Keeping creativity flowing when times are tough",
+      "description": "Building a culture where everyone feels safe and encouraged to contribute is no small task. We are always interested in the ways teams use Figma to do just that—brainstorm, ideate, team-build—and it’s one of the many reasons we launched FigJam. Here, Senior Illustrator Alek Mackie shares how he stays creative and productive.",
+      "timestamp": "07/15/2021, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/keeping-creativity-flowing/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/keeping-creativity-flowing/",
+      "topicCategory": "general-tech"
+    },
+    {
+      "title": "Behind the Plugins: Yitong Zhang, Product Designer @ Coinbase",
+      "description": "In today’s segment of “Behind the Plugins,” I’m sitting down with Yitong Zhang, Product Designer at Coinbase. Yitong joined Coinbase’s design team of 16 to help the digital currency platform create an open financial system for the world. Embarking on this big mission meant that Coinbase’s teams also had to open up their design process to be more inclusive of their partners. Find out what he is building with the Figma API and get to know the creator behind the plugin. This article is part 3 of a ",
+      "timestamp": "07/25/2019, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/behind-the-plugins-yitong-zhang-coinbase/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/behind-the-plugins-yitong-zhang-coinbase/",
+      "topicCategory": "general-tech"
+    },
+    {
+      "title": "Google tests an email-based productivity assistant",
+      "description": "Google's new email-based assistant will be available to AI Pro and Ultra plan users over the age of 18 in North America.",
+      "timestamp": "12/16/2025, 6:00 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/16/google-tests-an-email-based-productivity-assistant/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/2025/12/16/google-tests-an-email-based-productivity-assistant/",
+      "topicCategory": "general-tech"
+    }
+  ]
+}

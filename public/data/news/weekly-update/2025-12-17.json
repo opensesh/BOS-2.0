@@ -1,0 +1,152 @@
+{
+  "type": "weekly-update",
+  "date": "2025-12-17T16:24:11.276Z",
+  "updates": [
+    {
+      "title": "8 tips for designers building branded templates in Figma Buzz",
+      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "timestamp": "08/12/2025, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
+        },
+        {
+          "name": "Figma",
+          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+        },
+        {
+          "name": "Figmalion",
+          "url": "https://figmalion.com/topics/products/page/3"
+        }
+      ],
+      "tier": "featured",
+      "sourceUrl": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/",
+      "topicCategory": "design-ux",
+      "totalSources": 12
+    },
+    {
+      "title": "Google’s vibe-coding tool Opal comes to Gemini",
+      "description": "The company on Wednesday said it is integrating the tool, which lets you build AI-powered mini apps, inside the Gemini web app, allowing users to create their own custom apps.",
+      "timestamp": "12/17/2025, 3:16 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/17/googles-vibe-coding-tool-opal-comes-to-gemini/"
+        },
+        {
+          "name": "Testingcatalog",
+          "url": "https://www.testingcatalog.com/google-started-rolling-out-super-gems-from-opal-inside-gemini/"
+        },
+        {
+          "name": "Prnewswire",
+          "url": "https://www.prnewswire.com/news-releases/optimizely-opal-available-in-gemini-enterprise-from-google-cloud-bringing-enterprise-grade-ai-agents-to-marketing-teams-302586588.html"
+        },
+        {
+          "name": "Oodaloop",
+          "url": "https://oodaloop.com/briefs/technology/googles-vibe-coding-tool-opal-comes-to-gemini/"
+        },
+        {
+          "name": "Bitcoinworld",
+          "url": "https://bitcoinworld.co.in/google-opal-gemini-vibe-coding/"
+        },
+        {
+          "name": "Findarticles",
+          "url": "https://www.findarticles.com/opal-mini-app-builder-added-to-gemini-web/"
+        }
+      ],
+      "tier": "featured",
+      "sourceUrl": "https://techcrunch.com/2025/12/17/googles-vibe-coding-tool-opal-comes-to-gemini/",
+      "topicCategory": "ai-creative",
+      "totalSources": 18
+    },
+    {
+      "title": "OpenAI continues on its ‘code red’ warpath with new image generation model",
+      "description": "OpenAI rolls out GPT Image 1.5 for ChatGPT, promising 4x faster generation, better instruction-following, and precise edits. The launch  escalates its rivalry with Google Gemini.",
+      "timestamp": "12/16/2025, 6:22 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/16/openai-continues-on-its-code-red-warpath-with-new-image-generation-model/"
+        },
+        {
+          "name": "Openai",
+          "url": "https://openai.com/index/introducing-4o-image-generation/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/2025/12/16/openai-continues-on-its-code-red-warpath-with-new-image-generation-model/",
+      "topicCategory": "ai-creative"
+    },
+    {
+      "title": "Hard problems are still hard: A story about the tools that change and the work that doesn't",
+      "description": "Figma designer–turned–product manager Nikolas Klein worked on building prototyping tools for seven years. Then AI changed the game.",
+      "timestamp": "12/12/2025, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/hard-problems-are-still-hard/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/hard-problems-are-still-hard/",
+      "topicCategory": "design-ux"
+    },
+    {
+      "title": "Introducing three new tools for precise image editing in Figma",
+      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
+      "timestamp": "12/10/2025, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/",
+      "topicCategory": "design-ux"
+    },
+    {
+      "title": "DoorDash rolls out Zesty, an AI social app for discovering new restaurants",
+      "description": "Users can view and share photos and comments about restaurants they’ve visited, discover content from others, and follow people just like on any social network.",
+      "timestamp": "12/16/2025, 6:48 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/16/doordash-rolls-out-zesty-an-ai-social-app-for-discovering-new-restaurants/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/2025/12/16/doordash-rolls-out-zesty-an-ai-social-app-for-discovering-new-restaurants/",
+      "topicCategory": "ai-creative"
+    },
+    {
+      "title": "Just our type: The story of creating Figma Sans",
+      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
+      "timestamp": "09/05/2024, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/the-story-of-creating-figma-sans/",
+      "topicCategory": "branding"
+    },
+    {
+      "title": "Super Peach by Pentagram",
+      "description": "Restaurant brand Momofuku began life with its New York Noodle Bar in 2004 and in the two decades since, has opened more than 15 restaurants across North America, each building on founder chef David Chang’s vision of boundary-pushing cuisine. Since its naissance Momofuku “became known for reshaping Asian-American cuisine and challenging dining conventions with a bold and innovative approach,” according\nThe post Super Peach by Pentagram appeared first on BP&O - Branding, Packaging and Opinion.",
+      "timestamp": "12/16/2025, 9:15 AM",
+      "sources": [
+        {
+          "name": "BP&O",
+          "url": "https://bpando.org/2025/12/16/super-peach-restaurant-branding-by-pentagram/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://bpando.org/2025/12/16/super-peach-restaurant-branding-by-pentagram/",
+      "topicCategory": "branding"
+    }
+  ]
+}

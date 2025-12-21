@@ -1,0 +1,211 @@
+{
+  "type": "long-form",
+  "date": "2025-12-17T16:30:00.450Z",
+  "ideas": [
+    {
+      "title": "Gemini 3 Flash: frontier intelligence built for speed",
+      "description": "&lt;img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3_flash_model_blog_heade.max-600x600.format-webp.webp\"&gt;Gemini 3 Flash offers frontier intelligence built for speed at a fraction of the cost.",
+      "starred": true,
+      "sources": [
+        {
+          "name": "Google AI Blog",
+          "url": "https://blog.google/products/gemini/gemini-3-flash/"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "AI Speed Revolution: Gemini 3 Flash Unleashed",
+        "Frontier Intelligence Meets Lightning-Fast Performance",
+        "The Future of AI: Faster, Smarter, Cheaper"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use cinematic B-roll of data centers and AI infrastructure",
+            "Incorporate dynamic screen recordings of Gemini 3 Flash in action",
+            "Create chapter markers highlighting technical performance insights"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast blue and white color palette with electric accent colors. Sleek, futuristic motion graphics overlaying technical footage. Dynamic typography with angular, high-tech feel. Utilize split-screen and rapid transition effects to emphasize speed. Visual references: MKBHD tech reviews, Apple product launch videos, cutting-edge tech documentaries"
+      },
+      "exampleOutline": [
+        "Section 1: Cold Open - Dramatic AI Performance Demonstration",
+        "Section 2: The AI Performance Problem in Modern Computing",
+        "Section 3: Gemini 3 Flash - Technical Deep Dive",
+        "Section 4: Real-World Impact and Potential Applications",
+        "Section 5: Future of AI Performance Call-to-Action"
+      ],
+      "hashtags": "#AI #GeminiFlash #ArtificialIntelligence #TechInnovation #MachineLearning #GoogleAI #TechDocumentary #AIPerformance #FutureOfTech #IntelligentComputing",
+      "textureIndex": 8
+    },
+    {
+      "title": "Google launches Gemini 3 Flash, makes it the default model in the Gemini app",
+      "description": "Google is making Gemini 3 Flash the default model in the Gemini app and oAI model for Search",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/17/google-launches-gemini-3-flash-makes-it-the-default-model-in-the-gemini-app/"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "Gemini 3 Flash: Your AI Search Revolution Starts Here",
+        "Google's New AI: 5 Game-Changing Steps You Need to Know",
+        "Unlock Gemini 3 Flash: The Ultimate Search Transformation"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use screen recording to demonstrate Gemini 3 Flash interface",
+            "Create clear chapter markers for each tutorial step",
+            "Include picture-in-picture for contextual explanations and visual interest"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, dynamic visual approach with high-contrast blue and white color palette. Geometric motion graphics showing AI transformation. Clean, technical typography with rounded sans-serif fonts. Animated step-by-step transitions with subtle parallax effects. Reference aesthetic: Modern tech interface design with Apple and Google design language influences."
+      },
+      "exampleOutline": [
+        "Introduction: Why Gemini 3 Flash Matters",
+        "Context: Google's AI Search Evolution",
+        "Step-by-Step: Navigating the New Gemini App Interface",
+        "Advanced Techniques: Maximizing Search Capabilities",
+        "Future Implications and Learning Recommendations"
+      ],
+      "hashtags": "#GoogleAI #GeminiFLash #AISearch #TechTutorial #AIInnovation #SearchTechnology #GoogleTips #AILearning #TechTrends #AIUpdate",
+      "textureIndex": 8
+    },
+    {
+      "title": "Mozilla&#8217;s new CEO says AI is coming to Firefox, but will remain a choice",
+      "description": "Mozilla has appointed Anthony Enzor-DeMeo as its CEO, as the Firefox developer scrambles to adapt in a rapidly changing browser market.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/17/mozillas-new-ceo-says-ai-is-coming-to-firefox-but-will-remain-a-choice/"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "Firefox's AI Revolution: What Users Need to Know",
+        "AI in Your Browser: Mozilla's Radical New Strategy",
+        "The Future of Browsing Just Got Smarter"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Enable live chat for real-time audience interaction during Q&A",
+            "Use YouTube's community tab to pre-announce live stream and gather questions",
+            "Prepare pre-submitted audience questions to maintain stream momentum"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dynamic tech-forward visual aesthetic with futuristic blue-grey color palette, holographic overlay elements, clean sans-serif typography. Incorporate animated AI/circuit-like graphic transitions. Picture-in-picture layout with host and dynamic information graphics. Motion design that feels cutting-edge but not overwhelming."
+      },
+      "exampleOutline": [
+        "Introduction: Meet Mozilla's New CEO & AI Vision",
+        "Current Browser Landscape & Challenges",
+        "Mozilla's AI Integration Strategy",
+        "User Choice & Privacy Considerations",
+        "Live Q&A: Audience Questions & Interactive Insights"
+      ],
+      "hashtags": "#MozillaAI #FirefoxUpdate #AIBrowser #TechInnovation #WebTechnology #BrowserFuture #AIPrivacy #TechTrends #MozillaCEO #InternetTechnology",
+      "textureIndex": 10
+    },
+    {
+      "title": "Google&#8217;s vibe-coding tool Opal comes to Gemini",
+      "description": "The company on Wednesday said it is integrating the tool, which lets you build AI-powered mini apps, inside the Gemini web app, allowing users to create their own custom apps.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/17/googles-vibe-coding-tool-opal-comes-to-gemini/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "Google's Secret App Builder Just Got Wild",
+        "Create Custom Apps in 60 Seconds with Gemini",
+        "AI App Development: No Code Required"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use screen recording to demonstrate Opal tool live",
+            "Include picture-in-picture of presenter for personal connection",
+            "Add dynamic chapter markers for easy navigation"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy tech aesthetic with electric blue and charcoal accents, dynamic motion graphics showing code transformation, sleek sans-serif typography, animated UI transitions highlighting app creation process, minimal but energetic composition with tech-forward visual metaphors"
+      },
+      "exampleOutline": [
+        "Intro: Shocking AI App Creation Revolution",
+        "What is Opal? Google's New Secret Weapon",
+        "Live Demonstration: Building a Mini App in Real-Time",
+        "Technical Deep Dive: How Gemini Makes This Possible",
+        "Future of No-Code Development Revealed"
+      ],
+      "hashtags": "#GoogleAI #NoCode #AITools #TechInnovation #GeminiAI #AppDevelopment #AITutorial #TechTrends #CodelessApps #AIRevolution",
+      "textureIndex": 7
+    },
+    {
+      "title": "Full Tutorial: Build Your AI Coach to Improve Your Health and Fitness in 2026",
+      "description": "A step-by-step guide to hiring a AI health coach that gives you personalized advice",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Peter Yang (Creator Economy)",
+          "url": "https://creatoreconomy.so/p/full-tutorial-build-your-ai-coach-to-improve-your-health-and-fitness"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "Build Your Personal AI Health Coach in 60 Minutes",
+        "Transform Fitness with Custom AI Assistant Today",
+        "Hack Your Health: DIY AI Coach Tutorial"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use clear, numbered chapter markers for tutorial steps",
+            "Include picture-in-picture screen recordings showing exact process",
+            "Add animated graphics explaining complex technical steps"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy, futuristic color palette with electric blues and clean whites. Dynamic motion graphics showing AI transformation. Modern sans-serif typography with technical overlay animations. Clean, technical aesthetic with human-centered warmth. Integrate subtle health/fitness imagery with tech visualization."
+      },
+      "exampleOutline": [
+        "Introduction: Why AI Health Coaching Matters",
+        "Setup: Required Tools and Technologies",
+        "Step-by-Step AI Coach Configuration",
+        "Advanced Customization Techniques",
+        "Implementation and Optimization Strategies"
+      ],
+      "hashtags": "#AIHealth #FitnessTech #PersonalCoach #AITutorial #HealthInnovation #TechWellness #AIAssistant #FitnessGoals #HealthTech #PersonalDevelopment",
+      "textureIndex": 11
+    }
+  ]
+}

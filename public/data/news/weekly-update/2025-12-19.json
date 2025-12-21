@@ -1,6 +1,6 @@
 {
   "type": "weekly-update",
-  "date": "2025-12-21T16:19:22.871Z",
+  "date": "2025-12-19T16:22:01.663Z",
   "updates": [
     {
       "title": "8 tips for designers building branded templates in Figma Buzz",
@@ -17,13 +17,12 @@
         },
         {
           "name": "Figmalion",
-          "url": "https://figmalion.com/topics/products/page/3"
+          "url": "https://figmalion.com/issue/221"
         }
       ],
-      "tier": "featured",
+      "tier": "quick",
       "sourceUrl": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/",
-      "topicCategory": "design-ux",
-      "totalSources": 8
+      "topicCategory": "design-ux"
     },
     {
       "title": "Introducing three new tools for precise image editing in Figma",
@@ -51,10 +50,9 @@
           "url": "https://www.figma.com/solutions/ai-photo-editing-app-builder/"
         }
       ],
-      "tier": "featured",
+      "tier": "quick",
       "sourceUrl": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/",
-      "topicCategory": "design-ux",
-      "totalSources": 8
+      "topicCategory": "design-ux"
     },
     {
       "title": "Three new features to help build brand momentum with Figma Buzz",
@@ -66,6 +64,10 @@
           "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
         },
         {
+          "name": "Forrester",
+          "url": "https://www.forrester.com/blogs/figma-config-2025-in-an-ai-world-design-matters-more-than-ever/"
+        },
+        {
           "name": "7span",
           "url": "https://7span.com/blog/figma-buzz"
         },
@@ -74,36 +76,14 @@
           "url": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/"
         },
         {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=0lSS7m3Lh0g"
-        },
-        {
           "name": "Designsystems",
           "url": "https://designsystems.surf/articles/one-stack-to-rule-them-all-figma-s-2025-power-suite-and-what-it-means-for-your-workflow"
-        },
-        {
-          "name": "Blog",
-          "url": "https://blog.logrocket.com/ux-design/figma-config-2025-whats-new-whats-next/"
         }
       ],
       "tier": "featured",
       "sourceUrl": "https://www.figma.com/blog/new-features-in-figma-buzz/",
       "topicCategory": "design-ux",
-      "totalSources": 23
-    },
-    {
-      "title": "OpenAI adds new teen safety rules to ChatGPT as lawmakers weigh AI standards for minors",
-      "description": "OpenAI updated its guidelines for how its AI models should behave with users under 18, and published new AI literacy resources for teens and parents. Still, questions remain about how well policies translate into practice.",
-      "timestamp": "12/19/2025, 5:51 PM",
-      "sources": [
-        {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2025/12/19/openai-adds-new-teen-safety-rules-to-models-as-lawmakers-weigh-ai-standards-for-minors/"
-        }
-      ],
-      "tier": "quick",
-      "sourceUrl": "https://techcrunch.com/2025/12/19/openai-adds-new-teen-safety-rules-to-models-as-lawmakers-weigh-ai-standards-for-minors/",
-      "topicCategory": "ai-creative"
+      "totalSources": 20
     },
     {
       "title": "Just our type: The story of creating Figma Sans",
@@ -120,18 +100,46 @@
       "topicCategory": "branding"
     },
     {
-      "title": "New York Governor Kathy Hochul signs RAISE Act to regulate AI safety",
-      "description": "The bill will require large AI developers to publish information about their safety protocols and report safety incidents to the state within 72 hours.",
-      "timestamp": "12/20/2025, 6:20 PM",
+      "title": "4P’s by Base Saigon",
+      "description": "What with it being the season to be jolly and all that, it feels almost contrarian to not be as positive as I usually am in covering projects for BP&O – after all, it’s about showcasing the very best in brand design and packaging. But in the spirit of the ‘O’ for ‘Opinion’, it’s tricky to be as nigh-on-unanimously gushing\nThe post 4P’s by Base Saigon appeared first on BP&O - Branding, Packaging and Opinion.",
+      "timestamp": "12/18/2025, 9:15 AM",
       "sources": [
         {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2025/12/20/new-york-governor-kathy-hochul-signs-raise-act-to-regulate-ai-safety/"
+          "name": "BP&O",
+          "url": "https://bpando.org/2025/12/18/4ps-branding-by-base-design-saigon/"
         }
       ],
       "tier": "quick",
-      "sourceUrl": "https://techcrunch.com/2025/12/20/new-york-governor-kathy-hochul-signs-raise-act-to-regulate-ai-safety/",
-      "topicCategory": "general-tech"
+      "sourceUrl": "https://bpando.org/2025/12/18/4ps-branding-by-base-design-saigon/",
+      "topicCategory": "branding"
+    },
+    {
+      "title": "OpenAI is reportedly trying to raise $100B at an $830B valuation",
+      "description": "The ChatGPT maker is aiming to raise the funding by the end of the first quarter in 2026, and the company may ask sovereign wealth funds to invest in the round.",
+      "timestamp": "12/19/2025, 1:32 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/19/openai-is-reportedly-trying-to-raise-100b-at-an-830b-valuation/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/2025/12/19/openai-is-reportedly-trying-to-raise-100b-at-an-830b-valuation/",
+      "topicCategory": "ai-creative"
+    },
+    {
+      "title": "ChatGPT’s mobile app hits new milestone of $3B in consumer spending",
+      "description": "ChatGPT has reached $3B in lifetime mobile consumer spending in just 31 months, faster than TikTok and major streaming apps.",
+      "timestamp": "12/18/2025, 7:50 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/18/chatgpts-mobile-app-hits-new-milestone-of-3b-in-consumer-spending/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/2025/12/18/chatgpts-mobile-app-hits-new-milestone-of-3b-in-consumer-spending/",
+      "topicCategory": "ai-creative"
     },
     {
       "title": "Figma on Figma: Evolving our visual language",
@@ -146,20 +154,6 @@
       "tier": "quick",
       "sourceUrl": "https://www.figma.com/blog/figma-on-figma-evolving-our-visual-language/",
       "topicCategory": "branding"
-    },
-    {
-      "title": "Keeping creativity flowing when times are tough",
-      "description": "Building a culture where everyone feels safe and encouraged to contribute is no small task. We are always interested in the ways teams use Figma to do just that—brainstorm, ideate, team-build—and it’s one of the many reasons we launched FigJam. Here, Senior Illustrator Alek Mackie shares how he stays creative and productive.",
-      "timestamp": "07/15/2021, 12:00 AM",
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/keeping-creativity-flowing/"
-        }
-      ],
-      "tier": "quick",
-      "sourceUrl": "https://www.figma.com/blog/keeping-creativity-flowing/",
-      "topicCategory": "general-tech"
     }
   ]
 }

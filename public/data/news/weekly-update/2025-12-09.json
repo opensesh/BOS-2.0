@@ -1,0 +1,177 @@
+{
+  "type": "weekly-update",
+  "date": "2025-12-09T16:21:44.604Z",
+  "updates": [
+    {
+      "title": "8 tips for designers building branded templates in Figma Buzz",
+      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "timestamp": "08/12/2025, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
+        },
+        {
+          "name": "Webdesignernews",
+          "url": "https://webdesignernews.com/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
+        },
+        {
+          "name": "Figmalion",
+          "url": "https://figmalion.com/topics/figma-buzz"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/watch?v=FPpzI7z_U-o"
+        },
+        {
+          "name": "Figma",
+          "url": "https://www.figma.com/blog/branding/"
+        }
+      ],
+      "tier": "featured",
+      "sourceUrl": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/",
+      "topicCategory": "design-ux",
+      "totalSources": 11
+    },
+    {
+      "title": "Claude Code is coming to Slack, and that’s a bigger deal than it sounds",
+      "description": "Anthropic launches Claude Code in Slack, letting developers delegate coding tasks from chat threads. It's part of a shift toward AI-embedded collaboration that could reshape software workflows.",
+      "timestamp": "12/08/2025, 7:18 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/08/claude-code-is-coming-to-slack-and-thats-a-bigger-deal-than-it-sounds/"
+        },
+        {
+          "name": "Techzine",
+          "url": "https://www.techzine.eu/news/collaboration/137123/anthropic-integrates-claude-code-with-slack/"
+        },
+        {
+          "name": "Cryptorank",
+          "url": "https://cryptorank.io/news/feed/f5a2a-claude-code-slack-developer-workflow"
+        },
+        {
+          "name": "Techloy",
+          "url": "https://www.techloy.com/claude-code-is-coming-to-slack-to-automate-coding-workflows-for-developers/"
+        },
+        {
+          "name": "Eweek",
+          "url": "https://www.eweek.com/news/anthropic-claude-code-slack-integration/"
+        },
+        {
+          "name": "Autogpt",
+          "url": "https://autogpt.net/anthropic-brings-claude-code-into-slack/"
+        }
+      ],
+      "tier": "featured",
+      "sourceUrl": "https://techcrunch.com/2025/12/08/claude-code-is-coming-to-slack-and-thats-a-bigger-deal-than-it-sounds/",
+      "topicCategory": "general-tech",
+      "totalSources": 10
+    },
+    {
+      "title": "Three new features to help build brand momentum with Figma Buzz",
+      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
+      "timestamp": "10/23/2025, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+        },
+        {
+          "name": "Forum",
+          "url": "https://forum.figma.com/product-updates-3/new-features-in-figma-buzz-46631"
+        },
+        {
+          "name": "Webdesignernews",
+          "url": "https://webdesignernews.com/three-new-features-to-help-build-brand-momentum-with-figma-buzz/"
+        },
+        {
+          "name": "Figma",
+          "url": "https://www.figma.com/newsroom/"
+        },
+        {
+          "name": "Figmalion",
+          "url": "https://figmalion.com/topics/figma-buzz"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/shorts/Sf_5xBPH1TM"
+        }
+      ],
+      "tier": "featured",
+      "sourceUrl": "https://www.figma.com/blog/new-features-in-figma-buzz/",
+      "topicCategory": "design-ux",
+      "totalSources": 23
+    },
+    {
+      "title": "How to streamline your design system workflow in Figma",
+      "description": "If you’ve ever stared down a blank Figma file while building a new design system, never fear: These new features and plugins will turn that mountain of work into an afternoon task.",
+      "timestamp": "04/08/2025, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/how-to-streamline-your-design-system-workflow-in-figma/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/how-to-streamline-your-design-system-workflow-in-figma/",
+      "topicCategory": "design-ux"
+    },
+    {
+      "title": "Mistral AI surfs vibe coding tailwinds with new coding models",
+      "description": "French AI startup Mistral today launched Devstral 2, a new generation of its AI model designed for coding, as the company seeks to catch up to bigger AI labs like Anthropic and other coding-focused LLMs.",
+      "timestamp": "12/09/2025, 2:45 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/09/mistral-ai-surfs-vibe-coding-tailwinds-with-new-coding-models/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/2025/12/09/mistral-ai-surfs-vibe-coding-tailwinds-with-new-coding-models/",
+      "topicCategory": "general-tech"
+    },
+    {
+      "title": "Just our type: The story of creating Figma Sans",
+      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
+      "timestamp": "09/05/2024, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/the-story-of-creating-figma-sans/",
+      "topicCategory": "branding"
+    },
+    {
+      "title": "India proposes charging OpenAI, Google for training AI on copyrighted content",
+      "description": "India has given OpenAI, Google, and other AI firms 30 days to respond to its proposed royalty system for training on copyrighted content.",
+      "timestamp": "12/09/2025, 4:09 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/09/india-proposes-charging-openai-google-for-training-ai-on-copyrighted-content/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/2025/12/09/india-proposes-charging-openai-google-for-training-ai-on-copyrighted-content/",
+      "topicCategory": "ai-creative"
+    },
+    {
+      "title": "Empromptu raises $2M pre-seed to help enterprises build AI apps",
+      "description": "Empromptu claims all a user has to do is tell the platform's AI chatbot what they want — like a new HTML or JavaScript app — and the AI will go ahead and build it.",
+      "timestamp": "12/09/2025, 1:51 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/09/empromptu-raises-2m-pre-seed-to-help-enterprises-build-ai-apps/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/2025/12/09/empromptu-raises-2m-pre-seed-to-help-enterprises-build-ai-apps/",
+      "topicCategory": "ai-creative"
+    }
+  ]
+}
