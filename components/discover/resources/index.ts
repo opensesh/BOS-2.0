@@ -26,3 +26,5 @@ export type {
 } from '@/types/resource-discovery';
 
 export { DEFAULT_CATEGORY_COLORS } from '@/types/resource-discovery';
+
+

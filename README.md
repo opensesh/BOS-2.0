@@ -1,4 +1,4 @@
-# Brand Operating System (BOS)
+# Brand Operating System (BOS) 2.0
 
 A modern, responsive interface built with Next.js 14+, TypeScript, and Tailwind CSS, featuring BRAND-OS color system integration.
 

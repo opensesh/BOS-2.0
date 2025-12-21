@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useCallback } from 'react';
+import { useState, useRef, useCallback, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -14,6 +14,7 @@ import {
   ArrowUpRight,
   MessageSquare,
   Plus,
+  ChevronDown,
 } from 'lucide-react';
 import { NavigationDrawer } from './NavigationDrawer';
 import { BrandSelector } from './BrandSelector';
@@ -30,11 +31,14 @@ const navItems = [
   { label: 'Spaces', href: '/spaces', icon: LayoutGrid },
 ];
 
+const VISIBLE_CHAT_COUNT = 3;
+
 export function Sidebar() {
   const pathname = usePathname();
   const { isMobileMenuOpen, closeMobileMenu } = useMobileMenu();
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [isSidebarHovered, setIsSidebarHovered] = useState(false);
+  const [isChatsExpanded, setIsChatsExpanded] = useState(false);
   const railRef = useRef<HTMLElement>(null);
   const { chatHistory, triggerChatReset } = useChatContext();
 
@@ -53,6 +57,13 @@ export function Sidebar() {
     }
     closeMobileMenu();
   }, [pathname, triggerChatReset, closeMobileMenu]);
+
+  // Reset chat expansion when mobile menu closes
+  useEffect(() => {
+    if (!isMobileMenuOpen) {
+      setIsChatsExpanded(false);
+    }
+  }, [isMobileMenuOpen]);
 
   return (
     <>
@@ -295,22 +306,44 @@ export function Sidebar() {
                 </Link>
               </motion.div>
 
-              {/* Recent Chats */}
+              {/* Recent Chats - Limited with expand/collapse */}
               {chatHistory.length > 0 && (
                 <motion.div variants={fadeInUp} className="px-4 pb-4">
-                  <p className="text-xs font-medium text-os-text-secondary-dark uppercase tracking-wider mb-2">
-                    Recent
-                  </p>
-                  <div className="space-y-1">
-                    {chatHistory.map((chat) => (
+                  <div className="flex items-center justify-between mb-2">
+                    <p className="text-xs font-medium text-os-text-secondary-dark uppercase tracking-wider">
+                      Recent
+                    </p>
+                    {chatHistory.length > VISIBLE_CHAT_COUNT && (
                       <button
-                        key={chat.id}
-                        className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-left text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-os-text-primary-dark transition-colors"
+                        onClick={() => setIsChatsExpanded(!isChatsExpanded)}
+                        className="text-xs text-brand-aperol hover:text-brand-aperol/80 transition-colors flex items-center gap-1"
                       >
-                        <MessageSquare className="w-4 h-4 flex-shrink-0" />
-                        <span className="text-sm truncate">{chat.title}</span>
+                        {isChatsExpanded ? 'Show less' : `+${chatHistory.length - VISIBLE_CHAT_COUNT} more`}
+                        <motion.div
+                          animate={{ rotate: isChatsExpanded ? 180 : 0 }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          <ChevronDown className="w-3 h-3" />
+                        </motion.div>
                       </button>
-                    ))}
+                    )}
+                  </div>
+                  <div className="space-y-1">
+                    <AnimatePresence initial={false}>
+                      {(isChatsExpanded ? chatHistory : chatHistory.slice(0, VISIBLE_CHAT_COUNT)).map((chat, index) => (
+                        <motion.button
+                          key={chat.id}
+                          initial={index >= VISIBLE_CHAT_COUNT ? { opacity: 0, height: 0 } : false}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.2, ease: 'easeInOut' }}
+                          className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-left text-os-text-secondary-dark hover:bg-os-surface-dark hover:text-os-text-primary-dark transition-colors"
+                        >
+                          <MessageSquare className="w-4 h-4 flex-shrink-0" />
+                          <span className="text-sm truncate">{chat.title}</span>
+                        </motion.button>
+                      ))}
+                    </AnimatePresence>
                   </div>
                 </motion.div>
               )}

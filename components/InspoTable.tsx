@@ -1,12 +1,14 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { ChevronUp, ChevronDown, ChevronsUpDown, ExternalLink } from 'lucide-react';
+import { ChevronUp, ChevronDown, ChevronsUpDown, ExternalLink, Plus, KeyRound, LogOut } from 'lucide-react';
 import type { InspoResource, NormalizedResource } from '@/lib/data/inspo';
 import { normalizeResource } from '@/lib/data/inspo';
+import { isAdminMode, setAdminMode } from '@/lib/admin-auth';
+import { AdminPasswordModal } from './AdminPasswordModal';
+import { AddResourceModal } from './AddResourceModal';
 
 // Get favicon URL from domain using Google's service
 function getFaviconUrl(url: string): string {
@@ -71,17 +73,19 @@ function ResourceThumbnail({ resource }: { resource: NormalizedResource }) {
 
 interface InspoTableProps {
   resources: InspoResource[];
+  onResourceAdded?: () => void;
 }
 
 type SortField = 'name' | 'category' | 'subCategory' | 'pricing';
 type SortDirection = 'asc' | 'desc' | null;
 
-export function InspoTable({ resources: rawResources }: InspoTableProps) {
+export function InspoTable({ resources: rawResources, onResourceAdded }: InspoTableProps) {
   const router = useRouter();
 
   // Normalize resources to handle PascalCase column names from Supabase
   const resources: NormalizedResource[] = useMemo(() =>
     rawResources.map(normalizeResource), [rawResources]);
+
   // Filter state
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
   const [subCategoryFilter, setSubCategoryFilter] = useState<string>('all');
@@ -90,6 +94,17 @@ export function InspoTable({ resources: rawResources }: InspoTableProps) {
   // Sort state
   const [sortField, setSortField] = useState<SortField | null>(null);
   const [sortDirection, setSortDirection] = useState<SortDirection>(null);
+
+  // Admin state
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [adminPassword, setAdminPassword] = useState('');
+  const [showPasswordModal, setShowPasswordModal] = useState(false);
+  const [showAddModal, setShowAddModal] = useState(false);
+
+  // Check admin status on mount
+  useEffect(() => {
+    setIsAdmin(isAdminMode());
+  }, []);
 
   // Extract unique values for filters
   const filterOptions = useMemo(() => {
@@ -160,6 +175,20 @@ export function InspoTable({ resources: rawResources }: InspoTableProps) {
     return <ChevronDown className="w-4 h-4 text-brand-aperol" />;
   };
 
+  // Handle admin logout
+  const handleLogout = useCallback(() => {
+    setAdminMode(false);
+    setIsAdmin(false);
+    setAdminPassword('');
+  }, []);
+
+  // Handle resource added
+  const handleResourceAdded = useCallback(() => {
+    onResourceAdded?.();
+    // Refresh the page to show the new resource
+    router.refresh();
+  }, [onResourceAdded, router]);
+
   return (
     <div className="w-full">
       {/* Filters */}
@@ -225,14 +254,47 @@ export function InspoTable({ resources: rawResources }: InspoTableProps) {
             </select>
           </div>
 
-          {/* Results Count */}
-          <div className="flex items-end ml-auto">
+          {/* Results Count + Admin Actions */}
+          <div className="flex items-end ml-auto gap-3">
             <div className="px-3 py-2 text-sm text-os-text-secondary-dark">
               <span className="font-accent text-brand-aperol">{filteredAndSortedResources.length}</span>
               {' '}of{' '}
               <span className="font-accent">{resources.length}</span>
               {' '}resources
             </div>
+
+            {/* Admin Actions */}
+            {isAdmin ? (
+              <div className="flex items-center gap-2">
+                {/* Add Resource Button */}
+                <button
+                  onClick={() => setShowAddModal(true)}
+                  className="flex items-center gap-1.5 px-3 py-2 bg-brand-aperol text-white text-sm font-medium rounded-lg hover:bg-brand-aperol/90 transition-colors"
+                  title="Add new resource"
+                >
+                  <Plus className="w-4 h-4" />
+                  Add
+                </button>
+
+                {/* Logout Button */}
+                <button
+                  onClick={handleLogout}
+                  className="flex items-center justify-center w-9 h-9 rounded-lg bg-os-surface-dark border border-os-border-dark text-os-text-secondary-dark hover:text-brand-aperol hover:border-brand-aperol/30 transition-colors"
+                  title="Exit admin mode"
+                >
+                  <LogOut className="w-4 h-4" />
+                </button>
+              </div>
+            ) : (
+              /* Admin Unlock Button */
+              <button
+                onClick={() => setShowPasswordModal(true)}
+                className="flex items-center justify-center w-9 h-9 rounded-lg bg-os-surface-dark border border-os-border-dark text-os-text-secondary-dark hover:text-brand-aperol hover:border-brand-aperol/30 transition-colors"
+                title="Admin access"
+              >
+                <KeyRound className="w-4 h-4" />
+              </button>
+            )}
           </div>
         </div>
       </div>
@@ -363,6 +425,27 @@ export function InspoTable({ resources: rawResources }: InspoTableProps) {
           </tbody>
         </table>
       </div>
+
+      {/* Admin Password Modal */}
+      <AdminPasswordModal
+        isOpen={showPasswordModal}
+        onClose={() => setShowPasswordModal(false)}
+        onSuccess={(password) => {
+          setIsAdmin(true);
+          setAdminPassword(password);
+        }}
+      />
+
+      {/* Add Resource Modal */}
+      <AddResourceModal
+        isOpen={showAddModal}
+        onClose={() => setShowAddModal(false)}
+        onSuccess={handleResourceAdded}
+        adminPassword={adminPassword}
+        existingCategories={filterOptions.categories}
+        existingSubCategories={filterOptions.subCategories}
+        existingPricings={filterOptions.pricings}
+      />
     </div>
   );
 }

@@ -176,3 +176,5 @@ declare module 'd3-force-3d' {
     strength(strength: number | ((d: NodeDatum, i: number, data: NodeDatum[]) => number)): this;
   }
 }
+
+
