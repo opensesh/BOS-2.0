@@ -1,340 +1,291 @@
 {
   "type": "blog",
-  "date": "2025-12-21T16:19:22.872Z",
+  "date": "2025-12-21T16:25:33.750Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Waymo suspends service in San Francisco as robotaxis stall during blackout",
+      "description": "Waymo suspended its SF robotaxi service on Saturday evening after a massive blackout appeared to leave many of its vehicles stalled on city streets.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/products/page/3"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/21/waymo-suspends-service-in-san-francisco-as-robotaxis-stall-during-blackout/"
         }
       ],
       "format": "thread",
       "subcategory": "explanatory",
       "hooks": [
-        "Design Templates That Don't Break Under Marketing's Pressure",
-        "Figma Buzz: Your Brand's Flexible Design Secret",
-        "Make Templates That Scale Without Losing Soul"
+        "Robotaxis Paralyzed: When AI Meets Urban Chaos 🚗🌆",
+        "San Francisco's Blackout: The Autonomous Vehicle Apocalypse",
+        "Tech Fails: Waymo's Unexpected Street Shutdown"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Embed live Figma prototype alongside thread",
-            "Create companion deep-dive newsletter version",
-            "Include reader submission/experiment section"
+            "Use thread screenshots as native newsletter content",
+            "Add behind-the-scenes commentary about AI resilience",
+            "Create a deeper analysis of autonomous vehicle limitations"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Add detailed technical screenshots",
-            "Include SEO-optimized template design keywords",
-            "Expand each thread point into full section"
+            "Expand thread into long-form technical breakdown",
+            "Include expert interviews about robotaxi infrastructure",
+            "Add data visualizations of autonomous vehicle performance"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Include enterprise design case studies",
-            "Add quantitative impact metrics",
-            "Target design operations and brand managers"
+            "Frame as professional case study in tech innovation",
+            "Highlight enterprise learning opportunities",
+            "Include industry implications for autonomous technology"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast geometric layouts, modular grid system, bold sans-serif typography, dynamic color transitions between slides, subtle motion graphics showing template flexibility, Bauhaus-inspired design language with modern digital aesthetic"
+        "description": "High-contrast cyberpunk aesthetic with glitch effects, dark background with electric blue/neon green highlights, fragmented typography suggesting system breakdown, animated graphic showing stalled robotaxis with digital interference overlay"
       },
       "exampleOutline": [
-        "Thread Opener: Provocative Design Challenge",
-        "The Template Flexibility Problem",
-        "8 Tactical Design Template Strategies",
-        "Real-World Scalability Insights",
-        "Call-to-Action & Community Invitation"
+        "Section 1: Dramatic Blackout Scene Setting",
+        "Section 2: Waymo's Technical Challenge Explained",
+        "Section 3: Real-Time Robotaxi Failure Mechanics",
+        "Section 4: Broader Implications for Autonomous Tech",
+        "Section 5: Future Resilience Strategies CTA"
       ],
-      "hashtags": "#DesignTemplates #FigmaBuzz #BrandDesign #CreativeWorkflow #AIDesign #ProductDesign #DesignSystem #TemplateDesign #CreativeTech #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
+      "hashtags": "#AI #AutonomousVehicles #TechFail #Waymo #SanFrancisco #Innovation #RobotaxiTechnology #UrbanMobility #TechChallenges #FutureOfTransport",
+      "textureIndex": 2
     },
     {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
+      "title": "The coming AI security crisis (and what to do about it) | Sander Schulhoff",
+      "description": "AI guardrails don't work. Security researcher Sander Schulhoff on prompt injection, red teaming, why AI defenses fail, and what actually secures AI products.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/solutions/ai-photo-editing-app-builder/"
-        }
-      ],
-      "format": "case-study",
-      "subcategory": "case-study-deep-dive",
-      "hooks": [
-        "AI Transforms Figma: 3 Game-Changing Image Editing Tools",
-        "Design Precision Redefined: Figma's Latest AI Breakthrough",
-        "Unleash Creative Potential: Figma's New Image Editing Revolution"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Include real-time screen recordings of tool usage",
-            "Share personal experimentation process with new tools",
-            "Use interactive annotations to highlight key features"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Create comprehensive step-by-step visual walkthrough",
-            "Include comparative screenshots of before/after editing",
-            "Add SEO-optimized headings for discoverability"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Highlight professional productivity gains",
-            "Include industry impact statistics",
-            "Showcase potential workflow optimization for design teams"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, dynamic composition with high-contrast color palette. Modern geometric overlays showcasing tool interfaces. Animated transitions highlighting AI precision. Dark mode aesthetic with electric blue and deep gray accents. Motion graphics demonstrating tool functionality. Clean, technical typography with subtle futuristic elements."
-      },
-      "exampleOutline": [
-        "Section 1: The Design Workflow Challenge",
-        "Section 2: Introducing Figma's AI Image Editing Toolkit",
-        "Section 3: Deep Dive into Each Tool's Capabilities",
-        "Section 4: Transformative Impact on Creative Workflows",
-        "Section 5: Future of AI-Powered Design Tools"
-      ],
-      "hashtags": "#FigmaAI #DesignInnovation #AICreativity #ProductDesign #UXTools #CreativeTech #AIDesign #ImageEditing #DesignWorkflow #TechInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5438813/pexels-photo-5438813.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 3
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "7span",
-          "url": "https://7span.com/blog/figma-buzz"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=0lSS7m3Lh0g"
-        },
-        {
-          "name": "Designsystems",
-          "url": "https://designsystems.surf/articles/one-stack-to-rule-them-all-figma-s-2025-power-suite-and-what-it-means-for-your-workflow"
-        },
-        {
-          "name": "Blog",
-          "url": "https://blog.logrocket.com/ux-design/figma-config-2025-whats-new-whats-next/"
-        }
-      ],
-      "format": "article",
-      "subcategory": "visionary",
-      "hooks": [
-        "Figma Buzz: Your Design Workflow Just Got Supercharged",
-        "3 Game-Changing Features Redefining Design Efficiency",
-        "Unlock Next-Level Branding with Figma's Latest Tools"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Use personal experiment/case study approach to illustrate feature impact",
-            "Include real-time screenshots of workflow transformations",
-            "Add interactive poll about reader's current design challenges"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Optimize headline for SEO with specific keywords",
-            "Include detailed comparative screenshots",
-            "Add expert commentary from design professionals"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Frame features as professional productivity accelerators",
-            "Include quantitative metrics on time/efficiency gains",
-            "Target post to design managers and creative directors"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Dynamic, tech-forward visual aesthetic with bold geometric overlays, electric blue and slate gray color palette, motion-inspired graphic elements showing workflow transitions, clean sans-serif typography with subtle animation highlighting key feature moments"
-      },
-      "exampleOutline": [
-        "Introduction: The Evolving Design Ecosystem",
-        "The Current Design Workflow Challenge",
-        "Deep Dive: Figma Buzz's Three Transformative Features",
-        "Practical Implementation Strategies",
-        "Future of Design Automation and Collaboration"
-      ],
-      "hashtags": "#FigmaBuzz #DesignTech #CreativeWorkflow #AIDesign #ProductivityHacks #DesignInnovation #CreativeTech #WorkflowOptimization #DesignTools #FigmaUpdate",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 6
-    },
-    {
-      "title": "OpenAI adds new teen safety rules to ChatGPT as lawmakers weigh AI standards for minors",
-      "description": "OpenAI updated its guidelines for how its AI models should behave with users under 18, and published new AI literacy resources for teens and parents. Still, questions remain about how well policies translate into practice.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2025/12/19/openai-adds-new-teen-safety-rules-to-models-as-lawmakers-weigh-ai-standards-for-minors/"
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/the-coming-ai-security-crisis"
         }
       ],
       "format": "listicle",
       "subcategory": "explanatory",
       "hooks": [
-        "5 Critical AI Safety Rules Every Teen Should Know",
-        "How OpenAI is Protecting the Next Digital Generation",
-        "Teen AI Safety: What Parents Must Understand Now"
+        "AI Security: 5 Shocking Ways Your System Is Vulnerable",
+        "Hackers' Secret Playbook: Breaking AI Guardrails Exposed",
+        "Why Your AI Is One Prompt Away From Disaster"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Use personal story/anecdote about teen AI interaction in intro",
-            "Include real-time screenshot of OpenAI guidelines",
-            "Encourage reader comments/experiences with AI safety"
+            "Use numbered callouts in inline graphics",
+            "Include real-time vulnerability screenshot examples",
+            "Embed interactive prompt injection demo"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "SEO-optimize headline with exact keyword phrase",
-            "Include expert quotes from child safety professionals",
-            "Add data visualization of teen AI usage trends"
+            "Add SEO-friendly technical headers for each point",
+            "Include expert quote breakouts",
+            "Optimize images with alt-text for accessibility"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Frame as professional/parental responsibility discussion",
-            "Include corporate policy implications and risks",
-            "Add credible research citations about youth digital safety"
+            "Add corporate risk assessment framework",
+            "Include relevant cybersecurity statistics",
+            "Tag security and AI industry thought leaders"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, high-contrast design with futuristic teen-friendly color palette. Geometric split-screen graphics showing AI/human interaction. Dynamic typography with motion-activated hover states. Use electric blue, soft coral, and muted tech grays. Incorporate digital glitch effects subtly. Reference: Apple's privacy campaign meets Spotify's youth branding"
+        "description": "Cyberpunk-meets-data-visualization aesthetic. Dark mode color palette with electric blue/neon green accents. Glitch-effect typography. Isometric security/network diagrams. Fragmented code-like background textures. Motion graphics showing vulnerability penetration paths."
       },
       "exampleOutline": [
-        "Introduction: Why Teen AI Safety Matters",
-        "Context: Current Digital Landscape for Minors",
-        "5 Key OpenAI Safety Guidelines Explained",
-        "Practical Implementation Strategies for Parents/Educators",
-        "Future of Responsible AI Engagement"
+        "Introduction: The Hidden AI Security Landscape",
+        "Context: Why Traditional Security Fails",
+        "5 Critical AI Vulnerability Mechanisms",
+        "Breakthrough Defensive Strategies",
+        "Call-to-Action: Secure Your AI Now"
       ],
-      "hashtags": "#AIEthics #TeenTech #DigitalSafety #AIEducation #ParentingInTech #OpenAI #AILiteracy #CyberSafety #TechForTeens #AIResponsibility",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 3
+      "hashtags": "#AISecurityTips #CyberAI #MachineLearning #TechSecurity #AIRisks #CyberDefense #AIEthics #InformationSecurity #TechInnovation #AIProtection",
+      "textureIndex": 6
     },
     {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
+      "title": "OpenAI allows users to directly adjust ChatGPT’s enthusiasm level",
+      "description": "ChatGPT users can now tweak the chatbot’s warmth, enthusiasm, and emoji use.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/20/openai-allows-users-to-directly-adjust-chatgpts-warmth-and-enthusiasm/"
         }
       ],
-      "format": "guide",
-      "subcategory": "instructional",
+      "format": "case-study",
+      "subcategory": "case-study-deep-dive",
       "hooks": [
-        "How One Font Transformed Figma's Entire Design Language",
-        "The Hidden Design Story Behind Figma's New Identity",
-        "Typography: More Than Just Letters at Figma"
+        "AI Gets Personal: Control ChatGPT's Emotional Intelligence",
+        "Customize Your AI: Warmth at Your Fingertips",
+        "The New ChatGPT: Your Emotional AI Assistant"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Include real-time screenshots of font development process",
-            "Use interactive annotations to explain design decisions",
-            "Embed quick video clips of type design moments"
+            "Include real-time experiment screenshots of enthusiasm settings",
+            "Use conversational tone to break down technical nuances",
+            "Share personal reactions to different enthusiasm levels"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Create detailed, SEO-friendly section headers",
-            "Include high-resolution typography comparisons",
-            "Add expert quotes from Figma design team"
+            "Create comparative screenshots of different enthusiasm modes",
+            "Embed expert quotes about AI personalization",
+            "Use data visualization to show impact of settings"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Highlight professional impact of brand typography",
-            "Include data on brand perception and design investment",
-            "Use professional, authoritative tone about design strategy"
+            "Focus on professional implications of AI personalization",
+            "Include potential business use cases",
+            "Use industry statistics about AI interaction preferences"
           ]
         }
       ],
       "visualDirection": {
-        "rating": 8,
-        "description": "Dynamic, experimental typography-focused layout with animated letterform transitions, high-contrast color palette emphasizing type details, modular grid system revealing design process, motion graphics showing font evolution, minimalist yet bold aesthetic referencing Swiss design principles"
+        "rating": 7,
+        "description": "Bold, dynamic design with gradient emotion spectrum background. Split-screen visualizations showing different ChatGPT personalities. Playful typography with animated emoji transitions. Color palette ranging from cool blues to warm oranges representing emotional range. Minimalist infographic style with interactive design elements."
       },
       "exampleOutline": [
-        "Introduction: The Power of Typography in Brand Identity",
-        "Why Figma Needed a Custom Font: Design Challenges",
-        "Behind-the-Scenes: Font Creation Methodology",
-        "Technical and Creative Breakthroughs in Figma Sans",
-        "Future of Design Tools and Brand Expression"
+        "Introduction: The Emotional Revolution in AI",
+        "The Problem: One-Size-Fits-All AI Interactions",
+        "OpenAI's New Customization Features: A Deep Dive",
+        "Practical Implications and User Experiences",
+        "Future of Personalized AI Interactions"
       ],
-      "hashtags": "#Typography #DesignSystems #FigmaDesign #BrandIdentity #CreativeProcess #AIDesign #ProductDesign #FontDesign #BrandStrategy #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5438813/pexels-photo-5438813.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 12
+      "hashtags": "#AIPersonalization #ChatGPT #EmotionalAI #TechInnovation #AIInteraction #MachineLearning #OpenAI #AITrends #TechnologyBreakthrough #FutureOfAI",
+      "textureIndex": 6
+    },
+    {
+      "title": "Hiring specialists made sense before AI — now generalists win",
+      "description": "Tony Stoyanov is CTO and co-founder of EliseAIIn the 2010s, tech companies chased staff-level specialists: Backend engineers, data scientists, system architects. That model worked when technology evolved slowly. Specialists knew their craft, could deliver quickly and built careers on predictable foundations like cloud infrastructure or the latest JS frameworkThen AI went mainstream.The pace of change has exploded. New technologies appear and mature in less than a year. You can’t hire someone who",
+      "starred": false,
+      "sources": [
+        {
+          "name": "VentureBeat AI",
+          "url": "https://venturebeat.com/ai/hiring-specialists-made-sense-before-ai-now-generalists-win"
+        }
+      ],
+      "format": "guide",
+      "subcategory": "instructional",
+      "hooks": [
+        "AI Changes Everything: Specialists Are Yesterday's News",
+        "The Generalist's Rise: How AI Rewrites Careers",
+        "Why Versatility Trumps Specialization in the AI Era"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use interactive polls to engage readers about career transitions",
+            "Include real-time AI tool demonstrations in-line",
+            "Share personal journey/experiment sections to increase relatability"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Optimize headline for SEO with keywords like 'AI careers'",
+            "Include data visualizations comparing specialist vs generalist outcomes",
+            "Add expert quotes to increase credibility"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Target C-suite and HR decision-makers with strategic language",
+            "Include quantitative workforce transformation statistics",
+            "Add professional networking call-to-action for further discussion"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, dynamic infographic-style layout with fluid transitions. Gradient backgrounds suggesting technological evolution. Sans-serif typography with tech-forward motion graphics. Color palette: electric blues, deep purples, and metallic silvers. Animated data visualization elements showing career transformation."
+      },
+      "exampleOutline": [
+        "Introduction: The Changing Technology Landscape",
+        "The Specialist Paradigm: Historical Context",
+        "AI's Disruption: Why Generalists Are Emerging",
+        "Skills for the New Generalist Archetype",
+        "Practical Transition Strategies"
+      ],
+      "hashtags": "#AICareer #FutureOfWork #CareerTransformation #TechInnovation #ProfessionalDevelopment #AISkills #WorkplaceTrends #CareerGrowth #TechEducation #AIRevolution",
+      "textureIndex": 4
+    },
+    {
+      "title": "New York Governor Kathy Hochul signs RAISE Act to regulate AI safety",
+      "description": "The bill will require large AI developers to publish information about their safety protocols and report safety incidents to the state within 72 hours.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/20/new-york-governor-kathy-hochul-signs-raise-act-to-regulate-ai-safety/"
+        }
+      ],
+      "format": "article",
+      "subcategory": "visionary",
+      "hooks": [
+        "AI Safety Law: New York's Bold Regulatory Move",
+        "Hochul's RAISE Act: Transforming AI Governance",
+        "72 Hours to Report: AI's New Legal Landscape"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use real-time annotation to break down legal nuances",
+            "Include interactive timeline of AI regulation developments",
+            "Embed expert commentary or quick audio insights"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Create SEO-optimized headers for regulatory breakdown",
+            "Include comparative analysis with other state AI regulations",
+            "Use data visualizations to illustrate key regulatory points"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame article for tech policy and governance professionals",
+            "Include expert quotes and industry implications",
+            "Use data-driven insights to underscore regulatory significance"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-forward design with geometric overlays representing regulatory frameworks. Deep navy and electric blue color palette. Futuristic typography with sharp, angular lines. Subtle motion graphics showing interconnected compliance networks. Minimalist infographic elements highlighting key regulatory points."
+      },
+      "exampleOutline": [
+        "Introduction: The Emerging AI Regulatory Landscape",
+        "Context: Why AI Safety Matters Now",
+        "Deep Dive: RAISE Act Breakdown",
+        "Implications for Tech Companies and Innovators",
+        "Future of AI Governance: What's Next?"
+      ],
+      "hashtags": "#AIRegulation #TechPolicy #AIEthics #NYTech #AIGovernance #TechnologyLaw #AIInnovation #CyberSecurity #EmergingTech #PolicyInnovation",
+      "textureIndex": 0
     }
   ]
 }

@@ -1,260 +1,211 @@
 {
   "type": "long-form",
-  "date": "2025-12-21T16:19:22.872Z",
+  "date": "2025-12-21T16:24:41.757Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Waymo suspends service in San Francisco as robotaxis stall during blackout",
+      "description": "Waymo suspended its SF robotaxi service on Saturday evening after a massive blackout appeared to leave many of its vehicles stalled on city streets.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/products/page/3"
-        }
-      ],
-      "format": "documentary",
-      "subcategory": "framework",
-      "hooks": [
-        "Design Templates That Breathe, Not Break",
-        "Cracking the Code of Flexible Brand Systems",
-        "How Top Designers Build Scalable Templates"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use kinetic typography to visualize template flexibility",
-            "Include split-screen case study demonstrations",
-            "Add chapter markers for template design stages"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Dynamic, modular visual aesthetic with geometric transitions. High-contrast color palette (navy, electric blue, white). Animated grid systems showing template transformation. Typography with mechanical precision and organic flexibility. Motion graphics that demonstrate template adaptability. Reference: Bauhaus design principles meets modern digital interface design."
-      },
-      "exampleOutline": [
-        "Cold Open: Designer's Template Failure Story",
-        "The Marketing-Design Collaboration Challenge",
-        "8 Strategic Template Design Principles",
-        "Case Studies: Brands Doing It Right",
-        "Future of Adaptive Design Systems"
-      ],
-      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystem #CreativeStrategy #ProductDesign #AIDesign #TemplateDesign #BrandIdentity #DesignTips #CreativeTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 8
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/solutions/ai-photo-editing-app-builder/"
-        }
-      ],
-      "format": "livestream",
-      "subcategory": "leadership",
-      "hooks": [
-        "AI Image Tools: Figma's Design Revolution Goes Live Now!",
-        "Unlock Pro-Level Editing in 3 Mind-Blowing Clicks",
-        "Design Faster: Figma's Secret AI Weapons Revealed"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use multi-screen setup with live demo and camera view",
-            "Enable live chat for real-time audience interaction",
-            "Prepare pre-screened Q&A questions to maintain flow"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-energy dynamic visual layout with electric blue and deep graphite color palette. Floating holographic UI elements overlaying live demo screen. Sharp, geometric sans-serif typography. Animated transition effects between demo sections. Dynamic motion graphics highlighting tool features. Clean, futuristic tech aesthetic with subtle neon accents."
-      },
-      "exampleOutline": [
-        "Welcome & High-Energy Intro (5 mins)",
-        "Context: Design Workflow Challenges (10 mins)",
-        "Live Tool Demonstration (25 mins)",
-        "Real-Time Audience Q&A (15 mins)",
-        "Closing Insights & Next Steps (5 mins)"
-      ],
-      "hashtags": "#FigmaAI #DesignTools #AIDesign #CreativeTech #ProductivityHacks #UXDesign #AICreativity #DesignInnovation #TechTutorial #CreativeWorkflow",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 11
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "7span",
-          "url": "https://7span.com/blog/figma-buzz"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=0lSS7m3Lh0g"
-        },
-        {
-          "name": "Designsystems",
-          "url": "https://designsystems.surf/articles/one-stack-to-rule-them-all-figma-s-2025-power-suite-and-what-it-means-for-your-workflow"
-        },
-        {
-          "name": "Blog",
-          "url": "https://blog.logrocket.com/ux-design/figma-config-2025-whats-new-whats-next/"
-        }
-      ],
-      "format": "documentary",
-      "subcategory": "framework",
-      "hooks": [
-        "How Figma Buzz is revolutionizing design workflows",
-        "3 game-changing features designers can't ignore",
-        "Inside Figma's latest design acceleration toolkit"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use cinematic B-roll of designers in action",
-            "Include side-by-side feature demonstrations with expert voiceover",
-            "Create chapter markers for each feature discussion"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Modern tech-documentary aesthetic with high-contrast blues and grays, sleek motion graphics overlaying real workspace footage, clean sans-serif typography with subtle technical animations, dynamic split-screen compositions showcasing feature interactions, subtle parallax effects during feature explanations"
-      },
-      "exampleOutline": [
-        "Opening: Dramatic workspace montage showing design challenges",
-        "Context: Current limitations in design workflow tools",
-        "Feature Breakdown: Detailed exploration of 3 new Figma Buzz capabilities",
-        "Impact Analysis: How these features transform design processes",
-        "Closing CTA: Invitation to explore Figma Buzz ecosystem"
-      ],
-      "hashtags": "#FigmaBuzz #DesignTech #CreativeWorkflow #ProductivityHacks #UXDesign #AIDesign #DesignTools #CreativeTech #DesignInnovation #FigmaFeatures",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 3
-    },
-    {
-      "title": "OpenAI adds new teen safety rules to ChatGPT as lawmakers weigh AI standards for minors",
-      "description": "OpenAI updated its guidelines for how its AI models should behave with users under 18, and published new AI literacy resources for teens and parents. Still, questions remain about how well policies translate into practice.",
-      "starred": false,
-      "sources": [
-        {
           "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2025/12/19/openai-adds-new-teen-safety-rules-to-models-as-lawmakers-weigh-ai-standards-for-minors/"
-        }
-      ],
-      "format": "video",
-      "subcategory": "thought-leadership",
-      "hooks": [
-        "AI's New Teen Rules: What Parents Need to Know",
-        "ChatGPT's Secret Playbook for Teenage Safety",
-        "Protecting Gen Z in the AI Revolution"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use high-energy thumbnail with contrasting colors",
-            "Include animated graphics explaining teen AI safety",
-            "Create chapter markers for easy navigation"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, tech-forward aesthetic with vibrant blue and neon accents. Dynamic motion graphics showing AI interaction layers. Clean, modern sans-serif typography with subtle glitch effects. Picture-in-picture screen recordings with animated overlays explaining complex concepts. Sharp, high-contrast color palette suggesting innovation and clarity."
-      },
-      "exampleOutline": [
-        "Hook: Dramatic reveal of AI teen safety challenges",
-        "Context: Rising concerns about AI and youth interaction",
-        "OpenAI's New Guidelines: Detailed breakdown",
-        "Practical Implications for Teens and Parents",
-        "Future of AI Safety: What's Next?"
-      ],
-      "hashtags": "#AIEthics #TeenSafety #ChatGPT #AIEducation #TechPolicy #GenerationZ #AILiteracy #OpenAI #ParentingInTech #AIRegulation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 1
-    },
-    {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+          "url": "https://techcrunch.com/2025/12/21/waymo-suspends-service-in-san-francisco-as-robotaxis-stall-during-blackout/"
         }
       ],
       "format": "tutorial",
       "subcategory": "instructional",
       "hooks": [
-        "How Figma designed a typeface that changes everything",
-        "Inside the radical typography of Figma Sans",
-        "Designing a font that speaks design's future"
+        "How Robotaxis Fail: Waymo's Blackout Survival Guide",
+        "5 Critical Lessons from Waymo's SF Shutdown",
+        "Robotaxis vs Blackout: What Really Happened?"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use screen recording showing actual font design process",
-            "Include picture-in-picture with designer commentary",
-            "Create clear chapter markers for each design stage"
+            "Use screen recordings of actual Waymo blackout incidents",
+            "Create animated technical diagrams showing autonomous system failures",
+            "Include picture-in-picture expert commentary during technical explanations"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast urban tech aesthetic with electric blue/charcoal gray color palette. Glitch-inspired motion graphics simulating system breakdown. Sharp, geometric typography suggesting technological precision. Dynamic split-screen compositions showing autonomous vehicle challenges. Incorporate subtle digital interference/error state visual motifs."
+      },
+      "exampleOutline": [
+        "Introduction: Waymo's Unexpected Urban Challenge",
+        "Technical Context: How Autonomous Systems Handle Disruptions",
+        "Step-by-Step: Analyzing the Blackout Response Mechanism",
+        "Key Insights: Resilience and Limitations of Robotaxi Technology",
+        "Future Implications and Learning Opportunities"
+      ],
+      "hashtags": "#Waymo #AutonomousVehicles #TechFailure #RobotaxiTechnology #AITransportation #UrbanMobility #TechInnovation #SanFrancisco #EmergencyResponse #FutureOfTransport",
+      "textureIndex": 1
+    },
+    {
+      "title": "Full Tutorial: Automate Your Life with Claude Code | Teresa Torres",
+      "description": "How to set up a 3-layer Claude Code context system to run your life and business",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Peter Yang (Creator Economy)",
+          "url": "https://creatoreconomy.so/p/automate-your-life-with-claude-code-teresa-torres"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "How AI Quietly Transforms Your Entire Workflow",
+        "Your Life, Automated: The Claude Code Revolution",
+        "Invisible AI Systems That Run Everything"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use cinematic B-roll showing workflow transitions",
+            "Include personal screen capture with dramatic zoom effects",
+            "Create chapter markers highlighting each automation stage"
           ]
         }
       ],
       "visualDirection": {
         "rating": 8,
-        "description": "Bold, experimental typography-focused design. High-contrast color palette with deep navy and bright coral accents. Dynamic motion graphics revealing font construction. Grid-based compositions that deconstruct letterform anatomy. Kinetic typography animations demonstrating font flexibility. References: Experimental Swiss design, contemporary type foundry portfolios."
+        "description": "High-contrast dark mode aesthetic with electric blue accent colors, dynamic motion graphics showing system flows, clean sans-serif typography with technical overlay animations, minimalist tech-documentary visual language inspired by Apple and MKBHD production styles"
       },
       "exampleOutline": [
-        "Section 1: Dramatic Font Design Origin Story",
-        "Section 2: Design Challenges in Creating Figma Sans",
-        "Section 3: Step-by-Step Typeface Construction Techniques",
-        "Section 4: How This Font Solves Design Problems",
-        "Section 5: Community Call to Experiment & Create"
+        "Cold Open: Teresa Torres demonstrating system live",
+        "Problem Statement: Information overwhelm in modern work",
+        "Claude Code Architecture: 3-Layer Automation Breakdown",
+        "Real-World Implementation Case Studies",
+        "Future of Personal/Professional AI Integration"
       ],
-      "hashtags": "#FigmaDesign #Typography #FontDesign #ProductDesign #CreativeProcess #DesignTech #AIDesign #CreativeCoding #VisualIdentity #BrandDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
+      "hashtags": "#AIAutomation #ProductivityHacks #ClaudeCode #AIWorkflow #TechTutorial #CreatorTools #AIProductivity #SystemDesign #WorkSmarterNotHarder #TechInnovation",
+      "textureIndex": 5
+    },
+    {
+      "title": "The coming AI security crisis (and what to do about it) | Sander Schulhoff",
+      "description": "AI guardrails don't work. Security researcher Sander Schulhoff on prompt injection, red teaming, why AI defenses fail, and what actually secures AI products.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/the-coming-ai-security-crisis"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "AI Security Nightmare: What Happens When Defenses Crumble?",
+        "Prompt Injection: The Silent AI Killer",
+        "Can Your AI System Survive an Attack?"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Enable live chat for real-time audience interaction",
+            "Prepare pre-screened audience questions for Q&A segments",
+            "Use YouTube Live's multi-camera switching for dynamic presentation"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "High-contrast cybersecurity-inspired visual palette with deep blues and electric oranges. Glitch-inspired motion graphics simulating system vulnerabilities. Technical overlay typography with circuit-board inspired design elements. Dynamic split-screen layout showing attack vectors and defense mechanisms. Incorporate hacking/security visual metaphors with rapid, sharp motion design"
+      },
+      "exampleOutline": [
+        "Opening: Live Threat Demonstration",
+        "Context: Current AI Security Landscape",
+        "Deep Dive: Prompt Injection Mechanics",
+        "Case Studies: Real-World AI Vulnerabilities",
+        "Live Q&A: Audience Security Questions"
+      ],
+      "hashtags": "#AISecurity #CyberDefense #AIEthics #MachineLearning #TechSecurity #PromptInjection #AIRisks #CyberThreat #AIInnovation #TechTalk",
+      "textureIndex": 5
+    },
+    {
+      "title": "OpenAI allows users to directly adjust ChatGPT’s enthusiasm level",
+      "description": "ChatGPT users can now tweak the chatbot’s warmth, enthusiasm, and emoji use.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/20/openai-allows-users-to-directly-adjust-chatgpts-warmth-and-enthusiasm/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "AI Gets a Personality Slider: ChatGPT's Wild New Feature",
+        "Control Your AI's Mood: ChatGPT's Game-Changing Update",
+        "Emotional Intelligence Meets AI: ChatGPT's Secret Weapon"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use picture-in-picture screen recording to demonstrate feature",
+            "Create chapter markers showing different enthusiasm levels",
+            "Include dynamic B-roll of AI interaction scenarios"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, experimental design with vibrant color gradient representing mood spectrum. Dynamic motion graphics showing AI personality slider. High-contrast typography with playful emoji transitions. Clean tech-inspired interface with organic, fluid animation. Color palette of electric blues, energetic oranges, and soft purples to represent emotional range."
+      },
+      "exampleOutline": [
+        "Hook: Surprising AI Personality Reveal (5-10s)",
+        "Context: Current AI Communication Limitations (1-2min)",
+        "Feature Breakdown: How Enthusiasm Slider Works (3-4min)",
+        "Technical Deep Dive: AI Emotional Calibration (2-3min)",
+        "Future Implications & Call to Experiment (30-60s)"
+      ],
+      "hashtags": "#AI #ChatGPT #AIInnovation #TechTrends #ArtificialIntelligence #OpenAI #MachineLearning #TechNews #AIUpdate #InnovationTech",
+      "textureIndex": 1
+    },
+    {
+      "title": "Hiring specialists made sense before AI — now generalists win",
+      "description": "Tony Stoyanov is CTO and co-founder of EliseAIIn the 2010s, tech companies chased staff-level specialists: Backend engineers, data scientists, system architects. That model worked when technology evolved slowly. Specialists knew their craft, could deliver quickly and built careers on predictable foundations like cloud infrastructure or the latest JS frameworkThen AI went mainstream.The pace of change has exploded. New technologies appear and mature in less than a year. You can’t hire someone who",
+      "starred": false,
+      "sources": [
+        {
+          "name": "VentureBeat AI",
+          "url": "https://venturebeat.com/ai/hiring-specialists-made-sense-before-ai-now-generalists-win"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "AI is killing specialist roles forever",
+        "Why generalists are the new tech heroes",
+        "Your career depends on this AI shift"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Prep interactive Q&A segments with pre-submitted audience questions",
+            "Use live chat overlay to engage real-time audience interaction",
+            "Create chapter markers for easy replay/scrubbing after livestream"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy dynamic visual design with fluid transitions, holographic data overlays, contrasting tech-blue and electric orange color palette. Typography uses bold sans-serif with animated state changes. Motion graphics showing skill transformation and AI disruption. Picture-in-picture with host and dynamic data visualizations."
+      },
+      "exampleOutline": [
+        "Opening: Livestream introduction & audience welcome",
+        "The Specialist Era: Historical context of tech hiring",
+        "AI Disruption: How generalist skills become critical",
+        "Practical Frameworks: Adapting your career strategy",
+        "Live Q&A: Audience interaction and deep insights"
+      ],
+      "hashtags": "#AICareer #TechTrends #FutureOfWork #CareerAdvice #AITransformation #TechSkills #ProfessionalDevelopment #AIJobMarket #CareerStrategy #InnovationSkills",
+      "textureIndex": 9
     }
   ]
 }

@@ -1,380 +1,331 @@
 {
   "type": "short-form",
-  "date": "2025-12-21T16:19:22.872Z",
+  "date": "2025-12-21T16:23:58.100Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Waymo suspends service in San Francisco as robotaxis stall during blackout",
+      "description": "Waymo suspended its SF robotaxi service on Saturday evening after a massive blackout appeared to leave many of its vehicles stalled on city streets.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/products/page/3"
-        }
-      ],
-      "format": "story",
-      "subcategory": "story",
-      "hooks": [
-        "Design Templates That Don't Break Your Brand",
-        "Figma Secrets: Flexible Brand Guidelines Revealed",
-        "Create Bulletproof Design Systems in Minutes"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick jump cuts between template examples",
-            "Include text overlay animations for each tip",
-            "Keep total video under 60 seconds"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must be a provocative visual hook",
-            "Use square 1:1 or 4:5 aspect ratio",
-            "Include swipe-through animation cues"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Open with unexpected visual metaphor",
-            "Use high-energy transitions between tips",
-            "Add dynamic sound design"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Add professional context and strategic insights",
-            "Include specific designer workflow examples",
-            "Reference enterprise-level template challenges"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast geometric color palette (electric blue, charcoal, white). Dynamic grid-based compositions with floating UI elements. Modern sans-serif typography with strong hierarchy. Animated graphic overlays showing template flexibility. Minimal technical illustration style with playful motion design."
-      },
-      "exampleOutline": [
-        "Section 1: Provocative Design Challenge Hook",
-        "Section 2: Brand Consistency Pain Points",
-        "Section 3: 8 Tactical Template Design Tips",
-        "Section 4: Real-World Implementation Strategy",
-        "Section 5: Call-to-Experiment Invitation"
-      ],
-      "hashtags": "#DesignSystems #FigmaDesign #BrandTemplates #CreativeStrategy #ProductDesign #AIDesign #DesignTips #CreativeTech #VisualIdentity #ProductivityHacks",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7767791/pexels-photo-7767791.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/solutions/ai-photo-editing-app-builder/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/21/waymo-suspends-service-in-san-francisco-as-robotaxis-stall-during-blackout/"
         }
       ],
       "format": "reel",
       "subcategory": "reel",
       "hooks": [
-        "Figma just transformed image editing forever 🚀",
-        "3 AI tools that will blow your design mind 🤯",
-        "Design precision meets AI: The ultimate Figma hack"
+        "Robotaxis: When AI Meets City Blackout Chaos 🚗⚡",
+        "Waymo's San Francisco Meltdown Explained",
+        "Tech Fails: When Self-Driving Cars Go Dark"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use rapid-cut transitions between tool demonstrations",
-            "Include on-screen text highlighting key features",
-            "Keep total video under 60 seconds with high energy"
+            "Use quick cuts between city scenes and robotaxi footage",
+            "Incorporate dynamic text overlays explaining technical challenges",
+            "Create a high-energy transition between problem and explanation"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Dramatic before/after visual comparison",
-            "Use swipe-friendly infographic design",
-            "Final slide includes clear call-to-action"
+            "First slide: Dramatic city blackout image",
+            "Include infographic-style slides explaining autonomous vehicle limitations",
+            "Final slide: Thought-provoking question about future of tech"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with unexpected visual or pattern interrupt",
-            "Use screen recording with dynamic cursor movements",
-            "Add enthusiastic voiceover explaining tool capabilities"
+            "Open with unexpected visual metaphor for technological vulnerability",
+            "Use screen recordings of news reports mixed with motion graphics",
+            "Add quick-paced voiceover explaining technical nuances"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Frame tools as professional productivity enhancement",
-            "Include statistical impact of AI editing",
-            "More technical, detailed explanation of features"
+            "Frame as professional technology challenge and learning opportunity",
+            "Include expert-level technical breakdown",
+            "Use more formal, analytical visual approach"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast cyberpunk-inspired color palette with electric blues and neon accents. Dynamic motion graphics showing tool transformations. Clean, sans-serif typography with geometric overlays. Rapid transitions highlighting AI precision. Minimalist tech aesthetic with futuristic edge."
+        "description": "High-contrast urban night scene with glitchy, tech-disrupted aesthetic. Dark blues and electric teals. Fragmented typography suggesting system breakdown. Dynamic motion graphics showing robotic systems freezing. Combine realistic city footage with abstract digital interference effects."
       },
       "exampleOutline": [
-        "Section 1: Provocative visual/text hook revealing AI editing revolution",
-        "Section 2: Quick problem statement about design workflow challenges",
-        "Section 3: Rapid demonstration of 3 Figma AI tools",
-        "Section 4: One killer insight about design efficiency",
-        "Section 5: Call-to-action exploring Figma's new features"
+        "Hook: Dramatic city blackout scene",
+        "Problem: Waymo robotaxis stranded during power outage",
+        "Technical Explanation: How autonomous systems respond to unexpected scenarios",
+        "Broader Implications: Future of urban mobility challenges",
+        "Call-to-Action: Engage with emerging technology discussion"
       ],
-      "hashtags": "#FigmaAI #DesignTech #CreativeTech #AIDesign #ProductivityHack #DesignTools #CreativeAI #FigmaTips #AIEditing #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "hashtags": "#AI #AutonomousVehicles #TechFail #FutureOfTransport #WaymoTech #CityInnovation #RobotTaxi #TechChallenges #UrbanMobility #InnovationFrontiers",
       "textureIndex": 0
     },
     {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
+      "title": "As EU waters down 2035 EV goals, electric startups express concern",
+      "description": "The future may be electric, but that future is being postponed. The European Commission, citing the need for flexibility, has softened its ambitious plan to ban the sale of gas-powered cars by 2035. Instead of requiring 100% of new cars to be zero-emission vehicles by that date, the revised plan would allow 10% of new [&#8230;]",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "7span",
-          "url": "https://7span.com/blog/figma-buzz"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=0lSS7m3Lh0g"
-        },
-        {
-          "name": "Designsystems",
-          "url": "https://designsystems.surf/articles/one-stack-to-rule-them-all-figma-s-2025-power-suite-and-what-it-means-for-your-workflow"
-        },
-        {
-          "name": "Blog",
-          "url": "https://blog.logrocket.com/ux-design/figma-config-2025-whats-new-whats-next/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/21/as-eu-waters-down-2035-ev-goals-electric-startups-express-concern/"
         }
       ],
       "format": "carousel",
       "subcategory": "carousel",
       "hooks": [
-        "Figma Buzz: 3 Game-Changing Features for Designers",
-        "Design Faster, Smarter: Figma's New Power Tools",
-        "Unlock Your Design Workflow's Hidden Potential"
+        "Electric Dreams Delayed: EU's Shocking EV Policy Shift",
+        "The Future of Cars Just Got Complicated",
+        "2035 EV Goals: What Changed?"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use dynamic transitions between slides to maintain visual interest",
-            "Include quick text animations to highlight key points",
-            "Keep total video under 90 seconds with crisp pacing"
+            "Use dynamic motion graphics to illustrate policy changes",
+            "Create quick visual transitions between key points",
+            "Include subtle animated data visualizations"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide must be visually striking and hook-driven",
-            "Use consistent color palette across all slides",
-            "Include clear, readable text with minimal word count per slide"
+            "Use a consistent color palette representing electric/tech theme",
+            "Design each slide with clear hierarchy and minimal text",
+            "Create a narrative flow that encourages swiping"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Add energetic voiceover explaining features",
-            "Use screen recordings to demonstrate Figma Buzz features",
-            "Include text overlay for key points"
+            "Condense carousel content into 60-second narrative arc",
+            "Use high-energy transitions between key points",
+            "Add compelling voiceover explaining policy nuances"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Add more technical depth in slide descriptions",
-            "Include professional use case scenarios",
-            "Use more formal, expertise-driven language"
+            "Add more detailed contextual information",
+            "Include professional insights from industry experts",
+            "Use more formal, analytical visual language"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, tech-forward aesthetic with electric blue and charcoal gray color palette. Dynamic geometric transitions between slides. Modern sans-serif typography with high-contrast text. Incorporate subtle motion graphics showing interface transformations. Clean, futuristic design system references with minimal illustration style."
+        "description": "Futuristic electric blue and charcoal gray color palette. Dynamic diagonal compositions. Bold, sans-serif typography with tech-inspired angular elements. Incorporate circuit board-like graphic overlays. Use subtle glitch/digital distortion effects to represent policy uncertainty."
       },
       "exampleOutline": [
-        "Slide 1: Attention-grabbing hook with bold typography",
-        "Slide 2: Overview of current design challenges",
-        "Slide 3-5: Detailed feature breakdown (one feature per slide)",
-        "Slide 6: Potential workflow improvements",
-        "Slide 7: Call-to-action and resource link"
+        "Slide 1: Provocative hook with eye-catching graphic",
+        "Slide 2: Current EV policy landscape infographic",
+        "Slide 3: Key changes in EU 2035 goals",
+        "Slide 4: Startup perspective and market implications",
+        "Slide 5: Future outlook and call to engagement"
       ],
-      "hashtags": "#FigmaBuzz #DesignTools #AIDesign #CreativeTech #ProductivityHacks #UXDesign #DesignWorkflow #CreativeTools #DesignInnovation #TechDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 5
+      "hashtags": "#EVRevolution #ClimatePolicy #ElectricVehicles #TechPolicy #FutureOfTransport #EUTech #CleanEnergy #StartupInsights #SustainableMobility #InnovationWatch",
+      "textureIndex": 3
     },
     {
-      "title": "OpenAI adds new teen safety rules to ChatGPT as lawmakers weigh AI standards for minors",
-      "description": "OpenAI updated its guidelines for how its AI models should behave with users under 18, and published new AI literacy resources for teens and parents. Still, questions remain about how well policies translate into practice.",
+      "title": "Israel’s famed VC Jon Medved, diagnosed with ALS, backed the tech that will improve his life",
+      "description": "In perhaps the last public interview of one Israel's most famous VCs, Jon Medved tells TechCrunch how tech will enhance his life.",
       "starred": false,
       "sources": [
         {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2025/12/19/openai-adds-new-teen-safety-rules-to-models-as-lawmakers-weigh-ai-standards-for-minors/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/21/israels-famed-vc-jon-medved-diagnosed-with-als-backed-the-tech-that-will-improve-his-life/"
         }
       ],
-      "format": "carousel",
-      "subcategory": "carousel",
+      "format": "story",
+      "subcategory": "story",
       "hooks": [
-        "AI's New Teen Safety Rules: What Parents Need to Know",
-        "ChatGPT's Teenage Guardrails: Inside the Latest Updates",
-        "Protecting Young Minds in the AI Revolution"
+        "Tech Saving Lives: A VC's Inspiring ALS Journey",
+        "When Innovation Meets Personal Challenge",
+        "Turning Diagnosis into Technological Hope"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use dynamic transitions between carousel slides",
-            "Add text overlay animations to highlight key points",
-            "Include a human narrator or voiceover for context"
+            "Use first-person POV to create emotional connection",
+            "Include quick text overlays highlighting key tech innovations",
+            "Use subtle motion graphics to illustrate technological transformations"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "Design each slide with a clear, bold headline",
-            "Use consistent color palette across all slides",
-            "Ensure each slide can stand alone while telling a cohesive story"
+            "First slide: Dramatic portrait with provocative statistic",
+            "Progressive reveal of tech solutions across slides",
+            "Final slide with clear call-to-action and inspiration"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Condense carousel content into a fast-paced narrative",
-            "Use quick cuts and motion graphics",
-            "Add subtitles for silent viewing"
+            "Open with unexpected visual metaphor about resilience",
+            "Use rapid-cut editing to maintain high energy",
+            "Include subtitles for maximum accessibility"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Add more professional context and data points",
-            "Include expert quote or policy analysis",
-            "Use a more formal visual design approach"
+            "Frame story as leadership and innovation case study",
+            "Include professional tone with inspirational undertones",
+            "Highlight specific technological breakthroughs"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, modern design with a tech-forward aesthetic. Use a deep blue and electric teal color palette. Typography should be clean and geometric. Incorporate subtle AI-inspired graphic elements like circuit-like lines or abstract digital textures. Slides should feel connected but distinct, with a progressive reveal of information."
+        "description": "High-contrast blue and white color palette symbolizing hope and technology. Dynamic, slightly asymmetrical compositions with tech-inspired graphic elements. Modern sans-serif typography with clean, bold text overlays. Subtle motion graphics suggesting transformation and forward momentum. Aesthetic blending medical imagery with futuristic design elements."
       },
       "exampleOutline": [
-        "Slide 1: Attention-grabbing headline with provocative AI safety visual",
-        "Slide 2: Context - Why teen AI safety matters",
-        "Slide 3: OpenAI's new specific safety guidelines",
-        "Slide 4: Potential risks and protective strategies",
-        "Slide 5: Call-to-action for parents and educators"
+        "Section 1: Jon Medved's Personal Introduction",
+        "Section 2: ALS Diagnosis Context",
+        "Section 3: Technological Solutions He's Backing",
+        "Section 4: Personal Empowerment Through Innovation",
+        "Section 5: Call to Support Tech for Disability"
       ],
-      "hashtags": "#AIEthics #TeenTech #AIEducation #DigitalSafety #ParentingTips #AILiteracy #TechPolicy #AIProtection #FutureOfLearning #ResponsibleAI",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8014542/pexels-photo-8014542.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 1
+      "hashtags": "#ALS #TechForGood #VentureCapital #MedTech #Inspiration #Innovation #StartupLife #HealthTech #Resilience #IsraelTech",
+      "textureIndex": 3
     },
     {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
+      "title": "Google and Apple reportedly warn employees on visas to avoid international travel",
+      "description": "Law firms representing Google and Apple have reportedly warned that employees who need a visa stamp to re-enter the United States should avoid leaving the country due to longer-than-usual visa processing times.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/20/google-and-apple-reportedly-warn-employees-on-visas-to-avoid-international-travel/"
+        }
+      ],
+      "format": "story",
+      "subcategory": "story",
+      "hooks": [
+        "Visa Drama: Tech Giants Drop Shocking Travel Warning",
+        "Silicon Valley's Secret Travel Memo Leaked",
+        "Danger Zone: Why Tech Workers Can't Leave"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick cuts between visa document and map graphics",
+            "Include animated travel/passport icons for visual interest",
+            "Create tension through rapid-fire text animations"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have provocative visa stamp graphic",
+            "Use infographic-style slides with minimal text",
+            "Progressive reveal of complex information across slides"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected travel restriction sound effect",
+            "Use green screen technique for dynamic background",
+            "Incorporate quick statistic pop-ups"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add professional context about visa implications",
+            "Include expert quote or industry perspective",
+            "Use more formal, data-driven visual approach"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast red/blue color palette suggesting urgency. Dynamic geometric overlays mimicking passport stamps. Typography with technical, angular feel. Animated glitch effects to underscore information sensitivity. Modern, slightly disruptive design aesthetic with tech-documentary visual language."
+      },
+      "exampleOutline": [
+        "Section 1: Dramatic Hook - Unexpected Travel Restriction",
+        "Section 2: Google/Apple Visa Warning Context",
+        "Section 3: Specific Risks for International Workers",
+        "Section 4: Potential Consequences and Strategies",
+        "Section 5: Call-to-Action for Visa Holders"
+      ],
+      "hashtags": "#TechVisa #WorkTravel #SiliconValley #CareerTips #WorkPermit #GoogleNews #AppleLife #InternationalWorkers #VisaRestrictions #TechCareers",
+      "textureIndex": 11
+    },
+    {
+      "title": "&#8216;It felt so wrong&#8217;: Colin Angle on iRobot, the FTC, and the Amazon deal that never was",
+      "description": "The iRobot founder opens up about the 18-month regulatory process that he says doomed the Roomba maker -- and what it means for American innovation.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/20/it-felt-so-wrong-colin-angle-on-irobot-the-ftc-and-the-amazon-deal-that-never-was/"
         }
       ],
       "format": "quick-image",
       "subcategory": "quick-image",
       "hooks": [
-        "Fonts that speak volumes: Figma's design revolution",
-        "Typography just got a major upgrade",
-        "When designers create their own language"
+        "Tech Giants' Heartbreak: When Deals Crumble",
+        "Roomba's Untold Amazon Saga Revealed",
+        "Innovation Blocked: The iRobot Story"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick typography animation transitions",
-            "Show type comparison with dynamic overlays",
-            "Create a 3-second visual punch in first frame"
+            "Use split-screen with Colin Angle + Amazon/FTC logos",
+            "Create dynamic text animations highlighting key regulatory moments",
+            "Include quick visual timeline of deal progression"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Dramatic before/after type reveal",
-            "Use clean, minimal design progression slides",
-            "Include behind-the-scenes type design sketches"
+            "First slide: Provocative headline with bold typography",
+            "Use infographic-style slides showing deal timeline",
+            "Final slide with key takeaway about tech innovation"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with unexpected type morphing effect",
-            "Use voiceover explaining design process",
-            "Include rapid visual type transformation sequence"
+            "Open with dramatic voice-over teasing regulatory drama",
+            "Use quick cuts between interview clips and graphics",
+            "Include subtle motion graphics explaining complex details"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Add professional context about brand evolution",
-            "Include designer quote about type development",
-            "Show technical design process slides"
+            "Emphasize professional insights about tech acquisitions",
+            "Use more formal, data-driven visual approach",
+            "Include direct quote from Colin Angle as primary visual"
           ]
         }
       ],
       "visualDirection": {
-        "rating": 8,
-        "description": "Bold, experimental typography-focused design with high-contrast color palette. Geometric transitions, clean modernist aesthetic with unexpected type mutations. Incorporate mechanical/grid-based animations showing type transformation. Utilize sharp angles, clean lines, and dynamic type movement."
+        "rating": 7,
+        "description": "High-contrast color palette (deep blues/bright oranges), geometric split-screen compositions, bold sans-serif typography, dynamic motion graphics showing regulatory 'walls', tech-futurist aesthetic with slight glitch/disruption effects"
       },
       "exampleOutline": [
-        "Bold Typography Reveal",
-        "Design Challenge/Problem Statement",
-        "Figma Sans Design Process",
-        "Key Design Innovation Moment",
-        "Future of Design Communication"
+        "Hook: Dramatic headline about blocked innovation",
+        "Quick context: iRobot-Amazon deal background",
+        "Core content: Regulatory challenges explained",
+        "Key insight: Implications for tech entrepreneurship",
+        "CTA: Engage with innovation discussion"
       ],
-      "hashtags": "#DesignInnovation #Typography #FigmaDesign #CreativeProcess #BrandIdentity #AIDesign #CreativeTech #VisualLanguage #ProductDesign #BrandEvolution",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 3
+      "hashtags": "#TechInnovation #StartupStory #AmazonDeal #RegulatoryChallenge #TechEntrepreneurship #AIRobotics #InnovationBlocked #ColinAngle #iRobot #TechPolicy",
+      "textureIndex": 1
     }
   ]
 }
