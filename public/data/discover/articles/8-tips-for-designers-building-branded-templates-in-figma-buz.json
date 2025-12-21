@@ -1,9 +1,9 @@
 {
   "id": "8-tips-for-designers-building-branded-templates-in-figma-buz",
   "slug": "8-tips-for-designers-building-branded-templates-in-figma-buz",
-  "title": "8 Essential Figma Buzz Tips Empower Designers to Build Scalable Branded Templates for Teams",
-  "publishedAt": "2025-12-20T16:15:19.687Z",
-  "generatedAt": "2025-12-20T16:15:19.687Z",
+  "title": "Figma Buzz Empowers Designers with 8 Essential Tips for Crafting Scalable Branded Templates",
+  "publishedAt": "2025-12-21T16:15:18.675Z",
+  "generatedAt": "2025-12-21T16:15:18.675Z",
   "totalSources": 8,
   "sections": [
     {
@@ -11,7 +11,7 @@
       "paragraphs": [
         {
           "id": "para-0-0",
-          "content": "Figma Buzz enables designers to create reusable branded templates that maintain consistency while allowing non-designers to edit content safely. Official guidance outlines eight key tips, including using Auto Layout as the backbone of responsive designs and separating text layers for each unique input to support Bulk Create workflows from CSV or XLSX files. These practices ensure elements like buttons and image containers adjust spacing automatically without breaking layouts during content changes.",
+          "content": "Figma Buzz, a dedicated space for creating on-brand assets, provides designers with eight key tips for building effective branded templates that balance flexibility and control.These guidelines emphasize using Auto Layout for responsive designs, separating text layers for easy editing, and renaming layers descriptively like \"Event Title\" to guide users.The tips ensure templates support bulk creation via CSV imports and maintain brand consistency across social posts and ads.",
           "citations": [
             {
               "primarySource": {
@@ -24,7 +24,7 @@
               "additionalCount": 1,
               "additionalSources": [
                 {
-                  "id": "source-2",
+                  "id": "source-3",
                   "name": "youtube",
                   "url": "https://www.youtube.com/watch?v=vqLE9Nt9DNU",
                   "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
@@ -36,23 +36,23 @@
         },
         {
           "id": "para-0-1",
-          "content": "Component variants let teams swap options such as logo layouts or icons without manual edits that risk brand drift. Descriptive layer naming, like \"Event Title\" or \"CTA Button Text,\" combined with example text such as \"Date of Event (e.g. July 10, 2025),\" guides users and preserves formatting. Locking non-editable layers surfaces only intended fields in the Edit Content panel, streamlining focused editing for marketers.",
+          "content": "Official tutorials demonstrate copying frames from Figma Design into Buzz files to publish templates quickly.Component variants allow users to swap elements like logos without disrupting layouts, enhancing usability for marketing teams.This approach reduces design review needs while empowering non-designers to produce professional assets independently.",
           "citations": [
             {
               "primarySource": {
-                "id": "source-3",
+                "id": "source-4",
                 "name": "figma",
-                "url": "https://www.figma.com/community/design-inspirations/style-guides",
+                "url": "https://www.figma.com/blog/config-2025-recap/",
                 "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
                 "title": "8 tips for designers building branded templates in Figma Buzz"
               },
               "additionalCount": 1,
               "additionalSources": [
                 {
-                  "id": "source-4",
-                  "name": "figma",
-                  "url": "https://www.figma.com/blog/config-2025-recap/",
-                  "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+                  "id": "source-5",
+                  "name": "youtube",
+                  "url": "https://www.youtube.com/watch?v=CfwmtYrHN0g",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
                   "title": "8 tips for designers building branded templates in Figma Buzz"
                 }
               ]
@@ -63,18 +63,18 @@
     },
     {
       "id": "section-1",
-      "title": "Mastering Auto Layout and Layer Structure for Responsive Templates",
+      "title": "Mastering Template Structure with Auto Layout and Layer Separation",
       "paragraphs": [
         {
           "id": "para-1-0",
-          "content": "Auto Layout ensures consistent spacing in text boxes, buttons, and image containers even when content varies, preventing misalignment from long headlines or resized images. Designers must separate text layers by font, weight, or field to avoid formatting breaks during bulk imports, making modular structures essential for campaign-scale outputs. Renaming layers descriptively enhances discoverability and usability across teams, with clear labels helping non-designers map data accurately.",
+          "content": "Designers should start with Auto Layout to ensure spacing adjusts dynamically to varying content lengths, preventing misalignment in templates.Separating text layers into distinct fields, such as \"CTA Button Text,\" is crucial for Bulk Create workflows with CSV or XLSX data mapping.Including example text like “Date of Event (e.g. July 10, 2025)” clarifies formatting expectations and boosts consistency.",
           "citations": [
             {
               "primarySource": {
-                "id": "source-5",
-                "name": "youtube",
-                "url": "https://www.youtube.com/watch?v=CfwmtYrHN0g",
-                "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
+                "id": "source-2",
+                "name": "figma",
+                "url": "https://www.figma.com/community/design-inspirations/style-guides",
+                "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
                 "title": "8 tips for designers building branded templates in Figma Buzz"
               },
               "additionalCount": 1,
@@ -92,23 +92,23 @@
         },
         {
           "id": "para-1-1",
-          "content": "Testing templates with realistic content reveals issues like text overlap or unexpected layer behavior before publishing. Organizing files with standardized naming conventions and logical row groupings in grid views improves team browsing and reduces rework. Providing upfront guidance on locked fields and formatting dos prevents off-brand mishaps in collaborative environments.",
+          "content": "Locking brand elements like logos via template guidelines restricts edits to designated areas, marked by pink outlines and lock icons.Users can then update unlocked text and images through the Edit Content panel or swap component variants.Testing templates with realistic content ensures they handle different text lengths and image types without distortion.",
           "citations": [
             {
               "primarySource": {
                 "id": "source-7",
-                "name": "figma",
-                "url": "https://www.figma.com/community/file/1556932642168617746/figma-carousel-post-design-2025-branding-how-to-make-your-brand-stand-out",
-                "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+                "name": "paddlecreative",
+                "url": "https://www.paddlecreative.co.uk/blog/best-15-figma-templates",
+                "favicon": "https://www.google.com/s2/favicons?domain=www.paddlecreative.co.uk&sz=32",
                 "title": "8 tips for designers building branded templates in Figma Buzz"
               },
               "additionalCount": 1,
               "additionalSources": [
                 {
                   "id": "source-8",
-                  "name": "paddlecreative",
-                  "url": "https://www.paddlecreative.co.uk/blog/best-15-figma-templates",
-                  "favicon": "https://www.google.com/s2/favicons?domain=www.paddlecreative.co.uk&sz=32",
+                  "name": "figma",
+                  "url": "https://www.figma.com/community/file/1556932642168617746/figma-carousel-post-design-2025-branding-how-to-make-your-brand-stand-out",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
                   "title": "8 tips for designers building branded templates in Figma Buzz"
                 }
               ]
@@ -119,16 +119,16 @@
     },
     {
       "id": "section-2",
-      "title": "Leveraging Components, Locking, and Bulk Tools for Team Efficiency",
+      "title": "Leveraging Component Variants and Organization for Team Discoverability",
       "paragraphs": [
         {
           "id": "para-2-0",
-          "content": "Component sets with variants allow safe swaps for elements like horizontal versus vertical logos or color-styled illustrations, minimizing exposure to disruptive edits. Locking brand elements such as logos via the Layers panel restricts changes while unlocking text and images for the Edit Content panel, indicated by pink outlines and lock icons on governed templates. Bulk Create maps CSV columns to named layers like \"Image_1\" or \"Speaker Photo,\" generating multiple assets efficiently for social posts or events.",
+          "content": "Component variants consolidate options like logo orientations or color styles into one set, allowing easy swaps via the inline toolbar.Descriptive naming and clear file titles make templates searchable in Buzz's grid view and \"From your team\" section.Figma's tutorial highlights focused editing mode, where teams edit content without altering core layouts.",
           "citations": []
         },
         {
           "id": "para-2-1",
-          "content": "Publish templates with descriptive names, thumbnails, and usage instructions to appear in team sections for easy access. Focused editing mode defaults protect layouts, with options to remove guidelines for fuller customization as starting points. These strategies empower cross-functional teams, reducing design review burdens while scaling on-brand production.",
+          "content": "Campaign planning involves creating related templates for platforms like Instagram and LinkedIn, with variations for seasons or products.Publishing includes adding thumbnails and usage descriptions to guide teams effectively.As Buzz exits beta, it will integrate across Full, Dev, Content, and Starter plans, broadening access.",
           "citations": []
         }
       ]
@@ -144,16 +144,16 @@
     },
     {
       "id": "source-2",
-      "name": "youtube",
-      "url": "https://www.youtube.com/watch?v=vqLE9Nt9DNU",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
+      "name": "figma",
+      "url": "https://www.figma.com/community/design-inspirations/style-guides",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
     },
     {
       "id": "source-3",
-      "name": "figma",
-      "url": "https://www.figma.com/community/design-inspirations/style-guides",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+      "name": "youtube",
+      "url": "https://www.youtube.com/watch?v=vqLE9Nt9DNU",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
     },
     {
@@ -188,16 +188,16 @@
     },
     {
       "id": "source-2",
-      "name": "youtube",
-      "url": "https://www.youtube.com/watch?v=vqLE9Nt9DNU",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
+      "name": "figma",
+      "url": "https://www.figma.com/community/design-inspirations/style-guides",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
     },
     {
       "id": "source-3",
-      "name": "figma",
-      "url": "https://www.figma.com/community/design-inspirations/style-guides",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+      "name": "youtube",
+      "url": "https://www.youtube.com/watch?v=vqLE9Nt9DNU",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
     },
     {
@@ -223,16 +223,16 @@
     },
     {
       "id": "source-7",
-      "name": "figma",
-      "url": "https://www.figma.com/community/file/1556932642168617746/figma-carousel-post-design-2025-branding-how-to-make-your-brand-stand-out",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+      "name": "paddlecreative",
+      "url": "https://www.paddlecreative.co.uk/blog/best-15-figma-templates",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.paddlecreative.co.uk&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
     },
     {
       "id": "source-8",
-      "name": "paddlecreative",
-      "url": "https://www.paddlecreative.co.uk/blog/best-15-figma-templates",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.paddlecreative.co.uk&sz=32",
+      "name": "figma",
+      "url": "https://www.figma.com/community/file/1556932642168617746/figma-carousel-post-design-2025-branding-how-to-make-your-brand-stand-out",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
     }
   ],
@@ -240,8 +240,8 @@
     "url": "https://cdn.sanity.io/images/599r6htc/regionalized/bccc680cc37f12685ef585b45f538eda221fb2c6-3840x2160.png?w=1200&amp;q=70&amp;fit=max&amp;auto=format"
   },
   "sidebarSections": [
-    "Mastering Auto Layout and Layer Structure for Responsive Templates",
-    "Leveraging Components, Locking, and Bulk Tools for Team Efficiency"
+    "Mastering Template Structure with Auto Layout and Layer Separation",
+    "Leveraging Component Variants and Organization for Team Discoverability"
   ],
   "relatedArticles": []
 }
