@@ -1,282 +1,63 @@
 {
   "type": "blog",
-  "date": "2025-12-23T16:18:25.846Z",
+  "date": "2025-12-23T16:29:35.200Z",
   "ideas": [
     {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
+      "title": "Amazon&#8217;s AI assistant Alexa+ now works with Angi, Expedia, Square, and Yelp",
+      "description": "The new integrations join other services like Yelp, Uber, OpenTable and others.",
       "starred": true,
       "sources": [
         {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
-        },
-        {
-          "name": "Monikersf",
-          "url": "https://monikersf.com/news"
-        },
-        {
-          "name": "Bpando",
-          "url": "https://bpando.org"
-        },
-        {
-          "name": "Sfdesignweek",
-          "url": "https://sfdesignweek.org"
-        },
-        {
-          "name": "Creativeboom",
-          "url": "https://www.creativeboom.com/inspiration/san-franciscos-moniker-cooks-up-tasty-brand-identity-for-artisan-chocolate-makers/"
-        },
-        {
-          "name": "Kqed",
-          "url": "https://www.kqed.org/news/12057037/san-francisco-nail-artist-turns-manicures-into-wearable-art-rooted-in-mexican-heritage"
-        }
-      ],
-      "format": "article",
-      "subcategory": "visionary",
-      "hooks": [
-        "Design Systems: The Secret Weapon of Elite Brands",
-        "How Top Companies Scale Visual Identity",
-        "Cracking the Code of Brand Consistency"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Use inline annotations to show real-time design system insights",
-            "Include interactive design system sketches/screenshots",
-            "Create a live commentary thread for reader feedback"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Optimize article with SEO-friendly headings about design systems",
-            "Include professional case study breakdowns with visuals",
-            "Use data-driven insights about brand consistency metrics"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Frame article as professional development opportunity",
-            "Include quotes from design leaders about visual identity",
-            "Share measurable impact of robust design systems"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, grid-based layout with dynamic typography. Monochromatic color palette with electric accent colors. Modular design system visuals. Geometric motion graphics illustrating scalability. Clean Swiss design influence with contemporary tech aesthetic."
-      },
-      "exampleOutline": [
-        "Introduction: The Design System Revolution",
-        "Why Visual Identity Matters in 2024",
-        "Anatomy of a Scalable Brand System",
-        "Case Studies: Brands Mastering Visual Consistency",
-        "Future of Design: Adaptive Visual Frameworks"
-      ],
-      "hashtags": "#DesignSystems #BrandIdentity #CreativeStrategy #AIDesign #VisualBranding #ProductDesign #CreativeTech #SanFranciscoDesign #BrandConsistency #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 10
-    },
-    {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/issue/221"
-        }
-      ],
-      "format": "thread",
-      "subcategory": "explanatory",
-      "hooks": [
-        "Design templates that scale without losing your brand soul 🚀",
-        "Figma secrets: Make templates that flex, not break 💡",
-        "Brand consistency meets designer flexibility: The ultimate hack 🔓"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Use thread as raw material for deeper newsletter exploration",
-            "Capture audience engagement metrics from thread interactions",
-            "Develop expanded version with more detailed case studies"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Transform thread into long-form SEO-optimized article",
-            "Add data visualizations and professional design examples",
-            "Include expert quotes and industry context"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Translate thread into professional narrative with enterprise perspective",
-            "Add corporate case study references",
-            "Include performance metrics and ROI implications"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, tech-forward design with dynamic gradient backgrounds, clean sans-serif typography, isometric design elements, subtle motion graphics highlighting template flexibility, color palette of electric blues, deep purples, and accent neon greens"
-      },
-      "exampleOutline": [
-        "Thread Opener: Bold claim about template design",
-        "Problem: Brand inconsistency in self-serve design",
-        "8 Strategic Tips with Visual Examples",
-        "Transformative Insight on Design Systems",
-        "Call-to-Action: Free Template Resource"
-      ],
-      "hashtags": "#DesignTemplates #FigmaDesign #BrandConsistency #CreativeWorkflow #AIDesign #DesignSystems #ProductDesign #CreativeTech #DesignInnovation #WorkflowOptimization",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7245606/pexels-photo-7245606.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/solutions/ai-photo-editing-app-builder/"
-        }
-      ],
-      "format": "guide",
-      "subcategory": "instructional",
-      "hooks": [
-        "AI Transforms Figma: 3 Game-Changing Image Editing Tools",
-        "Design Precision Redefined: Figma's New AI Toolset",
-        "Revolutionize Your Creative Workflow with Figma's AI"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Include real-time screen capture GIFs of tool demonstrations",
-            "Add personal experiment/use case with the new tools",
-            "Create interactive annotations explaining each tool's unique value"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Develop SEO-optimized headers for each tool explanation",
-            "Include comparative screenshots showing before/after edits",
-            "Add expert commentary from design professionals"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Highlight professional productivity gains from these tools",
-            "Include industry statistics on AI design tool adoption",
-            "Create a professional case study of workflow improvement"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, dynamic visual approach with high-contrast color palette (electric blue, deep charcoal, bright white). Geometric composition emphasizing precision. Clean, sans-serif typography with technical undertones. Animated transitions showcasing tool transformations. Minimal but impactful design references inspired by Swiss design principles and modern tech interfaces."
-      },
-      "exampleOutline": [
-        "Introduction: The AI Design Revolution",
-        "The Current Design Editing Landscape",
-        "Deep Dive: 3 Revolutionary Figma AI Tools",
-        "Practical Applications and Workflow Integration",
-        "Future of AI in Creative Design"
-      ],
-      "hashtags": "#FigmaAI #DesignTechnology #CreativeTools #AIDesign #ProductivityHack #DesignInnovation #CreativeTech #AICreativity #DesignWorkflow #FigmaUpdate",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5438813/pexels-photo-5438813.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 1
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/23/amazons-ai-assistant-alexa-now-works-with-angi-expedia-square-and-yelp/"
         }
       ],
       "format": "listicle",
       "subcategory": "explanatory",
       "hooks": [
-        "Figma Buzz: 3 Game-Changing Features for Designers",
-        "Supercharge Your Design Workflow with Figma Buzz",
-        "Design Faster, Smarter: Figma Buzz's Secret Weapons"
+        "Alexa's New Superpowers: 4 Game-Changing Integrations",
+        "How Amazon Is Transforming Voice Assistants Today",
+        "Alexa's Smartest Upgrade Yet: 4 Killer Partnerships"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Use animated GIFs to showcase each Figma Buzz feature",
-            "Include personal experiment/use case for each feature",
-            "Keep tone conversational and hands-on"
+            "Use interactive screenshots of each integration",
+            "Add personal commentary on each service connection",
+            "Include real-time user experience annotations"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Add SEO-friendly headers for each feature",
-            "Include comparative screenshots of before/after",
-            "Optimize with technical details and performance insights"
+            "Include SEO-friendly subheadings for each integration",
+            "Add comparative analysis with other voice assistants",
+            "Use data visualizations to highlight integration impact"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Frame features as professional productivity boosters",
-            "Include potential time/efficiency savings",
-            "Add professional credibility with implementation strategies"
+            "Frame integrations as business innovation case studies",
+            "Include potential enterprise implications",
+            "Use professional tone highlighting strategic partnerships"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, tech-forward design with dynamic grid layouts, electric blue and charcoal color palette, geometric sans-serif typography, subtle hover animations, iOS-inspired clean interface references"
+        "description": "Bold, tech-forward design with isometric illustrations of Alexa integrating with partner logos. Vibrant electric blue and deep purple color palette. Dynamic diagonal composition with floating UI elements. Modern sans-serif typography with subtle motion graphics showing interconnectivity."
       },
       "exampleOutline": [
-        "Intro: Why Figma Buzz Matters",
-        "Feature 1: Marketing Template Revolution",
-        "Feature 2: Cross-App Plugin Integration",
-        "Feature 3: Video Trimming Breakthrough",
-        "Conclusion: Future of Design Workflows"
+        "Section 1: Alexa's Evolution - The Integration Revolution",
+        "Section 2: Why These Partnerships Matter",
+        "Section 3: Detailed Breakdown of 4 New Integrations",
+        "Section 4: Future of Voice Assistant Ecosystems",
+        "Section 5: How Businesses Can Leverage These Innovations"
       ],
-      "hashtags": "#FigmaBuzz #DesignTools #AIDesign #CreativeWorkflow #ProductivityHacks #DesignTech #UIUXDesign #CreativeTech #DesignInnovation #WorkflowOptimization",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 3
+      "hashtags": "#AmazonAI #VoiceTech #AlexaIntegrations #AIInnovation #TechTrends #VoiceAssistant #DigitalTransformation #TechPartnerships #AIEcosystem #FutureOfTech",
+      "textureIndex": 10
     },
     {
       "title": "Lemon Slice nabs $10.5M from YC and Matrix to build out its digital avatar tech",
@@ -291,50 +72,220 @@
       "format": "case-study",
       "subcategory": "case-study-deep-dive",
       "hooks": [
-        "AI Avatars: How Lemon Slice Rewrote Digital Interaction",
-        "One Image, Infinite Avatars: Lemon Slice's Revolution",
-        "Digital Transformation in One Frame: Lemon Slice's Story"
+        "How Lemon Slice is Redefining Digital Human Interaction",
+        "AI Avatars: The Next Frontier of Personalized Communication",
+        "Turning Single Images into Living Digital Personas"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
+            "Use animated GIF comparisons of avatar transformations",
             "Include real-time screenshot of avatar generation process",
-            "Use interactive GIFs to demonstrate technology",
-            "Add personal commentary on potential industry implications"
+            "Share personal experiment with Lemon Slice technology"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Embed technical diagrams explaining diffusion model",
+            "Create detailed technical breakdown of diffusion model",
             "Include expert quotes from AI research community",
-            "Create SEO-optimized headers for algorithmic visibility"
+            "Optimize with SEO-friendly technical headers"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Highlight startup's funding and investor credibility",
-            "Frame technology through professional transformation lens",
-            "Include potential enterprise application scenarios"
+            "Highlight potential enterprise applications of avatar tech",
+            "Include investment and market size statistics",
+            "Frame as professional innovation opportunity"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Dynamic, tech-forward aesthetic using deep blues and electric teals. Geometric typography with subtle motion graphics. Clean, futuristic composition emphasizing transformation and digital fluidity. Incorporate abstract avatar silhouettes and neural network-inspired visual motifs."
+        "description": "Dynamic split-screen compositions showing avatar transformation, vibrant tech-inspired color palette (electric blues, deep purples), modern sans-serif typography, subtle motion graphics revealing avatar generation process, minimalist futuristic aesthetic with clean lines and high-contrast imagery"
       },
       "exampleOutline": [
-        "Section 1: Disruptive Potential of Single-Image Avatar Tech",
-        "Section 2: The Digital Representation Challenge",
-        "Section 3: Lemon Slice's Innovative Diffusion Model Breakdown",
-        "Section 4: Transformative Implications for AI Interaction",
-        "Section 5: Future of Digital Identity and Engagement"
+        "Opening: The Digital Avatar Revolution",
+        "Problem: Limitations of Current AI Communication",
+        "Lemon Slice's Technical Breakthrough",
+        "Case Study: From Single Image to Living Avatar",
+        "Future Implications and Call to Action"
       ],
-      "hashtags": "#AIAvatars #DigitalTransformation #LemonSlice #AITech #StartupInnovation #FutureOfWork #MachineLearning #TechFunding #AIInteraction #InnovativeTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 11
+      "hashtags": "#AIAvatars #DigitalTransformation #TechInnovation #ArtificialIntelligence #FutureOfCommunication #StartupTech #MachineLearning #YCombinator #AIResearch #TechInvestment",
+      "textureIndex": 10
+    },
+    {
+      "title": "AI tools are overdelivering: results from our large-scale AI productivity survey",
+      "description": "What exactly AI is doing for people, which AI tools have product-market fit, where the biggest opportunities remain, and what it all means",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/ai-tools-are-overdelivering-results"
+        }
+      ],
+      "format": "guide",
+      "subcategory": "instructional",
+      "hooks": [
+        "AI is Transforming Work Faster Than You Think",
+        "The Productivity Revolution: AI's Unexpected Impact",
+        "How AI Tools Are Rewriting the Workplace Rulebook"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use interactive poll to engage readers about AI tool experiences",
+            "Include real-time data visualization of survey results",
+            "Create a shareable infographic summary for subscribers"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Optimize SEO with clear, keyword-rich headings",
+            "Add expert quotes to increase credibility",
+            "Include detailed methodology section for transparency"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Highlight professional impact with concrete ROI statistics",
+            "Use data-driven charts and professional graphics",
+            "Tag relevant industry thought leaders for broader reach"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, dynamic infographic-style design with electric blue and deep charcoal color palette. Clean, modern typography with subtle motion graphics. Isometric data visualizations. Minimal flat design with geometric data representations. Incorporate subtle AI/circuit-inspired background patterns. Use high-contrast color blocks for key statistics."
+      },
+      "exampleOutline": [
+        "Introduction: The AI Productivity Landscape",
+        "Research Methodology and Survey Overview",
+        "Key Findings: AI Tool Performance and Impact",
+        "Sector-by-Sector Breakdown of AI Productivity Gains",
+        "Future Implications and Emerging Opportunities"
+      ],
+      "hashtags": "#AIProductivity #FutureOfWork #AITools #WorkplaceTech #ProductivityHacks #AIInnovation #TechTrends #WorkSmart #AIResearch #ProfessionalDevelopment",
+      "textureIndex": 8
+    },
+    {
+      "title": "OpenAI says AI browsers may always be vulnerable to prompt injection attacks",
+      "description": "OpenAI says prompt injections will always be a risk for AI browsers with agentic capabilities, like Atlas. But the firm is beefing up its cybersecurity with an \"LLM-based automated attacker.\"",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/22/openai-says-ai-browsers-may-always-be-vulnerable-to-prompt-injection-attacks/"
+        }
+      ],
+      "format": "thread",
+      "subcategory": "explanatory",
+      "hooks": [
+        "AI Security Alert: Browsers Always Hackable?",
+        "OpenAI's Shocking Cybersecurity Confession Revealed",
+        "The Unavoidable Vulnerability in AI Browsers"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use thread as preview for longer deep-dive newsletter",
+            "Capture email leads by teasing full research",
+            "Create companion graphic explaining prompt injection concept"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Expand thread into comprehensive SEO-optimized article",
+            "Include technical diagrams explaining prompt injection mechanics",
+            "Add expert commentary and research citations"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame thread as professional cybersecurity insight",
+            "Add enterprise risk management perspective",
+            "Include potential mitigation strategies for business leaders"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast digital security aesthetic. Dark background with neon circuit-board inspired graphics. Glitch-style typography suggesting system vulnerability. Animated elements simulating code injection. Color palette of deep blues, electric teals, and warning-signal oranges. Geometric, technical composition emphasizing digital fragility."
+      },
+      "exampleOutline": [
+        "🚨 Breaking: OpenAI reveals critical AI browser vulnerability",
+        "What exactly is a prompt injection attack?",
+        "How OpenAI's new 'LLM-based automated attacker' works",
+        "Why complete security might be impossible",
+        "What developers and users must know now"
+      ],
+      "hashtags": "#AISecurityAlert #CyberSecurity #OpenAI #AITechnology #TechInnovation #CyberRisk #MachineLearning #AIEthics #TechTrends #InformationSecurity",
+      "textureIndex": 10
+    },
+    {
+      "title": "Alphabet to buy Intersect Power to bypass energy grid bottlenecks",
+      "description": "Alphabet is set to pay $4.75 billion in cash, plus debt, for the data center and clean energy developer.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/22/alphabet-to-buy-intersect-power-to-bypass-energy-grid-bottlenecks/"
+        }
+      ],
+      "format": "article",
+      "subcategory": "visionary",
+      "hooks": [
+        "Alphabet's $4.75B Power Play: Rewriting Energy Infrastructure",
+        "How Google's Parent is Disrupting Clean Energy Grids",
+        "Intersect Power Acquisition: The Future of Energy Tech"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use real-time annotation to break down acquisition implications",
+            "Include interactive energy infrastructure diagrams",
+            "Embed live commentary about potential industry ripple effects"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Deep dive into technical infrastructure challenges",
+            "Include SEO-optimized subheadings about energy grid innovation",
+            "Add data visualizations comparing pre/post acquisition landscape"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame acquisition as strategic enterprise technology move",
+            "Include executive perspective quotes and industry analysis",
+            "Highlight potential workforce and innovation implications"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dynamic infographic-driven layout with electric blue and deep green color palette, geometric data visualization overlays, clean sans-serif typography, subtle motion graphics showing infrastructure transformation, minimalist tech-inspired aesthetic with clean energy motifs"
+      },
+      "exampleOutline": [
+        "Section 1: Provocative Opening - The $4.75B Energy Revolution",
+        "Section 2: Current Grid Infrastructure Limitations",
+        "Section 3: Intersect Power's Unique Technology Ecosystem",
+        "Section 4: Alphabet's Strategic Technology Integration",
+        "Section 5: Future of Decentralized Energy Infrastructure"
+      ],
+      "hashtags": "#CleanEnergy #GoogleTech #EnergyInnovation #AIInfrastructure #TechAcquisition #RenewableTech #FutureOfEnergy #DataCenters #TechStrategy #InfrastructureInnovation",
+      "textureIndex": 4
     }
   ]
 }
