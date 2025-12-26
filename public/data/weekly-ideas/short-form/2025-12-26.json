@@ -1,368 +1,331 @@
 {
   "type": "short-form",
-  "date": "2025-12-26T16:19:53.454Z",
+  "date": "2025-12-26T16:24:29.794Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Treat yourself: The best smart glasses to buy with your holiday gift money",
+      "description": "Whether you’re looking to get a pair yourself or just want to explore what’s available on the market today, we’ve compiled a list of the most compelling pairs available.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/issue/221"
-        }
-      ],
-      "format": "story",
-      "subcategory": "story",
-      "hooks": [
-        "Design Templates That Don't Break Your Brand",
-        "Figma Secrets: Flexible Brand Guidelines Revealed",
-        "Master Self-Serve Design Without Losing Control"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick jump cuts between template examples",
-            "Add text overlay animations for key points",
-            "Include visual before/after comparisons"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "Make first slide a provocative visual contrast",
-            "Use square 1:1 format for clear readability",
-            "Design each slide as a standalone mini-lesson"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Open with unexpected visual template fail",
-            "Use screen recording of Figma interactions",
-            "Add dynamic text callouts during demonstration"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame content as professional design strategy",
-            "Include data/statistics about template efficiency",
-            "Use more technical, authoritative language"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast color palette with electric blue and charcoal gray. Dynamic typography with slight motion. Geometric, modular composition mimicking design grid systems. Clean, technical aesthetic with playful edge. Incorporate Figma UI elements as graphic motifs."
-      },
-      "exampleOutline": [
-        "Section 1: Provocative Brand Template Challenge",
-        "Section 2: The Hidden Complexity of Design Systems",
-        "Section 3: 8 Tactical Template Creation Strategies",
-        "Section 4: Real-World Scalability Insights",
-        "Section 5: Call-to-Experiment Invitation"
-      ],
-      "hashtags": "#DesignSystem #FigmaTemplates #BrandDesign #CreativeStrategy #AIDesign #DesignTips #ProductDesign #BrandIdentity #DesignInnovation #CreativeTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 10
-    },
-    {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
-        },
-        {
-          "name": "Monikersf",
-          "url": "https://monikersf.com/news"
-        },
-        {
-          "name": "Bpando",
-          "url": "https://bpando.org"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/26/treat-yourself-the-best-smart-glasses-to-buy-with-your-holiday-gift-money/"
         }
       ],
       "format": "quick-image",
       "subcategory": "quick-image",
       "hooks": [
-        "Design Jobs That Actually Pay: San Francisco Insider Secrets",
-        "Moniker's Hidden Design Career Playbook Revealed",
-        "Senior Designer Role: Not Your Average Job Listing"
+        "Smart Glasses: Your Tech Holiday Upgrade 🕶️",
+        "Upgrade Your Vision: Best Smart Glasses Now",
+        "Future Tech Fits in Your Frames 🚀"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use dynamic text overlays with job salary/role highlights",
-            "Create quick visual transitions showcasing design portfolio elements",
-            "Include quick cuts of San Francisco design studio aesthetic"
+            "Use rapid-fire transitions between smart glasses models",
+            "Include close-up texture/detail shots of glasses",
+            "Add quick price/feature text overlays"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Bold job title graphic",
-            "Use slide-by-slide breakdown of role requirements",
-            "Final slide: Clear call-to-action with application link"
+            "First slide: Provocative comparison graphic",
+            "Use slide-to-slide animation for tech reveal",
+            "Final slide: Clear purchase/research CTA"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with provocative question about design careers",
-            "Use rapid-fire text animations",
-            "Include quick b-roll of design studio environment"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "More professional tone, highlight technical requirements",
-            "Include specific skills Moniker is seeking",
-            "Use data-driven graphics about design career potential"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 8,
-        "description": "High-contrast tech-inspired aesthetic with San Francisco minimalist design ethos. Bold sans-serif typography, electric blue and charcoal color palette, geometric overlays, subtle motion graphics. Incorporate abstract design portfolio elements and city skyline silhouettes."
-      },
-      "exampleOutline": [
-        "Opening: Provocative job market statement",
-        "Problem: Traditional design job hunting challenges",
-        "Solution: Moniker's unique senior designer opportunity",
-        "Key Skills Breakdown",
-        "Direct Application Invitation"
-      ],
-      "hashtags": "#DesignCareers #SanFranciscoDesign #AIDesign #CreativeJobs #DesignTech #JobOpportunity #SeniorDesigner #CreativeProfessionals #DesignIndustry #TechCareers",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 9
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/solutions/ai-photo-editing-app-builder/"
-        }
-      ],
-      "format": "story",
-      "subcategory": "story",
-      "hooks": [
-        "Figma's AI just transformed image editing forever 🚀",
-        "3 mind-blowing image tools that will change design",
-        "Design faster: Figma's secret AI editing weapons"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick jump cuts between tool demonstrations",
-            "Include dynamic text overlays showing before/after edits",
-            "Create a fast-paced visual narrative of workflow"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must have dramatic visual transformation",
-            "Use slide transitions to show editing progression",
-            "Include concise text explanation on each slide"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected visual glitch or surprise",
-            "Use screen recording with mouse tracking",
-            "Include rapid tutorial segments"
+            "Start with unexpected smart glasses use case",
+            "Use dynamic split-screen tech demonstrations",
+            "Include human reaction/interaction moments"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
             "Frame as professional productivity enhancement",
-            "Include data-driven benefit statements",
-            "Show enterprise-level workflow implications"
+            "Include data/research about smart glasses adoption",
+            "Highlight enterprise/professional use cases"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-energy cyberpunk-inspired aesthetic with neon accents, dynamic motion graphics showing tool transformations, sleek sans-serif typography, dark mode color palette with electric blue and magenta highlights, glitch/digital artifact visual effects"
+        "description": "High-contrast cyberpunk-inspired color palette, glitch/digital overlay effects, futuristic sans-serif typography, holographic accent elements, dynamic diagonal compositions with tech-forward imagery"
       },
       "exampleOutline": [
-        "Section 1: Dramatic AI editing problem statement",
-        "Section 2: Traditional editing pain points",
-        "Section 3: Reveal of 3 specific Figma AI tools",
-        "Section 4: Quick demo of each tool's capability",
-        "Section 5: Call-to-action and tool exploration prompt"
+        "Hook: Provocative smart glasses statement",
+        "Problem: Tech limitations of current eyewear",
+        "Solution: Top 3-4 smart glasses models",
+        "Key Insight: How these transform daily tech",
+        "CTA: Where/how to explore further"
       ],
-      "hashtags": "#FigmaAI #DesignTechnology #AIDesign #CreativeTech #ImageEditing #DesignInnovation #AITools #ProductivityHack #CreativeWorkflow #DesignTips",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 11
+      "hashtags": "#SmartGlasses #TechInnovation #FutureWear #WearableTech #GadgetGuide #HolidayGifts #TechTrends #InnovationHub #GeekyGifts #AIFashion",
+      "textureIndex": 6
     },
     {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
+      "title": "The 9 top cybersecurity startups from Disrupt Startup Battlefield",
+      "description": "Here is the full list of the cybersecurity Startup Battlefield 200 selectees, along with a note on what made us select them for the competition.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        }
-      ],
-      "format": "carousel",
-      "subcategory": "carousel",
-      "hooks": [
-        "Figma Buzz: 3 Game-Changing Features for Designers",
-        "Unlock Design Superpowers with Figma's Latest Update",
-        "Design Faster, Smarter: Figma Buzz Drops New Tools"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick transitions between feature highlights",
-            "Add dynamic motion graphics for each feature",
-            "Keep total video under 60 seconds"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must be visually striking and hook-driven",
-            "Use consistent color palette across all slides",
-            "Include concise, readable text with design illustrations"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with a pattern-interrupt visual",
-            "Use screen recordings to demonstrate features",
-            "Add energetic background music"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Add more technical context and professional insights",
-            "Include potential workflow improvements",
-            "Use more formal, expert-level language"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, modern tech aesthetic with vibrant gradient backgrounds, clean sans-serif typography, isometric design feature illustrations, minimal white space, dynamic motion graphics showing feature transformations"
-      },
-      "exampleOutline": [
-        "Slide 1: Bold hook with eye-catching graphic",
-        "Slide 2: Marketing Template Connection Overview",
-        "Slide 3: Plugin Integration Feature",
-        "Slide 4: Video Trimming Functionality",
-        "Slide 5: Call-to-Action and Quick Summary"
-      ],
-      "hashtags": "#FigmaBuzz #DesignTools #CreativeTech #AIDesign #ProductivityHacks #DesignInnovation #CreativeWorkflow #UXDesign #DesignTips #TechInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 9
-    },
-    {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/26/the-9-top-cybersecurity-startups-from-disrupt-startup-battlefield/"
         }
       ],
       "format": "reel",
       "subcategory": "reel",
       "hooks": [
-        "How Figma designed a typeface that breaks all rules",
-        "Behind the scenes: Figma's font revolution",
-        "Typography meets innovation: Figma Sans revealed"
+        "9 Cybersecurity Startups Hackers Don't Want You to Know",
+        "Startup Battlefield's Cyber Secrets Revealed!",
+        "These Startups Are Changing Cybersecurity Forever"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use fast-paced typography animations",
-            "Include behind-the-scenes design sketches",
-            "Leverage text overlays to explain complex design concepts quickly"
+            "Use quick, dynamic text transitions between startup introductions",
+            "Include rapid-fire visual glitch effects to match cybersecurity theme",
+            "Ensure text is large and readable in vertical format"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Dramatic before/after of typeface",
-            "Use progressive reveal of design process",
-            "Include infographic-style slides explaining font design principles"
+            "First slide: Dramatic hook with cyber-themed graphic",
+            "Use consistent dark/tech color palette across slides",
+            "Include one key fact per startup on individual slides"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with unexpected visual pattern interrupt",
-            "Use designer interview-style quick cuts",
-            "Include rapid visual transitions between design stages"
+            "Open with high-energy motion graphics",
+            "Use screen recordings or mock-up interfaces",
+            "Include subtle sound design with tech/hacking aesthetic"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Add professional design context",
-            "Include expert commentary snippets",
-            "Emphasize brand strategy behind typeface creation"
+            "Add more detailed context about startup selection criteria",
+            "Use more professional tone and design language",
+            "Include potential investment or innovation insights"
           ]
         }
       ],
       "visualDirection": {
         "rating": 8,
-        "description": "Bold, experimental typography-driven aesthetic. High-contrast color palette with digital glitch effects. Dynamic motion graphics showing type transformation. Mix of clean design system visuals and creative deconstruction. Incorporate design process sketches with modern, slightly chaotic overlay animations."
+        "description": "Dark mode cyberpunk aesthetic with neon accents, glitch transitions, matrix-style text reveals, high-contrast typography in tech blues and greens, dynamic motion graphics simulating network/code interfaces"
       },
       "exampleOutline": [
-        "Hook: Dramatic typography reveal",
-        "Problem: Design limitations in existing fonts",
-        "Process: Behind-the-scenes font creation journey",
-        "Innovation: Unique Figma Sans features",
-        "Call-to-Action: Explore Figma's design resources"
+        "Quick dramatic hook with cyber visual",
+        "Rapid introduction to Startup Battlefield context",
+        "Quick showcase of 9 startups (2-3 seconds each)",
+        "Key innovation or unique approach per startup",
+        "Call-to-action to learn more/follow channel"
       ],
-      "hashtags": "#DesignInnovation #Typography #FigmaSans #CreativeProcess #BrandDesign #AIDesign #ProductDesign #CreativeTech #DesignSystem #FontDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "hashtags": "#Cybersecurity #StartupBattlefield #TechInnovation #CyberStartups #AISecurityTech #InnovationTech #CyberDefense #StartupLife #TechTrends #FutureOfSecurity",
+      "textureIndex": 6
+    },
+    {
+      "title": "These are the cybersecurity stories we were jealous of in 2025",
+      "description": "The very best reporting and investigative journalism from our friends at other publications.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/26/these-are-the-cybersecurity-stories-we-were-jealous-of-in-2025/"
+        }
+      ],
+      "format": "carousel",
+      "subcategory": "carousel",
+      "hooks": [
+        "Cybersecurity Secrets: What Reporters Discovered in 2025",
+        "The Hacks That Shocked Tech Journalists",
+        "Inside the Cyber Stories Nobody Saw Coming"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick, dynamic transitions between slides",
+            "Add subtle glitch/digital effect animations",
+            "Keep each slide under 3 seconds"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have maximum visual intrigue",
+            "Use dark mode/cybersecurity color palette",
+            "Create narrative flow across 6-8 slides"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Compress carousel into rapid-fire narrative",
+            "Add voiceover explaining key insights",
+            "Use screen recordings/digital graphics"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add more technical context between slides",
+            "Include professional credibility markers",
+            "Link to full source articles"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "Dark cyberpunk aesthetic with neon blue/green accents, glitch-inspired typography, abstract digital background textures, futuristic data visualization elements, high contrast between text and background"
+      },
+      "exampleOutline": [
+        "Slide 1: Provocative Hook/Title",
+        "Slide 2: Top Cybersecurity Story Overview",
+        "Slide 3: Key Investigation Details",
+        "Slide 4: Surprising Findings/Impact",
+        "Slide 5: Expert Commentary/Implications"
+      ],
+      "hashtags": "#Cybersecurity2025 #TechJournalism #DataPrivacy #CyberHacks #TechTrends #InvestigativeReporting #AISecurityl #DigitalPrivacy #CyberStories #TechInnovation",
+      "textureIndex": 8
+    },
+    {
+      "title": "How a Spanish virus brought Google to Málaga",
+      "description": "Spanish entrepreneur Bernardo Quintero, whose company is at the root of Google's Málaga cybersecurity hub, identified the author of the computer virus that influenced his career.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/25/how-a-spanish-virus-brought-google-to-malaga/"
+        }
+      ],
+      "format": "story",
+      "subcategory": "story",
+      "hooks": [
+        "How a virus launched Google's cybersecurity empire",
+        "Málaga's unexpected tech hero changed everything",
+        "One virus. One entrepreneur. Google's big move."
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick scene transitions to simulate story progression",
+            "Include subtle motion graphics to highlight key moments",
+            "Create a narrative arc within 30-second constraint"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "Design each slide as a sequential storytelling frame",
+            "Use consistent color palette across slides",
+            "Ensure first slide has maximum visual intrigue"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Add dynamic text overlays highlighting key narrative points",
+            "Use b-roll footage of Málaga/tech environments",
+            "Compress story into most dramatic 60-second arc"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame story as professional transformation narrative",
+            "Include more technical context and industry implications",
+            "Use more formal, authoritative visual design"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dark teals and electric blues with glitch-inspired graphic overlays. Cybersecurity-meets-startup aesthetic. Angular typography with subtle digital distortion. Incorporate map/geographic elements representing Málaga. Use high-contrast imagery with technological texture layers."
+      },
+      "exampleOutline": [
+        "Opening: Dramatic virus discovery moment",
+        "Entrepreneur's background and initial challenge",
+        "Virus identification process and breakthrough",
+        "Google's unexpected connection and recruitment",
+        "Inspirational lesson/call to action"
+      ],
+      "hashtags": "#TechStory #Cybersecurity #GoogleInnovation #SpanishTech #EntrepreneurJourney #AIRevolution #TechInnovation #StartupStory #MalagaTech #InnovationImpact",
       "textureIndex": 1
+    },
+    {
+      "title": "The best distraction blockers to jumpstart your focus in the new year",
+      "description": "Whether you need to limit social media scrolling or block off time to be productive, there are different tools that can help you stay on task",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/25/the-best-distraction-blockers-to-jumpstart-your-focus-in-the-new-year/"
+        }
+      ],
+      "format": "reel",
+      "subcategory": "reel",
+      "hooks": [
+        "Crush Distractions: 3 Mind-Blowing Focus Apps",
+        "Goodbye Scrolling, Hello Productivity",
+        "Your Brain on Distraction Blockers"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic transitions between app screenshots",
+            "Create fast-paced visual rhythm with quick cuts",
+            "Include text overlays highlighting key app features"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Provocative problem statement",
+            "Use infographic-style slides for app comparisons",
+            "Final slide: Clear action/recommendation"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected visual metaphor for distraction",
+            "Use screen recordings of actual app interfaces",
+            "Include personal productivity transformation narrative"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "More professional tone, data-driven approach",
+            "Include productivity ROI statistics",
+            "Emphasize professional development angle"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy, tech-minimalist aesthetic. Neon-adjacent color palette with deep blues and electric teals. Sharp geometric transitions. Futuristic typography with clean sans-serif fonts. Motion graphics showing app interactions with subtle 3D parallax effects."
+      },
+      "exampleOutline": [
+        "Hook: Provocative distraction statistic",
+        "Problem: Modern productivity challenges",
+        "Solution: 3 top distraction blocking apps",
+        "Quick demo/feature highlight",
+        "Call-to-action: Try one app this week"
+      ],
+      "hashtags": "#ProductivityHacks #FocusTips #AIProductivity #TechTools #WorkSmart #MindfulTech #ProductivityApp #FocusMode #WorkFromHome #DigitalMinimalism",
+      "textureIndex": 2
     }
   ]
 }

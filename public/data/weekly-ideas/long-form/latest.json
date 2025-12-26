@@ -1,248 +1,211 @@
 {
   "type": "long-form",
-  "date": "2025-12-26T16:19:53.454Z",
+  "date": "2025-12-26T16:25:11.093Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Ars Technica’s Top 20 video games of 2025",
+      "description": "Ars Technica’s Top 20 video games of 2025",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/issue/221"
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/gaming/2025/12/ars-technicas-top-20-video-games-of-2025/"
         }
       ],
       "format": "tutorial",
       "subcategory": "instructional",
       "hooks": [
-        "Design Templates That Scale Without Breaking Brand",
-        "Figma Buzz: Make Templates Work for Everyone",
-        "Build Flexible Brand Templates in 8 Pro Steps"
+        "Level Up: Your Ultimate 2025 Gaming Roadmap",
+        "Decode the Future of Gaming: Top 20 Revealed",
+        "Master 2025's Most Epic Gaming Experiences"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use chapter markers to break down each template design step",
-            "Include live Figma screen recording with picture-in-picture instructor view",
-            "Create visual comparison slides showing 'before and after' template flexibility"
+            "Use game footage as B-roll during commentary",
+            "Create chapter markers for each game ranking",
+            "Include side-by-side gameplay comparisons"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Dynamic design system aesthetic with modular grid layouts, vibrant yet professional color palette (blues/teals with neutral grays), clean sans-serif typography, animated graphic overlays demonstrating template constraints and flexibility, motion graphics highlighting template transformations"
+        "description": "Cyberpunk-inspired color palette with electric blues and neon accents. Dynamic split-screen compositions showcasing game comparisons. Futuristic sans-serif typography with glitch animation effects. Incorporate gaming UI elements as graphic overlays. Motion graphics that simulate game loading screens and transition effects."
       },
       "exampleOutline": [
-        "Introduction: Why Flexible Templates Matter",
-        "The Marketing Design Challenge",
-        "8 Pro Tips for Scalable Brand Templates",
-        "Real-World Template Design Insights",
-        "Call-to-Action: Start Designing Smarter"
+        "Section 1: Dramatic Gaming Landscape Introduction",
+        "Section 2: Methodology Behind Rankings",
+        "Section 3: Countdown - Top 20 Games Breakdown",
+        "Section 4: Deep Dive into Top 5 Titles",
+        "Section 5: Future of Gaming Prediction & Call to Action"
       ],
-      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystems #CreativeWorkflow #TemplateDesign #UIDesign #ProductDesign #DesignTips #AdobeCreative #DesignStrategy",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
+      "hashtags": "#Gaming2025 #VideoGameRankings #TopGames #GameReview #FutureOfGaming #ArsTechnica #GameCulture #GamersUnite #TechTrends #GamingInnovation",
+      "textureIndex": 12
     },
     {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
+      "title": "Nvidia to license AI chip challenger Groq&#8217;s tech and hire its CEO",
+      "description": "With Groq on its side, Nvidia is poised to become even more dominant in chip manufacturing.",
       "starred": false,
       "sources": [
         {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
-        },
-        {
-          "name": "Monikersf",
-          "url": "https://monikersf.com/news"
-        },
-        {
-          "name": "Bpando",
-          "url": "https://bpando.org"
-        }
-      ],
-      "format": "tutorial",
-      "subcategory": "instructional",
-      "hooks": [
-        "Design Your Dream Visual Identity in 5 Steps",
-        "Crack the Code: Brand Systems Demystified",
-        "Pro Secrets: Build Scalable Design Frameworks"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use chapter markers to break down each design step",
-            "Include screen recordings of actual design process",
-            "Use picture-in-picture to show designer and screen simultaneously"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, dynamic visual aesthetic with high-contrast color palette (deep navy, electric orange, clean white). Grid-based layouts with dynamic typography. Animated transitions between steps. Minimal but energetic motion graphics highlighting key design principles. San Francisco design scene aesthetic: tech-forward, innovative, clean."
-      },
-      "exampleOutline": [
-        "Introduction: Why Visual Identity Systems Matter",
-        "Context: Challenges in Scalable Brand Design",
-        "5-Step Framework for Creating Robust Design Systems",
-        "Pro Techniques and Insider Insights",
-        "Final Call-to-Action: Apply What You've Learned"
-      ],
-      "hashtags": "#DesignSystem #BrandIdentity #CreativeDirection #VisualBranding #DesignTips #GraphicDesign #CreativeTech #SFDesign #AIDesign #DesignFramework",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 1
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/solutions/ai-photo-editing-app-builder/"
-        }
-      ],
-      "format": "livestream",
-      "subcategory": "leadership",
-      "hooks": [
-        "AI Image Tools That Will Transform Your Figma Workflow",
-        "Figma's New Editing Magic: 3 Tools You Can't Miss",
-        "Precision Editing Redefined: Figma's AI Breakthrough"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Enable live chat for real-time audience interaction",
-            "Prepare pre-written answers for anticipated Q&A questions",
-            "Use stream annotations to highlight key tool features"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Dynamic split-screen layout with live demo on one side, presenter on the other. High-contrast teal and charcoal color palette. Animated UI highlights with subtle motion graphics. Clean, modern typography with bold sans-serif headlines. Live stream overlay with real-time interaction elements."
-      },
-      "exampleOutline": [
-        "Section 1: High-Energy Live Stream Introduction",
-        "Section 2: Problem Space in Image Editing",
-        "Section 3: Detailed Tool Walkthrough & Live Demonstrations",
-        "Section 4: Real-World Use Cases & Creative Possibilities",
-        "Section 5: Open Q&A and Community Interaction"
-      ],
-      "hashtags": "#FigmaAI #DesignTools #CreativeTech #AIEditing #ProductivityHacks #UXDesign #CreativeWorkflow #AIInDesign #FigmaTips #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        }
-      ],
-      "format": "video",
-      "subcategory": "thought-leadership",
-      "hooks": [
-        "Design Faster: 3 Figma Buzz Hacks You Can't Miss",
-        "Unlock Insane Productivity with Figma Buzz Features",
-        "Designers: Your Workflow Just Got a Supercharge"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use screen recording with high-quality screen capture",
-            "Include picture-in-picture demonstrations of each feature",
-            "Add chapter markers for easy navigation"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, dynamic visual style with high-contrast Figma brand colors. Dynamic motion graphics showing feature transitions. Clean, modern typography with sharp sans-serif font. Animated overlays highlighting key UI elements. Color palette of deep blues, bright teals, with white negative space. Smooth, fast-paced motion design that feels energetic and technical."
-      },
-      "exampleOutline": [
-        "Opening Hook: Teaser of new Figma Buzz capabilities",
-        "Problem Context: Current design workflow limitations",
-        "Feature Breakdown: Detailed walkthrough of 3 new tools",
-        "Practical Implications: How these features transform design process",
-        "Call-to-Action: How to start using new features"
-      ],
-      "hashtags": "#FigmaDesign #ProductivityHacks #DesignTools #CreativeTech #UIDesign #DesignWorkflow #FigmaBuzz #DesignTips #CreativeTools #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 2
-    },
-    {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/24/nvidia-acquires-ai-chip-challenger-groq-for-20b-report-says/"
         }
       ],
       "format": "documentary",
       "subcategory": "framework",
       "hooks": [
-        "Designing a Font That Speaks Design's Language",
-        "When Typography Becomes a Brand's DNA",
-        "The Secret Language of Figma's New Typeface"
+        "AI Chips: The Secret War Nvidia Doesn't Want You to Know",
+        "Groq's Radical Move: Challenging Tech's Biggest Giant",
+        "Inside the High-Stakes Silicon Valley Takeover"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use high-quality b-roll of type design process",
-            "Include behind-the-scenes footage of type designers",
-            "Create chapter markers highlighting key design moments"
+            "Use cinematic B-roll of tech campuses and chip manufacturing",
+            "Include expert interview-style talking head segments",
+            "Create dynamic motion graphics explaining technical chip architectures"
           ]
         }
       ],
       "visualDirection": {
         "rating": 8,
-        "description": "High-contrast documentary aesthetic with clean, technical composition. Black and white archival footage mixed with vibrant color type design sequences. Dynamic typography reveals as narrative progresses. Grid-based layouts that deconstruct letterforms. Subtle motion graphics revealing type design nuances. Aesthetic references: Helvetica documentary, modern design archives, technical illustration"
+        "description": "Dark tech-noir color palette with deep blues and electric teals, high-contrast typography, layered motion graphics simulating circuit board animations, sharp-edged geometric compositions suggesting technological precision, subtle glitch/digital artifact effects to enhance technological narrative"
       },
       "exampleOutline": [
-        "Opening: Provocative type design montage",
-        "Design Challenge: Figma's evolving brand identity needs",
-        "Type Design Journey: Process, challenges, iterations",
-        "Design Philosophy: How a typeface represents a product's soul",
-        "Future Vision: Typeface as communication platform"
+        "Cold Open: Dramatic reveal of technological disruption",
+        "Historical Context: AI Chip Manufacturing Landscape",
+        "Groq's Technological Innovation and Strategic Value",
+        "Nvidia's Strategic Calculation and Future Implications",
+        "Closing Call-to-Action: Understanding Tech Industry Dynamics"
       ],
-      "hashtags": "#TypeDesign #Figma #BrandIdentity #GraphicDesign #Typography #DesignDocumentary #CreativeProcess #SoftwareDesign #FontDesign #ProductDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7903783/pexels-photo-7903783.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "hashtags": "#AIChips #NvidiaGroq #TechInnovation #SiliconValley #AITechnology #ChipManufacturing #TechStrategy #IndustryDisruption #AIHardware #TechFuture",
+      "textureIndex": 10
+    },
+    {
+      "title": "The year data centers went from backend to center stage",
+      "description": "Data centers are no longer the boring tech issue they once were.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/24/the-year-data-centers-went-from-backend-to-center-stage/"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "Data Centers: The New Battlefield of Tech Revolution",
+        "Why Data Centers Are Secretly Ruling the World",
+        "Tech's Hidden Power: Inside the Data Center Explosion"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Set up live chat overlay for real-time audience interaction",
+            "Prepare pre-screened audience questions for Q&A segment",
+            "Use multi-camera setup to create dynamic visual engagement"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast cyberpunk-inspired color palette with electric blues and deep blacks. Dynamic motion graphics showing data center infrastructure as living, breathing ecosystem. Typography that feels futuristic yet readable - sharp sans-serif with occasional holographic overlays. Animated data flow visualizations that pulse and transform during key explanations."
+      },
+      "exampleOutline": [
+        "Opening: Live energy check-in and audience welcome",
+        "Data Center Evolution: Historical Context",
+        "AI, Climate, and Infrastructure: The New Interconnection",
+        "Live Q&A: Audience Deep Dive into Emerging Trends",
+        "Closing: Future Predictions and Community Insights"
+      ],
+      "hashtags": "#DataCenters #AI #TechInnovation #CloudComputing #FutureOfTech #DataInfrastructure #TechTrends #AIRevolution #Innovation #Technology",
       "textureIndex": 4
+    },
+    {
+      "title": "The European startup market&#8217;s data doesn&#8217;t match its energy — yet",
+      "description": "Europe's startup market hasn't produced meaningful numbers but there is reason to believe the data will start to change.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/24/the-european-startup-markets-data-doesnt-match-its-energy-yet/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "Why Europe's Startup Scene is a Hidden Goldmine",
+        "The Untold Story of European Tech Innovation",
+        "Startup Data vs. Real European Potential"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dynamic screen recordings of startup data visualizations",
+            "Include picture-in-picture expert commentary segments",
+            "Create engaging chapter markers to improve viewer navigation"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-forward design with electric blue and deep purple color palette. Animated data visualizations with smooth transitions. Modern, sans-serif typography with high-contrast text. Incorporate glitch-style motion graphics to represent technological disruption. Use geometric overlays and transparent data layers to create depth and intrigue."
+      },
+      "exampleOutline": [
+        "Hook: Surprising European Startup Landscape Reveal (5s)",
+        "Context: Current Market Perception vs. Emerging Reality (2min)",
+        "Deep Dive: Analyzing Hidden Startup Potential (4min)",
+        "Case Studies: Breakthrough European Innovations (3min)",
+        "Future Predictions and Call to Action (1min)"
+      ],
+      "hashtags": "#EuropeanStartups #TechInnovation #StartupEcosystem #VentureCapital #AIStartups #EuropeanTech #InnovationData #StartupTrends #TechFuture #InvestmentInsights",
+      "textureIndex": 2
+    },
+    {
+      "title": "Why the operating room is ripe for AI, according to Akara",
+      "description": "There&#8217;s plenty of hype around AI and robots in healthcare, but the problem that&#8217;s actually costing hospitals money right now is operating room coordination. Two to four hours of OR time is lost every single day, not because of the surgeries themselves, but because of everything in between, from manual scheduling and coordination chaos to [&#8230;]",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/why-the-operating-room-is-ripe-for-ai-according-to-akara/"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "AI is surgically transforming healthcare operations",
+        "How robots are fixing hospital scheduling chaos",
+        "Operating rooms: Where AI meets precision medicine"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Enable live chat for real-time audience engagement",
+            "Prepare 5-10 pre-screened audience questions in advance",
+            "Use multi-camera setup to show speakers and slides dynamically"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast medical tech aesthetic with electric blue and crisp white, geometric surgical-inspired motion graphics, clean sans-serif typography, dynamic PIP transitions simulating medical scanning/data visualization, minimalist medical iconography with subtle tech overlay"
+      },
+      "exampleOutline": [
+        "Section 1: High-energy live stream introduction",
+        "Section 2: Operating room inefficiency landscape",
+        "Section 3: AI solutions and case studies",
+        "Section 4: Live Q&A with audience interaction",
+        "Section 5: Future predictions and call-to-action"
+      ],
+      "hashtags": "#AIHealthcare #MedicalInnovation #HealthTech #SurgicalAI #HospitalOperations #MedicalRobots #FutureOfMedicine #AIInnovation #HealthcareTransformation #TechSolutions",
+      "textureIndex": 8
     }
   ]
 }
