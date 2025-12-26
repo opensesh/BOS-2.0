@@ -1,17 +1,17 @@
 {
   "id": "introducing-three-new-tools-for-precise-image-editing-in-fig",
   "slug": "introducing-three-new-tools-for-precise-image-editing-in-fig",
-  "title": "Figma adds three AI image tools to keep designers out of Photoshop",
-  "publishedAt": "2025-12-25T16:19:57.462Z",
-  "generatedAt": "2025-12-25T16:19:57.462Z",
-  "totalSources": 9,
+  "title": "Figma Launches AI-Powered Erase, Isolate, and Expand Tools for Seamless In-Canvas Image Editing",
+  "publishedAt": "2025-12-26T16:19:42.718Z",
+  "generatedAt": "2025-12-26T16:19:42.718Z",
+  "totalSources": 7,
   "sections": [
     {
       "id": "section-0",
       "paragraphs": [
         {
           "id": "para-0-0",
-          "content": "Figma has introduced three new AI-powered image editing tools—**Erase object**, **Isolate object**, and **Expand image**—designed to bring precise, Photoshop-style tweaks directly onto the design canvas.The update lets designers remove unwanted elements, separate subjects, and extend image backgrounds to new aspect ratios without leaving Figma Design or Draw.By operating on selections instead of text prompts, the tools aim to give teams granular control over layouts and marketing assets while avoiding the trial-and-error of generative commands.",
+          "content": "Figma introduced three new AI-powered image editing tools—**Erase object**, **Isolate object**, and **Expand image**—on December 10, 2025, enabling precise edits directly on the canvas without exporting to external apps like Photoshop.These tools integrate into a revamped contextual toolbar alongside existing features such as Remove background and Crop, prioritizing high-usage functions for efficiency.Available immediately in Figma Design and Draw for Professional, Organization, and Enterprise plans with AI enabled, they aim to streamline workflows for designers, marketers, and product teams.",
           "citations": [
             {
               "primarySource": {
@@ -36,13 +36,13 @@
         },
         {
           "id": "para-0-1",
-          "content": "A short Figma video walkthrough shows the tools living inside a revamped image-editing toolbar, which consolidates existing options like Crop and Remove background with the new AI features for faster, contextual access.Beyond the design surface, Figma is also promoting a no-code AI photo editing app builder in Figma Make, signaling that the same underlying capabilities can power custom image workflows.On its broader AI product page, the company highlights integrations with models such as Google’s Gemini 3.0 Pro and OpenAI’s GPT Image 1, positioning the new editing tools as part of a larger ecosystem of assisted creativity.",
+          "content": "The tools eliminate platform-switching friction, allowing users to remove unwanted elements, separate subjects for effects like blur or shadow adjustments, and extend backgrounds to new aspect ratios without distortion.Figma positions these updates as closing loops on multi-tool processes, powering complete creative workflows from generation to refinement.Expansion to other Figma products is planned for 2026, enhancing accessibility across the platform.",
           "citations": [
             {
               "primarySource": {
                 "id": "source-4",
                 "name": "youtube",
-                "url": "https://www.youtube.com/watch?v=ieJERX9Wkro",
+                "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en",
                 "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
                 "title": "Introducing three new tools for precise image editing in Figma"
               },
@@ -63,27 +63,27 @@
     },
     {
       "id": "section-1",
-      "title": "What Erase, Isolate, and Expand actually do on the Figma canvas",
+      "title": "Breakdown of Erase Object, Isolate Object, and Expand Image Capabilities",
       "paragraphs": [
         {
           "id": "para-1-0",
-          "content": "ContentGrip reports that Erase object lets users select and remove stray props, logos, or background clutter directly in Figma, eliminating the common export–edit–reimport loop with external tools.Isolate object, by contrast, segments a subject so it can be moved or styled independently—making it easier to adjust placement, lighting, or focus while leaving the original background intact.Expand image uses AI to extend an image’s background so a single product shot can be repurposed across multiple aspect ratios, such as turning a 1:1 social image into a wide web banner without awkward cropping.",
+          "content": "**Erase object** uses an improved lasso tool to select and remove unwanted elements, ideal for cleaning up images in mockups without external software.**Isolate object** enables selection of subjects for repositioning or applying effects such as lighting, desaturation, shadow, color, or focus, while preserving original background traits.These prompt-free AI features provide granular control directly in Figma, reducing tedious manual adjustments.",
           "citations": [
             {
               "primarySource": {
                 "id": "source-6",
-                "name": "figma",
-                "url": "https://www.figma.com/ai/",
-                "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+                "name": "youtube",
+                "url": "https://www.youtube.com/watch?v=0lSS7m3Lh0g",
+                "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
                 "title": "Introducing three new tools for precise image editing in Figma"
               },
               "additionalCount": 1,
               "additionalSources": [
                 {
-                  "id": "source-3",
-                  "name": "techcrunch",
-                  "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/",
-                  "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
+                  "id": "source-7",
+                  "name": "figma",
+                  "url": "https://www.figma.com/release-notes/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
                   "title": "Introducing three new tools for precise image editing in Figma"
                 }
               ]
@@ -92,26 +92,18 @@
         },
         {
           "id": "para-1-1",
-          "content": "A Figma demo clip shows these tools triggered from an inline toolbar that appears when an image is selected, allowing designers to lasso an area, erase it, isolate it as a new object, or expand the canvas in a few clicks.The company’s AI overview notes that image editing in Figma increasingly relies on a mix of generative and refinement models, with Gemini 3.0 Pro and GPT Image 1 handling both new-image creation and targeted adjustments.Figma’s AI Image Editor plugin in the Community further illustrates how similar capabilities can be exposed through text prompts, though the new native tools are explicitly selection-first rather than prompt-driven.",
+          "content": "**Expand image** extends backgrounds to fit new formats like landscape banners from square shots, maintaining visual integrity for web, social, or device adaptations.The centralized toolbar collates all edits, with Remove background prominently placed due to its popularity among users.Release notes confirm these tools support real-time refinements in grids or layouts, such as parallax effects.",
           "citations": [
             {
               "primarySource": {
-                "id": "source-7",
-                "name": "figma",
-                "url": "https://www.figma.com/release-notes/",
-                "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+                "id": "source-3",
+                "name": "techcrunch",
+                "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/",
+                "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
                 "title": "Introducing three new tools for precise image editing in Figma"
               },
-              "additionalCount": 1,
-              "additionalSources": [
-                {
-                  "id": "source-8",
-                  "name": "youtube",
-                  "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en",
-                  "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
-                  "title": "Introducing three new tools for precise image editing in Figma"
-                }
-              ]
+              "additionalCount": 0,
+              "additionalSources": []
             }
           ]
         }
@@ -119,28 +111,16 @@
     },
     {
       "id": "section-2",
-      "title": "Why Figma’s “precision AI” matters for workflows and the wider AI stack",
+      "title": "Competitive Edge and Workflow Transformations for Design Teams",
       "paragraphs": [
         {
           "id": "para-2-0",
-          "content": "ContentGrip frames the launch as Figma “finally jumping into precision AI image editing,” arguing that marketers and product teams gain measurable efficiency when routine tweaks stay inside the design file.The article notes that these tools help non-specialists adapt assets for different channels, reducing dependencies on dedicated designers for every minor crop or cleanup.Figma’s AI page underscores that philosophy, describing its AI suite as a way to “make, edit, and refine images” in context, alongside features like instant background removal and automated layer renaming to keep projects organized.",
-          "citations": [
-            {
-              "primarySource": {
-                "id": "source-9",
-                "name": "youtube",
-                "url": "https://www.youtube.com/watch?v=0lSS7m3Lh0g",
-                "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
-                "title": "Introducing three new tools for precise image editing in Figma"
-              },
-              "additionalCount": 0,
-              "additionalSources": []
-            }
-          ]
+          "content": "Figma is catching up to Adobe and Canva's long-standing object removal features, per industry analysis, by embedding precise editing to minimize export hassles.ContentGrip highlights benefits for marketers, including faster test variations and in-house tweaks during cross-functional reviews.TechCrunch notes the launch coincided with Adobe's ChatGPT integrations, where Figma was an October partner.",
+          "citations": []
         },
         {
           "id": "para-2-1",
-          "content": "On the no-code side, Figma Make’s AI photo editing app builder shows how the same model infrastructure can be used to prototype full editing experiences, from quick style variations to more precise controls powered by models like Gemini 3 Pro and Figma’s branded “Nano Banana Pro.”The Make documentation emphasizes that teams can describe an editing app in natural language and generate interactive layouts, hinting at a future where Figma’s own image tools and customer-built tools share common AI underpinnings.Together, these developments suggest Figma is moving beyond wireframing toward a platform where AI-assisted editing, layout, and even app logic live in a single, collaborative environment.",
+          "content": "These tools foster design-stage optimization, cutting back-and-forth on assets for campaigns and UI prototypes.Figma's blog describes them as making editing \"faster, cleaner, and more intuitive,\" with 2026 rollout promising broader adoption.Tutorials demonstrate combinations like Isolate with Remove background for advanced effects, signaling a shift toward full-stack visual hubs.",
           "citations": []
         }
       ]
@@ -171,7 +151,7 @@
     {
       "id": "source-4",
       "name": "youtube",
-      "url": "https://www.youtube.com/watch?v=ieJERX9Wkro",
+      "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en",
       "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
       "title": "Introducing three new tools for precise image editing in Figma"
     },
@@ -184,9 +164,9 @@
     },
     {
       "id": "source-6",
-      "name": "figma",
-      "url": "https://www.figma.com/ai/",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+      "name": "youtube",
+      "url": "https://www.youtube.com/watch?v=0lSS7m3Lh0g",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
       "title": "Introducing three new tools for precise image editing in Figma"
     }
   ],
@@ -215,7 +195,7 @@
     {
       "id": "source-4",
       "name": "youtube",
-      "url": "https://www.youtube.com/watch?v=ieJERX9Wkro",
+      "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en",
       "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
       "title": "Introducing three new tools for precise image editing in Figma"
     },
@@ -228,9 +208,9 @@
     },
     {
       "id": "source-6",
-      "name": "figma",
-      "url": "https://www.figma.com/ai/",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+      "name": "youtube",
+      "url": "https://www.youtube.com/watch?v=0lSS7m3Lh0g",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
       "title": "Introducing three new tools for precise image editing in Figma"
     },
     {
@@ -239,28 +219,14 @@
       "url": "https://www.figma.com/release-notes/",
       "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "Introducing three new tools for precise image editing in Figma"
-    },
-    {
-      "id": "source-8",
-      "name": "youtube",
-      "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
-      "title": "Introducing three new tools for precise image editing in Figma"
-    },
-    {
-      "id": "source-9",
-      "name": "youtube",
-      "url": "https://www.youtube.com/watch?v=0lSS7m3Lh0g",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
-      "title": "Introducing three new tools for precise image editing in Figma"
     }
   ],
   "heroImage": {
     "url": "https://cdn.sanity.io/images/599r6htc/regionalized/d9cccb73a8e097abe6f4a8ff572c1347a4c56985-3262x1836.png?w=1200&amp;q=70&amp;fit=max&amp;auto=format"
   },
   "sidebarSections": [
-    "What Erase, Isolate, and Expand actually do on the Figma canvas",
-    "Why Figma’s “precision AI” matters for workflows and the wider AI stack"
+    "Breakdown of Erase Object, Isolate Object, and Expand Image Capabilities",
+    "Competitive Edge and Workflow Transformations for Design Teams"
   ],
   "relatedArticles": []
 }
