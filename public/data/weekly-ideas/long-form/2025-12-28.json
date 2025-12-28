@@ -1,260 +1,211 @@
 {
   "type": "long-form",
-  "date": "2025-12-28T16:19:56.388Z",
+  "date": "2025-12-28T16:25:56.370Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "OpenAI is looking for a new Head of Preparedness",
+      "description": "OpenAI is looking to hire a new executive responsible for studying emerging AI-related risks in areas ranging from computer security to mental health.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/28/openai-is-looking-for-a-new-head-of-preparedness/"
         }
       ],
       "format": "tutorial",
       "subcategory": "instructional",
       "hooks": [
-        "Design Templates That Won't Break Your Brand Guidelines",
-        "Unlock Scalable Figma Templates in 8 Pro Moves",
-        "Build Bulletproof Design Systems Without Losing Creativity"
+        "How to Land OpenAI's Most Mysterious Job",
+        "Inside the Role Shaping AI's Future Safety",
+        "Decoding OpenAI's Critical Preparedness Position"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use chapter markers for each template building step",
-            "Include screen recordings showing exact Figma interactions",
-            "Use picture-in-picture to show designer's reactions/commentary"
+            "Use screen recordings of AI job application process",
+            "Include picture-in-picture expert commentary segments",
+            "Create clear chapter markers for each career step"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, dynamic Figma-inspired color palette with electric blues and deep grays. High-contrast typography with technical precision. Animated transitions between template examples. Motion graphics highlighting template flexibility. Clean, technical aesthetic with playful design system visualization."
+        "description": "High-contrast tech aesthetic with deep blues and electric accent colors. Dynamic motion graphics showing AI risk landscapes. Clean, technical typography with futuristic undertones. Animated data visualization elements representing risk complexity. Minimal but sophisticated design approach with subtle technological texture overlays."
       },
       "exampleOutline": [
-        "Intro: Why Template Design Matters",
-        "The Marketing-Design Collaboration Challenge",
-        "8 Step-by-Step Template Design Strategies",
-        "Advanced Figma Template Architecture Insights",
-        "How to Implement Your New Template System"
+        "Introduction: What is the Head of Preparedness?",
+        "Understanding AI Risk Landscape",
+        "Key Qualifications and Skills Breakdown",
+        "Strategic Approach to AI Safety Challenges",
+        "How to Position Yourself for the Role"
       ],
-      "hashtags": "#FigmaDesign #DesignSystems #BrandTemplates #ProductDesign #CreativeWorkflow #DesignTips #AIDesign #OpenSesh #TemplateDesign #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
+      "hashtags": "#AIJobs #OpenAI #AIEthics #TechCareers #ArtificialIntelligence #AIRisk #CareerAdvice #TechInnovation #AIPreparedness #JobSearch",
+      "textureIndex": 5
     },
     {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
+      "title": "10 contrarian leadership truths every leader needs to hear | Matt MacInnis (Rippling)",
+      "description": "Rippling's CPO on why you should deliberately understaff projects, how to recognize true product-market fit, why VCs want you to keep failing, and the frameworks that built a $16B company",
       "starred": false,
       "sources": [
         {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
-        },
-        {
-          "name": "Monikersf",
-          "url": "https://monikersf.com/news"
-        },
-        {
-          "name": "Bpando",
-          "url": "https://bpando.org"
-        },
-        {
-          "name": "Creativeboom",
-          "url": "https://www.creativeboom.com/inspiration/san-franciscos-moniker-cooks-up-tasty-brand-identity-for-artisan-chocolate-makers/"
-        },
-        {
-          "name": "Sfgate",
-          "url": "https://www.sfgate.com/local/article/bay-area-queen-denim-jeans-love-melody-sabatasso-21232577.php"
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/10-contrarian-leadership-truths"
         }
       ],
       "format": "documentary",
       "subcategory": "framework",
       "hooks": [
-        "Inside San Francisco's Most Exclusive Design Studio",
-        "How Top Designers Really Create Brand Magic",
-        "Secrets of a Design Career: Moniker Revealed"
+        "Why great leaders break every traditional rule",
+        "The counterintuitive playbook of billion-dollar leadership",
+        "What VCs don't want you to know"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use cinematic B-roll of design studio environment",
-            "Include authentic interview-style testimonials from designers",
-            "Create dynamic chapter markers highlighting key career insights"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast San Francisco color palette (cool grays, vibrant blues), dynamic composition with split-screen design process moments, modern sans-serif typography, subtle motion graphics revealing design workflow, minimalist yet sophisticated aesthetic inspired by contemporary design studios"
-      },
-      "exampleOutline": [
-        "Opening: Dramatic studio establishing shot",
-        "Context: Design career landscape in San Francisco",
-        "Core Content: Moniker's unique design philosophy and approach",
-        "Key Insight: Behind-the-scenes of senior designer role",
-        "CTA: Invitation to explore design career paths"
-      ],
-      "hashtags": "#DesignCareer #SanFranciscoDesign #CreativeIndustry #BrandIdentity #DesignStudio #CareerGoals #GraphicDesign #CreativeProfessionals #DesignLife #AdobeCreativePro",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 1
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/solutions/ai-photo-editing-app-builder/"
-        }
-      ],
-      "format": "livestream",
-      "subcategory": "leadership",
-      "hooks": [
-        "AI Image Magic: Figma's New Editing Tools Revealed!",
-        "3 Mind-Blowing AI Tools Transforming Design Right Now",
-        "Live: Unlock Figma's Coolest Image Editing Secrets"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use multi-screen setup to demonstrate tools in real-time",
-            "Encourage live chat interaction and audience Q&A participation",
-            "Prepare pre-recorded screen captures for seamless demonstration"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-energy visual design with dynamic blue and electric teal color palette. Futuristic motion graphics overlaying screen recordings. Clean, bold sans-serif typography with subtle glow effects. Animated transition elements suggesting technological innovation. Split-screen compositions highlighting before/after image editing transformations."
-      },
-      "exampleOutline": [
-        "Section 1: High-Energy Live Stream Introduction",
-        "Section 2: Current Image Editing Challenges in Design",
-        "Section 3: Deep Dive into 3 New AI Tools",
-        "Section 4: Live Demonstration and Real-World Applications",
-        "Section 5: Community Q&A and Future Predictions"
-      ],
-      "hashtags": "#FigmaAI #DesignTools #AIDesign #CreativeTech #ImageEditing #ProductivityHack #DesignInnovation #AICreativity #TechTips #FigmaTutorial",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7245606/pexels-photo-7245606.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 12
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        }
-      ],
-      "format": "documentary",
-      "subcategory": "framework",
-      "hooks": [
-        "How Figma Buzz is Rewriting Design Workflow Rules",
-        "Design Acceleration: Three Game-Changing Figma Features",
-        "Insider Look: Figma's Secret Productivity Weapons"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use cinematic B-roll of designers in action",
-            "Include dynamic screen recordings with smooth transitions",
-            "Incorporate interview-style testimonial snippets about new features"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Modern documentary aesthetic with high-contrast teal and charcoal palette, dynamic split-screen transitions, clean sans-serif typography, motion-tracked feature highlights, subtle parallax effects in screen recordings, professional yet energetic visual storytelling"
-      },
-      "exampleOutline": [
-        "Opening: Dramatic reveal of design workflow challenges",
-        "Context: Current limitations in marketing asset creation",
-        "Feature Deep Dive: Marketing templates, system integrations, video trimming",
-        "Real-World Impact: Designer and marketer transformation stories",
-        "Future Vision: How these features reshape creative collaboration"
-      ],
-      "hashtags": "#FigmaBuzz #DesignWorkflow #CreativeTech #ProductivityHacks #AIDesign #MarketingTemplates #DesignSystem #CreativeTools #FigmaFeatures #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
-    },
-    {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
-        }
-      ],
-      "format": "video",
-      "subcategory": "thought-leadership",
-      "hooks": [
-        "How Figma Designed a Font That Changes Everything",
-        "The Secret Behind Figma's Mind-Blowing New Typeface",
-        "Typography That Tells a Design Revolution's Story"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use dynamic screen recordings showing font design process",
-            "Include picture-in-picture with designer interviews",
-            "Create chapter markers for clear navigation"
+            "Use archival/interview footage with Matt MacInnis",
+            "Include dynamic B-roll of startup/tech environments",
+            "Create chapter markers for each contrarian truth"
           ]
         }
       ],
       "visualDirection": {
         "rating": 8,
-        "description": "Bold, experimental typography showcase. High-contrast color palette with Figma's signature blues and grays. Dynamic motion graphics revealing font details. Clean, technical screen recordings with artistic overlay. Kinetic typography animations demonstrating font flexibility. Minimalist yet sophisticated visual storytelling."
+        "description": "High-contrast documentary aesthetic with muted tech-inspired color palette (charcoal, slate blue, burnt orange). Kinetic typography overlaying interview footage. Minimal motion graphics emphasizing data/insights. Inspired by Vice documentaries and modern tech storytelling. Split-screen interview techniques with dynamic data visualization."
       },
       "exampleOutline": [
-        "Cold Open: Dramatic font reveal/animation",
-        "Why Typography Matters in Product Design",
-        "Behind-the-Scenes of Figma Sans Creation",
-        "Design Principles Embedded in Every Letterform",
-        "Community Call-to-Action: Join Design Revolution"
+        "Cold Open: Provocative leadership quote from MacInnis",
+        "Background: MacInnis's journey at Rippling",
+        "10 Contrarian Leadership Truths (deep dive)",
+        "Case Studies & Real-World Examples",
+        "Final Call-to-Action: Leadership transformation challenge"
       ],
-      "hashtags": "#FigmaSans #DesignTechnology #Typography #ProductDesign #CreativeProcess #FontDesign #AdobeAlternative #DesignTools #CreativeCommunity #UserExperience",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 8
+      "hashtags": "#LeadershipSecrets #StartupStrategy #TechLeadership #ProductManagement #EntrepreneurTips #InnovationMindset #VCInsights #BusinessGrowth #RipplingCPO #LeadershipHacks",
+      "textureIndex": 12
+    },
+    {
+      "title": "India startup funding hits $11B in 2025 as investors grow more selective",
+      "description": "Startup funding rounds in India fell sharply in 2025 as investors concentrated capital into fewer companies.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/27/india-startup-funding-hits-11b-in-2025-as-investors-grow-more-selective/"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "India's Startup Funding: The $11B Survival Game",
+        "Investors Ruthless: Only the Best Survive",
+        "Startup Funding 2025: Winners & Losers Revealed"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Pre-announce live stream with community posts 48hrs ahead",
+            "Enable live chat for real-time audience interaction",
+            "Prepare pre-submitted audience questions for Q&A segment"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast data visualization aesthetic with futuristic dark mode. Dynamic infographic animations showing funding trends. Sharp, angular typography with electric blue and deep charcoal color palette. Animated funding flow graphics with motion tracking investor movement. Clean, tech-forward design that feels both analytical and dramatic."
+      },
+      "exampleOutline": [
+        "Opening: Live Stream Introduction & Energy",
+        "Funding Landscape Context & 2025 Overview",
+        "Deep Dive: Investor Selection Criteria",
+        "Case Studies: Successful vs Struggling Startups",
+        "Live Q&A with Audience Interaction"
+      ],
+      "hashtags": "#IndiaStartups #VentureCapital #TechFunding #StartupEconomy #InvestmentTrends #AITech #EmergingMarkets #InnovationEconomy #TechIndia #StartupSurvival",
+      "textureIndex": 4
+    },
+    {
+      "title": "🧠 Community Wisdom: Measuring business impact after rollout, clarity vs. capacity as the real bottleneck, what makes podcast content valuable, keeping secondary users engaged, and more",
+      "description": "Community Wisdom 167",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/community-wisdom-measuring-business"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "How Top Teams Unlock Hidden Business Impact",
+        "Community Insights That Transform Product Strategy",
+        "5 Secrets Your Team's Performance Is Hiding"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dynamic screen recordings showing real community feedback interfaces",
+            "Create chapter markers for each key insight section",
+            "Include picture-in-picture expert commentary to boost engagement"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, data-driven aesthetic with electric blue and deep charcoal color palette. Dynamic motion graphics showing network connections and insight flows. Clean, geometric typography with subtle animated transitions. Infographic-style visualizations that break complex concepts into digestible visual narratives."
+      },
+      "exampleOutline": [
+        "Hook: Teaser of surprising community wisdom revelation",
+        "Context: Why traditional performance metrics fall short",
+        "Deep Dive: 5 Community-Driven Business Impact Insights",
+        "Case Studies: Real-World Examples of Community Intelligence",
+        "Actionable Takeaways and Community Engagement Strategies"
+      ],
+      "hashtags": "#ProductStrategy #CommunityIntelligence #BusinessImpact #TeamPerformance #ProductDevelopment #InnovationInsights #StartupGrowth #DataStrategy #CommunityWisdom #ProductManagement",
+      "textureIndex": 11
+    },
+    {
+      "title": "Equity&#8217;s 2026 Predictions: AI Agents, Blockbuster IPOs, and the Future of VC",
+      "description": "TechCrunch&#8217;s&#160;Equity&#160;crew is bringing 2025 to a close and getting ahead on the year to come with our annual&#160;predictions&#160;episode! Hosts Kirsten Korosec, Anthony Ha, and Rebecca Bellan were joined by Build Mode host&#160;Isabelle Johannessen&#160;to dissect the year&#8217;s biggest tech developments, from mega AI funding rounds that defied expectations to the rise of &#8220;physical AI,&#8221; and make [&#8230;]",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/equitys-2026-predictions-ai-agents-blockbuster-ipos-and-the-future-of-vc/"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "Decode Tech's Future: 5 AI Predictions for 2026",
+        "Your Roadmap to Tech's Next Breakthrough",
+        "Cracking the Code: AI's Wildest Predictions"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use clear chapter markers for each prediction",
+            "Include dynamic infographics for each trend",
+            "Create split-screen comparisons of current vs predicted states"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Futuristic cyberpunk-inspired color palette with electric blues and neon accents. Dynamic typography with angular, tech-forward layouts. Animated transition elements resembling digital data flows. Picture-in-picture screen recordings with holographic overlay graphics. Minimalist but high-contrast design that feels cutting-edge and informative."
+      },
+      "exampleOutline": [
+        "Section 1: Teaser - Why 2026 Will Be a Pivotal Tech Year",
+        "Section 2: Context - The Current AI Landscape",
+        "Section 3: Step-by-Step Breakdown of 5 Key Predictions",
+        "Section 4: Deep Dive - Implications and Evidence",
+        "Section 5: Call to Action - How Viewers Can Prepare"
+      ],
+      "hashtags": "#AIFuture #TechPredictions2026 #AITrends #InnovationRoadmap #TechIntelligence #FutureOfTech #AIAgents #VCTrends #StartupInsights #TechInnovation",
+      "textureIndex": 4
     }
   ]
 }

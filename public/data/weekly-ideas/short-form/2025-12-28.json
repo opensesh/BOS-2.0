@@ -1,380 +1,330 @@
 {
   "type": "short-form",
-  "date": "2025-12-28T16:19:56.388Z",
+  "date": "2025-12-28T16:25:13.421Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "The 33 top health and wellness startups from Disrupt Startup Battlefield",
+      "description": "Here is the full list of the health and wellness Startup Battlefield 200 selectees, along with a note on what made us select them for the competition.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/28/the-33-top-health-and-wellness-startups-from-disrupt-startup-battlefield/"
         }
       ],
-      "format": "reel",
-      "subcategory": "reel",
+      "format": "carousel",
+      "subcategory": "carousel",
       "hooks": [
-        "Design templates that scale without breaking brand rules",
-        "Figma templates: Your brand's secret marketing weapon",
-        "8 pro tips for bulletproof design templates"
+        "33 Healthtech Startups Redefining Wellness 🚀",
+        "Future of Health: Breakthrough Startups Revealed",
+        "Innovation Meets Wellness: Top Startups Unveiled"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick text transitions between template tips",
-            "Show before/after visuals in rapid cuts",
-            "Add dynamic screen recordings of Figma workflow"
+            "Use quick transitions between startup highlights",
+            "Include dynamic motion graphics for each startup",
+            "Keep total video under 90 seconds"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Provocative template design challenge",
-            "Use square 1:1 layout with clear typography",
-            "Include annotated Figma screenshots on each slide"
+            "First slide must be a compelling visual hook",
+            "Use consistent design template across 10 slides",
+            "Include key stat or founder quote on each slide"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with unexpected design fail/success story",
-            "Use screen capture with voiceover explanation",
-            "Include rapid-fire visual examples"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame tips as professional strategy insights",
-            "Use more detailed technical language",
-            "Include data/research references"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-energy digital design aesthetic with glitch-inspired transitions, neon accent colors, dynamic typography, motion graphics showing template transformations, minimal but striking color palette of electric blue, charcoal, and white"
-      },
-      "exampleOutline": [
-        "Quick attention-grabbing design template fail/win",
-        "Why most templates break under pressure",
-        "8 rapid-fire template design strategies",
-        "Key scaling insights for brand consistency",
-        "Call-to-action: Download template framework"
-      ],
-      "hashtags": "#FigmaDesign #DesignTemplates #BrandScaling #AIDesign #CreativeStrategy #MarketingDesign #ProductDesign #DesignTips #VisualBranding #CreativeTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 11
-    },
-    {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
-        },
-        {
-          "name": "Monikersf",
-          "url": "https://monikersf.com/news"
-        },
-        {
-          "name": "Bpando",
-          "url": "https://bpando.org"
-        },
-        {
-          "name": "Creativeboom",
-          "url": "https://www.creativeboom.com/inspiration/san-franciscos-moniker-cooks-up-tasty-brand-identity-for-artisan-chocolate-makers/"
-        },
-        {
-          "name": "Sfgate",
-          "url": "https://www.sfgate.com/local/article/bay-area-queen-denim-jeans-love-melody-sabatasso-21232577.php"
-        }
-      ],
-      "format": "story",
-      "subcategory": "story",
-      "hooks": [
-        "Design Career Hack: Land Top SF Design Jobs",
-        "Insider Secrets of Senior Design Roles",
-        "How Top Designers Navigate Silicon Valley"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick dynamic cuts between design portfolio shots",
-            "Include text overlay highlighting key career insights",
-            "Create visual progression showing design career trajectory"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Provocative career stat or quote",
-            "Use consistent visual grid/color scheme across slides",
-            "Final slide includes clear call-to-action/next steps"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected visual metaphor about design career",
-            "Use rapid-fire text transitions between insights",
-            "Include quick portfolio/work example clips"
+            "Add voiceover explaining startup categories",
+            "Use bold text overlays for key information",
+            "Create high-energy editing style"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
             "Add more detailed professional context",
-            "Include specific skill breakdowns",
-            "Use more formal but still engaging tone"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 8,
-        "description": "High-contrast San Francisco tech aesthetic. Bold sans-serif typography. Gradient overlays suggesting career progression. Minimalist grid layouts with dynamic motion. Color palette of deep blues, electric teals, and crisp whites. Incorporate subtle Silicon Valley design language through geometric shapes and clean transitions."
-      },
-      "exampleOutline": [
-        "Section 1: Provocative Career Opening Hook",
-        "Section 2: Design Industry Landscape Overview",
-        "Section 3: Senior Designer Role Breakdown",
-        "Section 4: Key Skills & Portfolio Insights",
-        "Section 5: Actionable Next Career Steps"
-      ],
-      "hashtags": "#DesignCareer #SeniorDesigner #SiliconValleyDesign #CareerGrowth #CreativeIndustry #DesignJobs #AIDesign #TechCareer #CreativeProfessional #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8014528/pexels-photo-8014528.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 9
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/solutions/ai-photo-editing-app-builder/"
-        }
-      ],
-      "format": "quick-image",
-      "subcategory": "quick-image",
-      "hooks": [
-        "AI Just Transformed Figma Image Editing Forever 🚀",
-        "3 Game-Changing Tools Designers NEED to Know",
-        "Precision Editing Made Ridiculously Simple"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick screen recording of Figma tools in action",
-            "Include dynamic text overlays highlighting key features",
-            "Use high-contrast color transitions between tool demonstrations"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Provocative before/after image edit",
-            "Use numbered slides for each tool explanation",
-            "Include emoji-based visual indicators for each tool's capability"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected visual glitch/transition",
-            "Use rapid-fire editing to showcase tool speed",
-            "Include voiceover explaining tools' unique capabilities"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame tools as professional productivity enhancers",
-            "Include data/stats about editing efficiency",
-            "Use more technical, detailed visual explanations"
+            "Include potential investment/market impact insights",
+            "Use more formal, analytical language"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Cyberpunk-inspired color palette with electric blues and neon accents, dynamic geometric compositions, floating holographic UI elements, sharp-edged typography with subtle motion graphics, high-contrast image treatments showing transformation"
+        "description": "Modern, high-energy design with futuristic health-tech color palette. Teal, electric blue, and white color scheme. Clean, geometric typography with rounded edges. Dynamic diagonal compositions. Subtle glitch/tech-inspired animation effects. Minimal illustrations of medical/wellness icons."
       },
       "exampleOutline": [
-        "Provocative Hook: Unexpected Image Editing Revolution",
-        "Problem: Current Design Workflow Limitations",
-        "3 AI Tools Breakdown with Visual Demos",
-        "Rapid Workflow Transformation Insight",
-        "Try Now: Free Figma Plugin CTA"
+        "Slide 1: Attention-grabbing title/overview graphic",
+        "Slide 2: Top 3 most innovative startups intro",
+        "Slide 3-9: Individual startup highlights (1-2 per slide)",
+        "Slide 10: Closing call-to-action and follow links"
       ],
-      "hashtags": "#FigmaAI #DesignTech #AIDesign #CreativeTech #ImageEditing #UXDesign #AITools #DesignInnovation #CreativeWorkflow #TechDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 3
+      "hashtags": "#HealthTech #StartupInnovation #WellnessTech #HealthStartups #FutureOfHealth #MedicalInnovation #DigitalHealth #TechDisruption #Healthcare #Wellness",
+      "textureIndex": 2
     },
     {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
+      "title": "The Google Pixel Watch 4 made me like smartwatches again",
+      "description": "Google's Pixel Watch 4 is an excellent smartwatch with fast charging and great design.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        }
-      ],
-      "format": "quick-image",
-      "subcategory": "quick-image",
-      "hooks": [
-        "Figma Buzz: Your Design Workflow Just Got Rocket Fuel 🚀",
-        "New Figma Features That'll Make Marketers Drool 🤤",
-        "Design Superpowers Unlocked: Figma Buzz Upgrades! 💡"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use fast-paced screen transitions to showcase features",
-            "Include quick screen recordings demonstrating new tools",
-            "Add energetic background music to increase engagement"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Provocative visual comparison of workflow before/after",
-            "Use infographic-style slides explaining each feature",
-            "Final slide: Clear call-to-action with feature link"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected visual metaphor for workflow transformation",
-            "Use text overlays to highlight key feature benefits",
-            "End with quick tutorial snippet showcasing feature"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame features as professional productivity enhancers",
-            "Include data/statistic about time/efficiency saved",
-            "Use more formal, value-driven language"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-energy color palette with electric blues and vibrant oranges, dynamic geometric compositions, sans-serif typography with slight motion blur, minimalist tech-inspired illustrations, subtle parallax animation between layers"
-      },
-      "exampleOutline": [
-        "Hook: Provocative statement about design workflow",
-        "Problem: Current design limitations",
-        "Figma Buzz Features Breakdown",
-        "Transformative Potential Insight",
-        "Call-to-Action: Try New Features"
-      ],
-      "hashtags": "#FigmaBuzz #DesignTech #CreativeWorkflow #AIDesign #MarketingTools #ProductivityHacks #DesignInnovation #CreativeTech #WorkflowOptimization #DigitalDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
-    },
-    {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/28/the-google-pixel-watch-4-made-me-like-smartwatches-again/"
         }
       ],
       "format": "carousel",
       "subcategory": "carousel",
       "hooks": [
-        "Typography's secret weapon: Inside Figma Sans",
-        "Design evolution: How a font changes everything",
-        "Crafting the perfect typeface from scratch"
+        "Smartwatches got cool again 🔥",
+        "The watch that changed everything",
+        "Google's secret weapon just dropped"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick cuts between type samples",
-            "Include designer reaction shots for human connection",
-            "Add subtle motion graphics to type reveals"
+            "Use dynamic transitions between watch features",
+            "Start with a close-up of the watch design",
+            "Include quick-cut motion graphics highlighting key specs"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide must have dramatic type reveal",
-            "Use square 1:1 or 4:5 aspect ratio",
-            "Include design process progression across slides"
+            "First slide must be a striking visual of the watch",
+            "Use clean, minimalist design with high-contrast colors",
+            "Each slide should focus on one key feature or benefit"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Condense narrative to 60-second type journey",
-            "Use kinetic typography transitions",
-            "Include behind-the-scenes designer commentary"
+            "Create a fast-paced narrative arc about watch evolution",
+            "Use text overlays to highlight key points",
+            "Include quick product demonstration clips"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Add professional design methodology context",
-            "Include technical design challenges",
-            "Highlight strategic brand implications"
+            "Frame as a technology innovation story",
+            "Include professional context about wearable tech trends",
+            "Use more technical language and detailed specifications"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-forward aesthetic with electric blue and charcoal gray color palette. Minimal Swiss design influence with futuristic motion graphics. Typography should be clean, sans-serif with slight tech-inspired angular edges. Incorporate holographic and translucent design elements to suggest cutting-edge technology."
+      },
+      "exampleOutline": [
+        "Slide 1: Attention-grabbing hero shot of Pixel Watch 4",
+        "Slide 2: Problem with previous smartwatch generations",
+        "Slide 3: Key design breakthrough features",
+        "Slide 4: Fast charging and battery life highlight",
+        "Slide 5: Call-to-action and final recommendation"
+      ],
+      "hashtags": "#PixelWatch #SmartTech #WearableTech #GoogleInnovation #TechReview #FutureOfWatches #SmartDevice #TechTrends #InnovationUnleashed #GadgetReview",
+      "textureIndex": 9
+    },
+    {
+      "title": "OpenAI is looking for a new Head of Preparedness",
+      "description": "OpenAI is looking to hire a new executive responsible for studying emerging AI-related risks in areas ranging from computer security to mental health.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/28/openai-is-looking-for-a-new-head-of-preparedness/"
+        }
+      ],
+      "format": "reel",
+      "subcategory": "reel",
+      "hooks": [
+        "AI's New Superhero Job: Preventing World-Ending Tech Risks",
+        "Who Guards the Future of Artificial Intelligence?",
+        "OpenAI's Most Critical Role Just Opened Up"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dramatic, fast-paced cuts to maintain attention",
+            "Include text overlays with key statistics",
+            "Use futuristic, high-contrast visual effects"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have shocking/provocative visual",
+            "Use infographic-style slides with minimal text",
+            "End with a call-to-action or thought-provoking slide"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected/pattern-interrupt visual",
+            "Use dynamic motion graphics",
+            "Include subtitles for silent viewing"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "More professional tone, data-driven approach",
+            "Include credible source citations",
+            "Focus on career/professional implications"
           ]
         }
       ],
       "visualDirection": {
         "rating": 8,
-        "description": "High-contrast geometric layout with modular grid, experimental type transitions, deep navy and electric orange color palette, technical yet playful motion design, Swiss design meets digital minimalism aesthetic"
+        "description": "Cyberpunk-meets-data visualization aesthetic. High-contrast neon blues and blacks. Glitch effects, transparent layered graphics, futuristic typography. Dynamic motion tracking text. Abstract technological background suggesting complexity and innovation."
       },
       "exampleOutline": [
-        "Slide 1: Dramatic hook & type reveal",
-        "Slide 2: Design challenge context",
-        "Slide 3: Creative process overview",
-        "Slide 4: Technical type engineering",
-        "Slide 5: Final brand transformation CTA"
+        "Shocking open: AI risks visualization",
+        "Quick context on OpenAI's preparedness role",
+        "Key responsibilities of the position",
+        "Potential world-changing impact",
+        "Provocative closing question/call-to-action"
       ],
-      "hashtags": "#DesignSystem #Typography #FigmaDesign #CreativeProcess #BrandIdentity #TypeDesign #ProductDesign #AICreativity #DesignInnovation #CreativeTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "hashtags": "#AI #ArtificialIntelligence #OpenAI #TechJobs #FutureOfTech #AIEthics #TechCareers #Innovation #MachineLearning #TechnologyTrends",
       "textureIndex": 8
+    },
+    {
+      "title": "The 14 fintech, real estate, proptech startups from Disrupt Startup Battlefield",
+      "description": "Here is the full list of the fintech, real estate, and proptech Startup Battlefield 200 selectees, along with a note on what made us select them for the competition.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/28/the-14-fintech-real-estate-proptech-startups-from-disrupt-startup-battlefield/"
+        }
+      ],
+      "format": "story",
+      "subcategory": "story",
+      "hooks": [
+        "14 Startups Reshaping Finance & Real Estate 🚀",
+        "Tech's Next Disruptors: Who Made the Cut?",
+        "Future of Proptech: Meet the Game Changers"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick transitions between startup highlights",
+            "Include dynamic animation for each startup logo",
+            "Add subtle motion graphics to maintain engagement"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have a provocative headline",
+            "Use consistent visual template across slides",
+            "Include one key stat/insight per startup slide"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Compress content into rapid-fire startup showcase",
+            "Use text overlays for key information",
+            "Create high-energy editing rhythm"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add more detailed professional context",
+            "Include founder quotes or background",
+            "Emphasize potential industry impact"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-forward aesthetic with electric blue and neon accents. Futuristic sans-serif typography. Dynamic diagonal compositions. Glitch-inspired transition effects. Holographic startup logo treatments. Minimal but high-energy visual language that suggests innovation and disruption."
+      },
+      "exampleOutline": [
+        "Opening: Provocative headline about startup innovation",
+        "Context: Disrupt Startup Battlefield overview",
+        "Startup Showcase: 14 selected startups with key innovations",
+        "Trend Analysis: Common themes across selections",
+        "Call-to-Action: Follow for more startup insights"
+      ],
+      "hashtags": "#Startups #Proptech #FinTech #TechInnovation #DisruptConference #StartupBattlefield #FutureOfTech #RealEstate #TechTrends #InnovationEconomy",
+      "textureIndex": 12
+    },
+    {
+      "title": "Best Apple Watch apps for boosting your productivity",
+      "description": "Although the Apple Watch comes with simple built-in productivity apps like Reminders and Calendar, it’s worth exploring some third-party apps that are designed to boost productivity by offering additional functionality.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/27/best-apple-watch-apps-for-boosting-your-productivity/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "Unlock Productivity Magic on Your Apple Watch 🚀",
+        "Work Smarter, Not Harder: Apple Watch Edition",
+        "Secret Apps Turning Your Watch into a Productivity Beast"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick, dynamic screen transitions between app icons",
+            "Include a rapid-fire animation showing app switching",
+            "Add playful sound effects when revealing each app"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Attention-grabbing watch mockup with productivity graphic",
+            "Use numbered slides for each recommended app",
+            "Final slide: Call-to-action with download links"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected productivity hack teaser",
+            "Use split-screen comparison of watch with/without apps",
+            "Include fast-paced text overlays highlighting key features"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame content as professional productivity enhancement",
+            "Include data points about time saved",
+            "Use more formal, authoritative tone and design"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy cyberpunk-inspired color palette with electric blues and neon accents. Dynamic composition with floating app icons, glitch-style transitions. Bold, geometric sans-serif typography. Subtle motion graphics suggesting speed and efficiency. Futuristic tech aesthetic that feels cutting-edge and accessible."
+      },
+      "exampleOutline": [
+        "Section 1: Provocative Hook & Watch Graphic",
+        "Section 2: Productivity Challenge Introduction",
+        "Section 3: Top 3-5 Must-Have Apps",
+        "Section 4: Quick Impact Stats/Benefits",
+        "Section 5: Download/Explore CTA"
+      ],
+      "hashtags": "#AppleWatch #Productivity #TechTips #WorkSmarter #AppHacks #TechLife #ProductivityHacks #WatchOS #AIProductivity #ModernWork",
+      "textureIndex": 5
     }
   ]
 }

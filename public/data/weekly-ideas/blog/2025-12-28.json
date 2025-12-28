@@ -1,342 +1,291 @@
 {
   "type": "blog",
-  "date": "2025-12-28T16:19:56.388Z",
+  "date": "2025-12-28T16:26:46.586Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "OpenAI is looking for a new Head of Preparedness",
+      "description": "OpenAI is looking to hire a new executive responsible for studying emerging AI-related risks in areas ranging from computer security to mental health.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover"
-        }
-      ],
-      "format": "guide",
-      "subcategory": "instructional",
-      "hooks": [
-        "Design Templates That Work Harder, Not Harder",
-        "Unlock Scalable Brand Systems in Figma",
-        "Templates: Your Brand's Secret Flexibility Weapon"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Include real-time template prototype screenshots",
-            "Share personal design system evolution story",
-            "Add interactive Figma embed for direct engagement"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Optimize headers for SEO around 'Figma templates'",
-            "Include data visualization of template efficiency",
-            "Add expert quotes from design leaders"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Frame as professional workflow optimization",
-            "Include enterprise-level template strategy insights",
-            "Use data points about design system ROI"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Dynamic modular grid layout, vibrant tech-inspired color palette (electric blues, deep purples), modern sans-serif typography, subtle parallax scroll interactions, geometric design system illustrations showcasing template flexibility"
-      },
-      "exampleOutline": [
-        "Introduction: The Template Transformation Challenge",
-        "Why Flexible Brand Systems Matter",
-        "8 Strategic Template Design Principles",
-        "Case Studies: Successful Template Implementations",
-        "Future of Adaptive Design Systems"
-      ],
-      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystems #CreativeWorkflow #AIDesign #ProductivityHacks #DesignStrategy #BrandFlexibility #CreativeTech #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
-    },
-    {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
-        },
-        {
-          "name": "Monikersf",
-          "url": "https://monikersf.com/news"
-        },
-        {
-          "name": "Bpando",
-          "url": "https://bpando.org"
-        },
-        {
-          "name": "Creativeboom",
-          "url": "https://www.creativeboom.com/inspiration/san-franciscos-moniker-cooks-up-tasty-brand-identity-for-artisan-chocolate-makers/"
-        },
-        {
-          "name": "Sfgate",
-          "url": "https://www.sfgate.com/local/article/bay-area-queen-denim-jeans-love-melody-sabatasso-21232577.php"
-        }
-      ],
-      "format": "case-study",
-      "subcategory": "case-study-deep-dive",
-      "hooks": [
-        "Design Systems: The Secret Weapon of Top Brands",
-        "How Moniker Transforms Visual Identity Challenges",
-        "Scaling Brand Identity: A San Francisco Design Story"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Use real-time screen recordings of design process",
-            "Include interactive before/after visual comparisons",
-            "Break down complex design decisions into micro-insights"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Optimize with SEO-friendly headers explaining design methodology",
-            "Include data visualizations of brand system impact",
-            "Add expert quotes to increase credibility"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Focus on professional learning and career development angles",
-            "Use industry-specific metrics to demonstrate design value",
-            "Highlight collaborative and strategic design thinking"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, dynamic visual approach with high-contrast color palette (charcoal, electric blue, bright orange). Asymmetric grid layouts, overlapping typography, experimental mockup presentations. Motion graphics showing design system transformations. Clean yet provocative aesthetic inspired by Pentagram and IDEO design philosophies."
-      },
-      "exampleOutline": [
-        "Section 1: Provocative Design Challenge Opening",
-        "Section 2: Moniker's Unique Organizational Context",
-        "Section 3: Detailed Design System Methodology",
-        "Section 4: Breakthrough Visual Identity Insights",
-        "Section 5: Future of Scalable Brand Design"
-      ],
-      "hashtags": "#DesignSystems #BrandIdentity #CreativeDirection #AIDesign #SanFranciscoDesign #VisualBranding #ProductDesign #DesignInnovation #CreativeTech #BrandStrategy",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 11
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/solutions/ai-photo-editing-app-builder/"
-        }
-      ],
-      "format": "thread",
-      "subcategory": "explanatory",
-      "hooks": [
-        "AI Just Transformed Figma Image Editing Forever 🚀",
-        "3 Game-Changing Image Tools Designers Need Now",
-        "Design Precision Meets AI: Figma's New Toolkit"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Embed actual thread screenshots for visual context",
-            "Create companion deep-dive post with technical details",
-            "Use thread as teaser for longer Substack article"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Include step-by-step visual walkthrough of tools",
-            "Add SEO-friendly headers matching thread content",
-            "Link back to original thread for engagement"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Frame tools through professional workflow optimization lens",
-            "Include industry impact statistics and expert quotes",
-            "Add credibility with specific designer productivity metrics"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast neon-edge design aesthetic, dynamic diagonal compositions, floating UI elements with subtle gradient overlays, futuristic sans-serif typography, minimal motion animations highlighting tool transitions, dark mode tech-forward color palette with electric blue/cyan accents"
-      },
-      "exampleOutline": [
-        "Thread Opener: Provocative AI Design Revolution Statement",
-        "Problem: Current Image Editing Limitations",
-        "Tool #1: Detailed Functionality & Use Case",
-        "Tool #2: Technical Breakdown & Design Impact",
-        "Closing: Future of Design Workflow CTA"
-      ],
-      "hashtags": "#FigmaAI #DesignTools #AIDesign #CreativeTech #ProductDesign #UXDesign #AITools #DesignInnovation #CreativeWorkflow #TechDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 5
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        }
-      ],
-      "format": "listicle",
-      "subcategory": "explanatory",
-      "hooks": [
-        "3 Game-Changing Figma Buzz Features Designers Need Now",
-        "Unlock Faster Workflows: Figma Buzz's Latest Innovations",
-        "Design Smarter: Figma Buzz's Breakthrough Tools Revealed"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Use animated GIFs to demonstrate each Figma Buzz feature",
-            "Include personal experimentation notes with each feature",
-            "Keep tone conversational and hands-on"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Add detailed screenshots for each feature",
-            "Include SEO-optimized headers for each list item",
-            "Provide comparative analysis with previous workflows"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Include professional impact statistics for each feature",
-            "Add quotes from design leaders about workflow efficiency",
-            "Emphasize productivity and strategic value"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, dynamic composition with isometric design elements, vibrant tech-inspired color palette (electric blues, deep purples), modern sans-serif typography, subtle motion graphics highlighting each feature, clean parallax-style scrolling effect"
-      },
-      "exampleOutline": [
-        "Introduction: The Design Workflow Revolution",
-        "Context: Current Challenges in Marketing Asset Creation",
-        "Feature 1: Marketing Template Integration",
-        "Feature 2: Cross-App Plugin Connectivity",
-        "Feature 3: Video Trimming Capabilities",
-        "Future Implications: Streamlined Design Ecosystems",
-        "Call-to-Action: Upgrade Your Figma Workflow"
-      ],
-      "hashtags": "#FigmaBuzz #DesignInnovation #AIDesign #CreativeWorkflow #ProductivityHacks #DesignTech #MarketingTools #CreativeSolutions #DesignStrategy #WorkflowOptimization",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 1
-    },
-    {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/28/openai-is-looking-for-a-new-head-of-preparedness/"
         }
       ],
       "format": "article",
       "subcategory": "visionary",
       "hooks": [
-        "Typography that transforms design's entire visual language",
-        "How one font rewrote Figma's creative identity",
-        "Beyond pixels: The story behind Figma Sans"
+        "AI's New Frontier: Who Guards the Future?",
+        "Wanted: Brain Behind OpenAI's Risk Strategy",
+        "One Role, Infinite AI Responsibility"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Include real-time design process screenshots",
-            "Use interactive annotations to explain design choices",
-            "Embed quick video clips of font development"
+            "Use personal narrative about AI risk discovery",
+            "Embed real-time poll about AI safety concerns",
+            "Include interactive risk assessment graphic"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Optimize headline for SEO with design-specific keywords",
-            "Include expert quotes from type designers",
-            "Create clear, scannable subheadings for readability"
+            "Deep dive into technical risk frameworks",
+            "Include expert interview quotes/perspectives",
+            "Optimize with SEO-rich AI safety keywords"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Highlight professional impact of brand typography",
-            "Include data on visual identity's business value",
-            "Target design leaders and creative directors"
+            "Highlight professional implications of role",
+            "Include executive recruitment perspective",
+            "Use data visualizations about AI risk trends"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, experimental typography-focused layout with dynamic grid systems, high-contrast color transitions, animated type specimens, minimalist Swiss design influence with modern tech aesthetic, integrate variable font demonstrations within article layout"
+        "description": "High-contrast futuristic color palette (deep blues/electric teals), geometric data visualization overlays, dynamic fractured typography suggesting complexity, subtle holographic motion graphics representing AI interconnectedness"
       },
       "exampleOutline": [
-        "Introduction: The Power of Typography in Brand Identity",
-        "The Design Challenge: Figma's Evolving Visual Language",
-        "Crafting Figma Sans: Technical and Creative Journey",
-        "Design Philosophy: More Than Just a Typeface",
-        "Future of Design Tools and Visual Communication"
+        "The Unprecedented Challenge of AI Preparedness",
+        "Understanding OpenAI's Risk Management Mandate",
+        "Key Responsibilities of the Head of Preparedness",
+        "Emerging Risks in AI: A Comprehensive Analysis",
+        "Future-Proofing Technological Innovation"
       ],
-      "hashtags": "#DesignSystem #Typography #FigmaSans #ProductDesign #BrandIdentity #CreativeProcess #AIDesign #VisualLanguage #TypeDesign #CreativeTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 6
+      "hashtags": "#AISafety #OpenAI #AIRisk #TechLeadership #EmergingTech #AIEthics #FutureOfWork #InnovationStrategy #TechRecruitment #AIGovernance",
+      "textureIndex": 2
+    },
+    {
+      "title": "10 contrarian leadership truths every leader needs to hear | Matt MacInnis (Rippling)",
+      "description": "Rippling's CPO on why you should deliberately understaff projects, how to recognize true product-market fit, why VCs want you to keep failing, and the frameworks that built a $16B company",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/10-contrarian-leadership-truths"
+        }
+      ],
+      "format": "thread",
+      "subcategory": "explanatory",
+      "hooks": [
+        "Why top leaders secretly understaff their most critical projects",
+        "The counterintuitive leadership playbook Silicon Valley doesn't want you to know",
+        "Breaking startup rules: 10 truths that built a $16B empire"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use thread as teaser for full deep-dive newsletter",
+            "Create behind-the-scenes annotations for subscribers",
+            "Offer downloadable leadership framework PDF as content upgrade"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Expand each thread point into full article section",
+            "Add data visualizations and research citations",
+            "Create SEO-friendly headline variants"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Add professional credibility through executive testimonials",
+            "Include leadership assessment checklist",
+            "Tag and mention key industry thought leaders"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, high-contrast design with tech-inspired geometric overlays. Dark mode aesthetic with electric blue and charcoal accents. Dynamic typography with sharp angles. Subtle motion graphics revealing each thread point. Minimalist infographic style with clean data visualization elements."
+      },
+      "exampleOutline": [
+        "Section 1: Provocative Hook + Personal Credibility",
+        "Section 2: Contextualizing Leadership Challenge",
+        "Section 3: First 3-4 Contrarian Leadership Principles",
+        "Section 4: Next 3-4 Breakthrough Insights",
+        "Section 5: Call-to-Action + Personal Invitation"
+      ],
+      "hashtags": "#Leadership #StartupStrategy #ProductManagement #TechLeadership #InnovationMindset #VCInsights #ProductGrowth #EntrepreneurTips #SiliconValley #CareerAdvice",
+      "textureIndex": 9
+    },
+    {
+      "title": "India startup funding hits $11B in 2025 as investors grow more selective",
+      "description": "Startup funding rounds in India fell sharply in 2025 as investors concentrated capital into fewer companies.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/27/india-startup-funding-hits-11b-in-2025-as-investors-grow-more-selective/"
+        }
+      ],
+      "format": "listicle",
+      "subcategory": "explanatory",
+      "hooks": [
+        "5 Secrets Behind India's Startup Investment Revolution",
+        "How $11B Reveals India's Startup Funding Future",
+        "Investors' New Game: Selective Startup Funding Decoded"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use inline annotations to highlight key funding data points",
+            "Include a real-time investment trend graph",
+            "Add personal commentary from startup ecosystem interactions"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Optimize headline with clear numerical promise",
+            "Include expert quotes from venture capitalists",
+            "Create SEO-friendly subheadings for each listicle point"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Target post to investors and startup founders",
+            "Include professional data visualization",
+            "Use credible source citations from TechCrunch"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold infographic-style design with dynamic data visualization, geometric overlays representing investment flows, deep blue and electric orange color palette, clean sans-serif typography with angular accents, subtle motion graphics highlighting key statistics"
+      },
+      "exampleOutline": [
+        "Introduction: India's Startup Funding Landscape in 2025",
+        "Context: Shifting Investment Dynamics",
+        "5 Key Insights into Selective Startup Funding",
+        "Future Implications for Entrepreneurs",
+        "Call-to-Action: Navigate the New Investment Ecosystem"
+      ],
+      "hashtags": "#StartupFunding #IndiaInnovation #VentureCapital #TechInvestment #AIStartups #EmergingMarkets #InvestmentTrends #StartupEcosystem #IndiaTech #InnovationEconomy",
+      "textureIndex": 5
+    },
+    {
+      "title": "🧠 Community Wisdom: Measuring business impact after rollout, clarity vs. capacity as the real bottleneck, what makes podcast content valuable, keeping secondary users engaged, and more",
+      "description": "Community Wisdom 167",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/community-wisdom-measuring-business"
+        }
+      ],
+      "format": "case-study",
+      "subcategory": "case-study-deep-dive",
+      "hooks": [
+        "Community Insights: Business Impact Beyond Traditional Metrics",
+        "Decoding Success: Hidden Wisdom from Product Communities",
+        "Breakthrough Strategies: What Community Data Really Reveals"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use interactive poll to engage readers on community insights",
+            "Include real-time annotation of key community learnings",
+            "Share unfiltered community quotes for authenticity"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Create data visualization of community impact metrics",
+            "Link to extended research and methodology details",
+            "Optimize headings for SEO around community strategy"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Include professional credibility signals from community sources",
+            "Highlight actionable enterprise-level insights",
+            "Use authoritative statistics and benchmarking data"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, data-driven aesthetic with dynamic infographic elements. Gradient color palette emphasizing blue/teal technological feel. Clean, sans-serif typography with animated data transition effects. Minimalist network visualization showing community interconnectedness. Incorporates subtle motion graphics revealing insights progressively."
+      },
+      "exampleOutline": [
+        "Opening: Provocative Community Impact Snapshot",
+        "Context: Traditional Measurement Limitations",
+        "Deep Dive: Community Wisdom Methodology",
+        "Key Insights: Unexpected Strategic Revelations",
+        "Future Implications & Actionable Framework"
+      ],
+      "hashtags": "#CommunityIntelligence #ProductStrategy #BusinessInsights #AIAnalytics #InnovationFrameworks #CommunityWisdom #DataDrivenDecisions #ProductCommunity #TechStrategy #InnovationCulture",
+      "textureIndex": 11
+    },
+    {
+      "title": "Equity&#8217;s 2026 Predictions: AI Agents, Blockbuster IPOs, and the Future of VC",
+      "description": "TechCrunch&#8217;s&#160;Equity&#160;crew is bringing 2025 to a close and getting ahead on the year to come with our annual&#160;predictions&#160;episode! Hosts Kirsten Korosec, Anthony Ha, and Rebecca Bellan were joined by Build Mode host&#160;Isabelle Johannessen&#160;to dissect the year&#8217;s biggest tech developments, from mega AI funding rounds that defied expectations to the rise of &#8220;physical AI,&#8221; and make [&#8230;]",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/equitys-2026-predictions-ai-agents-blockbuster-ipos-and-the-future-of-vc/"
+        }
+      ],
+      "format": "guide",
+      "subcategory": "instructional",
+      "hooks": [
+        "AI's Future: 2026 Venture Capital Revolution Revealed",
+        "Insider Predictions: Tech's Next Billion-Dollar Breakthrough",
+        "Decoding 2026: AI Agents Rewrite Investment Rules"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Include real-time polling for reader predictions",
+            "Use interactive annotation layers for deep insights",
+            "Create a living document with community input"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Embed data visualization for VC trend analysis",
+            "Use SEO-optimized headers for skimmability",
+            "Include expert quote breakouts for credibility"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Target C-suite and investment professional networks",
+            "Use authoritative tone with precise industry statistics",
+            "Include professional network engagement prompts"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Futuristic tech-noir palette with electric blue and charcoal gray, dynamic geometric layouts, holographic data visualization elements, sans-serif typography with technical precision, subtle motion graphics showing predictive trend lines and network connections"
+      },
+      "exampleOutline": [
+        "Introduction: The AI Investment Landscape of 2026",
+        "Market Context: Current VC and AI Ecosystem",
+        "Detailed Predictions: AI Agents, Funding, and Emerging Technologies",
+        "Strategic Implications for Investors and Entrepreneurs",
+        "Conclusion: Actionable Insights and Future Outlook"
+      ],
+      "hashtags": "#AIInvestment #VentureCapital #TechPredictions #AIAgents #FutureOfTech #StartupInnovation #EmergingTech #InvestmentTrends #AIFunding #TechInnovation",
+      "textureIndex": 12
     }
   ]
 }
