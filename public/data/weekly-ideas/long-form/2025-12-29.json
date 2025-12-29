@@ -1,256 +1,211 @@
 {
   "type": "long-form",
-  "date": "2025-12-29T16:21:30.284Z",
+  "date": "2025-12-29T16:27:06.719Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "This week on How I AI: How Webflow’s CPO built an AI chief of staff",
+      "description": "Your weekly listens from How I AI, part of the Lenny's Podcast Network",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        }
-      ],
-      "format": "livestream",
-      "subcategory": "leadership",
-      "hooks": [
-        "Live Design Challenge: Break Brand Templates Without Breaking Rules",
-        "Figma Hack: Make Templates That Marketing Will Love",
-        "Unlock Self-Serve Design: Your Brand's Secret Scaling Strategy"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Enable live chat for real-time audience interaction during Q&A",
-            "Pre-promote stream with teaser graphics showing template flexibility",
-            "Use YouTube Premiere to build anticipation before live event"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Dynamic split-screen layout with live host + Figma canvas. High-contrast color palette (electric blue, deep charcoal, white). Bold, geometric sans-serif typography. Animated transition effects between template states. Motion graphics highlighting template flexibility. Sleek, tech-forward aesthetic with minimal, purposeful design elements."
-      },
-      "exampleOutline": [
-        "Introduction: Live Design Challenge Kickoff",
-        "The Marketing-Design Template Dilemma",
-        "8 Strategic Template Design Techniques",
-        "Real-Time Template Transformation Demonstration",
-        "Live Q&A and Audience Template Critique"
-      ],
-      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystem #CreativeStrategy #AIDesign #ProductDesign #UXTips #DesignCommunity #CreativeTech #DesignWorkflow",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 6
-    },
-    {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
-        },
-        {
-          "name": "Monikersf",
-          "url": "https://monikersf.com/news"
-        },
-        {
-          "name": "Creativeboom",
-          "url": "https://www.creativeboom.com/inspiration/san-franciscos-moniker-cooks-up-tasty-brand-identity-for-artisan-chocolate-makers/"
-        },
-        {
-          "name": "The-brandidentity",
-          "url": "https://the-brandidentity.com/jobs/moniker-senior-designer-san-francisco-remote-optional-5036450"
-        },
-        {
-          "name": "Sfgate",
-          "url": "https://www.sfgate.com/local/article/bay-area-queen-denim-jeans-love-melody-sabatasso-21232577.php"
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/this-week-on-how-i-ai-how-webflows"
         }
       ],
       "format": "tutorial",
       "subcategory": "instructional",
       "hooks": [
-        "Design Systems: Your Blueprint to Brand Consistency",
-        "Master Visual Identity in 5 Simple Steps",
-        "Unlock Professional Brand Design Secrets Now"
+        "Build Your AI Chief of Staff in 5 Steps",
+        "Webflow's Secret: AI Assistant Breakdown",
+        "Unlock Pro-Level AI Workflow Automation"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use screen recordings showing actual design process",
-            "Include picture-in-picture of designer explaining steps",
-            "Create clear chapter markers for each design system phase"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast color palette with San Francisco tech aesthetic. Clean, geometric typography. Dynamic motion graphics showing system transformation. Grid-based compositions. Blend of Swiss design precision with Silicon Valley innovation. Use of translucent overlays and subtle animations to demonstrate system flexibility."
-      },
-      "exampleOutline": [
-        "Introduction: What Makes a Killer Visual Identity System",
-        "Understanding Brand Architecture and Scalability",
-        "Core Design System Components: Typography, Color, Grid",
-        "Building Modular Design Elements and Patterns",
-        "Final Insights and Implementation Strategy"
-      ],
-      "hashtags": "#DesignSystem #BrandIdentity #GraphicDesign #VisualBranding #CreativeDirection #DesignTips #AdobeCreative #BrandDesign #DesignStrategy #CreativeProfessionals",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 8
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/solutions/ai-photo-editing-app-builder/"
-        }
-      ],
-      "format": "video",
-      "subcategory": "thought-leadership",
-      "hooks": [
-        "AI Just Transformed Figma Image Editing Forever",
-        "3 Mind-Blowing Figma Tools Designers Need Now",
-        "Precision Editing: The Future Is Here"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use screen recording with high-quality cursor tracking",
-            "Include picture-in-picture demo of actual tool usage",
-            "Create chapter markers for easy navigation"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, tech-forward aesthetic with dynamic screen transitions. Cool blue and electric accent color palette. Clean, modern motion graphics overlaying Figma interface. Sharp typography with technical precision. Incorporate subtle AI-inspired glitch/digital texture effects. Use high-contrast screen recordings with smooth zoom/highlight animations."
-      },
-      "exampleOutline": [
-        "Hook: Dramatic AI image editing reveal",
-        "Context: Current design workflow limitations",
-        "Deep Dive: Three new Figma AI tools",
-        "Technical Demonstration: Live tool walkthrough",
-        "Future Implications: Workflow transformation CTA"
-      ],
-      "hashtags": "#FigmaAI #DesignTools #AIDesign #CreativeTech #ProductivityHack #UIDesign #AdobeAlternative #CreativeWorkflow #DesignInnovation #AICreativity",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7245606/pexels-photo-7245606.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 5
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        }
-      ],
-      "format": "video",
-      "subcategory": "thought-leadership",
-      "hooks": [
-        "Figma Buzz: 3 Game-Changing Features Designers Need Now",
-        "Supercharge Your Design Workflow in 60 Seconds",
-        "Marketing Templates That Actually Work"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use dynamic screen recordings with picture-in-picture",
+            "Use screen recording to demonstrate each step visually",
             "Include chapter markers for easy navigation",
-            "Create engaging thumbnail with bold typography and design UI screenshot"
+            "Use picture-in-picture to show personal commentary alongside technical demonstration"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, modern design aesthetic with high-contrast color palette. Dynamic motion graphics showcasing Figma interface transitions. Clean, technical typography with playful accent colors. Animated UI elements that highlight feature demonstrations. Minimalist but energetic visual style that feels cutting-edge and professional."
+        "description": "High-contrast tech aesthetic with electric blue and charcoal gray. Dynamic motion graphics illustrating workflow steps. Clean, geometric typography with technical precision. Animated process diagrams with smooth transitions. Minimalist design with technical depth, referencing Apple design language and modern UI/UX trends."
       },
       "exampleOutline": [
-        "Hook: Rapid-fire introduction of Figma Buzz features",
-        "Context: Current design workflow challenges",
-        "Feature Breakdown: Marketing templates, app plugins, video trimming",
-        "Live Demonstration: Step-by-step implementation",
-        "Call-to-Action: How to start using these features immediately"
+        "Introduction: Why AI Chief of Staff Matters",
+        "Context: Current Workflow Limitations",
+        "Step-by-Step AI Assistant Build Process",
+        "Pro Tips and Advanced Configurations",
+        "Implementation Strategy and Next Steps"
       ],
-      "hashtags": "#FigmaBuzz #DesignWorkflow #CreativeTools #MarketingDesign #ProductivityHacks #AIDesign #CreativeTechnology #DesignInnovation #UIUXTips #DesignSystem",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
+      "hashtags": "#AIWorkflow #ProductivityHack #WebflowAI #AIAssistant #TechTutorial #AIProductivity #WorkSmarterNotHarder #AIInnovation #ProductDesign #TechTips",
+      "textureIndex": 4
     },
     {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
+      "title": "How to use the new ChatGPT app integrations, including DoorDash, Spotify, Uber, and others",
+      "description": "Learn how to use Spotify, Canva, Figma, Expedia, and other apps directly in ChatGPT.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/29/how-to-use-the-new-chatgpt-app-integrations-including-doordash-spotify-uber-and-others/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "AI Apps Just Got Insanely Powerful: Here's How",
+        "ChatGPT's Secret Superpower: App Integrations Revealed",
+        "5 Mind-Blowing ChatGPT App Tricks You Didn't Know"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use screen recording with clear cursor tracking",
+            "Include picture-in-picture walkthrough demonstrations",
+            "Create dynamic chapter markers for easy navigation"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy tech aesthetic with electric blue and deep purple color palette. Dynamic motion graphics highlighting app connections. Clean, sharp typography with technical overlay animations. Futuristic UI transitions between app demonstrations. Minimal but high-contrast design emphasizing information flow and connectivity."
+      },
+      "exampleOutline": [
+        "Intro: Teaser of ChatGPT's new app integration capabilities",
+        "Context: Why app integrations matter for productivity",
+        "Walkthrough: Detailed demonstrations of Spotify, Canva, Figma, Expedia integrations",
+        "Pro Tips: Advanced strategies for maximizing app connections",
+        "Conclusion: Future of AI-powered app interactions"
+      ],
+      "hashtags": "#ChatGPT #AIApps #TechTips #ProductivityHacks #AIIntegration #TechTutorial #AIInnovation #AppTips #OpenAI #MachineLearning",
+      "textureIndex": 12
+    },
+    {
+      "title": "VCs predict strong enterprise AI adoption next year — again",
+      "description": "More than 20 venture capitalists share their thoughts on AI agents, enterprise AI budgets and more for 2026.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/29/vcs-predict-strong-enterprise-ai-adoption-next-year-again/"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "VCs Spill: Enterprise AI's Shocking 2026 Predictions",
+        "AI Funding Secrets: What VCs Really Think",
+        "Inside VC Boardrooms: The Future of Enterprise AI"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Enable live chat for real-time audience engagement",
+            "Prepare pre-submitted audience questions in advance",
+            "Use multi-screen setup to show source materials and speaker"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy dynamic visual layout with tech-inspired grid overlay, deep blue and electric cyan color palette, floating holographic data visualization elements, animated graph transitions, modern sans-serif typography with sharp angular accents, picture-in-picture VC interview clips"
+      },
+      "exampleOutline": [
+        "Section 1: High-Energy Live Stream Intro & Audience Welcome",
+        "Section 2: TechCrunch Report Context & Key Findings",
+        "Section 3: Deep Dive into VC Predictions & Investment Trends",
+        "Section 4: Interactive Q&A with Pre-Submitted and Live Audience Questions",
+        "Section 5: Future Predictions and Closing Insights"
+      ],
+      "hashtags": "#EnterpriseAI #VCInsights #AIFunding #TechTrends #AIInvestment #StartupStrategy #AIFuture #TechInnovation #AITechnology #VentureCapital",
+      "textureIndex": 4
+    },
+    {
+      "title": "How Webflow’s CPO built an AI chief of staff to manage her calendar, prep for meetings, and drive AI adoption | Rachel Wolan",
+      "description": "Watch now | &#127897;&#65039; The CPO&#8217;s custom AI chief-of-staff app helps prep for meetings, audit her calendar, and level up her entire organization",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/how-webflows-cpo-built-an-ai-chief"
         }
       ],
       "format": "documentary",
       "subcategory": "framework",
       "hooks": [
-        "How Figma designed a font that breaks all the rules",
-        "The secret language of design: Figma's typography revolution",
-        "Type design: A journey beyond pixels and pixels"
+        "How AI became her ultimate executive assistant",
+        "The secret weapon of a Fortune 500 CPO",
+        "Building an AI chief of staff from scratch"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use archival/behind-the-scenes footage of type design process",
-            "Include expert talking head interviews with type designers",
-            "Create kinetic typography animations to showcase font evolution"
+            "Use cinematic B-roll of tech workspaces and AI interfaces",
+            "Include dynamic lower-thirds with data visualization",
+            "Create chapter markers for key narrative moments"
           ]
         }
       ],
       "visualDirection": {
         "rating": 8,
-        "description": "High-contrast color palette with clean white space, dynamic kinetic typography animations, split-screen design process visualizations, documentary-style B-roll of designers sketching/iterating, minimal modern aesthetic with unexpected geometric transitions, emphasis on revealing design thinking through visual storytelling"
+        "description": "High-contrast tech-noir aesthetic with deep blues and electric teals, sharp geometric typography, fluid motion graphics transitioning between interview, screen capture, and conceptual AI visualization scenes. Aesthetic blend of 'Her' movie meets Apple design documentary - sleek, intelligent, slightly futuristic."
       },
       "exampleOutline": [
-        "Opening: Dramatic reveal of Figma Sans design philosophy",
-        "Context: The challenges of modern digital typography",
-        "Deep Dive: Design process, iterations, and design principles",
-        "Insights: How typography reflects product design evolution",
-        "Closing: Future of design communication through custom typefaces"
+        "Opening: Rachel Wolan's personal AI transformation story",
+        "The productivity challenge in modern tech leadership",
+        "Technical walkthrough of custom AI chief of staff build",
+        "Organizational impact and AI adoption insights",
+        "Future of AI-augmented professional workflows"
       ],
-      "hashtags": "#FigmaDesign #Typography #ProductDesign #CreativeProcess #DesignInnovation #FontDesign #AdobeAlternative #UXDesign #CreativeTech #DesignTools",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
+      "hashtags": "#AIProductivity #TechLeadership #AIAssistant #WorkflowOptimization #ProductManagement #WebflowAI #AIInnovation #ExecutiveTech #ProductivityHacks #AITools",
+      "textureIndex": 5
+    },
+    {
+      "title": "Big Tech basically took Trump’s unpredictable trade war lying down",
+      "description": "Big Tech basically took Trump’s unpredictable trade war lying down",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/tech-policy/2025/12/big-tech-basically-took-trumps-unpredictable-trade-war-lying-down/"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "Tech Giants' Silent Surrender: Trump's Trade War Exposed",
+        "How Big Tech Rolled Over During Trade Tensions",
+        "Unpacking Silicon Valley's Shocking Trade War Compliance"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Prepare interactive poll questions about trade war impacts",
+            "Use live chat to crowdsource audience trade war experiences",
+            "Have backup screen recordings of key trade policy moments"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast geopolitical infographic style with dynamic data visualizations. Red and navy color palette suggesting tension. Animated world map showing trade flow disruptions. Bold, angular typography with sharp-edged motion graphics. Incorporate stock footage of tech headquarters and trade negotiations as B-roll."
+      },
+      "exampleOutline": [
+        "Opening: Live intro with real-time audience engagement",
+        "Trade War Context: Historical setup and key players",
+        "Big Tech's Response: Detailed analysis of corporate strategies",
+        "Deeper Implications: Long-term economic and technological impacts",
+        "Q&A Session: Live audience interaction and expert insights"
+      ],
+      "hashtags": "#TechPolicy #TradeWar #SiliconValley #GlobalEconomy #TechTrends #BusinessStrategy #InternationalTrade #TechIndustry #EconomicPolicy #TrumpEra",
+      "textureIndex": 4
     }
   ]
 }

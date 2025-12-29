@@ -1,336 +1,291 @@
 {
   "type": "blog",
-  "date": "2025-12-29T16:21:30.284Z",
+  "date": "2025-12-29T16:27:54.930Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "This week on How I AI: How Webflow’s CPO built an AI chief of staff",
+      "description": "Your weekly listens from How I AI, part of the Lenny's Podcast Network",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        }
-      ],
-      "format": "guide",
-      "subcategory": "instructional",
-      "hooks": [
-        "Design Templates That Scale Without Breaking Brand",
-        "Figma Buzz: The Ultimate Brand Template Playbook",
-        "Transform Your Design System with Smart Templates"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Include real-time template creation screenshots",
-            "Share personal design system challenges",
-            "Use interactive code blocks for Figma tips"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Add SEO-optimized headers for each template strategy",
-            "Include data visualizations of template efficiency",
-            "Create downloadable template checklist as content upgrade"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Include enterprise-level template case studies",
-            "Add credibility with design leadership quotes",
-            "Highlight ROI metrics for branded templates"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Dynamic grid-based layout with modular design system illustrations, using electric blue and charcoal accent colors. Typography featuring sans-serif with geometric cuts. Animated hover states for template examples. Clean, technical aesthetic with playful motion graphics demonstrating template flexibility."
-      },
-      "exampleOutline": [
-        "Introduction: The Template Transformation Challenge",
-        "The Current State of Design Systems",
-        "8 Strategic Template Creation Techniques",
-        "Scaling Design Without Losing Brand Integrity",
-        "Future of Adaptive Brand Templates"
-      ],
-      "hashtags": "#DesignSystems #FigmaTemplates #BrandDesign #CreativeStrategy #ProductDesign #AIDesign #DesignOps #CreativeTech #TemplateDesign #BrandIdentity",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 2
-    },
-    {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
-        },
-        {
-          "name": "Monikersf",
-          "url": "https://monikersf.com/news"
-        },
-        {
-          "name": "Creativeboom",
-          "url": "https://www.creativeboom.com/inspiration/san-franciscos-moniker-cooks-up-tasty-brand-identity-for-artisan-chocolate-makers/"
-        },
-        {
-          "name": "The-brandidentity",
-          "url": "https://the-brandidentity.com/jobs/moniker-senior-designer-san-francisco-remote-optional-5036450"
-        },
-        {
-          "name": "Sfgate",
-          "url": "https://www.sfgate.com/local/article/bay-area-queen-denim-jeans-love-melody-sabatasso-21232577.php"
-        }
-      ],
-      "format": "case-study",
-      "subcategory": "case-study-deep-dive",
-      "hooks": [
-        "Design Systems That Scale: Moniker's Radical Approach",
-        "How Top Designers Build Brand Universes",
-        "Visual Identity Secrets from San Francisco's Elite"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Share real-time design system sketches/iterations",
-            "Include behind-the-scenes screenshots of process",
-            "Use annotated visuals to explain complex concepts"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Include comprehensive visual taxonomy breakdown",
-            "Add SEO-friendly headers for scannability",
-            "Embed high-resolution case study images"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Quote design leadership perspectives",
-            "Include quantitative impact metrics",
-            "Highlight professional development insights"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, experimental typography with dynamic grid layouts. High-contrast color palette featuring electric blues and muted grays. Animated transition effects between sections. Clean yet provocative Swiss design influence with San Francisco tech minimalism. Motion graphics demonstrating design system flexibility."
-      },
-      "exampleOutline": [
-        "Introduction: The Design System Challenge",
-        "Context: Moniker's Unique Design Philosophy",
-        "Methodology: Building Scalable Visual Identities",
-        "Case Studies: Real-World Brand Transformations",
-        "Future of Design Systems: Key Takeaways"
-      ],
-      "hashtags": "#DesignSystems #BrandIdentity #CreativeDirection #AIDesign #SanFranciscoDesign #VisualIdentity #DesignInnovation #BrandStrategy #CreativeTech #DesignThinking",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 5
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/solutions/ai-photo-editing-app-builder/"
-        }
-      ],
-      "format": "listicle",
-      "subcategory": "explanatory",
-      "hooks": [
-        "3 AI Tools That Revolutionize Figma Image Editing",
-        "Design Faster: Figma's Newest Image Editing Secrets",
-        "Precision Editing Just Got Superpowered in Figma"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Include real-time screen recording of tools in action",
-            "Add personal workflow demonstration with before/after examples",
-            "Use conversational tone explaining each tool's practical application"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Include detailed technical breakdown of each AI tool",
-            "Add SEO-optimized headers for each tool description",
-            "Embed comparative performance metrics and user efficiency gains"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Frame tools in context of professional design workflow optimization",
-            "Include testimonials or expert quotes about AI image editing",
-            "Highlight productivity and time-saving potential for design teams"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, high-contrast design with dynamic split-screen comparisons. Futuristic color palette (electric blue, deep purple, bright cyan). Animated transitions between before/after states. Clean, sans-serif typography with technical precision. Motion graphics showing AI transformation in real-time."
-      },
-      "exampleOutline": [
-        "Section 1: Provocative Introduction to AI Image Editing Challenge",
-        "Section 2: The Current Limitations in Design Workflows",
-        "Section 3: Detailed Breakdown of 3 AI Tools (Numbered Sections)",
-        "Section 4: Transformative Potential for Design Industry",
-        "Section 5: Call-to-Action and Future Exploration"
-      ],
-      "hashtags": "#FigmaAI #DesignTech #AICreativity #ImageEditing #DesignInnovation #CreativeTech #AITools #DesignWorkflow #TechDesign #CreativeAI",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7245606/pexels-photo-7245606.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/this-week-on-how-i-ai-how-webflows"
         }
       ],
       "format": "article",
       "subcategory": "visionary",
       "hooks": [
-        "Design Faster: Figma Buzz's Game-Changing New Features",
-        "Unlock Brand Power with Figma Buzz's Latest Tools",
-        "3 Secrets to Supercharge Your Design Workflow"
+        "AI Chief of Staff: Webflow's Secret Productivity Weapon",
+        "How One Tech Leader Reimagined Team Collaboration",
+        "Building an AI Sidekick That Actually Works"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Use embedded Figma prototypes to demonstrate features",
-            "Include personal experimentation screenshots",
-            "Create interactive annotations to break down complex features"
+            "Use inline audio/podcast embed for immediate context",
+            "Include personal reflection on AI productivity insights",
+            "Create interactive poll about AI workflow adoption"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Optimize headers for SEO with feature-specific keywords",
-            "Include comparison graphics between old and new workflows",
-            "Add expert commentary from design professionals"
+            "Optimize headline for SEO with precise keywords",
+            "Include detailed step-by-step implementation breakdown",
+            "Add expert quotes to boost credibility"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Include industry impact statistics on design efficiency",
-            "Highlight professional productivity gains",
-            "Use data-driven visuals to substantiate claims"
+            "Frame article as professional development strategy",
+            "Include quantifiable productivity metrics",
+            "Tag key industry leaders for broader reach"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, dynamic layout with electric blue and gradient accents. Dynamic typography with motion-inspired text treatments. Isometric illustrations of design tools. Clean, futuristic composition with asymmetrical grid. Incorporate subtle animation hints suggesting workflow acceleration."
+        "description": "Bold, tech-forward design with dynamic gradient overlays. Futuristic sans-serif typography. Isometric illustrations of AI workflow. Muted tech-blue color palette with electric accent colors. Subtle motion graphics showing AI collaboration dynamics."
       },
       "exampleOutline": [
-        "Opening: The Design Acceleration Era",
-        "The Challenges of Modern Brand Creation",
-        "Figma Buzz: Breaking Down the New Features",
-        "How These Tools Transform Creative Workflows",
-        "Future of Design: What's Next?"
+        "Section 1: Provocative AI Productivity Hook",
+        "Section 2: Webflow CPO's Collaboration Challenge",
+        "Section 3: AI Chief of Staff Architecture",
+        "Section 4: Practical Implementation Strategies",
+        "Section 5: Future of AI-Augmented Teamwork"
       ],
-      "hashtags": "#FigmaBuzz #DesignInnovation #CreativeTech #AIDesign #ProductivityHacks #BrandDesign #UXTools #DesignWorkflow #CreativeTechnology #DigitalDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5438813/pexels-photo-5438813.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 9
+      "hashtags": "#AIProductivity #WorkflowOptimization #AICollaboration #TechInnovation #ProductivityHacks #AIAssistant #WebflowTech #FutureOfWork #AIStrategy #InnovationLeadership",
+      "textureIndex": 3
     },
     {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
+      "title": "How to use the new ChatGPT app integrations, including DoorDash, Spotify, Uber, and others",
+      "description": "Learn how to use Spotify, Canva, Figma, Expedia, and other apps directly in ChatGPT.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/29/how-to-use-the-new-chatgpt-app-integrations-including-doordash-spotify-uber-and-others/"
+        }
+      ],
+      "format": "guide",
+      "subcategory": "instructional",
+      "hooks": [
+        "ChatGPT Apps: Your New Productivity Superpower",
+        "Unlock Hidden AI Integrations in Seconds",
+        "Transform Apps with ChatGPT Magic"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Create interactive walkthrough screenshots",
+            "Include real-time experiment sections",
+            "Use personal anecdotes of app integration discoveries"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Include detailed step-by-step visual guides",
+            "Add SEO-optimized section headers",
+            "Embed comparative performance metrics"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Highlight professional productivity gains",
+            "Include enterprise-level use cases",
+            "Add credibility with expert quotes/statistics"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dynamic split-screen compositions showing before/after app states, vibrant tech-inspired color palette (electric blues, deep purples), clean sans-serif typography, subtle motion graphics revealing app integration workflows, minimalist tech-futurist aesthetic with clean iconography"
+      },
+      "exampleOutline": [
+        "Introduction: AI Integration Revolution",
+        "Understanding ChatGPT App Ecosystems",
+        "Detailed App Integration Walkthrough",
+        "Advanced Integration Strategies & Tips",
+        "Future of AI-Powered App Experiences"
+      ],
+      "hashtags": "#ChatGPT #AIProductivity #TechInnovation #AppIntegration #AITools #ProductivityHacks #TechTips #AIAssistant #FutureOfWork #InnovationStrategy",
+      "textureIndex": 8
+    },
+    {
+      "title": "VCs predict strong enterprise AI adoption next year — again",
+      "description": "More than 20 venture capitalists share their thoughts on AI agents, enterprise AI budgets and more for 2026.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/29/vcs-predict-strong-enterprise-ai-adoption-next-year-again/"
         }
       ],
       "format": "thread",
       "subcategory": "explanatory",
       "hooks": [
-        "How Figma designed a typeface that tells their brand's story",
-        "Inside Figma's radical type experiment: Beyond just letters",
-        "A font that breaks every design rule? Meet Figma Sans"
+        "Enterprise AI is exploding: VCs reveal 2026 investment secrets",
+        "AI spending surge: What top investors know",
+        "Inside the $100B enterprise AI investment wave"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Use thread screenshots as inline images in post",
-            "Add behind-the-scenes commentary not in original thread",
-            "Create a companion deep-dive article expanding on thread insights"
+            "Create companion long-form analysis with thread screenshots",
+            "Use thread as teaser for full Substack piece",
+            "Embed interactive poll about AI investment predictions"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Structure article as a narrative matching thread flow",
-            "Include high-resolution type design process images",
-            "Add SEO-friendly subheadings matching thread sections"
+            "Transform thread into SEO-optimized listicle article",
+            "Include data visualizations expanding on thread insights",
+            "Add expert commentary to thread statistics"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Frame thread as professional design case study",
-            "Include industry context and design methodology",
-            "Add quotes from Figma design leadership"
+            "Frame thread as professional industry forecast",
+            "Add corporate headshots of quoted VCs",
+            "Include detailed investment trend analysis"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast geometric composition with modular grid. Bold sans-serif typography. Dynamic color transitions mimicking type design process. Animated type reveal effects. Minimalist Swiss design aesthetic with unexpected color breaks."
+        "description": "High-contrast tech-inspired design with futuristic gradient overlays, geometric data visualization elements, bold sans-serif typography in electric blue/charcoal palette, minimal motion graphics showing upward investment trajectories"
       },
       "exampleOutline": [
-        "Thread Opener: Provocative design challenge statement",
-        "Design Context: Why Figma needed a custom typeface",
-        "Design Process: Technical & creative journey",
-        "Design Philosophy: How typography reflects brand evolution",
-        "Future Implications: What custom type means for design"
+        "Thread Hook: Provocative AI investment statistic",
+        "VC Landscape Overview",
+        "Top 3 Enterprise AI Investment Trends",
+        "Breakthrough Sectors & Predictions",
+        "Call-to-Action: Follow for More Insights"
       ],
-      "hashtags": "#DesignSystem #Typography #FigmaDesign #CreativeTechnology #BrandIdentity #TypeDesign #ProductDesign #AICreativity #DesignInnovation #CreativeProcess",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "hashtags": "#AIInvestment #EnterpriseAI #VentureCapital #TechTrends #AIStrategy #StartupFunding #EmergingTech #InvestmentInsights #FutureOfWork #AIEconomy",
+      "textureIndex": 12
+    },
+    {
+      "title": "How Webflow’s CPO built an AI chief of staff to manage her calendar, prep for meetings, and drive AI adoption | Rachel Wolan",
+      "description": "Watch now | &#127897;&#65039; The CPO&#8217;s custom AI chief-of-staff app helps prep for meetings, audit her calendar, and level up her entire organization",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/how-webflows-cpo-built-an-ai-chief"
+        }
+      ],
+      "format": "case-study",
+      "subcategory": "case-study-deep-dive",
+      "hooks": [
+        "AI Chief of Staff: Webflow's Productivity Revolution",
+        "How One CPO Hacked Her Workflow with AI",
+        "Rachel Wolan's Secret Weapon: Custom AI Assistant"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Include real-time screenshot of AI tool in action",
+            "Use conversational tone showing personal experiment",
+            "Highlight unexpected insights from implementation"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Break down technical implementation with clear diagrams",
+            "Include quantitative productivity gains",
+            "Optimize for SEO with strategic headers and keywords"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame as professional development case study",
+            "Include executive-level insights on AI adoption",
+            "Use data-driven language for credibility"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dynamic infographic-style layout with tech-inspired color palette (deep blues, electric teals), clean geometric typography, subtle motion graphics showing workflow transformation, minimalist iconography representing AI interactions"
+      },
+      "exampleOutline": [
+        "Opening: Rachel Wolan's AI Productivity Experiment",
+        "The Productivity Challenge in High-Performance Environments",
+        "Building a Custom AI Chief of Staff: Technical Breakdown",
+        "Measurable Impact: Workflow Transformation Insights",
+        "Future of AI in Executive Productivity"
+      ],
+      "hashtags": "#AIProductivity #ExecutiveTech #WorkflowOptimization #AIAssistant #ProductivityHacks #WebflowInnovation #AITools #ExecutiveEfficiency #TechLeadership #ProductivityAI",
       "textureIndex": 4
+    },
+    {
+      "title": "Big Tech basically took Trump’s unpredictable trade war lying down",
+      "description": "Big Tech basically took Trump’s unpredictable trade war lying down",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/tech-policy/2025/12/big-tech-basically-took-trumps-unpredictable-trade-war-lying-down/"
+        }
+      ],
+      "format": "listicle",
+      "subcategory": "explanatory",
+      "hooks": [
+        "How Big Tech Surrendered to Trump's Trade War Chaos",
+        "5 Shocking Ways Tech Giants Folded Under Pressure",
+        "The Silent Surrender: Tech's Trade War Capitulation"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use a personal narrative opener about trade war impact",
+            "Include real-time screenshots or tweet embeds",
+            "Invite reader comments and trade war experiences"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Add SEO-friendly subheadings for each list point",
+            "Include expert quotes to boost credibility",
+            "Use data visualizations to illustrate trade war effects"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame content as professional industry analysis",
+            "Include corporate strategy implications",
+            "Use network tagging for broader reach"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, high-contrast infographic style with geopolitical map overlays, using electric blue and deep red color palette. Dynamic typography with angular design elements suggesting conflict and disruption. Animated data points and timeline transitions."
+      },
+      "exampleOutline": [
+        "Introduction: The Unexpected Tech Trade War Landscape",
+        "Context: Trump's Unpredictable Global Economic Maneuvers",
+        "5 Key Moments of Tech Industry Capitulation",
+        "Long-Term Strategic Implications for Tech Giants",
+        "Future Outlook and Lessons Learned"
+      ],
+      "hashtags": "#TechPolicy #TradeWar #TechIndustry #GlobalEconomics #TrumpEra #BusinessStrategy #InnovationPolicy #TechLeadership #EconomicDisruption #AIPolicy",
+      "textureIndex": 0
     }
   ]
 }
