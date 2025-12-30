@@ -1,222 +1,90 @@
 {
   "type": "long-form",
-  "date": "2025-12-30T16:18:14.441Z",
+  "date": "2025-12-30T16:28:30.969Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "VCs predict enterprises will spend more on AI in 2026 — through fewer vendors",
+      "description": "Enterprises have been experimenting with AI tools for a few years. Investors predict they will start to pick winners in 2026.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/30/vcs-predict-enterprises-will-spend-more-on-ai-in-2026-through-fewer-vendors/"
         }
       ],
       "format": "livestream",
       "subcategory": "leadership",
       "hooks": [
-        "Live Design Challenge: Breaking Brand Templates in Figma",
-        "Templates That Flex: Designer's Secret Weapon Revealed",
-        "Figma Hack: Build Bulletproof Brand Layouts Now"
+        "AI Investment Showdown: VCs Reveal Enterprise Strategy",
+        "2026: How Enterprises Will Actually Spend AI Dollars",
+        "Fewer Vendors, More AI: Investors' Bold Prediction"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use interactive polls during live stream to engage audience",
-            "Prepare pre-recorded screen shares for technical demonstrations",
-            "Enable live chat for real-time Q&A interaction"
+            "Use multi-person panel format to increase engagement",
+            "Prepare pre-submitted audience Q&A questions in advance",
+            "Enable live chat for real-time audience interaction"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-energy, dynamic split-screen design with live video feed and Figma interface. Electric blue and charcoal color palette. Bold, geometric sans-serif typography. Animated design system overlays. Motion graphics highlighting template flexibility. Incorporate real-time cursor and interaction animations."
+        "description": "High-energy visual design with dynamic split-screen layouts, futuristic data visualization overlays, pulsing gradient backgrounds in deep blues and electric teals. Typography should feel technical yet approachable - sans-serif with slight geometric edge. Incorporate real-time data animation and investor quote callouts."
       },
       "exampleOutline": [
-        "Welcome & Live Stream Introduction (5 mins)",
-        "Why Flexible Templates Matter (10 mins)",
-        "8 Expert Design Template Strategies (25 mins)",
-        "Live Community Q&A and Demonstrations (15 mins)",
-        "Closing Insights and Design Challenge (5 mins)"
+        "Opening: Live Stream Introduction & Panel Intro",
+        "Market Context: Current AI Enterprise Landscape",
+        "VC Insights: Spending Trends & Vendor Consolidation",
+        "Expert Panel Discussion & Predictions",
+        "Live Q&A with Audience Interaction"
       ],
-      "hashtags": "#FigmaDesign #DesignTemplates #BrandSystem #CreativeWorkflow #DesignTips #AIDesign #ProductDesign #UXDesign #DesignStrategy #CreativeCoding",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 6
+      "hashtags": "#AIInvestment #EnterpriseAI #VCPredictions #TechTrends #AIStrategy #FutureOfWork #InvestmentInsights #TechInnovation #AIBusiness #StartupEcosystem",
+      "textureIndex": 0
     },
     {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
+      "title": "The 10 best vehicles Ars Technica drove in 2025",
+      "description": "The 10 best vehicles Ars Technica drove in 2025",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/solutions/ai-photo-editing-app-builder/"
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/cars/2025/12/the-10-best-vehicles-ars-technica-drove-in-2025/"
         }
       ],
       "format": "video",
       "subcategory": "thought-leadership",
       "hooks": [
-        "AI Just Transformed Figma Image Editing Forever",
-        "3 Mind-Blowing Tools Designers Can't Live Without",
-        "Precision Editing: The Future of Design is Here"
+        "10 Mind-Blowing Cars That Redefined Driving in 2025",
+        "Future of Driving: Ars Technica's Top Vehicles Revealed",
+        "These Cars Will Blow Your Mind This Year"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use screen recording with picture-in-picture of presenter",
-            "Create clear chapter markers for easy navigation",
-            "Include dynamic B-roll showing actual tool usage"
+            "Use dynamic screen transitions between vehicle showcases",
+            "Include picture-in-picture of test drive moments",
+            "Create chapter markers for each vehicle highlight",
+            "Use high-energy b-roll footage of vehicles in motion",
+            "Add performance graphics and spec overlays"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, tech-forward aesthetic with high-contrast color palette (deep blues/bright accents). Sleek motion graphics showcasing tool transitions. Clean, modern typography with technical precision. Dynamic screen capture with floating UI elements. Minimalist design that feels cutting-edge and professional."
+        "description": "High-energy automotive design aesthetic with sleek metallic gradients, sharp technological typography, dynamic motion graphics showing vehicle performance metrics, futuristic color palette of deep blues, silver, and electric accents. Incorporate holographic-style UI elements and smooth cinematic transitions between vehicle showcases."
       },
       "exampleOutline": [
-        "Section 1: Dramatic Tool Reveal Intro (5-10s)",
-        "Section 2: Current Design Workflow Challenges (1-2min)",
-        "Section 3: Detailed Tool Breakdown & Demos (3-5min)",
-        "Section 4: Workflow Transformation Insights (2min)",
-        "Section 5: Call-to-Action & Future Possibilities (30s)"
+        "Section 1: High-Impact Intro (Why 2025's Vehicles Matter)",
+        "Section 2: Methodology & Selection Criteria",
+        "Section 3: Countdown of Top 10 Vehicles (2-3 min per vehicle)",
+        "Section 4: Emerging Trends & Future Predictions",
+        "Section 5: Call-to-Action & Viewer Engagement"
       ],
-      "hashtags": "#FigmaAI #DesignTools #AIDesign #CreativeTech #ProductivityHack #UXDesign #AICreativity #DesignInnovation #CreativeWorkflow #TechTips",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7903783/pexels-photo-7903783.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "hashtags": "#FutureOfDriving #CarTechnology #AutoInnovation #2025Cars #ElectricVehicles #TechReview #ArstechnicaReview #Automotive #VehicleInnovation #TransportationTech",
       "textureIndex": 11
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Forum",
-          "url": "https://forum.figma.com/product-updates-3/new-features-in-figma-buzz-46631"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/three-new-features-to-help-build-brand-momentum-with-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/figma-buzz"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/shorts/Sf_5xBPH1TM"
-        }
-      ],
-      "format": "documentary",
-      "subcategory": "framework",
-      "hooks": [
-        "Figma's Secret Weapons: 3 Features Revolutionizing Design",
-        "How Designers Are Crushing Brand Momentum in Seconds",
-        "Behind the Scenes: Figma's Game-Changing New Tools"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use dynamic b-roll of designers in action",
-            "Include side-by-side comparison shots of before/after features",
-            "Integrate motion graphics to explain technical details"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast color palette with deep blues and electric accents. Kinetic typography with sliding/revealing text animations. Sleek, tech-forward composition with layered screen recordings. Minimalist documentary style with sharp editorial transitions. Reference: Apple product launch videos mixed with MKBHD tech reviews."
-      },
-      "exampleOutline": [
-        "Cold Open: Dramatic feature reveal moment",
-        "Design Challenge: Current workflow limitations",
-        "Feature Deep Dive: Marketing Templates, App Plugins, Video Trimming",
-        "Real-World Impact: Designer testimonials and use cases",
-        "Future of Design Tools: Closing vision and call-to-action"
-      ],
-      "hashtags": "#FigmaBuzz #DesignTools #CreativeTech #ProductivityHacks #AIDesign #MarketingTemplates #DesignInnovation #CreativeWorkflow #DesignCommunity #TechTips",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 12
-    },
-    {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
-        }
-      ],
-      "format": "video",
-      "subcategory": "thought-leadership",
-      "hooks": [
-        "Design Jobs That Actually Pay: Inside Moniker's Secret",
-        "How Top Design Studios Really Hire Senior Talent",
-        "Cracking the Code: San Francisco Design Careers"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use animated job description graphics",
-            "Include B-roll of San Francisco design studios",
-            "Create chapter markers for key hiring insights"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, tech-forward aesthetic with San Francisco skyline elements. Dynamic motion graphics showing career progression. Clean, sans-serif typography with electric blue and charcoal accent colors. Incorporate subtle Silicon Valley design language with minimalist, high-contrast visual approach."
-      },
-      "exampleOutline": [
-        "Intro: Moniker's Design Hiring Landscape (30s)",
-        "Context: Senior Design Role Breakdown (2min)",
-        "Career Path: What Makes a Top Candidate (3-4min)",
-        "Technical Deep Dive: Portfolio & Skill Requirements (2-3min)",
-        "Closing CTA: How to Position Yourself (30s)"
-      ],
-      "hashtags": "#DesignCareers #SanFranciscoDesign #CreativeJobs #DesignHiring #TechDesign #CareerAdvice #DesignStudio #JobTips #CreativeProfessionals #MonikerjobS",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 10
     },
     {
       "title": "Meta just bought Manus, an AI startup everyone has been talking about",
@@ -228,37 +96,118 @@
           "url": "https://techcrunch.com/2025/12/29/meta-just-bought-manus-an-ai-startup-everyone-has-been-talking-about/"
         }
       ],
-      "format": "tutorial",
-      "subcategory": "instructional",
+      "format": "documentary",
+      "subcategory": "framework",
       "hooks": [
-        "How Meta's AI Acquisition Changes Everything",
-        "Manus Acquisition: 5 Game-Changing Insights",
-        "Inside Meta's Latest AI Power Move"
+        "AI Acquisition: Meta's Bold Move to Dominate Social Media",
+        "Inside the Manus Takeover: Meta's Secret Weapon",
+        "How One Startup Could Reshape Social Media Forever"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use screen recordings of Manus/Meta interfaces",
-            "Create clear chapter markers for each step",
-            "Include side-by-side comparisons of before/after acquisition"
+            "Use archival footage and simulated tech interfaces",
+            "Include expert talking head interviews for credibility",
+            "Create dynamic screen transitions mimicking AI network connections"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "High-contrast blue and black color palette with electric blue accents. Futuristic motion graphics simulating AI neural networks. Typography with sharp, technical sans-serif fonts. Incorporate glitch effects and data visualization transitions. Aesthetic references: 'Black Mirror' visual style meets tech documentary approach."
+      },
+      "exampleOutline": [
+        "Cold Open: Dramatic AI acquisition moment",
+        "Historical Context: Meta's AI Strategy Evolution",
+        "Deep Dive: Manus Technology Breakdown",
+        "Industry Impact Analysis",
+        "Future Predictions and Call to Action"
+      ],
+      "hashtags": "#MetaAI #AcquisitionNews #AIStartup #SocialMediaTech #FutureOfTech #AIInnovation #TechDisruption #FacebookAI #StartupExit #AITrends",
+      "textureIndex": 10
+    },
+    {
+      "title": "2025 was the year AI got a vibe check",
+      "description": "AI’s early-2025 spending spree featured massive raises and trillion-dollar infrastructure promises. By year’s end, hype gave way to a vibe check, with growing scrutiny over sustainability, safety, and business models.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/29/2025-was-the-year-ai-got-a-vibe-check/"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "AI's Reality Check: 5 Lessons from 2025's Wild Ride",
+        "Trillion-Dollar Promises vs. Real AI Impact",
+        "How AI Survived Its Biggest Vibe Check Yet"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use screen recordings of key AI funding/news timelines",
+            "Include picture-in-picture expert commentary segments",
+            "Create clear chapter markers for step-by-step learning flow"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast tech blue and deep navy palette. Geometric, modular motion graphics. Clean Helvetica Neue typography with technical overlay animations. Sleek isometric illustrations of AI networks and acquisition flow. Dynamic screen transitions mimicking digital integration."
+        "description": "Futuristic data visualization aesthetic with dynamic motion graphics. High-contrast color palette (deep blues, electric oranges). Typography that feels technical but approachable. Animated infographic transitions showing AI investment/scrutiny timeline. Clean, bold geometric design elements suggesting technological precision and forward momentum."
       },
       "exampleOutline": [
-        "Introduction: Meta's Strategic AI Move",
-        "Context: What is Manus and Why It Matters",
-        "Step-by-Step Breakdown of Acquisition Implications",
-        "Technical Deep Dive: AI Integration Strategy",
-        "Future Predictions and User Impact"
+        "Section 1: Dramatic AI Landscape Opening (Hook)",
+        "Section 2: 2025 AI Investment Context",
+        "Section 3: Step-by-Step Breakdown of Market Shifts",
+        "Section 4: Key Sustainability & Safety Insights",
+        "Section 5: Future Prediction & Learning Takeaways"
       ],
-      "hashtags": "#MetaAI #AIAcquisition #TechInnovation #ArtificialIntelligence #FacebookTech #WhatsAppAI #InstagramTech #AIStartups #TechNews #FutureOfAI",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 3
+      "hashtags": "#AITrends2025 #AIInvestment #TechFuture #AIEthics #MachineLearning #TechInnovation #AIStrategy #FutureOfTech #InvestmentInsights #AITechnology",
+      "textureIndex": 11
+    },
+    {
+      "title": "The latest AI news we announced in December",
+      "description": "&lt;img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Dec_AI_Recap_still.max-600x600.format-webp.webp\"&gt;Here are Google’s latest AI updates from December 2025",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Google AI Blog",
+          "url": "https://blog.google/technology/ai/google-ai-updates-december-2025/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "AI Just Changed Everything in December",
+        "Google's Mind-Blowing AI Updates Revealed",
+        "The AI Breakthroughs No One's Talking About"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use animated text overlays to highlight key AI updates",
+            "Include picture-in-picture screen recordings of actual AI interfaces",
+            "Create dynamic chapter markers for easy navigation"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, futuristic color palette with electric blues and deep purples. Dynamic motion graphics that simulate AI neural networks. Clean, geometric typography with subtle glitch effects. Incorporate abstract data visualization elements. Use high-contrast transitions that feel technological and cutting-edge."
+      },
+      "exampleOutline": [
+        "Opening: Dramatic AI update teaser (5-10s)",
+        "Context: Why December's AI updates matter (1-2 min)",
+        "Deep Dive: Specific Google AI innovations (3-5 min)",
+        "Technical Breakdown: How these changes impact tech (2-3 min)",
+        "Closing CTA: How viewers can leverage these updates (30s)"
+      ],
+      "hashtags": "#GoogleAI #ArtificialIntelligence #TechInnovation #AIUpdates #FutureOfTech #MachineLearning #DeepLearning #TechNews #AIRevolution #InnovationInsights",
+      "textureIndex": 2
     }
   ]
 }

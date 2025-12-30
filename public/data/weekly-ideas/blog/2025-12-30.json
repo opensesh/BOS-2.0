@@ -1,286 +1,120 @@
 {
   "type": "blog",
-  "date": "2025-12-30T16:18:14.441Z",
+  "date": "2025-12-30T16:29:22.338Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "VCs predict enterprises will spend more on AI in 2026 — through fewer vendors",
+      "description": "Enterprises have been experimenting with AI tools for a few years. Investors predict they will start to pick winners in 2026.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/30/vcs-predict-enterprises-will-spend-more-on-ai-in-2026-through-fewer-vendors/"
         }
       ],
       "format": "listicle",
       "subcategory": "explanatory",
       "hooks": [
-        "Design Templates That Don't Break Brand Guidelines",
-        "Unlock Scalable Design Systems in Figma",
-        "8 Pro Secrets for Flexible Brand Templates"
+        "5 AI Spending Trends VCs Are Betting On",
+        "How Enterprises Will Slash AI Vendor Complexity",
+        "The Future of Enterprise AI: Fewer, Smarter Tools"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Use inline screenshots of actual Figma templates",
-            "Include a live template walkthrough link",
-            "Share personal template design fails/lessons"
+            "Use animated number graphics for each listicle point",
+            "Include real-time polling about AI vendor predictions",
+            "Add personal commentary between numbered sections"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Add SEO-friendly headers for each template tip",
-            "Include statistical evidence about template efficiency",
-            "Create downloadable template checklist as content upgrade"
+            "Include SEO-friendly headers for each numbered section",
+            "Embed expert quote callouts between list items",
+            "Use data visualization for VC spending trends"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Tag Figma designers and brand managers",
-            "Include professional case study examples",
-            "Use data visualizations for template impact"
+            "Frame listicle as professional strategic insights",
+            "Include LinkedIn-specific networking CTA",
+            "Use corporate-friendly data visualization"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, dynamic Figma-inspired design with modular grid layouts, vibrant accent colors (electric blue/coral), geometric typography, subtle motion graphics showing template flexibility, clean Swiss design influence with playful tech-forward aesthetic"
+        "description": "Bold, tech-forward design with dynamic geometric overlays, deep blue and electric orange color palette, floating numerical icons, subtle motion graphics highlighting each list point, clean sans-serif typography with technical precision"
       },
       "exampleOutline": [
-        "Introduction: Why Flexible Templates Matter",
-        "Context: Brand Consistency vs. Creative Flexibility",
-        "8 Tips for Scalable Design Templates",
-        "Future of Adaptive Design Systems",
-        "Call-to-Action: Download Template Toolkit"
+        "Introduction: Why Enterprise AI Spending Matters",
+        "Context: Current AI Vendor Landscape",
+        "5 Key VC Predictions for AI Spending",
+        "Implications for Tech Leaders and Investors",
+        "Strategic Recommendations and Next Steps"
       ],
-      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystems #CreativeWorkflow #AIDesign #ProductDesign #DesignStrategy #TemplateDesign #BrandIdentity #CreativeTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 5
+      "hashtags": "#AIInnovation #EnterpriseAI #VCTrends #TechInvestment #AIStrategy #FutureOfWork #AISpending #TechTrends #InvestmentInsights #AIVendors",
+      "textureIndex": 9
     },
     {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
+      "title": "The 10 best vehicles Ars Technica drove in 2025",
+      "description": "The 10 best vehicles Ars Technica drove in 2025",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/solutions/ai-photo-editing-app-builder/"
-        }
-      ],
-      "format": "guide",
-      "subcategory": "instructional",
-      "hooks": [
-        "Figma's AI Revolution: 3 Game-Changing Image Editing Tools",
-        "Precision Meets AI: Transforming Figma's Creative Workflow",
-        "Design Faster, Edit Smarter: Figma's New AI Toolkit"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Include real-time screen recordings of tool demonstrations",
-            "Use personal anecdotes about workflow challenges solved",
-            "Create interactive inline annotations for technical details"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Optimize with SEO-friendly headers and clear section breaks",
-            "Include comparative screenshots showing before/after edits",
-            "Add expert quotes or external validation of tools"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Frame tools in context of professional design efficiency",
-            "Include industry statistics about AI design tool adoption",
-            "Highlight potential productivity gains for design teams"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast color palette with electric blue and deep charcoal, dynamic asymmetrical layouts, floating UI elements with subtle parallax, clean sans-serif typography, motion graphics showing tool transformations, minimalist tech-inspired aesthetic with organic transitions"
-      },
-      "exampleOutline": [
-        "Introduction: The AI Design Transformation",
-        "The Current Design Editing Landscape",
-        "Deep Dive: Three Revolutionary Figma AI Tools",
-        "Practical Applications and Workflow Integration",
-        "Future of AI-Powered Design: What's Next?"
-      ],
-      "hashtags": "#FigmaAI #DesignTechnology #CreativeToolkit #AIDesign #ProductivityHacks #UXDesign #CreativeTech #DesignInnovation #AITools #FigmaUpdates",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 6
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Forum",
-          "url": "https://forum.figma.com/product-updates-3/new-features-in-figma-buzz-46631"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/three-new-features-to-help-build-brand-momentum-with-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/figma-buzz"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/shorts/Sf_5xBPH1TM"
-        }
-      ],
-      "format": "thread",
-      "subcategory": "explanatory",
-      "hooks": [
-        "Figma Buzz: Your Design Workflow Just Got Supercharged 🚀",
-        "3 Game-Changing Features Designers Can't Ignore",
-        "Unlock Next-Level Brand Momentum with Figma's Latest"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Cross-promote thread with a deep-dive newsletter",
-            "Use thread as teaser for longer Substack article",
-            "Add behind-the-scenes commentary in newsletter"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Expand thread into comprehensive long-form piece",
-            "Include detailed screenshot walkthrough",
-            "Add expert commentary and industry context"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Frame features as professional productivity hack",
-            "Include data on design workflow efficiency",
-            "Add professional networking angle to thread"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, dynamic motion graphics with electric blue/gradient accents. Sharp geometric typography. Animated screen captures showing feature transitions. Clean, tech-forward aesthetic with subtle parallax effects. Minimal but energetic design system inspired by Figma's brand language."
-      },
-      "exampleOutline": [
-        "Section 1: Provocative Hook + Why These Features Matter",
-        "Section 2: Marketing Template Deep Dive",
-        "Section 3: Plugin Integration Breakdown",
-        "Section 4: Video Trimming Revolutionary Potential",
-        "Section 5: Future of Design Workflows CTA"
-      ],
-      "hashtags": "#FigmaBuzz #DesignWorkflow #AIDesign #CreativeTech #ProductivityHacks #DesignTools #MarketingDesign #UIUXTips #CreativeInnovation #DesignSystems",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7245606/pexels-photo-7245606.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 12
-    },
-    {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/cars/2025/12/the-10-best-vehicles-ars-technica-drove-in-2025/"
         }
       ],
       "format": "article",
       "subcategory": "visionary",
       "hooks": [
-        "Design Systems: The Secret Weapon of Elite Brands",
-        "Scaling Visual Identity Beyond the Ordinary",
-        "Crafting Brand Universes, Not Just Logos"
+        "Future Wheels: 10 Electric Marvels That Redefined Driving",
+        "Beyond Tesla: The Most Surprising Cars of 2025",
+        "Tech Meets Transportation: A Year of Automotive Revolution"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Use inline design sketches to break up text",
-            "Include real-time design process screenshots",
-            "Add interactive design system examples"
+            "Include real-time reaction GIFs from test drives",
+            "Use interactive polls about reader's favorite vehicles",
+            "Create a subscriber-only deep-dive bonus content"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Optimize headers for SEO with design keywords",
-            "Include comprehensive visual case studies",
-            "Use data visualization to illustrate design impact"
+            "Optimize for SEO with detailed technical keywords",
+            "Include comparative performance charts and graphs",
+            "Add expert quotes from automotive industry leaders"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Include professional credibility signals",
-            "Highlight scalable design methodology",
-            "Add expert quotes from design leaders"
+            "Frame article as industry innovation analysis",
+            "Include professional networking insights about automotive tech",
+            "Add data-driven insights about electric vehicle market"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, modular grid-based layout with dynamic color transitions. San Francisco tech-minimalist aesthetic with unexpected geometric accent colors. Typography mixing sharp sans-serif with organic flow. Subtle motion graphics revealing design system complexity."
+        "description": "Futuristic cyberpunk-inspired color palette with electric blue and graphite grays, dynamic asymmetrical layouts, holographic vehicle silhouettes, motion-activated scroll animations, clean sans-serif typography with tech-forward edge"
       },
       "exampleOutline": [
-        "Introduction: The Evolution of Visual Identity",
-        "The Challenge: Complexity in Modern Brand Ecosystems",
-        "Design Systems: Framework for Scalable Visual Communication",
-        "Case Studies: Brands That Mastered Systemic Design",
-        "Future of Visual Branding: Adaptive and Intelligent Systems"
+        "Introduction: The Automotive Transformation of 2025",
+        "Market Context: Electric Vehicle Landscape",
+        "Top 10 Vehicles: Detailed Reviews and Rankings",
+        "Technology Breakthrough Insights",
+        "Future Mobility Predictions and Call-to-Action"
       ],
-      "hashtags": "#DesignSystems #BrandIdentity #VisualBranding #CreativeDirection #AIDesign #ProductDesign #BrandStrategy #DesignTech #CreativeCommunication #SystemicDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 9
+      "hashtags": "#ElectricVehicles #FutureOfTransport #AutoTech #EVInnovation #Mobility2025 #Automotive #TechCars #ElectricMobility #TransportationTrends #InnovationDriven",
+      "textureIndex": 11
     },
     {
       "title": "Meta just bought Manus, an AI startup everyone has been talking about",
@@ -292,53 +126,166 @@
           "url": "https://techcrunch.com/2025/12/29/meta-just-bought-manus-an-ai-startup-everyone-has-been-talking-about/"
         }
       ],
-      "format": "case-study",
-      "subcategory": "case-study-deep-dive",
+      "format": "thread",
+      "subcategory": "explanatory",
       "hooks": [
-        "Meta's AI Acquisition: A Strategic Game-Changer",
-        "Inside Meta's Bold Manus Acquisition Strategy",
-        "How Meta Is Reshaping Social AI Landscape"
+        "Meta's Secret AI Weapon: Manus Acquisition Explained 🚀",
+        "Inside Meta's Bold AI Move: Manus Joins the Team 🤖",
+        "Why Meta Just Bought the AI Startup Everyone's Watching 👀"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Use real-time annotation/commentary in margins",
-            "Include interactive breakdowns of acquisition timeline",
-            "Share personal analysis between formal sections"
+            "Use thread as teaser for deeper Substack analysis",
+            "Create companion graphic that breaks down acquisition details",
+            "Link full deep-dive article in thread's final post"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Optimize with clear H2/H3 SEO headers",
-            "Include data visualization of acquisition impact",
-            "Link to authoritative external sources"
+            "Expand thread into long-form SEO-optimized article",
+            "Include expert commentary and industry context",
+            "Use thread as content marketing for longer piece"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Frame analysis through professional strategic lens",
-            "Include executive-level market implications",
-            "Use data-driven arguments with credible citations"
+            "Angle thread toward professional implications of acquisition",
+            "Include data points about AI startup ecosystem",
+            "Highlight strategic business reasoning behind purchase"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Dynamic infographic-style layout with layered transparencies, tech-inspired gradient backgrounds, clean sans-serif typography, minimal iconography representing network/connection motifs, subtle motion graphics highlighting key data points"
+        "description": "High-contrast tech-futuristic aesthetic with glitch-style typography, deep blue and electric cyan color palette, dynamic geometric overlays suggesting network/connection, subtle motion graphics showing interconnected AI nodes"
       },
       "exampleOutline": [
-        "Section 1: Provocative Acquisition Headline",
-        "Section 2: Meta's Strategic AI Landscape Context",
-        "Section 3: Detailed Manus Acquisition Breakdown",
-        "Section 4: Potential Industry Transformation Insights",
-        "Section 5: Future Predictions & Call-to-Action"
+        "Section 1: Attention-grabbing headline + key acquisition fact",
+        "Section 2: Meta's current AI landscape and motivation",
+        "Section 3: Manus startup background and unique technology",
+        "Section 4: Potential impact on Facebook/Instagram ecosystem",
+        "Section 5: Call-to-action + future prediction"
       ],
-      "hashtags": "#MetaAI #AIAcquisition #TechInnovation #ArtificialIntelligence #SocialMedia #StartupStrategy #AITrends #TechNews #IndustryInsights #FutureOfTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
+      "hashtags": "#MetaAI #AIAcquisition #TechInnovation #ArtificialIntelligence #StartupNews #FacebookAI #WhatsAppAI #InstagramAI #AITrends #TechGiants",
+      "textureIndex": 0
+    },
+    {
+      "title": "2025 was the year AI got a vibe check",
+      "description": "AI’s early-2025 spending spree featured massive raises and trillion-dollar infrastructure promises. By year’s end, hype gave way to a vibe check, with growing scrutiny over sustainability, safety, and business models.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/29/2025-was-the-year-ai-got-a-vibe-check/"
+        }
+      ],
+      "format": "guide",
+      "subcategory": "instructional",
+      "hooks": [
+        "AI's Wild Ride: From Hype to Reality Check",
+        "2025: The Year AI Grew Up",
+        "Trillion-Dollar Dreams, Billion-Dollar Reality Checks"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use interactive inline annotations to break down complex AI trends",
+            "Include real-time poll about reader's AI expectations vs. reality",
+            "Add personal commentary between major sections to maintain engagement"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Optimize headline for SEO with specific AI industry keywords",
+            "Include data visualizations to illustrate spending and investment trends",
+            "Add expert quotes to increase credibility and depth"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Emphasize business implications and strategic insights",
+            "Use professional tone with concrete industry examples",
+            "Include downloadable infographic for professional network sharing"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, futuristic design with high-contrast color palette (deep blues, electric oranges). Dynamic geometric overlays suggesting technological complexity. Typography mix of sharp sans-serif and fluid motion graphics. Subtle 3D rendering of AI infrastructure networks. Aesthetic blending digital brutalism with clean information design."
+      },
+      "exampleOutline": [
+        "Introduction: The AI Rollercoaster of 2025",
+        "Market Context: Trillion-Dollar Promises vs. Realistic Outcomes",
+        "Key Spending Trends and Infrastructure Investments",
+        "Sustainability and Safety: The Emerging Critical Lens",
+        "Future Implications and Strategic Recommendations"
+      ],
+      "hashtags": "#AITrends #TechInvestment #AIEconomy #InnovationInsights #FutureOfTech #AISpending #TechStrategy #IndustryAnalysis #AIEthics #EmergingTechnology",
+      "textureIndex": 2
+    },
+    {
+      "title": "The latest AI news we announced in December",
+      "description": "&lt;img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Dec_AI_Recap_still.max-600x600.format-webp.webp\"&gt;Here are Google’s latest AI updates from December 2025",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Google AI Blog",
+          "url": "https://blog.google/technology/ai/google-ai-updates-december-2025/"
+        }
+      ],
+      "format": "case-study",
+      "subcategory": "case-study-deep-dive",
+      "hooks": [
+        "Google's AI Revolution: December's Breakthrough Moments",
+        "Inside Google's Secret AI Lab: December Decoded",
+        "AI Frontier: Google's Boldest December Innovations"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use personal narrative to contextualize AI updates",
+            "Include real-time reaction screenshots/annotations",
+            "Embed interactive elements to break down complex updates"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Create clear visual hierarchy for technical content",
+            "Use data visualization to explain complex AI concepts",
+            "Include expert commentary to add credibility"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame updates through professional impact lens",
+            "Include quantitative industry implications",
+            "Use formal but accessible technical language"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dynamic blue-gray gradient background, geometric tech-inspired overlays, clean sans-serif typography, subtle motion graphics highlighting key AI concepts, minimalist infographic style with high-contrast data points"
+      },
+      "exampleOutline": [
+        "Introduction: Google's AI Landscape in December",
+        "Context: Technological Challenges & Opportunities",
+        "Deep Dive: Specific AI Breakthroughs",
+        "Strategic Implications & Future Predictions",
+        "Call to Action: Engaging with AI Innovation"
+      ],
+      "hashtags": "#GoogleAI #AIInnovation #TechBreakthrough #ArtificialIntelligence #InnovationInsights #TechTrends #AIResearch #FutureOfTech #MachineLearning #TechnologyUpdate",
+      "textureIndex": 6
     }
   ]
 }

@@ -1,319 +1,266 @@
 {
   "type": "short-form",
-  "date": "2025-12-30T16:18:14.441Z",
+  "date": "2025-12-30T16:27:48.276Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "The best AI-powered dictation apps of 2025",
+      "description": "AI-powered dictation apps are useful for replying to emails, taking notes, and even coding through your voice",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover"
-        }
-      ],
-      "format": "quick-image",
-      "subcategory": "quick-image",
-      "hooks": [
-        "Design Templates That Don't Break Your Brand",
-        "Figma Guardrails: The Designer's Secret Weapon",
-        "Make Flexible Templates Without Losing Identity"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use dynamic split-screen transitions to show template flexibility",
-            "Animate brand guidelines overlaying template examples",
-            "Quick cuts between rigid vs flexible design states"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Provocative before/after template comparison",
-            "Use numbered slides with clear visual hierarchy",
-            "Final slide includes actionable template creation checklist"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected brand template 'failure' scenario",
-            "Use screen recordings demonstrating Figma template techniques",
-            "Include rapid-fire text overlay tips"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame content as professional design strategy",
-            "Include data/research about template effectiveness",
-            "Use more technical, precise language"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast color palette with electric blue and charcoal gray. Bold, geometric typography with technical overlay graphics. Kinetic composition showing template transformation. Minimalist Swiss design influence with dynamic motion design elements. Use abstract geometric shapes to represent template flexibility."
-      },
-      "exampleOutline": [
-        "Hook: Provocative template design challenge",
-        "Problem: Brand inconsistency in self-serve templates",
-        "8 Quick Tips for Template Design",
-        "Key Transformation Insight",
-        "Call-to-Action: Download Template Framework"
-      ],
-      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystem #CreativeStrategy #AIDesign #ProductDesign #DesignTips #BrandIdentity #TemplateDesign #CreativeTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/solutions/ai-photo-editing-app-builder/"
-        }
-      ],
-      "format": "story",
-      "subcategory": "story",
-      "hooks": [
-        "AI Editing Magic: Figma's New Creative Superpowers 🚀",
-        "Design Faster: 3 Mind-Blowing Figma Tools Revealed",
-        "Precision Meets AI: Figma's Image Editing Revolution"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick cuts between tool demonstrations",
-            "Include text overlays highlighting key features",
-            "Create a fast-paced, dynamic visual narrative"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must be a provocative before/after comparison",
-            "Use square 1:1 format with clean, bold graphics",
-            "Each slide should showcase a distinct tool capability"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with a pattern-interrupting visual transition",
-            "Use screen recording with animated cursor movements",
-            "Include direct comparisons of manual vs. AI editing"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame tools as professional productivity enhancers",
-            "Include subtle data visualization of time saved",
-            "Use more technical, workflow-oriented language"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast futuristic aesthetic with electric blue and deep purple gradients. Dynamic motion graphics showing tool transformations. Clean, sans-serif typography with slight technical glitch effects. Incorporate holographic UI elements and subtle particle animations to suggest AI intelligence. Reference aesthetic: Blade Runner UI meets modern minimalist design"
-      },
-      "exampleOutline": [
-        "Section 1: Dramatic hook showcasing image editing problem",
-        "Section 2: Quick pain point about current design workflows",
-        "Section 3: Reveal of 3 specific AI editing tools",
-        "Section 4: Rapid demonstration of each tool's capability",
-        "Section 5: Call-to-action to explore Figma's new features"
-      ],
-      "hashtags": "#FigmaAI #DesignTech #CreativeTools #AIDesign #ProductivityHack #GraphicDesign #UXDesign #CreativeTechnology #DesignInnovation #AITools",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Forum",
-          "url": "https://forum.figma.com/product-updates-3/new-features-in-figma-buzz-46631"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/three-new-features-to-help-build-brand-momentum-with-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/figma-buzz"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/shorts/Sf_5xBPH1TM"
-        }
-      ],
-      "format": "reel",
-      "subcategory": "reel",
-      "hooks": [
-        "Figma Buzz: Your Design Workflow Just Leveled Up 🚀",
-        "3 Game-Changing Features Designers Need Now",
-        "Design Faster, Smarter: Figma Buzz Secrets Revealed"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick, dynamic transitions between feature highlights",
-            "Add text overlay for key points to enhance accessibility",
-            "Include fast-paced screen recordings of actual Figma interface"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Bold graphic with main headline",
-            "Use consistent color scheme across slides",
-            "Include clear before/after comparisons for each feature"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected visual or sound effect",
-            "Use screen capture with animated cursor highlights",
-            "Include rapid-fire voiceover explaining features"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Add more technical context and professional value proposition",
-            "Use more subdued motion graphics",
-            "Include potential productivity gains as key metric"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-energy tech aesthetic with electric blue and charcoal gray color palette. Dynamic motion graphics with quick cuts. Sans-serif typography with bold, condensed weights. Animated UI elements that demonstrate feature functionality. Clean, futuristic design language with subtle glitch/tech overlay effects."
-      },
-      "exampleOutline": [
-        "Hook: Rapid visual intro with Figma Buzz logo",
-        "Problem: Current design workflow limitations",
-        "Feature 1: Marketing template integration",
-        "Feature 2: Cross-app plugin capabilities",
-        "Feature 3: Video trimming functionality",
-        "Closing CTA: Try Figma Buzz today"
-      ],
-      "hashtags": "#FigmaBuzz #DesignTips #AIDesign #CreativeTech #ProductivityHack #DesignTools #UXDesign #CreativeWorkflow #DesignInnovation #TechTrends",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7245606/pexels-photo-7245606.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
-    },
-    {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/30/the-best-ai-powered-dictation-apps-of-2025/"
         }
       ],
       "format": "carousel",
       "subcategory": "carousel",
       "hooks": [
-        "Design Careers Decoded: Inside San Francisco's Top Studio",
-        "How Top Design Firms Actually Hire Senior Talent",
-        "Moniker's Secret: What Makes a Design Leader?"
+        "Voice Control: The AI Dictation Revolution is Here 🎙️",
+        "Speak, Don't Type: AI's Dictation Magic Unveiled",
+        "Your Voice, AI's Canvas: Dictation Reimagined"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use dynamic transitions between carousel slides",
-            "Add subtle motion graphics to each design slide",
-            "Create a narrative arc across 6-8 slides"
+            "Use quick screen recordings of dictation apps in action",
+            "Include voiceover explaining key features rapidly",
+            "Add dynamic text overlays highlighting app capabilities"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide must be visually striking graphic",
-            "Use clean, modular grid design for consistency",
-            "Progressive reveal of information across slides"
+            "First slide must have bold, attention-grabbing visual comparison",
+            "Use consistent color palette across all slides",
+            "Each slide should have one clear, actionable insight"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Extract most compelling carousel slide as Short",
-            "Add voiceover explaining key design career insights",
-            "Use text overlay to highlight key points"
+            "Condense carousel content into rapid-fire transitions",
+            "Use more dramatic visual effects",
+            "Add energetic background music"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Add more professional context and industry language",
-            "Include specific role requirements as slide content",
-            "Use more data-driven visual approach"
+            "Add more technical depth to app descriptions",
+            "Include professional use case scenarios",
+            "Emphasize productivity and workflow optimization"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, tech-forward aesthetic with san francisco design studio vibe. High-contrast color palette (charcoal, electric blue, white). Minimal Swiss design grid. Isometric illustrations of design process. Typography: Modern sans-serif, clean geometric layouts. Subtle parallax motion between slides."
+        "description": "High-contrast cyberpunk-inspired color palette with electric blues and neon accents. Futuristic, glitch-inspired typography. Dynamic diagonal compositions. Incorporate holographic UI elements and semi-transparent overlays. Subtle motion graphics suggesting technological fluidity."
       },
       "exampleOutline": [
-        "Slide 1: Bold headline + striking visual of design studio",
-        "Slide 2: Role overview and key responsibilities",
-        "Slide 3: Required skills and qualifications",
-        "Slide 4: Company culture and design philosophy",
-        "Slide 5: Career growth and development opportunities"
+        "Slide 1: Provocative hook & visual app comparison",
+        "Slide 2: Problem statement - typing limitations",
+        "Slide 3-4: Top 3 AI dictation apps breakdown",
+        "Slide 5: Unique features and use cases",
+        "Slide 6: Call-to-action and future predictions"
       ],
-      "hashtags": "#DesignCareers #SanFranciscoDesign #CreativeJobs #DesignLeadership #CareerGrowth #AIDesign #TechDesign #CreativeTalent #DesignInnovation #ProductDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 10
+      "hashtags": "#AIDictation #VoiceTech #ProductivityHacks #AITools #FutureTech #VoiceControl #TechInnovation #AIAssistant #WorksmartNotHard #TechTrends",
+      "textureIndex": 0
+    },
+    {
+      "title": "VCs predict enterprises will spend more on AI in 2026 — through fewer vendors",
+      "description": "Enterprises have been experimenting with AI tools for a few years. Investors predict they will start to pick winners in 2026.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/30/vcs-predict-enterprises-will-spend-more-on-ai-in-2026-through-fewer-vendors/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "AI Spending: The Great Enterprise Consolidation",
+        "Fewer Vendors, More AI Investment",
+        "2026: When Enterprise AI Gets Serious"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic graph animation showing vendor consolidation",
+            "Include quick enterprise icon transitions",
+            "Add subtle motion graphics highlighting key stats"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Provocative headline with bold typography",
+            "Use data visualization slides with clean, minimalist design",
+            "Final slide: Clear call-to-action with investor quote"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected visual metaphor for AI consolidation",
+            "Use quick-cut editing to maintain high energy",
+            "Include text overlays with key investment insights"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "More professional, data-driven visual approach",
+            "Include credible source attribution",
+            "Use corporate color palette with clean infographic style"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, high-contrast design with tech-inspired color palette (deep blues, electric teals). Geometric abstract background suggesting network/connection. Sharp, angular typography. Minimal illustrations of enterprise/tech icons. Subtle gradient overlays. Motion graphics suggesting convergence and reduction."
+      },
+      "exampleOutline": [
+        "Provocative Headline/Visual Hook",
+        "Current AI Vendor Landscape Snapshot",
+        "2026 Predicted Consolidation Trend",
+        "Key Investment Insight/Statistic",
+        "Future-Facing Call to Understand Trend"
+      ],
+      "hashtags": "#AIInvestment #EnterpriseAI #TechTrends #VentureCapital #AIConsolidation #FutureOfTech #InvestmentInsights #AIStrategy #TechInnovation #BusinessTechnology",
+      "textureIndex": 0
+    },
+    {
+      "title": "The top 26 consumer/edtech companies from Disrupt Startup Battlefield",
+      "description": "Here is the full list of the consumer/edtech Startup Battlefield 200 selectees, along with a note on what made us select them for the competition.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/30/the-top-26-consumer-edtech-companies-from-disrupt-startup-battlefield/"
+        }
+      ],
+      "format": "story",
+      "subcategory": "story",
+      "hooks": [
+        "26 Startups Redefining Consumer & EdTech Landscapes 🚀",
+        "Future of Learning & Innovation: Startup Battlefield Secrets",
+        "Breakthrough Tech Companies You Need to Know Now"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic transitions between startup highlights",
+            "Include quick animated logos for each company",
+            "Create fast-paced visual rhythm under 30 seconds"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have provocative teaser graphic",
+            "Use consistent color-coded design for each startup",
+            "Include one key statistic/insight per slide"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Open with unexpected visual metaphor about innovation",
+            "Use text overlays to highlight key startup details",
+            "Include rapid-fire startup name/category reveals"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add professional context about Startup Battlefield selection",
+            "Include founder quotes or company mission statements",
+            "Use more detailed, data-driven storytelling approach"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, futuristic color palette with electric blues/purples, geometric tech-inspired layouts, sans-serif typography with sharp angles, dynamic motion graphics showing interconnected innovation networks, minimal but high-contrast design emphasizing forward momentum"
+      },
+      "exampleOutline": [
+        "Teaser: Dramatic visual introduction to startup landscape",
+        "Context: What is Startup Battlefield?",
+        "Top Startup Breakdown: 5-7 key companies",
+        "Trends & Insights: Common innovation themes",
+        "Call-to-Action: Follow for more startup discoveries"
+      ],
+      "hashtags": "#StartupBattlefield #TechInnovation #EdTech #ConsumerTech #Startups #FutureOfTech #TechTrends #Innovation #EntrepreneurLife #TechStartups",
+      "textureIndex": 1
+    },
+    {
+      "title": "Here’s what you should know about the US TikTok deal",
+      "description": "A number of investors are competing for the opportunity to purchase the app, and if a deal were to go through, the platform's U.S. business could have its valuation soar to upward of $60 billion.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/30/heres-whats-you-should-know-about-the-us-tiktok-deal/"
+        }
+      ],
+      "format": "story",
+      "subcategory": "story",
+      "hooks": [
+        "TikTok's $60 Billion Twist: Who's Buying?",
+        "The Billion-Dollar Battle for TikTok's Future",
+        "Inside the High-Stakes TikTok Acquisition Drama"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic text transitions between key points",
+            "Include quick visual cuts showing investor logos",
+            "Add subtle motion graphics to maintain engagement"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have bold, provocative headline",
+            "Use infographic-style slides for complex information",
+            "Final slide should include clear call-to-action"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected visual metaphor",
+            "Use rapid-fire information delivery",
+            "Include subtle on-screen text for key stats"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame content as strategic business insight",
+            "Use more formal, analytical visual language",
+            "Include potential investment implications"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast color palette with electric blue and deep charcoal, geometric overlays representing tech/investment landscape, modern sans-serif typography with dynamic text animations, abstract financial chart-inspired background elements, minimal but energetic motion design"
+      },
+      "exampleOutline": [
+        "Section 1: Provocative Hook - TikTok's Massive Valuation",
+        "Section 2: Current Market Context - Acquisition Landscape",
+        "Section 3: Key Investors and Potential Strategies",
+        "Section 4: Potential Impact on Tech Ecosystem",
+        "Section 5: Quick Takeaway/Future Prediction"
+      ],
+      "hashtags": "#TikTok #TechDeal #InvestmentNews #AITech #StartupStrategy #BusinessInnovation #TechTrends #SocialMedia #InvestmentOpportunity #DigitalEconomy",
+      "textureIndex": 11
     },
     {
       "title": "Meta just bought Manus, an AI startup everyone has been talking about",
@@ -321,65 +268,64 @@
       "starred": false,
       "sources": [
         {
-          "name": "TechCrunch AI",
+          "name": "TechCrunch",
           "url": "https://techcrunch.com/2025/12/29/meta-just-bought-manus-an-ai-startup-everyone-has-been-talking-about/"
         }
       ],
-      "format": "story",
-      "subcategory": "story",
+      "format": "reel",
+      "subcategory": "reel",
       "hooks": [
-        "Meta's AI Shopping Spree: What Manus Means",
-        "Inside Meta's Latest AI Power Move",
-        "When Tech Giants Play Startup Chess"
+        "Meta's AI Shopping Spree: Manus Acquisition Explained!",
+        "Inside Meta's Latest Billion-Dollar AI Move",
+        "Why Meta Just Bought This Secret AI Startup"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use dynamic text overlays highlighting key acquisition stats",
-            "Include quick visual transitions between key points",
-            "Keep pace fast: 3-5 second per story frame"
+            "Use fast-paced text transitions between key points",
+            "Include dynamic screen recordings of AI interfaces",
+            "Create a narrative arc in first 3 seconds"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide must have provocative visual headline",
-            "Use infographic-style slides for complex information",
-            "Final slide includes clear engagement call-to-action"
+            "First slide must have provocative visual stat",
+            "Use infographic-style slides with clean data visualization",
+            "Final slide includes clear call-to-action"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with unexpected visual metaphor about tech acquisition",
-            "Use screen recordings/mock interfaces for technical credibility",
-            "Add subtle motion graphics to maintain viewer interest"
+            "Start with unexpected visual/sound pattern interrupt",
+            "Use screen capture with animated annotations",
+            "Include quick b-roll of tech/startup imagery"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Frame acquisition through professional strategic lens",
-            "Include data visualization of market implications",
-            "Use more formal, analytical tone compared to other platforms"
+            "More professional tone, deeper context",
+            "Include expert quote or industry insight",
+            "Use data-driven visual storytelling"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast tech-inspired color palette (deep blues, electric teals, stark whites), geometric fractals suggesting AI complexity, sans-serif typography with subtle glitch effects, animated data flow backgrounds, minimalist tech-documentary aesthetic"
+        "description": "High-energy tech aesthetic with glitch-inspired motion graphics, deep blue and electric cyan color palette, futuristic sans-serif typography, dynamic split-screen and overlay transitions, subtle holographic texture elements"
       },
       "exampleOutline": [
-        "Opening: Dramatic acquisition headline",
-        "Context: Meta's AI strategy overview",
-        "Manus Startup Background",
-        "Strategic Implications Breakdown",
-        "Future Predictions & Potential Impact"
+        "Quick AI Acquisition Teaser (0-3 seconds)",
+        "Meta's Strategic Context (3-15 seconds)",
+        "Manus Startup Breakdown (15-45 seconds)",
+        "Future Implications Highlight (45-60 seconds)",
+        "Provocative Closing Insight (60 seconds)"
       ],
-      "hashtags": "#MetaAI #TechAcquisition #AIStartup #FacebookInnovation #TechNews #AITrends #StartupCulture #InnovationStrategy #AITechnology #BusinessIntelligence",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 2
+      "hashtags": "#MetaAI #AIStartup #TechAcquisition #ArtificialIntelligence #FacebookTech #WhatsAppAI #InstagramTech #AIInnovation #StartupNews #TechTrends",
+      "textureIndex": 10
     }
   ]
 }
