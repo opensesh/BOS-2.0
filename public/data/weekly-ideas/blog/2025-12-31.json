@@ -1,344 +1,291 @@
 {
   "type": "blog",
-  "date": "2025-12-31T16:17:51.471Z",
+  "date": "2025-12-31T16:28:07.145Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Mark Wilson: Fast Company's Global Design Editor on design's defining moments in 2025",
+      "description": "Episode 158 of the Design Better Podcast",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover"
+          "name": "Design Better",
+          "url": "https://designbetterpodcast.com/p/mark-wilson"
         }
       ],
       "format": "thread",
       "subcategory": "explanatory",
       "hooks": [
-        "Design templates that scale without losing your brand's soul 🚀",
-        "Unlock Figma's secret weapon for bulletproof brand templates 🔓",
-        "How top designers create flexible, unbreakable brand systems 💡"
+        "Design's Wild Future: Mark Wilson Reveals 2025 Secrets",
+        "How Fast Company's Design Guru Sees Tomorrow",
+        "Insider Peek: Design's Next Radical Transformation"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Embed thread screenshots with behind-the-scenes commentary",
-            "Create a complementary deep-dive article expanding on thread insights",
-            "Use thread as teaser for more comprehensive Substack content"
+            "Embed podcast audio clip in thread intro",
+            "Use thread as teaser for longer Substack analysis",
+            "Create companion graphic summarizing key insights"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Add detailed annotations and case study examples",
-            "Include SEO-optimized headers matching thread content",
-            "Create infographic summarizing key template design principles"
+            "Expand thread into long-form SEO article",
+            "Add deep-dive research links",
+            "Create pullout quote graphics from thread content"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Add professional context and enterprise design implications",
-            "Include data points about template efficiency and brand consistency",
-            "Feature expert quotes or industry benchmarks"
+            "Frame thread as professional industry forecast",
+            "Add credibility with Mark Wilson's credentials",
+            "Include data visualizations of design trends"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast geometric compositions with dynamic gradients, using a tech-forward color palette of deep blues, electric teals, and crisp whites. Typography should feel precise yet approachable - sans-serif with slight rounded edges. Incorporate subtle motion graphics showing template flexibility, using parallax-style reveal animations between thread slides."
+        "description": "High-contrast futuristic color palette (electric blue, charcoal grey, neon accents). Dynamic typography with angular, forward-leaning fonts. Isometric design elements suggesting technological progression. Minimal motion graphics suggesting technological emergence. Aesthetic references: Wired Magazine design, Cyberpunk 2077 visual language"
       },
       "exampleOutline": [
-        "Thread Opening: Provocative hook + personal design challenge",
-        "Problem Statement: Why most brand templates fail",
-        "Core Principles: 8 tactical template design strategies",
-        "Case Study/Proof Point: Real-world template transformation",
-        "Call-to-Action: Invitation to experiment and share results"
+        "Thread Opener: Provocative design future statement",
+        "Context: Design's current transformation landscape",
+        "Mark Wilson's Key Predictions",
+        "Breakthrough Design Moments of 2025",
+        "Call-to-Action: Podcast Link & Engagement"
       ],
-      "hashtags": "#DesignSystem #FigmaDesign #BrandTemplates #CreativeStrategy #AIDesign #ProductDesign #DesignTips #BrandIdentity #CreativeTech #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 5
+      "hashtags": "#DesignFuture #CreativeTechnology #InnovationTrends #AIDesign #DesignThinking #CreativeTech #FutureOfDesign #DesignInnovation #TechTrends #CreativeStrategy",
+      "textureIndex": 10
     },
     {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
+      "title": "From prophet to product: How AI came back down to earth in 2025",
+      "description": "From prophet to product: How AI came back down to earth in 2025",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=ieJERX9Wkro"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/solutions/ai-photo-editing-app-builder/"
-        }
-      ],
-      "format": "guide",
-      "subcategory": "instructional",
-      "hooks": [
-        "AI Image Editing: Figma's Design Revolution Starts Now",
-        "Precision Meets Magic: Figma's New Image Tools",
-        "Design Faster, Edit Smarter: Figma's AI Breakthrough"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Include real-time screen recording of tools in action",
-            "Add personal workflow transformation story",
-            "Create interactive comparison graphics"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Deep dive into technical implementation details",
-            "Include SEO-optimized headers for each tool",
-            "Add comparative analysis with existing editing methods"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Focus on professional productivity gains",
-            "Include quantitative impact metrics",
-            "Add expert commentary/potential industry implications"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, high-contrast design with futuristic blue-purple gradient overlays. Dynamic composition featuring floating UI elements. Clean, geometric typography with subtle motion graphics. Incorporate translucent design tool interfaces with AI-powered highlight effects. Reference Figma's design language with elevated, conceptual visual storytelling."
-      },
-      "exampleOutline": [
-        "Introduction: The New Frontier of AI Image Editing",
-        "The Current Design Workflow Challenge",
-        "Detailed Breakdown of Three New Figma Tools",
-        "How These Tools Transform Creative Processes",
-        "Future of AI in Design: What's Next?"
-      ],
-      "hashtags": "#FigmaAI #DesignTechnology #CreativeTools #AIDesign #ImageEditing #ProductivityHack #DesignInnovation #CreativeTech #AIWorkflow #DesignFuture",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Forum",
-          "url": "https://forum.figma.com/product-updates-3/new-features-in-figma-buzz-46631"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/three-new-features-to-help-build-brand-momentum-with-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/figma-buzz"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/shorts/Sf_5xBPH1TM"
-        }
-      ],
-      "format": "case-study",
-      "subcategory": "case-study-deep-dive",
-      "hooks": [
-        "Design Workflow Revolution: Figma Buzz's Game-Changing Features",
-        "How Figma Buzz Transforms Marketing Asset Creation",
-        "Unlocking Brand Momentum: Figma's Latest Design Toolkit"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Use real-time screen recordings of feature walkthrough",
-            "Include personal experimentation narrative with new features",
-            "Add interactive commentary about workflow improvements"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Create annotated screenshots highlighting key feature differences",
-            "Include comparative analysis with previous design workflows",
-            "Embed SEO-friendly headers for quick scanning"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Include quantitative impact metrics for design efficiency",
-            "Add professional insights on feature strategic value",
-            "Use data-driven graphics to illustrate workflow improvements"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, dynamic composition with electric blue and gradient accents, modular grid layout, animated transition graphics showcasing feature comparisons, modern sans-serif typography with technical precision, motion design elements highlighting workflow transformation"
-      },
-      "exampleOutline": [
-        "The Design Workflow Challenge: Current Limitations",
-        "Figma Buzz: Introducing Breakthrough Features",
-        "Deep Dive: Marketing Template Integration",
-        "Plugin Ecosystem: Expanding Creative Possibilities",
-        "Future of Design: Integrated Workflow Strategies"
-      ],
-      "hashtags": "#FigmaBuzz #DesignTech #CreativeWorkflow #AIDesign #MarketingTools #ProductivityHacks #DesignInnovation #CreativeTech #WorkflowOptimization #DesignSystem",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 1
-    },
-    {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2025/12/from-prophet-to-product-how-ai-came-back-down-to-earth-in-2025/"
         }
       ],
       "format": "listicle",
       "subcategory": "explanatory",
       "hooks": [
-        "7 Design Career Secrets Top Studios Never Tell You",
-        "How Elite Designers Really Land Dream Jobs",
-        "Cracking the Code: Designer Career Transformation Tactics"
+        "AI's Reality Check: 5 Shifts Redefining Technology",
+        "How AI Transformed from Hype to Practical Power",
+        "The 7 Moments AI Got Real in 2025"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Use personal anecdotes to make each 'thing' feel authentic",
-            "Include real-time screenshots of application/portfolio examples",
-            "Create interactive poll about reader's current design career stage"
+            "Use animated number graphics for each list item",
+            "Include personal experiment/observation with each point",
+            "Add interactive poll about reader's AI experiences"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Include data-driven insights for each career 'secret'",
-            "Link to expanded resources for deeper exploration",
-            "Optimize headline with clear numerical promise (7 Secrets)"
+            "Include data visualizations for each AI shift",
+            "Optimize headline with precise numerical promise",
+            "Add expert quote validation for each point"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Quote industry leaders for each career insight",
-            "Use professional, authoritative tone with concrete examples",
-            "Include downloadable career progression checklist as content upgrade"
+            "Frame listicle as professional industry insights",
+            "Include company/enterprise implementation examples",
+            "Add potential career/skill implications for each point"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, dynamic infographic-style layout with geometric overlays, San Francisco tech-minimalist color palette (charcoal, electric blue, white), clean sans-serif typography, subtle motion graphics revealing each 'secret' with iconographic illustrations"
+        "description": "Bold, futuristic cyberpunk-inspired design with glitch effects, high-contrast neon colors (teal/magenta), dynamic angular layouts, floating numerical indicators, semi-transparent tech-inspired overlays, motion graphics showing transformation/evolution"
       },
       "exampleOutline": [
-        "Introduction: Why Traditional Career Advice Fails Designers",
-        "Context: Current Design Job Market Challenges",
-        "7 Transformative Career Secrets (Numbered List)",
-        "Deep Dive: Implementing These Strategies",
-        "Call-to-Action: Next Steps for Career Evolution"
+        "Introduction: AI's Transformative Moment",
+        "Context: 2025 AI Landscape Overview",
+        "Listicle Core: 5-7 Pivotal AI Shifts",
+        "Strategic Implications Section",
+        "Future Prediction & Call to Action"
       ],
-      "hashtags": "#DesignCareer #CreativeStrategy #CareerGrowth #DesignJobs #ProfessionalDevelopment #CreativeTips #AIDesign #CareerAdvice #DesignIndustry #ProfessionalSuccess",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
+      "hashtags": "#AIRevolution #TechTrends2025 #ArtificialIntelligence #InnovationInsights #FutureOfTech #AIStrategy #TechTransformation #IndustryDisruption #EmergingTech #AIInnovation",
+      "textureIndex": 8
     },
     {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
+      "title": "The phone is dead. Long live . . . what exactly?",
+      "description": "\"We're not going to be using iPhones in 10 years,\" Callaghan says flatly. \"I kind of don't think we'll be using them in five years.\"",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/30/the-phone-is-dead-long-live-what-exactly/"
         }
       ],
-      "format": "article",
-      "subcategory": "visionary",
+      "format": "guide",
+      "subcategory": "instructional",
       "hooks": [
-        "How we reimagined design's most fundamental language",
-        "Typography that speaks louder than words",
-        "Designing a typeface: Beyond pixels and points"
+        "The Phone's Final Call: What Replaces Our Digital Companion?",
+        "Beyond Smartphones: The Next Digital Frontier Emerges",
+        "Devices Dying: Your Future Tech Survival Guide"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Include live design process screenshots",
-            "Use interactive annotations to highlight type details",
-            "Share behind-the-scenes design decision moments"
+            "Use real-time experiment screenshots of emerging tech",
+            "Include interactive poll about readers' device predictions",
+            "Break down complex tech trends into digestible mini-sections"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Optimize with SEO-friendly typography terminology",
-            "Include comparative visual breakdowns",
-            "Link to technical design resources"
+            "Include SEO-friendly subheadings with target keywords",
+            "Add expert quotes from tech futurists",
+            "Create data-driven infographics explaining technological transitions"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Highlight professional design methodology",
-            "Include quotes from design leadership",
-            "Showcase business impact of custom typography"
+            "Frame content with professional implications for tech industry",
+            "Include enterprise-level market research statistics",
+            "Highlight potential business model transformations"
           ]
         }
       ],
       "visualDirection": {
-        "rating": 8,
-        "description": "Bold, experimental typographic layout with dynamic grid systems, high-contrast color transitions between sections, animated type transformations, minimalist Swiss design influence with unexpected geometric interruptions"
+        "rating": 7,
+        "description": "Futuristic cyberpunk-inspired aesthetic with holographic interface overlays, deep navy and electric cyan color palette, geometric sans-serif typography, dynamic diagonal compositions suggesting technological transition, subtle glitch/digital degradation motion effects"
       },
       "exampleOutline": [
-        "The Design Challenge: Outgrowing Generic Typography",
-        "Why Custom Typefaces Matter",
-        "Figma Sans: Design Process & Philosophy",
-        "Technical Innovations in Type Design",
-        "Future of Brand-Specific Typography"
+        "Introduction: The Smartphone's Impending Obsolescence",
+        "Historical Context: Mobile Device Evolution",
+        "Emerging Technologies Replacing Traditional Smartphones",
+        "User Experience and Interface Transformation",
+        "Conclusion: Preparing for the Post-Smartphone Era"
       ],
-      "hashtags": "#DesignInnovation #Typography #BrandIdentity #CreativeProcess #FigmaDesign #AICreativity #ProductDesign #TypeDesign #BrandLanguage #CreativeTechnology",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7245606/pexels-photo-7245606.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
+      "hashtags": "#FutureTech #NextGenDevices #AIInnovation #MobileEvolution #TechTrends #DigitalTransformation #InnovationInsights #EmergingTechnology #TechFuture #SmartDevices",
+      "textureIndex": 8
+    },
+    {
+      "title": "See you in Miami, Toronto, and NYC",
+      "description": "We're going on tour in January. Join us.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Oren Meets World",
+          "url": "https://www.hyperstudios.us/p/see-you-in-miami-toronto-and-nyc"
+        }
+      ],
+      "format": "case-study",
+      "subcategory": "case-study-deep-dive",
+      "hooks": [
+        "Design Tour 2024: Our Experimental City Roadmap",
+        "3 Cities, 1 Mission: Reimagining Creative Collaboration",
+        "Behind the Scenes: Our Interdisciplinary Design Expedition"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use real-time storytelling with daily tour updates",
+            "Include interactive polls about design challenges in each city",
+            "Share raw, unfiltered insights from each location"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Structure as a comprehensive narrative with data points",
+            "Include professional photography from tour locations",
+            "Add SEO-optimized headers for design and innovation keywords"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Focus on professional networking opportunities in each city",
+            "Include quantitative impact of cross-city design collaboration",
+            "Highlight potential business and innovation insights"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dynamic urban-inspired color palette (teal, electric blue, graphite gray), geometric map-like compositions, bold sans-serif typography with motion overlay, city skyline silhouette transitions, minimal infographic elements showing travel routes"
+      },
+      "exampleOutline": [
+        "Section 1: The Design Tour Concept",
+        "Section 2: Why These Cities Matter",
+        "Section 3: Our Collaborative Methodology",
+        "Section 4: Key Learnings and Insights",
+        "Section 5: Join Our Next Adventure"
+      ],
+      "hashtags": "#DesignTour2024 #CreativeCollaboration #InnovationRoadmap #AIDesign #UrbanInnovation #DesignThinking #TechTour #CreativeCommunity #InterdisciplinaryDesign #GlobalInnovation",
+      "textureIndex": 0
+    },
+    {
+      "title": "The best AI-powered dictation apps of 2025",
+      "description": "AI-powered dictation apps are useful for replying to emails, taking notes, and even coding through your voice",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/30/the-best-ai-powered-dictation-apps-of-2025/"
+        }
+      ],
+      "format": "article",
+      "subcategory": "visionary",
+      "hooks": [
+        "Voice Control: Your AI Assistant Writes Everything",
+        "Dictation Revolution: AI Apps Transforming Communication",
+        "Speak, Don't Type: Future of Digital Writing"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Include real-time voice dictation experiment screenshots",
+            "Use personal anecdotes about workflow transformation",
+            "Create interactive poll about reader's dictation experiences"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Optimize for SEO with comprehensive app comparisons",
+            "Include detailed performance metrics and benchmarks",
+            "Use data visualizations comparing dictation accuracy"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Highlight professional productivity gains",
+            "Include enterprise use cases for AI dictation",
+            "Embed expert quotes from tech industry leaders"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, futuristic design with dynamic sound wave graphics, translucent overlays, electric blue and deep purple color palette. Typography featuring clean, tech-forward sans-serif fonts with subtle motion animation. Incorporate microinteraction design elements suggesting voice/sound transformation."
+      },
+      "exampleOutline": [
+        "Introduction: The Voice-Driven Digital Transformation",
+        "The Evolution of Dictation Technology",
+        "Top 5 AI-Powered Dictation Apps of 2025",
+        "Comparative Analysis and Performance Insights",
+        "Future of Voice-Enabled Productivity"
+      ],
+      "hashtags": "#AIDictation #VoiceTech #FutureOfWork #AIProductivity #TechInnovation #VoiceControl #AIAssistant #WorkflowOptimization #DigitalTransformation #TechTrends",
+      "textureIndex": 0
     }
   ]
 }

@@ -1,265 +1,211 @@
 {
   "type": "long-form",
-  "date": "2025-12-31T16:17:51.471Z",
+  "date": "2025-12-31T16:27:15.018Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "From prophet to product: How AI came back down to earth in 2025",
+      "description": "From prophet to product: How AI came back down to earth in 2025",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover"
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2025/12/from-prophet-to-product-how-ai-came-back-down-to-earth-in-2025/"
         }
       ],
       "format": "livestream",
       "subcategory": "leadership",
       "hooks": [
-        "Live Design Challenge: Figma Templates That Actually Work",
-        "Break Brand Rules Without Breaking Design Systems",
-        "Insider Secrets: Scalable Templates in Real-Time"
+        "AI's Reality Check: From Hype to Real Impact",
+        "2025: When AI Got Practical, Not Prophetic",
+        "The Great AI Transformation: Myth vs Method"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use multi-screen layout showing Figma + presenter",
-            "Enable live chat for real-time audience interaction",
-            "Prepare pre-submitted audience questions in advance"
+            "Use live chat for real-time audience engagement during Q&A",
+            "Pre-promote stream with teaser clips highlighting key discussion points",
+            "Enable channel memberships for exclusive pre/post-stream interactions"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-energy dynamic split screen, bold typography in brand cyan/charcoal, animated cursor highlights, motion-tracked design system annotations, clean Figma-inspired grid overlay, kinetic typography transitions between sections"
+        "description": "Bold, tech-futuristic aesthetic with dynamic split-screen design. Vibrant electric blue and deep charcoal color palette. Animated data visualization overlays. Clean, sans-serif typography with technical graph elements. Motion graphics showing AI evolution timeline. Subtle holographic texture accents."
       },
       "exampleOutline": [
-        "Opening: Live Design Challenge Intro",
-        "Problem: Template Limitations in Design Systems",
-        "8 Tactical Template Building Strategies",
-        "Live Audience Q&A Walkthrough",
-        "Final Insights & Community Challenge"
+        "Opening: Live Stream Intro & Audience Welcome",
+        "AI Hype Cycle: Historical Context & 2025 Shifts",
+        "Practical AI Transformations Across Industries",
+        "Key Insights: What Really Changed in AI Adoption",
+        "Live Q&A Segment with Audience Interaction"
       ],
-      "hashtags": "#FigmaDesign #DesignSystems #CreativeTemplates #ProductDesign #UIUXTips #DesignWorkflow #CreativeCoding #TemplateDesign #DesignCommunity #AIDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 8
+      "hashtags": "#AI2025 #AITrends #TechInnovation #FutureOfTech #ArtificialIntelligence #TechTransformation #AIReality #InnovationInsights #TechTrends #AIEvolution",
+      "textureIndex": 0
     },
     {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
+      "title": "The phone is dead. Long live . . . what exactly?",
+      "description": "\"We're not going to be using iPhones in 10 years,\" Callaghan says flatly. \"I kind of don't think we'll be using them in five years.\"",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=ieJERX9Wkro"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/solutions/ai-photo-editing-app-builder/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/30/the-phone-is-dead-long-live-what-exactly/"
         }
       ],
       "format": "tutorial",
       "subcategory": "instructional",
       "hooks": [
-        "3 AI Tools That Transform Figma Image Editing Forever",
-        "Unlock Precision: Figma's New Image Editing Superpowers",
-        "Design Faster: Figma's Secret Image Editing Weapons"
+        "How We'll Replace Smartphones: 5 Mind-Blowing Steps",
+        "The Phone's Final Chapter: What Comes Next?",
+        "Bye Phones: Your Roadmap to Future Tech"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use screen recording with high-contrast cursor tracking",
-            "Include picture-in-picture walkthrough of each tool",
-            "Create chapter markers for each AI image editing technique"
+            "Use chapter markers to break down each step visually",
+            "Include side-by-side comparisons of current vs future tech",
+            "Create dynamic screen transitions between tutorial sections"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, tech-forward aesthetic with electric blue and deep charcoal color palette. Dynamic motion graphics showing before/after image transformations. Clean, sans-serif typography with technical precision. Animated transitions highlighting AI-powered editing steps. Futuristic UI overlays demonstrating tool interactions."
+        "description": "High-contrast futuristic color palette (electric blue, deep charcoal, neon accents). Dynamic split-screen compositions showing technological evolution. Sleek, sans-serif typography with technical overlay graphics. Motion design emphasizing technological transformation with fluid, morphing transitions. Aesthetic references: Cyberpunk 2077 UI, Apple product launch visuals, MIT Media Lab design language."
       },
       "exampleOutline": [
-        "Introduction: Why Precise Image Editing Matters",
-        "Problem: Current Limitations in Figma Image Editing",
-        "Tool 1: Detailed Walkthrough with Live Demonstration",
-        "Tool 2: Advanced Techniques and Workflow Integration",
-        "Tool 3: Practical Applications and Creative Possibilities",
-        "Closing: Transforming Design Workflow with AI"
+        "Section 1: Provocative Opening - The Death of the Smartphone",
+        "Section 2: Current Technological Limitations of Mobile Devices",
+        "Section 3: Emerging Technologies Replacing Traditional Phones",
+        "Section 4: Step-by-Step Implementation of Next-Gen Personal Tech",
+        "Section 5: Call-to-Action and Future Prediction"
       ],
-      "hashtags": "#FigmaAI #DesignTips #AIDesign #CreativeTechnology #ImageEditing #DesignWorkflow #AITools #ProductDesign #Creativetech #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 2
+      "hashtags": "#FutureTech #AIRevolution #SmartphoneEvolution #TechInnovation #NextGenDevices #DigitalTransformation #TechTrends #FutureOfMobile #InnovationRoadmap #TechPredictions",
+      "textureIndex": 7
     },
     {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
+      "title": "The best AI-powered dictation apps of 2025",
+      "description": "AI-powered dictation apps are useful for replying to emails, taking notes, and even coding through your voice",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Forum",
-          "url": "https://forum.figma.com/product-updates-3/new-features-in-figma-buzz-46631"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/three-new-features-to-help-build-brand-momentum-with-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/figma-buzz"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/shorts/Sf_5xBPH1TM"
-        }
-      ],
-      "format": "livestream",
-      "subcategory": "leadership",
-      "hooks": [
-        "Figma Buzz: Supercharge Your Design Workflow Live!",
-        "Design Faster, Create Smarter: Figma Buzz Secrets",
-        "Unlock Next-Level Branding with Figma's Latest Features"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Enable live chat interaction during stream for real-time Q&A",
-            "Prepare a digital whiteboard for live demonstrations and annotations",
-            "Use multi-screen setup to showcase Figma interface and presenter simultaneously"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, dynamic visual approach with high-contrast color palette (electric blue, deep charcoal, accent neon green). Floating UI elements with parallax motion. Clean, geometric sans-serif typography. Live stream overlay with real-time chat integration. Dynamic screen capture with animated transitions showcasing Figma Buzz features."
-      },
-      "exampleOutline": [
-        "Section 1: High-Energy Stream Opening & Feature Teaser",
-        "Section 2: Marketing Template System Deep Dive",
-        "Section 3: Plugin Integration Walkthrough",
-        "Section 4: Video Trimming Technique Demonstration",
-        "Section 5: Live Q&A and Community Interaction"
-      ],
-      "hashtags": "#FigmaBuzz #DesignWorkflow #CreativeTools #UIDesign #ProductivityHacks #DesignTips #MarketingDesign #AIDesign #CreativeTech #DesignCommunity",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 5
-    },
-    {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
-        }
-      ],
-      "format": "video",
-      "subcategory": "thought-leadership",
-      "hooks": [
-        "Design Careers That Actually Pay: Inside Moniker's Hiring",
-        "5 Secrets to Becoming a Top Design Recruiter",
-        "How Top Design Firms Really Hire Talent"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use dynamic screen recordings showing actual job posting",
-            "Include picture-in-picture of designer discussing career insights",
-            "Create chapter markers for key career advice segments"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, tech-forward aesthetic with San Francisco design studio color palette. High-contrast typography, dark mode interface mockups, motion graphics showing career progression. Clean SF tech startup visual language with unexpected color accents. Incorporate subtle grid systems and minimal design system references."
-      },
-      "exampleOutline": [
-        "Opening: High-energy intro revealing Moniker's design culture",
-        "Context: Current design job market landscape",
-        "Core Content: Detailed breakdown of Senior Designer role requirements",
-        "Career Insights: What makes a top design candidate",
-        "Closing CTA: How to prepare and apply"
-      ],
-      "hashtags": "#DesignCareers #SeniorDesigner #CreativeRecruitment #SanFranciscoDesign #DesignJobs #CareerAdvice #CreativeIndustry #DesignTalent #JobSearch #DesignProfessionals",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 1
-    },
-    {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/30/the-best-ai-powered-dictation-apps-of-2025/"
         }
       ],
       "format": "documentary",
       "subcategory": "framework",
       "hooks": [
-        "How a font became Figma's design revolution",
-        "The secret language of type at Figma",
-        "Designing beyond pixels: Figma's typographic journey"
+        "AI is changing how we communicate forever",
+        "Voice: The next frontier of digital interaction",
+        "Speak, don't type: AI's dictation revolution"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use archival/behind-the-scenes footage of design process",
-            "Include expert talking head interviews with Figma designers",
-            "Create dynamic kinetic typography transitions between sections"
+            "Use cinematic B-roll of people using dictation in various scenarios",
+            "Include split-screen comparisons of traditional vs AI dictation",
+            "Incorporate dynamic motion graphics showing voice-to-text translation"
           ]
         }
       ],
       "visualDirection": {
-        "rating": 8,
-        "description": "High-contrast color palette inspired by technical drafting and modernist design. Minimal yet dynamic compositions. Utilize split-screen techniques showing design iterations. Typography shifts between Figma Sans and transitional moments. Cool grays with electric accent colors. Motion graphics that reveal design thinking. Aesthetic references: Helvetica documentary, design process films by Gary Hustwit"
+        "rating": 7,
+        "description": "High-contrast cyberpunk-inspired color palette with electric blues and deep teals, dynamic typography that appears/transforms like spoken words, fluid motion graphics representing voice-to-text translation, clean minimalist interface overlays, picture-in-picture demonstrations of AI dictation in action"
       },
       "exampleOutline": [
-        "Opening: Dramatic reveal of type design process",
-        "Context: Figma's design evolution and brand challenges",
-        "Deep Dive: Technical journey of creating custom typeface",
-        "Human Story: Designers behind the font's creation",
-        "Future Vision: How typography shapes product identity"
+        "Introduction: The Silent Communication Revolution",
+        "The Problem: Communication Bottlenecks in Digital Age",
+        "AI Dictation: Technical Deep Dive and Top Apps",
+        "Future Implications: How Voice AI Changes Everything",
+        "Call to Action: Start Your Voice Tech Journey"
       ],
-      "hashtags": "#FigmaDesign #Typography #ProductDesign #BrandIdentity #CreativeProcess #DesignDocumentary #FontDesign #AdobeCreative #CreativeTech #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 9
+      "hashtags": "#AIDictation #VoiceTech #AIInnovation #FutureOfCommunication #TechTrends #AITools #VoiceAI #ProductivityHacks #TechReview #InnovationTech",
+      "textureIndex": 10
+    },
+    {
+      "title": "VCs predict enterprises will spend more on AI in 2026 — through fewer vendors",
+      "description": "Enterprises have been experimenting with AI tools for a few years. Investors predict they will start to pick winners in 2026.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/30/vcs-predict-enterprises-will-spend-more-on-ai-in-2026-through-fewer-vendors/"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "How Enterprises Will Choose AI Vendors in 2026",
+        "3 Steps to Winning Enterprise AI Investment",
+        "The AI Vendor Survival Guide for 2026"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use screen recordings of actual VC reports/data",
+            "Create animated graphics showing vendor consolidation trends",
+            "Include picture-in-picture expert commentary segments"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-forward aesthetic with dark mode color palette (deep blues, electric teals). Dynamic motion graphics showing vendor evolution. Clean, geometric typography with subtle futuristic edges. Infographic-style data visualizations with smooth transitions. Minimal but high-contrast design that communicates technical precision and forward-thinking approach."
+      },
+      "exampleOutline": [
+        "Introduction: AI Vendor Landscape 2024-2026",
+        "Current Enterprise AI Spending Patterns",
+        "3-Step Framework for AI Vendor Selection",
+        "Investor Predictions and Market Signals",
+        "Actionable Takeaways for Tech Leaders"
+      ],
+      "hashtags": "#AIInvestment #EnterpriseAI #VCTrends #AIVendors #TechStrategy #AIInnovation #StartupGrowth #InvestmentInsights #AIMarket #TechForecast",
+      "textureIndex": 3
+    },
+    {
+      "title": "The 10 best vehicles Ars Technica drove in 2025",
+      "description": "The 10 best vehicles Ars Technica drove in 2025",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/cars/2025/12/the-10-best-vehicles-ars-technica-drove-in-2025/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "10 Mind-Blowing Cars That Redefined Driving in 2025",
+        "Future of Transportation: Top Vehicles You Can't Miss",
+        "Shocking Automotive Innovations That Will Blow Your Mind"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dynamic thumbnail with most eye-catching vehicle",
+            "Include timestamps for each vehicle review in description",
+            "Create chapter markers for easy navigation"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy dynamic visual style with futuristic color palette (deep blues, electric teals, metallic silvers). Dynamic motion graphics showcasing vehicle transitions. Split-screen comparisons with sleek typography. Picture-in-picture tech reviews. Subtle holographic overlays suggesting cutting-edge automotive technology."
+      },
+      "exampleOutline": [
+        "Hook: Dramatic intro showcasing most revolutionary vehicle",
+        "Context: 2025 automotive landscape and key technological shifts",
+        "Vehicle Countdown: Detailed reviews of top 10 vehicles (1 min each)",
+        "Deep Dive: Technology behind top 3 vehicles",
+        "Closing CTA: Subscribe for future automotive insights"
+      ],
+      "hashtags": "#FutureOfCars #AutoTech2025 #ElectricVehicles #AutomotiveInnovation #CarReview #TechCars #EV #AutoTechnology #FutureTransport #VehicleInnovation",
+      "textureIndex": 0
     }
   ]
 }

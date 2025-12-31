@@ -1,384 +1,331 @@
 {
   "type": "short-form",
-  "date": "2025-12-31T16:17:51.471Z",
+  "date": "2025-12-31T16:26:32.018Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "These are the best gadgets for your pet right now",
+      "description": "From AI smart cameras that describe your pet's actions to a smart door that knows when they want to go outside, these are the best pet gadgets of 2025.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover"
-        }
-      ],
-      "format": "quick-image",
-      "subcategory": "quick-image",
-      "hooks": [
-        "Design Templates That Don't Break Your Brand 🔥",
-        "Figma Secrets: Make Flexible Brand Guidelines",
-        "Stop Template Chaos: Designer Pro Tips"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use high-contrast visual transitions between template tips",
-            "Include quick visual demos of template flexibility",
-            "Add motion graphics highlighting key design principles"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must clearly visualize the core problem",
-            "Use consistent color-coded slides for each tip",
-            "Include minimal text, maximize visual storytelling"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected visual pattern interrupt",
-            "Use quick-cut editing style",
-            "Overlay text for key points"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Add more technical context and professional insights",
-            "Use slightly more sophisticated design language",
-            "Include potential business impact of template design"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, high-contrast color palette with electric blue and charcoal gray. Dynamic geometric typography with slight motion. Clean, tech-forward aesthetic blending minimalism with playful design system visualizations. Incorporate abstract grid/template metaphors."
-      },
-      "exampleOutline": [
-        "Quick provocative visual problem statement",
-        "Rapid visualization of brand template challenges",
-        "8 quick-hit design principles/tips",
-        "Unexpected insight about template flexibility",
-        "Call-to-explore/learn more"
-      ],
-      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystems #CreativeTools #AIDesign #ProductDesign #DesignTips #BrandIdentity #UIUXDesign #CreativeTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 8
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=ieJERX9Wkro"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/solutions/ai-photo-editing-app-builder/"
-        }
-      ],
-      "format": "reel",
-      "subcategory": "reel",
-      "hooks": [
-        "Figma's AI just transformed image editing forever 🚀",
-        "3 mind-blowing image tools designers NEED to know",
-        "Design magic: AI image editing gets INSANE upgrade"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick cuts between tool demonstrations",
-            "Add text overlays highlighting key features",
-            "Include screen recordings with dynamic transitions"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Dramatic before/after comparison",
-            "Use numbered slides for each tool",
-            "Include actionable design tips on each slide"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected visual disruption",
-            "Use voiceover explaining technical details quickly",
-            "Include rapid-fire visual demonstrations"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame as professional workflow enhancement",
-            "Include expert commentary on AI's design impact",
-            "Use more technical, detailed visual explanations"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-energy cyberpunk-inspired aesthetic with neon accents, liquid motion graphics, dynamic screen recordings, glitch transitions, floating UI elements, dark mode color palette with electric blue and magenta highlights"
-      },
-      "exampleOutline": [
-        "Hook: Dramatic AI image editing reveal",
-        "Problem: Current design workflow limitations",
-        "Solution: Three groundbreaking Figma AI tools",
-        "Demonstration: Rapid tool showcase",
-        "Call-to-Action: Try new Figma features"
-      ],
-      "hashtags": "#FigmaAI #DesignTech #AIDesign #CreativeTech #ProductivityHack #DesignTools #AICreativity #FigmaUpdate #DesignInnovation #TechTips",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Forum",
-          "url": "https://forum.figma.com/product-updates-3/new-features-in-figma-buzz-46631"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/three-new-features-to-help-build-brand-momentum-with-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/figma-buzz"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/shorts/Sf_5xBPH1TM"
-        }
-      ],
-      "format": "quick-image",
-      "subcategory": "quick-image",
-      "hooks": [
-        "Design Faster: Figma Buzz Just Leveled Up 🚀",
-        "3 Game-Changing Figma Features Designers Need Now",
-        "Workflow Magic: Figma Buzz's Secret Weapon Revealed"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick screen recordings demonstrating new Figma features",
-            "Create a fast-paced transition between feature highlights",
-            "Add dynamic text overlays showing key benefits"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Bold feature graphic with minimal text",
-            "Use consistent color scheme matching Figma's brand",
-            "Each slide focuses on one feature's unique value"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Open with surprising statistic about design efficiency",
-            "Use rapid-fire visual transitions between feature demos",
-            "Include playful sound effects to maintain energy"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame features as professional productivity enhancers",
-            "Use more detailed technical annotations",
-            "Include subtle data visualization of workflow improvements"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-energy visual design with electric blue and neon accent colors, dynamic geometric shapes, motion graphics showing feature transformations, clean sans-serif typography with bold weight, minimal illustrations that feel tech-forward and playful"
-      },
-      "exampleOutline": [
-        "Section 1: Attention-grabbing visual hook",
-        "Section 2: Quick pain point illustration",
-        "Section 3: Feature breakdown (3 key improvements)",
-        "Section 4: Rapid workflow transformation insight",
-        "Section 5: Call-to-explore Figma Buzz"
-      ],
-      "hashtags": "#FigmaDesign #AIDesign #CreativeTech #ProductivityHack #DesignTools #UIUXTips #CreativeWorkflow #DesignInnovation #TechUpdate #DesignCommunity",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7767791/pexels-photo-7767791.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 8
-    },
-    {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
-        }
-      ],
-      "format": "carousel",
-      "subcategory": "carousel",
-      "hooks": [
-        "Design Career Hack: Land Top Design Jobs Anywhere",
-        "Inside Moniker's Secret Design Hiring Playbook",
-        "How Top Design Studios Really Recruit Talent"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use dynamic typography transitions between slides",
-            "Create quick visual job preview moments",
-            "Add subtle motion graphics to each slide"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must be visually provocative",
-            "Use clean, grid-based layout design",
-            "Ensure each slide tells micro-story"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Compress carousel content into 60-second narrative",
-            "Use text overlays for key points",
-            "Add energetic soundtrack"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Add more professional context and insights",
-            "Include specific career development angles",
-            "Use more formal, authoritative language"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, tech-forward aesthetic with high-contrast color palette (charcoal, electric blue, white). Geometric sans-serif typography. Modular grid layouts. Minimal illustrations suggesting design workflow. Dynamic diagonal compositions. Subtle parallax/layering effects between slides."
-      },
-      "exampleOutline": [
-        "Slide 1: Provocative Hook/Job Market Insight",
-        "Slide 2: Moniker Studio Background",
-        "Slide 3: Role Requirements Breakdown",
-        "Slide 4: Skills Needed Visual Guide",
-        "Slide 5: Application/Next Steps CTA"
-      ],
-      "hashtags": "#DesignCareers #JobHunt #CreativeRecruitment #DesignJobs #SanFranciscoDesign #AIDesign #CareerTips #DesignTalent #StudioLife #CreativeProfessionals",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8014542/pexels-photo-8014542.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 8
-    },
-    {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/31/these-are-the-best-gadgets-for-your-pet-right-now/"
         }
       ],
       "format": "story",
       "subcategory": "story",
       "hooks": [
-        "How we crafted a typeface that tells our design story",
-        "Designing a font that breaks all the rules",
-        "The secret language of typography, revealed"
+        "Pet Tech Revolution: Smart Gadgets You Can't Miss!",
+        "Your Pet's Future: AI Meets Adorable Tech",
+        "Crazy Smart Gadgets Changing Pet Care Forever"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use kinetic typography to showcase font details",
-            "Include behind-the-scenes design process moments",
-            "Transition between design stages with smooth animations"
+            "Use cute pet reaction shots between tech reveals",
+            "Add quick transitions between gadget demonstrations",
+            "Include pet owner's surprised/delighted reactions"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Dramatic reveal of font character",
-            "Use square 1:1 layout with clean typography",
-            "Include comparison slides showing design evolution"
+            "First slide: Shocking stat about pet technology",
+            "Use numbered slides for each gadget reveal",
+            "Include price/availability on final slide"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with unexpected visual of font creation",
-            "Use quick cuts to maintain high energy",
-            "Include designer voiceover explaining creative process"
+            "Start with most unexpected/impressive gadget",
+            "Use rapid-fire editing style",
+            "Include clear product names and brief descriptions"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Frame as professional design case study",
-            "Include technical design decision breakdowns",
-            "Highlight collaborative design methodology"
+            "Frame gadgets as innovation/technology trend",
+            "Include expert commentary on pet tech evolution",
+            "Highlight potential market disruption"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Futuristic pastel color palette with neon accents, dynamic motion graphics overlaying sleek tech and cute pet imagery, sans-serif typography with playful geometric transitions, holographic texture elements suggesting advanced technology"
+      },
+      "exampleOutline": [
+        "Section 1: Attention-grabbing tech + pet mashup intro",
+        "Section 2: Current pet care challenges",
+        "Section 3: 3-4 breakthrough gadgets with quick demos",
+        "Section 4: How these technologies improve pet life",
+        "Section 5: Call-to-explore/learn more"
+      ],
+      "hashtags": "#PetTech #AIForPets #SmartPetGadgets #FuturePetCare #TechInnovation #PetLovers #AnimalTech #InnovationInPetCare #SmartHome #PetTechnology",
+      "textureIndex": 0
+    },
+    {
+      "title": "Tade Oyerinde and Teddy Solomon talk about building engaged audiences at TechCrunch Disrupt",
+      "description": "Founders Tade Oyerinde and Teddy Solomon spoke at Disrupt this year about keeping communities engaged.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/31/tade-oyerinde-and-teddy-solomon-talk-about-building-engaged-audiences-at-techcrunch-disrupt/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "Community Growth Secrets from TechCrunch Disrupt",
+        "How Top Founders Build Killer Audiences",
+        "Audience Engagement: The Founders' Masterclass"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick cuts between founders' headshots and quote graphics",
+            "Overlay dynamic text highlighting key audience engagement strategies",
+            "Include 2-3 second animated transitions between insights"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Provocative quote from talk",
+            "Use minimalist infographic design for each strategy",
+            "Final slide: Call-to-action with founders' portraits"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with high-energy sound bite from Disrupt talk",
+            "Use quick visual annotations to emphasize points",
+            "End with unexpected/humorous twist on community building"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame content as professional development insight",
+            "Include specific tactical takeaways from talk",
+            "Use more formal, data-driven visual approach"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, high-contrast color palette with tech-inspired gradient backgrounds. Modern sans-serif typography with dynamic text animations. Mix of photographic elements and graphic design overlay. Use geometric shapes to frame content. Color scheme: electric blue, deep charcoal, bright accent colors. Incorporate subtle motion graphics to create visual interest."
+      },
+      "exampleOutline": [
+        "Hook: Provocative audience engagement statistic",
+        "Problem: Why most communities fail to grow",
+        "Key Insights: Tade & Teddy's Strategies",
+        "Tactical Takeaway: One Actionable Technique",
+        "Call-to-Action: Learn More/Follow Up"
+      ],
+      "hashtags": "#CommunityBuilding #TechFounders #AudienceGrowth #StartupStrategy #TechCrunchDisrupt #CommunityEngagement #FutureOfTech #FounderInsights #TechCommunity #InnovationStrategy",
+      "textureIndex": 0
+    },
+    {
+      "title": "Every fusion startup that has raised over $100M",
+      "description": "Fusion startups have raised $7.1 billion to date, with the majority of it going to a handful of companies.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/31/every-fusion-startup-that-has-raised-over-100m/"
+        }
+      ],
+      "format": "story",
+      "subcategory": "story",
+      "hooks": [
+        "$7.1B in fusion: Who's winning?",
+        "The secret fusion startups no one's talking about",
+        "Billion-dollar bets on the future of energy"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick cuts between startup logos and funding graphics",
+            "Include animated money/investment motion graphics",
+            "Keep pace fast: 2-3 second transitions"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have provocative funding statistic",
+            "Use consistent color-coded design for each startup",
+            "Include percentage/pie chart visualizations"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Open with shocking total funding number",
+            "Use text overlays to highlight key stats",
+            "Include dynamic zoom/pan on startup logos"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add more detailed context about fusion technology",
+            "Include expert quote or industry insight",
+            "Use more professional, data-driven visual approach"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech aesthetic with electric blue/deep navy base. Futuristic data visualization style. Sharp geometric typography. Glitch/digital overlay effects. Animated funding progress bars. Clean, angular infographic approach with subtle motion graphics."
+      },
+      "exampleOutline": [
+        "Opening: Total fusion funding revealed",
+        "Context: What is fusion technology?",
+        "Top funded startups breakdown",
+        "Key investment trends analysis",
+        "Future potential call-to-action"
+      ],
+      "hashtags": "#FusionEnergy #CleanTech #StartupFunding #EnergyInnovation #Climatetech #VentureCapital #FutureOfEnergy #SustainableTech #EnergyTransition #InvestmentTrends",
+      "textureIndex": 10
+    },
+    {
+      "title": "The 10 top government, legal startups from Disrupt Startup Battlefield",
+      "description": "Here is the full list of the government and legal Startup Battlefield 200 selectees, along with a note on what made us select them for the competition.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/31/the-10-top-government-legal-startups-from-disrupt-startup-battlefield/"
+        }
+      ],
+      "format": "carousel",
+      "subcategory": "carousel",
+      "hooks": [
+        "10 Legal Tech Startups Reshaping Government Innovation",
+        "Future of Law: Breakthrough Startups Revealed",
+        "Disrupt Battlefield's Most Transformative Legal Innovators"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Create dynamic transitions between startup profiles",
+            "Use quick cut animations to maintain energy",
+            "Highlight one startup per 3-4 seconds"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have provocative visual/stat",
+            "Use consistent color-coded design for each startup",
+            "Include key problem/solution on each slide"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Compress content to fastest narrative flow",
+            "Add voiceover explaining startup innovations",
+            "Use text overlays for key information"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add more detailed professional context",
+            "Include founder quotes or credentials",
+            "Link to full TechCrunch article"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-forward design with futuristic blue-gray color palette. Geometric typography, glitch-style graphic elements. Clean data visualization with dynamic angular compositions. Minimal but high-contrast design that suggests innovation and cutting-edge technology."
+      },
+      "exampleOutline": [
+        "Slide 1: Provocative Hook & Total Number of Startups",
+        "Slide 2: Context of Government/Legal Tech Challenges",
+        "Slides 3-8: Individual Startup Profiles (1-2 per slide)",
+        "Slide 9: Key Trends & Insights",
+        "Slide 10: Call-to-Action & Further Research"
+      ],
+      "hashtags": "#LegalTech #StartupInnovation #AILaw #GovTech #LegalStartups #TechDisrupt #InnovationBattlefield #FutureOfLaw #StartupLife #TechCrunch",
+      "textureIndex": 3
+    },
+    {
+      "title": "The dumbest things that happened in tech this year",
+      "description": "From Sam Altman's olive oil \"scandal\" to Soham Parekh's viral moment, a lot of silly stuff has gone down in tech this year.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/31/the-dumbest-things-that-happened-in-tech-this-year/"
+        }
+      ],
+      "format": "reel",
+      "subcategory": "reel",
+      "hooks": [
+        "Tech's Most Ridiculous Moments This Year 😂",
+        "When Tech Goes Hilariously Wrong 🚀🤡",
+        "Tech Fails That Broke the Internet"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick-cut transitions between tech fail moments",
+            "Add meme-style text overlays for comedic effect",
+            "Keep pace fast (1-2 second clips max)"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must be a shocking/funny visual",
+            "Use numbered slides for storytelling progression",
+            "Include witty captions on each slide"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected sound effect/reaction",
+            "Use reaction shots/meme templates",
+            "Include subtitles for silent viewing"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame fails as learning opportunities",
+            "Add professional commentary between jokes",
+            "Use more polished, analytical tone"
           ]
         }
       ],
       "visualDirection": {
         "rating": 8,
-        "description": "Bold, experimental typography-driven aesthetic. High-contrast color palette with digital gradients. Dynamic motion graphics showing font construction. Clean, technical composition with artistic flourishes. Blend of technical precision and creative expression."
+        "description": "High-energy, meme-inspired visual style. Vibrant color palette with neon accents. Dynamic typography with bounce/glitch effects. Quick-cut motion graphics. Blend of digital art and internet humor aesthetic. Reference: Adult Swim graphics meets tech meme culture"
       },
       "exampleOutline": [
-        "Opening: Dramatic font reveal",
-        "Problem: Design limitations of existing typefaces",
-        "Process: Behind-the-scenes design journey",
-        "Innovation: Unique font characteristics",
-        "Future Vision: How this font represents Figma's evolution"
+        "Hook: Surprising/funny tech fail moment",
+        "Rapid montage of top 3-4 tech fails",
+        "Brief context for each fail",
+        "Humorous commentary/reaction",
+        "Final punchline/takeaway"
       ],
-      "hashtags": "#DesignInnovation #Typography #CreativeProcess #FigmaDesign #BrandIdentity #AICreativity #DesignTools #CreativeTech #FontDesign #ProductDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 10
+      "hashtags": "#TechFails #AIHumor #StartupChaos #TechMemes #InnovationFails #SiliconValley #AIComedy #TechTrends #StartupLife #IndustryInsider",
+      "textureIndex": 2
     }
   ]
 }
