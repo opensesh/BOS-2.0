@@ -1,380 +1,331 @@
 {
   "type": "short-form",
-  "date": "2026-01-01T16:18:17.214Z",
+  "date": "2026-01-01T16:27:00.213Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "The top 6 media/entertainment startups from Disrupt Startup Battlefield",
+      "description": "Here is the full list of the media/entertainment Startup Battlefield 200 selectees, along with a note on what made us select them for the competition.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        }
-      ],
-      "format": "quick-image",
-      "subcategory": "quick-image",
-      "hooks": [
-        "Design Templates That Don't Break Under Pressure",
-        "Figma Hacks: Brand Guidelines Without The Handcuffs",
-        "Make Your Templates Flex, Not Snap"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick text transitions to reveal each template tip",
-            "Include split-screen comparisons of rigid vs flexible designs",
-            "Add playful animation to emphasize key points"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Bold graphic showing template 'before/after'",
-            "Use consistent color-coded design for each template rule",
-            "Final slide: Call-to-action with downloadable resource"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Open with dramatic design system 'fail' scenario",
-            "Use rapid-fire voiceover matching visual transitions",
-            "End with memorable, tweetable design principle"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame content as professional skill development",
-            "Include data/statistics about template effectiveness",
-            "Use more technical, nuanced language"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast, dynamic visual language. Neon accent colors against dark mode background. Kinetic typography with sharp geometric transitions. Mix of digital interface screenshots and abstract design system visualizations. Incorporate glitch/tech aesthetic with precise grid layouts."
-      },
-      "exampleOutline": [
-        "Section 1: Provocative Design Problem Statement",
-        "Section 2: Common Template Failure Scenarios",
-        "Section 3: 8 Strategic Flexibility Principles",
-        "Section 4: Actionable Implementation Insights",
-        "Section 5: Challenge/Invite to Experiment"
-      ],
-      "hashtags": "#DesignSystems #FigmaTemplates #BrandDesign #CreativeStrategy #ProductDesign #AIDesign #DesignTips #CreativeTech #TemplateDesign #UIUXTips",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/release-notes/"
-        }
-      ],
-      "format": "reel",
-      "subcategory": "reel",
-      "hooks": [
-        "AI just revolutionized image editing in Figma 🚀",
-        "3 mind-blowing Figma image tools you need now",
-        "Design faster: Figma's new AI editing magic"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use rapid jump cuts to showcase tool transitions",
-            "Include on-screen text highlighting key features",
-            "Demonstrate before/after in first 3 seconds"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Dramatic visual transformation",
-            "Use numbered slides for each tool explanation",
-            "Include interactive swipe prompts"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected visual glitch/surprise",
-            "Use voiceover to explain technical details quickly",
-            "Include screen recording with mouse movements"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame as professional productivity enhancement",
-            "Include data/efficiency metrics",
-            "Use more technical language and design process context"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast cyberpunk-inspired color palette with electric blues and neon accents. Dynamic motion graphics showing tool transformations. Bold, sans-serif typography with slight digital distortion. Rapid transitions between design states. Minimalist tech aesthetic with futuristic UI overlays."
-      },
-      "exampleOutline": [
-        "Hook: Dramatic visual tool demonstration",
-        "Problem: Current image editing limitations",
-        "Reveal: Three specific AI-powered solutions",
-        "Demonstration: Rapid before/after sequences",
-        "Call-to-Action: Try Figma's new tools"
-      ],
-      "hashtags": "#FigmaAI #DesignTech #CreativeTools #AIDesign #ProductivityHack #GraphicDesign #UIUXTips #CreativeTechnology #DesignInnovation #AICreativity",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 11
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Forum",
-          "url": "https://forum.figma.com/product-updates-3/new-features-in-figma-buzz-46631"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/three-new-features-to-help-build-brand-momentum-with-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/buzz/"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover/three-new-features-to-help-build-brand-momentum-with-figma-b"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/shorts/Sf_5xBPH1TM"
-        }
-      ],
-      "format": "carousel",
-      "subcategory": "carousel",
-      "hooks": [
-        "Design Faster, Smarter: Figma Buzz's Game-Changing Updates",
-        "3 Features That'll Transform Your Design Workflow",
-        "Unlock Pro Design Secrets with Figma Buzz"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick cuts between feature highlights",
-            "Add dynamic text overlays for each feature",
-            "Maintain high energy with upbeat transitions"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must have a scroll-stopping visual",
-            "Use consistent color palette across slides",
-            "Include clear, concise text on each slide"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with a provocative design challenge",
-            "Use screen recordings of actual Figma features",
-            "End with a clear call-to-explore"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Add professional context and workflow implications",
-            "Include potential productivity gains",
-            "Use more detailed, technical language"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, tech-forward aesthetic with electric blue and charcoal gradients. Geometric, clean typography with slight motion. Isometric design element overlays. Minimal illustrations that feel futuristic but approachable. Sharp-edged graphics with soft transitions."
-      },
-      "exampleOutline": [
-        "Slide 1: Attention-grabbing hook with bold graphic",
-        "Slide 2: Problem statement in design workflow",
-        "Slide 3: First Figma Buzz feature breakdown",
-        "Slide 4: Second Figma Buzz feature details",
-        "Slide 5: Final feature explanation and benefits"
-      ],
-      "hashtags": "#FigmaBuzz #DesignTips #AIDesign #CreativeTech #ProductivityHack #DesignWorkflow #UIUXDesign #CreativeTools #DesignInnovation #TechTrends",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7245606/pexels-photo-7245606.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 8
-    },
-    {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
-        }
-      ],
-      "format": "carousel",
-      "subcategory": "carousel",
-      "hooks": [
-        "Design Careers: What Moniker Really Wants",
-        "The Secret Behind San Francisco's Top Design Roles",
-        "Senior Design Opportunity: Inside Moniker's Playbook"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use dynamic motion between slides to create narrative flow",
-            "Include quick visual cuts showcasing design portfolio snippets",
-            "Overlay key statistics/percentages for visual interest"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must have maximum visual impact and intrigue",
-            "Use consistent typography and color palette across slides",
-            "Design slides to 'pull' viewer through sequential storytelling"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Condense carousel content into 60-second narrative arc",
-            "Use text overlays to highlight key design insights",
-            "Include quick professional headshot or brand logo transitions"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Adapt carousel to more professional, detailed narrative",
-            "Include specific role requirements and skill expectations",
-            "Use data-driven insights about design career progression"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, tech-forward aesthetic with San Francisco design scene inspiration. High-contrast color palette (deep blues, electric oranges), geometric typography, layered graphic elements suggesting complexity of design systems. Incorporate subtle tech/grid motifs, use negative space strategically. Reference Pentagram and IDEO visual language."
-      },
-      "exampleOutline": [
-        "Slide 1: Provocative hook about design career opportunity",
-        "Slide 2: Moniker company context and design philosophy",
-        "Slide 3: Specific role requirements and expectations",
-        "Slide 4: Skills and portfolio characteristics they're seeking",
-        "Slide 5: Call-to-action and application instructions"
-      ],
-      "hashtags": "#DesignCareer #SeniorDesigner #SanFranciscoTech #CreativeRole #DesignJobs #AIDesign #ProductDesign #CareerGrowth #DesignInnovation #TechCareers",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
-    },
-    {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/01/the-top-6-media-entertainment-startups-from-disrupt-startup-battlefield/"
         }
       ],
       "format": "story",
       "subcategory": "story",
       "hooks": [
-        "How we designed a font that speaks Figma's language",
-        "Inside Figma's typographic revolution",
-        "When designers become type creators"
+        "6 Media Startups That'll Revolutionize Entertainment",
+        "Disrupt's Hottest Entertainment Tech Unveiled",
+        "Future of Media: 6 Game-Changing Startups"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick typography animation transitions",
-            "Highlight 3-5 second type transformation moments",
-            "Include behind-the-scenes designer clips"
+            "Use quick-cut transitions between startup profiles",
+            "Include dynamic animated logos for each startup",
+            "Maintain high energy with upbeat background music"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Provocative type specimen",
-            "Use high-contrast type reveal slides",
-            "Include sketches and design process snapshots"
+            "First slide: Dramatic teaser graphic",
+            "Use consistent design template across 6 slides",
+            "Include one key stat/fact per startup slide"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Open with unexpected type morphing",
-            "Use kinetic typography techniques",
-            "Compress narrative into rapid visual story"
+            "Add text overlays for key information",
+            "Use rapid-fire information presentation style",
+            "Include founder quotes or quick interview clips"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Focus on strategic design thinking",
-            "Highlight professional design methodology",
-            "Include expert commentary snippets"
+            "Add more detailed context about Disrupt Startup Battlefield",
+            "Include professional insights about industry trends",
+            "Use more formal, analytical tone"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy tech-futuristic aesthetic with neon accent colors, dynamic geometric overlays, modern sans-serif typography, subtle glitch/digital animation effects, dark mode color palette with bright highlight colors, minimal but impactful design approach"
+      },
+      "exampleOutline": [
+        "Section 1: Dramatic Hook/Disrupt Startup Battlefield Intro",
+        "Section 2: Context of Media/Entertainment Tech Landscape",
+        "Section 3: Detailed Startup Profiles (6 key startups)",
+        "Section 4: Key Innovative Technologies Highlighted",
+        "Section 5: Call-to-Action & Further Exploration"
+      ],
+      "hashtags": "#MediaTech #StartupInnovation #EntertainmentTech #DiscruptStartups #FutureOfMedia #TechInnovation #StartupBattlefield #MediaStartups #TechTrends #InnovationHub",
+      "textureIndex": 9
+    },
+    {
+      "title": "Fizz social app&#8217;s CEO on why anon works",
+      "description": "Fizz&#160;is&#160;betting that Gen Z is tired of performing their lives on Instagram and TikTok.&#160;&#160; What started as a pandemic-era group chat frustration has turned into the dominant social platform on college campuses across the US, focused on the 99% of life that&#160;doesn&#8217;t&#160;make it into a highlight reel. Capturing the attention of a demographic typically glued [&#8230;]",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/video/fizz-social-apps-ceo-on-why-anon-works/"
+        }
+      ],
+      "format": "reel",
+      "subcategory": "reel",
+      "hooks": [
+        "Why Gen Z is ditching performative social media",
+        "The rise of anonymous campus social networks",
+        "Social media's secret rebellion: Going incognito"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick jump cuts to maintain energy",
+            "Include text overlay for key points",
+            "Leverage trending audio or create original sound"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have provocative statistic/quote",
+            "Use infographic-style slides with minimal text",
+            "Progressive reveal of Fizz app insights"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with pattern interrupt visual/statement",
+            "Use dynamic screen transitions",
+            "Add compelling B-roll of campus life"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as thought leadership trend analysis",
+            "Include data-driven insights",
+            "More professional tone, less casual language"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast color palette (deep blues/neon accents), glitch-inspired motion graphics, dynamic typography that breaks traditional grid, quick parallax transitions, abstract campus/tech visual metaphors"
+      },
+      "exampleOutline": [
+        "Hook: Provocative statement about social media fatigue",
+        "Problem: Performative online personas exhausting Gen Z",
+        "Solution: Fizz's anonymous campus network approach",
+        "Evidence: User growth and campus adoption",
+        "Call to Action: Explore alternative social connection"
+      ],
+      "hashtags": "#GenZ #SocialMedia #TechTrends #Anonymous #CampusTech #SocialInnovation #StartupLife #DigitalCulture #FizzApp #TechDisruption",
+      "textureIndex": 5
+    },
+    {
+      "title": "&#8216;College dropout&#8217; has become the most coveted startup founder credential",
+      "description": "AI founders are increasingly using their \"dropout\" status as a credential during YC pitches.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/31/college-dropout-has-become-the-most-coveted-startup-founder-credential/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "Dropout = Startup Superpower?",
+        "College Degrees: Overrated in Tech?",
+        "YC's Secret Founder Hack Revealed"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick cuts between founder images/logos",
+            "Include bold text overlays highlighting dropout stats",
+            "Create dynamic motion graphics showing 'dropout to success' journey"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Provocative hook image",
+            "Progressive reveal of dropout founder success stories",
+            "Final slide: Call-to-action with YC/startup context"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected statistic animation",
+            "Use rapid-fire founder testimonial clips",
+            "End with clear 'what this means' takeaway"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add more data-driven credibility",
+            "Use more professional, analytical tone",
+            "Include potential networking/discussion prompt"
           ]
         }
       ],
       "visualDirection": {
         "rating": 8,
-        "description": "High-contrast geometric aesthetic, transitional motion graphics, bold sans-serif typography exploration, monochromatic with strategic color accents, Swiss design-inspired grid compositions with dynamic type reveals"
+        "description": "High-contrast cyberpunk-inspired design with glitch effects, neon accent colors, fragmented typography suggesting disruption. Combine startup logos with abstract tech textures. Use dark mode aesthetic with electric blue/magenta highlights. Incorporate subtle data visualization elements."
       },
       "exampleOutline": [
-        "Hook: Provocative type specimen moment",
-        "Design challenge: Why Figma needed a custom font",
-        "Creative process: Sketches, iterations, insights",
-        "Technical typography deep dive",
-        "Call-to-action: Explore Figma Sans"
+        "Bold Headline: Dropout Status as Credential",
+        "Quick Stats: Percentage of Successful Dropouts",
+        "YC Pitch Context Explanation",
+        "Why Dropouts Succeed in AI/Tech",
+        "Call to Rethink Traditional Paths"
       ],
-      "hashtags": "#DesignSystems #Typography #FigmaDesign #CreativeProcess #TypeDesign #ProductDesign #AICreativity #DesignTools #BrandIdentity #CreativeTechnology",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8014542/pexels-photo-8014542.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 6
+      "hashtags": "#AIStartups #TechFounders #YCombinator #StartupLife #TechEducation #DisruptiveInnovation #FutureOfWork #AITech #EntrepreneurshipJourney #TechTrends",
+      "textureIndex": 1
+    },
+    {
+      "title": "Investors predict AI is coming for labor in 2026",
+      "description": "The exact impact AI will have on the enterprise labor market is unclear but investors predict trends will start to emerge in 2026.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/31/investors-predict-ai-is-coming-for-labor-in-2026/"
+        }
+      ],
+      "format": "carousel",
+      "subcategory": "carousel",
+      "hooks": [
+        "AI is Coming for Your Job in 2026 🤖",
+        "The Labor Market's Biggest Disruption is Near",
+        "Investors Bet Big: AI's Workforce Revolution"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic text transitions between slides",
+            "Include quick data visualizations",
+            "Add subtle AI/tech motion graphics"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "Make first slide a provocative statistic",
+            "Use consistent color palette across slides",
+            "Design each slide as a standalone visual story"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Compress carousel into rapid-fire narrative",
+            "Add voiceover explaining key trends",
+            "Use high-energy editing style"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add more detailed professional context",
+            "Include credible source citations",
+            "Tone down visual playfulness"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Cyberpunk-inspired color palette with electric blues and neon accents. Isometric data visualizations. Futuristic sans-serif typography. Glitch/digital decay motion effects. High-contrast infographic style with transparent overlays."
+      },
+      "exampleOutline": [
+        "Slide 1: Provocative Hook & Headline",
+        "Slide 2: Investor Prediction Context",
+        "Slide 3: 2026 Labor Market Projection",
+        "Slide 4: Key Industries Most Impacted",
+        "Slide 5: Call-to-Action & Learning Resources"
+      ],
+      "hashtags": "#AIRevolution #FutureOfWork #TechTrends #CareerStrategy #AIJobs #WorkplaceTech #InvestmentInsights #AIEconomy #CareerDevelopment #TechInnovation",
+      "textureIndex": 2
+    },
+    {
+      "title": "These are the best gadgets for your pet right now",
+      "description": "From AI smart cameras that describe your pet's actions to a smart door that knows when they want to go outside, these are the best pet gadgets of 2025.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/31/these-are-the-best-gadgets-for-your-pet-right-now/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "Pet Tech Revolution: Future is Now 🐾🚀",
+        "Smart Gadgets Your Pet Desperately Needs",
+        "AI + Pets = Mind-Blowing Tech Magic"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use rapid-fire gadget reveal transitions",
+            "Include cute pet reaction shots",
+            "Add playful text overlays highlighting tech features"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Provocative pet tech teaser",
+            "Use numbered slides for each gadget",
+            "Include price/availability on final slide"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected pet tech moment",
+            "Use voiceover explaining each gadget quickly",
+            "Include humorous pet reaction clips"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as technology innovation narrative",
+            "Include expert commentary snippets",
+            "Highlight potential market disruption"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "Futuristic neon color palette with tech-inspired glitch effects, dynamic diagonal compositions, cyberpunk-meets-pet-tech aesthetic, floating holographic gadget overlays, high-contrast typography with metallic highlights"
+      },
+      "exampleOutline": [
+        "Hook: Provocative Pet Tech Intro",
+        "Problem: Traditional Pet Care Limitations",
+        "Solution: 5 Mind-Blowing Smart Gadgets",
+        "Key Insights: How Tech Transforms Pet Care",
+        "Call-to-Action: Explore Future of Pet Technology"
+      ],
+      "hashtags": "#PetTech #AIForPets #SmartGadgets #FutureTech #PetInnovation #TechLovers #AnimalTech #InnovationNation #FutureOfPets #TechTrends",
+      "textureIndex": 11
     }
   ]
 }

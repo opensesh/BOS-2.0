@@ -1,341 +1,291 @@
 {
   "type": "blog",
-  "date": "2026-01-01T16:18:17.214Z",
+  "date": "2026-01-01T16:28:35.605Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "We replaced our sales team with 20 AI agents—here’s what happened | Jason Lemkin (SaaStr)",
+      "description": "Jason Lemkin on why he replaced his entire sales team with AI agents, how he fine-tuned them to work better than his human sales people, which vendors to choose, and how to become hyper-employable in the AI area",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        }
-      ],
-      "format": "article",
-      "subcategory": "visionary",
-      "hooks": [
-        "Design Once, Scale Everywhere: Figma Templates Unleashed",
-        "Crack the Code: Bulletproof Brand Templates",
-        "Beyond Pixels: Designing Flexible Brand Ecosystems"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Include real-time template creation screenshots",
-            "Add personal workflow commentary between tips",
-            "Use conversational annotations to explain complex concepts"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Optimize headers for SEO with targeted keywords",
-            "Include data visualizations of template performance",
-            "Add expert quotes from design leaders"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Frame tips as professional development insights",
-            "Include corporate case study examples",
-            "Add credibility with design metrics/ROI statistics"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Dynamic geometric layouts with translucent color overlays, Swiss design-inspired grid system, bold sans-serif typography, micro-animations highlighting template flexibility, color palette of electric blue, soft gray, and accent coral"
-      },
-      "exampleOutline": [
-        "Introduction: The Template Revolution in Design",
-        "The Scalability Challenge in Brand Design",
-        "8 Strategic Tips for Robust Figma Templates",
-        "Case Studies: Templates That Transform Workflows",
-        "Future of Adaptive Brand Design Systems"
-      ],
-      "hashtags": "#FigmaDesign #BrandTemplates #CreativeWorkflow #DesignSystems #AIDesign #ProductivityHacks #DesignStrategy #CreativeTech #BrandIdentity #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 11
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/release-notes/"
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/we-replaced-our-sales-team-with-20-ai-agents"
         }
       ],
       "format": "listicle",
       "subcategory": "explanatory",
       "hooks": [
-        "3 AI Tools That Revolutionize Figma Image Editing",
-        "Precision Meets Magic: Figma's Latest Image Tools",
-        "Design Faster: Figma's Breakthrough Image Editing Secrets"
+        "20 AI Agents: How We Killed Our Sales Team",
+        "The Sales Team Killer: AI Agents Revealed",
+        "5 Mind-Blowing AI Agents That Replaced Humans"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Include a live demo GIF of each tool in action",
-            "Add personal workflow commentary between tool descriptions",
-            "Use conversational tone like you're explaining to a design friend"
+            "Use real-time screenshots of AI agent interactions",
+            "Include interactive poll about AI in sales",
+            "Share raw, unfiltered experiment results"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Include SEO-friendly headers for each tool",
-            "Add comparative screenshots showing before/after edits",
-            "Embed expert quotes or external validation"
+            "Deep dive into technical implementation details",
+            "Include SEO-friendly subheadings for each AI agent insight",
+            "Optimize with data visualizations and comparative charts"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Frame tools in context of professional productivity gains",
-            "Include data on time/efficiency saved",
-            "Add credible testimonial or industry expert perspective"
+            "Focus on professional ROI and efficiency metrics",
+            "Include testimonials or quotes from leadership",
+            "Highlight career implications for sales professionals"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, futuristic aesthetic with high-contrast color palette. Dynamic split-screen compositions showing tool transformations. Sleek, sans-serif typography with animated transitions. Incorporate subtle holographic/tech-inspired overlays. Color scheme: electric blue, deep charcoal, bright cyan accents."
+        "description": "High-contrast cyberpunk-inspired design with glitchy data overlays, neon blue/purple gradient background, futuristic sans-serif typography, dynamic grid layout with AI agent silhouettes, motion graphics showing agent performance metrics"
       },
       "exampleOutline": [
-        "Introduction: The New Frontier of AI Image Editing",
-        "Context: Design Workflow Challenges in Image Manipulation",
-        "Tool 1: Detailed Breakdown with Visual Examples",
-        "Tool 2: Practical Applications and Workflow Integration",
-        "Tool 3: Future Implications and Creative Potential",
-        "Conclusion: Transforming Design with Intelligent Tools"
+        "Section 1: Shocking AI Replacement Announcement",
+        "Section 2: Why Traditional Sales Teams Are Obsolete",
+        "Section 3: 5 AI Agents That Outperform Humans",
+        "Section 4: Implementation Strategy & Lessons Learned",
+        "Section 5: Future of Sales Careers Call-to-Action"
       ],
-      "hashtags": "#FigmaAI #DesignTechnology #CreativeTools #AIDesign #ImageEditing #ProductivityHacks #DesignInnovation #CreativeTech #AICreativity #DesignWorkflow",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 12
+      "hashtags": "#AIRevolution #SalesTech #FutureOfWork #ArtificialIntelligence #SalesAutomation #AIAgents #BusinessInnovation #TechDisruption #MachineLearning #SalesTransformation",
+      "textureIndex": 5
     },
     {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
+      "title": "Film Technica: Our top picks for the best films of 2025",
+      "description": "Film Technica: Our top picks for the best films of 2025",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Forum",
-          "url": "https://forum.figma.com/product-updates-3/new-features-in-figma-buzz-46631"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/three-new-features-to-help-build-brand-momentum-with-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/buzz/"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover/three-new-features-to-help-build-brand-momentum-with-figma-b"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/shorts/Sf_5xBPH1TM"
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/culture/2026/01/film-technica-our-top-picks-for-the-best-films-of-2025/"
         }
       ],
-      "format": "case-study",
-      "subcategory": "case-study-deep-dive",
+      "format": "article",
+      "subcategory": "visionary",
       "hooks": [
-        "How Figma Buzz Transforms Design Workflow in 3 Moves",
-        "Unlocking Brand Magic: Figma Buzz's Secret Weapons",
-        "Design Efficiency Revolution: Inside Figma Buzz Features"
+        "AI Predicts Cinema's Future: 2025's Most Groundbreaking Films",
+        "Hollywood's Next Frontier: Technology Reshaping Storytelling",
+        "Beyond Screens: The Films That Will Define 2025"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Include real-time screen recordings of feature exploration",
-            "Use interactive annotations to highlight key moments",
-            "Share personal workflow transformation examples"
+            "Include interactive film prediction poll for reader engagement",
+            "Add behind-the-scenes research screenshots and AI analysis snippets",
+            "Create a companion newsletter series tracking film predictions"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Include detailed comparative screenshots",
-            "Break down technical features with clear infographics",
-            "Use SEO-friendly headings explaining tangible benefits"
+            "Optimize SEO with detailed film technology keywords",
+            "Include embedded video trailers and visual breakdowns",
+            "Create clear, scannable sections with bold subheadings"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Quantify productivity gains with data/metrics",
-            "Include professional testimonial snippets",
-            "Frame features as career-acceleration tools"
+            "Focus on industry innovation and technological trends",
+            "Include professional insights from film technology experts",
+            "Use data visualizations and infographics to support claims"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Dynamic split-screen compositions showing before/after states, vibrant tech-inspired color palette with electric blues and deep purples, modern sans-serif typography with motion-based transitions, animated UI reveal sequences highlighting feature interactions"
+        "description": "Cyberpunk-inspired color palette with deep blues and electric teals, dynamic asymmetrical layouts, futuristic sans-serif typography, subtle holographic motion graphics, blend of cinematic imagery and technological overlay, references to Blade Runner 2049 and Ex Machina visual aesthetics"
       },
       "exampleOutline": [
-        "Opening: The Design Efficiency Challenge",
-        "Context: Existing Workflow Limitations",
-        "Figma Buzz Features: Detailed Breakdown",
-        "Transformative Insights and Workflow Optimization",
-        "Future of Design Collaboration CTA"
+        "Introduction: The Technological Revolution in Filmmaking",
+        "Context: How AI and Emerging Technologies Are Transforming Cinema",
+        "Top 5 Predicted Films: Deep Dive into Innovation",
+        "Key Technological Insights Driving Film Evolution",
+        "Conclusion: What These Predictions Mean for Future Storytelling"
       ],
-      "hashtags": "#FigmaBuzz #DesignWorkflow #AIDesign #CreativeTech #ProductivityHacks #DesignTools #UXDesign #CreativeInnovation #DesignStrategy #TechTools",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
+      "hashtags": "#FilmTechnology #AIinCinema #MoviePredictions2025 #FutureOfFilm #CinemaInnovation #TechEntertainment #MovieTech #AIFilmmaking #CinematicFuture #EmergingTechnologies",
+      "textureIndex": 5
     },
     {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
+      "title": "&#8216;College dropout&#8217; has become the most coveted startup founder credential",
+      "description": "AI founders are increasingly using their \"dropout\" status as a credential during YC pitches.",
       "starred": false,
       "sources": [
         {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
-        }
-      ],
-      "format": "guide",
-      "subcategory": "instructional",
-      "hooks": [
-        "Design Systems: The Secret Weapon of Top Brands",
-        "Master Visual Identity in 5 Transformative Steps",
-        "How Great Designers Build Scalable Brand Universes"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Use real-time annotations and personal insights",
-            "Include interactive visual system mockups",
-            "Break down complex concepts with personal experiments"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Optimize headline for SEO with specific keywords",
-            "Include data-driven case studies from tech brands",
-            "Create clear, scannable sections with subheadings"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Frame content as professional skill development",
-            "Include expert quotes and industry statistics",
-            "Target design directors and creative leaders"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Dynamic modular grid layout with geometric typography, bold SF-inspired color palette (teal, charcoal, electric blue), subtle motion graphics showing design system transformations, minimalist Swiss design influences with contemporary tech aesthetic"
-      },
-      "exampleOutline": [
-        "Introduction: The Critical Role of Visual Identity",
-        "Defining Design Systems: Principles and Framework",
-        "Case Studies: Successful Brand Identity Strategies",
-        "Technical Deep Dive: Building Scalable Visual Frameworks",
-        "Future of Design: Emerging Trends and Technologies"
-      ],
-      "hashtags": "#DesignSystems #BrandIdentity #CreativeStrategy #AIDesign #VisualBranding #ProductDesign #TechCreatives #DesignInnovation #BrandStrategy #CreativeTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 3
-    },
-    {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/31/college-dropout-has-become-the-most-coveted-startup-founder-credential/"
         }
       ],
       "format": "thread",
       "subcategory": "explanatory",
       "hooks": [
-        "How we reinvented typography at Figma",
-        "The secret design language behind Figma Sans",
-        "Breaking design rules: Our typeface revolution"
+        "College dropouts are the new startup unicorns 🚀",
+        "Why YC loves founders who quit school",
+        "AI startup secret: Dropout = competitive advantage"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Use thread screenshots as visual content",
-            "Create companion newsletter expanding thread insights",
-            "Link full design process in newsletter"
+            "Use thread as teaser for longer newsletter deep dive",
+            "Include personal experiment/anecdote in thread",
+            "Embed thread link in newsletter for cross-platform engagement"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Expand thread into long-form article",
-            "Include designer interviews and technical details",
-            "Add high-resolution type specimen images"
+            "Expand thread into long-form SEO article afterward",
+            "Use thread insights as research validation",
+            "Link Medium article in final thread tweet"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Frame thread as professional design case study",
-            "Include brand strategy context",
-            "Highlight collaboration and design thinking process"
+            "Add professional credibility with founder interview quotes",
+            "Include data visualization of dropout trend",
+            "Frame thread as professional trend analysis"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast geometric compositions, modular grid layouts, animated type specimens showing letterform transformations, monochromatic color palette with electric accent colors, clean Swiss design influence with modern tech twist"
+        "description": "High-contrast tech-inspired gradient backgrounds, futuristic sans-serif typography, dynamic motion graphics showing startup trajectory, minimalist iconography representing education/dropout concept, electric blue and deep purple color palette with sharp geometric elements"
       },
       "exampleOutline": [
-        "Hook: Dramatic reveal of Figma Sans origin",
-        "Design problem & creative challenge",
-        "Typography design process & key decisions",
-        "Technical and aesthetic breakthroughs",
-        "Future implications and design philosophy"
+        "Hook: Why college dropouts are dominating AI startups",
+        "Context: Changing startup founder landscape",
+        "Evidence: YC acceptance rates & success metrics",
+        "Key insights: Dropout advantages in tech",
+        "Future prediction & personal call-to-action"
       ],
-      "hashtags": "#DesignSystem #Typography #FigmaDesign #CreativeProcess #AIDesign #ProductDesign #BrandIdentity #GraphicDesign #TypeDesign #CreativeTechnology",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 10
+      "hashtags": "#AIStartups #TechFounders #InnovationCulture #StartupLife #CollegeDropout #AIRevolution #TechTrends #EntrepreneurshipJourney #FutureOfWork #TechInnovation",
+      "textureIndex": 9
+    },
+    {
+      "title": "Investors predict AI is coming for labor in 2026",
+      "description": "The exact impact AI will have on the enterprise labor market is unclear but investors predict trends will start to emerge in 2026.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/31/investors-predict-ai-is-coming-for-labor-in-2026/"
+        }
+      ],
+      "format": "guide",
+      "subcategory": "instructional",
+      "hooks": [
+        "AI's Labor Revolution: What Investors Know in 2026",
+        "Enterprise Workforce: The Coming AI Transformation",
+        "2026: When AI Rewrites Corporate Talent Strategies"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Include real-time investor quote screenshots",
+            "Add interactive poll about AI job impact",
+            "Use personal storytelling about AI workforce changes"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Deep-dive into statistical data visualization",
+            "Create SEO-friendly section headers",
+            "Include expert interview pullquotes"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Target C-suite and HR decision makers",
+            "Include enterprise-specific case study examples",
+            "Emphasize actionable strategic insights"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, data-driven aesthetic with dynamic infographic elements. High-contrast color palette (deep blues, electric oranges). Geometric typography with futuristic undertones. Animated transition graphics showing workforce transformation. Clean, tech-forward mood board referencing Wired magazine design language."
+      },
+      "exampleOutline": [
+        "Introduction: The AI Labor Disruption Landscape",
+        "Current State of Enterprise AI Adoption",
+        "Investor Predictions and Market Signals",
+        "Sector-by-Sector AI Impact Analysis",
+        "Strategic Recommendations for Workforce Adaptation"
+      ],
+      "hashtags": "#AIWorkforce #FutureOfWork #EnterpriseAI #TechTrends #AIInvestment #WorkplaceTechnology #AIStrategy #LaborMarket #InvestorInsights #AIEconomy",
+      "textureIndex": 6
+    },
+    {
+      "title": "Mark Wilson: Fast Company's Global Design Editor on design's defining moments in 2025",
+      "description": "Episode 158 of the Design Better Podcast",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Design Better",
+          "url": "https://designbetterpodcast.com/p/mark-wilson"
+        }
+      ],
+      "format": "case-study",
+      "subcategory": "case-study-deep-dive",
+      "hooks": [
+        "Design's Future: Mark Wilson Reveals 2025's Game-Changing Moments",
+        "Exclusive: How Design Will Transform Everything by 2025",
+        "Inside the Minds Reshaping Global Design Landscape"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use real-time podcast annotation and live insights",
+            "Embed short audio clips to break up text",
+            "Create interactive poll about design predictions"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Deep-dive into statistical trends mentioned in podcast",
+            "Add SEO-optimized headers for design industry keywords",
+            "Include expert commentary and extended analysis"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Focus on professional implications of design trends",
+            "Include data visualizations from podcast insights",
+            "Tag key design thought leaders for increased reach"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, futuristic color palette with electric blues and metallic silvers. Dynamic split-screen compositions showing design evolution. Experimental sans-serif typography with motion-graphic transitions. Integrate subtle holographic elements suggesting technological progression. Minimal but high-contrast visual language."
+      },
+      "exampleOutline": [
+        "Section 1: Provocative Design Futures Teaser",
+        "Section 2: Current Design Landscape Context",
+        "Section 3: Mark Wilson's Key 2025 Predictions",
+        "Section 4: Transformative Design Methodology Insights",
+        "Section 5: Call-to-Action for Design Innovation"
+      ],
+      "hashtags": "#DesignFuture #InnovationTrends #CreativeTechnology #DesignThinking #AIDesign #GlobalInnovation #CreativeTech #DesignLeadership #FutureOfWork #IndustryInsights",
+      "textureIndex": 1
     }
   ]
 }
