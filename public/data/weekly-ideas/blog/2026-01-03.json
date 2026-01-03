@@ -1,345 +1,291 @@
 {
   "type": "blog",
-  "date": "2026-01-03T16:16:44.373Z",
+  "date": "2026-01-03T16:26:57.593Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "India orders Musk&#8217;s X to fix Grok over &#8216;obscene&#8217; AI content",
+      "description": "India's IT ministry has given X 72 hours to submit an action-taken report.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/02/india-orders-musks-x-to-fix-grok-over-obscene-ai-content/"
         }
       ],
       "format": "case-study",
       "subcategory": "case-study-deep-dive",
       "hooks": [
-        "Design Templates That Scale Without Breaking Brand Guidelines",
-        "Figma Secrets: Build Flexible Brand Systems in Minutes",
-        "How Pro Designers Create Bulletproof Marketing Templates"
+        "AI Regulation Showdown: Musk's X vs Indian Government",
+        "When Algorithms Clash: X's Content Moderation Crisis",
+        "Grok's Obscenity Problem: Tech Giant Meets Regulatory Wall"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Use real-time screenshots of template creation process",
-            "Include interactive Figma embed for reader engagement",
-            "Share personal template design challenges and learnings"
+            "Use real-time commentary to break down regulatory nuances",
+            "Include personal analysis of AI content moderation challenges",
+            "Create interactive poll about AI governance reader perspectives"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Include SEO-optimized section headers for readability",
-            "Add comparative graphics showing template flexibility",
-            "Link to downloadable Figma template resources"
+            "Deep dive into technical implications of content moderation",
+            "Include expert quotes and regulatory context",
+            "Create SEO-optimized headers for algorithm transparency"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Add professional credibility through brand logos/clients",
-            "Include quantitative impact metrics on template efficiency",
-            "Frame tips as professional development insights"
+            "Frame as professional AI governance case study",
+            "Include actionable insights for tech leadership",
+            "Use data visualization for regulatory impact"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, tech-forward aesthetic with dynamic grid layouts, high-contrast color palette (navy/coral), clean sans-serif typography, subtle motion graphics showing template transformations, minimal illustrations highlighting design principles"
+        "description": "Bold, high-contrast design with geometric overlays. Dark mode color palette with electric blue accents. Infographic-style illustrations showing regulatory tensions. Dynamic motion graphics representing algorithmic complexity. Typography emphasizing technical precision with human warmth."
       },
       "exampleOutline": [
-        "Introduction: The Template Design Challenge",
-        "Problem: Brand Consistency vs. Creative Flexibility",
-        "8 Strategic Template Design Principles",
-        "Case Study: Successful Template System Implementation",
-        "Future of Adaptive Brand Design"
+        "Section 1: Provocative Introduction - AI Regulation Tensions",
+        "Section 2: Grok's Content Moderation Challenge",
+        "Section 3: India's Regulatory Framework and Digital Governance",
+        "Section 4: Implications for Global AI Development",
+        "Section 5: Future of AI Accountability and Transparency"
       ],
-      "hashtags": "#DesignSystems #FigmaTemplates #BrandDesign #AIDesign #CreativeWorkflow #DesignStrategy #ProductDesign #TemplateDesign #MarketingDesign #UIUXTips",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 3
+      "hashtags": "#AIRegulation #TechPolicy #GrokAI #XAI #MuskTech #AIEthics #DigitalGovernance #TechLaw #AIContent #InnovationPolicy",
+      "textureIndex": 7
     },
     {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
+      "title": "How AI is reshaping work and who gets to do it, according to Mercor&#8217;s CEO",
+      "description": "Three-year-old startup&#160;Mercor&#160;has become a&#160;$10 billion&#160;middleman&#160;in AI&#8217;s data gold rush. The company connects AI labs like OpenAI and Anthropic with former employees of Goldman Sachs, McKinsey, and white-shoe law firms, paying them up to $200 an hour to share their industry&#160;expertise&#160;and train the AI models that could eventually automate their former employers out of business.&#160;&#160; Today&#160;we&#8217;re&#160;bringing [&#8230;]",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/release-notes/"
-        }
-      ],
-      "format": "article",
-      "subcategory": "visionary",
-      "hooks": [
-        "AI Transforms Figma: 3 Game-Changing Image Editing Tools",
-        "Precision Editing Reimagined: Figma's Latest AI Arsenal",
-        "Design Faster: Figma's New AI Image Magic"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Include real-time screen recordings of tools in action",
-            "Add personal workflow transformation story",
-            "Create interactive annotation layers for reader engagement"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Optimize for SEO with technical keywords around AI image editing",
-            "Include comparative screenshots of before/after edits",
-            "Add expert commentary from design community"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Highlight professional productivity gains",
-            "Include quantitative impact metrics",
-            "Target design managers and creative directors"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, tech-forward aesthetic with electric blue and deep charcoal color palette. Dynamic split-screen compositions showing tool transformations. Futuristic sans-serif typography with subtle motion graphics. Clean, high-contrast image comparisons. Subtle holographic overlay elements suggesting AI intelligence."
-      },
-      "exampleOutline": [
-        "Introduction: The New Frontier of AI-Powered Design",
-        "The Current Design Editing Landscape: Limitations & Challenges",
-        "Deep Dive: Three Revolutionary Figma AI Image Tools",
-        "Practical Applications & Workflow Transformation",
-        "Future of Design: What These Tools Mean for Creators"
-      ],
-      "hashtags": "#FigmaAI #DesignTech #AICreativity #ImageEditing #CreativeWorkflow #DesignInnovation #AITools #ProductivityHack #DesignTrends #CreativeTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 5
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Forum",
-          "url": "https://forum.figma.com/product-updates-3/new-features-in-figma-buzz-46631"
-        },
-        {
-          "name": "Ai",
-          "url": "https://ai.gopubby.com/figma-is-here-to-change-the-design-development-game-6b098598e82f"
-        },
-        {
-          "name": "Forrester",
-          "url": "https://www.forrester.com/blogs/figma-config-2025-in-an-ai-world-design-matters-more-than-ever/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/05/07/figma-releases-new-ai-powered-tools-for-creating-sites-app-prototypes-and-marketing-assets/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/shorts/Sf_5xBPH1TM"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/how-ai-is-reshaping-work-and-who-gets-to-do-it-according-to-mercors-ceo/"
         }
       ],
       "format": "listicle",
       "subcategory": "explanatory",
       "hooks": [
-        "Figma Buzz: 3 Game-Changing Features for Designers",
-        "Design Workflow Revolution: Figma's Latest Upgrades",
-        "Unlock Next-Level Creative Efficiency with Figma"
+        "5 Mind-Blowing Ways AI is Disrupting Workforce Dynamics",
+        "AI's Secret Weapon: Transforming Careers Overnight",
+        "Insider Secrets: How AI Redefines Professional Landscapes"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Use animated GIFs to showcase each feature in action",
-            "Add personal commentary on how each feature changes workflow",
-            "Include a quick video walkthrough of key features"
+            "Use personal anecdotes to illustrate each listicle point",
+            "Include real-time screenshots of AI interactions",
+            "Add interactive poll about reader's AI experiences"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Create highly scannable sections with bold subheadings",
-            "Include SEO-friendly alt text for feature screenshots",
-            "Add comparative analysis of how these features improve design process"
+            "Optimize SEO with keyword-rich listicle headers",
+            "Include expert quotes for each list item",
+            "Add data visualizations for each AI impact point"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Quantify productivity gains with potential time/efficiency metrics",
-            "Include quotes from design leaders about feature impact",
-            "Emphasize professional value and career development angles"
+            "Frame listicle as professional development insights",
+            "Include LinkedIn-specific networking call-to-action",
+            "Use corporate-friendly case study references"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, dynamic visual approach with high-contrast color palette (electric blue, deep purple, bright white). Isometric illustrations of design tools, overlapping geometric shapes, motion graphics showing feature transitions. Typography: sans-serif, clean lines, occasional dramatic scale shifts. Incorporate subtle AI-inspired glitch/data visualization elements."
+        "description": "Bold, futuristic color palette with electric blues and deep purples. Dynamic, asymmetrical grid layout. Glitch-style typography with AI-inspired geometric overlays. Animated transitions between list items. Cyberpunk-meets-corporate aesthetic with holographic data visualization elements."
       },
       "exampleOutline": [
-        "Introduction: The Design Workflow Transformation",
-        "Context: Challenges in Modern Design Collaboration",
-        "Feature 1: Marketing Template Revolution",
-        "Feature 2: Cross-App Plugin Integration",
-        "Feature 3: Advanced Video Trimming Capabilities",
-        "Conclusion: Future of Design Efficiency"
+        "Section 1: Provocative Introduction - AI's Workforce Revolution",
+        "Section 2: Market Context - Current AI Disruption Landscape",
+        "Section 3: 5 Transformative AI Impact Areas",
+        "Section 4: Future Implications and Professional Adaptation",
+        "Section 5: Call-to-Action for Continuous Learning"
       ],
-      "hashtags": "#FigmaBuzz #DesignTech #AIDesign #CreativeWorkflow #ProductivityHacks #DesignTools #UXDesign #TechInnovation #CreativeTech #DesignEfficiency",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
+      "hashtags": "#AIWorkforce #FutureOfWork #CareerInnovation #TechDisruption #AITrends #ProfessionalDevelopment #WorkplaceTechnology #AIEconomy #CareerStrategy #InnovationInsights",
+      "textureIndex": 1
     },
     {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
+      "title": "Nvidia&#8217;s AI empire: A look at its top startup investments",
+      "description": "Over the last two years, Nvidia has used its ballooning fortunes to invest in over 100 AI startups. Here are the giant semiconductor's largest investments.",
       "starred": false,
       "sources": [
         {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/02/nvidias-ai-empire-a-look-at-its-top-startup-investments/"
         }
       ],
-      "format": "thread",
-      "subcategory": "explanatory",
+      "format": "article",
+      "subcategory": "visionary",
       "hooks": [
-        "Design Systems: The Secret Weapon of Top Brands",
-        "How Great Designers Build Scalable Visual Identities",
-        "Cracking the Code of Brand System Design"
+        "Nvidia's AI Checkbook: Reshaping Tech's Future",
+        "100 Startups, One Silicon Valley Giant",
+        "Inside Nvidia's Billion-Dollar AI Startup Spree"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Use thread as teaser for full deep-dive article",
-            "Embed interactive visuals to drive newsletter signup",
-            "Reference live design system case studies"
+            "Use personal narrative to introduce investment landscape",
+            "Include real-time investment tracking screenshot/graph",
+            "Encourage reader comments/predictions about future investments"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Optimize thread as SEO-friendly content preview",
-            "Include technical design terminology for credibility",
-            "Link to full comprehensive article analysis"
+            "Optimize headline for SEO with clear AI/investment keywords",
+            "Include data visualizations of investment trends",
+            "Add expert quote or industry perspective"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Frame thread as professional development insight",
-            "Include industry statistics about design system impact",
-            "Target design leadership and innovation professionals"
+            "Frame investments as strategic business intelligence",
+            "Include professional network insights and implications",
+            "Use data-driven charts demonstrating investment impact"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Dynamic grid-based compositions, bold sans-serif typography, high-contrast color palette with electric blue and charcoal accents, minimal motion graphics showing system flexibility, Swiss design influence with modern tech aesthetic"
+        "description": "Futuristic tech palette with deep navy and electric teal, geometric infographic layouts, sans-serif typography with angular cuts, subtle motion graphics showing investment connections, minimalist tech-inspired illustrations"
       },
       "exampleOutline": [
-        "1: Provocative hook about design system complexity",
-        "2: Define what makes a great design system",
-        "3: Key principles of scalable visual identity",
-        "4: Real-world brand system case studies",
-        "5: Call-to-action for design community engagement"
+        "Introduction: Nvidia's Transformative Investment Strategy",
+        "The AI Investment Landscape: Current Context",
+        "Top 10 Startup Investments: Detailed Breakdown",
+        "Strategic Implications for Tech Ecosystem",
+        "Future Predictions and Call to Action"
       ],
-      "hashtags": "#DesignSystems #BrandIdentity #CreativeDirection #VisualBranding #ProductDesign #AIDesign #CreativeTech #DesignStrategy #BrandingTips #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
+      "hashtags": "#NvidiaAI #StartupInvestments #AITech #SiliconValley #TechInnovation #AIStartups #VentureCapital #EmergingTech #AIInvestment #TechTrends",
+      "textureIndex": 4
     },
     {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
+      "title": "In 2026, AI will move from hype to pragmatism",
+      "description": "In 2026, here's what you can expect from the AI industry: new architectures, smaller models, world models, reliable agents, physical AI, and products designed for real-world use.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/02/in-2026-ai-will-move-from-hype-to-pragmatism/"
         }
       ],
       "format": "guide",
       "subcategory": "instructional",
       "hooks": [
-        "How Figma Redesigned Design Language from Scratch",
-        "Typography That Speaks Volumes: Figma's Bold Rebrand",
-        "Behind the Pixels: Crafting Figma's New Identity"
+        "AI's Pragmatic Revolution: What's Really Coming in 2026",
+        "Beyond the Hype: AI's Practical Transformation Begins",
+        "The Real AI Future: 6 Groundbreaking Shifts Explained"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Include live design process screenshots",
-            "Add interactive type specimen comparisons",
-            "Share real-time design decision moments"
+            "Include real-time experiment screenshots of emerging AI models",
+            "Use interactive inline polls to engage reader predictions",
+            "Create a companion audio/voice note version for subscribers"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Deep dive into typographic design principles",
-            "Include SEO-optimized headers for readability",
-            "Add technical breakdowns of font creation"
+            "Optimize headline for SEO with precise AI trend keywords",
+            "Include expert quote callouts from industry leaders",
+            "Add inline research links for deeper credibility"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Highlight professional design methodology",
-            "Include metrics on brand transformation impact",
-            "Frame as strategic design leadership narrative"
+            "Frame insights through professional impact lens",
+            "Include 3-4 industry-specific use case examples",
+            "Add downloadable trend summary infographic"
           ]
         }
       ],
       "visualDirection": {
-        "rating": 8,
-        "description": "High-contrast color palette with experimental typography, dynamic grid layouts showcasing type evolution, motion-graphic transitions between design stages, minimal yet bold aesthetic referencing Swiss design principles and contemporary tech branding"
+        "rating": 7,
+        "description": "Futuristic cyberpunk-inspired design with translucent data layers, deep navy and electric blue color palette, dynamic geometric typography, subtle holographic motion graphics suggesting technological emergence, clean negative space with strategic data visualization elements"
       },
       "exampleOutline": [
-        "The Design Challenge: Why Figma Needed a New Voice",
-        "Typography as Brand DNA: Conceptual Origins",
-        "Technical Journey: From Concept to Executable Typeface",
-        "Design System Implications of a Custom Font",
-        "Future of Product Design Language"
+        "Introduction: The AI Pragmatism Paradigm",
+        "Current State of AI: Hype vs Reality",
+        "Six Transformative AI Architectural Shifts",
+        "Practical Implications for Industries",
+        "Future Forecast and Strategic Recommendations"
       ],
-      "hashtags": "#DesignSystems #Typography #ProductDesign #FigmaDesign #BrandIdentity #AICreativity #DesignTech #CreativeProcess #TypeDesign #BrandEvolution",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
+      "hashtags": "#AIFuture #TechTrends2026 #AIInnovation #EmergingTechnology #AIArchitecture #FutureOfAI #TechStrategy #AITrends #InnovationInsights #TechnologyForecast",
+      "textureIndex": 7
+    },
+    {
+      "title": "European banks plan to cut 200,000 jobs as AI takes hold",
+      "description": "The bloodletting will hit hardest in back-office operations, risk management, and compliance.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/01/european-banks-plan-to-cut-200000-jobs-as-ai-takes-hold/"
+        }
+      ],
+      "format": "thread",
+      "subcategory": "explanatory",
+      "hooks": [
+        "AI is gutting European banking jobs. Here's why.",
+        "200,000 bank jobs vanishing: The AI takeover begins",
+        "Banking's brutal AI transformation: Who survives?"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use thread as teaser for longer newsletter deep dive",
+            "Embed personal experimentation/research insights",
+            "Link thread back to full Substack analysis"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Expand thread into comprehensive long-form article",
+            "Add data visualizations of job market shifts",
+            "Include expert interview quotes for credibility"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Target professional network with strategic career insights",
+            "Add personal commentary on AI workforce transitions",
+            "Include actionable upskilling recommendations"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast infographic style. Dark blue/electric blue color palette. Dynamic data visualization with glitch/digital overlay effects. Sharp geometric typography. Minimalist tech-inspired motion graphics showing job displacement statistics"
+      },
+      "exampleOutline": [
+        "Thread Hook: Shocking AI job displacement statistic",
+        "Context: Current European banking landscape",
+        "Impact Areas: Specific departments being transformed",
+        "Human vs AI Capabilities Breakdown",
+        "Future Workforce Recommendations/Call to Action"
+      ],
+      "hashtags": "#AITransformation #BankingInnovation #FutureOfWork #AIJobs #TechDisruption #CareerEvolution #AIEconomics #BankingTech #WorkplaceAI #DigitalTransformation",
+      "textureIndex": 0
     }
   ]
 }
