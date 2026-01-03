@@ -1,17 +1,17 @@
 {
   "id": "introducing-three-new-tools-for-precise-image-editing-in-fig",
   "slug": "introducing-three-new-tools-for-precise-image-editing-in-fig",
-  "title": "Figma Launches Three AI-Powered Image Editing Tools to Eliminate Design Platform Switching",
-  "publishedAt": "2026-01-02T16:16:34.602Z",
-  "generatedAt": "2026-01-02T16:16:34.602Z",
-  "totalSources": 7,
+  "title": "Figma Unveils AI-Powered Erase, Isolate, and Expand Tools for Seamless In-Canvas Image Editing",
+  "publishedAt": "2026-01-03T16:15:41.465Z",
+  "generatedAt": "2026-01-03T16:15:41.465Z",
+  "totalSources": 6,
   "sections": [
     {
       "id": "section-0",
       "paragraphs": [
         {
           "id": "para-0-0",
-          "content": "The **Erase object** tool allows designers to select and remove unwanted elements from images using an improved lasso selection method, which Figma refined to provide precision control. When objects are moved or removed, the surrounding image retains its original characteristics, preventing visual inconsistencies in backgrounds, colors, and textures. The **Isolate object** feature enables users to separate a subject from its background, allowing them to move the isolated element or apply individual effects such as blur, lighting adjustments, shadow modifications, color shifts, or focus changes. **Expand image** extends an image's background to fit new aspect ratios, solving a common problem in multi-format campaign creation where a single product shot needs adaptation for web banners, mobile displays, and social media without distortion.",
+          "content": "Figma launched three new AI-powered image editing tools—**Erase object**, **Isolate object**, and **Expand image**—on December 10, 2025, enabling precise edits directly on the canvas without exporting to apps like Photoshop.These features consolidate with existing tools like Remove background and Crop in a revamped toolbar, available in Figma Design and Draw for Professional, Organization, and Enterprise plans with AI enabled.The tools use an improved lasso selector for granular control, addressing common pain points in adapting images for marketing assets or mockups.",
           "citations": [
             {
               "primarySource": {
@@ -36,22 +36,22 @@
         },
         {
           "id": "para-0-1",
-          "content": "The consolidated toolbar surfaces background removal as a primary action, acknowledging that removing backgrounds is among the most frequently performed tasks on Figma's platform. By centralizing these tools in one accessible location, designers eliminate the traditional workflow of exporting assets to specialized software, making edits, and reimporting files—a process that introduces delays and context switching. The AI-powered approach does not rely on text prompts or generative models, distinguishing Figma's offering from purely generative tools like Nano Banana and focusing instead on practical, user-directed editing control. This design philosophy makes the tools accessible to creative teams of varying skill levels, reducing dependencies on specialized expertise for routine visual adjustments.",
+          "content": "A Figma promotional video demonstrates how users can now make, edit, and refine visuals entirely within their files using the new toolbar.Designers praise the tools for eliminating platform switches, with one YouTube tutorial highlighting their efficiency for cleaning up images without external software.This update positions Figma as a more complete creative hub, reducing workflow friction for teams handling visual tweaks.",
           "citations": [
             {
               "primarySource": {
-                "id": "source-3",
-                "name": "techcrunch",
-                "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/",
-                "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
+                "id": "source-4",
+                "name": "youtube",
+                "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en",
+                "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
                 "title": "Introducing three new tools for precise image editing in Figma"
               },
               "additionalCount": 1,
               "additionalSources": [
                 {
-                  "id": "source-4",
+                  "id": "source-5",
                   "name": "youtube",
-                  "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en",
+                  "url": "https://www.youtube.com/shorts/62QA4jq-VNk",
                   "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
                   "title": "Introducing three new tools for precise image editing in Figma"
                 }
@@ -63,18 +63,18 @@
     },
     {
       "id": "section-1",
-      "title": "Key Developments",
+      "title": "Breakdown of Erase Object, Isolate Object, and Expand Image Capabilities",
       "paragraphs": [
         {
           "id": "para-1-0",
-          "content": "Competitors Adobe and Canva have offered object removal capabilities for several years, positioning Figma's launch as a necessary catch-up effort rather than innovation. However, Figma's integration of these tools directly into the design canvas without requiring prompt engineering represents a different approach focused on contextual, in-workflow editing. Industry analysts at ContentGrip highlight the practical implications for marketing and design teams: \"Erase and Isolate object remove the need to ping the design team for every background cleanup or object reposition,\" enabling faster turnaround on campaign variations and reducing organizational bottlenecks. The simultaneous announcement of similar features within ChatGPT underscores a broader competitive landscape where creative software vendors are embedding AI capabilities into established design environments.",
+          "content": "**Erase object** lets users select and remove unwanted elements from images using the enhanced lasso tool, preserving surrounding textures and lighting for natural results.**Isolate object** separates a subject from its background, allowing repositioning or effects like blur, desaturation, shadow, color adjustments, or focus while maintaining original image characteristics.These prompt-free AI features streamline tasks like background cleanups in UI mockups or campaign visuals.",
           "citations": [
             {
               "primarySource": {
-                "id": "source-5",
-                "name": "youtube",
-                "url": "https://www.youtube.com/shorts/62QA4jq-VNk",
-                "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
+                "id": "source-3",
+                "name": "techcrunch",
+                "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/",
+                "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
                 "title": "Introducing three new tools for precise image editing in Figma"
               },
               "additionalCount": 1,
@@ -92,20 +92,24 @@
         },
         {
           "id": "para-1-1",
-          "content": "The **Expand image** feature addresses a specific pain point for marketers adapting single assets across multiple formats—allowing rapid iteration for web, mobile, and social media without involving design teams for each variation. By enabling contextual editing directly within design mockups, Figma reduces the back-and-forth cycles common in cross-functional reviews where stakeholders want to visualize small adjustments before finalizing assets. For B2B marketers and brand managers, the tools unlock measurable efficiency gains in creative production, particularly when managing performance marketing tests that require rapid asset variations. Figma's positioning of these updates as part of its broader 2025 feature set—which includes 150+ additions across drawing, prototyping, and collaboration tools—reinforces the platform's evolution toward a full-stack visual design environment.",
-          "citations": [
-            {
-              "primarySource": {
-                "id": "source-7",
-                "name": "techloy",
-                "url": "https://www.techloy.com/figma-adds-long-requested-ai-editing-tools-that-cut-out-the-need-for-photoshop-and-canva/",
-                "favicon": "https://www.google.com/s2/favicons?domain=www.techloy.com&sz=32",
-                "title": "Introducing three new tools for precise image editing in Figma"
-              },
-              "additionalCount": 0,
-              "additionalSources": []
-            }
-          ]
+          "content": "**Expand image** extends backgrounds to new aspect ratios without distortion, ideal for converting square product shots into landscape banners for web or social media.Figma's blog notes these tools join AI image generation to \"close the loop on workflows,\" keeping edits in-context.The centralized toolbar prioritizes frequent actions like background removal for faster access.",
+          "citations": []
+        }
+      ]
+    },
+    {
+      "id": "section-2",
+      "title": "Industry Reactions to Figma's Late but Practical AI Editing Push",
+      "paragraphs": [
+        {
+          "id": "para-2-0",
+          "content": "TechCrunch reports Figma is \"finally catching up\" to Adobe and Canva, which offered object removal years ago, but praises the in-app convenience for granular, text-prompt-free edits.ContentGrip emphasizes benefits for marketers, noting Erase and Isolate reduce design team dependencies for cleanups and enable faster test variations.Analysts highlight how the tools cut back-and-forth in cross-functional reviews by enabling on-the-fly optimizations.",
+          "citations": []
+        },
+        {
+          "id": "para-2-1",
+          "content": "Figma plans to expand these tools across more products in 2026, building on 150+ features from 2025.Release notes frame the update as centralizing AI editing in a contextual toolbar for enhanced productivity.Coverage positions this as a shift toward AI-native platforms, minimizing multi-app chaos for collaborative teams.",
+          "citations": []
         }
       ]
     }
@@ -196,20 +200,14 @@
       "url": "https://www.figma.com/release-notes/",
       "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "Introducing three new tools for precise image editing in Figma"
-    },
-    {
-      "id": "source-7",
-      "name": "techloy",
-      "url": "https://www.techloy.com/figma-adds-long-requested-ai-editing-tools-that-cut-out-the-need-for-photoshop-and-canva/",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.techloy.com&sz=32",
-      "title": "Introducing three new tools for precise image editing in Figma"
     }
   ],
   "heroImage": {
     "url": "https://cdn.sanity.io/images/599r6htc/regionalized/d9cccb73a8e097abe6f4a8ff572c1347a4c56985-3262x1836.png?w=1200&amp;q=70&amp;fit=max&amp;auto=format"
   },
   "sidebarSections": [
-    "Key Developments"
+    "Breakdown of Erase Object, Isolate Object, and Expand Image Capabilities",
+    "Industry Reactions to Figma's Late but Practical AI Editing Push"
   ],
   "relatedArticles": []
 }
