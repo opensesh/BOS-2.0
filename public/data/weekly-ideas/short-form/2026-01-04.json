@@ -1,384 +1,331 @@
 {
   "type": "short-form",
-  "date": "2026-01-04T16:16:46.608Z",
+  "date": "2026-01-04T16:24:52.983Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Subtle releases ear buds with its noise cancelation models",
+      "description": "Subtle's new $199 earbuds will also let you dictate in any app on desktop or phone",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover"
-        }
-      ],
-      "format": "reel",
-      "subcategory": "reel",
-      "hooks": [
-        "Design templates that scale without breaking your brand 🚀",
-        "8 pro tips to make Figma templates bulletproof",
-        "Unlock flexible brand design in under 60 seconds"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick text transitions between template tips",
-            "Include 3-second motion graphics for each key point",
-            "Keep visual energy high with dynamic screen movements"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must clearly communicate core problem",
-            "Use numbered slides with minimal text overlay",
-            "Final slide includes clear call-to-action and profile tag"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Front-load most compelling template design insight",
-            "Use screen recordings of actual Figma workflow",
-            "Add subtle sound design/voiceover for engagement"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame tips as professional design strategy",
-            "Include subtle corporate/professional visual language",
-            "Reference potential business impact of flexible templates"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-energy geometric motion design, electric blue and charcoal color palette, sans-serif typography with sharp angular transitions, quick kinetic text animations, minimal design system screenshots as background texture"
-      },
-      "exampleOutline": [
-        "Rapid fire hook: Why template design matters",
-        "Quick problem statement: Brand consistency vs. flexibility",
-        "8 rapid template design tips (2-3 seconds each)",
-        "Key strategic insight about template architecture",
-        "Quick call-to-action and follow/learn more prompt"
-      ],
-      "hashtags": "#FigmaDesign #DesignSystems #BrandTemplates #AIDesign #CreativeStrategy #DesignTips #ProductDesign #BrandIdentity #DesignWorkflow #CreativeTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 8
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/release-notes/"
-        }
-      ],
-      "format": "quick-image",
-      "subcategory": "quick-image",
-      "hooks": [
-        "Figma's AI just transformed image editing forever 🚀",
-        "3 game-changing image tools you didn't know existed",
-        "Design magic: AI meets precision editing"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick jump cuts between tool demonstrations",
-            "Include screen recordings of actual Figma workflow",
-            "Add text overlay highlighting each AI feature's speed"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Dramatic before/after comparison",
-            "Use sequential slides showing tool progression",
-            "Include minimal text, maximum visual impact"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected visual metaphor about editing",
-            "Use dynamic cursor/UI movement to maintain energy",
-            "Include quick tutorial segments with clear steps"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame as professional productivity enhancement",
-            "Include data/efficiency metrics about new tools",
-            "Use more technical, precise language"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast cyberpunk-inspired color palette, glitchy digital transitions, futuristic typography with sharp edges, neon highlight accents, dynamic geometric overlays suggesting technological precision and AI-driven innovation"
-      },
-      "exampleOutline": [
-        "Provocative Visual Hook: Impossible image edit revealed",
-        "Problem: Traditional editing limitations",
-        "Solution: Three AI-powered Figma tools",
-        "Demonstration: Rapid workflow transformation",
-        "Call-to-Action: Try new Figma features"
-      ],
-      "hashtags": "#FigmaAI #DesignTech #CreativeTools #AIDesign #ImageEditing #ProductivityHack #DesignInnovation #CreativeTech #AIWorkflow #DesignTips",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Forrester",
-          "url": "https://www.forrester.com/blogs/figma-config-2025-in-an-ai-world-design-matters-more-than-ever/"
-        },
-        {
-          "name": "Eweek",
-          "url": "https://www.eweek.com/artificial-intelligence/figma-make-ai-tool-designers/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/05/07/figma-releases-new-ai-powered-tools-for-creating-sites-app-prototypes-and-marketing-assets/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=PASsk7lxTrc"
-        },
-        {
-          "name": "Gadgets360",
-          "url": "https://www.gadgets360.com/ai/news/figma-config-2025-sites-make-buzz-draw-ai-tools-launched-features-8361673"
-        }
-      ],
-      "format": "carousel",
-      "subcategory": "carousel",
-      "hooks": [
-        "Figma Buzz: 3 Game-Changing Features for Designers",
-        "Design Faster, Smarter: Figma's New Superpowers",
-        "Unlock Your Design Workflow's Hidden Potential"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick transitions between feature highlights",
-            "Include dynamic screen recordings of Figma Buzz features",
-            "Add text overlay to explain complex features quickly"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must have a bold, attention-grabbing visual",
-            "Use consistent color scheme across all slides",
-            "Each slide should be readable in 3-5 seconds"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Create a condensed version of carousel content",
-            "Use screen capture with voiceover explanation",
-            "Include dramatic zoom/transition effects"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Add more detailed technical context",
-            "Include professional design workflow implications",
-            "Use more formal, authoritative language"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, tech-forward aesthetic with vibrant gradient backgrounds, clean sans-serif typography, dynamic screen capture overlays, minimal illustration of design tools, high-contrast color palette (blues, purples, electric accent colors), motion graphics highlighting feature transitions"
-      },
-      "exampleOutline": [
-        "Section 1: Provocative Hook & Brand Promise",
-        "Section 2: Design Workflow Challenges",
-        "Section 3: Detailed Feature Breakdown",
-        "Section 4: Productivity Impact Visualization",
-        "Section 5: Call-to-Action & Learning Resources"
-      ],
-      "hashtags": "#FigmaBuzz #DesignTools #AIDesign #CreativeTech #ProductivityHacks #DesignWorkflow #UXDesign #ProductDesign #CreativeTools #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7767791/pexels-photo-7767791.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 1
-    },
-    {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/04/subtle-releases-ear-buds-with-its-noise-cancelation-models/"
         }
       ],
       "format": "story",
       "subcategory": "story",
       "hooks": [
-        "Design Jobs That Actually Spark Joy 🔥",
-        "Insider Secrets: Landing Dream Design Roles",
-        "San Francisco's Hottest Design Career Move"
+        "AI Earbuds That Transform How You Work",
+        "Noise Canceled. Productivity Unleashed.",
+        "The Future of Sound is Here"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use dynamic camera movements between slides",
-            "Highlight designer workspace/environment visually",
-            "Include quick text overlays with key job details"
+            "Use dynamic screen recordings showing earbud features",
+            "Include quick transition animations between feature highlights",
+            "Add subtle text overlays for key specs"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide must preview full job opportunity",
-            "Use progressive reveal design for job details",
-            "Include visually compelling graphics about role"
+            "First slide: Dramatic product hero shot",
+            "Use swipe-triggered animations between slides",
+            "Include data visualization of noise cancellation performance"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Fast-paced editing with design portfolio clips",
-            "Quick text transitions highlighting role requirements",
-            "Include B-roll of San Francisco design scene"
+            "Start with unexpected sound design moment",
+            "Use split-screen comparisons of noise levels",
+            "Include quick user testimonial clip"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "More detailed professional language",
-            "Include specific skill requirements",
-            "Add credibility with Moniker brand positioning"
+            "Frame as productivity technology breakthrough",
+            "Include professional use case scenarios",
+            "Add credibility with technical specification graphics"
           ]
         }
       ],
       "visualDirection": {
         "rating": 8,
-        "description": "Bold, tech-forward aesthetic with San Francisco minimalist design influence. High-contrast color palette featuring deep blues and electric accent colors. Modern sans-serif typography. Dynamic motion graphics showing design system transformations. Incorporate abstract geometric overlays representing brand scalability."
+        "description": "High-contrast cyberpunk-inspired aesthetic with electric blue/deep charcoal color palette. Floating holographic product renders. Sharp, minimal typography. Animated tech-inspired transition effects. Blend of futuristic UI elements with organic sound wave visualizations."
       },
       "exampleOutline": [
-        "Section 1: Hook - Moniker's Exciting Design Role",
-        "Section 2: Role Context - Visual Identity Challenge",
-        "Section 3: Key Responsibilities & Skills",
-        "Section 4: Why This Role Matters",
-        "Section 5: How to Apply/CTA"
+        "Section 1: Dramatic Product Introduction",
+        "Section 2: Noise Cancellation Problem Statement",
+        "Section 3: Technical Innovation Breakdown",
+        "Section 4: Lifestyle/Productivity Impact",
+        "Section 5: Call-to-Action & Availability"
       ],
-      "hashtags": "#DesignJobs #SanFranciscoDesign #CreativeCareer #AIDesign #BrandIdentity #DesignTech #CareerOpportunity #CreativeRole #VisualDesign #TechDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8014528/pexels-photo-8014528.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
+      "hashtags": "#AIEarbuds #TechInnovation #ProductivityHacks #NoiseCancel #FutureOfWork #WearableTech #SoundTechnology #WorkSmart #TechDesign #InnovationUnleashed",
+      "textureIndex": 12
     },
     {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
+      "title": "Tech billionaires cashed out $16 billion in 2025 as stocks soared",
+      "description": "Jeff Bezos led the way. The Amazon founder sold 25 million shares for $5.7 billion in June and July, right around the time he was getting hitched to Lauren Sanchez in Venice.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/03/tech-billionaires-cashed-out-16-billion-in-2025-as-stocks-soared/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "Tech Billionaires' $16B Stock Cashout Bonanza 💰",
+        "Bezos Drops $5.7B While Wedding Bells Ring 💍",
+        "Silicon Valley's Massive Stock Selloff Revealed 📈"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic stock market animation background",
+            "Include quick text overlay with key dollar amounts",
+            "Create rapid-fire visual transitions between billionaire headshots"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Provocative headline with money graphic",
+            "Use infographic-style slides showing stock sale breakdown",
+            "Final slide: Surprising insight or call-to-action"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Open with unexpected sound effect (cash register/stock bell)",
+            "Use quick-cut editing style",
+            "Include subtle motion graphics highlighting key numbers"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "More data-driven, analytical visual approach",
+            "Include professional chart or graph element",
+            "Use more subdued color palette"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy neon-tech color palette (electric blues, vibrant greens), dynamic geometric overlay graphics, floating stock market/dollar iconography, sharp angular typography, subtle glitch/digital texture effects"
+      },
+      "exampleOutline": [
+        "Hook: Attention-grabbing billionaire stock sale headline",
+        "Context: Tech market performance snapshot",
+        "Core Data: $16B total cashout, Bezos details",
+        "Quick Insight: What this means for investors",
+        "Call-to-Action: Follow for more market intel"
+      ],
+      "hashtags": "#TechStocks #BillionaireMove #InvestmentInsights #SiliconValley #MarketTrends #StockMarket #TechMoney #InvestorLife #WealthStrategy #EconomicTrends",
+      "textureIndex": 6
+    },
+    {
+      "title": "California residents can use new tool to demand brokers delete their personal data",
+      "description": "A new tool should make it easier for California residents to limit data brokers’ ability to store and sell their personal information.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/03/california-residents-can-use-new-tool-to-demand-brokers-delete-their-personal-data/"
+        }
+      ],
+      "format": "story",
+      "subcategory": "story",
+      "hooks": [
+        "Your Data Privacy Just Got a Superpower 🛡️",
+        "California's Secret Weapon Against Data Brokers",
+        "Delete Your Data with One Click 🔒"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick, dynamic transitions between data privacy slides",
+            "Include animated graphics showing data deletion process",
+            "Use text overlays with bold, urgent typography"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "Create a step-by-step visual guide for data deletion",
+            "Use infographic-style slides with minimal text",
+            "Include iconographic representations of digital privacy"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with a provocative data privacy statistic",
+            "Use screen recordings demonstrating the tool",
+            "Add energetic voiceover explaining key benefits"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as professional data protection strategy",
+            "Include expert commentary on privacy implications",
+            "Use more formal, authoritative visual language"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast cyberpunk-inspired palette with electric blues and neon accents. Geometric, fragmented compositions suggesting digital deconstruction. Futuristic sans-serif typography with glitch effects. Animated data flow graphics showing information dissolving/disappearing. Minimalist iconography representing privacy and digital autonomy."
+      },
+      "exampleOutline": [
+        "Section 1: Provocative Data Privacy Hook",
+        "Section 2: The Hidden Data Broker Problem",
+        "Section 3: How the New California Tool Works",
+        "Section 4: Step-by-Step Deletion Process",
+        "Section 5: Empowerment Call-to-Action"
+      ],
+      "hashtags": "#DataPrivacy #CaliforniaLaw #DigitalRights #PrivacyTool #TechPrivacy #DataProtection #OnlinePrivacy #PersonalData #PrivacyMatters #TechInnovation",
+      "textureIndex": 12
+    },
+    {
+      "title": "Bitfinex hacker Ilya Lichtenstein credits Trump for early release from prison",
+      "description": "Ilya Lichtenstein, who pled guilty to money laundering charges tied to his role in the massive hack of crypto exchange Bitfinex, has apparently been released early from prison.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/03/bitfinex-hacker-ilya-lichtenstein-credits-trump-for-early-release-from-prison/"
         }
       ],
       "format": "carousel",
       "subcategory": "carousel",
       "hooks": [
-        "Typography that tells Figma's design evolution story",
-        "Behind the scenes: Crafting Figma's custom typeface",
-        "How one font redesigned a design platform"
+        "Trump's Unexpected Gift: Crypto Hacker's Early Freedom",
+        "From Prison to Parole: A Crypto Scandal Unfolds",
+        "Bitfinex Hacker's Shocking Trump Connection Revealed"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick type transformation animations between slides",
-            "Include voiceover explaining font design process",
-            "Add dynamic text reveals matching font evolution"
+            "Use dramatic text overlay to highlight key moments",
+            "Create quick cuts between prison/Trump imagery",
+            "Include subtle animation to maintain viewer engagement"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "Design slides with progressive typography reveal",
-            "Use high-contrast colors between font iterations",
-            "Include behind-the-scenes sketching/design process slides"
+            "First slide must have maximum visual impact",
+            "Use contrasting color schemes between slides",
+            "Progressive reveal of story across 5-7 slides"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Compress story into rapid visual transitions",
-            "Use kinetic typography to highlight key moments",
-            "Include designer interview snippets for authenticity"
+            "Compress narrative into rapid-fire storytelling",
+            "Use bold text callouts for key information",
+            "Include intriguing sound design to maintain attention"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Add professional context about brand identity design",
-            "Include more technical details about font development",
-            "Emphasize strategic thinking behind visual rebrand"
+            "Add more contextual legal/tech background",
+            "Use more professional tone and graphics",
+            "Include potential industry implications"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast cyberpunk-inspired palette with dark blues/electric greens. Typography should feel digital and slightly glitchy. Use geometric overlays suggesting digital surveillance/prison bars. Incorporate subtle motion graphics suggesting narrative progression. Visual mood: tech-noir meets investigative documentary"
+      },
+      "exampleOutline": [
+        "Slide 1: Provocative hook with dramatic visual",
+        "Slide 2: Background on Bitfinex hack",
+        "Slide 3: Lichtenstein's legal journey",
+        "Slide 4: Trump's potential involvement",
+        "Slide 5: Closing insight/call to action"
+      ],
+      "hashtags": "#CryptoNews #TrumpEffect #BitfinexHack #CyberCrime #LegalTech #CryptoCurrency #TechScandal #JusticeSystem #TechNews #CyberSecurity",
+      "textureIndex": 10
+    },
+    {
+      "title": "The State of Content 2026",
+      "description": "A guide on creator culture + our next community call, and yep, we're going on Tour",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Oren Meets World",
+          "url": "https://www.hyperstudios.us/p/the-state-of-content-2026"
+        }
+      ],
+      "format": "reel",
+      "subcategory": "reel",
+      "hooks": [
+        "Creator Economy 2026: 3 Mind-Blowing Shifts",
+        "The Future of Content is Wild",
+        "AI + Creators: Revolution Loading..."
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick cuts every 2-3 seconds",
+            "Start with a provocative visual stat",
+            "Add dynamic text overlays with high contrast"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have bold, shocking headline",
+            "Use infographic-style design for complex ideas",
+            "Ensure each slide can stand alone visually"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Front-load most interesting content in first 3 seconds",
+            "Use screen recording or data visualization",
+            "Include personal reaction/commentary moments"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add professional context and data sources",
+            "Use more formal, authoritative tone",
+            "Include potential strategic implications"
           ]
         }
       ],
       "visualDirection": {
         "rating": 8,
-        "description": "Bold, experimental typography-focused design with dynamic transitions. Use geometric, clean lines reflecting Figma's design ethos. Color palette of muted neutrals with strategic accent colors. Incorporate type specimen-style slides showing font characteristics. Use motion graphics to reveal font transformations. Reference Swiss design principles and contemporary type design aesthetics."
+        "description": "High-contrast cyberpunk-inspired palette with electric blues/neon greens, glitch typography, floating holographic data visualizations, rapid motion graphics simulating digital transformation, futuristic but not alienating"
       },
       "exampleOutline": [
-        "Slide 1: Bold hook + visual teaser of font",
-        "Slide 2: Why Figma needed a custom typeface",
-        "Slide 3: Design challenges in creating custom font",
-        "Slide 4: Key visual iterations of Figma Sans",
-        "Slide 5: Final design and brand impact CTA"
+        "Shocking Stat/Pattern Interrupt",
+        "3 Creator Economy Transformations",
+        "AI's Real Impact on Content",
+        "What This Means for You",
+        "Community Call-to-Action"
       ],
-      "hashtags": "#DesignSystem #Typography #FigmaDesign #BrandIdentity #CreativeProcess #AIDesign #ProductDesign #TypeDesign #BrandEvolution #DesignTechnology",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7767791/pexels-photo-7767791.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
+      "hashtags": "#CreatorEconomy #AIContent #FutureOfWork #ContentCreation #TechTrends #CreativeTech #AIRevolution #DigitalStrategy #InnovationInsights #ContentCreators",
+      "textureIndex": 11
     }
   ]
 }
