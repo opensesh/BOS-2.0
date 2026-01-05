@@ -1,268 +1,211 @@
 {
   "type": "long-form",
-  "date": "2026-01-05T16:20:25.206Z",
+  "date": "2026-01-05T16:29:00.242Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "CES 2026: Follow live as NVIDIA, Lego, AMD, Amazon, and more make their big reveals",
+      "description": "CES 2026, the annual consumer tech conference held in Las Vegas is here. And lucky for you, we have TechCrunch editors and reporters on the ground to cover the news, scout out the interesting, weird, and relevant (and some not so relevant) tech, and of course the people working on it. Even before the official kickoff of CES on January 6, there will be product reveals from Amazon, Nvidia, Hyundai, AMD, and more. AI is at the center of most of the action. But this year, we're hearing a lot more ab",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/storyline/ces-2026-follow-live-as-nvidia-lego-amd-amazon-and-more-make-their-big-reveals/"
         }
       ],
       "format": "livestream",
       "subcategory": "leadership",
       "hooks": [
-        "Brand Templates That Don't Break: Figma Buzz Secrets",
-        "Design Guardrails: Flex Your Brand Without Snapping",
-        "Figma Buzz: Make Templates That Scale Effortlessly"
+        "CES 2026: AI Tech Reveals Live Right Now!",
+        "Tech Giants Dropping Secrets - Watch Exclusive",
+        "Breaking: Future Tech Unveiled Before Your Eyes"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use live chat to encourage real-time audience interaction",
-            "Prepare pre-screened Q&A segments with most interesting viewer questions",
-            "Use picture-in-picture to demonstrate Figma workflow while maintaining personal connection"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Dynamic split-screen design with Figma interface on one side, presenter on the other. Bold, tech-inspired color palette with electric blue and deep charcoal. Modern sans-serif typography with animated transitions. Motion graphics highlighting template flexibility. Clean, experimental layout that feels both professional and cutting-edge."
-      },
-      "exampleOutline": [
-        "Intro: Live Stream Kick-off & Personal Design Challenge",
-        "The Template Dilemma: Why Brands Struggle with Scalability",
-        "8 Strategic Tips for Bulletproof Brand Templates",
-        "Live Q&A: Audience Template Challenges & Solutions",
-        "Closing: Future of Adaptive Design Systems"
-      ],
-      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystems #CreativeWorkflow #UIDesign #ProductDesign #DesignTips #AIDesign #OpenSeshLive #DesignCommunity",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 9
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techloy",
-          "url": "https://www.techloy.com/figma-adds-long-requested-ai-editing-tools-that-cut-out-the-need-for-photoshop-and-canva/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/release-notes/"
-        }
-      ],
-      "format": "tutorial",
-      "subcategory": "instructional",
-      "hooks": [
-        "Design Faster: 3 AI Tools That Transform Image Editing",
-        "Figma's New AI: Editing Magic in 3 Simple Steps",
-        "Precision Editing Unlocked: Figma's AI Revolution"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use screen recording with high-contrast cursor tracking",
-            "Create chapter markers for each AI tool demonstration",
-            "Include picture-in-picture of presenter for personal connection"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, dynamic visual style with high-contrast Figma interface captures. Use electric blue and deep gray color palette. Implement smooth motion graphics to highlight tool transitions. Typography should be clean, sans-serif with slight futuristic edge. Incorporate subtle AI-inspired graphic overlays to emphasize technological innovation."
-      },
-      "exampleOutline": [
-        "Introduction: The Image Editing Challenges Designers Face",
-        "Context: Why Traditional Editing Tools Fall Short",
-        "Tool 1: Detailed Walkthrough of First AI Editing Feature",
-        "Tool 2: Comprehensive Demonstration of Second AI Tool",
-        "Tool 3: Final AI Tool Deep Dive and Integration"
-      ],
-      "hashtags": "#FigmaAI #DesignTips #AIDesign #CreativeTools #ImageEditing #UXDesign #ProductDesign #AITechnology #DesignWorkflow #CreativeTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 11
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Forum",
-          "url": "https://forum.figma.com/product-updates-3/new-features-in-figma-buzz-46631"
-        },
-        {
-          "name": "Forrester",
-          "url": "https://www.forrester.com/blogs/figma-config-2025-in-an-ai-world-design-matters-more-than-ever/"
-        },
-        {
-          "name": "Eweek",
-          "url": "https://www.eweek.com/artificial-intelligence/figma-make-ai-tool-designers/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/05/07/figma-releases-new-ai-powered-tools-for-creating-sites-app-prototypes-and-marketing-assets/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=PASsk7lxTrc"
-        }
-      ],
-      "format": "tutorial",
-      "subcategory": "instructional",
-      "hooks": [
-        "Design Faster: 3 Figma Buzz Hacks Revealed",
-        "Unlock Marketing Magic with Figma's New Tools",
-        "Transform Your Workflow: Figma Buzz Secrets"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use screen recording with clear cursor tracking",
-            "Include picture-in-picture for personal connection",
-            "Add chapter markers for easy navigation"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, dynamic visual style with high-contrast color palette. Experimental typography with clean, modern motion graphics. Incorporate Figma's brand colors with unexpected gradient overlays. Use dynamic screen transition animations between tutorial steps. Aesthetic references: Swiss design meets tech minimalism with playful AI-inspired visual elements."
-      },
-      "exampleOutline": [
-        "Introduction: Why Figma Buzz Matters",
-        "Problem: Design Workflow Inefficiencies",
-        "Step-by-Step: 3 New Feature Deep Dive",
-        "Pro Tips: Maximizing Each Feature",
-        "Conclusion: Future of Design Workflows"
-      ],
-      "hashtags": "#FigmaBuzz #DesignTips #AIDesign #CreativeWorkflow #ProductivityHacks #MarketingDesign #UIUXTips #DesignTools #CreativeTech #FigmaHacks",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7903783/pexels-photo-7903783.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
-    },
-    {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
-        }
-      ],
-      "format": "video",
-      "subcategory": "thought-leadership",
-      "hooks": [
-        "Design Jobs That Pay $200K? Insider Secrets Revealed",
-        "How Top Designers Land Dream Jobs at Moniker",
-        "Cracking the Code: Senior Design Roles Decoded"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use dynamic screen recordings of portfolio review process",
-            "Include picture-in-picture with host commentary",
-            "Create chapter markers for easy navigation"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, tech-forward visual aesthetic with San Francisco design scene inspiration. High-contrast color palette (deep navy, electric orange, clean white). Dynamic motion graphics showing job application flow. Modern sans-serif typography with technical precision. Animated data visualizations of design career progression. Clean, minimal UI overlays showcasing design portfolio techniques."
-      },
-      "exampleOutline": [
-        "Intro: Moniker Design Career Landscape (30s)",
-        "The Senior Designer Role Decoded (2min)",
-        "Skills & Portfolio Requirements Breakdown (3-4min)",
-        "Insider Application Strategies (2min)",
-        "Call-to-Action: Portfolio Building Resources (30s)"
-      ],
-      "hashtags": "#DesignCareers #SeniorDesigner #CreativeJobs #SanFranciscoDesign #DesignTips #CareerAdvice #CreativeProfessionals #DesignJobs #TechCareers #DesignPortfolio",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 12
-    },
-    {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
-        }
-      ],
-      "format": "documentary",
-      "subcategory": "framework",
-      "hooks": [
-        "How a typeface reveals the soul of design",
-        "The hidden language of brand typography",
-        "Design's most intimate creation: A typeface's journey"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use cinematic B-roll of design process",
-            "Include designer interview clips with high production value",
-            "Create chapter markers highlighting key typeface development stages"
+            "Enable Super Chat for real-time audience interaction",
+            "Use multi-camera setup for dynamic live coverage",
+            "Prepare pre-loaded graphics/overlays for instant context switching"
           ]
         }
       ],
       "visualDirection": {
         "rating": 8,
-        "description": "Sleek, minimalist documentary aesthetic with high-contrast typography. Muted color palette with strategic color pops. Dynamic motion graphics showing type evolution. Clean, grid-based compositions with elegant transitions. Reference: Helvetica documentary visual style mixed with modern design language."
+        "description": "High-energy cyberpunk-inspired visual aesthetic with dynamic split-screen layouts, real-time data overlays, futuristic typography in electric blue/neon accent colors, rapid motion graphics transitioning between live event scenes and product highlights, minimalist but information-dense screen composition"
       },
       "exampleOutline": [
-        "Opening: Dramatic reveal of Figma Sans creation moment",
-        "Context: Figma's design philosophy and brand evolution",
-        "Deep Dive: Technical challenges of custom typeface design",
-        "Creative Process: Interviews with type designers and brand team",
-        "Closing: Future of design communication through typography"
+        "Intro: Energetic Live Stream Welcome & Event Overview",
+        "Live Product Reveal Breakdown",
+        "Real-Time Tech Insights & Expert Commentary",
+        "Audience Q&A Interactive Segment",
+        "Closing Predictions & Future Tech Trends"
       ],
-      "hashtags": "#TypeDesign #Figma #DesignSystem #BrandIdentity #Typography #CreativeProcess #ProductDesign #AIDesign #DesignTrends #CreativeTechnology",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
+      "hashtags": "#CES2026 #TechLive #AIRevolution #FutureTech #InnovationNow #TechEvent #NvidiaLaunch #AmazonTech #AITrends #LiveTechCoverage",
+      "textureIndex": 3
+    },
+    {
+      "title": "This week on How I AI: Zapier's CEO shares his personal AI stack",
+      "description": "Your weekly listens from How I AI, part of the Lenny's Podcast Network",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/this-week-on-how-i-ai-zapiers-ceo"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "AI Workflow Secrets: Zapier CEO's Automation Playbook",
+        "Build Your Ultimate AI Tech Stack Now",
+        "Inside Zapier's CEO Personal AI Toolkit"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use screen recording to show actual AI tool interfaces",
+            "Create clear chapter markers for each workflow step",
+            "Include picture-in-picture CEO commentary for authenticity"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy tech-inspired visual design with electric blue/deep charcoal color palette. Dynamic grid-based motion graphics showing workflow connections. Sharp, geometric sans-serif typography. Animated connection lines between AI tools simulating real-time integration. Clean, futuristic aesthetic that feels both professional and cutting-edge."
+      },
+      "exampleOutline": [
+        "Intro: Why AI Workflows Matter",
+        "Current Productivity Challenges in Tech",
+        "Zapier CEO's 5-Step AI Integration Method",
+        "Tactical Tool Selection & Configuration",
+        "Live Demonstration of Integrated Workflow"
+      ],
+      "hashtags": "#AIWorkflow #ZapierCEO #AIProductivity #WorkflowAutomation #AITools #TechHacks #ProductivityTips #AIIntegration #EntrepreneurAI #TechInnovation",
+      "textureIndex": 4
+    },
+    {
+      "title": "Amazon&#8217;s AI assistant comes to the web with Alexa.com",
+      "description": "Amazon is bringing Alexa+ to the web with a new Alexa.com site, expanding its AI assistant beyond devices and positioning it as a family-focused, agent-style chatbot.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/05/alexa-without-an-echo-amazons-ai-chatbot-comes-to-the-web-and-a-revamped-alexa-app/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "Alexa Just Escaped Your Smart Speaker Forever",
+        "Amazon's AI Is Breaking Free Online",
+        "The Future of Alexa: No Device Needed"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dynamic screen recordings showing Alexa.com interface",
+            "Include picture-in-picture reactions/commentary",
+            "Create clear chapter markers for navigation"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-futuristic aesthetic with electric blue and deep charcoal color palette. Dynamic motion graphics showing AI transformation. Clean, sans-serif typography with high-contrast text. Animated UI overlays demonstrating Alexa's web capabilities. Sleek, modern transitions between sections."
+      },
+      "exampleOutline": [
+        "Opening: Dramatic reveal of Alexa.com",
+        "Context: Limitations of current AI assistants",
+        "Core Content: Alexa's new web-based capabilities",
+        "Key Insights: Implications for AI and personal computing",
+        "CTA: Explore Alexa.com beta"
+      ],
+      "hashtags": "#AI #AmazonAlexa #TechInnovation #WebAI #ArtificialIntelligence #FutureOfTech #ChatbotRevolution #AmazonTech #AIAssistant #TechNews",
+      "textureIndex": 9
+    },
+    {
+      "title": "Google previews new Gemini features for TV at CES 2026",
+      "description": "Google TV will let you ask Gemini to find and edit your photos, adjust your TV settings and more.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/05/google-previews-new-gemini-features-for-tv-at-ces-2026/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "AI Is About to Transform Your TV Forever",
+        "Google's Gemini: The TV Assistant You Never Knew You Needed",
+        "Watch How AI Changes Television Interaction"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use picture-in-picture demo of Gemini TV interactions",
+            "Include live screen recording of feature walkthrough",
+            "Create dynamic chapter markers for easy navigation"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech aesthetic with deep blues and electric accents. Dynamic motion graphics simulating AI interactions. Clean, futuristic typography with subtle glitch/tech overlay effects. Minimal but energetic composition emphasizing technological innovation. Incorporate subtle holographic/translucent UI elements to suggest AI intelligence."
+      },
+      "exampleOutline": [
+        "Opening: Dramatic AI TV interaction teaser",
+        "Context: Current TV interaction limitations",
+        "Gemini Features Deep Dive: Photo editing, settings control",
+        "Technical Breakdown: How AI understands context",
+        "Future Implications and CTA"
+      ],
+      "hashtags": "#GoogleGemini #AITV #TechInnovation #FutureOfTelevision #AIAssistant #CES2026 #SmartTV #TechTrends #AIFeatures #GoogleTech",
+      "textureIndex": 1
+    },
+    {
+      "title": "Zapier’s CEO shares his personal AI stack | Wade Foster",
+      "description": "Watch now | &#127897;&#65039; Wade Foster (co-founder and CEO of Zapier) on extracting company culture from meeting transcripts, building interview evaluation agents, and finding hidden talent with Grok",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/zapiers-ceo-shares-his-personal-ai-stack"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "How Zapier's CEO Uses AI to Transform Company Culture",
+        "Inside Wade Foster's Secret AI Talent Discovery Toolkit",
+        "AI Strategies from a Startup Genius: Wade Foster Revealed"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use cinematic b-roll of Foster in office/workspace",
+            "Include screen recordings of actual AI tools being used",
+            "Create chapter markers for easy navigation of technical segments"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Modern documentary aesthetic: High-contrast blue and white color palette, clean Helvetica typography, dynamic split-screen transitions, subtle parallax motion graphics, minimalist infographic overlays with technical data visualizations, soft lens flares to create technological atmosphere"
+      },
+      "exampleOutline": [
+        "Cold Open: Dramatic AI workflow demonstration",
+        "Personal Journey: Foster's AI discovery process",
+        "Technical Deep Dive: Specific AI stack and tools",
+        "Case Study: Real-world AI talent identification method",
+        "Future Vision and Call-to-Action"
+      ],
+      "hashtags": "#AIStrategy #ZapierCEO #ProductivityHacks #AIWorkflow #TechLeadership #StartupInnovation #AITools #WadeFoster #EntrepreneurTips #InnovationTechnology",
+      "textureIndex": 0
     }
   ]
 }
