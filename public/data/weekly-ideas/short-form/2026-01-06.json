@@ -1,84 +1,266 @@
 {
   "type": "short-form",
-  "date": "2026-01-06T16:19:11.584Z",
+  "date": "2026-01-06T16:29:36.517Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Meta pauses international expansion of its Ray-Ban Display glasses",
+      "description": "Meta had originally planned to launch the glasses in France, Italy, Canada, and the U.K. in early 2026.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/issue/221"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/06/meta-pauses-international-expansion-of-its-ray-ban-display-glasses/"
         }
       ],
-      "format": "quick-image",
-      "subcategory": "quick-image",
+      "format": "story",
+      "subcategory": "story",
       "hooks": [
-        "Design templates that don't break your brand's soul 🔥",
-        "Figma Buzz: Flex Your Brand Without Breaking It",
-        "8 Secrets to Bulletproof Design Templates 🚀"
+        "Meta's Ray-Ban Glasses: Global Pause Explained",
+        "Why Meta Stopped Expanding Smart Glasses",
+        "Tech Giant's Surprise International Retreat"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use fast jump cuts between template examples",
-            "Include text overlays highlighting each key tip",
-            "Create dynamic motion graphics showing template flexibility"
+            "Use quick text transitions between key points",
+            "Include screen recording or mockup of glasses",
+            "Keep energy high with dynamic motion graphics"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide must visually shock/intrigue viewer",
-            "Use square 1:1 grid for clean template mockups",
-            "Progressive reveal of template design principles"
+            "First slide must have provocative visual statistic",
+            "Use infographic-style design for complex information",
+            "Create a narrative flow between slides"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with unexpected visual metaphor about flexibility",
-            "Use screen recordings showing actual Figma template editing",
-            "High energy transitions between template examples"
+            "Add dramatic voice-over narration",
+            "Use rapid-cut editing technique",
+            "Include unexpected visual metaphors"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "More technical, detailed template breakdown",
-            "Include professional designer case study snippets",
-            "Emphasize business value of flexible design systems"
+            "Frame as strategic business analysis",
+            "Use more technical language and data points",
+            "Include expert commentary perspective"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast color palette with electric blue/deep charcoal, geometric grid-based layouts, glitch/digital distortion effects, modern sans-serif typography, dynamic motion graphics showing template transformations"
+        "description": "High-contrast tech-noir aesthetic with glitch-inspired typography, deep blues and electric teals, angular geometric overlays, subtle holographic elements suggesting technological complexity, motion design that suggests digital uncertainty"
       },
       "exampleOutline": [
-        "Hook: Provocative design template challenge",
-        "Problem: Rigid brand guidelines limit creativity",
-        "Solution: 8 strategic template design principles",
-        "Key Insights: Flexibility vs. Brand Consistency",
-        "Call-to-Action: Download template framework"
+        "Section 1: Dramatic Hook - Meta's Global Pause",
+        "Section 2: Original Expansion Plans Revealed",
+        "Section 3: Strategic Reasoning Behind Decision",
+        "Section 4: Market Implications & Future Outlook",
+        "Section 5: Call to Follow Tech Trends"
       ],
-      "hashtags": "#DesignTemplates #FigmaTips #BrandDesign #CreativeStrategy #AIDesign #DesignSystem #ProductDesign #BrandIdentity #DesignInnovation #CreativeTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 9
+      "hashtags": "#MetaTech #AIGlasses #TechInnovation #FutureOfWearables #SmartGlasses #TechNews #InnovationStrategy #AugmentedReality #BusinessTrends #TechPause",
+      "textureIndex": 10
+    },
+    {
+      "title": "Amazon&#8217;s Ring doorbells get fire alerts, an app store and new sensors",
+      "description": "The new Ring Sensors can detect motion, openings, glass breakage, and smoke, and can also monitor carbon monoxide levels, leaks, temperature changes, and air quality.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/06/amazons-ring-doorbells-get-fire-alerts-an-app-store-and-new-sensors/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "Smart Home Revolution: Ring's New Sensors Are Wild 🚨",
+        "Your Home Just Got a Tech Upgrade 🏠🔮",
+        "Security Meets AI: Ring's Insane New Features"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick jump cuts between sensor visuals",
+            "Incorporate futuristic UI overlay animations",
+            "Add dramatic sound effect transitions"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Shocking statistic about home safety",
+            "Use infographic-style design for sensor capabilities",
+            "Final slide: Clear call-to-action with product link"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected home emergency scenario",
+            "Use split-screen comparison of old vs new tech",
+            "End with direct product demonstration"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as technology innovation narrative",
+            "Include expert commentary style text overlay",
+            "Emphasize professional/enterprise potential"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "Cyberpunk-meets-minimalist aesthetic. High-contrast neon blues and blacks. Glitch-style typography. Holographic sensor overlay graphics. Futuristic UI elements with transparent, floating design. Incorporate subtle motion graphics simulating sensor detection zones."
+      },
+      "exampleOutline": [
+        "Hook: Provocative opening about home tech revolution",
+        "Problem: Current home security limitations",
+        "Solution: Ring's multi-sensor breakthrough",
+        "Technical Highlight: Key sensor capabilities",
+        "Future Vision: Smart home potential"
+      ],
+      "hashtags": "#SmartHome #TechInnovation #RingSensors #HomeSecurity #AITech #FutureOfLiving #TechTrends #HomeProtection #InnovationAlert #SmartSensors",
+      "textureIndex": 3
+    },
+    {
+      "title": "Mikon van Gastel: Co-Founder of Sibling Rivalry on why presentation skills matter more than design skills",
+      "description": "Episode 159 of the Design Better Podcast",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Design Better",
+          "url": "https://designbetterpodcast.com/p/mikon-van-gastel"
+        }
+      ],
+      "format": "reel",
+      "subcategory": "reel",
+      "hooks": [
+        "Why presentations trump design skills every time",
+        "Design secret: It's not about the pixels",
+        "Killer presentations > perfect design work"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick text transitions to highlight key points",
+            "Include dynamic motion graphics of presentation slides",
+            "Add subtle professional background texture/gradient"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have provocative stat/quote",
+            "Use consistent color palette across slides",
+            "Progressive reveal of key insights"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected visual pattern interrupt",
+            "Use screen recording/slide demonstration techniques",
+            "Include on-screen text for key takeaways"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add professional context to storytelling",
+            "Include subtle corporate design elements",
+            "Emphasize career development angle"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Modern tech-inspired aesthetic with dynamic typography, bold sans-serif fonts, deep navy and electric blue color palette, minimalist motion graphics, smooth slide transitions, professional yet edgy visual style with clean geometric overlays"
+      },
+      "exampleOutline": [
+        "Hook: Provocative presentation skills statement",
+        "Problem: Design skills aren't enough",
+        "Core Insight: Mikon van Gastel's key perspective",
+        "Practical Takeaway: How to improve presentation skills",
+        "Call-to-Action: Learn more/follow up"
+      ],
+      "hashtags": "#DesignSkills #PresentationTips #CareerGrowth #CreativeProfessionals #DesignCommunication #ProfessionalDevelopment #CreativeStrategy #AIDesign #DesignThinking #PresentationMastery",
+      "textureIndex": 6
+    },
+    {
+      "title": "Narwal adds AI to its vacuum cleaners to monitor pets and find jewelry",
+      "description": "Narwal's new robo vacuum cleaner switches to quiet mode near a baby's crib.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/05/narwal-adds-ai-to-its-vacuum-cleaners-to-monitor-pets-and-find-jewelry/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "AI Vacuum: Your Pet's New Best Friend",
+        "Smart Cleaning Just Got Weird (and Cool)",
+        "Robot Vacuum Meets Pet Nanny Technology"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use split-screen animation showing vacuum and pet interaction",
+            "Include humorous robot POV perspective",
+            "Quick cuts between tech and cute pet moments"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Shocking AI vacuum capability",
+            "Progressive reveal of features through slides",
+            "Include playful infographic-style design elements"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected pet/vacuum interaction",
+            "Use text overlays highlighting key AI features",
+            "Include reaction-style commentary voiceover"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as innovative tech solution",
+            "Highlight professional implications of AI integration",
+            "Use data-driven visual comparisons"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "High-contrast cyberpunk-meets-cute aesthetic. Neon blue/purple gradient background. Playful robot illustrations with cartoon pet characters. Dynamic diagonal compositions. Futuristic sans-serif typography with glitch effects. Minimalist iconography representing AI capabilities."
+      },
+      "exampleOutline": [
+        "Hook: Surprising AI Vacuum Capability",
+        "Context: Modern Home Technology Challenge",
+        "Tech Demonstration: AI Pet Monitoring",
+        "Unexpected Benefit: Jewelry Finding Feature",
+        "Call-to-Action: Future of Smart Home"
+      ],
+      "hashtags": "#AIVacuum #SmartHome #PetTech #HomeInnovation #RoboticCleaning #TechTrends #FutureOfCleaning #AIInnovation #HomeAssistant #TechLifestyle",
+      "textureIndex": 7
     },
     {
       "title": "AMD unveils new AI PC processors for general use and gaming at CES",
@@ -86,295 +268,64 @@
       "starred": false,
       "sources": [
         {
-          "name": "TechCrunch AI",
+          "name": "TechCrunch",
           "url": "https://techcrunch.com/2026/01/05/amd-unveils-new-ai-pc-processors-for-general-use-and-gaming-at-ces/"
-        },
-        {
-          "name": "Amd",
-          "url": "https://www.amd.com/en/corporate/events/ces.html"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=fF3CLewqvL8"
-        },
-        {
-          "name": "Pcper",
-          "url": "https://pcper.com/2026/01/ces-2026-amd-client-and-graphics-update-includes-ryzen-9850x3d-cpu/"
-        }
-      ],
-      "format": "story",
-      "subcategory": "story",
-      "hooks": [
-        "AI PCs: The Future is Now 🚀",
-        "AMD's Game-Changing Processor Revolution",
-        "Supercharge Your Computer with AI Chips"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick jump cuts to maintain energy",
-            "Highlight processor with dynamic 3D graphics",
-            "Include text overlays explaining key features"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must have eye-catching processor visual",
-            "Use swipe-up animations to reveal details",
-            "Each slide focuses on one key processor benefit"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected visual metaphor about processing power",
-            "Use gaming and creative workflow demonstrations",
-            "Include quick benchmark comparisons"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame as professional productivity breakthrough",
-            "Include expert commentary snippet",
-            "Highlight enterprise and creative professional applications"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Cyberpunk-inspired color palette with electric blues and neon accents. Geometric, fractured compositions suggesting computational complexity. Futuristic typography with transparent/glitch effects. Dynamic motion graphics showing processor performance as abstract data flows. High-contrast visual language balancing technical precision with creative energy."
-      },
-      "exampleOutline": [
-        "Opening: Dramatic processor reveal",
-        "Problem: Limitations of current computing",
-        "Solution: AMD's AI processor capabilities",
-        "Key Performance Insights",
-        "Future Potential Call-to-Action"
-      ],
-      "hashtags": "#AMDCES #AIProcessor #TechInnovation #ComputerUpgrade #FutureOfComputing #CreativeTech #GamingPC #AIComputing #TechTrends #ProcessorPower",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 10
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techloy",
-          "url": "https://www.techloy.com/figma-adds-long-requested-ai-editing-tools-that-cut-out-the-need-for-photoshop-and-canva/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Theaiinsider",
-          "url": "https://theaiinsider.tech/2025/12/12/figma-introduces-new-ai-powered-image-editing-suite-to-streamline-design-workflows/"
-        }
-      ],
-      "format": "reel",
-      "subcategory": "reel",
-      "hooks": [
-        "Figma just dropped 3 AI image editing game-changers 🔥",
-        "Design faster, smarter: Figma's new AI tools revealed",
-        "Photoshop who? Figma's AI is taking over 🚀"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick, dynamic screen recordings showing tool in action",
-            "Include text overlay highlighting key features",
-            "Use fast-paced editing with jump cuts to maintain energy"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Provocative before/after visual",
-            "Use numbered slides to break down each tool",
-            "Include actionable design workflow tips on each slide"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected visual or pattern interrupt",
-            "Use screen capture with animated cursor movements",
-            "Include clear verbal explanation with on-screen text"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame as professional productivity enhancement",
-            "Include brief technical explanation of AI methodology",
-            "Use more formal, expertise-driven tone"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-energy cyberpunk-inspired color palette with electric blues and neon accents, dynamic diagonal compositions, floating holographic UI elements, sans-serif motion typography, rapid transition animations simulating digital fluidity"
-      },
-      "exampleOutline": [
-        "Hook: Provocative AI design revolution statement",
-        "Problem: Current image editing limitations",
-        "Solution: Three Figma AI tools breakdown",
-        "Demonstration: Quick tool functionality showcase",
-        "Call-to-Action: Try new Figma features"
-      ],
-      "hashtags": "#FigmaAI #DesignTech #AIDesign #CreativeTech #ProductivityHack #DesignTools #AICreativity #FigmaUpdate #CreativeWorkflow #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7245606/pexels-photo-7245606.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 6
-    },
-    {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
         }
       ],
       "format": "carousel",
       "subcategory": "carousel",
       "hooks": [
-        "Design Jobs That Actually Change the Creative Landscape",
-        "San Francisco's Most Wanted: Senior Design Role",
-        "Beyond Portfolios: What Top Design Firms Want"
+        "AI Chips That Supercharge Your PC Just Dropped 🚀",
+        "Gaming + Creation: AMD's New Processor Revolution",
+        "Future of Computing Fits in Your Laptop Now"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use dynamic motion graphics between slides",
-            "Include quick visual transitions to maintain engagement",
-            "Add subtle text animations to highlight key points"
+            "Use dynamic motion graphics showing processor transformations",
+            "Include quick performance comparison animations",
+            "Add energetic text transitions between slides"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide must be visually striking and provocative",
-            "Use consistent color palette across all slides",
-            "Design each slide as a standalone visual story"
+            "Design each slide with clear, high-contrast visual hierarchy",
+            "Use consistent color palette matching AMD's brand",
+            "Include one key statistic or technical detail per slide"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
             "Compress carousel content into 60-second narrative arc",
-            "Use high-energy voiceover to explain visual transitions",
-            "Include bold text overlays matching carousel design"
+            "Use voiceover to explain technical details quickly",
+            "Include screen recordings demonstrating processor capabilities"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Add more professional context and industry insights",
-            "Include specific role requirements as text overlay",
-            "Use more formal, authoritative design language"
+            "Add more technical depth in slide captions",
+            "Include professional context about computing evolution",
+            "Use more formal, authoritative visual language"
           ]
         }
       ],
       "visualDirection": {
-        "rating": 8,
-        "description": "Bold, tech-forward aesthetic with high-contrast geometric typography, deep navy and electric cyan color palette, minimal Swiss design influence, angular graphic elements suggesting innovation and precision, clean san-serif fonts with occasional dramatic scale shifts"
+        "rating": 7,
+        "description": "High-energy tech aesthetic with electric blue and charcoal gray color scheme. Futuristic, angular compositions with translucent processor/circuit overlays. Modern sans-serif typography with subtle glitch/digital effect animations. Incorporate abstract technological textures suggesting computational complexity."
       },
       "exampleOutline": [
-        "Slide 1: Provocative Job Opportunity Hook",
-        "Slide 2: Moniker Company Context",
-        "Slide 3: Role Specific Requirements",
-        "Slide 4: Ideal Candidate Profile",
-        "Slide 5: Call-to-Action/Application Details"
+        "Slide 1: Bold Hook & Processor Reveal",
+        "Slide 2: Performance Comparison Graphic",
+        "Slide 3: AI Capabilities Breakdown",
+        "Slide 4: Gaming vs. Creation Potential",
+        "Slide 5: Future Computing Call-to-Action"
       ],
-      "hashtags": "#DesignJobs #CreativeCareers #SanFranciscoDesign #TechDesign #BrandIdentity #DesignCommunity #CareerOpportunity #CreativeIndustry #DesignTalent #AIDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 11
-    },
-    {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
-        }
-      ],
-      "format": "quick-image",
-      "subcategory": "quick-image",
-      "hooks": [
-        "Design nerds, meet the font that changed everything",
-        "Typography just got a Figma-sized upgrade",
-        "When designers create their own typeface magic"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick type-animation transitions to showcase font stages",
-            "Include split-screen comparisons of old vs new typeface",
-            "Add playful motion graphics highlighting type details"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Dramatic reveal of Figma Sans",
-            "Use each slide to showcase different font weights/styles",
-            "Final slide: Behind-the-scenes design process teaser"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Fast-paced typography reveal sequence",
-            "Include designer interview snippet for authenticity",
-            "Use quick cuts to maintain high energy"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame as professional design evolution story",
-            "Include technical design process insights",
-            "Highlight strategic branding implications"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 8,
-        "description": "High-contrast color palette with electric blue and clean white, dynamic geometric compositions, kinetic typography transitions, minimalist Swiss design influence with unexpected digital glitch elements, emphasizing technological precision and creative fluidity"
-      },
-      "exampleOutline": [
-        "Section 1: Provocative font reveal moment",
-        "Section 2: Design challenge/brand identity problem",
-        "Section 3: Figma Sans design philosophy",
-        "Section 4: Technical design breakthrough",
-        "Section 5: Community impact call-to-action"
-      ],
-      "hashtags": "#FigmaSans #DesignSystem #Typography #CreativeProcess #ProductDesign #BrandIdentity #AIDesign #CreativeTech #DesignInnovation #FontDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 2
+      "hashtags": "#AMD #AIProcessors #TechInnovation #ComputerTech #GamersUnite #AIComputing #TechNews #ProcessorUpgrade #FutureOfComputing #InnovationMatters",
+      "textureIndex": 3
     }
   ]
 }

@@ -1,60 +1,47 @@
 {
   "type": "long-form",
-  "date": "2026-01-06T16:19:11.584Z",
+  "date": "2026-01-06T16:30:27.726Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Best of Lenny’s Newsletter 2026",
+      "description": "The 25 best posts from the past year, plus a few all-time classics",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/issue/221"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover"
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/best-of-lennys-newsletter-2026"
         }
       ],
-      "format": "documentary",
-      "subcategory": "framework",
+      "format": "tutorial",
+      "subcategory": "instructional",
       "hooks": [
-        "Design Templates That Never Break Brand Guidelines",
-        "Unlock Figma's Secret Template Superpowers",
-        "How Pro Designers Create Bulletproof Brand Systems"
+        "Unlock Lenny's Top 25 Product Insights",
+        "Master Product Strategy in 10 Minutes",
+        "Your 2026 Product Playbook Revealed"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use cinematic B-roll of designers in creative spaces",
-            "Include dynamic screen recordings with Picture-in-Picture commentary",
-            "Create chapter markers for easy navigation of template creation process"
+            "Use clear chapter markers for each newsletter highlight",
+            "Include dynamic screen recordings of key insights",
+            "Create visual summaries for complex concepts"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Modern, high-contrast color palette with deep blues and electric accents. Kinetic typography with slide-in motion graphics. Split-screen compositions showing template design alongside real-world application. Incorporate design system wireframes and dynamic Figma interface overlays. Aesthetic references: Bauhaus design principles, Apple design documentation, WIRED magazine infographics"
+        "description": "Bold, tech-forward design with clean product interface aesthetic. Use dynamic blue-gray color palette with sharp geometric typography. Incorporate subtle motion graphics that highlight key text and transition between newsletter sections. Blend minimal startup design language with elegant information hierarchy. Use picture-in-picture technique to showcase newsletter excerpts alongside expert commentary."
       },
       "exampleOutline": [
-        "Cold Open: Designer's Design Nightmare Scenario",
-        "Problem Statement: Brand Consistency vs. Flexibility",
-        "8 Strategic Template Design Principles",
-        "Case Studies: Successful Brand Template Ecosystems",
-        "Final Actionable Takeaways and Call to Action"
+        "Introduction: Why These 25 Posts Matter",
+        "Context: Product Strategy Landscape in 2026",
+        "Breakdown: Top 5 Transformative Insights",
+        "Deep Dive: Tactical Implementation Strategies",
+        "Conclusion: How to Apply These Lessons"
       ],
-      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystems #CreativeWorkflow #DesignTips #ProductDesign #UIUXDesign #DesignStrategy #CreativeTech #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 1
+      "hashtags": "#ProductStrategy #LennyNewsletter #TechInsights #ProductManagement #StartupTips #InnovationPlaybook #BusinessGrowth #AIProduct #TechTrends #ProductLeadership",
+      "textureIndex": 8
     },
     {
       "title": "AMD unveils new AI PC processors for general use and gaming at CES",
@@ -64,197 +51,161 @@
         {
           "name": "TechCrunch AI",
           "url": "https://techcrunch.com/2026/01/05/amd-unveils-new-ai-pc-processors-for-general-use-and-gaming-at-ces/"
-        },
-        {
-          "name": "Amd",
-          "url": "https://www.amd.com/en/corporate/events/ces.html"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=fF3CLewqvL8"
-        },
-        {
-          "name": "Pcper",
-          "url": "https://pcper.com/2026/01/ces-2026-amd-client-and-graphics-update-includes-ryzen-9850x3d-cpu/"
-        }
-      ],
-      "format": "documentary",
-      "subcategory": "framework",
-      "hooks": [
-        "AI Chips That Will Transform Personal Computing Forever",
-        "Inside AMD's Next-Generation PC Processing Revolution",
-        "How AMD Is Rewriting the Future of Computing"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use dramatic cinematic transitions between technical segments",
-            "Include split-screen comparisons of processor capabilities",
-            "Incorporate archival/historical tech footage to contextualize innovation"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 8,
-        "description": "High-contrast tech aesthetic with deep blue/graphite color palette. Futuristic motion graphics showing processor architecture. Dynamic typography with technical overlay animations. Crisp, angular composition mimicking circuit board design. Picture-in-picture technical breakdowns with holographic data visualization elements."
-      },
-      "exampleOutline": [
-        "Cold Open: Dramatic Tech Evolution Sequence",
-        "Historical Context of PC Processing Technology",
-        "AMD's CES 2026 Processor Innovation Breakdown",
-        "Technical Deep Dive: AI PC Chip Capabilities",
-        "Future Implications and Consumer Impact"
-      ],
-      "hashtags": "#AMD #AIProcessors #TechInnovation #ComputerTechnology #CES2026 #FutureOfComputing #TechNews #ProcessorTech #ArtificialIntelligence #PCGaming",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 3
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techloy",
-          "url": "https://www.techloy.com/figma-adds-long-requested-ai-editing-tools-that-cut-out-the-need-for-photoshop-and-canva/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Theaiinsider",
-          "url": "https://theaiinsider.tech/2025/12/12/figma-introduces-new-ai-powered-image-editing-suite-to-streamline-design-workflows/"
-        }
-      ],
-      "format": "video",
-      "subcategory": "thought-leadership",
-      "hooks": [
-        "3 AI Tools That Will Transform Your Figma Workflow",
-        "Photoshop Who? Figma's New AI Image Magic",
-        "Design Faster: Figma's Killer AI Editing Tools"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use picture-in-picture screen recording to demonstrate tools live",
-            "Create chapter markers for quick navigation",
-            "Include side-by-side before/after comparisons in B-roll footage"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-energy color palette with electric blues and vibrant teals, dynamic motion graphics showing tool transformations, sleek sans-serif typography with animated callouts, clean UI-inspired transitions between demo sequences, subtle futuristic overlay effects highlighting AI capabilities"
-      },
-      "exampleOutline": [
-        "Cold Open: Dramatic AI Tool Reveal",
-        "The Design Workflow Problem: Current Editing Limitations",
-        "Deep Dive: 3 New Figma AI Tools Breakdown",
-        "Live Demonstration of Each Tool's Capabilities",
-        "Future of Design: Closing Call to Experiment"
-      ],
-      "hashtags": "#FigmaAI #DesignTools #AIDesign #CreativeTech #ProductivityHack #UIDesign #GraphicDesign #AdobeAlternative #CreativeWorkflow #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 11
-    },
-    {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
         }
       ],
       "format": "tutorial",
       "subcategory": "instructional",
       "hooks": [
-        "Design Career Secrets: How Top Studios Really Hire",
-        "Crack the Senior Design Job Code",
-        "Behind the Scenes: Landing Your Dream Design Role"
+        "Unlock Next-Gen Computing: AMD's AI Processor Guide",
+        "Boost Your PC Performance: AMD AI Chips Explained",
+        "Step-by-Step: AMD's Game-Changing AI Processors Revealed"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use chapter markers to break down hiring process steps",
-            "Include real portfolio teardown/critique segments",
-            "Use picture-in-picture to show example portfolios/resumes"
+            "Use screen recordings showing processor benchmarks",
+            "Include side-by-side performance comparisons",
+            "Create chapter markers for easy navigation"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, editorial design aesthetic with high-contrast typography, dynamic grid layouts showcasing portfolio elements, motion-tracked annotations highlighting key resume/portfolio insights, dark mode color palette with electric accent colors, minimal San Francisco tech design language"
+        "description": "High-contrast tech aesthetic with electric blue and graphite gray color palette. Dynamic motion graphics showing processor performance. Clean, angular typography with technical overlay animations. Circuit board-inspired background textures. Picture-in-picture demonstrations of processor capabilities."
       },
       "exampleOutline": [
-        "Opening: Studio Insider Perspective on Senior Design Hiring",
-        "Context: Current Design Job Market Challenges",
-        "Step-by-Step: Crafting the Perfect Senior Design Application",
-        "Portfolio Deep Dive: What Top Studios Actually Want",
-        "Final Insights and Direct Recruitment Strategies"
+        "Introduction: What Makes AMD's New AI Processors Unique",
+        "The Problem: Current PC Performance Limitations",
+        "Step-by-Step: Breaking Down AI Processor Architecture",
+        "Performance Insights: Gaming, Creativity, and Multitasking",
+        "Future-Proofing Your PC: Implementation Strategies"
       ],
-      "hashtags": "#DesignCareer #SeniorDesign #JobHuntTips #DesignPortfolio #CreativeRecruitment #SanFranciscoDesign #DesignJobs #CareerAdvice #DesignIndustry #CreativeProfessionals",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 5
+      "hashtags": "#AMDCES #AIProcessors #PCTechnology #ComputerUpgrade #TechInnovation #AIComputing #GamingPC #TechTutorial #ProcessorGuide #AMDInnovation",
+      "textureIndex": 4
     },
     {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
+      "title": "Microsoft&#8217;s Nadella wants us to stop thinking of AI as &#8216;slop&#8217;",
+      "description": "Nadella wants us to think of AI as a human helper instead of a slop-generating job killer. New data for 2026 indicates he could be right.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/05/microsofts-nadella-wants-us-to-stop-thinking-of-ai-as-slop/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "AI: Your Career Upgrade, Not Job Killer",
+        "Nadella's Vision: AI as Your Professional Sidekick",
+        "Why AI Won't Replace You in 2026"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dynamic screen recordings showing Nadella's quotes/interviews",
+            "Include picture-in-picture with expert commentary segments",
+            "Create chapter markers for easy navigation and retention"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-forward design with electric blue/charcoal gradients, futuristic sans-serif typography, dynamic motion graphics showing AI/human collaboration, clean data visualization overlays, high-contrast color transitions representing transformation"
+      },
+      "exampleOutline": [
+        "Cold Open: Provocative AI job market statistic",
+        "Nadella's Philosophical Framework: AI as Augmentation",
+        "2026 Data: How AI Actually Transforms Work",
+        "Practical Skills for AI-Enhanced Careers",
+        "Call-to-Action: Free AI Career Roadmap Download"
+      ],
+      "hashtags": "#AI #CareerTech #MicrosoftAI #FutureOfWork #ProfessionalDevelopment #TechInnovation #AICareer #NadellaInsights #WorkplaceTrends #AITransformation",
+      "textureIndex": 12
+    },
+    {
+      "title": "Nvidia wants to be the Android of generalist robotics",
+      "description": "Nvidia unveiled a full-stack robotics ecosystem at CES 2026, including foundation models, simulation tools, and hardware. It wants to be the default platform for robotics.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/05/nvidia-wants-to-be-the-android-of-generalist-robotics/"
         }
       ],
       "format": "livestream",
       "subcategory": "leadership",
       "hooks": [
-        "How we designed a font that tells Figma's story",
-        "Behind the scenes: Crafting Figma's brand new typeface",
-        "Typography meets product design: Figma Sans revealed"
+        "Nvidia's Robot Revolution: Android of Robotics Revealed!",
+        "CES 2026: The Future of Robotics Just Changed",
+        "One Platform to Rule All Robots?"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Enable live chat for real-time audience interaction",
-            "Prepare pre-submitted Q&A questions to fill potential dead air",
-            "Use multiple camera angles to keep visual energy high"
+            "Use multi-camera setup to simulate live event feel",
+            "Prepare interactive graphic overlays for real-time audience engagement",
+            "Enable Super Chat for audience funding/interaction during stream"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-energy visual narrative with dynamic screen transitions, animated type exploration, behind-the-scenes design process footage. Color palette inspired by Figma's brand - clean blues and purples with high-contrast white space. Motion graphics that reveal type design evolution. Picture-in-picture designer interviews mixed with type specimen displays."
+        "description": "High-energy cyberpunk-inspired visual palette with electric blue and neon accents. Dynamic split-screen layouts showing live presenter and robot/tech demos. Futuristic motion graphics with technical wireframe elements. Typography: Sharp, angular sans-serif fonts. Animated technical diagrams that pulse and transform in real-time."
       },
       "exampleOutline": [
-        "Section 1: Live Stream Intro & Personal Connection",
-        "Section 2: Why Figma Needed a Custom Typeface",
-        "Section 3: Design Process & Key Challenges",
-        "Section 4: Technical Typographic Insights",
-        "Section 5: Live Q&A and Community Interaction"
+        "Opening: Dramatic Nvidia robotics ecosystem reveal",
+        "Context: Current robotics landscape limitations",
+        "Deep Dive: Nvidia's Full-Stack Robotics Platform",
+        "Live Demonstration: Foundation Models in Action",
+        "Q&A and Community Interaction Segment"
       ],
-      "hashtags": "#FigmaSans #DesignSystem #Typography #ProductDesign #BrandIdentity #CreativeProcess #TypeDesign #FontDesign #DesignCommunity #AIDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
+      "hashtags": "#Nvidia #Robotics #AI #CES2026 #TechInnovation #FutureOfRobotics #AIRobotics #TechEvent #Innovation #RobotTechnology",
+      "textureIndex": 7
+    },
+    {
+      "title": "Nvidia launches powerful new Rubin chip architecture",
+      "description": "Nvidia CEO Jensen Huang officially launched the company’s new Rubin computing architecture, which he described as the state of the art in AI computing.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/05/nvidia-launches-powerful-new-rubin-chip-architecture/"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "AI's Next Leap: Inside Nvidia's Revolutionary Rubin Chip",
+        "Nvidia's Secret Weapon: A Computing Breakthrough",
+        "Jensen Huang Reveals Future of AI Computing"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use archival footage of Jensen Huang's keynote",
+            "Include technical B-roll of chip manufacturing process",
+            "Create animated graphics explaining chip architecture complexity"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-tech cinematic aesthetic with deep navy and electric blue color palette. Sleek, futuristic typography with technical motion graphics. Incorporate silicon/circuit board textures. Use subtle holographic overlays to represent computational complexity. Mix archival interview footage with dynamic 3D renderings of chip architecture."
+      },
+      "exampleOutline": [
+        "Opening: Dramatic reveal of Rubin chip's significance",
+        "Context: Current limitations in AI computing landscape",
+        "Core Content: Detailed breakdown of Rubin architecture innovations",
+        "Key Insight: Potential impact on AI development and computing",
+        "Closing: Future implications and Nvidia's strategic vision"
+      ],
+      "hashtags": "#NvidiaRubin #AIComputing #TechInnovation #JensenHuang #ChipTechnology #AIHardware #ComputerScience #TechBreakthrough #FutureOfAI #SiliconInnovation",
+      "textureIndex": 12
     }
   ]
 }

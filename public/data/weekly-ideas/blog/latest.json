@@ -1,75 +1,119 @@
 {
   "type": "blog",
-  "date": "2026-01-06T16:19:11.584Z",
+  "date": "2026-01-06T16:31:21.000Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Best of Lenny’s Newsletter 2026",
+      "description": "The 25 best posts from the past year, plus a few all-time classics",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/issue/221"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover"
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/best-of-lennys-newsletter-2026"
         }
       ],
-      "format": "listicle",
-      "subcategory": "explanatory",
+      "format": "case-study",
+      "subcategory": "case-study-deep-dive",
       "hooks": [
-        "Design Templates That Scale Without Breaking Brand",
-        "Figma Secrets: Build Bulletproof Brand Templates",
-        "How Pro Designers Create Flexible Marketing Assets"
+        "25 Newsletters That Redefined Product Strategy in 2026",
+        "Lenny's Most Groundbreaking Insights: A Strategic Breakdown",
+        "How Top Product Leaders Think: Exclusive Newsletter Compilation"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Include real-time template creation screenshot",
-            "Add personal workflow commentary",
-            "Use conversational, experimental tone"
+            "Use interactive annotations to highlight key learnings",
+            "Include personal commentary on why each post matters",
+            "Create a scannable visual index of top newsletters"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Include SEO-optimized section headers",
-            "Add data/statistics about template effectiveness",
-            "Use professional, authoritative language"
+            "Optimize SEO with clear, keyword-rich section headers",
+            "Embed original newsletter screenshots for credibility",
+            "Include data visualizations summarizing key trends"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Frame tips as professional best practices",
-            "Include enterprise-level design insights",
-            "Highlight scalability and efficiency metrics"
+            "Tag contributors and original newsletter authors",
+            "Share professional takeaways for each featured post",
+            "Create a downloadable PDF summary for networking"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, dynamic Figma-inspired composition with modular grid, vibrant accent colors (teal/purple), isometric design elements, animated template transformation graphics, clean sans-serif typography with motion-based transitions"
+        "description": "Bold, data-driven aesthetic with dynamic infographic elements. High-contrast color palette (navy, electric blue, bright orange). Clean, geometric typography with subtle motion graphics. Incorporate isometric design elements and subtle parallax scrolling effects. Reference Spotify Wrapped and Dropbox design systems."
       },
       "exampleOutline": [
-        "Intro: Why Flexible Templates Matter",
-        "Problem: Current Template Design Limitations",
-        "8 Expert Tips for Scalable Templates",
-        "Case Studies: Successful Template Implementations",
-        "Future of Adaptive Brand Design"
+        "Introduction: The Landscape of Product Thinking in 2026",
+        "Methodology: How We Selected the Top 25 Newsletters",
+        "Thematic Deep Dive: Recurring Insights and Trends",
+        "Case Study Breakdown: Most Impactful Individual Newsletters",
+        "Future Implications and Call to Action"
       ],
-      "hashtags": "#FigmaDesign #BrandTemplates #CreativeWorkflow #DesignSystem #AIDesign #ProductivityHacks #MarketingDesign #TemplateDesign #CreativeTech #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "hashtags": "#ProductStrategy #TechInsights #ProductManagement #AIInnovation #NewsletterCuration #LennyNation #ProductLeadership #InnovationTrends #TechThinking #StartupStrategy",
+      "textureIndex": 12
+    },
+    {
+      "title": "Mikon van Gastel: Co-Founder of Sibling Rivalry on why presentation skills matter more than design skills",
+      "description": "Episode 159 of the Design Better Podcast",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Design Better",
+          "url": "https://designbetterpodcast.com/p/mikon-van-gastel"
+        }
+      ],
+      "format": "article",
+      "subcategory": "visionary",
+      "hooks": [
+        "Why Presentations Trump Pixels in Design Careers",
+        "Mastering Communication: The Skill Designers Overlook",
+        "Beyond Pixels: The Real Design Superpower"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use personal anecdote to introduce Mikon's insights early",
+            "Include interactive poll about presentation skills",
+            "Add behind-the-scenes audio clip from podcast"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Optimize headline for SEO with keywords 'design presentation'",
+            "Include data-driven graphics about communication impact",
+            "Add expert quote callouts for visual break"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame insights as professional development strategy",
+            "Include downloadable presentation skills checklist",
+            "Tag relevant design thought leaders in post"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, dynamic layout with split-screen typography showcasing presentation vs. design skills. Gradient color palette of deep blues and electric oranges. Minimalist infographics with animated transition elements. Swiss design influence with contemporary motion graphics."
+      },
+      "exampleOutline": [
+        "Opening: Personal Story of Communication Breakthrough",
+        "The Presentation Paradox in Design Careers",
+        "Mikon van Gastel's Key Communication Insights",
+        "Practical Strategies for Elevating Presentation Skills",
+        "Future of Design: Communication as Core Competency"
+      ],
+      "hashtags": "#DesignCareer #PresentationSkills #CreativeCommunication #DesignThinking #ProfessionalDevelopment #CreativeLeadership #DesignInnovation #CareerGrowth #AIDesign #CreativeTips",
       "textureIndex": 5
     },
     {
@@ -80,261 +124,168 @@
         {
           "name": "TechCrunch AI",
           "url": "https://techcrunch.com/2026/01/05/amd-unveils-new-ai-pc-processors-for-general-use-and-gaming-at-ces/"
-        },
-        {
-          "name": "Amd",
-          "url": "https://www.amd.com/en/corporate/events/ces.html"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=fF3CLewqvL8"
-        },
-        {
-          "name": "Pcper",
-          "url": "https://pcper.com/2026/01/ces-2026-amd-client-and-graphics-update-includes-ryzen-9850x3d-cpu/"
-        }
-      ],
-      "format": "thread",
-      "subcategory": "explanatory",
-      "hooks": [
-        "AMD's AI Chips: Gaming & Creativity Just Got Smarter 🚀",
-        "The Future of PCs is Here: AMD's CES Surprise",
-        "Unleash Your PC's Potential: AMD's Latest Breakthrough"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Use thread as teaser for deeper dive article",
-            "Include behind-the-scenes insights not in main sources",
-            "Link to full analysis in Substack post"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Create comprehensive technical breakdown after thread",
-            "Use thread to validate article topic interest",
-            "Collect reader comments for future content ideas"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Frame thread as professional industry insight",
-            "Highlight business/productivity implications",
-            "Target tech and innovation decision-makers"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast tech aesthetic with neon blue/dark gray palette. Dynamic geometric overlays representing processor architecture. Futuristic circuit-board inspired typography. Subtle glitch/motion effects. Clean, angular illustrations of processor chips. Modern tech magazine meets cyberpunk minimalism."
-      },
-      "exampleOutline": [
-        "Thread Opener: Provocative hook + key stat",
-        "Technical Context: What makes these chips different",
-        "Performance Breakdown: Gaming vs. Creative capabilities",
-        "Real-World Impact: How this changes PC experience",
-        "Future Prediction & Call-to-Action"
-      ],
-      "hashtags": "#AMD #AIProcessors #TechInnovation #ComputerHardware #CES2026 #AIComputing #GamingTech #CreativePCs #TechTrends #FutureOfComputing",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techloy",
-          "url": "https://www.techloy.com/figma-adds-long-requested-ai-editing-tools-that-cut-out-the-need-for-photoshop-and-canva/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Theaiinsider",
-          "url": "https://theaiinsider.tech/2025/12/12/figma-introduces-new-ai-powered-image-editing-suite-to-streamline-design-workflows/"
         }
       ],
       "format": "guide",
       "subcategory": "instructional",
       "hooks": [
-        "AI Image Editing: Figma's Design Revolution Explained",
-        "3 Tools That Will Transform Your Figma Workflow",
-        "Precision Editing Just Got Superpowered in Figma"
+        "AI PCs: AMD's Game-Changing Processor Revolution",
+        "The Future of Computing is Here",
+        "Unleashing Next-Gen Performance: AMD's AI Chips"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Include real-time screen recording of tool usage",
-            "Add personal experiment/workflow improvement narrative",
-            "Use interactive code blocks for technical details"
+            "Include real-time benchmarking snapshots",
+            "Add personal experimentation narratives",
+            "Create interactive performance comparison graphics"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Optimize headers for SEO with targeted keywords",
-            "Include comparative screenshots of before/after editing",
-            "Add expert commentary from design professionals"
+            "Deep dive into technical specifications",
+            "Include SEO-optimized technical comparisons",
+            "Add expert commentary and industry context"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Highlight productivity gains with concrete metrics",
-            "Include professional use cases for enterprise designers",
-            "Quote industry leaders about AI design tools"
+            "Focus on professional implications",
+            "Include enterprise adoption potential",
+            "Add credibility with industry analyst quotes"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast color palette with electric blue and charcoal gray, dynamic diagonal grid layouts, animated GIF demonstrations of tool functionality, modern sans-serif typography with technical precision, motion graphics showing tool transformations"
+        "description": "Futuristic tech aesthetic with electric blue and graphite color palette, dynamic geometric overlays, holographic processor silhouettes, motion graphics showing performance metrics, clean sans-serif typography with technical precision"
       },
       "exampleOutline": [
-        "Introduction: The Future of Design Precision",
-        "The Current Design Workflow Challenge",
-        "Detailed Breakdown of 3 New Figma AI Tools",
-        "How These Tools Transform Creative Processes",
-        "Implementation Strategy and Next Steps"
+        "Introduction: The AI PC Revolution",
+        "Context: Current Computing Limitations",
+        "AMD's New Processors: Technical Deep Dive",
+        "Performance Benchmarks and Real-World Applications",
+        "Future of AI-Powered Computing"
       ],
-      "hashtags": "#FigmaAI #DesignTechnology #CreativeWorkflow #AIDesign #ProductivityTools #DesignInnovation #CreativeTech #UIUXDesign #ArtificialIntelligence #DesignTools",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
+      "hashtags": "#AMDCES #AIProcessors #FutureOfComputing #TechInnovation #PCPerformance #AITechnology #ComputingPower #TechTrends #ProcessorInnovation #NextGenTech",
+      "textureIndex": 6
     },
     {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
+      "title": "Microsoft&#8217;s Nadella wants us to stop thinking of AI as &#8216;slop&#8217;",
+      "description": "Nadella wants us to think of AI as a human helper instead of a slop-generating job killer. New data for 2026 indicates he could be right.",
       "starred": false,
       "sources": [
         {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/05/microsofts-nadella-wants-us-to-stop-thinking-of-ai-as-slop/"
         }
       ],
-      "format": "case-study",
-      "subcategory": "case-study-deep-dive",
+      "format": "listicle",
+      "subcategory": "explanatory",
       "hooks": [
-        "Design Systems: The Secret Weapon of Elite Brands",
-        "How Top Designers Build Scalable Visual Identities",
-        "Cracking the Code of Adaptive Brand Ecosystems"
+        "AI: Not Slop, But Your Productivity Superpower",
+        "5 Ways Nadella Sees AI Transforming Work",
+        "Beyond 'Slop': Microsoft's Vision for Intelligent Collaboration"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Use real-time screenshots of design process",
-            "Include personal commentary on design challenges",
-            "Create interactive poll about design system insights"
+            "Use numbered screenshots/GIFs for each list point",
+            "Include real-time experiment demonstrating each AI insight",
+            "Add inline audio commentary between list sections"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Include SEO-optimized headers for visual hierarchy",
-            "Embed professional design system examples",
-            "Use data visualizations to illustrate impact"
+            "Optimize headline with exact number of insights",
+            "Include data visualizations for each list point",
+            "Add expert quote/commentary for SEO credibility"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Quote industry design leaders",
-            "Include professional growth insights for designers",
-            "Add credibility with quantitative design metrics"
+            "Use professional tone with quantitative insights",
+            "Include executive-level strategic implications",
+            "Add personal professional transformation narrative"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, dynamic grid-based layouts with high-contrast typography. Utilize geometric sans-serif fonts, deep blue and electric orange color palette. Incorporate motion graphics showing design system transformations. Clean, technological aesthetic with subtle depth and layering."
+        "description": "Bold, tech-forward design with dynamic gradients, geometric AI-inspired illustrations, high-contrast typography in blue/white palette, subtle motion graphics highlighting each list point, clean Swiss design grid system with futuristic edge"
       },
       "exampleOutline": [
-        "Section 1: Provocative Design System Challenge",
-        "Section 2: Real-World Brand Identity Constraints",
-        "Section 3: Modular Design Framework Methodology",
-        "Section 4: Breakthrough Visual Scaling Techniques",
-        "Section 5: Future of Adaptive Brand Ecosystems"
+        "Introduction: The 'Slop' Misconception About AI",
+        "Context: Why Traditional AI Perspectives Fail",
+        "5 Nadella-Inspired AI Transformation Strategies",
+        "Future Implications for Workplace Innovation",
+        "Call-to-Action: Reimagine Your AI Potential"
       ],
-      "hashtags": "#DesignSystems #BrandIdentity #CreativeStrategy #VisualDesign #AIDesign #ProductDesign #BrandEvolution #DesignTech #CreativeCommunity #InnovationDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
+      "hashtags": "#AI #FutureOfWork #MicrosoftAI #TechInnovation #ProductivityHacks #AIStrategy #NadellaTalks #WorkplaceTech #AITransformation #IntelligentCollaboration",
+      "textureIndex": 4
     },
     {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
+      "title": "Nvidia wants to be the Android of generalist robotics",
+      "description": "Nvidia unveiled a full-stack robotics ecosystem at CES 2026, including foundation models, simulation tools, and hardware. It wants to be the default platform for robotics.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/05/nvidia-wants-to-be-the-android-of-generalist-robotics/"
         }
       ],
-      "format": "article",
-      "subcategory": "visionary",
+      "format": "thread",
+      "subcategory": "explanatory",
       "hooks": [
-        "Designing a Font That Speaks Design's Language",
-        "When Typography Becomes a Design Manifesto",
-        "Figma Sans: More Than Just Letters"
+        "Nvidia's Robot Revolution: One Platform to Rule Them All 🤖",
+        "How Nvidia Plans to Democratize Robotics Everywhere",
+        "The Android Moment for Robotics Just Happened"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Use interactive inline annotations to explain type design nuances",
-            "Include real-time design process screenshots",
-            "Encourage reader comments about typeface experiences"
+            "Use thread screenshots as newsletter header image",
+            "Create behind-the-scenes breakdown of thread research",
+            "Offer extended analysis not possible in Twitter thread"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Optimize headers for SEO with design-specific keywords",
-            "Embed high-resolution typeface progression images",
-            "Include comparative visual breakdowns of design iterations"
+            "Expand thread into long-form technical deep dive",
+            "Include more detailed technical diagrams and explanations",
+            "Add expert commentary and industry context"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Frame typeface as professional design innovation",
-            "Include metrics on design workflow improvements",
-            "Tag Figma design leaders for broader reach"
+            "Frame thread as professional technology transformation insight",
+            "Add enterprise implementation perspectives",
+            "Include potential business impact statistics"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold typographic exploration with dynamic grid layouts, transitional color gradients mimicking type evolution, animated letterform transformations, Swiss design precision with experimental digital undertones"
+        "description": "High-contrast tech-futurist aesthetic. Dark background with electric blue/cyan accents. Geometric robot silhouettes. Futuristic sans-serif typography. Subtle holographic motion graphics. Cyberpunk-inspired visual language that feels simultaneously technical and approachable."
       },
       "exampleOutline": [
-        "The Genesis of Figma's Design Identity",
-        "Why Typography Matters in Product Design",
-        "Crafting Figma Sans: A Technical Journey",
-        "Design Principles Behind Every Letterform",
-        "Future of Brand-Specific Typography"
+        "Thread Opener: Nvidia's Robotics Ecosystem Bombshell 💥",
+        "What Happened at CES 2026",
+        "Full-Stack Robotics Platform Breakdown",
+        "Why This Changes Everything",
+        "Future Implications Call-to-Action"
       ],
-      "hashtags": "#DesignSystem #Typography #FigmaDesign #ProductDesign #CreativeTech #AIDesign #BrandIdentity #UserExperience #DesignInnovation #CreativeProcess",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 3
+      "hashtags": "#Nvidia #Robotics #AI #TechInnovation #RoboticsFuture #CES2026 #Technology #Innovation #FutureOfWork #AIRobotics",
+      "textureIndex": 6
     }
   ]
 }
