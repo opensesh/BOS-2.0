@@ -1,17 +1,17 @@
 {
   "id": "8-tips-for-designers-building-branded-templates-in-figma-buz",
   "slug": "8-tips-for-designers-building-branded-templates-in-figma-buz",
-  "title": "What the search results actually contain:",
-  "publishedAt": "2026-01-05T16:18:07.574Z",
-  "generatedAt": "2026-01-05T16:18:07.574Z",
-  "totalSources": 12,
+  "title": "Available Source Material:",
+  "publishedAt": "2026-01-06T16:16:50.877Z",
+  "generatedAt": "2026-01-06T16:16:50.878Z",
+  "totalSources": 13,
   "sections": [
     {
       "id": "section-0",
       "paragraphs": [
         {
           "id": "para-0-0",
-          "content": "I appreciate your detailed request, but I need to clarify an important limitation with the search results provided.",
+          "content": "I appreciate your detailed request, but I need to clarify an important limitation: **the search results provided do not contain sufficient source material to write the comprehensive multi-source news article you've requested.**",
           "citations": [
             {
               "primarySource": {
@@ -36,7 +36,7 @@
         },
         {
           "id": "para-0-1",
-          "content": "The search results you've given me contain primarily **Figma's official documentation and blog content** about creating branded templates in Figma Buzz. However, the research context and output format you've requested—asking for \"10+ unique sources,\" \"mainstream news outlets,\" \"breaking news analysis,\" and a specific multi-section news article structure—cannot be fulfilled with these search results.",
+          "content": "**Available Source Material:** - Only **one primary source** directly addresses \"8 tips for designers building branded templates in Figma Buzz\" - The remaining search results [2-8] cover related Figma Buzz topics (general brand controls, template creation, publishing workflows) but do not contain the specific \"8 tips\" content or recent news analysis around this topic - None of the search results include expert interviews, industry reactions, or breaking news developments that would support a full-length news article",
           "citations": [
             {
               "primarySource": {
@@ -50,9 +50,9 @@
               "additionalSources": [
                 {
                   "id": "source-4",
-                  "name": "knak",
-                  "url": "https://knak.com/blog/figma-email-designs-production-ready/",
-                  "favicon": "https://www.google.com/s2/favicons?domain=knak.com&sz=32",
+                  "name": "figma",
+                  "url": "https://www.figma.com/community/file/1127308267773178013/50-branded-templates-brandos",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
                   "title": "8 tips for designers building branded templates in Figma Buzz"
                 }
               ]
@@ -67,22 +67,22 @@
       "paragraphs": [
         {
           "id": "para-1-0",
-          "content": "**What the search results actually contain:** - One Figma blog article titled \"8 Tips for Designers Building Branded Templates in Figma Buzz\" - Official Figma help documentation and product pages - YouTube tutorial transcripts - No mainstream news coverage, analyst reports, or independent journalism about this topic",
+          "content": "**What the Search Results Actually Contain:** The search results provide Figma's official guidance on template best practices—specifically that designers should use auto layout for responsiveness, separate text layers for modularity, implement clear naming conventions, and leverage component variants for customization. They also document general Figma Buzz functionality and brand control features.",
           "citations": [
             {
               "primarySource": {
-                "id": "source-5",
-                "name": "designmodo",
-                "url": "https://designmodo.com/figma-components/",
-                "favicon": "https://www.google.com/s2/favicons?domain=designmodo.com&sz=32",
+                "id": "source-6",
+                "name": "youtube",
+                "url": "https://www.youtube.com/watch?v=FEjYVGOlaWE",
+                "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
                 "title": "8 tips for designers building branded templates in Figma Buzz"
               },
               "additionalCount": 1,
               "additionalSources": [
                 {
-                  "id": "source-6",
+                  "id": "source-5",
                   "name": "youtube",
-                  "url": "https://www.youtube.com/watch?v=FEjYVGOlaWE",
+                  "url": "https://www.youtube.com/watch?v=23lJ2YAnlC8",
                   "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
                   "title": "8 tips for designers building branded templates in Figma Buzz"
                 }
@@ -92,13 +92,13 @@
         },
         {
           "id": "para-1-1",
-          "content": "**What's missing for your requested article:** - Independent technology news outlets covering this topic - Multiple expert perspectives or reactions from the design industry - Comparative analyses or critical viewpoints - Market impact data or business implications - Mainstream media coverage or \"breaking news\" angle",
+          "content": "**What's Missing:** - Recent news coverage or industry analysis of this topic - Expert commentary or designer perspectives - Data on adoption or impact - Competitive analysis or market context - Historical development or timeline information",
           "citations": [
             {
               "primarySource": {
                 "id": "source-7",
                 "name": "figma",
-                "url": "https://www.figma.com/community/file/1498061139983086023/straightforward-brand-guidelines",
+                "url": "https://www.figma.com/community/design-templates",
                 "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
                 "title": "8 tips for designers building branded templates in Figma Buzz"
               },
@@ -107,7 +107,7 @@
                 {
                   "id": "source-8",
                   "name": "figma",
-                  "url": "https://www.figma.com/community/design-templates",
+                  "url": "https://www.figma.com/community/file/1490247876925428279/the-ultimate-brand-guidelines-template",
                   "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
                   "title": "8 tips for designers building branded templates in Figma Buzz"
                 }
@@ -123,23 +123,23 @@
       "paragraphs": [
         {
           "id": "para-2-0",
-          "content": "I can write a **straightforward guide article** synthesizing the practical tips from Figma's official resources about building branded templates—covering auto layout, text layer separation, descriptive naming, component variants, usability testing, file organization, and template best practices. This would be accurate and well-sourced using , but it would be educational rather than news-oriented.",
+          "content": "**Alternative Approach:** I can write a straightforward **feature explainer or how-to guide** synthesizing the available Figma documentation, or I can summarize the core 8 tips with proper citations. However, this would not be a comprehensive news article in the format you've specified, as that requires multiple independent sources and analytical depth beyond what's currently available.",
           "citations": [
             {
               "primarySource": {
                 "id": "source-9",
-                "name": "youtube",
-                "url": "https://www.youtube.com/watch?v=PASsk7lxTrc",
-                "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
+                "name": "figma",
+                "url": "https://www.figma.com/community/file/1498103274059654620/modern-brand-design-studio",
+                "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
                 "title": "8 tips for designers building branded templates in Figma Buzz"
               },
               "additionalCount": 1,
               "additionalSources": [
                 {
                   "id": "source-10",
-                  "name": "figma",
-                  "url": "https://www.figma.com/community/file/1498103274059654620/modern-brand-design-studio",
-                  "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+                  "name": "medium",
+                  "url": "https://medium.muz.li/7-ways-to-design-faster-in-figma-5b09dc156e79",
+                  "favicon": "https://www.google.com/s2/favicons?domain=medium.muz.li&sz=32",
                   "title": "8 tips for designers building branded templates in Figma Buzz"
                 }
               ]
@@ -148,13 +148,13 @@
         },
         {
           "id": "para-2-1",
-          "content": "Would you like me to: 1. Write a comprehensive guide article based on the actual search results available? 2. Provide a summary of the 8 tips with proper citations from the Figma sources? 3. Request different search results that include broader industry coverage?",
+          "content": "Would you like me to proceed with either alternative, or would you prefer to conduct a new search for more recent coverage of this topic?",
           "citations": [
             {
               "primarySource": {
                 "id": "source-11",
                 "name": "figma",
-                "url": "https://www.figma.com/community/file/1490247876925428279/the-ultimate-brand-guidelines-template",
+                "url": "https://www.figma.com/community/file/862055198151671663/brand-guide-template",
                 "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
                 "title": "8 tips for designers building branded templates in Figma Buzz"
               },
@@ -162,9 +162,9 @@
               "additionalSources": [
                 {
                   "id": "source-12",
-                  "name": "kittl",
-                  "url": "https://www.kittl.com/blogs/graphic-design-trends-2026/",
-                  "favicon": "https://www.google.com/s2/favicons?domain=www.kittl.com&sz=32",
+                  "name": "figma",
+                  "url": "https://www.figma.com/community/file/1323989371197883007/brand-guidelines-template-free",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
                   "title": "8 tips for designers building branded templates in Figma Buzz"
                 }
               ]
@@ -198,16 +198,16 @@
     },
     {
       "id": "source-4",
-      "name": "knak",
-      "url": "https://knak.com/blog/figma-email-designs-production-ready/",
-      "favicon": "https://www.google.com/s2/favicons?domain=knak.com&sz=32",
+      "name": "figma",
+      "url": "https://www.figma.com/community/file/1127308267773178013/50-branded-templates-brandos",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
     },
     {
       "id": "source-5",
-      "name": "designmodo",
-      "url": "https://designmodo.com/figma-components/",
-      "favicon": "https://www.google.com/s2/favicons?domain=designmodo.com&sz=32",
+      "name": "youtube",
+      "url": "https://www.youtube.com/watch?v=23lJ2YAnlC8",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
     },
     {
@@ -242,16 +242,16 @@
     },
     {
       "id": "source-4",
-      "name": "knak",
-      "url": "https://knak.com/blog/figma-email-designs-production-ready/",
-      "favicon": "https://www.google.com/s2/favicons?domain=knak.com&sz=32",
+      "name": "figma",
+      "url": "https://www.figma.com/community/file/1127308267773178013/50-branded-templates-brandos",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
     },
     {
       "id": "source-5",
-      "name": "designmodo",
-      "url": "https://designmodo.com/figma-components/",
-      "favicon": "https://www.google.com/s2/favicons?domain=designmodo.com&sz=32",
+      "name": "youtube",
+      "url": "https://www.youtube.com/watch?v=23lJ2YAnlC8",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
     },
     {
@@ -264,43 +264,50 @@
     {
       "id": "source-7",
       "name": "figma",
-      "url": "https://www.figma.com/community/file/1498061139983086023/straightforward-brand-guidelines",
+      "url": "https://www.figma.com/community/design-templates",
       "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
     },
     {
       "id": "source-8",
       "name": "figma",
-      "url": "https://www.figma.com/community/design-templates",
+      "url": "https://www.figma.com/community/file/1490247876925428279/the-ultimate-brand-guidelines-template",
       "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
     },
     {
       "id": "source-9",
-      "name": "youtube",
-      "url": "https://www.youtube.com/watch?v=PASsk7lxTrc",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
-      "title": "8 tips for designers building branded templates in Figma Buzz"
-    },
-    {
-      "id": "source-10",
       "name": "figma",
       "url": "https://www.figma.com/community/file/1498103274059654620/modern-brand-design-studio",
       "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
     },
     {
+      "id": "source-10",
+      "name": "medium",
+      "url": "https://medium.muz.li/7-ways-to-design-faster-in-figma-5b09dc156e79",
+      "favicon": "https://www.google.com/s2/favicons?domain=medium.muz.li&sz=32",
+      "title": "8 tips for designers building branded templates in Figma Buzz"
+    },
+    {
       "id": "source-11",
       "name": "figma",
-      "url": "https://www.figma.com/community/file/1490247876925428279/the-ultimate-brand-guidelines-template",
+      "url": "https://www.figma.com/community/file/862055198151671663/brand-guide-template",
       "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
     },
     {
       "id": "source-12",
-      "name": "kittl",
-      "url": "https://www.kittl.com/blogs/graphic-design-trends-2026/",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.kittl.com&sz=32",
+      "name": "figma",
+      "url": "https://www.figma.com/community/file/1323989371197883007/brand-guidelines-template-free",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+      "title": "8 tips for designers building branded templates in Figma Buzz"
+    },
+    {
+      "id": "source-13",
+      "name": "figma",
+      "url": "https://www.figma.com/community/file/1498061139983086023/straightforward-brand-guidelines",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
     }
   ],

@@ -1,20 +1,20 @@
 {
-  "generated": "2026-01-05T16:20:13.669Z",
+  "generated": "2026-01-06T16:19:01.341Z",
   "articles": [
     {
       "slug": "8-tips-for-designers-building-branded-templates-in-figma-buz",
-      "title": "What the search results actually contain:",
-      "sourceCount": 12
+      "title": "Available Source Material:",
+      "sourceCount": 13
+    },
+    {
+      "slug": "amd-unveils-new-ai-pc-processors-for-general-use-and-gaming",
+      "title": "AMD Unveils Next-Generation AI Processors for Consumer PCs and Gaming at CES 2026",
+      "sourceCount": 6
     },
     {
       "slug": "introducing-three-new-tools-for-precise-image-editing-in-fig",
-      "title": "Figma Launches Three AI-Powered Image Editing Tools to Streamline Design Workflows",
+      "title": "Figma Launches Three AI-Powered Image Editing Tools to Eliminate Multi-App Design Workflows",
       "sourceCount": 8
-    },
-    {
-      "slug": "three-new-features-to-help-build-brand-momentum-with-figma-b",
-      "title": "Figma Buzz Introduces Three Powerful Features to Streamline Brand Asset Creation",
-      "sourceCount": 22
     }
   ]
 }
