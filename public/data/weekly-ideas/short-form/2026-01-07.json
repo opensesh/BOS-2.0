@@ -1,388 +1,331 @@
 {
   "type": "short-form",
-  "date": "2026-01-07T16:21:32.257Z",
+  "date": "2026-01-07T16:31:32.794Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "How Quilt solved the heat pump&#8217;s biggest challenge",
+      "description": "Quilt's heat pumps are built containing a suite of sensors, which have delivered mountains of data that allow its engineers to wring added performance out of its systems.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/issue/221"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover"
-        }
-      ],
-      "format": "reel",
-      "subcategory": "reel",
-      "hooks": [
-        "Design templates that marketing teams actually want to use",
-        "Crack the code: Figma templates that scale beautifully",
-        "Brand guardrails: How designers win at self-serve design"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use fast-paced transitions between template examples",
-            "Include screen recordings of actual Figma interactions",
-            "Add dynamic text overlays highlighting key template tips"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Provocative problem statement about template design",
-            "Use high-contrast before/after template screenshots",
-            "Final slide includes clear call-to-action and resource link"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Open with unexpected visual metaphor about flexibility",
-            "Use voiceover with rapid-fire template insights",
-            "Include quick screen capture demonstrations"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame content as professional design strategy",
-            "Include more technical depth in explanation",
-            "Use more formal, authoritative tone"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast cyberpunk-inspired color palette with electric blues and neon accents. Dynamic motion graphics showing template transformations. Sharp, geometric sans-serif typography. Rapid cuts between design states. Slightly glitchy transition effects suggesting technological innovation."
-      },
-      "exampleOutline": [
-        "Hook: Provocative statement about template design challenges",
-        "Problem: Why most templates fail marketing teams",
-        "3-4 Quick tips for creating flexible templates",
-        "Real-world example of successful template strategy",
-        "Call-to-action: Learn more about template design"
-      ],
-      "hashtags": "#FigmaDesign #DesignTemplates #MarketingDesign #AIDesign #CreativeTools #DesignSystem #BrandIdentity #ProductDesign #UIUXTips #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Theaiinsider",
-          "url": "https://theaiinsider.tech/2025/12/12/figma-introduces-new-ai-powered-image-editing-suite-to-streamline-design-workflows/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/release-notes/"
-        }
-      ],
-      "format": "carousel",
-      "subcategory": "carousel",
-      "hooks": [
-        "AI Image Editing: Figma Just Leveled Up Design",
-        "3 Game-Changing Tools Transforming Visual Workflows",
-        "Design Precision Meets AI: Figma's New Toolkit"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick visual transitions between tool demonstrations",
-            "Include screen recordings showing actual tool functionality",
-            "Add dynamic text overlays highlighting key features"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must have bold, attention-grabbing graphic",
-            "Use consistent color scheme across all slides",
-            "Include one clear, actionable insight per slide"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with most dramatic tool demonstration",
-            "Use voiceover to explain technical details quickly",
-            "Include fast-paced visual montage of tool capabilities"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Add professional context about workflow efficiency",
-            "Include data/statistics about time savings",
-            "Use more technical language and design process insights"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast, tech-forward aesthetic with deep blues and electric accent colors. Minimalist design with futuristic UI overlays. Clean, sans-serif typography. Animated slide transitions showing tool transformations. Incorporate subtle glitch/digital texture effects to emphasize AI innovation."
-      },
-      "exampleOutline": [
-        "Slide 1: Bold hook + eye-catching graphic introducing Figma's new tools",
-        "Slide 2: Problem statement - Current image editing limitations",
-        "Slide 3: First AI tool demonstration and key capability",
-        "Slide 4: Second AI tool with specific use case",
-        "Slide 5: Third AI tool and workflow integration"
-      ],
-      "hashtags": "#FigmaAI #DesignTechnology #AIDesign #CreativeTools #ProductivityHack #UIDesign #GraphicDesign #ArtificialIntelligence #DesignInnovation #CreativeTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7767791/pexels-photo-7767791.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Forrester",
-          "url": "https://www.forrester.com/blogs/figma-config-2025-in-an-ai-world-design-matters-more-than-ever/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/05/07/figma-releases-new-ai-powered-tools-for-creating-sites-app-prototypes-and-marketing-assets/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/shorts/Sf_5xBPH1TM"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/release-notes/"
-        },
-        {
-          "name": "Forum",
-          "url": "https://forum.figma.com/product-updates-3/new-features-in-figma-buzz-46631"
-        }
-      ],
-      "format": "quick-image",
-      "subcategory": "quick-image",
-      "hooks": [
-        "Design Faster: Figma Buzz's Secret Weapon 🚀",
-        "3 Game-Changing Figma Features Designers Need Now",
-        "Unlock Marketing Magic with Figma's New Tools"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick-cut transitions between feature highlights",
-            "Create split-screen comparisons of before/after tool usage",
-            "Add dynamic text animations to emphasize key points"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Bold visual teaser of all 3 features",
-            "Use consistent color coding for each feature slide",
-            "Include a 'swipe up to learn more' call-out"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with a provocative question about design workflow",
-            "Use screen recording to demonstrate actual feature use",
-            "Include rapid-fire voiceover explaining each feature"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame features as professional productivity boosters",
-            "Include data point about time/efficiency saved",
-            "Use more formal, insights-driven visual approach"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, high-contrast design with futuristic tech aesthetic. Gradient backgrounds transitioning between electric blues and vibrant purples. Dynamic geometric shapes framing feature highlights. Typography should be clean, sans-serif with slight motion/glitch effect. Incorporate subtle AI/tech inspired visual elements like circuit-like overlays or holographic accents."
-      },
-      "exampleOutline": [
-        "Section 1: Attention-grabbing visual hook",
-        "Section 2: Quick problem statement about design inefficiency",
-        "Section 3: Rapid feature showcase (3 key innovations)",
-        "Section 4: Transformative potential insight",
-        "Section 5: Call-to-action to explore Figma Buzz"
-      ],
-      "hashtags": "#FigmaBuzz #DesignTech #AIDesign #CreativeTools #MarketingInnovation #ProductivityHack #DesignSystem #AICreativity #FigmaFeatures #DesignWorkflow",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 6
-    },
-    {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/07/how-quilt-solved-the-heat-pumps-biggest-challenge/"
         }
       ],
       "format": "story",
       "subcategory": "story",
       "hooks": [
-        "Design Jobs That Actually Excite Creative Pros",
-        "San Francisco's Hottest Design Role Revealed",
-        "Want a Design Career That Breaks Boundaries?"
+        "Heat Pumps: The Data Revolution You Never Saw Coming",
+        "How Smart Sensors Are Transforming Home Efficiency",
+        "Cracking the Heat Pump Performance Code"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use rapid-fire text transitions to highlight job details",
-            "Include quick visual cuts of design portfolio work",
-            "Add motion graphics revealing job stats/requirements"
+            "Use dynamic sensor/data visualization animations",
+            "Include quick split-screen comparisons of before/after performance",
+            "Incorporate text overlays explaining key technical breakthroughs"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Eye-catching job title graphic",
-            "Use clean, minimal design system across slides",
-            "Include slide with salary range/compensation details"
+            "First slide: Bold graphic showing sensor data transformation",
+            "Use infographic-style slides with clean, technical design",
+            "Progressive reveal of performance improvements across slides"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with unexpected design portfolio reveal",
-            "Use voiceover explaining unique role requirements",
-            "Include quick B-roll of San Francisco design scene"
+            "Start with high-energy technical motion graphics",
+            "Use quick cuts between sensor data and real-world application",
+            "Include expert voiceover explaining technical breakthrough"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Add more detailed professional context",
-            "Include specific skill requirements",
-            "Use more formal, authoritative tone"
+            "More technical, data-driven narrative approach",
+            "Include engineering perspective and professional insights",
+            "Emphasize performance metrics and innovation potential"
           ]
         }
       ],
       "visualDirection": {
-        "rating": 8,
-        "description": "Bold, tech-forward aesthetic with high-contrast color palette. Geometric typography, overlapping design elements, dynamic motion graphics. San Francisco tech-meets-design visual language. Incorporate subtle glitch/digital texture effects. Color scheme: deep navy, electric blue, bright cyan with white negative space."
+        "rating": 7,
+        "description": "High-contrast tech-inspired aesthetic with electric blue and graphite gray color palette. Dynamic data visualization with translucent sensor overlay graphics. Clean, angular typography with technical wireframe elements. Animated data point transitions showing performance optimization. Futuristic but accessible visual language that communicates innovation and precision."
       },
       "exampleOutline": [
-        "Section 1: Provocative Job Title Reveal",
-        "Section 2: Moniker Design Culture Context",
-        "Section 3: Role Responsibilities & Impact",
-        "Section 4: Ideal Candidate Profile",
-        "Section 5: Application/Next Steps CTA"
+        "Section 1: Provocative Heat Pump Performance Problem",
+        "Section 2: Introduce Quilt's Sensor Technology Approach",
+        "Section 3: How Sensors Unlock Performance Gains",
+        "Section 4: Real-World Impact and Efficiency Improvements",
+        "Section 5: Call-to-Action: Future of Smart Home Technology"
       ],
-      "hashtags": "#DesignJobs #SanFranciscoDesign #CreativeCareer #AIDesign #ProductDesign #DesignTech #CareerOpportunity #DesignInnovation #TechDesign #CreativeProfessionals",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8014542/pexels-photo-8014542.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
+      "hashtags": "#HeatPump #CleanTech #SmartHome #Sustainability #EnergySavings #Innovation #AITech #SensorTechnology #HomeEfficiency #GreenEnergy",
+      "textureIndex": 12
     },
     {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
+      "title": "WhatsApp rolls out new group chat features, including member tags",
+      "description": "You can choose a tag that gives others in the group chat more context about who you are.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/07/whatsapp-rolls-out-new-group-chat-features-member-tags/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "WhatsApp just made group chats way more personal 👥",
+        "Decode your chat buddies with new member tags 🏷️",
+        "Group chat identity level: Unlocked 🔓"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick transitions between tag examples",
+            "Include emoji-based visual storytelling",
+            "Create dynamic text overlays showing tag variations"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Provocative tag concept visual",
+            "Use clean, meme-friendly typography",
+            "Each slide demonstrates a different tag scenario"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with pattern-interrupt visual joke about group chats",
+            "Use rapid-fire examples of tags",
+            "Include humorous voiceover explaining feature"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as professional communication enhancement",
+            "Show potential workplace collaboration benefits",
+            "Use more serious, clean graphic design"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, playful design with vibrant color overlay. Isometric chat bubble illustrations. Bright neon accent colors. Modern sans-serif typography with dynamic text animations. Minimalist yet energetic composition emphasizing movement and interaction."
+      },
+      "exampleOutline": [
+        "Section 1: Attention-grabbing visual hook",
+        "Section 2: Quick explanation of member tags problem",
+        "Section 3: How tags solve communication chaos",
+        "Section 4: Creative tag use case examples",
+        "Section 5: Call-to-update WhatsApp"
+      ],
+      "hashtags": "#WhatsApp #GroupChats #TechUpdate #Communication #AITools #DigitalTrends #TechInnovation #MessagingApp #UserExperience #TechTips",
+      "textureIndex": 10
+    },
+    {
+      "title": "Spotify now lets you share what you&#8217;re streaming in real time with friends",
+      "description": "You can tap a friend’s listening activity to play the track, save it, open the menu, or react with an emoji.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/07/spotify-now-lets-you-share-what-youre-streaming-in-real-time-with-friends/"
+        }
+      ],
+      "format": "story",
+      "subcategory": "story",
+      "hooks": [
+        "Music Connection: Spotify's Social Revolution 🎵",
+        "Real-Time Listening: Share Your Soundtrack Now",
+        "Instant Music Sharing Just Got Cooler 🔥"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick screen recordings showing feature in action",
+            "Include dynamic text overlays explaining key interactions",
+            "Create fast-paced, energetic edit with music transitions"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Provocative feature screenshot",
+            "Use swipe-friendly infographic design",
+            "Each slide explains one sharing capability"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Open with unexpected music discovery moment",
+            "Use split-screen to show friend interactions",
+            "Add quick tutorial-style annotations"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as social networking innovation",
+            "Include professional use case scenarios",
+            "Use data visualization for feature explanation"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Modern, vibrant color palette with neon accents. Dynamic composition using music-inspired geometric shapes. Typography: bold, sans-serif with slight motion. Animated transitions mimicking sound waves. Spotify-inspired color gradient background. Playful, tech-forward aesthetic with high energy."
+      },
+      "exampleOutline": [
+        "Intro: Spotify's Social Music Revolution",
+        "Problem: Traditional Music Sharing Limits",
+        "Feature Walkthrough: Real-Time Sharing Mechanics",
+        "User Benefit: Instant Music Connection",
+        "Call-to-Action: Try New Feature Now"
+      ],
+      "hashtags": "#SpotifyUpdate #MusicSharing #TechInnovation #SocialMedia #MusicTech #StreamingMusic #DigitalConnection #MusicCommunity #TechTrends #AIMusic",
+      "textureIndex": 1
+    },
+    {
+      "title": "Warner Bros. Discovery rejects Paramount&#8217;s bid again, calls it a &#8216;leveraged buyout&#8217;",
+      "description": "The studio's board unanimously rejected Paramount Skydance's revised $108.4 billion bid, calling the proposal a \"leveraged buyout\" that would saddle the company with $87 billion in debt.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/07/warner-bros-discovery-rejects-paramounts-bid-again-calls-it-a-leveraged-buyout/"
         }
       ],
       "format": "carousel",
       "subcategory": "carousel",
       "hooks": [
-        "Designing a font that speaks Figma's language",
-        "How we crafted our brand's DNA through typography",
-        "The secret story behind Figma's revolutionary typeface"
+        "Hollywood's Billion-Dollar Breakup Drama Unfolds",
+        "When Media Giants Play Hardball 💥",
+        "Rejected: The $108 Billion Studio Showdown"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick typography transformation animations",
-            "Show before/after type comparisons rapidly",
-            "Include designer interview snippets for human touch"
+            "Use dynamic motion graphics to highlight key financial numbers",
+            "Create quick cuts between WBD and Paramount logos",
+            "Add subtle stock market/financial texture backgrounds"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide must have bold visual typography hook",
-            "Use clean, scannable slide designs with minimal text",
-            "Each slide should build narrative progression visually"
+            "First slide must have bold, attention-grabbing headline graphic",
+            "Use infographic-style slides to break down complex financial details",
+            "Ensure each slide has a clear, digestible piece of information"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Compress narrative into 60-second type design journey",
-            "Use dynamic text animations",
-            "Add voiceover explaining design process"
+            "Open with a provocative question about media industry consolidation",
+            "Use voiceover to explain complex financial terminology",
+            "Include quick visual metaphors for corporate negotiations"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Add more technical design process details",
-            "Include professional insights about brand typography",
-            "Position as thought leadership content"
+            "Add more detailed financial context and industry analysis",
+            "Use more professional, data-driven visual language",
+            "Include potential industry implications"
           ]
         }
       ],
       "visualDirection": {
-        "rating": 8,
-        "description": "Bold, experimental typography-focused design. High-contrast color palette with digital-native aesthetic. Dynamic type transformations, geometric grid layouts, subtle motion graphics showing font evolution. Blend of technical precision and creative expression."
+        "rating": 7,
+        "description": "Bold, high-contrast color palette with deep blues and electric oranges. Modern geometric typography with financial data visualization elements. Dynamic diagonal compositions suggesting movement and tension. Incorporate abstract stock market/network connection graphics. Use sharp-edged, tech-inspired design language with subtle glitch/digital overlay effects."
       },
       "exampleOutline": [
-        "Slide 1: Bold hook with Figma Sans logo/title",
-        "Slide 2: Design challenge/context",
-        "Slide 3: Typography inspiration sources",
-        "Slide 4: Design process breakdown",
-        "Slide 5: Final typeface reveal/CTA"
+        "Slide 1: Attention-grabbing headline & visual hook",
+        "Slide 2: WBD rejection context",
+        "Slide 3: Financial breakdown of $108B bid",
+        "Slide 4: Debt implications visualization",
+        "Slide 5: Industry impact and future speculation"
       ],
-      "hashtags": "#FigmaDesign #Typography #BrandIdentity #CreativeProcess #DesignInnovation #ProductDesign #AIDesign #CreativeTech #OpenSession #DesignCommunity",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 1
+      "hashtags": "#MediaBusiness #CorporateDrama #StudioWars #EntertainmentIndustry #MediaMerger #BusinessStrategy #Hollywood #CorporateFinance #MediaTech #IndustryInsights",
+      "textureIndex": 3
+    },
+    {
+      "title": "Spotify lowers monetization threshold for video podcasts",
+      "description": "Spotify is dropping the minimum episode requirement to three, minimum consumption hours to 2,000, and engaged audience member threshold to 1,000 over the last 30 days.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/07/spotify-lowers-monetization-threshold-for-video-podcasts/"
+        }
+      ],
+      "format": "reel",
+      "subcategory": "reel",
+      "hooks": [
+        "Spotify just made podcasting way easier for creators",
+        "3 episodes could now earn you podcast money",
+        "Podcast monetization just got a major upgrade"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use text overlay to highlight key monetization numbers",
+            "Create dynamic motion graphics showing podcast growth",
+            "Include quick screen transitions to maintain high energy"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Shocking monetization threshold change",
+            "Use infographic-style slides with clean data visualization",
+            "Final slide: Clear call-to-action for podcasters"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected visual metaphor about opportunity",
+            "Use quick cuts between podcast and monetization graphics",
+            "Include personal reaction/excitement about platform changes"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as professional opportunity for content creators",
+            "Use more detailed data and strategic insights",
+            "Maintain professional but enthusiastic tone"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, energetic design with vibrant gradient backgrounds, dynamic motion graphics showing podcast growth, playful typography that moves, high-contrast color palette of electric blues and neon greens, fast-paced visual transitions suggesting rapid digital transformation"
+      },
+      "exampleOutline": [
+        "Hook: Surprising Spotify monetization announcement",
+        "Quick context: Previous podcast barriers",
+        "New thresholds breakdown (3 episodes, 2,000 hours)",
+        "What this means for creators",
+        "Rapid-fire call to start podcasting"
+      ],
+      "hashtags": "#SpotifyPodcasts #ContentCreation #PodcastMonetization #CreatorEconomy #DigitalMedia #AIPodcasting #CreativeEntrepreneurship #MediaInnovation #PodcastTips #ContentStrategy",
+      "textureIndex": 0
     }
   ]
 }
