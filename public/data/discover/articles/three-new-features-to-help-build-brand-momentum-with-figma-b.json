@@ -1,17 +1,17 @@
 {
   "id": "three-new-features-to-help-build-brand-momentum-with-figma-b",
   "slug": "three-new-features-to-help-build-brand-momentum-with-figma-b",
-  "title": "Figma Buzz Introduces Three Powerful Features to Streamline Brand Asset Creation",
-  "publishedAt": "2026-01-05T16:20:13.667Z",
-  "generatedAt": "2026-01-05T16:20:13.667Z",
-  "totalSources": 22,
+  "title": "Three New Features in Figma Buzz Empower Designers and Marketers to Scale Brand Assets with Precision",
+  "publishedAt": "2026-01-07T16:21:20.213Z",
+  "generatedAt": "2026-01-07T16:21:20.213Z",
+  "totalSources": 18,
   "sections": [
     {
       "id": "section-0",
       "paragraphs": [
         {
           "id": "para-0-0",
-          "content": "Figma has announced three new features for Figma Buzz designed to enhance how marketing and brand teams create on-brand assets at scale. The updates include **configurable templates built on design systems**, **plugin integrations** for digital asset management and translation, and **in-app video trimming capabilities**. These features aim to deepen customization and control while keeping assets aligned with brand guidelines. The announcements represent Figma's response to user feedback requesting greater flexibility in template management and asset creation workflows.",
+          "content": "Figma has introduced three key updates to Figma Buzz: configurable templates built on design systems, plugin integrations, and video trimming capabilities. These enhancements, announced in late 2025, enable marketing teams to customize branded assets efficiently while maintaining strict design system adherence. By connecting templates to component properties and variables, users can toggle brand modes like colors or campaigns via a new Variable switcher without sifting through variations.",
           "citations": [
             {
               "primarySource": {
@@ -26,15 +26,15 @@
                 {
                   "id": "source-2",
                   "name": "figmalion",
-                  "url": "https://figmalion.com/issue/231",
+                  "url": "https://figmalion.com/topics/figma-buzz",
                   "favicon": "https://www.google.com/s2/favicons?domain=figmalion.com&sz=32",
                   "title": "Three new features to help build brand momentum with Figma Buzz"
                 },
                 {
                   "id": "source-3",
-                  "name": "excited",
-                  "url": "https://excited.agency/events/whats-new-in-figma-buzz-sites-grid-draw-make",
-                  "favicon": "https://www.google.com/s2/favicons?domain=excited.agency&sz=32",
+                  "name": "youtube",
+                  "url": "https://www.youtube.com/watch?v=0lSS7m3Lh0g",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
                   "title": "Three new features to help build brand momentum with Figma Buzz"
                 }
               ]
@@ -43,30 +43,30 @@
         },
         {
           "id": "para-0-1",
-          "content": "Figma Buzz, currently available in free beta, serves as a dedicated tool for brand and marketing teams to create social media posts, digital ads, and event promotional materials without requiring extensive design expertise. The platform bridges the gap between designers who establish design systems and marketers who need quick, compliant asset variations. Since launching in open beta, Figma has continuously expanded Buzz's capabilities with video import/export functionality, team library connections, and Unsplash stock image integration. These three new features build on that foundation by addressing specific workflow pain points in asset customization and production.",
+          "content": "The updates respond directly to user feedback for greater customization and control in asset creation. Plugins now provide seamless access to digital asset management, translation, and animation tools directly within Buzz. Video trimming allows precise editing for collages or ads, building on existing import/export features to eliminate external tool switches.",
           "citations": [
             {
               "primarySource": {
                 "id": "source-4",
-                "name": "youtube",
-                "url": "https://www.youtube.com/watch?v=0lSS7m3Lh0g",
-                "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
+                "name": "figma",
+                "url": "https://www.figma.com/blog/everything/",
+                "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
                 "title": "Three new features to help build brand momentum with Figma Buzz"
               },
               "additionalCount": 2,
               "additionalSources": [
                 {
                   "id": "source-5",
-                  "name": "youtube",
-                  "url": "https://www.youtube.com/watch?v=PASsk7lxTrc",
-                  "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
+                  "name": "figma",
+                  "url": "https://www.figma.com/release-notes/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
                   "title": "Three new features to help build brand momentum with Figma Buzz"
                 },
                 {
                   "id": "source-6",
-                  "name": "investor",
-                  "url": "https://investor.figma.com/news-events/news/default.aspx",
-                  "favicon": "https://www.google.com/s2/favicons?domain=investor.figma.com&sz=32",
+                  "name": "config",
+                  "url": "https://config.figma.com",
+                  "favicon": "https://www.google.com/s2/favicons?domain=config.figma.com&sz=32",
                   "title": "Three new features to help build brand momentum with Figma Buzz"
                 }
               ]
@@ -77,47 +77,15 @@
     },
     {
       "id": "section-1",
-      "title": "Design Systems Meet Marketing: Configurable Templates and Component Properties",
+      "title": "Configurable Templates and Plugins Streamline On-Brand Workflows",
       "paragraphs": [
         {
           "id": "para-1-0",
-          "content": "The first major feature allows teams to **set up and publish templates using component properties**, enabling marketers to browse and switch between flexible template variations without managing hundreds of separate files. Brand designers can copy templates created in Figma Design using component sets and properties, then paste them into Figma Buzz where those properties automatically function. This connection to underlying design systems ensures that every customization remains on-brand while reducing the friction of template selection. The \"Change layout\" panel lets collaborators choose layout variants using dropdowns, toggle elements on and off, or swap approved instances with minimal effort.",
+          "content": "Configurable templates leverage design system variables, allowing marketers to switch elements like layouts or logos effortlessly. Organization and Enterprise admins can disable unapproved Community templates to enforce brand standards. Plugins integrate apps for inserting approved images, localizing content, and adding animations or QR codes without leaving the canvas.",
           "citations": [
             {
               "primarySource": {
                 "id": "source-7",
-                "name": "figma",
-                "url": "https://www.figma.com/community/file/1496189858089581731/new-feature-launch-linkedin-landscape-ad",
-                "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
-                "title": "Three new features to help build brand momentum with Figma Buzz"
-              },
-              "additionalCount": 2,
-              "additionalSources": [
-                {
-                  "id": "source-8",
-                  "name": "figma",
-                  "url": "https://www.figma.com/release-notes/",
-                  "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
-                  "title": "Three new features to help build brand momentum with Figma Buzz"
-                },
-                {
-                  "id": "source-9",
-                  "name": "forum",
-                  "url": "https://forum.figma.com/product-updates-3/new-features-in-figma-buzz-46631",
-                  "favicon": "https://www.google.com/s2/favicons?domain=forum.figma.com&sz=32",
-                  "title": "Three new features to help build brand momentum with Figma Buzz"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "para-1-1",
-          "content": "This approach transforms how marketing teams interact with design systems, moving them from passive consumers to active customizers. Rather than requesting new template variations from designers, marketers can independently adjust layouts, colors, logos, and calls-to-action within pre-approved guardrails. Designer Advocate Kaitie Chambers demonstrated this workflow in a video showing how component properties enable faster, more flexible asset creation while maintaining content integrity. The system strikes a balance between creative control and brand consistency, addressing a longstanding challenge in scaling asset production.",
-          "citations": [
-            {
-              "primarySource": {
-                "id": "source-10",
                 "name": "forrester",
                 "url": "https://www.forrester.com/blogs/figma-config-2025-in-an-ai-world-design-matters-more-than-ever/",
                 "favicon": "https://www.google.com/s2/favicons?domain=www.forrester.com&sz=32",
@@ -126,17 +94,49 @@
               "additionalCount": 2,
               "additionalSources": [
                 {
+                  "id": "source-8",
+                  "name": "techcrunch",
+                  "url": "https://techcrunch.com/2025/05/07/figma-releases-new-ai-powered-tools-for-creating-sites-app-prototypes-and-marketing-assets/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
+                  "title": "Three new features to help build brand momentum with Figma Buzz"
+                },
+                {
+                  "id": "source-9",
+                  "name": "youtube",
+                  "url": "https://www.youtube.com/watch?v=PASsk7lxTrc",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
+                  "title": "Three new features to help build brand momentum with Figma Buzz"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "para-1-1",
+          "content": "Product Designer Natasha Tenggoro demonstrated plugins enabling motion design for headlines and interactions. These tools support internal plugin creation and publication via Figma Community. Video trimming offers fine control for syncing clips in event materials or social ads.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-10",
+                "name": "gadgets360",
+                "url": "https://www.gadgets360.com/ai/news/figma-config-2025-sites-make-buzz-draw-ai-tools-launched-features-8361673",
+                "favicon": "https://www.google.com/s2/favicons?domain=www.gadgets360.com&sz=32",
+                "title": "Three new features to help build brand momentum with Figma Buzz"
+              },
+              "additionalCount": 2,
+              "additionalSources": [
+                {
                   "id": "source-11",
-                  "name": "eweek",
-                  "url": "https://www.eweek.com/artificial-intelligence/figma-make-ai-tool-designers/",
-                  "favicon": "https://www.google.com/s2/favicons?domain=www.eweek.com&sz=32",
+                  "name": "forum",
+                  "url": "https://forum.figma.com/product-updates-3/new-features-in-figma-buzz-46631",
+                  "favicon": "https://www.google.com/s2/favicons?domain=forum.figma.com&sz=32",
                   "title": "Three new features to help build brand momentum with Figma Buzz"
                 },
                 {
                   "id": "source-12",
-                  "name": "techcrunch",
-                  "url": "https://techcrunch.com/2025/05/07/figma-releases-new-ai-powered-tools-for-creating-sites-app-prototypes-and-marketing-assets/",
-                  "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
+                  "name": "figma",
+                  "url": "https://www.figma.com/blog/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
                   "title": "Three new features to help build brand momentum with Figma Buzz"
                 }
               ]
@@ -147,34 +147,34 @@
     },
     {
       "id": "section-2",
-      "title": "Extending Capability: Plugins and Integrated Workflows for Global Teams",
+      "title": "Industry Experts Praise Buzz for Bridging Design and Marketing Gaps",
       "paragraphs": [
         {
           "id": "para-2-0",
-          "content": "Figma Buzz now supports **plugin integrations** that connect directly to digital asset management (DAM) systems, translation management systems (TMS), and animation tools, eliminating the need to switch between applications. Teams can pull brand-approved images from DAM platforms without leaving Figma, ensuring consistency while reducing context switching. Product Designer Natasha Tenggoro demonstrated how plugins enable inserting brand logos, QR codes, localizing assets, and adding animations—all within the Buzz interface. Beyond pre-built plugins for tools like Brandfolder, Lokalise, and LottieFiles, teams can create and publish internal plugins for use across their organization or share them with the broader Figma Community.",
+          "content": "Figma Forum users celebrated video trimming and plugins for finalizing assets efficiently. Designer Advocate Kaitie Chambers showcased template configuration for rapid, flexible workflows. Rippling's Director of Brand Design Dan highlighted Buzz's role in accelerating brand video production.",
           "citations": [
             {
               "primarySource": {
                 "id": "source-13",
-                "name": "gadgets360",
-                "url": "https://www.gadgets360.com/ai/news/figma-config-2025-sites-make-buzz-draw-ai-tools-launched-features-8361673",
-                "favicon": "https://www.google.com/s2/favicons?domain=www.gadgets360.com&sz=32",
+                "name": "excited",
+                "url": "https://excited.agency/events/whats-new-in-figma-buzz-sites-grid-draw-make",
+                "favicon": "https://www.google.com/s2/favicons?domain=excited.agency&sz=32",
                 "title": "Three new features to help build brand momentum with Figma Buzz"
               },
               "additionalCount": 2,
               "additionalSources": [
                 {
                   "id": "source-14",
-                  "name": "mondo",
-                  "url": "https://mondo.com/insights/how-figmas-latest-updates-are-changing-marketing-creative-collaboration/",
-                  "favicon": "https://www.google.com/s2/favicons?domain=mondo.com&sz=32",
+                  "name": "springbokagency",
+                  "url": "https://www.springbokagency.com/inspiration/news/figma-buzz-revolutionizing-design-collaboration",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.springbokagency.com&sz=32",
                   "title": "Three new features to help build brand momentum with Figma Buzz"
                 },
                 {
                   "id": "source-15",
-                  "name": "figma",
-                  "url": "https://www.figma.com/blog/updates-to-ai-credits-in-figma/",
-                  "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+                  "name": "investor",
+                  "url": "https://investor.figma.com/news-events/news/default.aspx",
+                  "favicon": "https://www.google.com/s2/favicons?domain=investor.figma.com&sz=32",
                   "title": "Three new features to help build brand momentum with Figma Buzz"
                 }
               ]
@@ -183,30 +183,30 @@
         },
         {
           "id": "para-2-1",
-          "content": "Translation management system integration proves particularly valuable for global marketing teams scaling campaigns across multiple languages and regions. Rather than manually copying translated copy into templates, teams can pull localized content directly from their TMS, facilitating cross-functional collaboration and keeping design context intact. Animation plugins enable teams to bring assets to life by adding motion to headlines, creating eye-catching visuals, or mimicking on-screen interactions without leaving the canvas. This integrated approach fundamentally changes how distributed teams collaborate on branded content, consolidating multiple tool switches into a single unified workspace.",
+          "content": "Forrester positions Buzz as an ecosystem expander for non-designers, enhancing prototyping and consistency. These features align with Figma's 2025 rollout of over 150 updates, including AI tools. Future Config events may unveil further brand tool evolutions.",
           "citations": [
             {
               "primarySource": {
                 "id": "source-16",
-                "name": "figma",
-                "url": "https://www.figma.com/blog/figma-make-for-gov/",
-                "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+                "name": "webdesignernews",
+                "url": "https://webdesignernews.com/three-new-features-to-help-build-brand-momentum-with-figma-buzz/",
+                "favicon": "https://www.google.com/s2/favicons?domain=webdesignernews.com&sz=32",
                 "title": "Three new features to help build brand momentum with Figma Buzz"
               },
               "additionalCount": 2,
               "additionalSources": [
                 {
                   "id": "source-17",
-                  "name": "tilipmandigital",
-                  "url": "https://www.tilipmandigital.com/resource-center/articles/figma-config-2025-core-updates",
-                  "favicon": "https://www.google.com/s2/favicons?domain=www.tilipmandigital.com&sz=32",
+                  "name": "youtube",
+                  "url": "https://www.youtube.com/shorts/Sf_5xBPH1TM",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
                   "title": "Three new features to help build brand momentum with Figma Buzz"
                 },
                 {
                   "id": "source-18",
-                  "name": "config",
-                  "url": "https://config.figma.com",
-                  "favicon": "https://www.google.com/s2/favicons?domain=config.figma.com&sz=32",
+                  "name": "figma",
+                  "url": "https://www.figma.com/solutions/ai-product-builder/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
                   "title": "Three new features to help build brand momentum with Figma Buzz"
                 }
               ]
@@ -227,36 +227,36 @@
     {
       "id": "source-2",
       "name": "figmalion",
-      "url": "https://figmalion.com/issue/231",
+      "url": "https://figmalion.com/topics/figma-buzz",
       "favicon": "https://www.google.com/s2/favicons?domain=figmalion.com&sz=32",
       "title": "Three new features to help build brand momentum with Figma Buzz"
     },
     {
       "id": "source-3",
-      "name": "excited",
-      "url": "https://excited.agency/events/whats-new-in-figma-buzz-sites-grid-draw-make",
-      "favicon": "https://www.google.com/s2/favicons?domain=excited.agency&sz=32",
-      "title": "Three new features to help build brand momentum with Figma Buzz"
-    },
-    {
-      "id": "source-4",
       "name": "youtube",
       "url": "https://www.youtube.com/watch?v=0lSS7m3Lh0g",
       "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
       "title": "Three new features to help build brand momentum with Figma Buzz"
     },
     {
+      "id": "source-4",
+      "name": "figma",
+      "url": "https://www.figma.com/blog/everything/",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+      "title": "Three new features to help build brand momentum with Figma Buzz"
+    },
+    {
       "id": "source-5",
-      "name": "youtube",
-      "url": "https://www.youtube.com/watch?v=PASsk7lxTrc",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
+      "name": "figma",
+      "url": "https://www.figma.com/release-notes/",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "Three new features to help build brand momentum with Figma Buzz"
     },
     {
       "id": "source-6",
-      "name": "investor",
-      "url": "https://investor.figma.com/news-events/news/default.aspx",
-      "favicon": "https://www.google.com/s2/favicons?domain=investor.figma.com&sz=32",
+      "name": "config",
+      "url": "https://config.figma.com",
+      "favicon": "https://www.google.com/s2/favicons?domain=config.figma.com&sz=32",
       "title": "Three new features to help build brand momentum with Figma Buzz"
     }
   ],
@@ -271,148 +271,120 @@
     {
       "id": "source-2",
       "name": "figmalion",
-      "url": "https://figmalion.com/issue/231",
+      "url": "https://figmalion.com/topics/figma-buzz",
       "favicon": "https://www.google.com/s2/favicons?domain=figmalion.com&sz=32",
       "title": "Three new features to help build brand momentum with Figma Buzz"
     },
     {
       "id": "source-3",
-      "name": "excited",
-      "url": "https://excited.agency/events/whats-new-in-figma-buzz-sites-grid-draw-make",
-      "favicon": "https://www.google.com/s2/favicons?domain=excited.agency&sz=32",
-      "title": "Three new features to help build brand momentum with Figma Buzz"
-    },
-    {
-      "id": "source-4",
       "name": "youtube",
       "url": "https://www.youtube.com/watch?v=0lSS7m3Lh0g",
       "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
       "title": "Three new features to help build brand momentum with Figma Buzz"
     },
     {
-      "id": "source-5",
-      "name": "youtube",
-      "url": "https://www.youtube.com/watch?v=PASsk7lxTrc",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
-      "title": "Three new features to help build brand momentum with Figma Buzz"
-    },
-    {
-      "id": "source-6",
-      "name": "investor",
-      "url": "https://investor.figma.com/news-events/news/default.aspx",
-      "favicon": "https://www.google.com/s2/favicons?domain=investor.figma.com&sz=32",
-      "title": "Three new features to help build brand momentum with Figma Buzz"
-    },
-    {
-      "id": "source-7",
+      "id": "source-4",
       "name": "figma",
-      "url": "https://www.figma.com/community/file/1496189858089581731/new-feature-launch-linkedin-landscape-ad",
+      "url": "https://www.figma.com/blog/everything/",
       "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "Three new features to help build brand momentum with Figma Buzz"
     },
     {
-      "id": "source-8",
+      "id": "source-5",
       "name": "figma",
       "url": "https://www.figma.com/release-notes/",
       "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "Three new features to help build brand momentum with Figma Buzz"
     },
     {
-      "id": "source-9",
-      "name": "forum",
-      "url": "https://forum.figma.com/product-updates-3/new-features-in-figma-buzz-46631",
-      "favicon": "https://www.google.com/s2/favicons?domain=forum.figma.com&sz=32",
-      "title": "Three new features to help build brand momentum with Figma Buzz"
-    },
-    {
-      "id": "source-10",
-      "name": "forrester",
-      "url": "https://www.forrester.com/blogs/figma-config-2025-in-an-ai-world-design-matters-more-than-ever/",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.forrester.com&sz=32",
-      "title": "Three new features to help build brand momentum with Figma Buzz"
-    },
-    {
-      "id": "source-11",
-      "name": "eweek",
-      "url": "https://www.eweek.com/artificial-intelligence/figma-make-ai-tool-designers/",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.eweek.com&sz=32",
-      "title": "Three new features to help build brand momentum with Figma Buzz"
-    },
-    {
-      "id": "source-12",
-      "name": "techcrunch",
-      "url": "https://techcrunch.com/2025/05/07/figma-releases-new-ai-powered-tools-for-creating-sites-app-prototypes-and-marketing-assets/",
-      "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
-      "title": "Three new features to help build brand momentum with Figma Buzz"
-    },
-    {
-      "id": "source-13",
-      "name": "gadgets360",
-      "url": "https://www.gadgets360.com/ai/news/figma-config-2025-sites-make-buzz-draw-ai-tools-launched-features-8361673",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.gadgets360.com&sz=32",
-      "title": "Three new features to help build brand momentum with Figma Buzz"
-    },
-    {
-      "id": "source-14",
-      "name": "mondo",
-      "url": "https://mondo.com/insights/how-figmas-latest-updates-are-changing-marketing-creative-collaboration/",
-      "favicon": "https://www.google.com/s2/favicons?domain=mondo.com&sz=32",
-      "title": "Three new features to help build brand momentum with Figma Buzz"
-    },
-    {
-      "id": "source-15",
-      "name": "figma",
-      "url": "https://www.figma.com/blog/updates-to-ai-credits-in-figma/",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
-      "title": "Three new features to help build brand momentum with Figma Buzz"
-    },
-    {
-      "id": "source-16",
-      "name": "figma",
-      "url": "https://www.figma.com/blog/figma-make-for-gov/",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
-      "title": "Three new features to help build brand momentum with Figma Buzz"
-    },
-    {
-      "id": "source-17",
-      "name": "tilipmandigital",
-      "url": "https://www.tilipmandigital.com/resource-center/articles/figma-config-2025-core-updates",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.tilipmandigital.com&sz=32",
-      "title": "Three new features to help build brand momentum with Figma Buzz"
-    },
-    {
-      "id": "source-18",
+      "id": "source-6",
       "name": "config",
       "url": "https://config.figma.com",
       "favicon": "https://www.google.com/s2/favicons?domain=config.figma.com&sz=32",
       "title": "Three new features to help build brand momentum with Figma Buzz"
     },
     {
-      "id": "source-19",
+      "id": "source-7",
+      "name": "forrester",
+      "url": "https://www.forrester.com/blogs/figma-config-2025-in-an-ai-world-design-matters-more-than-ever/",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.forrester.com&sz=32",
+      "title": "Three new features to help build brand momentum with Figma Buzz"
+    },
+    {
+      "id": "source-8",
+      "name": "techcrunch",
+      "url": "https://techcrunch.com/2025/05/07/figma-releases-new-ai-powered-tools-for-creating-sites-app-prototypes-and-marketing-assets/",
+      "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
+      "title": "Three new features to help build brand momentum with Figma Buzz"
+    },
+    {
+      "id": "source-9",
+      "name": "youtube",
+      "url": "https://www.youtube.com/watch?v=PASsk7lxTrc",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
+      "title": "Three new features to help build brand momentum with Figma Buzz"
+    },
+    {
+      "id": "source-10",
+      "name": "gadgets360",
+      "url": "https://www.gadgets360.com/ai/news/figma-config-2025-sites-make-buzz-draw-ai-tools-launched-features-8361673",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.gadgets360.com&sz=32",
+      "title": "Three new features to help build brand momentum with Figma Buzz"
+    },
+    {
+      "id": "source-11",
+      "name": "forum",
+      "url": "https://forum.figma.com/product-updates-3/new-features-in-figma-buzz-46631",
+      "favicon": "https://www.google.com/s2/favicons?domain=forum.figma.com&sz=32",
+      "title": "Three new features to help build brand momentum with Figma Buzz"
+    },
+    {
+      "id": "source-12",
       "name": "figma",
-      "url": "https://www.figma.com/buzz/",
+      "url": "https://www.figma.com/blog/",
       "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "Three new features to help build brand momentum with Figma Buzz"
     },
     {
-      "id": "source-20",
+      "id": "source-13",
+      "name": "excited",
+      "url": "https://excited.agency/events/whats-new-in-figma-buzz-sites-grid-draw-make",
+      "favicon": "https://www.google.com/s2/favicons?domain=excited.agency&sz=32",
+      "title": "Three new features to help build brand momentum with Figma Buzz"
+    },
+    {
+      "id": "source-14",
+      "name": "springbokagency",
+      "url": "https://www.springbokagency.com/inspiration/news/figma-buzz-revolutionizing-design-collaboration",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.springbokagency.com&sz=32",
+      "title": "Three new features to help build brand momentum with Figma Buzz"
+    },
+    {
+      "id": "source-15",
+      "name": "investor",
+      "url": "https://investor.figma.com/news-events/news/default.aspx",
+      "favicon": "https://www.google.com/s2/favicons?domain=investor.figma.com&sz=32",
+      "title": "Three new features to help build brand momentum with Figma Buzz"
+    },
+    {
+      "id": "source-16",
       "name": "webdesignernews",
       "url": "https://webdesignernews.com/three-new-features-to-help-build-brand-momentum-with-figma-buzz/",
       "favicon": "https://www.google.com/s2/favicons?domain=webdesignernews.com&sz=32",
       "title": "Three new features to help build brand momentum with Figma Buzz"
     },
     {
-      "id": "source-21",
-      "name": "opensesh",
-      "url": "https://www.opensesh.app/discover/three-new-features-to-help-build-brand-momentum-with-figma-b",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.opensesh.app&sz=32",
-      "title": "Three new features to help build brand momentum with Figma Buzz"
-    },
-    {
-      "id": "source-22",
+      "id": "source-17",
       "name": "youtube",
       "url": "https://www.youtube.com/shorts/Sf_5xBPH1TM",
       "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
+      "title": "Three new features to help build brand momentum with Figma Buzz"
+    },
+    {
+      "id": "source-18",
+      "name": "figma",
+      "url": "https://www.figma.com/solutions/ai-product-builder/",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "Three new features to help build brand momentum with Figma Buzz"
     }
   ],
@@ -420,8 +392,8 @@
     "url": "https://cdn.sanity.io/images/599r6htc/regionalized/d8839e0855accfa9c5e71616ce54001870cc455e-3840x2160.png?w=1200&amp;q=70&amp;fit=max&amp;auto=format"
   },
   "sidebarSections": [
-    "Design Systems Meet Marketing: Configurable Templates and Component Properties",
-    "Extending Capability: Plugins and Integrated Workflows for Global Teams"
+    "Configurable Templates and Plugins Streamline On-Brand Workflows",
+    "Industry Experts Praise Buzz for Bridging Design and Marketing Gaps"
   ],
   "relatedArticles": []
 }
