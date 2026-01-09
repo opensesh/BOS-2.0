@@ -1,384 +1,331 @@
 {
   "type": "short-form",
-  "date": "2026-01-09T16:23:27.510Z",
+  "date": "2026-01-09T16:28:45.242Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "X restricts Grok&#8217;s image generation to paying subscribers only after drawing the world&#8217;s ire",
+      "description": "Elon Musk's AI company has restricted Grok's controversial AI image-generation feature to only paying subscribers on X, after the tool invited heated criticism from across the world for letting users generate sexualized images of women and children.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover"
-        }
-      ],
-      "format": "quick-image",
-      "subcategory": "quick-image",
-      "hooks": [
-        "Design Templates That Don't Break Your Brand 🚀",
-        "Figma Secrets: Flex Your Brand Without Breaking It",
-        "8 Pro Tips to Master Scalable Design Systems"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick text transitions between template tips",
-            "Include dynamic mockup demonstrations",
-            "Add motion graphics highlighting key points"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must be striking visual summary",
-            "Each slide focuses on one template strategy",
-            "Use consistent color-coded design system"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected visual pattern interrupt",
-            "Use rapid-fire editing style",
-            "Include screen recordings of Figma techniques"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Add professional insights between template tips",
-            "Include designer credibility indicators",
-            "Reference industry-specific design challenges"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, high-contrast design with futuristic gradient overlays. Typography mixed between geometric sans-serif and playful tech fonts. Color palette: electric blue, deep charcoal, accent neon. Dynamic layout with fractured grid system. Minimal 3D design elements suggesting scalability and flexibility."
-      },
-      "exampleOutline": [
-        "Hook: Provocative brand template challenge",
-        "Problem: Rigid vs. Flexible Design Systems",
-        "8 Actionable Template Creation Strategies",
-        "Real-World Design System Examples",
-        "Call-to-Action: Free Template Resources"
-      ],
-      "hashtags": "#DesignTemplates #FigmaTips #BrandDesign #CreativeStrategy #AIDesign #ProductDesign #DesignSystem #CreativeTech #UIUXTips #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 12
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Theaiinsider",
-          "url": "https://theaiinsider.tech/2025/12/12/figma-introduces-new-ai-powered-image-editing-suite-to-streamline-design-workflows/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/release-notes/"
-        }
-      ],
-      "format": "carousel",
-      "subcategory": "carousel",
-      "hooks": [
-        "AI Image Editing: Figma Just Leveled Up Design",
-        "3 Mind-Blowing Figma Tools Transforming Creative Workflows",
-        "Design Precision Meets AI: Figma's Game-Changing Update"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick screen recordings demonstrating each tool",
-            "Add dynamic text overlays highlighting key features",
-            "Create fast-paced transitions between tool demonstrations"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must have provocative visual hook",
-            "Use clean, high-contrast graphics for each tool explanation",
-            "Include before/after visuals to demonstrate tool impact"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Open with unexpected visual metaphor about design transformation",
-            "Use voiceover explaining tools while showing rapid demos",
-            "Include text callouts highlighting unique tool capabilities"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame tools as professional productivity enhancers",
-            "Include data/stats about time saved",
-            "Use more technical, workflow-oriented language"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, tech-futuristic aesthetic with electric blue/deep purple gradient backgrounds. Clean sans-serif typography. Dynamic motion graphics showing tool transformations. Minimalist iconography representing AI precision. High-contrast color palette suggesting innovation and speed."
-      },
-      "exampleOutline": [
-        "Slide 1: Provocative Hook & Visual Overview",
-        "Slide 2: Problem Statement in Design Workflow",
-        "Slide 3: First AI Image Editing Tool Explanation",
-        "Slide 4: Second AI Image Editing Tool Demonstration",
-        "Slide 5: Third AI Image Editing Tool Capabilities"
-      ],
-      "hashtags": "#FigmaAI #DesignInnovation #AITools #CreativeWorkflow #DesignTechnology #AIDesign #FigmaUpdate #CreativeTech #DesignIntelligence #ProductivityHack",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 1
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/05/07/figma-releases-new-ai-powered-tools-for-creating-sites-app-prototypes-and-marketing-assets/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/shorts/Sf_5xBPH1TM"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/release-notes/"
-        },
-        {
-          "name": "Help",
-          "url": "https://help.figma.com/hc/en-us/articles/23954856027159-Navigating-UI3"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/09/x-restricts-groks-image-generation-to-paying-subscribers-only-after-drawing-the-worlds-ire/"
         }
       ],
       "format": "story",
       "subcategory": "story",
       "hooks": [
-        "Figma Buzz: Your Design Workflow Just Got Supercharged",
-        "3 Game-Changing Features Designers Can't Miss",
-        "Unlock Next-Level Design Efficiency in Seconds"
+        "AI Image Drama: Grok's Controversial Subscriber Lockdown",
+        "X's Grok: When AI Goes Too Far",
+        "Elon's AI Playground: Who Gets In?"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick jump cuts between feature demonstrations",
-            "Include text overlays explaining each feature's benefit",
-            "End with a compelling screen recording of the tool"
+            "Use dynamic text transitions to reveal controversy",
+            "Include quick cuts showing platform screenshots",
+            "Add subtle motion graphics highlighting key points"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide must visually shock/intrigue viewers",
-            "Use progressive reveal technique for each feature",
-            "Include actionable tooltips on each slide"
+            "First slide must shock with bold typography",
+            "Use infographic-style slides for complex details",
+            "Final slide includes clear engagement call-to-action"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with unexpected visual metaphor about workflow",
-            "Use dynamic screen recordings with animated highlights",
-            "Include rapid-fire feature explanation with energy"
+            "Start with provocative AI-generated image tease",
+            "Use voiceover to explain nuanced context",
+            "Include rapid-fire ethical AI takeaways"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Frame features as professional productivity upgrades",
-            "Include data/statistic about design efficiency",
-            "Use more technical, detailed language"
+            "Frame as thought leadership on AI ethics",
+            "Include professional, data-driven visual analysis",
+            "Reference industry implications and potential regulations"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "High-contrast cyberpunk-inspired palette with electric blues/neon oranges, glitch-style typography, fractured digital composition suggesting system breakdown, angular graphic elements representing technological tension"
+      },
+      "exampleOutline": [
+        "Section 1: Provocative AI Image Teaser",
+        "Section 2: Grok's Controversial Image Generation Context",
+        "Section 3: X's Subscriber Restriction Breakdown",
+        "Section 4: Ethical AI Generation Insights",
+        "Section 5: Future of Responsible AI Technology"
+      ],
+      "hashtags": "#AIEthics #TechControversy #GrokAI #ElonMusk #AIRegulation #TechInnovation #AIImageGeneration #XPlatform #ResponsibleAI #TechTrends",
+      "textureIndex": 10
+    },
+    {
+      "title": "The venture firm that ate Silicon Valley just raised another $15 billion",
+      "description": "In a blog post published Friday morning, Ben Horowitz writes that \"as the American leader in Venture Capital, the fate of new technology in the United States rests partly on our shoulders.\" It's the kind of statement certain to cause agita at rival firms.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/09/the-venture-firm-that-ate-silicon-valley/"
+        }
+      ],
+      "format": "story",
+      "subcategory": "story",
+      "hooks": [
+        "How One VC Firm Is Reshaping Tech's Future",
+        "Silicon Valley's Power Players: The Billion-Dollar Bet",
+        "Inside the Venture Capital Takeover Machine"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic text overlays that transition quickly",
+            "Include quick cuts of key quotes/statistics",
+            "Create a narrative arc in 15-second segments"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have a provocative headline",
+            "Use infographic-style slides for complex information",
+            "End with a thought-provoking final slide"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Open with a surprising statistic",
+            "Use screen recordings of source material",
+            "Add dramatic voiceover narration"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame content as industry insight",
+            "Include professional context and analysis",
+            "Use more formal, authoritative tone"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-energy cyberpunk-inspired design with neon accents, dynamic diagonal compositions, transparent overlays, futuristic sans-serif typography, glitch/motion graphics transitions, dark mode aesthetic with electric blue and magenta highlights"
+        "description": "High-contrast tech-inspired color palette with deep blues and electric oranges, minimalist geometric overlays, futuristic sans-serif typography, dynamic motion graphics simulating data flow and technological progression, clean yet aggressive visual language that suggests innovation and power"
       },
       "exampleOutline": [
-        "Section 1: Provocative Hook/Problem Statement",
-        "Section 2: Workflow Pain Point Illustration",
-        "Section 3: Feature 1 - Marketing Template Connection",
-        "Section 4: Feature 2 - Plugin Integration",
-        "Section 5: Feature 3 - Video Trimming Capability"
+        "Section 1: Provocative Opening - Venture Capital Disruption",
+        "Section 2: Andreessen Horowitz's Strategic Context",
+        "Section 3: $15B Fundraising Implications",
+        "Section 4: Future of Tech Investment Landscape",
+        "Section 5: Call to Understand Tech Ecosystem"
       ],
-      "hashtags": "#FigmaBuzz #DesignTech #AIDesign #CreativeWorkflow #ProductivityHacks #DesignTools #TechInnovation #UIDesign #CreativeTech #DesignEfficiency",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 2
+      "hashtags": "#VentureCapital #TechInnovation #StartupFunding #SiliconValley #InvestmentStrategy #TechTrends #Entrepreneurship #AITech #FutureOfInnovation #BusinessInsights",
+      "textureIndex": 0
     },
     {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
+      "title": "Anthropic adds Allianz to growing list of enterprise wins",
+      "description": "Anthropic announces its first enterprise deal of 2026 which includes building agents and for, and giving Claude code, to Allianz.",
       "starred": false,
       "sources": [
         {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/09/anthropic-adds-allianz-to-growing-list-of-enterprise-wins/"
         }
       ],
       "format": "reel",
       "subcategory": "reel",
       "hooks": [
-        "Want a top design job in San Francisco?",
-        "Design careers: Inside Moniker's secret hiring process",
-        "The design role Silicon Valley is hunting for"
+        "AI Enterprise Revolution: Anthropic's Latest Game-Changer 🚀",
+        "Allianz + Claude: The Future of Enterprise AI",
+        "When Global Titans Meet Cutting-Edge AI Technology"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use dynamic screen recordings of portfolio work",
-            "Include fast-paced transitions between design samples",
-            "Add text overlay highlighting key job requirements"
+            "Use dynamic split-screen animations showing Anthropic/Allianz logos",
+            "Incorporate quick data visualizations with fast transitions",
+            "Leverage text overlays that pop in sync with voiceover"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Eye-catching job title graphic",
-            "Use slide progression to reveal job details",
-            "Include skill requirement infographics"
+            "Create sequential slides showing enterprise AI transformation",
+            "Use infographic-style graphics for key statistics",
+            "Design each slide with bold, minimal typography"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Open with high-energy personal narrative",
-            "Show quick portfolio clips",
-            "Use professional but energetic voiceover"
+            "Start with high-energy motion graphic intro",
+            "Use screen recording/demo elements to show AI workflow",
+            "Include quick lower-third text for key points"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "More detailed job description context",
-            "Include professional headshot/company branding",
-            "Add credibility with design leadership quotes"
+            "Adapt content to more professional, data-driven presentation",
+            "Include subtle corporate color palette",
+            "Emphasize enterprise value proposition"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy tech aesthetic with futuristic blue/white/gray color palette. Dynamic geometric transitions, holographic text overlays, minimalist motion graphics. Blend of corporate professionalism and cutting-edge design with sharp angles and fluid animations."
+      },
+      "exampleOutline": [
+        "Hook: Dramatic AI transformation visual",
+        "Quick context: Anthropic's enterprise expansion",
+        "Allianz partnership key highlights",
+        "Implications for AI in business",
+        "Call-to-action: Learn more about enterprise AI"
+      ],
+      "hashtags": "#AIEnterprise #TechInnovation #Anthropic #EnterpriseAI #AllianzTech #FutureOfWork #AIRevolution #BusinessTransformation #TechTrends #InnovationStrategy",
+      "textureIndex": 10
+    },
+    {
+      "title": "CES 2026: Everything revealed, from Nvidia’s debuts to AMD’s new chips to Razer’s AI oddities",
+      "description": "CES 2026 is in full swing in Las Vegas, with the show floor open to the public after a packed couple of days occupied by press conferences from the likes of Nvidia, Sony, and AMD and previews from Sunday’s Unveiled event.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/08/ces-2026-everything-revealed-from-nvidias-debuts-to-amds-new-chips-to-razers-ai-oddities/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "Tech's wildest gadgets just dropped at CES 2026! 🚀",
+        "CES 2026: AI meets hardware in mind-blowing ways",
+        "Future shock: The coolest tech revealed this week"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use rapid-fire transitions between tech product shots",
+            "Include animated tech glitch effects for visual interest",
+            "Add dynamic text overlays highlighting key innovations"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Provocative headline/main visual",
+            "Use each slide to spotlight a different tech breakthrough",
+            "Final slide: Surprising stat or future prediction"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Open with most shocking/unexpected tech reveal",
+            "Use quick-cut editing to maintain high energy",
+            "Include voiceover highlighting key innovation themes"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame tech reveals as industry transformation signals",
+            "Add professional context to each innovation",
+            "Use data-driven insights to contextualize trends"
           ]
         }
       ],
       "visualDirection": {
         "rating": 8,
-        "description": "High-contrast San Francisco tech aesthetic. Bold sans-serif typography. Gradient backgrounds suggesting innovation. Dynamic motion graphics. Color palette of deep blues, bright teals, and electric accents. Screen-recording style transitions. Minimal but impactful design system showcasing creative potential."
+        "description": "Cyberpunk-meets-minimalist aesthetic. High-contrast color palette (electric blue, neon purple, stark white). Glitch art typography. Geometric overlay graphics. Futuristic product silhouettes with digital distortion effects. Motion graphics suggesting technological dynamism."
       },
       "exampleOutline": [
-        "Quick attention-grabbing design portfolio showcase",
-        "Moniker's unique design role context",
-        "Key skills and portfolio requirements",
-        "What makes a standout design candidate",
-        "Call-to-action: Application details/next steps"
+        "Hook: Provocative CES 2026 headline",
+        "Quick tech landscape overview",
+        "3-4 key product/innovation highlights",
+        "Surprising trend or future prediction",
+        "Call-to-explore/learn more"
       ],
-      "hashtags": "#DesignJobs #SanFranciscoDesign #CreativeCareer #AIDesign #TechDesign #BrandIdentity #DesignTalent #CareerOpportunity #GraphicDesign #ProductDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7767791/pexels-photo-7767791.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "hashtags": "#CES2026 #TechInnovation #FutureTech #AIRevolution #NvidiaAI #TechTrends #InnovationUnleashed #TechRevealed #FutureGadgets #TechCommunity",
       "textureIndex": 8
     },
     {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
+      "title": "Data security startup Cyera hits $9B valuation six months after being valued at $6B",
+      "description": "Cyera raised another $400 million just six months after its last huge round.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/08/data-security-startup-cyera-hits-9b-valuation-six-months-after-being-valued-at-6b/"
         }
       ],
       "format": "carousel",
       "subcategory": "carousel",
       "hooks": [
-        "Designing a font that speaks Figma's design language",
-        "How we crafted a typeface from scratch",
-        "Behind the scenes: Figma's typography revolution"
+        "Startup Valuation Rocket: From $6B to $9B in 6 Months 🚀",
+        "Cybersecurity Gold Rush: How Cyera Crushed Investor Expectations",
+        "Tech's Hottest Ticket: $400M Fundraise in Record Time"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick typography animation transitions between slides",
-            "Include behind-the-scenes designer clips for authenticity",
-            "Add dynamic text reveal effects to maintain engagement"
+            "Use dynamic motion graphics to visualize valuation jump",
+            "Create quick animated transitions between key financial stats",
+            "Include founder/CEO soundbite for human connection"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide must have provocative visual typography",
-            "Use clean, progressive design across slides",
-            "Create a visual narrative that pulls users to swipe"
+            "First slide: Bold, attention-grabbing headline graphic",
+            "Use infographic-style slides with clean, minimal design",
+            "Progressive reveal of key financial milestones across slides"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Condense carousel content into 60-second narrative arc",
-            "Use kinetic typography matching Figma Sans style",
-            "Include designer interview snippets for human connection"
+            "Add voiceover explaining valuation context",
+            "Use screen recordings of financial charts",
+            "Include rapid-fire text animations"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Add more technical design process details",
-            "Include professional insights about typeface development",
-            "Use more formal, authoritative design language"
+            "More detailed financial analysis in text",
+            "Professional tone with data-driven insights",
+            "Include expert commentary or industry context"
           ]
         }
       ],
       "visualDirection": {
-        "rating": 8,
-        "description": "Bold, experimental typography-driven design. High-contrast color palette with Figma's signature blues and whites. Dynamic grid layouts showcasing letterform evolution. Kinetic typography animations revealing design process. Minimalist yet dynamic aesthetic blending technical precision with creative expression."
+        "rating": 7,
+        "description": "Bold, tech-forward design with electric blue and deep charcoal color palette. Geometric infographic style with sharp angular transitions. Typography: clean sans-serif, bold weights. Animated financial growth visualization with upward motion graphics. Minimal but high-energy aesthetic that communicates rapid tech innovation."
       },
       "exampleOutline": [
-        "Slide 1: Provocative hook about typography's power",
-        "Slide 2: Why Figma needed a custom typeface",
-        "Slide 3: Design challenges in creating Figma Sans",
-        "Slide 4: Key design principles and inspiration",
-        "Slide 5: Final typeface reveal and community impact"
+        "Slide 1: Bold headline + Cyera logo",
+        "Slide 2: Initial $6B valuation context",
+        "Slide 3: $400M fundraise breakdown",
+        "Slide 4: Valuation jump visualization",
+        "Slide 5: Key success factors/CTA"
       ],
-      "hashtags": "#FigmaSans #DesignLanguage #Typography #ProductDesign #CreativeProcess #AIDesign #DesignTools #BrandIdentity #CreativeTech #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 1
+      "hashtags": "#Cyera #Cybersecurity #StartupFunding #TechInnovation #VentureCapital #AISecurty #TechGrowth #InvestmentInsights #StartupSuccess #CyberTech",
+      "textureIndex": 12
     }
   ]
 }

@@ -1,266 +1,211 @@
 {
   "type": "long-form",
-  "date": "2026-01-09T16:23:27.510Z",
+  "date": "2026-01-09T16:29:29.559Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "X restricts Grok&#8217;s image generation to paying subscribers only after drawing the world&#8217;s ire",
+      "description": "Elon Musk's AI company has restricted Grok's controversial AI image-generation feature to only paying subscribers on X, after the tool invited heated criticism from across the world for letting users generate sexualized images of women and children.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover"
-        }
-      ],
-      "format": "livestream",
-      "subcategory": "leadership",
-      "hooks": [
-        "Design Templates That Marketing Will Actually Use",
-        "Crack the Code: Figma Templates That Scale",
-        "Brand Flexibility: Beyond Rigid Design Systems"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Pre-promote live stream in community tab with teaser graphic",
-            "Enable live chat for real-time audience interaction",
-            "Prepare 3-5 pre-screened audience questions for Q&A segment"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-energy, dynamic split-screen layout with live presenter and Figma interface. Bold geometric typography in brand teal/charcoal. Animated design system transitions. Motion graphics highlighting template flexibility. Clean, modern tech aesthetic with subtle glitch/digital overlay effects."
-      },
-      "exampleOutline": [
-        "Live Intro: Personal Design Challenge Hook",
-        "Problem: Template Rigidity in Corporate Design",
-        "8 Strategic Template Design Tips (Live Walkthrough)",
-        "Live Q&A: Audience Template Challenges",
-        "Closing CTA: Free Template Starter Kit"
-      ],
-      "hashtags": "#FigmaDesign #DesignSystems #CreativeTemplates #BrandFlexibility #ProductDesign #AIDesign #DesignTips #CreativeTech #DesignCommunity #FigmaTips",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Theaiinsider",
-          "url": "https://theaiinsider.tech/2025/12/12/figma-introduces-new-ai-powered-image-editing-suite-to-streamline-design-workflows/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/release-notes/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/09/x-restricts-groks-image-generation-to-paying-subscribers-only-after-drawing-the-worlds-ire/"
         }
       ],
       "format": "documentary",
       "subcategory": "framework",
       "hooks": [
-        "AI Transforms Design: Figma's Groundbreaking Image Tools",
-        "Design Revolution: 3 AI Tools Redefining Creativity",
-        "Precision Editing Meets Artificial Intelligence in Figma"
+        "AI's Dark Side: When Technology Goes Too Far",
+        "Grok's Image Nightmare: What Really Happened?",
+        "Elon Musk's Latest AI Controversy Exposed"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use cinematic B-roll of designers working in Figma",
-            "Include split-screen comparisons of before/after AI edits",
-            "Incorporate expert interview-style commentary with screen demonstrations"
+            "Use archival footage and screen recordings to illustrate controversies",
+            "Incorporate expert interview-style talking head segments",
+            "Use dynamic text overlays to highlight key ethical points"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Modern, high-contrast color palette with deep blues and electric accents. Dynamic composition with layered screen recordings and motion-tracked annotations. Clean, sans-serif typography with technical precision. Smooth transitions between demonstration and narrative segments. Aesthetic blend of technical documentation and creative storytelling, referencing Apple product launch videos and MKBHD tech reviews."
+        "description": "High-contrast dark mode aesthetic with tech-noir color palette (deep blues, electric whites, sharp grays). Utilize glitch effects and technical overlay graphics to emphasize digital investigation. Typography should feel clinical and precise, with sharp sans-serif fonts. Incorporate subtle motion graphics that simulate digital investigation interfaces."
       },
       "exampleOutline": [
-        "Section 1: Cold Open - Dramatic AI Image Transformation Sequence",
-        "Section 2: The Current Design Challenge and Workflow Limitations",
-        "Section 3: Detailed Walkthrough of Three New AI Tools",
-        "Section 4: Real-World Impact and Creative Possibilities",
-        "Section 5: Call-to-Action and Future of Design Technology"
+        "Section 1: Cold Open - Shocking AI Image Generation Revelation",
+        "Section 2: Timeline of Grok's Image Generation Feature",
+        "Section 3: Ethical Implications and Global Reaction",
+        "Section 4: Technical Analysis of AI Content Restrictions",
+        "Section 5: Future of Responsible AI Development Call-to-Action"
       ],
-      "hashtags": "#FigmaAI #DesignTech #CreativeTools #AIDesign #ImageEditing #ProductivityHack #DesignInnovation #CreativeTech #AICreativity #FigmaUpdate",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7903783/pexels-photo-7903783.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 12
+      "hashtags": "#AIEthics #TechControversy #GrokAI #ElonMusk #AIRegulation #TechnologyWatch #AIImageGeneration #DigitalEthics #TechInvestigation #AIPolicy",
+      "textureIndex": 4
     },
     {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
+      "title": "Anthropic adds Allianz to growing list of enterprise wins",
+      "description": "Anthropic announces its first enterprise deal of 2026 which includes building agents and for, and giving Claude code, to Allianz.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/05/07/figma-releases-new-ai-powered-tools-for-creating-sites-app-prototypes-and-marketing-assets/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/shorts/Sf_5xBPH1TM"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/release-notes/"
-        },
-        {
-          "name": "Help",
-          "url": "https://help.figma.com/hc/en-us/articles/23954856027159-Navigating-UI3"
-        }
-      ],
-      "format": "tutorial",
-      "subcategory": "instructional",
-      "hooks": [
-        "Design Faster: 3 Figma Buzz Features That Change Everything",
-        "Unlock Your Design Workflow: Figma Buzz Secrets Revealed",
-        "Pro Designer Tricks: Figma Buzz's Hidden Superpowers"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use screen recordings with clear cursor tracking for each step",
-            "Add chapter markers for each feature demonstration",
-            "Include picture-in-picture of presenter for personal connection"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, dynamic visual style with high-contrast color palette. Use electric blue and deep charcoal as primary colors. Typography should be clean and modern with sans-serif typefaces. Incorporate motion graphics that highlight each step with animated transitions. Create a futuristic, tech-forward aesthetic that feels cutting-edge and professional."
-      },
-      "exampleOutline": [
-        "Introduction: Why These Figma Buzz Features Matter",
-        "Context: Current Design Workflow Challenges",
-        "Feature 1: Marketing Template System Breakdown",
-        "Feature 2: Cross-App Plugin Integration",
-        "Feature 3: Video Trimming Workflow Optimization",
-        "Bonus Insights: Combining Features for Maximum Efficiency",
-        "Closing Call-to-Action: Implement These Strategies Now"
-      ],
-      "hashtags": "#FigmaBuzz #DesignTips #AIDesign #CreativeWorkflow #ProductivityHacks #DesignTechnology #UIDesign #MarketingDesign #CreativeTech #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 9
-    },
-    {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/09/anthropic-adds-allianz-to-growing-list-of-enterprise-wins/"
         }
       ],
       "format": "livestream",
       "subcategory": "leadership",
       "hooks": [
-        "Design Career Hack: Inside Moniker's Senior Designer Role",
-        "Want to Level Up Your Design Career?",
-        "San Francisco Design Dream Job Revealed"
+        "AI Enterprise Breakthrough: Anthropic's Massive Allianz Win",
+        "How Claude Just Transformed Enterprise AI",
+        "Inside Anthropic's Game-Changing Allianz Partnership"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Prepare live Q&A segment with pre-submitted audience questions",
-            "Use picture-in-picture to show design portfolio/screen while discussing role",
-            "Enable live chat for real-time audience engagement during stream"
+            "Enable live chat for real-time audience engagement",
+            "Use custom thumbnail with dynamic AI/enterprise visual",
+            "Prepare pre-screened audience questions for Q&A segment"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, tech-forward aesthetic with San Francisco skyline color palette. High-contrast typography, dynamic motion graphics showing design portfolio transitions. Dark mode UI-inspired background with subtle grid/blueprint overlay. Accent colors in electric blue and bright orange to represent design innovation."
+        "description": "High-energy blue and electric gradient background, dynamic motion graphics showing enterprise network connections, bold sans-serif typography with technical overlay elements, picture-in-picture style showing live presenter with AI visualization, minimal but high-tech aesthetic inspired by futuristic data visualization"
       },
       "exampleOutline": [
-        "Section 1: High-Energy Live Stream Intro & Role Overview",
-        "Section 2: Moniker's Design Philosophy & Company Context",
-        "Section 3: Detailed Role Requirements & Expectations",
-        "Section 4: Career Growth & Professional Development Insights",
-        "Section 5: Live Q&A with Audience Interaction"
+        "Opening: Live Stream Introduction & Breaking News Reveal",
+        "Context: Enterprise AI Landscape & Allianz Partnership Significance",
+        "Deep Dive: Technical Details of Claude's Enterprise Integration",
+        "Strategic Implications: What This Means for AI Adoption",
+        "Live Q&A: Audience Questions & Expert Insights"
       ],
-      "hashtags": "#DesignCareer #SeniorDesigner #SanFranciscoDesign #CreativeJobs #DesignIndustry #CareerAdvice #BrandIdentity #VisualDesign #DesignTips #CreativeProfessionals",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
+      "hashtags": "#AIEnterprise #AnthropicAI #ClaudeAI #EnterpriseInnovation #TechBreakthrough #ArtificialIntelligence #AIPartnerships #FutureOfWork #TechNews #IndustryInsights",
+      "textureIndex": 5
     },
     {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
+      "title": "CES 2026: Everything revealed, from Nvidia’s debuts to AMD’s new chips to Razer’s AI oddities",
+      "description": "CES 2026 is in full swing in Las Vegas, with the show floor open to the public after a packed couple of days occupied by press conferences from the likes of Nvidia, Sony, and AMD and previews from Sunday’s Unveiled event.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/08/ces-2026-everything-revealed-from-nvidias-debuts-to-amds-new-chips-to-razers-ai-oddities/"
         }
       ],
       "format": "video",
       "subcategory": "thought-leadership",
       "hooks": [
-        "How Figma Reinvented Typography from Scratch",
-        "The Secret Font Behind Figma's Design Revolution",
-        "Design's Most Ambitious Typeface: The Figma Story"
+        "Tech Giants' Wildest CES 2026 Reveals Leaked!",
+        "AI Chips That Will Blow Your Mind 🤯",
+        "Future Tech Unveiled: What Nvidia Doesn't Want You to Know"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use dynamic screen recordings of type design process",
-            "Include picture-in-picture designer interviews",
-            "Create chapter markers for easy navigation"
+            "Use dynamic screen recordings of actual CES booth demos",
+            "Create chapter markers for each major tech company's reveals",
+            "Include picture-in-picture reactions to highlight key innovations"
           ]
         }
       ],
       "visualDirection": {
-        "rating": 8,
-        "description": "Bold, experimental typography-focused design with kinetic motion graphics. High-contrast color palette emphasizing Figma's brand colors. Dynamic text animations revealing type design evolution. Grid-based layouts mimicking type design precision. Incorporate close-up type rendering and design process visualization."
+        "rating": 7,
+        "description": "Futuristic cyber-tech aesthetic with electric blue and neon accent colors. Dynamic split-screen transitions showing multiple tech reveals simultaneously. High-contrast typography with technical, angular font. Animated tech circuit-board background elements. Incorporate holographic overlay graphics to simulate 'leaked' information style."
       },
       "exampleOutline": [
-        "Opening: Provocative type design challenge hook",
-        "Context: Figma's design evolution and brand needs",
-        "Process: How Figma Sans was conceptualized and created",
-        "Technical Deep Dive: Typography design principles",
-        "Closing: Future of design-driven typography"
+        "Opening: High-energy CES 2026 event teaser (5-10s)",
+        "Context: Why CES 2026 matters for tech innovation",
+        "Deep Dive: Nvidia, AMD, Razer's most groundbreaking reveals",
+        "Technical Analysis: Chip performance and AI implications",
+        "Closing CTA: Subscribe for more tech insider content"
       ],
-      "hashtags": "#Figma #Typography #DesignSystem #CreativeProcess #FontDesign #ProductDesign #BrandIdentity #AIDesign #CreativeTech #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
+      "hashtags": "#CES2026 #TechInnovation #AIChips #NvidiaReveals #FutureTech #TechEvent #AITechnology #ComputingInnovation #TechNews #IndustryInsider",
+      "textureIndex": 4
+    },
+    {
+      "title": "Governments grapple with the flood of non-consensual nudity on X",
+      "description": "For the past two weeks, X has been flooded with AI-manipulated nude images, created by the Grok AI chatbot — and governments around the world are promising to take action.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/08/governments-grapple-with-the-flood-of-non-consensual-nudity-on-x/"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "AI Nudity Crisis: 5 Steps to Understand the Chaos",
+        "Unmasking X's AI Nude Image Nightmare",
+        "How Governments Are Fighting AI Image Abuse"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use blurred/pixelated B-roll to illustrate sensitive topic without graphic content",
+            "Include clear chapter markers for sensitive topic navigation",
+            "Maintain professional, educational tone with neutral visual treatment"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast color palette (blues/grays), minimalist infographic style, clean data visualization, subtle motion graphics showing global map/policy interactions, typography emphasizing clarity and seriousness, abstract representations of digital privacy"
+      },
+      "exampleOutline": [
+        "Section 1: AI's Dark Side - Unexpected Image Generation Risks",
+        "Section 2: How Grok AI Enables Non-Consensual Image Creation",
+        "Section 3: Global Government Response Strategies",
+        "Section 4: Technical Mechanisms Behind AI Image Manipulation",
+        "Section 5: Protecting Digital Identity - Actionable Next Steps"
+      ],
+      "hashtags": "#AIEthics #DigitalPrivacy #TechRegulation #AIImages #CyberSafety #TechPolicy #AIAbuse #InternetSafety #DataProtection #NonConsensualContent",
+      "textureIndex": 2
+    },
+    {
+      "title": "OpenAI to acquire the team behind executive coaching AI tool Convogo",
+      "description": "OpenAI is acquiring the team behind executive coaching AI tool Convogo in an all-stock deal, adding to the firm's M&#038;A spree.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/08/openai-to-acquire-the-team-behind-executive-coaching-ai-tool-convogo/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "AI's Next Frontier: Executive Coaching Takeover",
+        "OpenAI's Secret Weapon: Coaching Revolution",
+        "How AI Is Rewriting Leadership Training"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dynamic screen recordings of AI coaching interfaces",
+            "Include picture-in-picture with expert commentary",
+            "Create compelling chapter markers showing acquisition timeline"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-forward aesthetic with electric blue and deep graphite color palette. Dynamic motion graphics showing AI transformation. Clean, geometric typography with sharp transitions. Integrate abstract network/neural connection visual metaphors. Use 3D rendering of interconnected professional silhouettes to represent AI coaching ecosystem."
+      },
+      "exampleOutline": [
+        "Section 1: Shocking AI Acquisition Reveal (Hook)",
+        "Section 2: Convogo's Unique Executive Coaching Model",
+        "Section 3: OpenAI's Strategic M&A Vision",
+        "Section 4: Future of AI in Professional Development",
+        "Section 5: Call-to-Action & Future Predictions"
+      ],
+      "hashtags": "#AIAcquisition #OpenAI #ExecutiveCoaching #AITech #FutureOfWork #ArtificialIntelligence #LeadershipTraining #TechInnovation #AIStartups #BusinessTransformation",
+      "textureIndex": 1
     }
   ]
 }
