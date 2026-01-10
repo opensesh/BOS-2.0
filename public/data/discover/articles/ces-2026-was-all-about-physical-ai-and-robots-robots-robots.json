@@ -1,0 +1,281 @@
+{
+  "id": "ces-2026-was-all-about-physical-ai-and-robots-robots-robots",
+  "slug": "ces-2026-was-all-about-physical-ai-and-robots-robots-robots",
+  "title": "At CES 2026, ‘Physical AI’ Took Over — And It Came Wrapped in Robots",
+  "publishedAt": "2026-01-10T16:18:27.094Z",
+  "generatedAt": "2026-01-10T16:18:27.094Z",
+  "totalSources": 10,
+  "sections": [
+    {
+      "id": "section-0",
+      "paragraphs": [
+        {
+          "id": "para-0-0",
+          "content": "CES 2026 in Las Vegas was dominated by what executives, exhibitors and analysts all converged on calling **“physical AI”** — artificial intelligence embedded in robots, vehicles and devices that act in the real world rather than just on screens.Across the show floor, humanoid robots, home assistants and AI‑driven machines shared space with autonomous vehicles, signaling that AI is rapidly moving into hardware at scale.From Boston Dynamics’ latest Atlas humanoid to AI‑equipped cleaning bots and commercial platforms, robots were positioned not as novelties but as the next layer of computing infrastructure.The message from CES organizers and major chipmakers alike was clear: the industry now sees motion, manipulation and autonomy as the frontier for AI‑powered products.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-1",
+                "name": "TechCrunch AI",
+                "url": "https://techcrunch.com/podcast/ces-2026-was-all-about-physical-ai-and-robots-robots-robots/",
+                "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
+                "title": "CES 2026 was all about ‘physical AI’ and robots, robots, robots"
+              },
+              "additionalCount": 1,
+              "additionalSources": [
+                {
+                  "id": "source-2",
+                  "name": "TechCrunch",
+                  "url": "https://techcrunch.com/video/inside-ces-2026s-physical-ai-takeover/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
+                  "title": "CES 2026 was all about ‘physical AI’ and robots, robots, robots"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "para-0-1",
+          "content": "Analysts on the ground argued that this marks a structural shift from “AI features” tacked onto gadgets to devices conceived from the start as vessels for continuously evolving AI services.Reports stressed that physical AI systems are being designed to perceive, reason and act across varied tasks, blurring lines between industrial robots, home helpers and autonomous vehicles.Coverage also highlighted how terminology is consolidating around “physical AI,” displacing earlier buzzwords like “embodied AI,” partly under the influence of major platform companies and their CEOs.At the same time, experts warned that unless business models and support ecosystems catch up, the physical AI boom on display at CES could risk repeating the boom‑and‑bust cycles of earlier hardware‑heavy trends like the Internet of Things.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-4",
+                "name": "tomorrowaccess",
+                "url": "https://tomorrowaccess.com/en/news/18350",
+                "favicon": "https://www.google.com/s2/favicons?domain=tomorrowaccess.com&sz=32",
+                "title": "CES 2026 was all about ‘physical AI’ and robots, robots, robots"
+              },
+              "additionalCount": 1,
+              "additionalSources": [
+                {
+                  "id": "source-5",
+                  "name": "techcrunch",
+                  "url": "https://techcrunch.com/storyline/ces-2026-follow-live-for-the-best-weirdest-most-interesting-tech-as-this-robot-and-ai-heavy-event-wraps/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
+                  "title": "CES 2026 was all about ‘physical AI’ and robots, robots, robots"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-1",
+      "title": "From Factory Floors to Living Rooms: How Physical AI Redefined Robotics",
+      "paragraphs": [
+        {
+          "id": "para-1-0",
+          "content": "Industry recaps of CES 2026 describe robots that no longer perform only pre‑scripted demos, but instead run continuous perception and motion control to recover balance and adapt mid‑movement.Short on‑site video summaries showed humanoids mixing walking, turning and upper‑body motion without stopping, a sign that more robust full‑body control stacks are maturing beyond the lab.Research firms noted that vendors are increasingly training robots to “perceive, reason and act across diverse physical tasks,” moving toward general‑purpose capability rather than single‑function automation.This convergence was visible from fine‑manipulation robotic hands to stair‑climbing cleaning robots, all framed as early examples of a broader physical AI era.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-6",
+                "name": "youtube",
+                "url": "https://www.youtube.com/watch?v=5xfyqJK_smA",
+                "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
+                "title": "CES 2026 was all about ‘physical AI’ and robots, robots, robots"
+              },
+              "additionalCount": 1,
+              "additionalSources": [
+                {
+                  "id": "source-7",
+                  "name": "chosun",
+                  "url": "https://www.chosun.com/english/industry-en/2026/01/10/NKK3VOPVYNEAJGLFBET3CRISXM/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.chosun.com&sz=32",
+                  "title": "CES 2026 was all about ‘physical AI’ and robots, robots, robots"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "para-1-1",
+          "content": "Analysts also pointed out that major chip and platform providers used CES to pitch full “brains‑to‑body” stacks for robots, from on‑device inference to cloud training, as they race to become the default infrastructure for physical AI. Commentaries emphasized that leading electronics brands now talk about home robots and smart appliances as long‑lived AI endpoints that must gain capabilities after purchase, not depreciate like traditional hardware. This framing aligns with arguments that physical devices should be treated as vessels for evolving services, with updates, data and subscriptions underpinning long‑term value. Together, these trends suggest robotics is being repositioned less as a niche category and more as a core delivery vehicle for next‑generation AI experiences.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-3",
+                "name": "ces",
+                "url": "https://www.ces.tech/articles/the-future-feels-closer-than-ever-day-3-of-ces-2026/",
+                "favicon": "https://www.google.com/s2/favicons?domain=www.ces.tech&sz=32",
+                "title": "CES 2026 was all about ‘physical AI’ and robots, robots, robots"
+              },
+              "additionalCount": 1,
+              "additionalSources": [
+                {
+                  "id": "source-8",
+                  "name": "counterpointresearch",
+                  "url": "https://counterpointresearch.com/en/insights/ces-2026-robotics-announcements-recap",
+                  "favicon": "https://www.google.com/s2/favicons?domain=counterpointresearch.com&sz=32",
+                  "title": "CES 2026 was all about ‘physical AI’ and robots, robots, robots"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-2",
+      "title": "Humanoids, Robotaxis and the Business Reality of the Physical AI Boom",
+      "paragraphs": [
+        {
+          "id": "para-2-0",
+          "content": "Expert commentary from CES 2026 underscored that humanoid robots and autonomous vehicles now share a highly overlapping technology stack, with vision‑language‑action models and common perception systems powering both. Market researchers argued that this convergence lets vendors amortize massive AI training costs across robots and robotaxis, which helps make ambitious deployments — from factory humanoids to urban ride‑hailing fleets — more financially plausible. At the same time, analysts highlighted a surge of Chinese robotics players on the show floor, describing a “quantity offensive” in humanoids and dexterous hands that is reshaping competitive dynamics. These developments contributed to a growing sense among industry leaders that physical AI is becoming a strategic arena in which national and corporate ambitions directly collide.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-9",
+                "name": "theneuron",
+                "url": "https://www.theneuron.ai/explainer-articles/ces-2026-the-dawn-of-physical-ai----nvidia-lg-samsung-and-the-race-to-build-thinking-machines",
+                "favicon": "https://www.google.com/s2/favicons?domain=www.theneuron.ai&sz=32",
+                "title": "CES 2026 was all about ‘physical AI’ and robots, robots, robots"
+              },
+              "additionalCount": 1,
+              "additionalSources": [
+                {
+                  "id": "source-10",
+                  "name": "ces",
+                  "url": "https://www.ces.tech/press-releases/ces-2026-the-future-is-here",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.ces.tech&sz=32",
+                  "title": "CES 2026 was all about ‘physical AI’ and robots, robots, robots"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "para-2-1",
+          "content": "Forward‑looking assessments stressed that the success of physical AI will depend less on headline‑grabbing demos than on solving persistent challenges around reliability, safety certification and service economics. Commentators drew parallels with the IoT wave, warning that without durable subscription models, robust maintenance networks and clear user value, many robotics concepts could struggle once the spotlight of CES fades. Others countered that the depth of investment from chipmakers, auto groups and electronics giants indicates a longer‑term structural shift, not just a passing fad. What most observers agreed on is that, after CES 2026, AI will increasingly be judged not only by what it can say or generate on screen, but by what it can safely and usefully do in the physical world.",
+          "citations": []
+        }
+      ]
+    }
+  ],
+  "sourceCards": [
+    {
+      "id": "source-1",
+      "name": "TechCrunch AI",
+      "url": "https://techcrunch.com/podcast/ces-2026-was-all-about-physical-ai-and-robots-robots-robots/",
+      "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
+      "title": "CES 2026 was all about ‘physical AI’ and robots, robots, robots"
+    },
+    {
+      "id": "source-2",
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/video/inside-ces-2026s-physical-ai-takeover/",
+      "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
+      "title": "CES 2026 was all about ‘physical AI’ and robots, robots, robots"
+    },
+    {
+      "id": "source-3",
+      "name": "ces",
+      "url": "https://www.ces.tech/articles/the-future-feels-closer-than-ever-day-3-of-ces-2026/",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.ces.tech&sz=32",
+      "title": "CES 2026 was all about ‘physical AI’ and robots, robots, robots"
+    },
+    {
+      "id": "source-4",
+      "name": "tomorrowaccess",
+      "url": "https://tomorrowaccess.com/en/news/18350",
+      "favicon": "https://www.google.com/s2/favicons?domain=tomorrowaccess.com&sz=32",
+      "title": "CES 2026 was all about ‘physical AI’ and robots, robots, robots"
+    },
+    {
+      "id": "source-5",
+      "name": "techcrunch",
+      "url": "https://techcrunch.com/storyline/ces-2026-follow-live-for-the-best-weirdest-most-interesting-tech-as-this-robot-and-ai-heavy-event-wraps/",
+      "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
+      "title": "CES 2026 was all about ‘physical AI’ and robots, robots, robots"
+    },
+    {
+      "id": "source-6",
+      "name": "youtube",
+      "url": "https://www.youtube.com/watch?v=5xfyqJK_smA",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
+      "title": "CES 2026 was all about ‘physical AI’ and robots, robots, robots"
+    }
+  ],
+  "allSources": [
+    {
+      "id": "source-1",
+      "name": "TechCrunch AI",
+      "url": "https://techcrunch.com/podcast/ces-2026-was-all-about-physical-ai-and-robots-robots-robots/",
+      "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
+      "title": "CES 2026 was all about ‘physical AI’ and robots, robots, robots"
+    },
+    {
+      "id": "source-2",
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/video/inside-ces-2026s-physical-ai-takeover/",
+      "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
+      "title": "CES 2026 was all about ‘physical AI’ and robots, robots, robots"
+    },
+    {
+      "id": "source-3",
+      "name": "ces",
+      "url": "https://www.ces.tech/articles/the-future-feels-closer-than-ever-day-3-of-ces-2026/",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.ces.tech&sz=32",
+      "title": "CES 2026 was all about ‘physical AI’ and robots, robots, robots"
+    },
+    {
+      "id": "source-4",
+      "name": "tomorrowaccess",
+      "url": "https://tomorrowaccess.com/en/news/18350",
+      "favicon": "https://www.google.com/s2/favicons?domain=tomorrowaccess.com&sz=32",
+      "title": "CES 2026 was all about ‘physical AI’ and robots, robots, robots"
+    },
+    {
+      "id": "source-5",
+      "name": "techcrunch",
+      "url": "https://techcrunch.com/storyline/ces-2026-follow-live-for-the-best-weirdest-most-interesting-tech-as-this-robot-and-ai-heavy-event-wraps/",
+      "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
+      "title": "CES 2026 was all about ‘physical AI’ and robots, robots, robots"
+    },
+    {
+      "id": "source-6",
+      "name": "youtube",
+      "url": "https://www.youtube.com/watch?v=5xfyqJK_smA",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
+      "title": "CES 2026 was all about ‘physical AI’ and robots, robots, robots"
+    },
+    {
+      "id": "source-7",
+      "name": "chosun",
+      "url": "https://www.chosun.com/english/industry-en/2026/01/10/NKK3VOPVYNEAJGLFBET3CRISXM/",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.chosun.com&sz=32",
+      "title": "CES 2026 was all about ‘physical AI’ and robots, robots, robots"
+    },
+    {
+      "id": "source-8",
+      "name": "counterpointresearch",
+      "url": "https://counterpointresearch.com/en/insights/ces-2026-robotics-announcements-recap",
+      "favicon": "https://www.google.com/s2/favicons?domain=counterpointresearch.com&sz=32",
+      "title": "CES 2026 was all about ‘physical AI’ and robots, robots, robots"
+    },
+    {
+      "id": "source-9",
+      "name": "theneuron",
+      "url": "https://www.theneuron.ai/explainer-articles/ces-2026-the-dawn-of-physical-ai----nvidia-lg-samsung-and-the-race-to-build-thinking-machines",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.theneuron.ai&sz=32",
+      "title": "CES 2026 was all about ‘physical AI’ and robots, robots, robots"
+    },
+    {
+      "id": "source-10",
+      "name": "ces",
+      "url": "https://www.ces.tech/press-releases/ces-2026-the-future-is-here",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.ces.tech&sz=32",
+      "title": "CES 2026 was all about ‘physical AI’ and robots, robots, robots"
+    }
+  ],
+  "heroImage": {
+    "url": "https://techcrunch.com/wp-content/uploads/2026/01/atlas-announcement.jpg?resize=1200,847"
+  },
+  "sidebarSections": [
+    "From Factory Floors to Living Rooms: How Physical AI Redefined Robotics",
+    "Humanoids, Robotaxis and the Business Reality of the Physical AI Boom"
+  ],
+  "relatedArticles": []
+}
