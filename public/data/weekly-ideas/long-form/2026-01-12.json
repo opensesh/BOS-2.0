@@ -1,264 +1,211 @@
 {
   "type": "long-form",
-  "date": "2026-01-12T16:21:29.574Z",
+  "date": "2026-01-12T16:28:15.755Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "🎙️This week on How I AI: The power user’s guide to Codex",
+      "description": "Your weekly listens from How I AI, part of the Lenny's Podcast Network",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover/8-tips-for-designers-building-branded-templates-in-figma-buz"
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/this-week-on-how-i-ai-the-power-users"
         }
       ],
       "format": "video",
       "subcategory": "thought-leadership",
       "hooks": [
-        "Design Templates That Scale Without Breaking Brand",
-        "Figma Secrets: Build Bulletproof Marketing Templates",
-        "How Pro Designers Make Flexible Brand Guidelines"
+        "AI Coding Secrets Pros Don't Want You to Know",
+        "Unlock Codex: Transform Your Programming Overnight",
+        "The Hidden Power of AI Development Workflows"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use screen recording to demonstrate Figma workflow live",
-            "Include picture-in-picture of designer explaining concepts",
-            "Add chapter markers for easy navigation"
+            "Use dynamic screen recordings showing actual Codex interactions",
+            "Include picture-in-picture with presenter for personal connection",
+            "Create clear chapter markers for complex technical content"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, dynamic color palette with high-contrast Figma blues and grays. Experimental typography with motion-tracked text animations. Dynamic screen recordings with animated overlays highlighting key design interactions. Clean, technical aesthetic with playful motion graphics. Reference: Figma's design system and contemporary tech design tutorials."
+        "description": "High-contrast tech aesthetic with electric blue and deep charcoal color palette. Dynamic motion graphics showing code transformation. Modern sans-serif typography with subtle glitch/tech overlay effects. Incorporate futuristic UI elements with smooth transitions. Visual metaphors comparing traditional vs AI-powered coding workflows."
       },
       "exampleOutline": [
-        "Hook: Dramatic design template challenge reveal",
-        "Context: Why most templates fail marketing teams",
-        "8 Strategic Template Design Principles",
-        "Live Figma Demonstration of Principles",
-        "Final Actionable Takeaways and Call-to-Action"
+        "Cold Open: Surprising Codex Code Generation Demo",
+        "The Current State of AI in Software Development",
+        "Deep Dive: Codex Architecture and Capabilities",
+        "Practical Power User Techniques and Workflows",
+        "Future of AI-Assisted Programming Closing Call-to-Action"
       ],
-      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystem #MarketingDesign #CreativeTemplates #UIDesign #GraphicDesign #DesignTips #AIDesign #CreativeTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 10
+      "hashtags": "#AICodex #ProgrammingTips #AIDevTools #CodeGeneration #MachineLearning #SoftwareDevelopment #TechInnovation #AITutorial #CodingHacks #ProgrammerLife",
+      "textureIndex": 3
     },
     {
-      "title": "Design Director, Josephmark, Brisbane",
-      "description": "Josephmark is looking for a Design Director to join their Brisbane studio. This is remote-friendly opportunity at a digital studio that designs, builds, and launches brands, products, and companies that shape the future.\nThe post Design Director, Josephmark, Brisbane appeared first on BP&O - Branding, Packaging and Opinion.",
+      "title": "Harmattan AI raises $200M Series B led by Dassault Aviation, becomes defense unicorn",
+      "description": "French defense tech company Harmattan AI is now valued at $1.4 billion after raising a $200 million Series B round led by Dassault Aviation, which is best known for making the Rafale fighter jet.",
       "starred": false,
       "sources": [
         {
-          "name": "BP&O",
-          "url": "https://bpando.org/2026/01/12/design-director-josephmark-brisbane/"
-        },
-        {
-          "name": "Josephmark",
-          "url": "https://josephmark.studio/careers/design-director"
-        },
-        {
-          "name": "Theorg",
-          "url": "https://theorg.com/org/josephmark"
-        },
-        {
-          "name": "Workwithus",
-          "url": "https://workwithus.io/interviews/josephmark"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/12/harmattan-ai-raises-200m-series-b-led-by-dassault-aviation-becomes-defense-unicorn/"
         }
       ],
       "format": "tutorial",
       "subcategory": "instructional",
       "hooks": [
-        "Design Career Cheat Code: Become a Design Director",
-        "5 Steps to Land Your Dream Design Leadership Role",
-        "Insider Secrets: How to Become a Top Design Director"
+        "How AI is Transforming Defense Tech Forever",
+        "Defense Unicorns: The AI Revolution Starts Here",
+        "Build Your Own Defense AI Strategy Now"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use screen recordings of portfolio building process",
-            "Include picture-in-picture with speaker explaining key insights",
-            "Create clear chapter markers for each career step"
+            "Use screen recordings of AI defense simulations",
+            "Include picture-in-picture expert commentary segments",
+            "Create clear chapter markers for tutorial flow"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, dynamic visual style with high-contrast color palette (deep blues, bright oranges). Modern typography with sharp angles. Animated infographic-style transitions between tutorial sections. Dynamic motion graphics showing career progression. Clean, professional aesthetic with experimental edge. Use geometric overlays and dynamic visual metaphors for career growth."
+        "description": "High-contrast tech-inspired palette with deep navy and electric blue accents. Dynamic motion graphics simulating radar/targeting interfaces. Sans-serif technical typography. Layered screen recordings with tactical overlay animations. Aesthetic references: DARPA design language, modern military UX interfaces."
       },
       "exampleOutline": [
-        "Section 1: Hook - Design Director Career Transformation",
-        "Section 2: Current Design Leadership Landscape",
-        "Section 3: 5 Proven Steps to Design Director Success",
-        "Section 4: Portfolio, Network, and Skill-Building Strategies",
-        "Section 5: Call to Action - Your Design Leadership Journey"
+        "Section 1: AI Defense Tech Landscape Overview",
+        "Section 2: Understanding Defense AI Investment Trends",
+        "Section 3: Step-by-Step: Analyzing Harmattan's Strategic Model",
+        "Section 4: Future Implications for Tech Entrepreneurs",
+        "Section 5: How You Can Enter Defense AI Market"
       ],
-      "hashtags": "#DesignCareer #DesignLeadership #CareerGrowth #DesignDirector #CreativeIndustry #ProfessionalDevelopment #DesignTips #CareerAdvice #CreativeProfessionals #DesignIndustry",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 2
+      "hashtags": "#DefenseTech #ArtificialIntelligence #VentureCapital #AIStrategy #MilitaryInnovation #StartupFunding #TechUnicorns #InvestmentInsights #EmergingTech #AIRevolution",
+      "textureIndex": 8
     },
     {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
+      "title": "The power user’s guide to Codex: parallelizing workflows, planning techniques, advanced context engineering tips, automating code reviews, and more | Alexander Embiricos",
+      "description": "Listen now | &#127897;&#65039; The power user's guide to Codex: Parallelizing workflows, planning techniques, advanced context engineering tips, automating code reviews, more",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Theaiinsider",
-          "url": "https://theaiinsider.tech/2025/12/12/figma-introduces-new-ai-powered-image-editing-suite-to-streamline-design-workflows/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/release-notes/"
-        }
-      ],
-      "format": "livestream",
-      "subcategory": "leadership",
-      "hooks": [
-        "AI Image Editing Revolution: Figma's New Tools Explained",
-        "Design Faster, Smarter: Figma's Breakthrough Image Tools",
-        "Unlock Next-Level Image Editing in Figma Right Now"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Prepare interactive Q&A segment with live audience participation",
-            "Use live chat to preview and tease tool demonstrations",
-            "Have backup screen recordings ready for technical deep dives"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-energy visual aesthetic with dynamic screen captures, floating UI elements, smooth transitions between Figma interface and live presenter. Color palette of electric blues and clean whites. Motion graphics highlighting tool interactions. Picture-in-picture presenter overlay with minimal, tech-forward design language."
-      },
-      "exampleOutline": [
-        "Section 1: High-Energy Live Stream Introduction & Tool Teaser",
-        "Section 2: Current Design Workflow Challenges",
-        "Section 3: Detailed Tool Walkthrough & Live Demonstrations",
-        "Section 4: Real-World Use Cases & Creative Potential",
-        "Section 5: Live Q&A and Audience Interaction"
-      ],
-      "hashtags": "#FigmaAI #DesignTools #CreativeTech #AIDesign #ImageEditing #ProductivityHack #CreativeWorkflow #DesignInnovation #TechTutorial #AICreativity",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 5
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/a-full-software-engineering-teammate"
         }
       ],
       "format": "documentary",
       "subcategory": "framework",
       "hooks": [
-        "How Figma Buzz Is Rewriting Design Workflow Rules",
-        "The Hidden Power of Next-Gen Design Tools",
-        "Three Game-Changing Features Designers Can't Ignore"
+        "AI's secret weapon: Codex workflow mastery revealed",
+        "How top engineers supercharge productivity with Codex",
+        "Codex hacks that transform software engineering forever"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use cinematic B-roll showing designers in action",
-            "Include screen recordings with dynamic transitions",
-            "Create chapter markers for quick navigation"
+            "Use dynamic split-screen to show code and workflow simultaneously",
+            "Incorporate cinematic b-roll of developers in innovative workspaces",
+            "Add motion graphics to visualize complex workflow parallelization concepts"
           ]
         }
       ],
       "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast modern aesthetic with deep blue and electric teal color palette. Dynamic split-screen compositions showing design interfaces and human interaction. Clean sans-serif typography with subtle motion graphics. Incorporate documentary-style interview snippets with designers using soft focus background. Use parallax scrolling and subtle depth effects to enhance visual storytelling."
+        "rating": 8,
+        "description": "High-contrast tech-inspired color palette (deep blues, electric teals, high-luminosity accents). Asymmetrical composition with technical overlay graphics. Modern sans-serif typography with technical precision. Fluid motion transitions suggesting workflow optimization. Aesthetic blend of Silicon Valley documentary and cutting-edge tech visualization."
       },
       "exampleOutline": [
-        "Cold Open: Dramatic reveal of design challenge",
-        "Problem Statement: Current workflow limitations",
-        "Feature Deep Dive: Marketing templates, app plugins, video trimming",
-        "Expert Commentary: Designer perspectives on new tools",
-        "Future Implications: How these features transform design"
+        "Cold open: Dramatic workflow bottleneck scenario",
+        "Historical context of software engineering challenges",
+        "Deep dive into Codex workflow parallelization techniques",
+        "Case studies of elite engineering transformations",
+        "Future-forward call to action and skill development"
       ],
-      "hashtags": "#FigmaBuzz #DesignInnovation #ProductivityHacks #CreativeTech #UIDesign #DesignTools #WorkflowOptimization #AIDesign #CreativeWorkflow #DesignTrends",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "hashtags": "#CodexMastery #AIEngineering #WorkflowOptimization #SoftwareDev #TechInnovation #ProductivityHacks #AITools #CodingTips #EngineeringLife #TechDocumentary",
       "textureIndex": 0
     },
     {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
+      "title": "The most fascinating monitors at CES 2026",
+      "description": "The most fascinating monitors at CES 2026",
       "starred": false,
       "sources": [
         {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/gadgets/2026/01/the-most-fascinating-monitors-at-ces-2026/"
         }
       ],
       "format": "livestream",
       "subcategory": "leadership",
       "hooks": [
-        "Design Career Secrets: Inside Moniker's Senior Role",
-        "Want to Level Up Your Design Career?",
-        "San Francisco Design Dream Job Revealed"
+        "CES 2026: Monitors That'll Blow Your Mind 🖥️",
+        "Future of Displays: What Blew Us Away",
+        "Tech Revolution: Monitors Redefining Visual Experiences"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
             "Enable live chat for real-time audience interaction",
-            "Prepare pre-submitted Q&A questions as backup",
-            "Use picture-in-picture to show designer portfolio/resume examples during stream"
+            "Prepare pre-written timestamped timestamps for key monitor highlights",
+            "Use multi-camera setup to showcase monitor details dynamically"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Clean San Francisco tech aesthetic with bold geometric typography. High-contrast color palette (deep navy, electric orange, white). Dynamic motion graphics showing design portfolio transitions. Minimal screen design with sharp, angular composition. Incorporate subtle Silicon Valley design language with professional polish."
+        "description": "High-contrast cyberpunk-inspired color palette with electric blues and neon accents. Dynamic split-screen compositions showcasing monitor technologies. Futuristic sans-serif typography with motion-tracked reveal animations. Picture-in-picture tech demonstrations with floating holographic UI elements. Reference aesthetic: Blade Runner 2049 tech interfaces mixed with minimal Apple product reveal style."
       },
       "exampleOutline": [
-        "Section 1: Live Stream Intro & Personal Welcome",
-        "Section 2: Moniker Design Role Context",
-        "Section 3: Role Requirements & Skill Breakdown",
-        "Section 4: Career Growth Insights & Tips",
-        "Section 5: Live Q&A with Audience Interaction"
+        "Section 1: High-Energy Live Stream Intro & Audience Greeting",
+        "Section 2: CES 2026 Context - Display Technology Landscape",
+        "Section 3: Top 5 Most Innovative Monitors Breakdown",
+        "Section 4: Deep Dive into Technical Specifications & Features",
+        "Section 5: Live Q&A, Audience Interaction, Final Recommendations"
       ],
-      "hashtags": "#DesignCareer #SeniorDesigner #SanFranciscoDesign #CreativeJobs #DesignTips #BrandIdentity #ProductDesign #CareerAdvice #DesignIndustry #CreativeProfessionals",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 1
+      "hashtags": "#CES2026 #MonitorTech #FutureDisplay #TechInnovation #DisplayTechnology #AIMonitors #CreativeTech #VisualInnovation #TechReview #GadgetNews",
+      "textureIndex": 5
+    },
+    {
+      "title": "Motional puts AI at center of robotaxi reboot as it targets 2026 for driverless service",
+      "description": "Motional says it will launch a driverless robotaxi service in Las Vegas before the end of 2026.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/11/motional-puts-ai-at-center-of-robotaxi-reboot-as-it-targets-2026-for-driverless-service/"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "The AI Driving Revolution: Beyond Self-Driving Dreams",
+        "Robotaxis: When Technology Rewrites Urban Mobility",
+        "Motional's Bold Bet: AI Takes the Wheel"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use cinematic B-roll of autonomous vehicles in urban settings",
+            "Include expert interview clips with Motional engineers/leadership",
+            "Create dynamic motion graphics explaining AI navigation technology"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech aesthetic with deep blues and electric accents. Sleek, futuristic motion graphics overlaying real-world robotaxi footage. Clean sans-serif typography with technical precision. Incorporate subtle holographic/digital overlay effects to emphasize AI intelligence. Visual mood: sophisticated, cutting-edge, authoritative."
+      },
+      "exampleOutline": [
+        "Opening: Dramatic cityscape revealing autonomous vehicle potential",
+        "Context: Current challenges in self-driving technology",
+        "Motional's Approach: AI-first robotaxi strategy and innovations",
+        "Technical Deep Dive: How AI solves autonomous driving challenges",
+        "Future Vision: Implications for urban transportation by 2026"
+      ],
+      "hashtags": "#AutonomousVehicles #AITransportation #FutureOfMobility #RobotaxiRevolution #TechInnovation #UrbanMobility #SelfDrivingCars #AITechnology #Motional #TransportationTech",
+      "textureIndex": 2
     }
   ]
 }
