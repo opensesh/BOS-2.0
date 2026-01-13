@@ -1,256 +1,211 @@
 {
   "type": "long-form",
-  "date": "2026-01-13T16:23:52.158Z",
+  "date": "2026-01-13T16:32:58.512Z",
   "ideas": [
     {
-      "title": "So Energy by Studio Blackburn",
-      "description": "I’ve said it before and I’ll say it again: it’s all well and good making some striking, retina-toastingly fluoro, brave as hell design work for, say, a kombucha startup or CBD lube or a record sleeve or an art book. These things are by dint of their very existence, context, and audience, already sort of cool. But the real creative\nThe post So Energy by Studio Blackburn appeared first on BP&O - Branding, Packaging and Opinion.",
+      "title": "ElevenLabs CEO says the voice AI startup crossed $330 million ARR last year",
+      "description": "The company said it took only five months to go from $200 million to $330 million in annual recurring revenue.",
       "starred": true,
       "sources": [
         {
-          "name": "BP&O",
-          "url": "https://bpando.org/2026/01/13/so-energy-brand-identity-by-studio-blackburn/"
-        }
-      ],
-      "format": "documentary",
-      "subcategory": "framework",
-      "hooks": [
-        "Design Beyond Limits: When Utility Meets Creativity",
-        "The Secret Energy of Transformative Brand Design",
-        "Breaking Design Boundaries: Studio Blackburn's Revolution"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use cinematic B-roll of design process",
-            "Include expert interview-style commentary with designers",
-            "Create dynamic lower-thirds for information hierarchy"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast color palette with electric blues and energetic oranges. Kinetic typography with motion-tracked text overlays. Dynamic split-screen compositions showcasing design evolution. Low-fi documentary texture with sharp, intentional graphic interventions. Reference visual styles of Abstract: The Art of Design and Helvetica documentaries."
-      },
-      "exampleOutline": [
-        "Opening: Provocative visual montage of design transformation",
-        "Context: The challenge of utility-driven design",
-        "Studio Blackburn's Approach: Design philosophy and methodology",
-        "Case Study: SO Energy brand identity deep dive",
-        "Closing: Future of design beyond conventional boundaries"
-      ],
-      "hashtags": "#BrandDesign #CreativeStrategy #DesignDocumentary #StudioBlackburn #BrandIdentity #DesignInnovation #GraphicDesign #CreativeCommunity #DesignThinking #BrandEvolution",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 2
-    },
-    {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover/8-tips-for-designers-building-branded-templates-in-figma-buz"
-        }
-      ],
-      "format": "tutorial",
-      "subcategory": "instructional",
-      "hooks": [
-        "Design Templates That Scale Without Breaking Brand",
-        "Figma Buzz: Build Flexible Brand Templates Fast",
-        "Master Self-Serve Design Templates in 8 Steps"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use screen recording with live Figma demonstration",
-            "Include picture-in-picture of presenter explaining steps",
-            "Add chapter markers for easy template template navigation"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, dynamic design with high-contrast brand colors. Dynamic grid layouts showcasing Figma interface. Typography that emphasizes step-by-step progression. Animated transitions between template states. Motion graphics highlighting editing guardrails and flexibility. Clean, technical aesthetic with creative energy."
-      },
-      "exampleOutline": [
-        "Introduction: Why Flexible Brand Templates Matter",
-        "The Marketing Design Challenge: Scalability vs. Consistency",
-        "8 Strategic Template Design Techniques in Figma",
-        "Live Demonstration: Implementing Flexible Brand Guidelines",
-        "Call-to-Action: Join Design Community Workshop"
-      ],
-      "hashtags": "#FigmaDesign #TemplateDesign #BrandIdentity #ProductDesign #CreativeWorkflow #DesignSystem #AIDesign #VisualBranding #DesignTips #CreativeTechnology",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 2
-    },
-    {
-      "title": "Anthropic announces Claude for Healthcare following OpenAI’s ChatGPT Health reveal",
-      "description": "Anthropic's Claude for Healthcare is unveiled about a week after OpenAI announced its ChatGPT Health product.",
-      "starred": false,
-      "sources": [
-        {
           "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2026/01/12/anthropic-announces-claude-for-healthcare-following-openais-chatgpt-health-reveal/"
-        },
-        {
-          "name": "Healthcareitnews",
-          "url": "https://www.healthcareitnews.com/news/new-ehr-and-patient-record-integrations-claude-ai"
-        },
-        {
-          "name": "Thehackernews",
-          "url": "https://thehackernews.com/2026/01/anthropic-launches-claude-ai-for.html"
-        },
-        {
-          "name": "Hlth",
-          "url": "https://hlth.com/insights/news/anthropic-joins-openai-s-push-into-health-care-with-new-claude-tools-2026-01-13"
-        },
-        {
-          "name": "Clinicaltrialsarena",
-          "url": "https://www.clinicaltrialsarena.com/news/jpm26-anthropic-advances-healthcare-presence-with-new-ai-toolkit-2/"
-        },
-        {
-          "name": "Fiercehealthcare",
-          "url": "https://www.fiercehealthcare.com/ai-and-machine-learning/jpm26-anthropic-launches-claude-healthcare-targeting-health-systems-payers"
+          "url": "https://techcrunch.com/2026/01/13/elevenlabs-ceo-says-the-voice-ai-startup-crossed-330-million-arr-last-year/"
         }
       ],
       "format": "livestream",
       "subcategory": "leadership",
       "hooks": [
-        "Claude AI: Healthcare Revolution Starts Now",
-        "OpenAI vs Anthropic: Who Wins Healthcare?",
-        "Inside Claude's Medical AI Breakthrough"
+        "How ElevenLabs turned $200M into $330M in 5 months?",
+        "Voice AI's Rocket Ride: ElevenLabs' Insane Growth Revealed",
+        "Behind the $330M: ElevenLabs' Unstoppable AI Strategy"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Schedule live stream 48 hours in advance with teaser graphic",
-            "Enable live chat for real-time audience interaction",
-            "Prepare pre-loaded slides/visual transitions for smooth presentation"
+            "Enable live chat for real-time audience engagement",
+            "Use custom thumbnail highlighting revenue milestone",
+            "Prepare pre-screened audience Q&A segments"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast medical blue/white palette with dynamic motion graphics. Technical infographic style with clean, modern typography. Picture-in-picture host overlay with animated data visualizations. Subtle tech-medical iconography. Sleek, futuristic aesthetic blending healthcare and AI design languages."
+        "description": "Dynamic split-screen with CEO interview and revenue graphics, bold tech-inspired color palette (electric blue, deep charcoal), animated revenue trajectory overlay, modern sans-serif typography with high-contrast data visualization, subtle motion graphics highlighting growth metrics"
       },
       "exampleOutline": [
-        "Opening: Breaking News - Claude in Healthcare",
-        "Context: Current Healthcare AI Landscape",
-        "Deep Dive: Claude's Unique Healthcare Features",
-        "Technical Capabilities & Competitive Advantages",
-        "Live Q&A and Future Predictions"
+        "Section 1: Live Stream Intro & Revenue Reveal",
+        "Section 2: ElevenLabs' Market Context & AI Landscape",
+        "Section 3: Detailed Revenue Growth Breakdown",
+        "Section 4: Strategic Insights & Future Projections",
+        "Section 5: Live Q&A with Audience Interaction"
       ],
-      "hashtags": "#ClaudeAI #HealthTech #MedicalAI #ArtificialIntelligence #Healthcare #TechInnovation #OpenAI #Anthropic #AIRevolution #FutureOfMedicine",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 8
+      "hashtags": "#ElevenLabs #VoiceAI #AIStartup #TechGrowth #AIRevenue #StartupSuccess #AIInnovation #TechTrends #AIEntrepreneurship #InvestmentInsights",
+      "textureIndex": 12
     },
     {
-      "title": "Google’s Gemini to power Apple’s AI features like Siri",
-      "description": "Apple and Google have embarked on a non-exclusive, multi-year partnership that will involve Apple using Gemini models and Google cloud technology for future foundational models.",
+      "title": "Apple launches &#8216;Creator Studio&#8217; bundle of apps for $12.99 per month",
+      "description": "The bundle includes access to Final Cut Pro, Logic Pro, and Pixelmator Pro on Mac and iPad, as well as Motion, Compressor, and MainStage on Mac.",
       "starred": false,
       "sources": [
         {
           "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2026/01/12/googles-gemini-to-power-apples-ai-features-like-siri/"
-        },
-        {
-          "name": "Hacker News",
-          "url": "https://www.cnbc.com/2026/01/12/apple-google-ai-siri-gemini.html"
+          "url": "https://techcrunch.com/2026/01/13/apple-launches-creator-studio-bundle-of-apps-for-12-99-per-month/"
         }
       ],
       "format": "tutorial",
       "subcategory": "instructional",
       "hooks": [
-        "How Apple's Secret AI Deal Changes Everything",
-        "Gemini Inside: Apple's New AI Transformation",
-        "Google Powers Siri's Next-Level Intelligence"
+        "Master Apple's Creator Studio in 10 Minutes",
+        "Unlock Pro Creative Tools: Step-by-Step Guide",
+        "Transform Your Workflow: Apple's Creator Bundle Explained"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use screen recordings showing Gemini/Siri interface",
-            "Create clear chapter markers for tutorial steps",
-            "Include picture-in-picture expert commentary segments"
+            "Use screen recording to demonstrate actual app workflows",
+            "Create clear chapter markers for each app in the bundle",
+            "Include side-by-side comparisons of tools and pricing"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Dynamic blue-white-gray color palette suggesting tech innovation. Clean, geometric motion graphics showing AI integration. Modern sans-serif typography with technical overlay animations. Sleek transitions between tutorial steps. Apple and Google brand color accents."
+        "description": "Dynamic, tech-forward aesthetic with clean Apple-inspired white space, bold sans-serif typography, smooth motion transitions between app demonstrations. Use a cool blue-gray color palette with accent highlights. Incorporate clean screen recordings with subtle motion graphics overlays. Picture-in-picture of presenter for personal connection."
       },
       "exampleOutline": [
-        "Introduction: The Apple-Google AI Partnership Revealed",
-        "Understanding the Technological Context",
-        "Step-by-Step: How Gemini Will Transform Siri",
-        "Technical Deep Dive: AI Model Integration",
-        "Future Implications and Next Steps"
+        "Section 1: Dramatic Hook - What is Creator Studio?",
+        "Section 2: Breakdown of Included Apps & Value Proposition",
+        "Section 3: Detailed Walkthrough of Each App's Core Features",
+        "Section 4: Workflow Integration and Creative Possibilities",
+        "Section 5: Pricing Breakdown and Final Recommendations"
       ],
-      "hashtags": "#AppleAI #GoogleGemini #ArtificialIntelligence #SiriUpgrade #TechInnovation #AITutorial #AppleTech #MachineLearning #AIPartnerships #TechTrends",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 1
+      "hashtags": "#AppleCreatorStudio #CreativeTools #VideoEditing #MusicProduction #ApplePro #CreativeWorkflow #MacApps #ContentCreation #ProTools #TechTutorial",
+      "textureIndex": 9
     },
     {
-      "title": "The new business case for design systems",
-      "description": "Design systems have evolved from static libraries to key drivers of business revenue, customer loyalty, and product strategy. Here’s what you need to know about how to track and communicate the value of your design system, based on new research from the Design Executive Council (DXC).",
+      "title": "Deepgram raises $130M at $1.3B valuation and buys a YC AI startup",
+      "description": "Deepgram is raising its Series C round at a $1.3 billion valuation.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-new-business-case-for-design-systems/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/13/deepgram-raises-130m-at-1-3b-valuation-and-buys-a-yc-ai-startup/"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "How One AI Startup Just Became a Unicorn",
+        "Deepgram's $1.3B Leap: The Inside Story",
+        "AI Startup's Billion-Dollar Breakthrough Revealed"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use archival footage of startup founders",
+            "Include dynamic financial graphics and data visualizations",
+            "Create chapter markers highlighting key investment milestones"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech-inspired color palette (deep blues, electric teals, clean whites). Kinetic typography with financial data overlays. Dynamic motion graphics showing funding trajectory. Subtle parallax effects on archival images. Clean, modern documentary aesthetic with Silicon Valley tech documentary influence (think 'General Magic' documentary style)."
+      },
+      "exampleOutline": [
+        "Cold Open: Dramatic funding announcement moment",
+        "Deepgram's Origin Story & Market Context",
+        "Breakdown of $130M Series C Investment",
+        "Strategic Implications of YC Startup Acquisition",
+        "Future Predictions & Industry Impact"
+      ],
+      "hashtags": "#DeepgramAI #AIStartup #VentureCapital #TechInnovation #AIFunding #StartupSuccess #AITechnology #InvestmentNews #TechCrunch #UnicornStartup",
+      "textureIndex": 11
+    },
+    {
+      "title": "Slackbot is an AI agent now",
+      "description": "Salesforce unveils Slackbot, a new AI agent that allows users to complete tasks across multiple enterprise applications from Slack.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/13/slackbot-is-an-ai-agent-now/"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "AI Just Transformed Slack: Your Ultimate Task Assistant",
+        "Slackbot's New AI Powers: Enterprise Workflow Revolution",
+        "Complete Tasks Instantly: Slackbot's AI Agent Explained"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use screen recording to demonstrate Slackbot interactions live",
+            "Include picture-in-picture walkthrough of interface changes",
+            "Create chapter markers for each workflow demonstration step"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-forward design with electric blue and deep navy color palette. Dynamic motion graphics showing workflow transitions. Clean, sans-serif typography with technical overlay animations. Minimal but high-contrast design emphasizing AI connectivity and seamless integration. References: Figma design system, modern enterprise UI trends."
+      },
+      "exampleOutline": [
+        "Introduction: What Makes Slackbot's AI Agent Revolutionary",
+        "Understanding the Enterprise Workflow Problem",
+        "Step-by-Step: Configuring Slackbot AI Agent",
+        "Live Demonstration of Cross-Application Task Completion",
+        "Future of AI in Enterprise Collaboration"
+      ],
+      "hashtags": "#SlackbotAI #EnterpriseAI #WorkflowAutomation #AIProductivity #SalesforceTech #AIAgents #BusinessIntelligence #TechInnovation #ProductivityHacks #AIWorkflow",
+      "textureIndex": 9
+    },
+    {
+      "title": "Salesforce rolls out new Slackbot AI agent as it battles Microsoft and Google in workplace AI",
+      "description": "Salesforce on Tuesday launched an entirely rebuilt version of Slackbot, the company&#x27;s workplace assistant, transforming it from a simple notification tool into what executives describe as a fully powered AI agent capable of searching enterprise data, drafting documents, and taking action on behalf of employees.The new Slackbot, now generally available to Business+ and Enterprise+ customers, is Salesforce&#x27;s most aggressive move yet to position Slack at the center of the emerging &quot;a",
+      "starred": false,
+      "sources": [
+        {
+          "name": "VentureBeat AI",
+          "url": "https://venturebeat.com/technology/salesforce-rolls-out-new-slackbot-ai-agent-as-it-battles-microsoft-and"
         }
       ],
       "format": "video",
       "subcategory": "thought-leadership",
       "hooks": [
-        "Design Systems: Your Secret Business Weapon",
-        "How Design Systems Drive Millions in Revenue",
-        "The Hidden ROI of Design Systems Revealed"
+        "AI Is Rewriting the Workplace: Slack's Wild New Move",
+        "Slackbot Just Got a Superpowered AI Upgrade",
+        "Enterprise AI Revolution: Inside Salesforce's Game-Changer"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use dynamic screen recordings showing actual design system metrics",
-            "Include picture-in-picture with presenter for human connection",
-            "Create clear chapter markers for easy navigation"
+            "Use dynamic screen recordings of Slackbot interface",
+            "Include side-by-side comparisons of old vs new Slackbot",
+            "Create animated graphics explaining AI workflow interactions"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, data-driven aesthetic with dynamic infographic transitions. High-contrast color palette of deep navy, bright teal, and crisp white. Clean, modern typography with animated percentage/metric overlays. Motion graphics that reveal data points dramatically. Aesthetic references: Figma design system visualizations, TED Talk data presentations, Apple product launch graphics."
+        "description": "High-energy blue and electric teal color palette. Geometric motion graphics showing AI interactions. Clean, technical typography with rounded edges. Futuristic but approachable visual style. Picture-in-picture screen recordings with subtle parallax effects. Minimal design with bold informational highlights."
       },
       "exampleOutline": [
-        "Hook: Surprising Design System Revenue Impact (30s)",
-        "Design System Evolution: From Asset to Strategic Tool (2min)",
-        "Quantifying Design System Value: Key Business Metrics (3-4min)",
-        "Case Studies: Real-World Design System ROI (2-3min)",
-        "Actionable Takeaways & Call-to-Action (1min)"
+        "Cold Open: Dramatic AI Workplace Transformation Teaser",
+        "The Enterprise AI Battleground: Microsoft vs Google vs Salesforce",
+        "Slackbot 2.0: Detailed AI Agent Capabilities Breakdown",
+        "How This Changes Knowledge Work Forever",
+        "Future of Work: Actionable Insights for Professionals"
       ],
-      "hashtags": "#DesignSystems #ProductDesign #BusinessStrategy #UXDesign #Innovation #DesignTech #ProductManagement #CreativeStrategy #AIDesign #DesignLeadership",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 11
+      "hashtags": "#AIWorkplace #SlackAI #EnterpriseAI #FutureOfWork #ProductivityHacks #WorkplaceTech #SalesforceTips #AIAssistant #BusinessInnovation #TechTrends",
+      "textureIndex": 10
     }
   ]
 }
