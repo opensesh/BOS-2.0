@@ -1,268 +1,211 @@
 {
   "type": "long-form",
-  "date": "2026-01-14T16:22:08.706Z",
+  "date": "2026-01-14T16:31:47.928Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Robotics software maker Skild AI hits $14B valuation",
+      "description": "Skild AI, which is building general-purpose robotic software, just raised a $1.4 billion funding round led by SoftBank.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover/8-tips-for-designers-building-branded-templates-in-figma-buz"
-        }
-      ],
-      "format": "documentary",
-      "subcategory": "framework",
-      "hooks": [
-        "Design Templates That Don't Break Your Brand",
-        "How Pro Designers Build Flexible Brand Systems",
-        "Figma Secrets: Templates That Scale Effortlessly"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use dynamic B-roll showing template transformations",
-            "Include expert talking head segments with screen recordings",
-            "Create chapter markers for easy navigation between template tips"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Modern documentary aesthetic with high-contrast color palette (deep navy/bright teal), kinetic typography revealing template mechanics, fluid motion graphics demonstrating template flexibility, split-screen comparisons showing before/after template states, clean minimalist design system references"
-      },
-      "exampleOutline": [
-        "Opening: Designer's Challenge Montage",
-        "Problem: Rigid vs. Flexible Brand Systems",
-        "8 Technical Template Building Strategies",
-        "Case Study: Real-World Template Transformation",
-        "Future of Adaptive Design Systems Teaser"
-      ],
-      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystem #CreativeTools #ProductDesign #AIDesign #TemplateDesign #GraphicDesign #DesignInnovation #CreativeTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 2
-    },
-    {
-      "title": "So Energy by Studio Blackburn",
-      "description": "I’ve said it before and I’ll say it again: it’s all well and good making some striking, retina-toastingly fluoro, brave as hell design work for, say, a kombucha startup or CBD lube or a record sleeve or an art book. These things are by dint of their very existence, context, and audience, already sort of cool. But the real creative\nThe post So Energy by Studio Blackburn appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2026/01/13/so-energy-brand-identity-by-studio-blackburn/"
-        },
-        {
-          "name": "Creativeboom",
-          "url": "https://www.creativeboom.com/news/studio-blackburns-refresh-of-so-energy-demonstrates-the-art-of-branding-the-invisible/"
-        },
-        {
-          "name": "Designweek",
-          "url": "https://www.designweek.co.uk/issues/30-november-6-december-2020/renewable-supplier-so-energy-rebrands-to-empower-customers/"
-        },
-        {
-          "name": "Adsofbrands",
-          "url": "https://adsofbrands.net/en/news/so-energy-launches-new-brand-campaign-we-do-energy-you-do-you/8898"
-        },
-        {
-          "name": "So",
-          "url": "https://www.so.energy/news"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/14/robotic-software-maker-skild-ai-hits-14b-valuation/"
         }
       ],
       "format": "livestream",
       "subcategory": "leadership",
       "hooks": [
-        "Design Energy: How Brands Transform Invisible into Iconic",
-        "Branding Secrets: Turning Boring into Brilliant",
-        "Behind the Scenes: Radical Design Transformation Revealed"
+        "Robotics AI just became a $14B goldmine 🚀",
+        "How Skild AI is rewriting tech's future",
+        "Billion-dollar robotics breakthrough: Inside the numbers"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use multi-camera setup to simulate live design studio environment",
-            "Prepare interactive slide deck with real case study visuals",
-            "Enable live chat for real-time audience design critiques"
+            "Enable live chat for real-time audience engagement",
+            "Prepare pre-submitted Q&A questions for smooth flow",
+            "Use multi-camera setup for dynamic visual interest"
           ]
         }
       ],
       "visualDirection": {
-        "rating": 8,
-        "description": "High-energy electric blue and neon accent palette, dynamic motion graphics overlays, experimental typography with glitch effects, split-screen case study comparisons, kinetic text animations revealing design transformations"
+        "rating": 7,
+        "description": "High-energy cyberpunk-inspired aesthetic with electric blue/deep purple color palette. Dynamic motion graphics showing robotic silhouettes and data visualization. Bold, geometric sans-serif typography. Animated circuit/network overlay elements. Split-screen design with real-time data streams and presenter window."
       },
       "exampleOutline": [
-        "Introduction: Live Design Breakdown Challenge",
-        "Context: The 'Invisible' Design Problem",
-        "Case Study: So Energy Brand Transformation",
-        "Design Principles & Strategic Insights",
-        "Live Q&A: Audience Design Challenges"
+        "Opening: Breaking down Skild AI's $14B milestone",
+        "Context: Current state of robotics software market",
+        "Deep Dive: SoftBank's investment strategy revealed",
+        "Technical Analysis: What makes Skild AI unique",
+        "Q&A Session: Live audience interaction"
       ],
-      "hashtags": "#DesignTransformation #BrandStrategy #CreativeBranding #DesignLive #BehindTheDesign #CreativeProcess #BrandIdentity #DesignThinking #CreativeCommunity #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 6
+      "hashtags": "#AI #Robotics #TechInvestment #SoftBank #StartupFunding #FutureOfTech #AIInnovation #RoboticsSoftware #TechTrends #InvestmentInsights",
+      "textureIndex": 3
     },
     {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
+      "title": "Gemini&#8217;s new beta feature provides proactive responses based on your photos, emails, and more",
+      "description": "Personal Intelligence is off by default, as users have the option to choose if and when they want to connect their Google apps to Gemini.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Theaiinsider",
-          "url": "https://theaiinsider.tech/2025/12/12/figma-introduces-new-ai-powered-image-editing-suite-to-streamline-design-workflows/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/release-notes/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/14/geminis-new-beta-feature-provides-proactive-responses-based-on-your-photos-emails-and-more/"
         }
       ],
       "format": "video",
       "subcategory": "thought-leadership",
       "hooks": [
-        "AI Just Revolutionized Image Editing in Figma",
-        "3 Mind-Blowing Tools Designers Need Right Now",
-        "Figma's New AI: Design Faster Than Ever"
+        "AI Just Got Personal: Gemini's Smartest Update Yet",
+        "Your Photos, Emails, and AI: A New Frontier",
+        "Gemini's Beta: When AI Knows You Better"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use dynamic screen recordings with picture-in-picture",
-            "Include clear chapter markers for easy navigation",
-            "Demonstrate real-time tool usage with engaging B-roll"
+            "Use screen recordings showing actual Gemini interface",
+            "Include PiP reaction shots demonstrating user surprise/delight",
+            "Create dynamic chapter markers highlighting key feature transitions"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, tech-forward aesthetic with high-contrast electric blue and deep charcoal color palette. Dynamic motion graphics showing tool transformations. Clean, sans-serif typography with sharp geometric transitions. Minimalist yet energetic visual style emphasizing precision and innovation. Incorporate subtle glitch/digital texture effects to highlight AI's cutting-edge nature."
+        "description": "High-energy, tech-futuristic color palette with deep blues and electric teals. Dynamic diagonal compositions emphasizing movement and connectivity. Sleek, sans-serif typography with subtle motion graphics. Integrate subtle holographic/translucent design elements suggesting AI intelligence. Clean, modern Apple/Google design language with experimental edge."
       },
       "exampleOutline": [
-        "Hook: Dramatic reveal of Figma's new AI tools",
-        "Context: Current design workflow challenges",
-        "Demonstration: Three specific AI image editing tools",
-        "Technical Deep Dive: How each tool works",
-        "Future Impact: Workflow transformation potential"
+        "Hook: Dramatic reveal of Gemini's personal intelligence concept",
+        "Context: Current AI limitations and user privacy concerns",
+        "Feature Breakdown: How Personal Intelligence actually works",
+        "Privacy Deep Dive: User control and opt-in mechanisms",
+        "Future Implications: What this means for personal AI"
       ],
-      "hashtags": "#Figma #AIDesign #CreativeTech #DesignTools #ImageEditing #AIInnovation #UXDesign #ProductDesign #CreativeWorkflow #DesignTips",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 2
+      "hashtags": "#GeminiAI #ArtificialIntelligence #PersonalAI #TechInnovation #AIPrivacy #MachineLearning #GoogleAI #FutureOfTech #AIUpdate #TechNews",
+      "textureIndex": 4
     },
     {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
+      "title": "AI security firm, depthfirst, announces $40 million series A",
+      "description": "The company used an AI-native platform to help companies fight threats.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/14/ai-security-firm-depthfirst-announces-40-million-series-a/"
         }
       ],
       "format": "tutorial",
       "subcategory": "instructional",
       "hooks": [
-        "Figma Buzz: 3 Features That Will Transform Your Design Workflow",
-        "Design Faster, Smarter: Figma Buzz's Secret Weapons Revealed",
-        "Unlock Your Creative Potential with Figma Buzz's New Tools"
+        "AI Security: Protect Your Company in 5 Steps",
+        "Hack-Proof Your Business with AI Defense",
+        "Enterprise Cybersecurity: The AI Breakthrough Tutorial"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use screen recordings with clear cursor movement for each step",
-            "Include picture-in-picture to show real-time demonstration and creator's reactions",
-            "Add chapter markers to help viewers navigate the tutorial easily"
+            "Use screen recordings showing actual AI security platform interface",
+            "Include real-world threat visualization graphics",
+            "Create chapter markers for each step of AI security process"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, dynamic visual approach with high-contrast Figma blue and white color palette. Use clean, geometric motion graphics to highlight each feature transition. Typography should be modern and crisp, with animated callouts and step-by-step visual progression. Incorporate subtle parallax effects and smooth screen transitions to maintain viewer engagement."
+        "description": "High-contrast cyberpunk color palette (deep blues, electric greens), technical wireframe overlays, dynamic motion graphics simulating threat detection, clean sans-serif typography with technical precision, holographic UI elements suggesting advanced technology"
       },
       "exampleOutline": [
-        "Section 1: High-Energy Hook - Why These Figma Buzz Features Matter",
-        "Section 2: The Design Workflow Challenge - Current Limitations",
-        "Section 3: Detailed Feature Walkthrough (Marketing Templates, Plugins, Video Trimming)",
-        "Section 4: Real-World Impact and Creative Possibilities",
-        "Section 5: Call-to-Action - How to Start Using These Features Today"
+        "Introduction: AI's Role in Modern Cybersecurity",
+        "Understanding Current Enterprise Security Challenges",
+        "Step-by-Step AI Security Platform Walkthrough",
+        "Case Studies: Real-World Threat Mitigation",
+        "Future of AI-Powered Cybersecurity Strategies"
       ],
-      "hashtags": "#FigmaBuzz #DesignWorkflow #CreativeTech #ProductivityHacks #UIDesign #DesignTools #CreativeWorkflow #DesignTips #FigmaFeatures #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 9
+      "hashtags": "#AISecurity #CyberdefenseTips #EnterpriseAI #TechInnovation #CyberSecurity #AITutorial #TechProtection #InnovationStrategy #CyberResilience #StartupTech",
+      "textureIndex": 8
     },
     {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
+      "title": "Claude Skills, Clearly Explained in 15 Minutes",
+      "description": "Skills are powerful but still early&#8212;here's everything you need to know to use them well",
       "starred": false,
       "sources": [
         {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
+          "name": "Peter Yang (Creator Economy)",
+          "url": "https://creatoreconomy.so/p/how-to-use-claude-skills-to-write-better-and-avoid-ai-slop"
         }
       ],
       "format": "documentary",
       "subcategory": "framework",
       "hooks": [
-        "Design Careers Decoded: Inside Moniker's Creative World",
-        "The Secret Life of a San Francisco Design Studio",
-        "How Top Designers Really Build Brand Identities"
+        "AI Skills: The Secret Weapon Creators Never Knew Existed",
+        "How Claude Skills Are Rewriting Creative Workflows",
+        "Unlock Claude's Hidden Superpowers in 15 Minutes"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use cinematic B-roll of design studio workspace",
-            "Include interview-style segments with actual Moniker designers",
-            "Create dynamic motion graphics showing brand system evolution"
+            "Use cinematic B-roll of creators working with AI",
+            "Include dynamic screen recordings with overlaid graphics",
+            "Create chapter markers for easy navigation"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Modern San Francisco design aesthetic: Cool neutral palette with electric blue accents, dynamic split-screen compositions, clean sans-serif typography, subtle parallax motion graphics, intermixing digital mockups with raw studio footage, high-contrast lighting that feels both professional and creative"
+        "description": "High-contrast tech-noir aesthetic with deep blues and electric teals. Futuristic typography with clean sans-serif fonts. Kinetic motion graphics showing workflow transformations. Dynamic split-screen compositions highlighting before/after AI intervention. Subtle glitch effects to emphasize technological innovation."
       },
       "exampleOutline": [
-        "Opening: Dramatic studio establishing shot with designer voiceover",
-        "Context: The evolving landscape of design careers in tech",
-        "Core Content: Detailed walkthrough of Moniker's design philosophy and process",
-        "Key Insight: What separates great designers from good designers",
-        "Closing: Direct call-to-action for aspiring design professionals"
+        "Opening: Dramatic personal story of creative breakthrough",
+        "Context: Current limitations in creative workflows",
+        "Claude Skills Breakdown: Practical demonstration and techniques",
+        "Case Studies: Real-world examples of skill implementation",
+        "Future Vision: How AI skills will transform creativity"
       ],
-      "hashtags": "#DesignCareer #CreativeIndustry #BrandDesign #SanFranciscoDesign #DesignJobs #CreativeProfessionals #DesignStudio #BrandIdentity #CareerAdvice #DesignInspiration",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 1
+      "hashtags": "#AICreativity #ClaudeAI #CreatorTools #AIWorkflow #TechInnovation #CreativeAI #ProductivityHacks #AISkills #FutureOfWork #CreatorEconomy",
+      "textureIndex": 4
+    },
+    {
+      "title": "Introducing Community Benchmarks on Kaggle",
+      "description": "&lt;img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/hero-final.max-600x600.format-webp.webp\"&gt;Community Benchmarks on Kaggle lets the community build, share and run custom evaluations for AI models.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Google AI Blog",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/kaggle-community-benchmarks/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "AI Benchmarks Just Got a Community Makeover",
+        "Kaggle's Game-Changing Model Evaluation Tool",
+        "Community-Powered AI Performance Revolution"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dynamic screen recordings of Kaggle interface",
+            "Include picture-in-picture of presenter explaining key concepts",
+            "Create animated graphics showing benchmark process flow"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-forward visual aesthetic with electric blue and deep purple color palette. Dynamic motion graphics showing data flows and community connections. Clean, modern sans-serif typography with subtle animated transitions. Incorporate data visualization elements with smooth, organic motion. Reference aesthetic of advanced tech documentaries with high-information density visuals."
+      },
+      "exampleOutline": [
+        "Cold Open: Dramatic Problem Statement (Why Current Model Evaluation Sucks)",
+        "What is Community Benchmarks? (Context & Origin)",
+        "How Community Benchmarks Actually Work (Technical Deep Dive)",
+        "Real-World Impact & Case Studies",
+        "How Viewers Can Get Started (Clear CTA)"
+      ],
+      "hashtags": "#AIEvaluation #MachineLearning #KaggleCommunity #AIBenchmarks #DataScience #TechInnovation #AITools #CommunityDriven #ModelEvaluation #AIResearch",
+      "textureIndex": 0
     }
   ]
 }

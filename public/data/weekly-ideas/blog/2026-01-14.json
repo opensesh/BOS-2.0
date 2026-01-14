@@ -1,348 +1,291 @@
 {
   "type": "blog",
-  "date": "2026-01-14T16:22:08.706Z",
+  "date": "2026-01-14T16:32:39.715Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Robotics software maker Skild AI hits $14B valuation",
+      "description": "Skild AI, which is building general-purpose robotic software, just raised a $1.4 billion funding round led by SoftBank.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover/8-tips-for-designers-building-branded-templates-in-figma-buz"
-        }
-      ],
-      "format": "guide",
-      "subcategory": "instructional",
-      "hooks": [
-        "Design Templates That Scale Without Breaking Brand",
-        "Figma Buzz: Your Blueprint for Flexible Branding",
-        "Unlock Self-Serve Design Without Losing Control"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Include real-time template creation walkthrough",
-            "Add interactive screencasts demonstrating Figma techniques",
-            "Use personal experiment narrative for authenticity"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Include SEO-optimized headers for discoverability",
-            "Add statistical data on template effectiveness",
-            "Create clear, scannable section breakdowns"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Frame content as professional skill development",
-            "Include enterprise-level template case studies",
-            "Highlight strategic business value of flexible design systems"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Dynamic grid-based layout with modular design elements, using brand's teal/charcoal palette. Incorporate Figma interface-inspired graphic overlays. Typography: sharp sans-serif, high contrast. Animated transitions between sections showcasing template flexibility. Aesthetic: Swiss design meets tech minimalism."
-      },
-      "exampleOutline": [
-        "Introduction: The Template Flexibility Challenge",
-        "Why Rigid Templates Kill Creativity",
-        "8 Strategic Design Template Techniques",
-        "Case Studies: Brands Doing It Right",
-        "Future of Adaptive Design Systems"
-      ],
-      "hashtags": "#FigmaDesign #BrandTemplates #CreativeStrategy #DesignSystems #AICreativity #ProductDesign #UXTips #DesignInnovation #CreativeTech #BrandingHacks",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 2
-    },
-    {
-      "title": "So Energy by Studio Blackburn",
-      "description": "I’ve said it before and I’ll say it again: it’s all well and good making some striking, retina-toastingly fluoro, brave as hell design work for, say, a kombucha startup or CBD lube or a record sleeve or an art book. These things are by dint of their very existence, context, and audience, already sort of cool. But the real creative\nThe post So Energy by Studio Blackburn appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2026/01/13/so-energy-brand-identity-by-studio-blackburn/"
-        },
-        {
-          "name": "Creativeboom",
-          "url": "https://www.creativeboom.com/news/studio-blackburns-refresh-of-so-energy-demonstrates-the-art-of-branding-the-invisible/"
-        },
-        {
-          "name": "Designweek",
-          "url": "https://www.designweek.co.uk/issues/30-november-6-december-2020/renewable-supplier-so-energy-rebrands-to-empower-customers/"
-        },
-        {
-          "name": "Adsofbrands",
-          "url": "https://adsofbrands.net/en/news/so-energy-launches-new-brand-campaign-we-do-energy-you-do-you/8898"
-        },
-        {
-          "name": "So",
-          "url": "https://www.so.energy/news"
-        }
-      ],
-      "format": "listicle",
-      "subcategory": "explanatory",
-      "hooks": [
-        "5 Design Secrets That Make Brands Unforgettable",
-        "How Energy Brands Break Through Visual Noise",
-        "Branding Magic: Turning Utilities into Experiences"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Use personal screenshots/annotations of SO Energy case study",
-            "Add real-time commentary between list items",
-            "Encourage subscriber interaction with design challenges"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Include comparative brand identity screenshots",
-            "Optimize headers for SEO with specific keywords",
-            "Add expert quotes from design professionals"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Include industry statistics about brand perception",
-            "Tag designers/studios mentioned in the piece",
-            "Frame insights as professional development learnings"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast electric blue and charcoal gray palette, dynamic asymmetrical grid layout, bold sans-serif typography with graphic interruptions, animated transitions between list sections, minimal yet energetic Swiss design influence with tech-forward motion graphics"
-      },
-      "exampleOutline": [
-        "Introduction: Why Brand Energy Matters",
-        "Context: The Invisible Power of Design",
-        "5 Key Design Transformation Strategies",
-        "Case Study Deep Dive: SO Energy",
-        "Future of Utility Branding Predictions"
-      ],
-      "hashtags": "#BrandDesign #CreativeBranding #DesignStrategy #UtilityBrands #AIDesign #BrandIdentity #CreativeDirection #DesignInnovation #BrandExperience #VisualStorytellingx",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 10
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Theaiinsider",
-          "url": "https://theaiinsider.tech/2025/12/12/figma-introduces-new-ai-powered-image-editing-suite-to-streamline-design-workflows/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/release-notes/"
-        }
-      ],
-      "format": "thread",
-      "subcategory": "explanatory",
-      "hooks": [
-        "AI is transforming Figma's image editing forever 🚀",
-        "3 mind-blowing Figma image tools you can't miss",
-        "Design faster, smarter: Figma's new AI magic 🎨"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Use thread as teaser for longer deep-dive article",
-            "Include behind-the-scenes screenshots of tool development",
-            "Link full analysis in thread's final tweet"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Create companion long-form piece with technical details",
-            "Use thread to drive traffic to full Medium article",
-            "Embed thread visuals in Medium post for cross-platform engagement"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Frame tools through professional workflow improvement lens",
-            "Include industry impact statistics",
-            "Tag Figma and design thought leaders in thread"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast geometric design with neon accent colors, minimal UI screenshots, dynamic motion graphics showing tool transformations, futuristic typography with clean sans-serif font, subtle glitch/digital aesthetic to emphasize AI innovation"
-      },
-      "exampleOutline": [
-        "Section 1: Provocative hook about AI design revolution",
-        "Section 2: Current image editing pain points",
-        "Section 3: Detailed breakdown of 3 new tools",
-        "Section 4: Workflow efficiency impact",
-        "Section 5: Call-to-action, tool exploration invitation"
-      ],
-      "hashtags": "#FigmaAI #DesignTech #AIDesign #CreativeTech #ProductDesign #UXTools #AIInnovation #DesignWorkflow #TechTrends #CreativeAI",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 11
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/14/robotic-software-maker-skild-ai-hits-14b-valuation/"
         }
       ],
       "format": "article",
       "subcategory": "visionary",
       "hooks": [
-        "Design Momentum: Figma Buzz's Game-Changing New Features",
-        "Unlock Brand Power with Figma Buzz's Latest Tools",
-        "Revolutionize Your Design Workflow in Three Moves"
+        "AI Robots: $14B Startup Reshaping Future of Work",
+        "Inside Skild AI's Billion-Dollar Robotics Revolution",
+        "How One Startup is Democratizing Robotic Intelligence"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Include real-time screenshots of feature implementations",
-            "Use personal anecdotes about workflow improvements",
-            "Create interactive code blocks showing plugin integration"
+            "Include real-time experiment screenshot of Skild AI software",
+            "Use conversational, behind-the-scenes narrative style",
+            "Add interactive poll about AI robotics reader predictions"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Optimize headers for SEO with targeted keywords",
-            "Include comparison charts of before/after workflows",
-            "Add expert commentary from design professionals"
+            "Optimize headline for SEO with keywords 'AI robotics valuation'",
+            "Include data visualizations of funding trends",
+            "Add expert quote or industry context sidebar"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Include industry statistics about design efficiency",
-            "Highlight professional value proposition upfront",
-            "Use data-driven insights about template productivity"
+            "Frame story as professional technology transformation",
+            "Include 3-4 key investment/technical takeaways",
+            "Tag SoftBank and AI industry leaders"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, dynamic composition with electric blue and charcoal gray color palette. Asymmetrical layouts with floating UI elements. Modern sans-serif typography with subtle motion graphics. Integrate Figma interface screenshots with abstract geometric overlays. Reference Apple's design language with clean, purposeful visual hierarchy."
+        "description": "Futuristic cyberpunk color palette (electric blues, deep purples), dynamic geometric layouts, translucent robotic wireframe overlays, motion-implied typography with tech-inspired glitch effects, minimalist infographic elements suggesting technological complexity"
       },
       "exampleOutline": [
-        "Section 1: Provocative Hook - The Design Efficiency Revolution",
-        "Section 2: Current Design Workflow Challenges",
-        "Section 3: Deep Dive into Figma Buzz Features",
-        "Section 4: Transformative Potential for Brands and Designers",
-        "Section 5: Actionable Next Steps and Implementation"
+        "Opening: Dramatic Funding Announcement Context",
+        "Skild AI's Technological Innovation Landscape",
+        "Detailed Breakdown of Robotic Software Capabilities",
+        "Investment Implications for Future of Work",
+        "Strategic Roadmap and Industry Predictions"
       ],
-      "hashtags": "#FigmaBuzz #DesignInnovation #AIDesign #CreativeTech #ProductivityHacks #DesignTools #BrandStrategy #UIDesign #CreativeWorkflow #DesignTrends",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7245606/pexels-photo-7245606.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
+      "hashtags": "#AIRobotics #TechInnovation #SoftBank #FutureOfWork #AIStartups #RoboticsSoftware #TechFunding #AITechnology #InnovationEconomy #StartupSuccess",
+      "textureIndex": 3
     },
     {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
+      "title": "Gemini&#8217;s new beta feature provides proactive responses based on your photos, emails, and more",
+      "description": "Personal Intelligence is off by default, as users have the option to choose if and when they want to connect their Google apps to Gemini.",
       "starred": false,
       "sources": [
         {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/14/geminis-new-beta-feature-provides-proactive-responses-based-on-your-photos-emails-and-more/"
+        }
+      ],
+      "format": "guide",
+      "subcategory": "instructional",
+      "hooks": [
+        "AI That Knows You Before You Ask",
+        "Personal Intelligence: Your Digital Sixth Sense",
+        "Gemini's Predictive Power: Beyond Search"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use interactive screenshots of Gemini's new features",
+            "Include real-time personal experience walkthrough",
+            "Add optional subscriber poll about AI privacy preferences"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Create SEO-optimized headers for each feature section",
+            "Include data visualization of privacy settings",
+            "Embed expert quote about proactive AI technology"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame content for professional AI adoption narrative",
+            "Include enterprise implementation insights",
+            "Add credibility with industry adoption statistics"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Futuristic blue-gray color palette with translucent overlays, dynamic geometric infographics showing AI connectivity, sans-serif typography with technical precision, subtle motion graphics illustrating data flow and interconnectedness, minimalist tech-inspired aesthetic"
+      },
+      "exampleOutline": [
+        "Introduction: The Rise of Proactive AI",
+        "Understanding Personal Intelligence: Core Mechanics",
+        "Feature Deep Dive: Photos, Emails, and Predictive Responses",
+        "Privacy Controls: User Empowerment in the AI Era",
+        "Future Implications and Strategic Recommendations"
+      ],
+      "hashtags": "#AIPrivacy #GeminiAI #PersonalIntelligence #TechInnovation #ArtificialIntelligence #DigitalTransformation #AIEthics #TechTrends #InnovationStrategy #FutureOfAI",
+      "textureIndex": 10
+    },
+    {
+      "title": "AI security firm, depthfirst, announces $40 million series A",
+      "description": "The company used an AI-native platform to help companies fight threats.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/14/ai-security-firm-depthfirst-announces-40-million-series-a/"
+        }
+      ],
+      "format": "listicle",
+      "subcategory": "explanatory",
+      "hooks": [
+        "5 AI Security Breakthroughs That Will Shock You",
+        "How One Startup is Revolutionizing Cybersecurity",
+        "The $40M Solution to AI's Biggest Threat"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use numbered graphics for each list point",
+            "Include a personal anecdote about AI security challenge",
+            "Add interactive poll about reader's security concerns"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Optimize headline with strong SEO keywords",
+            "Include expert quotes to boost credibility",
+            "Add deep-dive links for each list point"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Target C-suite and security professionals explicitly",
+            "Use data visualizations for each key point",
+            "Include clear business impact statements"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast cyberpunk-inspired design with glitch effects, dark background with electric blue/neon green accents, technical wireframe overlays, floating holographic security icons, motion-graphic transitions between list points"
+      },
+      "exampleOutline": [
+        "Introduction: The AI Security Landscape in 2024",
+        "The Growing Threat: Why Traditional Security Fails",
+        "5 Breakthrough Strategies from depthfirst",
+        "How These Innovations Change the Game",
+        "Call-to-Action: Protect Your Digital Future"
+      ],
+      "hashtags": "#AISecurityAI #Cybersecurity #TechInnovation #StartupFunding #AITechnology #CyberDefense #TechTrends #InnovationStrategy #DataProtection #AIInnovation",
+      "textureIndex": 11
+    },
+    {
+      "title": "Introducing Community Benchmarks on Kaggle",
+      "description": "&lt;img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/hero-final.max-600x600.format-webp.webp\"&gt;Community Benchmarks on Kaggle lets the community build, share and run custom evaluations for AI models.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Google AI Blog",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/kaggle-community-benchmarks/"
         }
       ],
       "format": "case-study",
       "subcategory": "case-study-deep-dive",
       "hooks": [
-        "Design Systems: How Moniker Transforms Brand Identity",
-        "Scaling Visual Identities: A Senior Designer's Playbook",
-        "Crafting Brand Universes Beyond Traditional Boundaries"
+        "How Kaggle's Community Benchmarks Revolutionize AI Evaluation",
+        "Crowdsourcing AI Performance: Kaggle's Game-Changing Approach",
+        "Inside Kaggle's New Community-Driven Model Assessment Tool"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Include real-time design system sketches/iterations",
-            "Use interactive annotations to explain design choices",
-            "Share behind-the-scenes decision-making process"
+            "Include real-time experiment screenshots from Kaggle platform",
+            "Use personal narrative about discovering the benchmark tool",
+            "Add interactive code snippets or quick demo walkthrough"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Deep dive into technical design system mechanics",
-            "Include SEO-optimized headers for scanability",
-            "Embed comparative visual examples"
+            "Deep dive into technical architecture with clean infographics",
+            "Include comparative data visualizations of benchmark impacts",
+            "Optimize with SEO-friendly technical breakdowns"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Highlight professional growth and strategic thinking",
-            "Include quantitative impact of design systems",
-            "Frame insights for design leadership audience"
+            "Emphasize professional implications for AI development teams",
+            "Include quotes from industry experts about community benchmarking",
+            "Highlight potential enterprise applications and efficiency gains"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Dynamic grid-based layouts with modular typography, San Francisco tech-minimalist color palette (cool grays, electric blues), subtle motion graphics revealing design system connections, clean yet experimental composition emphasizing scalability and precision"
+        "description": "Bold, technical aesthetic with dynamic data visualization. Gradient blue-teal color palette. Isometric illustrations of interconnected data points. Modern sans-serif typography with technical annotations. Subtle motion graphics showing benchmark comparisons. Minimal but high-information design approach."
       },
       "exampleOutline": [
-        "Introduction: The Design System Challenge",
-        "Context: Moniker's Unique Design Philosophy",
-        "Case Study: Visual Identity Transformation Process",
-        "Key Insights: Scalable Brand Architecture",
-        "Future Implications & Call to Action"
+        "Section 1: The AI Evaluation Challenge",
+        "Section 2: How Community Benchmarks Solve Traditional Limitations",
+        "Section 3: Inside Kaggle's Innovative Approach",
+        "Section 4: Real-World Impact and Future Potential",
+        "Section 5: How Developers Can Get Involved"
       ],
-      "hashtags": "#DesignSystems #BrandIdentity #CreativeDirection #VisualStrategy #AIDesign #BrandScaling #ProductDesign #CreativeTech #DesignInnovation #SanFranciscoDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 9
+      "hashtags": "#AIInnovation #MachineLearning #KaggleCommunity #AIEvaluation #TechInnovation #DataScience #ArtificialIntelligence #OpenSource #AIResearch #TechTrends",
+      "textureIndex": 10
+    },
+    {
+      "title": "VoiceRun nabs $5.5M to build a voice agent factory",
+      "description": "VoiceRun, a startup that creates voice agents, raised $5.5 million in a round led by Flybridge.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/14/voicerun-nabs-5-5m-to-build-voice-agent-factory/"
+        }
+      ],
+      "format": "thread",
+      "subcategory": "explanatory",
+      "hooks": [
+        "AI Voice Agents Just Got $5.5M Rocket Fuel 🚀",
+        "Voice Tech Revolution: VoiceRun's Million-Dollar Moment",
+        "How VoiceRun Is Reshaping Conversational AI"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use thread as teaser for longer deep-dive newsletter",
+            "Include behind-the-scenes analysis not in original thread",
+            "Create companion graphic visualizing funding impact"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Expand thread into long-form article with technical details",
+            "Add expert commentary and industry context",
+            "Include interview quotes or expert perspectives"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame thread as professional industry trend analysis",
+            "Add networking/career implications of voice AI advances",
+            "Include personal insights on technology's professional potential"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dynamic, futuristic design with holographic voice wave overlays, electric blue and deep purple color palette, floating geometric typography, subtle motion graphics showing voice agent interactions, minimalist tech-inspired illustrations"
+      },
+      "exampleOutline": [
+        "Thread Hook: Breakthrough AI Voice Agent Funding Story",
+        "VoiceRun's Origin & Vision Context",
+        "Funding Details & Strategic Implications",
+        "Technology Innovation Breakdown",
+        "Future Predictions & Call to Follow Journey"
+      ],
+      "hashtags": "#AIVoice #VoiceTech #StartupFunding #AIInnovation #ConversationalAI #TechTrends #VoiceAgents #AIStartups #InvestmentAlert #FutureOfWork",
+      "textureIndex": 10
     }
   ]
 }

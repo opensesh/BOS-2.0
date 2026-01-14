@@ -1,388 +1,331 @@
 {
   "type": "short-form",
-  "date": "2026-01-14T16:22:08.706Z",
+  "date": "2026-01-14T16:31:05.207Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Robotics software maker Skild AI hits $14B valuation",
+      "description": "Skild AI, which is building general-purpose robotic software, just raised a $1.4 billion funding round led by SoftBank.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover/8-tips-for-designers-building-branded-templates-in-figma-buz"
-        }
-      ],
-      "format": "story",
-      "subcategory": "story",
-      "hooks": [
-        "Figma Templates That Don't Break Your Brand",
-        "Design Once, Scale Everywhere: Figma Secrets",
-        "Hack Figma: Build Bulletproof Brand Templates"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use fast-paced transitions between template examples",
-            "Include side-by-side before/after comparisons",
-            "Add dynamic text animations highlighting key points"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must visualize entire template challenge",
-            "Use consistent color-coded design for each tip",
-            "Include minimal text, maximum visual explanation"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with provocative design failure example",
-            "Use screen recordings showing Figma workflow",
-            "Close with clear, actionable template strategy"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame tips as professional design strategy",
-            "Include data/metrics about template efficiency",
-            "Use more technical, authoritative language"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast geometric design with neon accent colors, modular grid layouts, kinetic typography, minimal illustrations showing template mechanics, motion graphics revealing template flexibility, sharp-edged design system references"
-      },
-      "exampleOutline": [
-        "Section 1: Provocative Design Problem Visualization",
-        "Section 2: Brand Consistency Challenge",
-        "Section 3: 8 Tactical Template Strategies",
-        "Section 4: Real-World Template Transformation",
-        "Section 5: Quick Implementation Call-to-Action"
-      ],
-      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystem #CreativeStrategy #AIDesign #DesignTips #ProductivityHacks #BrandIdentity #DesignCommunity #CreativeTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 11
-    },
-    {
-      "title": "So Energy by Studio Blackburn",
-      "description": "I’ve said it before and I’ll say it again: it’s all well and good making some striking, retina-toastingly fluoro, brave as hell design work for, say, a kombucha startup or CBD lube or a record sleeve or an art book. These things are by dint of their very existence, context, and audience, already sort of cool. But the real creative\nThe post So Energy by Studio Blackburn appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2026/01/13/so-energy-brand-identity-by-studio-blackburn/"
-        },
-        {
-          "name": "Creativeboom",
-          "url": "https://www.creativeboom.com/news/studio-blackburns-refresh-of-so-energy-demonstrates-the-art-of-branding-the-invisible/"
-        },
-        {
-          "name": "Designweek",
-          "url": "https://www.designweek.co.uk/issues/30-november-6-december-2020/renewable-supplier-so-energy-rebrands-to-empower-customers/"
-        },
-        {
-          "name": "Adsofbrands",
-          "url": "https://adsofbrands.net/en/news/so-energy-launches-new-brand-campaign-we-do-energy-you-do-you/8898"
-        },
-        {
-          "name": "So",
-          "url": "https://www.so.energy/news"
-        }
-      ],
-      "format": "reel",
-      "subcategory": "reel",
-      "hooks": [
-        "Design That Breaks Energy Branding Rules Forever",
-        "How Studio Blackburn Reimagined Energy Visuals",
-        "Radical Branding: When Utilities Get Creative"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use fast-paced visual transitions matching brand energy",
-            "Include 2-3 contrasting design screenshots",
-            "Overlay dynamic text highlighting key design insights"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Bold before/after brand comparison",
-            "Use swipe-triggered animations between slides",
-            "Final slide includes call-to-action and design insights"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Open with unexpected visual pattern interrupt",
-            "Use voiceover explaining design transformation",
-            "Include quick design process glimpses"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Add professional design critique context",
-            "Include designer/brand strategy quotes",
-            "Link to full case study in comments"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 8,
-        "description": "High-energy neon color palette with electric blue and chartreuse green accents. Asymmetrical compositions with dynamic typography. Glitch-inspired motion graphics. Experimental layout breaking traditional grid systems. References: Experimental Swiss design, digital art, futuristic tech interfaces."
-      },
-      "exampleOutline": [
-        "Hook: Unexpected energy brand visual transformation",
-        "Problem: Boring utility design conventions",
-        "Solution: Studio Blackburn's radical design approach",
-        "Key Insight: Design can communicate brand energy",
-        "CTA: Explore design possibilities"
-      ],
-      "hashtags": "#BrandDesign #CreativeDirection #DesignInnovation #EnergyBranding #StudioBlackburn #VisualIdentity #GraphicDesign #BrandStrategy #DesignTrends #CreativeCommunication",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 1
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Theaiinsider",
-          "url": "https://theaiinsider.tech/2025/12/12/figma-introduces-new-ai-powered-image-editing-suite-to-streamline-design-workflows/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/release-notes/"
-        }
-      ],
-      "format": "reel",
-      "subcategory": "reel",
-      "hooks": [
-        "AI just transformed Figma image editing forever 🔥",
-        "3 mind-blowing Figma tools designers NEED now",
-        "Design faster: Figma's new AI editing magic"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use fast-paced screen recordings demonstrating tool workflow",
-            "Include dynamic text overlay highlighting key features",
-            "Create quick before/after transitions to showcase impact"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Dramatic tool reveal",
-            "Use slide-by-slide breakdown of each editing feature",
-            "Include actionable screenshots with minimal text"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected visual that grabs attention",
-            "Use voiceover to explain technical details quickly",
-            "Include rapid UI demonstration with clear mouse movements"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame tools as professional productivity enhancement",
-            "Include data/efficiency metrics in presentation",
-            "Use more technical, detailed explanation of features"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 8,
-        "description": "High-contrast cyberpunk-inspired color palette with neon accents, dynamic geometric transitions, floating holographic UI elements, sharp typography with tech-forward motion graphics, futuristic yet clean aesthetic inspired by cutting-edge design interfaces"
-      },
-      "exampleOutline": [
-        "Teaser/Hook: Dramatic AI editing reveal",
-        "Problem: Current design workflow limitations",
-        "Solution: 3 new Figma AI tools",
-        "Demonstration: Quick feature walkthrough",
-        "Call-to-Action: Try new tools now"
-      ],
-      "hashtags": "#FigmaAI #DesignTech #AIDesign #CreativeTech #ProductivityHack #DesignTools #AICreativity #FigmaUpdate #DesignInnovation #TechTips",
-      "pexelsImageUrl": "https://images.pexels.com/photos/8857054/pexels-photo-8857054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/14/robotic-software-maker-skild-ai-hits-14b-valuation/"
         }
       ],
       "format": "carousel",
       "subcategory": "carousel",
       "hooks": [
-        "Figma Buzz: 3 Game-Changing Features for Designers",
-        "Unlock Your Design Workflow's Hidden Potential",
-        "Design Faster, Smarter with Figma's New Tools"
+        "Robot Software Unicorn: $14B in 60 Seconds 🤖💡",
+        "How One AI Startup Just Disrupted Robotics",
+        "SoftBank's Massive Bet on Robot Intelligence"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick cuts between feature demonstrations",
-            "Add dynamic text overlay for each feature",
-            "Include motion graphics to highlight key points"
+            "Use quick, dynamic transitions between slides",
+            "Add subtle robot/tech motion graphics",
+            "Ensure text is large and readable in vertical format"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide must be a bold, eye-catching graphic",
+            "Design each slide as standalone visual story",
             "Use consistent color palette across slides",
-            "Ensure each slide can stand alone but tells a cohesive story"
+            "Ensure first slide is maximum intrigue"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Compress content into rapid-fire feature showcase",
-            "Use high-energy transitions between points",
-            "Include clear text annotations for key details"
+            "Compress narrative into most compelling 60 seconds",
+            "Use screen text for key statistics",
+            "Add energetic background music"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Add more detailed professional context",
-            "Include specific workflow improvement insights",
-            "Use more technical language and professional tone"
+            "Add more technical depth to slides",
+            "Include potential industry implications",
+            "Use more professional, data-driven visual language"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, tech-forward design with vibrant gradient backgrounds, clean sans-serif typography, minimal illustrations of design interfaces. Use a color palette of electric blues, deep purples, and bright accent colors. Incorporate subtle motion graphics and parallax effects between carousel slides. Aesthetic references: Figma's design language, modern tech interfaces, and futuristic design visualization"
+        "description": "Futuristic tech palette - deep blues, electric teals, metallic silvers. Geometric, angular compositions suggesting robotic precision. Modern sans-serif typography with subtle glitch/digital overlay effects. Minimal 3D render elements suggesting AI/robotics infrastructure. Dynamic diagonal layouts with high-contrast data visualization"
       },
       "exampleOutline": [
-        "Slide 1: Bold hook graphic introducing Figma Buzz features",
-        "Slide 2: Marketing template connection problem/context",
-        "Slide 3: First feature - Marketing template details",
-        "Slide 4: Second feature - Plugin integration insights",
-        "Slide 5: Final feature - Video trimming capability"
+        "Slide 1: Provocative Hook + Visual Headline",
+        "Slide 2: Company Context & Valuation",
+        "Slide 3: Funding Details & Investor Breakdown",
+        "Slide 4: Technology Overview/Potential",
+        "Slide 5: Future Implications & Call-to-Engage"
       ],
-      "hashtags": "#FigmaBuzz #DesignTools #CreativeWorkflow #AIDesign #ProductivityHacks #DesignTips #CreativeTech #UXDesign #DesignInnovation #FigmaFeatures",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7245606/pexels-photo-7245606.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 3
+      "hashtags": "#AIRobotics #TechInnovation #StartupFunding #SoftBank #AITech #RobotSoftware #TechUnicorn #AIInvestment #FutureOfRobotics #TechTrends",
+      "textureIndex": 10
     },
     {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
+      "title": "Gemini&#8217;s new beta feature provides proactive responses based on your photos, emails, and more",
+      "description": "Personal Intelligence is off by default, as users have the option to choose if and when they want to connect their Google apps to Gemini.",
       "starred": false,
       "sources": [
         {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/14/geminis-new-beta-feature-provides-proactive-responses-based-on-your-photos-emails-and-more/"
+        }
+      ],
+      "format": "reel",
+      "subcategory": "reel",
+      "hooks": [
+        "AI just got personal: Your data, your intelligence",
+        "Gemini's new feature: Your digital co-pilot",
+        "Privacy meets intelligence: Control your AI experience"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick jump cuts to maintain energy",
+            "Add dynamic text overlays highlighting key features",
+            "Include screen recordings demonstrating the privacy settings"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Provocative visual of AI/privacy concept",
+            "Use infographic-style slides explaining feature nuances",
+            "Final slide: Clear call-to-action with feature link"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with pattern interrupt visual",
+            "Use screen capture to show actual interface",
+            "Include rapid-fire benefits in first 3 seconds"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as professional productivity enhancement",
+            "Include data privacy credibility markers",
+            "Use more technical language and depth"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast futuristic color palette (deep blues, electric teals, sharp whites). Dynamic motion graphics with transparent overlays. Geometric typography with technical feel. Blend of digital interface mockups and abstract AI-inspired visual metaphors. Minimalist but energetic composition emphasizing user control and technological sophistication."
+      },
+      "exampleOutline": [
+        "Quick visual hook showing AI/privacy tension",
+        "Problem: Invasive AI technologies",
+        "Gemini's new personal intelligence feature explained",
+        "User control and privacy as key differentiator",
+        "Call-to-action: Explore feature settings"
+      ],
+      "hashtags": "#AI #PrivacyTech #GeminiAI #TechInnovation #AIPrivacy #UserControl #PersonalAI #TechTrends #IntelligentTechnology #DigitalInnovation",
+      "textureIndex": 2
+    },
+    {
+      "title": "AI security firm, depthfirst, announces $40 million series A",
+      "description": "The company used an AI-native platform to help companies fight threats.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/14/ai-security-firm-depthfirst-announces-40-million-series-a/"
+        }
+      ],
+      "format": "carousel",
+      "subcategory": "carousel",
+      "hooks": [
+        "AI Security Just Got $40M Smarter 🛡️",
+        "Startup Drops Game-Changing Cyber Defense",
+        "When AI Fights Cybercrime: $40M Breakthrough"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic transitions between carousel slides",
+            "Start with high-contrast security/tech visual",
+            "Include quick motion graphics explaining funding"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have bold headline/stat",
+            "Use infographic-style design for funding breakdown",
+            "Create visually consistent color palette around tech/security theme"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Compress carousel narrative into 60-second script",
+            "Use voiceover explaining key funding details",
+            "Add subtle screen animations mimicking carousel flow"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add more technical depth to slides",
+            "Include founder/investor quote",
+            "Use more professional, data-driven visual language"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dark cybersecurity palette with electric blue/charcoal accents. Geometric, angular compositions suggesting digital defense. Futuristic sans-serif typography. Subtle glitch/digital interference motion graphics. Clean, technical aesthetic with high-contrast design elements."
+      },
+      "exampleOutline": [
+        "Slide 1: Headline + Key Funding Stat",
+        "Slide 2: Company Mission/Problem Statement",
+        "Slide 3: AI Technology Overview",
+        "Slide 4: Funding Impact Visualization",
+        "Slide 5: Future Vision/Call to Action"
+      ],
+      "hashtags": "#AISecurityTech #CyberDefense #StartupFunding #AIInnovation #TechInvestment #CyberSecurity #AITech #InvestmentAlert #TechStartup #InnovationEconomy",
+      "textureIndex": 8
+    },
+    {
+      "title": "US cargo tech company publicly exposed its shipping systems and customer data to the web",
+      "description": "Shipping tech company Bluspark left internal plaintext passwords, including those of executives, exposed to the internet, at a time when hacks in the shipping industry are on the rise.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/14/us-cargo-tech-company-publicly-exposed-its-shipping-systems-and-customer-data-to-the-web/"
         }
       ],
       "format": "quick-image",
       "subcategory": "quick-image",
       "hooks": [
-        "Design Jobs: Inside the Secret Hiring Process 🎨",
-        "How Top Design Firms Actually Choose Talent",
-        "Cracking the Design Career Code in San Francisco"
+        "Shipping Giant's Passwords: Leaked Online, Zero Protection",
+        "When Cybersecurity Goes Wrong: Bluspark's Epic Fail",
+        "Exposed: How One Tech Company Left Doors Wide Open"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick text transitions between hiring insights",
-            "Include rapid-fire visual screenshots of job posting",
-            "Create dynamic motion graphics revealing insider tips"
+            "Use red/warning color overlay on initial graphic",
+            "Animate text to highlight key vulnerability points",
+            "Include quick animated cyber breach visualization"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: provocative job market statistic",
-            "Use clean, modular design grid for each slide",
-            "Final slide includes direct call-to-action/contact"
+            "First slide: Provocative headline graphic",
+            "Use data visualization for exposure scale",
+            "Final slide: Quick cybersecurity protection tips"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with unexpected hiring revelation",
-            "Use split-screen interview/graphic technique",
-            "Include fast-paced b-roll of design studio"
+            "Start with dramatic screen-glitch transition",
+            "Use voiceover explaining technical vulnerability",
+            "Include rapid-fire text overlays highlighting risks"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Frame content as professional development insight",
-            "Use more detailed, data-driven graphics",
-            "Include credible source attribution"
+            "More serious, data-driven visual approach",
+            "Include industry impact statistics",
+            "Professional tone highlighting systemic risks"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "High-contrast cybersecurity aesthetic. Dark background with electric blue/red accent colors. Glitch/digital corruption effects. Technical wireframe elements. Typography feels urgent and technical. Incorporate subtle hacking/matrix-style visual motifs."
+      },
+      "exampleOutline": [
+        "Headline: Massive Security Vulnerability Exposed",
+        "Context: Bluspark's Unprotected Systems",
+        "Core Content: What Data Was Leaked",
+        "Industry Implications: Broader Cybersecurity Risks",
+        "Call-to-Action: Protect Your Digital Assets"
+      ],
+      "hashtags": "#Cybersecurity #DataPrivacy #TechFail #ShippingIndustry #CyberRisk #DataProtection #TechSecurity #IndustryAlert #CyberVulnerability #ITSecurity",
+      "textureIndex": 3
+    },
+    {
+      "title": "YouTube now has a way for parents to block kids from watching Shorts",
+      "description": "Parents will be able to toggle the Shorts time limit on connected children's accounts.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/14/youtube-now-has-a-way-for-parents-to-block-kids-from-watching-shorts/"
+        }
+      ],
+      "format": "story",
+      "subcategory": "story",
+      "hooks": [
+        "Parents, control YouTube Shorts with one click!",
+        "New YouTube feature: Kids' screen time solved",
+        "Protect your kids' digital world instantly"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick screen recording to demonstrate feature",
+            "Include parent/child reaction shots for emotional connection",
+            "Use fast-paced transitions to maintain engagement"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Dramatic problem statement",
+            "Use infographic-style slides for feature explanation",
+            "Final slide: Clear action steps for parents"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with provocative screen time statistic",
+            "Use split-screen parent/child perspective",
+            "End with clear tutorial moment"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as digital parenting innovation",
+            "Include expert commentary on screen time",
+            "Highlight technological solution's broader implications"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast tech-inspired palette (charcoal/neon), geometric typography, layered graphic elements suggesting complexity of design hiring, minimalist infographic style with unexpected color breaks, subtle glitch/digital artifacts to represent insider knowledge"
+        "description": "Dynamic, tech-friendly color palette with teal and coral accents. Playful isometric illustrations of devices. Clean, modern sans-serif typography. Animated graphic elements showing screen interactions. Soft shadows and depth to create technological feel."
       },
       "exampleOutline": [
-        "Hook: Surprising Design Hiring Statistic",
-        "Context: Current SF Design Job Landscape",
-        "Insider Tips from Moniker's Hiring Process",
-        "Key Skills That Actually Matter",
-        "Direct Application/Next Steps CTA"
+        "Section 1: Attention-grabbing digital parenting challenge",
+        "Section 2: YouTube Shorts' impact on children",
+        "Section 3: New parental control feature walkthrough",
+        "Section 4: Why this matters for families",
+        "Section 5: Quick implementation guide"
       ],
-      "hashtags": "#DesignCareers #SFDesign #HiringTips #CreativeIndustry #JobSearch #DesignJobs #TechCareers #CreativeTalent #CareerGrowth #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7767791/pexels-photo-7767791.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 6
+      "hashtags": "#ParentingTips #DigitalWellbeing #YouTubeParents #ScreenTime #TechForFamilies #KidsSafety #ParentingHacks #TechTips #FamilyTech #DigitalParenting",
+      "textureIndex": 7
     }
   ]
 }
