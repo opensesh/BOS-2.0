@@ -1,252 +1,211 @@
 {
   "type": "long-form",
-  "date": "2026-01-15T16:26:14.440Z",
+  "date": "2026-01-15T16:36:28.920Z",
   "ideas": [
     {
-      "title": "The Huntington by Base Design",
-      "description": "There’s a particular kind of challenge that crops up again and again in cultural branding – not obscurity exactly, but partial recognition. The sort where an institution is famous for one thing, quietly exceptional at several others, and yet rarely understood as a coherent whole.  The Huntington, a century-old cultural and research institution in Southern California, sits squarely in that\nThe post The Huntington by Base Design appeared first on BP&O - Branding, Packaging and Opinion.",
+      "title": "OpenAI invests in Sam Altman’s brain computer interface startup Merge Labs",
+      "description": "OpenAI is participating in a $250 million seed round into Merge Labs, Sam Altman's brain computer interface startup. The startup is valued at $850 million.",
       "starred": true,
       "sources": [
         {
-          "name": "BP&O",
-          "url": "https://bpando.org/2026/01/15/the-huntington-museum-branding-by-base-design/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/15/openai-invests-in-sam-altmans-brain-computer-interface-startup-merge-labs/"
         }
       ],
       "format": "video",
       "subcategory": "thought-leadership",
       "hooks": [
-        "How Cultural Branding Actually Transforms Institutions",
-        "The Design Secret Behind Legendary Museums",
-        "Branding Genius: Reimagining Institutional Identity"
+        "Sam Altman's Wild Brain Tech: OpenAI's $250M Bet",
+        "Inside the Future: OpenAI's Mind-Blowing Investment",
+        "Brain Computers: The Next Tech Revolution Begins"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use dynamic screen transitions between case study segments",
-            "Include picture-in-picture designer interview clips",
-            "Create animated infographics explaining branding concepts"
+            "Use dynamic screen recording of Merge Labs website/press release",
+            "Include picture-in-picture with expert commentary/reaction shots",
+            "Create clear chapter markers explaining technical nuances"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast color palette (deep blues/bright oranges), clean minimalist typography, fluid motion graphics illustrating brand evolution, subtle parallax scrolling effects, geometric overlay animations highlighting design principles"
+        "description": "High-contrast blue/white color palette with electric accent colors. Futuristic motion graphics showing neural network animations. Clean, technical typography with rounded sans-serif fonts. Dynamic split-screen compositions blending tech graphics with human elements. Subtle holographic overlay effects suggesting brain-computer interface technology."
       },
       "exampleOutline": [
-        "Opening: Provocative question about institutional branding",
-        "Context: The Huntington's complex identity challenge",
-        "Design Solution: Base Design's strategic approach",
-        "Technical Deep Dive: Specific branding techniques",
-        "Closing: Broader implications for cultural design"
+        "Opening: Shocking Investment Reveal (5s)",
+        "Context: Brain-Computer Interface Landscape (2min)",
+        "Core Content: Merge Labs Deep Dive (4min)",
+        "Technical Insights: How This Changes Tech (3min)",
+        "Closing CTA: Future Predictions & Engagement (30s)"
       ],
-      "hashtags": "#BrandDesign #MuseumBranding #CreativeDirection #DesignStrategy #CulturalInstitutions #GraphicDesign #BrandIdentity #DesignThinking #CreativeCommunication #InstitutionalBranding",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7425917/pexels-photo-7425917.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 11
+      "hashtags": "#AITech #BrainComputer #SamAltman #OpenAI #FutureTech #TechInvestment #Innovation #ArtificialIntelligence #EmergingTech #NeuralInterface",
+      "textureIndex": 9
     },
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Wikimedia Foundation announces new AI partnerships with Amazon, Meta, Microsoft, Perplexity and others",
+      "description": "The AI partnerships allow companies to access the org's content, like Wikipedia, at scale.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover/8-tips-for-designers-building-branded-templates-in-figma-buz"
-        }
-      ],
-      "format": "tutorial",
-      "subcategory": "instructional",
-      "hooks": [
-        "Design Templates That Don't Break Under Pressure",
-        "Figma Buzz: Make Flexible Brand Guidelines Easy",
-        "Unlock Scalable Design Systems in 8 Steps"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use picture-in-picture to show Figma interface while explaining",
-            "Add clear chapter markers for each template-building tip",
-            "Include live screen recording with cursor tracking"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, dynamic visual style with high-contrast color palette (electric blue, charcoal gray, white). Experimental typography with geometric sans-serif. Animated transitions between sections. Dynamic motion graphics highlighting key template design principles. Clean, technical aesthetic with creative energy."
-      },
-      "exampleOutline": [
-        "Section 1: High-Energy Hook & Design Challenge Introduction",
-        "Section 2: Why Flexible Brand Templates Matter",
-        "Section 3: 8 Tactical Template Design Strategies",
-        "Section 4: Live Demonstration of Template Principles",
-        "Section 5: Call-to-Action & Community Engagement"
-      ],
-      "hashtags": "#FigmaDesign #DesignSystems #BrandTemplates #CreativeWorkflow #DesignTips #ProductDesign #UIDesign #DesignStrategy #CreativeTech #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 8
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Theaiinsider",
-          "url": "https://theaiinsider.tech/2025/12/12/figma-introduces-new-ai-powered-image-editing-suite-to-streamline-design-workflows/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/release-notes/"
-        }
-      ],
-      "format": "documentary",
-      "subcategory": "framework",
-      "hooks": [
-        "AI is Redesigning Image Editing Forever",
-        "Three Tools That Will Transform Your Design Workflow",
-        "Figma's Secret Weapon: Precision AI Editing"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use cinematic B-roll of designers working",
-            "Include split-screen before/after demonstrations",
-            "Incorporate expert testimonial or designer reaction clips"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast blue and white palette, dynamic motion graphics overlaying screen recordings, sleek sans-serif typography with subtle tech-inspired animations, minimalist but energetic composition emphasizing technological progression, incorporate subtle glitch/transformation effects during tool demonstrations"
-      },
-      "exampleOutline": [
-        "Opening: Dramatic AI transformation narrative",
-        "Problem: Current image editing limitations",
-        "Solution: Three revolutionary Figma AI tools",
-        "Technical Deep Dive: Tool capabilities & workflow integration",
-        "Future Implications: Design industry transformation"
-      ],
-      "hashtags": "#FigmaAI #DesignTech #AIDesign #CreativeWorkflow #ImageEditing #DesignInnovation #ProductivityTools #AICreativity #DesignTrends #TechDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/35050392/pexels-photo-35050392.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 12
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/15/wikimedia-foundation-announces-new-ai-partnerships-with-amazon-meta-microsoft-perplexity-and-others/"
         }
       ],
       "format": "livestream",
       "subcategory": "leadership",
       "hooks": [
-        "Figma Buzz: 3 Game-Changing Features You Can't Miss",
-        "Design Faster, Smarter: Figma Buzz Insider Secrets",
-        "Unlock Your Creative Workflow with Figma's Latest Updates"
+        "Wikipedia's AI Bombshell: What Big Tech Doesn't Want You to Know",
+        "AI Giants Just Paid Wikimedia BILLIONS - Here's Why",
+        "Breaking: Wikipedia's Secret AI Deal Changes Everything"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Enable live chat interaction during stream to boost engagement",
-            "Prepare pre-planned audience Q&A segments with potential questions",
-            "Use YouTube Live's multi-camera switching for dynamic presentation"
+            "Schedule live stream with clear countdown graphic",
+            "Enable live chat for real-time audience engagement",
+            "Prepare pre-written pinned comments with key resources/links"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-energy dynamic visual design with electric blue and charcoal gray color palette. Animated transition graphics between feature demonstrations. Clean, modern sans-serif typography with subtle motion tracking. Picture-in-picture style overlays showing real-time interface interactions. Dynamic lower-thirds with animated brand elements."
+        "description": "High-contrast digital aesthetic with tech-futuristic overlay. Deep blue and electric cyan color palette. Dynamic motion graphics showing data flow/connection lines. Sans-serif typography with sharp, clean lines. Picture-in-picture showing live host with animated infographic background. Subtle glitch/digital interference effects to suggest cutting-edge technology."
       },
       "exampleOutline": [
-        "Welcome & High-Energy Introduction",
-        "Current Design Workflow Challenges",
-        "Deep Dive: 3 New Figma Buzz Features",
-        "Live Demonstration & Interactive Walkthrough",
-        "Audience Q&A and Closing Recommendations"
+        "Intro: Dramatic reveal of partnership landscape",
+        "Context: Current AI content licensing challenges",
+        "Deep Dive: Specifics of Wikimedia's strategic moves",
+        "Implications: What this means for AI and open knowledge",
+        "Q&A: Live audience interaction and insights"
       ],
-      "hashtags": "#FigmaBuzz #DesignWorkflow #CreativeTech #ProductivityHacks #UIDesign #DesignTools #CreativeInnovation #DesignCommunity #AIDesign #WorkflowOptimization",
-      "pexelsImageUrl": "https://images.pexels.com/photos/18998445/pexels-photo-18998445.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 6
+      "hashtags": "#WikipediaAI #AIEthics #TechNews #ArtificialIntelligence #OpenSource #DataLicensing #BigTech #AIPartnerships #TechInnovation #MediaFuture",
+      "textureIndex": 0
     },
     {
-      "title": "So Energy by Studio Blackburn",
-      "description": "I’ve said it before and I’ll say it again: it’s all well and good making some striking, retina-toastingly fluoro, brave as hell design work for, say, a kombucha startup or CBD lube or a record sleeve or an art book. These things are by dint of their very existence, context, and audience, already sort of cool. But the real creative\nThe post So Energy by Studio Blackburn appeared first on BP&O - Branding, Packaging and Opinion.",
+      "title": "US senators demand answers from X, Meta, Alphabet and others on sexualized deepfakes",
+      "description": "In a letter to the leaders of X, Meta, Alphabet, Snap, Reddit and TikTok, several U.S. senators are demanding the companies provide proof that they have \"robust protections and policies\" in place, and how they plan to curb the rise of sexualized deepfakes on their platforms.",
       "starred": false,
       "sources": [
         {
-          "name": "BP&O",
-          "url": "https://bpando.org/2026/01/13/so-energy-brand-identity-by-studio-blackburn/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/15/us-senators-demand-answers-from-x-meta-alphabet-on-sexualized-deepfakes/"
         }
       ],
-      "format": "video",
-      "subcategory": "thought-leadership",
+      "format": "documentary",
+      "subcategory": "framework",
       "hooks": [
-        "Design That Makes Energy Companies Look Boring",
-        "When Utility Branding Gets Unexpectedly Awesome",
-        "Breaking Design Rules in Corporate Energy Spaces"
+        "AI Deepfakes: The Dark Side of Tech Platforms",
+        "When Senators vs. Big Tech Collide",
+        "Deepfake Danger: Silicon Valley's Nightmare Exposed"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use dynamic screen recordings showing brand identity evolution",
-            "Include before/after comparisons of energy branding",
-            "Create chapter markers for easy navigation"
+            "Use archival news footage and senate hearing clips",
+            "Create dynamic motion graphics explaining deepfake technology",
+            "Include expert interview-style talking head segments"
           ]
         }
       ],
       "visualDirection": {
-        "rating": 8,
-        "description": "High-energy color palette with electric blues and vibrant yellows, dynamic motion graphics transitioning between design states, bold sans-serif typography with unexpected geometric layouts, kinetic transitions highlighting design transformation, minimal but impactful visual storytelling"
+        "rating": 7,
+        "description": "Dark, investigative documentary aesthetic with high-contrast blue/gray color palette. Overlay technical graphic elements simulating digital surveillance. Use angular typography with subtle glitch effects. Incorporate data visualization transitions. Reference 'The Social Dilemma' and ProPublica documentary visual style."
       },
       "exampleOutline": [
-        "Intro: Why Energy Branding Matters (Hook)",
-        "Traditional Energy Branding Limitations",
-        "Studio Blackburn's Revolutionary Design Approach",
-        "Technical Design Breakdown and Principles",
-        "Future of Corporate Design Transformation"
+        "Cold Open: Shocking Deepfake Scenario",
+        "Senate Investigation Context and Motivations",
+        "Technical Deep Dive: How Deepfakes Work",
+        "Platform Accountability and Ethical Implications",
+        "Call to Action: Viewer Awareness and Protection Strategies"
       ],
-      "hashtags": "#BrandDesign #CorporateIdentity #GraphicDesign #BrandingStrategy #DesignInnovation #EnergyBranding #CreativeDesign #BrandIdentity #DesignThinking #StudioBlackburn",
-      "pexelsImageUrl": "https://images.pexels.com/photos/30066061/pexels-photo-30066061.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 6
+      "hashtags": "#AIEthics #Deepfakes #TechRegulation #DigitalPrivacy #SocialMedia #AITechnology #CyberSecurity #TechPolicy #OnlineSafety #SiliconValley",
+      "textureIndex": 0
+    },
+    {
+      "title": "Parloa triples its valuation in 8 months to $3B with $350M raise",
+      "description": "The massive round was led by existing investor General Catalyst, with participation from other returning backers.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/15/parloa-triples-its-valuation-in-8-months-to-3b-with-350m-raise/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "How Parloa Shocked VCs with a $3B Valuation",
+        "AI Startup's Insane 8-Month Growth Strategy Revealed",
+        "From Zero to $3B: The Parloa Playbook"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dramatic screen recordings of funding announcements",
+            "Include picture-in-picture founder interviews/commentary",
+            "Create dynamic financial graphics with animated value progression"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold tech-startup aesthetic with electric blue and graphite color palette. Dynamic motion graphics showing valuation trajectory. Sharp, geometric typography with high-contrast data visualizations. Incorporate startup-style glitch effects and rapid transitions to emphasize speed of growth."
+      },
+      "exampleOutline": [
+        "Opening: Dramatic reveal of $3B valuation milestone",
+        "Context: AI startup funding landscape in 2026",
+        "Core Content: Parloa's specific growth strategies",
+        "Key Insights: How they attracted General Catalyst",
+        "Closing: Actionable lessons for startup founders"
+      ],
+      "hashtags": "#AIStartup #VentureCapital #TechFunding #StartupsToWatch #AIInnovation #GeneralCatalyst #ScaleUpStrategy #TechGrowth #StartupSuccess #InvestmentTrends",
+      "textureIndex": 12
+    },
+    {
+      "title": "How to show up in any room with a low heart rate: Silicon Valley’s missing etiquette playbook | Sam Lessin",
+      "description": "How to build trust, lower your heart rate, and win in business by understanding proper etiquette",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/silicon-valleys-missing-etiquette-playbook"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "Master Business Etiquette in 5 Heartbeat-Lowering Steps",
+        "Silicon Valley's Secret Trust-Building Playbook",
+        "Calm Confidence: Etiquette Hacks for Professionals"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use picture-in-picture for emotional/physiological state demonstrations",
+            "Create clear chapter markers for each step of etiquette tutorial",
+            "Include B-roll of professional interactions to illustrate techniques"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, clean design with dynamic motion graphics. Cool blue and grey color palette with sharp typography. Animated heart rate monitor graphic as recurring visual motif. Minimal corporate aesthetic with unexpected visual transitions. Infographic-style step breakdowns with smooth animation revealing each technique."
+      },
+      "exampleOutline": [
+        "Section 1: Why Etiquette Matters (Hook & Context)",
+        "Section 2: Understanding Physiological Responses in Professional Settings",
+        "Section 3: 5-Step Etiquette Method for Lowering Heart Rate",
+        "Section 4: Practical Techniques for Building Trust",
+        "Section 5: Call-to-Action and Personal Implementation Strategy"
+      ],
+      "hashtags": "#BusinessEtiquette #ProfessionalDevelopment #SiliconValley #CareerTips #EmotionalIntelligence #NetworkingHacks #LeadershipSkills #CommunicationTips #ProfessionalConfidence #CareerGrowth",
+      "textureIndex": 5
     }
   ]
 }
