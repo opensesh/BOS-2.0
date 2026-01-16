@@ -1,249 +1,211 @@
 {
   "type": "long-form",
-  "date": "2026-01-16T16:20:15.251Z",
+  "date": "2026-01-16T16:29:56.182Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "The rise of &#8216;micro&#8217; apps: non-developers are writing apps instead of buying them",
+      "description": "A new era of app creation is here. It's fun, it's fast, and it's fleeting.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        }
-      ],
-      "format": "livestream",
-      "subcategory": "leadership",
-      "hooks": [
-        "Design Templates That Marketing Will Actually Use",
-        "Crack the Code: Flexible Brand Templates in Figma",
-        "Make Your Brand Templates Bulletproof & Scalable"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Enable live chat for real-time audience interaction",
-            "Pre-promote live stream with teaser graphics",
-            "Prepare screen-share setup with dual monitor view"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-energy digital design aesthetic with dynamic motion graphics, sharp-edged geometric overlays, electric blue and charcoal color palette, kinetic typography emphasizing template flexibility, live stream picture-in-picture with designer's reactive expressions"
-      },
-      "exampleOutline": [
-        "Live Stream Opening: High-energy personal introduction",
-        "Design Problem: Template Rigidity vs. Flexibility Challenge",
-        "8 Strategic Template Design Tips with Live Demonstrations",
-        "Real-World Case Studies & Quick Walkthrough",
-        "Q&A Session with Audience Template Questions"
-      ],
-      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystem #CreativeWorkflow #ProductivityHacks #DesignTips #AIDesign #CreativeCommunity #TemplateDesign #MarketingDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/10874538/pexels-photo-10874538.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
-    },
-    {
-      "title": "Meet us in the browser",
-      "description": "As we celebrate five years of Figma, Dylan reflects on the journey and its surprises, and the power of the browser to make design accessible to all.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/meet-us-in-the-browser/"
-        },
-        {
-          "name": "Hacker News",
-          "url": "https://justthebrowser.com/"
-        },
-        {
-          "name": "Browsercompany",
-          "url": "https://browsercompany.substack.com/p/letter-to-arc-members-2025"
-        },
-        {
-          "name": "Mjtsai",
-          "url": "https://mjtsai.com/blog/2025/05/30/arc-and-dia/"
-        },
-        {
-          "name": "Rsrch",
-          "url": "https://rsrch.space"
-        },
-        {
-          "name": "Vinventures",
-          "url": "https://www.vinventures.net/post/figma-a-decade-of-revolution-leading-to-tech-s-biggest-design-ipo"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/16/the-rise-of-micro-apps-non-developers-are-writing-apps-instead-of-buying-them/"
         }
       ],
       "format": "documentary",
       "subcategory": "framework",
       "hooks": [
-        "How a browser changed design forever",
-        "The untold story of Figma's revolution",
-        "Browser-first: Rewriting design's impossible rules"
+        "Apps without code: The new digital revolution",
+        "Coding skills? Not required anymore.",
+        "Micro-apps: Democratizing software creation"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use dynamic archival footage of early web/design moments",
-            "Incorporate split-screen interviews with design pioneers",
-            "Create kinetic typography transitions between narrative segments"
+            "Use cinematic B-roll of diverse people creating apps",
+            "Include dynamic screen recordings of micro-app creation tools",
+            "Layer interview-style expert commentary throughout documentary"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast, tech-futurist aesthetic with deep blues and electric accent colors. Dynamic motion graphics showing app creation process. Clean, sans-serif typography with technical overlay elements. Incorporate split-screen and fluid transitions mimicking code/app generation. Reference Apple's product launch videos and WIRED documentary style."
+      },
+      "exampleOutline": [
+        "Opening Sequence: Dramatic reveal of non-developers creating apps",
+        "Historical Context: Traditional software development barriers",
+        "Core Content: Emerging micro-app creation platforms and tools",
+        "Future Implications: How this transforms technology creation",
+        "Call-to-Action: Empowering viewers to start their own micro-app journey"
+      ],
+      "hashtags": "#AIApps #NoCodeRevolution #TechDemocratization #MicroApps #FutureOfSoftware #TechInnovation #AICreation #SoftwareTrends #ProductivityHacks #TechEducation",
+      "textureIndex": 9
+    },
+    {
+      "title": "Listen Labs raises $69M after viral billboard hiring stunt to scale AI customer interviews",
+      "description": "Alfred Wahlforss was running out of options. His startup, Listen Labs, needed to hire over 100 engineers, but competing against Mark Zuckerberg&#x27;s $100 million offers seemed impossible. So he spent $5,000 — a fifth of his marketing budget — on a billboard in San Francisco displaying what looked like gibberish: five strings of random numbers.The numbers were actually AI tokens. Decoded, they led to a coding challenge: build an algorithm to act as a digital bouncer at Berghain, the Berlin nigh",
+      "starred": false,
+      "sources": [
+        {
+          "name": "VentureBeat AI",
+          "url": "https://venturebeat.com/technology/listen-labs-raises-usd69m-after-viral-billboard-hiring-stunt-to-scale-ai"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "How a $5k Billboard Hack Landed $69M in Funding",
+        "Viral Recruiting Stunt: AI's Wildest Hiring Trick",
+        "Cracking the Code: Startup's Genius Talent Grab"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use live chat to engage audience during decoding segments",
+            "Enable real-time Q&A interaction about startup recruitment strategies",
+            "Create interactive poll during stream about innovative hiring techniques"
           ]
         }
       ],
       "visualDirection": {
         "rating": 8,
-        "description": "High-contrast color palette mixing digital teals and warm grays. Layered compositions with translucent browser window overlays. Dynamic motion graphics simulating browser interactions. Typography feels technical yet fluid - sans-serif with subtle animation. Aesthetic references: Apple design documentaries, Vox explainer videos, Figma's own design language"
+        "description": "High-contrast cyberpunk-inspired design with glitchy numeric overlays, dark background with electric blue/green accent colors, dynamic typography that mimics binary/code aesthetic, motion graphics simulating data decryption, split-screen visualizations showing billboard and decoded message"
       },
       "exampleOutline": [
-        "Cold Open: Dramatic browser evolution montage",
-        "Origin Story: Web's democratization challenge",
-        "Figma's Browser-Native Philosophy Explained",
-        "Design Transformation Case Studies",
-        "Future Vision and Community Call-to-Action"
+        "Introduction: Viral Billboard Story Reveal",
+        "Decoding the Recruitment Strategy",
+        "Technical Breakdown of AI Hiring Hack",
+        "Lessons for Startups & Tech Recruiters",
+        "Live Q&A and Audience Interaction"
       ],
-      "hashtags": "#FigmaStory #DesignRevolution #WebDesign #ProductDesign #AICreativity #TechDocumentary #DesignTech #InnovationStory #CreativeCommunity #BrowserDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/30820142/pexels-photo-30820142.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
+      "hashtags": "#AIRecruitment #StartupHacks #VentureCapital #TechInnovation #HiringStrategy #AIStartups #FundingHack #TechRecruitment #InnovativeTech #StartupFunding",
+      "textureIndex": 3
     },
     {
-      "title": "The Huntington by Base Design",
-      "description": "There’s a particular kind of challenge that crops up again and again in cultural branding – not obscurity exactly, but partial recognition. The sort where an institution is famous for one thing, quietly exceptional at several others, and yet rarely understood as a coherent whole.  The Huntington, a century-old cultural and research institution in Southern California, sits squarely in that\nThe post The Huntington by Base Design appeared first on BP&O - Branding, Packaging and Opinion.",
+      "title": "A Brutalist Reinterpretation of Digital Excellence: The New Awwwards Trophies",
+      "description": "The new Awwwards trophies translate the values of contemporary digital design into a physical object through material honesty, structural clarity and a...",
       "starred": false,
       "sources": [
         {
-          "name": "BP&O",
-          "url": "https://bpando.org/2026/01/15/the-huntington-museum-branding-by-base-design/"
+          "name": "Awwwards",
+          "url": "https://www.awwwards.com/a-brutalist-reinterpretation-of-digital-excellence-the-new-awwwards-trophies.html"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "Design's Raw Heartbeat: Beyond the Digital Trophy",
+        "When Pixels Become Physical: Awwwards Reimagined",
+        "Brutalism Meets Digital Excellence: A Trophy Revolution"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dynamic B-roll of design studios and trophy fabrication",
+            "Include expert interview snippets with motion graphics overlay",
+            "Create chapter markers highlighting design philosophy transitions"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "High-contrast monochromatic palette with industrial textures, raw concrete-inspired backgrounds. Sharp, angular typography mimicking brutalist architectural principles. Minimal motion graphics with hard-edged transitions. Reference visual language of Herzog & de Meuron architectural documentation with a digital design twist."
+      },
+      "exampleOutline": [
+        "Opening: Dramatic reveal of trophy design concept",
+        "Context: Digital design awards' historical evolution",
+        "Core Content: Brutalist design philosophy breakdown",
+        "Design Process: Material selection and fabrication insights",
+        "Closing: Future of design recognition and physical representation"
+      ],
+      "hashtags": "#DesignAwards #Brutalism #DigitalDesign #Awwwards #CreativeInnovation #TrophyDesign #DesignPhilosophy #CreativeCommunity #DesignTrends #ArtAndTechnology",
+      "textureIndex": 2
+    },
+    {
+      "title": "Anthropic taps former Microsoft India MD to lead Bengaluru expansion",
+      "description": "Irina Ghose joins Anthropic as India managing director after 24 years at Microsoft.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/15/anthropic-taps-former-microsoft-india-md-to-lead-bengaluru-expansion/"
         }
       ],
       "format": "video",
       "subcategory": "thought-leadership",
       "hooks": [
-        "How Cultural Brands Transform Identity Through Design",
-        "Branding Secrets of Elite Cultural Institutions Revealed",
-        "Design That Tells Complex Stories Invisibly"
+        "AI Giant's Secret Weapon: Microsoft Veteran Takes Charge",
+        "Inside Anthropic's Bold India Expansion Strategy",
+        "How One Leader Could Redefine AI's Future"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use picture-in-picture for visual case study breakdown",
-            "Include chapter markers for easy navigation",
-            "Create dynamic screen recordings of design process"
+            "Use dynamic B-roll of tech offices and leadership interviews",
+            "Create chapter markers highlighting key career moments and strategy insights",
+            "Include picture-in-picture graphics showing Irina Ghose's career trajectory"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, experimental typography with layered visual storytelling. High-contrast color palette featuring institutional navy and modern accent colors. Dynamic motion graphics revealing design layers. Clean, information-dense screen recordings with artistic transitions. Aesthetic references: Base Design's minimalist approach, cultural institution branding trends"
+        "description": "Bold, tech-forward visual style with deep blue and electric orange accent colors. Futuristic motion graphics showing career network connections. Clean sans-serif typography with dynamic transitions. Incorporate subtle AI/network visualization elements. Use modern, asymmetric composition with data-inspired background textures."
       },
       "exampleOutline": [
-        "Section 1: Provocative Design Challenge Opening (5s)",
-        "Section 2: The Huntington's Complex Branding Context (2min)",
-        "Section 3: Base Design's Strategic Approach (3-4min)",
-        "Section 4: Key Design Transformation Insights (2min)",
-        "Section 5: Future of Cultural Branding CTA (30s)"
+        "Opening: Dramatic career transition reveal",
+        "Microsoft Legacy: 24-Year Tech Journey",
+        "Anthropic's Strategic India Expansion Vision",
+        "Leadership Impact: What Ghose Brings to AI",
+        "Future of Tech: Closing Call to Action"
       ],
-      "hashtags": "#BrandDesign #CulturalBranding #DesignStrategy #InstitutionalDesign #BaseDesign #CreativeBranding #VisualIdentity #DesignThinking #BrandEvolution #CreativeDirection",
-      "pexelsImageUrl": "https://images.pexels.com/photos/13926191/pexels-photo-13926191.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 10
+      "hashtags": "#Anthropic #AILeadership #TechIndia #MicrosoftAlumni #AIExpansion #TechStrategy #IndiaTech #AIInnovation #StartupGrowth #GlobalTech",
+      "textureIndex": 11
     },
     {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
+      "title": "Silicon Valley&#8217;s messiest breakup is definitely headed to court",
+      "description": "OpenAI and Microsoft tried to dodge a courtroom showdown with Elon Musk, but a federal judge on Thursday rejected their requests to dismiss the case.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/15/silicon-valleys-messiest-breakout-is-definitely-headed-to-court/"
         }
       ],
       "format": "tutorial",
       "subcategory": "instructional",
       "hooks": [
-        "Figma's Secret Weapon: 3 AI Image Editing Tricks",
-        "Transform Your Design Workflow in 3 Clicks",
-        "Precision Editing Just Got Insanely Easier"
+        "How AI Giants Battle in Court: Insider Tutorial",
+        "Decode the OpenAI vs Elon Musk Legal Drama",
+        "Silicon Valley's Courtroom Secrets: Step-by-Step Guide"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use screen recording with high-quality cursor tracking",
-            "Include picture-in-picture of presenter for personal connection",
-            "Add chapter markers for easy navigation of tutorial steps"
+            "Use screen recordings of legal documents/timelines",
+            "Include dynamic annotations explaining complex legal terms",
+            "Create chapter markers for each legal stage"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, dynamic visual style with high-contrast Figma-inspired color palette. Clean, modern motion graphics highlighting each editing step. Sharp, geometric typography with subtle depth. Animated UI transitions that showcase precision and speed. Reference aesthetic: Figma's design system meets cutting-edge tech visualization"
+        "description": "High-contrast tech-legal aesthetic. Dark mode color palette with electric blue accents. Futuristic typography with legal document overlay graphics. Animated legal document transitions. Silicon Valley tech-meets-courtroom visual metaphor."
       },
       "exampleOutline": [
-        "Section 1: Dramatic Hook - Future of Design Editing",
-        "Section 2: Current Design Editing Pain Points",
-        "Section 3: Detailed Tool Walkthrough (3 AI Tools)",
-        "Section 4: Pro Tips and Workflow Integration",
-        "Section 5: Call-to-Action and Future Possibilities"
+        "Introduction: The AI Breakup Heard Around Tech World",
+        "Context: OpenAI, Microsoft, and Elon Musk's Conflict Origins",
+        "Step-by-Step: Legal Strategies and Court Dynamics",
+        "Key Insights: Potential Outcomes and Industry Implications",
+        "Conclusion: What This Means for AI's Future"
       ],
-      "hashtags": "#Figma #AIDesign #CreativeTools #DesignTips #ProductivityHack #UIDesign #CreativeTech #DesignWorkflow #AICreativity #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/29708295/pexels-photo-29708295.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "hashtags": "#OpenAI #ElonMusk #AILawsuit #TechLegal #SiliconValley #AIEthics #CourtCase #TechInnovation #LegalTech #AIStartups",
       "textureIndex": 3
-    },
-    {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
-        }
-      ],
-      "format": "tutorial",
-      "subcategory": "instructional",
-      "hooks": [
-        "Design Your Dream Brand Identity in 5 Steps",
-        "Crack the Code of Professional Visual Branding",
-        "Transform Concepts into Killer Brand Systems"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use chapter markers to break down each design step",
-            "Include screen recordings showing actual design process",
-            "Add picture-in-picture of designer explaining key techniques"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, dynamic visual identity tutorial aesthetic. High-contrast color palette with deep blues and electric accent colors. Clean, modern typography with geometric sans-serif. Animated design system visualizations. Motion graphics showing brand element transformations. Grid-based compositions highlighting systematic design thinking."
-      },
-      "exampleOutline": [
-        "Introduction: Why Visual Identity Matters",
-        "Step 1: Understand Brand Essence & Core Values",
-        "Step 2: Research & Competitive Landscape Analysis",
-        "Step 3: Core Visual Language Development",
-        "Step 4: Scalable System Creation",
-        "Conclusion: Implementing Your Brand Identity"
-      ],
-      "hashtags": "#BrandDesign #VisualIdentity #DesignSystem #CreativeTutorial #BrandStrategy #GraphicDesign #DesignProcess #CreativeTips #BrandingHacks #DesignWorkflow",
-      "pexelsImageUrl": "https://images.pexels.com/photos/29450016/pexels-photo-29450016.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 2
     }
   ]
 }

@@ -1,368 +1,331 @@
 {
   "type": "short-form",
-  "date": "2026-01-16T16:20:15.251Z",
+  "date": "2026-01-16T16:29:12.641Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Chinese EVs inch closer to the US as Canada slashes tariffs",
+      "description": "The country is dropping its import tax from 100% to just 6.1%, with an initial annual cap of 49,000 cars.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/16/chinese-evs-inch-closer-to-the-us-as-canada-slashes-tariffs/"
         }
       ],
       "format": "carousel",
       "subcategory": "carousel",
       "hooks": [
-        "Figma Templates: Design Once, Scale Infinitely 🚀",
-        "Break Brand Rules (Without Breaking Brand)",
-        "Master Self-Serve Design Templates in 8 Steps"
+        "Chinese EVs Are Coming to North America 🚗🌍",
+        "Canada's Bold Move: EV Market Transformation",
+        "Tariff Tsunami: How Chinese Cars Are Breaking Barriers"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use dynamic transitions between template slides",
-            "Create quick visual demos of template flexibility",
-            "Include rapid text animations to maintain engagement"
+            "Use dynamic map animations showing EV trade routes",
+            "Include quick comparison graphics of tariff changes",
+            "Create fast-paced transitions between key stats"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "Each slide should be a standalone visual concept",
-            "Use consistent color palette across slides",
-            "Include clear numerical progression (1/8, 2/8, etc.)"
+            "Design each slide with minimal, high-contrast infographics",
+            "Use consistent color scheme representing EV industry (blues/greens)",
+            "Ensure each slide tells a micro-story within the larger narrative"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Condense carousel into rapid-fire template insights",
-            "Add voiceover explaining template strategy",
-            "Use screen recordings of Figma interactions"
+            "Extract most compelling carousel slide as Short's core content",
+            "Add voiceover explaining key economic implications",
+            "Use text overlays to highlight critical numbers"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Add professional context about template design strategy",
-            "Include data/statistics about template efficiency",
-            "Emphasize enterprise-level design considerations"
+            "Add more detailed economic analysis context",
+            "Include expert quote or industry perspective",
+            "Use more professional, data-driven visual language"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, tech-inspired aesthetic with futuristic gradient overlays. Geometric typography with sharp angles. Minimal color palette (deep blue, electric cyan, white). Incorporate subtle motion graphics simulating design grid/template structure. Use abstract design system elements as background textures."
+        "description": "Bold, tech-forward design with electric blue and gradient green color palette. Geometric infographic style with clean, angular typography. Incorporate subtle electric/circuit-like motion graphics. Minimalist yet dynamic visual language that feels innovative and forward-looking."
       },
       "exampleOutline": [
-        "Slide 1: Bold Hook & Visual Teaser",
-        "Slide 2: The Template Design Challenge",
-        "Slides 3-6: 4 Core Design Principles",
-        "Slide 7: Key Breakthrough Insight",
-        "Slide 8: Call-to-Action & Next Steps"
+        "Slide 1: Provocative Hook & Title",
+        "Slide 2: Current Tariff Landscape Graphic",
+        "Slide 3: Canada's New Policy Breakdown",
+        "Slide 4: Potential Market Impact Visualization",
+        "Slide 5: Call-to-Action & Future Implications"
       ],
-      "hashtags": "#FigmaDesign #AICreativity #DesignTemplates #ProductivityHacks #CreativeTools #DesignSystem #BrandIdentity #AIDesign #TemplateDesign #CreativeTips",
-      "pexelsImageUrl": "https://images.pexels.com/photos/6985001/pexels-photo-6985001.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 9
+      "hashtags": "#EVRevolution #ChineseCars #AutoIndustry #InternationalTrade #ElectricVehicles #TechInnovation #GlobalMarkets #AutoTech #FutureOfTransport #EconomicShift",
+      "textureIndex": 3
     },
     {
-      "title": "Meet us in the browser",
-      "description": "As we celebrate five years of Figma, Dylan reflects on the journey and its surprises, and the power of the browser to make design accessible to all.",
+      "title": "YouTube relaxes monetization guidelines for some controversial topics",
+      "description": "These controversial topics include self-harm, abortion, suicide, and domestic and sexual abuse.",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/meet-us-in-the-browser/"
-        },
-        {
-          "name": "Hacker News",
-          "url": "https://justthebrowser.com/"
-        },
-        {
-          "name": "Browsercompany",
-          "url": "https://browsercompany.substack.com/p/letter-to-arc-members-2025"
-        },
-        {
-          "name": "Mjtsai",
-          "url": "https://mjtsai.com/blog/2025/05/30/arc-and-dia/"
-        },
-        {
-          "name": "Rsrch",
-          "url": "https://rsrch.space"
-        },
-        {
-          "name": "Vinventures",
-          "url": "https://www.vinventures.net/post/figma-a-decade-of-revolution-leading-to-tech-s-biggest-design-ipo"
-        }
-      ],
-      "format": "quick-image",
-      "subcategory": "quick-image",
-      "hooks": [
-        "Design's Future: Browsers Are Changing Everything",
-        "Why The Browser Is Your New Design Studio",
-        "Figma's Secret: Making Design Democratically Awesome"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick screen capture transitions showing browser evolution",
-            "Add playful text overlays highlighting key design shifts",
-            "Include fast-paced motion graphics revealing browser interfaces"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Bold statement about browser design potential",
-            "Use clean, minimalist graphic design for each slide",
-            "Progressive reveal of design tool transformations across slides"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Open with unexpected browser interface comparison",
-            "Use dynamic screen recordings demonstrating design workflow",
-            "Include rapid-fire text animations highlighting key insights"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame as professional design technology evolution",
-            "Use more technical, research-backed visual language",
-            "Include subtle data visualization elements"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast cyberpunk-inspired color palette, glitch-style typography, dynamic browser interface overlays, abstract geometric transitions showing design tool evolution, neon accent colors against dark mode background"
-      },
-      "exampleOutline": [
-        "Bold Statement: Browser = Design Revolution",
-        "Problem: Traditional Design Tools Are Limiting",
-        "Solution: Browser-Native Design Platforms",
-        "Key Insight: Accessibility Drives Innovation",
-        "Call-to-Action: Explore New Design Frontiers"
-      ],
-      "hashtags": "#DesignTech #BrowserDesign #FigmaRevolution #AIDesign #CreativeTech #DesignInnovation #ProductDesign #TechTrends #DigitalCreativity #WebDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/23496922/pexels-photo-23496922.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 6
-    },
-    {
-      "title": "The Huntington by Base Design",
-      "description": "There’s a particular kind of challenge that crops up again and again in cultural branding – not obscurity exactly, but partial recognition. The sort where an institution is famous for one thing, quietly exceptional at several others, and yet rarely understood as a coherent whole.  The Huntington, a century-old cultural and research institution in Southern California, sits squarely in that\nThe post The Huntington by Base Design appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2026/01/15/the-huntington-museum-branding-by-base-design/"
-        }
-      ],
-      "format": "quick-image",
-      "subcategory": "quick-image",
-      "hooks": [
-        "Cultural Branding: When Institutions Need a Radical Makeover",
-        "Design That Tells a Hidden Institutional Story",
-        "Beyond the Obvious: Rebranding Complex Legacies"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use fast-paced visual transitions highlighting brand transformation",
-            "Include before/after design comparison in first 3 seconds",
-            "Add dynamic text overlays revealing design process insights"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Provocative visual contrast of old/new branding",
-            "Use sequential storytelling across 5-6 design evolution slides",
-            "Final slide: Key design philosophy or transformation lesson"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Open with unexpected visual disruption of traditional branding",
-            "Use rapid-fire design explanation with motion graphics",
-            "Include designer interview snippet for credibility"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame as strategic design case study",
-            "Include quantitative impact of rebranding",
-            "Emphasize institutional storytelling through design"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 8,
-        "description": "High-contrast color palette, experimental typography, dynamic geometric overlays. Mix of archival imagery and modern graphic design. Purposeful visual disruption highlighting institutional transformation. Incorporate subtle motion and layered graphic elements."
-      },
-      "exampleOutline": [
-        "Hook: Provocative visual/statement about institutional branding",
-        "Context: The Huntington's complex cultural positioning",
-        "Design Challenge: Communicating multifaceted institutional identity",
-        "Design Solution: Base Design's strategic approach",
-        "Key Takeaway: Branding as narrative reconstruction"
-      ],
-      "hashtags": "#CulturalBranding #DesignStrategy #InstitutionalDesign #BrandEvolution #CreativeBranding #VisualIdentity #MuseumDesign #BaseDesign #BrandTransformation #CreativeDirection",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3634860/pexels-photo-3634860.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 10
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/16/youtube-relaxes-monetization-guidelines-for-some-controversial-topics/"
         }
       ],
       "format": "story",
       "subcategory": "story",
       "hooks": [
-        "AI editing magic: Figma's new precision tools revealed",
-        "Design faster, edit smarter with Figma's latest tools",
-        "Transform your workflow: 3 game-changing Figma updates"
+        "YouTube's Shocking New Creator Monetization Rules 🔥",
+        "Controversial Topics Now Eligible for Ad Revenue?",
+        "Breaking: YouTube's Content Monetization Shift Revealed"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick jump cuts to showcase each tool's functionality",
-            "Include screen recording with dynamic cursor movements",
-            "Add subtle sound effects to highlight editing moments"
+            "Use quick text overlays to highlight key policy changes",
+            "Include rapid-fire visual transitions to maintain engagement",
+            "Add dramatic sound effect for policy reveal moment"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Dramatic before/after comparison",
-            "Use numbered slides to break down each tool",
-            "Include text overlay explaining key features concisely"
+            "First slide must have provocative headline graphic",
+            "Use infographic-style slides to break down complex policy",
+            "Final slide includes call-to-action for creators"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with unexpected visual transformation",
-            "Use professional voiceover explaining tool benefits",
-            "Include rapid technical demonstration clips"
+            "Start with unexpected statistic or quote",
+            "Use screen recordings of actual YouTube policy page",
+            "Include creator reaction clips for emotional connection"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Frame tools as professional productivity enhancers",
-            "Include data-driven performance improvement statistics",
-            "Use more technical, workflow-oriented language"
+            "Frame as professional development opportunity for content creators",
+            "Include expert commentary on policy implications",
+            "Use data-driven approach to explain monetization changes"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast tech-inspired aesthetic with electric blue and charcoal gray palette. Dynamic motion graphics showing tool transformations. Sharp, geometric typography with futuristic edges. Animated UI elements demonstrating precision and fluidity. Minimalist composition with technical elegance, emphasizing clean interface interactions."
+        "description": "High-contrast color palette with electric blue and deep charcoal. Geometric typography with sharp-edged sans-serif. Dynamic motion graphics showing policy shifts as animated data flows. Integrate glitch-style visual interruptions to emphasize 'controversial' theme. Minimalist but impactful design language."
       },
       "exampleOutline": [
-        "Section 1: Provocative hook showcasing design challenge",
-        "Section 2: Current editing pain points in design",
-        "Section 3: Detailed walkthrough of three new tools",
-        "Section 4: Workflow acceleration insights",
-        "Section 5: Call-to-action: Try new Figma features"
+        "Section 1: Provocative Hook & Initial Shock",
+        "Section 2: YouTube's Previous Restrictive Policies",
+        "Section 3: Detailed Policy Changes by Topic",
+        "Section 4: Potential Impact for Creators",
+        "Section 5: Call-to-Action & Further Research"
       ],
-      "hashtags": "#FigmaAI #DesignTools #CreativeTech #AIDesign #ProductivityHack #UXDesign #CreativeWorkflow #DesignInnovation #TechUpdate #AdobeAlternative",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9436715/pexels-photo-9436715.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 3
+      "hashtags": "#YouTubeCreators #ContentMonetization #MediaPolicy #CreatorEconomy #AIContent #DigitalMedia #ContentCreation #SocialMediaTrends #YouTubeUpdates #MediaInnovation",
+      "textureIndex": 10
     },
     {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
+      "title": "Bluesky rolls out cashtags and LIVE badges amid a boost in app installs",
+      "description": "Bluesky adds new features to its app amid a boost in installs due to the deepfake drama on X.",
       "starred": false,
       "sources": [
         {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/16/bluesky-rolls-out-cashtags-and-live-badges-amid-a-boost-in-app-installs/"
         }
       ],
       "format": "reel",
       "subcategory": "reel",
       "hooks": [
-        "Design Jobs That Actually Change the Creative Industry",
-        "Want a Design Career That Breaks All Rules?",
-        "Inside Moniker's Secret Playbook for Design Talent"
+        "Bluesky's wild new features are changing social media!",
+        "X's loss is Bluesky's massive gain 👀",
+        "Social media drama just got a tech upgrade"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use dynamic screen recordings showing design portfolio",
-            "Overlay text highlighting unique job requirements",
-            "Include quick cuts between design examples"
+            "Use dynamic text overlays to highlight key features",
+            "Create quick visual transitions between feature explanations",
+            "Include a subtle screen recording of Bluesky app"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Provocative job title graphic",
-            "Use progressive reveal of job details",
-            "Final slide: Clear call-to-action with application link"
+            "First slide: Provocative comparison between X and Bluesky",
+            "Use infographic-style slides with clean, bold typography",
+            "Final slide: Clear call-to-action to download Bluesky"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with unexpected visual design montage",
-            "Use professional voiceover explaining role nuances",
-            "End with direct recruitment message"
+            "Start with a pattern interrupt visual",
+            "Use quick-cut editing style",
+            "Include screen capture moments to show actual features"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "More detailed professional language",
-            "Highlight career growth potential",
-            "Include specific skill requirements"
+            "Add more technical context about feature implementation",
+            "Use a more professional tone and design",
+            "Include potential business implications of new features"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy tech aesthetic with neon-adjacent color palette. Dynamic motion graphics with quick transitions. Bold, sans-serif typography with slight glitch effects. Futuristic UI overlay elements. Color scheme: deep blues, electric teals, with sharp white accents. Incorporate subtle tech-inspired animation and parallax effects."
+      },
+      "exampleOutline": [
+        "Hook: Explosive visual/text introducing Bluesky drama",
+        "Context: X's current challenges and user exodus",
+        "Feature Breakdown: Cashtags and LIVE badges explained",
+        "Impact: Why these features matter for users",
+        "Call-to-Action: Download and explore Bluesky"
+      ],
+      "hashtags": "#Bluesky #SocialMediaTech #TechInnovation #AppUpdate #SocialMediaTrends #DigitalTransformation #TechNews #AITech #StartupInnovation #SocialMediaMarketing",
+      "textureIndex": 7
+    },
+    {
+      "title": "Italy investigates Activision Blizzard for pushing in-game purchases",
+      "description": "Italy has launched two investigations into Microsoft's Activision Blizzard, alleging the company has engaged in \"misleading and aggressive\" sales practices for two of its most popular smartphone games.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/16/italy-investigates-activision-blizzard-for-pushing-in-game-purchases/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "Activision Blizzard's Wallet-Grabbing Games Under Fire 💥",
+        "Italy Drops the Hammer on Mobile Game Tactics 🚨",
+        "Game Over: Aggressive In-App Purchases Exposed 🎮"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use split-screen visual comparing game prices vs. investigation",
+            "Create quick animated graphic showing money flow",
+            "Use dramatic zoom on key investigation details"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Shocking statistic about in-game purchases",
+            "Use infographic-style slides breaking down investigation details",
+            "Final slide: Call to action for consumer awareness"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with provocative question about game pricing",
+            "Use quick-cut editing to maintain energy",
+            "Include bold text overlays highlighting key points"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as serious business ethics discussion",
+            "Use more formal, data-driven visual approach",
+            "Include expert commentary or legal perspective"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast color palette (red/black/white), bold geometric typography, dynamic diagonal compositions, glitch-style overlay effects, minimalist iconography representing gaming and legal elements, sharp-edged graphic elements suggesting investigation and digital conflict"
+      },
+      "exampleOutline": [
+        "Hook: Provocative opening statement about game purchases",
+        "Context: Brief explanation of Activision Blizzard investigation",
+        "Core Content: Key details of Italian regulatory action",
+        "Insight: Implications for mobile gaming industry",
+        "CTA: Encourage awareness of in-app purchase practices"
+      ],
+      "hashtags": "#GameIndustry #ConsumerRights #MobileTech #GamePricing #TechRegulation #Microsoft #ActivisionBlizzard #GameLaw #ConsumerProtection #TechEthics",
+      "textureIndex": 7
+    },
+    {
+      "title": "The rise of &#8216;micro&#8217; apps: non-developers are writing apps instead of buying them",
+      "description": "A new era of app creation is here. It's fun, it's fast, and it's fleeting.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/16/the-rise-of-micro-apps-non-developers-are-writing-apps-instead-of-buying-them/"
+        }
+      ],
+      "format": "reel",
+      "subcategory": "reel",
+      "hooks": [
+        "Anyone can build apps now - no coding required!",
+        "The DIY app revolution is here 🚀",
+        "Coding skills? Optional. App creation? Mandatory."
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick jump cuts to maintain energy",
+            "Highlight screen recordings of app creation process",
+            "Include text overlays explaining key steps"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must visually shock/surprise viewer",
+            "Use progressive reveal of app creation steps",
+            "Include before/after comparisons of app building"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected visual metaphor",
+            "Use dynamic screen transitions",
+            "Include numerical stats about app creation trend"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as professional skill development",
+            "Include expert quote or industry insight",
+            "Show potential career/entrepreneurship opportunities"
           ]
         }
       ],
       "visualDirection": {
         "rating": 8,
-        "description": "High-contrast San Francisco tech aesthetic, bold sans-serif typography, dynamic motion graphics, metallic/electric blue accent colors, clean yet experimental composition with unexpected design transitions"
+        "description": "High-contrast cyberpunk-inspired color palette. Glitch/digital artifact transitions. Futuristic sans-serif typography. Dynamic motion graphics showing app creation as fluid, playful process. Blend of digital illustration and real screen recordings."
       },
       "exampleOutline": [
-        "Hook: Provocative design career statement",
-        "Problem: Traditional design roles are limiting",
-        "Solution: Moniker's unique design approach",
-        "Insight: What makes this role revolutionary",
-        "Call-to-Action: Application details"
+        "Hook: Explosive visual showing app being 'built'",
+        "Problem: Traditional app development is complex",
+        "Solution: No-code/micro-app creation platforms",
+        "Demonstration: Quick screen recording of app building",
+        "Call-to-Action: Try a no-code platform today"
       ],
-      "hashtags": "#DesignJobs #CreativeCareer #SanFranciscoDesign #AIDesign #BrandIdentity #DesignInnovation #TechDesign #CreativeTalent #JobOpportunity #DesignStrategy",
-      "pexelsImageUrl": "https://images.pexels.com/photos/430207/pexels-photo-430207.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 6
+      "hashtags": "#NoCode #AIApps #TechTrends #AppDevelopment #Innovation #StartupLife #TechTools #DigitalTransformation #ProductivityHacks #FutureOfWork",
+      "textureIndex": 2
     }
   ]
 }
