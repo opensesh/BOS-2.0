@@ -1,380 +1,331 @@
 {
   "type": "short-form",
-  "date": "2026-01-17T16:17:25.959Z",
+  "date": "2026-01-17T16:23:43.547Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Oshen built the first ocean robot to collect data in a Category 5 hurricane",
+      "description": "Oshen has signed contracts with multiple government agencies for its C-Star robots to collect ocean data autonomously.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/17/oshen-built-the-first-ocean-robot-to-collect-data-in-a-category-5-hurricane/"
         }
       ],
       "format": "quick-image",
       "subcategory": "quick-image",
       "hooks": [
-        "Design Templates That Won't Break Your Brand's Spine 💥",
-        "Figma Guardrails: Brand Flexibility Without the Chaos 🏎️",
-        "8 Secrets to Bulletproof Design Templates 🔒"
+        "Ocean Robots: Surviving Hurricanes While Humans Hide 🌪️",
+        "Category 5 Hurricane? These Robots Say: Challenge Accepted 🤖",
+        "Data Collection Where No Human Dares to Go 🌊"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use fast-paced jump cuts between template examples",
-            "Include on-screen text highlighting each key tip",
-            "Create visual metaphors for template flexibility"
+            "Use dramatic hurricane footage as background",
+            "Overlay robot animation with data points",
+            "Include quick text transitions showing hurricane intensity"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Provocative visual metaphor about template constraints",
-            "Each slide represents one design template tip",
-            "Final slide: Call-to-action and design challenge"
+            "First slide: Shocking hurricane image",
+            "Progressive slides showing robot's journey",
+            "Final slide with data visualization impact"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Open with unexpected visual demonstration of template flexibility",
-            "Use screen recording of Figma template editing",
-            "Add energetic voiceover explaining key concepts"
+            "Start with high-energy hurricane sound effect",
+            "Quick cuts between robot and hurricane scenes",
+            "Use text overlays to explain technical achievement"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "More technical language and professional design examples",
-            "Include statistics about template efficiency",
-            "Frame tips as strategic design leadership"
+            "More technical, data-driven narrative",
+            "Highlight government contract significance",
+            "Professional tone emphasizing innovation"
           ]
         }
       ],
       "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast color palette with electric blues and neon accents. Dynamic, geometric composition with overlapping design elements. Bold, sans-serif typography with motion-tracked text animations. Incorporate abstract design grid elements suggesting flexibility. Reference Swiss design meets digital maximalism aesthetic."
+        "rating": 8,
+        "description": "High-contrast teal and electric blue color palette, dynamic diagonal compositions, futuristic robotic silhouettes against dramatic hurricane backdrop, bold sans-serif typography with glitch/data overlay effects, motion graphics showing data collection process"
       },
       "exampleOutline": [
-        "Section 1: Provocative Hook/Design Challenge",
-        "Section 2: Brand Consistency Pain Point",
-        "Section 3: 8 Rapid Template Design Tips",
-        "Section 4: Transformative Design Insight",
-        "Section 5: Community Challenge/CTA"
+        "Shocking Hurricane Scene",
+        "Impossible Mission Framing",
+        "Robot Technology Reveal",
+        "Data Collection Breakthrough",
+        "Future of Climate Research Call-to-Action"
       ],
-      "hashtags": "#FigmaDesign #DesignTemplates #BrandSystem #CreativeTools #AIDesign #DesignStrategy #ProductDesign #GraphicDesign #CreativeTech #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
+      "hashtags": "#OceanTech #RobotInnovation #ClimateResearch #AIDriven #TechBreakthrough #FutureOfScience #RoboticExploration #HurricaneData #InnovationNation #TechForGood",
+      "textureIndex": 8
     },
     {
-      "title": "The AI healthcare gold rush is here",
-      "description": "AI companies are clustering around healthcare and fast.  In just the past week, OpenAI bought health startup Torch, Anthropic launched Claude for healthcare, and Sam Altman-backed MergeLabs closed a $250 million seed round at an $850 million valuation. The money and products are pouring into health and voice AI, but so are concerns about hallucination risks, inaccurate medical information, and […]",
+      "title": "Musk wants up to $134B in OpenAI lawsuit, despite $700B fortune",
+      "description": "Musk's legal team argues he should be compensated as an early startup investor who sees returns \"many orders of magnitude greater\" than his initial investment.",
       "starred": false,
       "sources": [
         {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/video/the-ai-healthcare-gold-rush-is-here/"
-        },
-        {
-          "name": "Advisory",
-          "url": "https://www.advisory.com/radio-advisory/276"
-        },
-        {
-          "name": "Cryptorank",
-          "url": "https://cryptorank.io/news/feed/2e9f7-ai-healthcare-gold-rush-2025"
-        },
-        {
-          "name": "Mexc",
-          "url": "https://www.mexc.com/news/493057"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/17/musk-wants-up-to-134b-in-openai-lawsuit-despite-700b-fortune/"
         }
       ],
       "format": "reel",
       "subcategory": "reel",
       "hooks": [
-        "AI is revolutionizing healthcare faster than you think 🚀",
-        "Healthcare's $850M AI transformation is happening NOW 💥",
-        "Billion-dollar AI health secrets revealed 🔬"
+        "Musk's $134B lawsuit: Tech titan's wild legal gamble",
+        "OpenAI drama: How much is an early investment worth?",
+        "Billionaire vs. Billion-Dollar AI: The courtroom showdown"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick jump cuts to maintain high energy",
+            "Overlay key numbers with animated graphic elements",
+            "Start with a provocative visual metaphor of money/tech"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have shocking headline statistic",
+            "Use infographic-style slides with clean data visualization",
+            "Final slide should prompt engagement/discussion"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Add dynamic text overlays for key points",
+            "Use screen recordings or stock footage of tech/courtroom",
+            "Maintain fast pacing (3-5 second scene changes)"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add more contextual business analysis",
+            "Use more professional tone and terminology",
+            "Include potential industry implications"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech-noir aesthetic; electric blue and charcoal gray color palette; glitchy digital transitions; bold sans-serif typography with motion tracking; abstract tech/money iconography; dynamic parallax motion graphics"
+      },
+      "exampleOutline": [
+        "Quick shocking statistic hook",
+        "Rapid context of Musk-OpenAI conflict",
+        "Breakdown of lawsuit's financial scale",
+        "Unexpected twist/irony of billionaire's lawsuit",
+        "Provocative closing thought/call to engage"
+      ],
+      "hashtags": "#Musk #OpenAI #AILawsuit #TechBusiness #InvestmentWars #AITech #StartupDrama #TechLegal #BusinessInnovation #AIEconomy",
+      "textureIndex": 10
+    },
+    {
+      "title": "AI cloud startup Runpod hits $120M in ARR — and it started with a Reddit post",
+      "description": "Their startup journey is a wild example of how if you build it well and the timing is lucky, they will definitely come.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/16/ai-cloud-startup-runpod-hits-120m-in-arr-and-it-started-with-a-reddit-post/"
+        }
+      ],
+      "format": "carousel",
+      "subcategory": "carousel",
+      "hooks": [
+        "Reddit Post to $120M: AI Startup's Wild Journey",
+        "How One Reddit Thread Launched an Empire",
+        "From Reddit Idea to $120M Startup Magic"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick scene transitions between startup milestones",
+            "Add dynamic text overlays highlighting key numbers",
+            "Include founder reaction/commentary clips for authenticity"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have explosive visual grabber",
+            "Use data visualization for ARR growth trajectory",
+            "Create clean, minimalist design with high-contrast typography"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Condense story into 60-second narrative arc",
+            "Use screen recordings of original Reddit post",
+            "Add founder voiceover explaining key moments"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add more technical depth about startup mechanics",
+            "Include professional headshots of founders",
+            "Emphasize scalability and business model insights"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-futuristic aesthetic with neon-electric color palette. Geometric data visualizations, glitch-inspired transitions. Sans-serif typography with high contrast. Incorporate subtle digital texture suggesting startup/tech ecosystem. Color scheme: deep navy, electric blue, bright cyan, with metallic silver accents."
+      },
+      "exampleOutline": [
+        "Slide 1: Provocative hook with startup founder's Reddit screenshot",
+        "Slide 2: Initial problem/challenge visualization",
+        "Slide 3: Growth trajectory infographic",
+        "Slide 4: Key milestone moments",
+        "Slide 5: Final ARR achievement & call-to-action"
+      ],
+      "hashtags": "#AIStartup #TechInnovation #EntrepreneurJourney #RunpodAI #StartupSuccess #TechCrunch #AICloud #RedditSuccess #StartupsOfInstagram #TechTrends",
+      "textureIndex": 6
+    },
+    {
+      "title": "California AG sends Musk&#8217;s xAI a cease-and-desist order over sexual deepfakes",
+      "description": "The flood of AI-generated sexual imagery has spurred concern from state and congressional officials alike.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/16/california-ag-sends-musks-xai-a-cease-and-desist-order-over-sexual-deepfakes/"
+        }
+      ],
+      "format": "reel",
+      "subcategory": "reel",
+      "hooks": [
+        "AI Deepfakes: When Tech Goes Too Far",
+        "Musk's xAI Faces Legal Trouble",
+        "California Fights Back Against AI Abuse"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
             "Use quick, dynamic text transitions",
-            "Include medical/tech visual metaphors",
-            "Add subtle motion graphics behind text"
+            "Include provocative visual metaphors about tech ethics",
+            "Leverage dramatic color contrast to highlight legal tension"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide must have provocative stat",
-            "Use infographic-style data visualization",
-            "Progressive reveal of key insights"
+            "First slide must shock/intrigue",
+            "Use infographic-style legal breakdown slides",
+            "Final slide offers clear takeaway/call to action"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with unexpected medical AI fact",
-            "Use screen recordings of AI tools",
-            "Include rapid-fire expert soundbites"
+            "Open with unexpected visual hook",
+            "Use rapid-fire text overlays",
+            "Include subtle screen glitch/tech breakdown effects"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Frame as thought leadership insight",
-            "Include professional data visualization",
-            "Add credible source citations"
+            "More nuanced, professional tone",
+            "Include expert quote or legal perspective",
+            "Emphasize professional implications of AI regulation"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast futuristic color palette (electric blue, deep purple, bright teal), glitch-inspired text animations, medical tech iconography, clean sans-serif typography with technical overlay graphics, minimalist medical/tech stock imagery with AI-generated texture overlays"
+        "description": "High-contrast digital aesthetic. Glitch-inspired graphics. Neon blues/reds. Fragmented typography. Tech-dystopian mood. Sharp geometric transitions. Overlay legal document textures with digital distortion effects."
       },
       "exampleOutline": [
-        "Hook: Dramatic AI healthcare transformation statement",
-        "Problem: Current healthcare limitations",
-        "AI Solutions: OpenAI, Anthropic, MergeLabs breakthrough",
-        "Future Implications: Potential industry disruption",
-        "Call-to-Action: Follow for more insights"
+        "Shocking AI Deepfake Headline",
+        "Legal Threat Explained Quickly",
+        "What xAI Did Wrong",
+        "Broader Tech Ethics Implications",
+        "Call to Stay Informed"
       ],
-      "hashtags": "#AIHealthcare #MedicalTech #FutureOfHealth #AIInnovation #HealthTech #MedicalAI #TechTrends #HealthcareDisruption #AIRevolution #InnovationInsights",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3936365/pexels-photo-3936365.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
+      "hashtags": "#AIEthics #TechLaw #DeepfakeDanger #xAI #ElonMusk #AIRegulation #TechPolicy #CyberLaw #AIControversy #DigitalRights",
+      "textureIndex": 2
     },
     {
-      "title": "OpenAI and Anthropic are making their play for healthcare, and we’re not surprised",
-      "description": "AI companies are clustering around healthcare, and fast.  In just the past week, OpenAI bought health startup Torch, Anthropic launched Claude for Health, and Sam Altman-backed Merge Labs closed a $250 million seed round at an $850 million valuation. The money and products are pouring into health and voice AI, but so are concerns about […]",
+      "title": "Snowflake, Databricks challenger ClickHouse hits $15B valuation",
+      "description": "The $400 million round was led by Dragoneer.",
       "starred": false,
       "sources": [
         {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/podcast/openai-and-anthropic-are-making-their-play-for-healthcare-and-were-not-surprised/"
-        },
-        {
-          "name": "Businessinsider",
-          "url": "https://www.businessinsider.com/anthropics-new-ai-announcements-spark-concerns-across-software-sector-2026-1"
-        },
-        {
-          "name": "Healthcareitnews",
-          "url": "https://www.healthcareitnews.com/news/chatgpt-healthcare-claude-ai-pose-governance-challenges"
-        },
-        {
-          "name": "Hooperlundy",
-          "url": "https://hooperlundy.com/openai-and-anthropic-launch-health-focused-version-of-consumer-llms/"
-        },
-        {
-          "name": "Hlth",
-          "url": "https://hlth.com/insights/news/anthropic-joins-openai-s-push-into-health-care-with-new-claude-tools-2026-01-13"
-        },
-        {
-          "name": "Handyai",
-          "url": "https://handyai.substack.com/p/openai-and-anthropic-double-down"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/16/snowflake-databricks-challenger-clickhouse-hits-15b-valuation/"
         }
       ],
-      "format": "carousel",
-      "subcategory": "carousel",
+      "format": "story",
+      "subcategory": "story",
       "hooks": [
-        "AI is taking over healthcare faster than you think 🤖",
-        "Big Tech's secret healthcare revolution is happening now",
-        "OpenAI & Anthropic: The new healthcare disruptors"
+        "ClickHouse: The $15B Startup Challenging Tech Giants",
+        "Databricks Rival Breaks Valuation Records 🚀",
+        "How One Database Startup Just Changed Everything"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use dynamic transitions between carousel slides",
-            "Start with a provocative statistic or quote",
-            "Include quick motion graphics to maintain engagement"
+            "Use fast-paced kinetic typography transitions",
+            "Include quick visual comparisons of tech valuations",
+            "Create dynamic motion graphics showing startup growth"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "Design each slide with a clear, bold headline",
-            "Use consistent color palette across all slides",
-            "Ensure text is large and readable on mobile"
+            "Design each slide with clear data visualization",
+            "Use consistent color scheme across slides",
+            "Include one key statistic per slide"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Condense carousel content into rapid-fire narrative",
-            "Use text overlays to highlight key points",
-            "Add energetic background music"
+            "Open with unexpected visual metaphor for startup growth",
+            "Use quick cuts and high-energy editing",
+            "Include text overlay with key numbers"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Add more technical depth to carousel content",
-            "Include professional insights and implications",
+            "Add more detailed contextual analysis",
+            "Include professional insights about market implications",
             "Use more formal, authoritative tone"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Modern, high-contrast design with futuristic medical/tech aesthetic. Gradient backgrounds transitioning from tech blue to healthcare green. Bold, sans-serif typography. Minimal medical/AI iconography. Incorporate circuit-like design elements. Use glitch/digital overlay effects. Color palette: electric blue, deep teal, bright white, accent neon green."
+        "description": "High-contrast tech-inspired color palette with deep blues and electric teals. Geometric, angular compositions mimicking data structures. Bold, sans-serif typography with dynamic scaling. Motion graphics showing exponential growth curves. Clean, futuristic aesthetic blending data visualization with abstract design elements."
       },
       "exampleOutline": [
-        "Slide 1: Attention-grabbing headline + provocative visual",
-        "Slide 2: Current healthcare AI landscape overview",
-        "Slide 3: OpenAI's strategic moves in health tech",
-        "Slide 4: Anthropic's Claude Health platform breakdown",
-        "Slide 5: Potential impact and future predictions"
+        "Section 1: Attention-grabbing startup valuation reveal",
+        "Section 2: ClickHouse vs. established tech giants context",
+        "Section 3: Key investment details and market positioning",
+        "Section 4: Implications for tech ecosystem",
+        "Section 5: Call-to-action: Learn more about emerging tech"
       ],
-      "hashtags": "#AIHealthcare #HealthTech #MedicalAI #OpenAI #Anthropic #FutureOfMedicine #TechInnovation #AIRevolution #HealthcareDisruption #MedTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/15863044/pexels-photo-15863044.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 6
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        }
-      ],
-      "format": "quick-image",
-      "subcategory": "quick-image",
-      "hooks": [
-        "AI Just Supercharged Figma's Image Editing 🚀",
-        "3 Mind-Blowing Tools That Transform Design Work",
-        "Design Precision Gets Its Superpowers Today"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick screen recording of actual tool in action",
-            "Include text overlay highlighting key transformations",
-            "Add dynamic transitions between tool demonstrations"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Dramatic before/after image comparison",
-            "Use slide animations to show tool progression",
-            "Include concise text explaining each tool's unique capability"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected visual metaphor for precision",
-            "Use rapid-fire editing to match platform's energy",
-            "Include voiceover explaining tool's revolutionary aspects"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame tools as professional productivity enhancers",
-            "Include data/stats about time saved",
-            "Use more technical, workflow-oriented language"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast cyberpunk-inspired color palette with electric blues and neon accents, dynamic geometric composition highlighting tool interfaces, sleek sans-serif typography with sharp edges, subtle glitch/tech animation effects, minimalist but energetic aesthetic referencing modern design system interfaces"
-      },
-      "exampleOutline": [
-        "Section 1: Provocative Hook/Visual Surprise",
-        "Section 2: Design Workflow Pain Point",
-        "Section 3: Tool Demonstration Sequence",
-        "Section 4: Transformative Potential Insight",
-        "Section 5: Immediate Exploration CTA"
-      ],
-      "hashtags": "#FigmaAI #DesignTools #CreativeTech #AIDesign #ProductivityHack #DesignInnovation #CreativeWorkflow #AICreativity #DesignTips #TechInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/6985001/pexels-photo-6985001.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        }
-      ],
-      "format": "story",
-      "subcategory": "story",
-      "hooks": [
-        "Design Faster: Figma Buzz's Game-Changing Features 🚀",
-        "Unlock Marketing Magic with Figma's New Tools",
-        "3 Pro Moves to Supercharge Your Design Workflow"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick screen recordings to demo each feature",
-            "Add dynamic text overlays highlighting key benefits",
-            "Include fast-paced transitions between feature demonstrations"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Bold teaser graphic with feature count",
-            "Use consistent color coding for each feature slide",
-            "Include a final slide with quick implementation steps"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Open with high-energy visual pattern interrupt",
-            "Use split-screen comparisons of before/after workflows",
-            "Include verbal callouts explaining each feature quickly"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame features as professional productivity solutions",
-            "Include data-driven benefit statements",
-            "Use more technical, detailed language compared to other platforms"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Modern tech-inspired aesthetic with electric blue and deep charcoal color palette. Dynamic diagonal compositions, floating UI elements, subtle motion graphics. Typography: Sharp sans-serif, mixed weight hierarchy. Animated icons and cursor interactions to demonstrate workflow. Minimalist but energetic design system inspired by Figma's current brand language."
-      },
-      "exampleOutline": [
-        "Story 1: Attention-grabbing hook & feature teaser",
-        "Story 2: Problem statement - current design workflow challenges",
-        "Story 3-5: Deep dive into each new Figma Buzz feature",
-        "Story 6: Key workflow transformation insight",
-        "Story 7: Call-to-action and quick implementation tip"
-      ],
-      "hashtags": "#FigmaBuzz #DesignTools #CreativeWorkflow #AIDesign #MarketingTemplates #ProductivityHacks #DesignInnovation #CreativeTech #UIUXDesign #DesignStrategy",
-      "pexelsImageUrl": "https://images.pexels.com/photos/13729933/pexels-photo-13729933.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 9
+      "hashtags": "#ClickHouse #StartupFunding #TechInnovation #DataTech #VentureCapital #AIStartups #DatabaseTechnology #TechGrowth #InvestmentInsights #StartupEcosystem",
+      "textureIndex": 2
     }
   ]
 }

@@ -1,261 +1,211 @@
 {
   "type": "long-form",
-  "date": "2026-01-17T16:17:25.959Z",
+  "date": "2026-01-17T16:24:25.515Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Musk wants up to $134B in OpenAI lawsuit, despite $700B fortune",
+      "description": "Musk's legal team argues he should be compensated as an early startup investor who sees returns \"many orders of magnitude greater\" than his initial investment.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        }
-      ],
-      "format": "livestream",
-      "subcategory": "leadership",
-      "hooks": [
-        "Design Guardrails That Don't Kill Creativity",
-        "Unlock Scalable Templates Without Brand Police",
-        "Build Flexible Templates Marketers Will Love"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Pre-promote Live Stream in Figma community groups",
-            "Enable live chat for real-time audience interaction",
-            "Prepare 3-5 pre-submitted audience template questions"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-energy, dynamic split-screen layout with live presenter on right, Figma interface/template examples on left. Bold geometric typography with electric blue/deep purple accent colors. Animated transition elements highlighting template flexibility. Motion graphics demonstrating template constraints/freedoms."
-      },
-      "exampleOutline": [
-        "Live Stream Intro: Personal Template Challenge Story",
-        "Why Templates Break (Real Marketing Scenarios)",
-        "8 Strategic Template Design Principles",
-        "Live Demonstration & Community Q&A",
-        "Closing: Invitation to Experiment & Share Templates"
-      ],
-      "hashtags": "#FigmaDesign #DesignTemplates #CreativeTips #BrandSystem #ProductDesign #UIDesign #DesignProcess #CreativeStrategy #TemplateDesign #DesignCommunity",
-      "pexelsImageUrl": "https://images.pexels.com/photos/10874538/pexels-photo-10874538.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
-    },
-    {
-      "title": "The AI healthcare gold rush is here",
-      "description": "AI companies are clustering around healthcare and fast.  In just the past week, OpenAI bought health startup Torch, Anthropic launched Claude for healthcare, and Sam Altman-backed MergeLabs closed a $250 million seed round at an $850 million valuation. The money and products are pouring into health and voice AI, but so are concerns about hallucination risks, inaccurate medical information, and […]",
-      "starred": false,
-      "sources": [
-        {
           "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/video/the-ai-healthcare-gold-rush-is-here/"
-        },
-        {
-          "name": "Advisory",
-          "url": "https://www.advisory.com/radio-advisory/276"
-        },
-        {
-          "name": "Cryptorank",
-          "url": "https://cryptorank.io/news/feed/2e9f7-ai-healthcare-gold-rush-2025"
-        },
-        {
-          "name": "Mexc",
-          "url": "https://www.mexc.com/news/493057"
-        }
-      ],
-      "format": "documentary",
-      "subcategory": "framework",
-      "hooks": [
-        "AI is transforming healthcare faster than you think",
-        "Billion-dollar battle: Tech giants racing into medicine",
-        "Healthcare's AI revolution: Who will win?"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use archival medical/tech footage as B-roll",
-            "Include expert talking head interviews with healthcare/AI professionals",
-            "Create dynamic motion graphics showing AI healthcare workflow transitions"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast medical/tech color palette (deep blues, clinical whites, electric accents). Futuristic data visualization overlays. Clean, geometric typography with technical precision. Kinetic transitions suggesting rapid technological evolution. Blend clinical documentary aesthetics with modern tech design sensibility."
-      },
-      "exampleOutline": [
-        "Cold open: Dramatic AI healthcare intervention scene",
-        "Historical context of medical technology limitations",
-        "Current AI healthcare investment landscape",
-        "Breakthrough technologies and potential impacts",
-        "Ethical considerations and future predictions"
-      ],
-      "hashtags": "#AIHealthcare #MedicalInnovation #HealthTech #AIRevolution #FutureOfMedicine #TechInnovation #HealthcareAI #MedicalAI #EmergingTech #InvestmentTrends",
-      "pexelsImageUrl": "https://images.pexels.com/photos/3882464/pexels-photo-3882464.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
-    },
-    {
-      "title": "OpenAI and Anthropic are making their play for healthcare, and we’re not surprised",
-      "description": "AI companies are clustering around healthcare, and fast.  In just the past week, OpenAI bought health startup Torch, Anthropic launched Claude for Health, and Sam Altman-backed Merge Labs closed a $250 million seed round at an $850 million valuation. The money and products are pouring into health and voice AI, but so are concerns about […]",
-      "starred": false,
-      "sources": [
-        {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/podcast/openai-and-anthropic-are-making-their-play-for-healthcare-and-were-not-surprised/"
-        },
-        {
-          "name": "Businessinsider",
-          "url": "https://www.businessinsider.com/anthropics-new-ai-announcements-spark-concerns-across-software-sector-2026-1"
-        },
-        {
-          "name": "Healthcareitnews",
-          "url": "https://www.healthcareitnews.com/news/chatgpt-healthcare-claude-ai-pose-governance-challenges"
-        },
-        {
-          "name": "Hooperlundy",
-          "url": "https://hooperlundy.com/openai-and-anthropic-launch-health-focused-version-of-consumer-llms/"
-        },
-        {
-          "name": "Hlth",
-          "url": "https://hlth.com/insights/news/anthropic-joins-openai-s-push-into-health-care-with-new-claude-tools-2026-01-13"
-        },
-        {
-          "name": "Handyai",
-          "url": "https://handyai.substack.com/p/openai-and-anthropic-double-down"
-        }
-      ],
-      "format": "video",
-      "subcategory": "thought-leadership",
-      "hooks": [
-        "AI is hijacking healthcare - and nobody's talking about it",
-        "The $850M healthcare AI takeover nobody expected",
-        "Big Tech's secret healthcare revolution starts now"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use dynamic screen recordings of health AI interfaces",
-            "Include picture-in-picture expert commentary",
-            "Create chapter markers for complex topics",
-            "Use medical/tech graphics to illustrate AI integration points"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast medical tech palette (deep blues, electric greens), futuristic motion graphics overlaying medical imagery, sleek sans-serif typography with technical data visualizations, subtle holographic UI elements suggesting AI transformation"
-      },
-      "exampleOutline": [
-        "Opening: Provocative AI healthcare transformation headline",
-        "Context: Current healthcare technology landscape",
-        "Key Players: OpenAI, Anthropic's strategic moves",
-        "Technical Deep Dive: How AI is restructuring healthcare",
-        "Future Implications & Call to Action"
-      ],
-      "hashtags": "#AIHealthcare #TechInnovation #FutureOfMedicine #HealthTech #ArtificialIntelligence #MedicalAI #OpenAI #Anthropic #HealthcareDisruption #TechTrends",
-      "pexelsImageUrl": "https://images.pexels.com/photos/16587315/pexels-photo-16587315.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        }
-      ],
-      "format": "livestream",
-      "subcategory": "leadership",
-      "hooks": [
-        "AI Image Magic: 3 Figma Tools That Will Blow Your Mind",
-        "Editing Just Got Smarter: Figma's New AI Arsenal",
-        "Precision Editing Revolution: What Figma Just Unleashed"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Enable live chat for real-time audience interaction",
-            "Use YouTube Premieres to build anticipation before live stream",
-            "Prepare pre-submitted Q&A questions to maintain momentum"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-energy, dynamic visual design with electric blue and deep purple color palette. Floating, translucent UI elements showcasing AI image editing. Sleek, modern typography with animated transition effects. Minimalist screen recordings with dynamic picture-in-picture demonstrations. Futuristic motion graphics highlighting tool capabilities."
-      },
-      "exampleOutline": [
-        "Section 1: High-Energy Live Stream Introduction",
-        "Section 2: Current Image Editing Pain Points",
-        "Section 3: Deep Dive into 3 New AI Tools",
-        "Section 4: Live Demonstration & Workflow Integration",
-        "Section 5: Community Q&A and Real-Time Tool Exploration"
-      ],
-      "hashtags": "#FigmaAI #DesignTools #AIDesign #CreativeWorkflow #ImageEditing #UXDesign #ProductDesign #TechInnovation #CreativeTech #DesignTips",
-      "pexelsImageUrl": "https://images.pexels.com/photos/6953854/pexels-photo-6953854.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 9
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+          "url": "https://techcrunch.com/2026/01/17/musk-wants-up-to-134b-in-openai-lawsuit-despite-700b-fortune/"
         }
       ],
       "format": "tutorial",
       "subcategory": "instructional",
       "hooks": [
-        "Supercharge Your Figma Workflow in 3 Epic Steps",
-        "Design Faster: Figma Buzz's Hidden Productivity Hacks",
-        "Transform Your Marketing Assets with Figma's New Features"
+        "How Musk's $134B Lawsuit Changes Tech Forever",
+        "Startup Lawsuits: The Hidden Billionaire Playbook",
+        "Decoding Silicon Valley's Wildest Legal Battle"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use clear chapter markers for each step",
-            "Include picture-in-picture screen recordings of Figma interface",
-            "Create visual progress indicators between tutorial sections"
+            "Use side-by-side legal document and narrative visualizations",
+            "Create animated timeline of Musk-OpenAI relationship",
+            "Include picture-in-picture expert commentary segments"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, dynamic visual style with high-contrast design system colors. Use clean, modern typography with motion-guided transitions between steps. Incorporate Figma's brand blue and white palette with energetic accent colors. Utilize dynamic screen capture animations with smooth zoom and highlight effects. Aesthetic reference: Apple product tutorial videos mixed with design-forward motion graphics."
+        "description": "High-contrast tech-noir aesthetic with electric blue/deep charcoal palette. Geometric typography with angular legal document overlays. Dynamic motion graphics simulating legal case progression. Futuristic data visualization elements. Clean, technical, slightly rebellious design approach that communicates complexity and drama."
       },
       "exampleOutline": [
-        "Section 1: Energetic Hook - Why These Figma Features Matter",
-        "Section 2: Current Design Workflow Challenges",
-        "Section 3: Step-by-Step Feature Walkthrough (Marketing Templates, Plugins, Video Trimming)",
-        "Section 4: Pro Tips and Workflow Integration Insights",
-        "Section 5: Call-to-Action and Future Design Possibilities"
+        "Introduction: The $134B Legal Showdown",
+        "Context: Musk's OpenAI Origin Story",
+        "Step-by-Step: Lawsuit Mechanics Explained",
+        "Key Insights: Tech Investment Strategies Revealed",
+        "Conclusion: Future of Tech Entrepreneurship"
       ],
-      "hashtags": "#FigmaDesign #ProductivityHacks #DesignWorkflow #MarketingTemplates #CreativeTips #AIDesign #DesignTechnology #FigmaTutorial #CreativeTools #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9436715/pexels-photo-9436715.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 9
+      "hashtags": "#ElonMusk #OpenAI #TechLawsuit #StartupStrategy #AILegal #TechInnovation #SiliconValley #InvestmentTips #LegalTech #BusinessStrategy",
+      "textureIndex": 4
+    },
+    {
+      "title": "AI cloud startup Runpod hits $120M in ARR — and it started with a Reddit post",
+      "description": "Their startup journey is a wild example of how if you build it well and the timing is lucky, they will definitely come.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/16/ai-cloud-startup-runpod-hits-120m-in-arr-and-it-started-with-a-reddit-post/"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "Reddit Post to $120M: The Runpod AI Empire",
+        "How One Developer Disrupted Cloud Computing",
+        "From Keyboard Warrior to Tech Millionaire"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use archival/screen recording footage of original Reddit post",
+            "Include dynamic founder interview B-roll with personal workspace shots",
+            "Create visual timeline tracking startup's growth with animated graphics"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dark tech-noir color palette with deep blues and electric teals, high-contrast typography, kinetic motion graphics showing startup trajectory, interview segments with slightly desaturated look to emphasize authenticity, dynamic split-screen transitions highlighting digital/startup aesthetic"
+      },
+      "exampleOutline": [
+        "Cold Open: Dramatic Reddit Post Reveal",
+        "Founder's Origin Story & Initial Problem",
+        "Technical Innovation & Market Opportunity",
+        "Scaling Journey & Key Milestones",
+        "Future Vision & Industry Impact Conclusion"
+      ],
+      "hashtags": "#AIStartup #CloudComputing #TechSuccess #RunpodAI #StartupStory #AIInnovation #EntrepreneurJourney #TechTrends #AICloud #IndieDev",
+      "textureIndex": 1
+    },
+    {
+      "title": "California AG sends Musk&#8217;s xAI a cease-and-desist order over sexual deepfakes",
+      "description": "The flood of AI-generated sexual imagery has spurred concern from state and congressional officials alike.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/16/california-ag-sends-musks-xai-a-cease-and-desist-order-over-sexual-deepfakes/"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "AI Deepfakes: Legal Battle Brewing!",
+        "Musk vs. California: The Deepfake Showdown",
+        "Shocking AI Legal Crackdown Revealed"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Enable live chat for real-time audience engagement",
+            "Prepare pre-submitted Q&A questions as backup",
+            "Use stream annotations to highlight key legal points"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast red and blue color palette suggesting legal tension. Dynamic split-screen layout with legal documents and AI imagery. Bold, angular typography. Animated legal document stamps and digital glitch transitions. Cyberpunk-meets-legal-brief aesthetic with sharp, confrontational visual language."
+      },
+      "exampleOutline": [
+        "Opening: Breaking News Intro",
+        "Context: Deepfake Legal Landscape Overview",
+        "xAI Cease-and-Desist Details Breakdown",
+        "Broader Implications for AI Regulation",
+        "Live Q&A: Audience Legal Questions"
+      ],
+      "hashtags": "#AIEthics #DeepfakeLaw #xAI #TechRegulation #ArtificialIntelligence #LegalTech #MuskAI #CyberLaw #AIPolicy #TechLegal",
+      "textureIndex": 1
+    },
+    {
+      "title": "This may be the grossest eye pic ever—but the cause is what’s truly horrifying",
+      "description": "This may be the grossest eye pic ever—but the cause is what’s truly horrifying",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/features/2026/01/this-may-be-the-grossest-eye-pic-ever-but-the-cause-is-whats-truly-horrifying/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "Horrifying Eye Pic Reveals Shocking Medical Mystery",
+        "What This Eye Image Really Shows Will Shock You",
+        "The Grossest Eye Picture You'll Ever See"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use blurred/censored thumbnail to increase click-through rate",
+            "Include dramatic zoom/reveal effect in first 15 seconds",
+            "Add medical warning/disclaimer overlay for sensitive content"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast medical imagery with clinical yet dramatic color palette (deep blues, sterile whites, clinical grays). Incorporate macro medical photography with dynamic motion graphics. Typography should feel scientific but slightly ominous. Use medical illustration techniques with slight horror movie aesthetic undertones. Incorporate medical scanning/microscope visual metaphors."
+      },
+      "exampleOutline": [
+        "Section 1: Shocking Eye Image Reveal (5-10s)",
+        "Section 2: Medical Context & Initial Diagnosis Challenge (2 min)",
+        "Section 3: Deep Dive into Underlying Condition (3-4 min)",
+        "Section 4: Scientific Explanation & Broader Implications (2 min)",
+        "Section 5: Call-to-Action & Further Medical Research Links (30s)"
+      ],
+      "hashtags": "#MedicalMystery #EyeHealth #MedicalScience #WeirdMedicine #MedicalMiracles #HealthTech #MedicalResearch #Diagnosis #MedicalInnovation #Healthcare",
+      "textureIndex": 0
+    },
+    {
+      "title": "From OpenAI’s offices to a deal with Eli Lilly — how Chai Discovery became one of the flashiest names in AI drug development",
+      "description": "The startup has partnered with Eli Lilly and enjoys the backing of some of Silicon Valley's most influential VCs.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/16/from-openais-offices-to-a-deal-with-eli-lilly-how-chai-discovery-became-one-of-the-flashiest-names-in-ai-drug-development/"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "AI Startup's Leap: From OpenAI to Eli Lilly Breakthrough",
+        "Silicon Valley's Secret Weapon in Drug Discovery",
+        "How One Team Is Rewriting Pharmaceutical Innovation"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use archival footage of OpenAI and Eli Lilly offices",
+            "Include expert interview b-roll with founders/researchers",
+            "Create dynamic timeline graphics showing company progression"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Modern documentary aesthetic with high-contrast blue/white color palette, sleek infographic overlays, dynamic motion graphics showing scientific progression, clean sans-serif typography, subtle tech-inspired gradient backgrounds, mixed media approach blending interview footage with animated data visualizations"
+      },
+      "exampleOutline": [
+        "Cold Open: Dramatic reveal of Chai Discovery's origin",
+        "Origin Story: Founders' background and initial challenges",
+        "Technical Innovation: AI's role in drug development breakthrough",
+        "Industry Impact: Eli Lilly partnership significance",
+        "Future Projection: Potential industry transformation"
+      ],
+      "hashtags": "#AIInnovation #DrugDiscovery #TechStartup #EliLilly #AIHealthcare #SiliconValley #MedicalTech #StartupStory #AIResearch #InnovationJourney",
+      "textureIndex": 11
     }
   ]
 }
