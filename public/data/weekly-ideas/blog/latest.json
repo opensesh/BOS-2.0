@@ -1,352 +1,291 @@
 {
   "type": "blog",
-  "date": "2026-01-19T16:21:44.138Z",
+  "date": "2026-01-19T16:31:24.037Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "🎙️ This week on How I AI: Claude Code for product managers",
+      "description": "Your weekly listens from How I AI, part of the Lenny's Podcast Network",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover/8-tips-for-designers-building-branded-templates-in-figma-buz"
-        }
-      ],
-      "format": "guide",
-      "subcategory": "instructional",
-      "hooks": [
-        "Design Templates That Scale Without Breaking Brand",
-        "Figma Buzz: The Ultimate Template Creation Guide",
-        "Unlock Flexible Brand Templates in 8 Pro Steps"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Include real-time template creation walkthrough",
-            "Add interactive screenshots of Figma process",
-            "Share personal template design failures/lessons"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Optimize for SEO with detailed technical keywords",
-            "Include data-driven insights about template efficiency",
-            "Add comprehensive comparison charts/graphics"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Frame as professional skill development guide",
-            "Include enterprise-level template strategy insights",
-            "Quote design leaders/experts on template best practices"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Dynamic grid-based layout with modular design elements, using brand's signature teal and charcoal palette. Typography mixing geometric sans-serif with subtle motion graphics. Clean but experimental composition emphasizing template flexibility. Incorporate Figma UI elements as visual metaphors."
-      },
-      "exampleOutline": [
-        "Introduction: The Template Design Challenge",
-        "Why Flexible Brand Templates Matter",
-        "8 Pro Strategies for Scalable Templates",
-        "Case Studies: Successful Template Implementations",
-        "Future of Adaptive Design Systems"
-      ],
-      "hashtags": "#DesignTemplates #FigmaTips #BrandDesign #CreativeWorkflow #AIDesign #TemplateStrategy #ProductDesign #UIUXTips #DesignSystem #CreativeTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5709687/pexels-photo-5709687.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 3
-    },
-    {
-      "title": "Moxie Marlinspike has a privacy-conscious alternative to ChatGPT",
-      "description": "Confer is designed to look and feel like ChatGPT or Claude, but your conversations can't be used for training or advertising.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2026/01/18/moxie-marlinspike-has-a-privacy-conscious-alternative-to-chatgpt/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2026/01/16/chatgpt-users-are-about-to-get-hit-with-targeted-ads/"
-        },
-        {
-          "name": "Cryptorank",
-          "url": "https://cryptorank.io/news/feed/69d58-moxie-marlinspike-privacy-ai-confer"
-        },
-        {
-          "name": "Time",
-          "url": "https://time.com/7346534/signal-confer-ai-moxie-marlinspike/"
-        },
-        {
-          "name": "Privacytutor",
-          "url": "https://privacytutor.substack.com/p/the-signal-creator-just-launched"
-        },
-        {
-          "name": "Privacyguides",
-          "url": "https://www.privacyguides.org/livestreams/2026/01/16/signal-founder-announces-private-ai-alternative-privacy-services-form-a-privacy-alliance-threema-gets-acquired-again-and-more/"
-        }
-      ],
-      "format": "case-study",
-      "subcategory": "case-study-deep-dive",
-      "hooks": [
-        "Privacy AI: Signal Creator's ChatGPT Killer Revealed",
-        "Moxie's Secret Weapon Against Big Tech Surveillance",
-        "Confer: The AI That Refuses to Spy"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Include real-time screenshots of Confer interface",
-            "Share personal testing experience with privacy features",
-            "Use annotated screen recordings to explain key differences"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Create infographic comparing Confer vs traditional AI models",
-            "Use SEO-optimized headers exploring privacy technology",
-            "Include expert quotes and technical credibility markers"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Frame privacy as a professional competitive advantage",
-            "Include enterprise-relevant privacy statistics",
-            "Highlight potential business implications of privacy-first AI"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast dark mode aesthetic with electric blue/deep purple accents. Geometric typography with technical wireframe overlays. Modular grid layout suggesting privacy/segmentation. Motion graphics showing data protection metaphors. Cyberpunk-inspired design language emphasizing technological rebellion."
-      },
-      "exampleOutline": [
-        "The Privacy Paradox: Why Traditional AI Fails Users",
-        "Meet Confer: A New Privacy Paradigm",
-        "Technical Deep Dive: How Confer Protects Your Data",
-        "Comparative Analysis: Confer vs Mainstream AI Models",
-        "Future of Ethical AI: What Professionals Need to Know"
-      ],
-      "hashtags": "#PrivacyAI #AIEthics #TechInnovation #DataPrivacy #SignalApp #MoxieMarlinspike #AITechnology #CyberSecurity #PrivacyFirst #TechTrends",
-      "pexelsImageUrl": "https://images.pexels.com/photos/19916599/pexels-photo-19916599.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Theaiinsider",
-          "url": "https://theaiinsider.tech/2025/12/12/figma-introduces-new-ai-powered-image-editing-suite-to-streamline-design-workflows/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Oreateai",
-          "url": "http://oreateai.com/blog/figmas-new-ai-image-editing-a-game-changer-for-designers/566d1a934f7f96a378a7f4e634c395b4"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        }
-      ],
-      "format": "listicle",
-      "subcategory": "explanatory",
-      "hooks": [
-        "3 AI Tools Transforming Figma Image Editing Forever",
-        "Precision Editing Just Got Smarter in Figma",
-        "Design Faster: Figma's New AI Image Magic"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Include live gif/screen recording of each tool in action",
-            "Add personal commentary about how each tool changes workflow",
-            "Create interactive poll asking readers which tool excites them most"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Include detailed screenshots with step-by-step explanations",
-            "Add SEO-optimized alt text for all images",
-            "Link to official Figma documentation for deeper technical context"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Include industry impact statistics about AI image editing",
-            "Quote design industry leaders about tool's significance",
-            "Create professional graphics visualizing workflow improvements"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, futuristic design with electric blue and deep purple gradient backgrounds. Dynamic geometric shapes framing tool screenshots. Clean sans-serif typography with subtle motion animations highlighting key features. Minimalist tech-inspired aesthetic with high-contrast color palette."
-      },
-      "exampleOutline": [
-        "Section 1: Provocative Introduction - The AI Design Revolution",
-        "Section 2: Why Precise Image Editing Matters",
-        "Section 3: Detailed Breakdown of 3 AI Tools",
-        "Section 4: How These Tools Transform Creative Workflows",
-        "Section 5: Future of AI in Design - Call to Experiment"
-      ],
-      "hashtags": "#FigmaAI #DesignTechnology #AITools #CreativeWorkflow #ImageEditing #DesignInnovation #AIDesign #CreativeTech #ProductivityHacks #DesignTools",
-      "pexelsImageUrl": "https://images.pexels.com/photos/19938848/pexels-photo-19938848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 12
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        }
-      ],
-      "format": "article",
-      "subcategory": "visionary",
-      "hooks": [
-        "Design Faster: Figma Buzz's Game-Changing New Features",
-        "Unlock Marketing Magic with Figma's Latest Tools",
-        "Revolutionize Your Workflow: Figma Buzz Upgrades Revealed"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Include real-time experiment screenshots of new Figma features",
-            "Add personal commentary about workflow improvements",
-            "Use animated GIFs to demonstrate feature functionality"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Create comprehensive feature breakdown with SEO-optimized headings",
-            "Include comparative analysis with previous design workflows",
-            "Add expert quotes or industry perspectives on the updates"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Highlight professional productivity gains from new features",
-            "Include quantitative impact metrics for design teams",
-            "Frame updates as strategic business workflow improvements"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, dynamic visual approach with electric blue and gradient accents, modular grid layout, clean sans-serif typography, minimal motion graphics showing feature transitions, tech-forward aesthetic inspired by modern design systems"
-      },
-      "exampleOutline": [
-        "Opening: Provocative Hook About Design Transformation",
-        "The Design Workflow Challenge: Current Limitations",
-        "Figma Buzz: Three Revolutionary New Features Explained",
-        "Practical Implementation: How These Features Change Everything",
-        "Future of Design: What These Updates Signal"
-      ],
-      "hashtags": "#FigmaBuzz #DesignTech #CreativeWorkflow #AIDesign #ProductivityHacks #MarketingTools #DesignInnovation #CreativeTech #WorkflowOptimization #DesignSystem",
-      "pexelsImageUrl": "https://images.pexels.com/photos/30133783/pexels-photo-30133783.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
-    },
-    {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/this-week-on-how-i-ai-claude-code"
         }
       ],
       "format": "thread",
       "subcategory": "explanatory",
       "hooks": [
-        "Design Systems: The Secret Weapon of Top Brands",
-        "Scaling Visual Identity Beyond Logos and Guidelines",
-        "How Great Designers Build Flexible Brand Ecosystems"
+        "AI coding magic for PMs: Claude's secret weapon revealed",
+        "How top product managers are leveling up with AI",
+        "Unlock Claude's coding superpowers for product teams"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Use thread screenshots as visual teaser in newsletter",
-            "Create companion deep-dive post expanding thread insights",
-            "Offer downloadable design system template for subscribers"
+            "Use thread screenshots as a teaser for full Substack post",
+            "Create a companion deep-dive article with more technical details",
+            "Offer exclusive code snippets or templates for subscribers"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Add SEO-optimized headers matching thread structure",
-            "Include professional portfolio examples in article body",
-            "Create long-form companion piece with extended analysis"
+            "Transform thread into a long-form SEO-optimized article",
+            "Add more technical context and industry research",
+            "Include downloadable resources for readers"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Tag design leaders and brand strategists",
-            "Include professional case studies and metrics",
-            "Highlight career development insights for designers"
+            "Frame content as professional development insight",
+            "Add testimonials or case studies from product managers",
+            "Include data-driven arguments about AI productivity gains"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, modular design with geometric typography. High-contrast color palette (charcoal, electric blue, white). Animated grid-based transitions between thread slides. Minimal illustrations showcasing brand system complexity. Swiss Design meets contemporary tech aesthetic."
+        "description": "High-contrast tech-inspired design with neon blue and deep charcoal. Dynamic diagonal grid layout. Futuristic sans-serif typography. Animated code snippet overlays. Subtle glitch effects to emphasize AI theme. Minimal but energetic visual approach that feels cutting-edge and accessible."
       },
       "exampleOutline": [
-        "Thread Opener: Provocative Design Systems Challenge",
-        "Context: Why Most Brands Fail at Scalability",
-        "Framework: 3-Layer Design System Architecture",
-        "Case Study: Successful Brand Transformation Example",
-        "Future Prediction & Personal Invitation"
+        "🚀 Why Claude is a game-changer for product managers",
+        "🤔 The productivity challenge in modern product development",
+        "💡 Claude's unique AI coding capabilities for PMs",
+        "🔍 Practical use cases and real-world examples",
+        "🌟 How to integrate Claude into your workflow"
       ],
-      "hashtags": "#DesignSystems #BrandIdentity #CreativeStrategy #AIDesign #ProductDesign #BrandingTips #VisualIdentity #DesignLeadership #CreativeTech #InnovationDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 2
+      "hashtags": "#AI #ProductManagement #AIInnovation #TechProductivity #CodingAI #ProductTech #AITools #InnovationStrategy #TechLeadership #AIWorkflow",
+      "textureIndex": 12
+    },
+    {
+      "title": "Rogue agents and shadow AI: Why VCs are betting big on AI security",
+      "description": "Misaligned agents are just one layer of the AI security challenge that startup Witness AI is trying to solve. It detects employee use of unapproved tools, blocking attacks, and ensuring compliance.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/19/rogue-agents-and-shadow-ai-why-vcs-are-betting-big-on-ai-security/"
+        }
+      ],
+      "format": "guide",
+      "subcategory": "instructional",
+      "hooks": [
+        "AI Security: The Silent Battle in Enterprise Tech",
+        "Invisible Threats: When AI Goes Rogue",
+        "VCs' Billion-Dollar Bet on AI Protection"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use interactive risk assessment graphic for AI security",
+            "Include real-time polling about reader's AI security concerns",
+            "Embed short explainer video about shadow AI risks"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Optimize with SEO-friendly headings about AI security trends",
+            "Include data visualizations of AI security investment patterns",
+            "Create downloadable AI security checklist as content upgrade"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Use professional tone with precise enterprise security language",
+            "Include quotes from VC investors and security experts",
+            "Add LinkedIn-specific call-to-action for professional networking"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dark cyberpunk palette with electric blue/deep charcoal, layered translucent security interface graphics, dynamic grid compositions suggesting network complexity, motion-tracked typography revealing hidden data patterns, technical but cinematic aesthetic inspired by Blade Runner design language"
+      },
+      "exampleOutline": [
+        "The Rise of Shadow AI: Understanding the Invisible Threat",
+        "Enterprise Risk Landscape: How Unauthorized AI Tools Emerge",
+        "Witness AI's Approach: Detection, Prevention, Compliance",
+        "VC Investment Trends: Why Security is the Next Frontier",
+        "Actionable Strategies for Protecting Your AI Ecosystem"
+      ],
+      "hashtags": "#AISecurity #EnterpriseAI #TechInnovation #CyberSecurity #VentureCapital #AIEthics #TechTrends #AICompliance #StartupInnovation #FutureOfWork",
+      "textureIndex": 6
+    },
+    {
+      "title": "Well, there goes the metaverse!",
+      "description": "The metaverse is on its last legs as VR is eclipsed by AI. But that's not the only thing that went wrong for Meta's VR ambitions.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/19/well-there-goes-the-metaverse/"
+        }
+      ],
+      "format": "listicle",
+      "subcategory": "explanatory",
+      "hooks": [
+        "Metaverse Meltdown: 5 Reasons VR Just Crashed",
+        "Why Meta's Virtual Dream Is Falling Apart",
+        "The Death of VR: An Insider's Autopsy"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use numbered emojis for each list item",
+            "Include personal anecdote about VR experience",
+            "Add real-time poll for reader engagement"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Optimize headline for SEO with specific numbers",
+            "Include expert quotes to add credibility",
+            "Add inline graphics for each list point"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame listicle as professional industry analysis",
+            "Include data visualizations and charts",
+            "Target tech leadership and innovation professionals"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast digital deconstruction aesthetic. Glitchy VR interface fragments, neon blue/red color palette, fragmented typography overlaying abstract tech landscape. Parallax scrolling effect with dissolving 3D elements. Reference: Cyberpunk 2077 UI meets digital decay graphics."
+      },
+      "exampleOutline": [
+        "Intro: The Metaverse's Spectacular Collapse",
+        "Context: How VR Promised Everything",
+        "5 Critical Failure Points in Meta's Strategy",
+        "Future of Immersive Technology",
+        "Call to Action: What Innovators Should Do Now"
+      ],
+      "hashtags": "#Metaverse #VirtualReality #TechTrends #AIRevolution #FutureOfTech #InnovationStrategy #DigitalTransformation #TechCrisis #MetaFails #AIEconomy",
+      "textureIndex": 10
+    },
+    {
+      "title": "Claude Code for product managers: research, writing, context libraries, custom to-do system, and more | Teresa Torres",
+      "description": "Watch now | &#127897;&#65039; How a product coach built a personalized productivity system using Claude Code in the terminal",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/claude-code-for-product-managers"
+        }
+      ],
+      "format": "case-study",
+      "subcategory": "case-study-deep-dive",
+      "hooks": [
+        "AI Transforms Product Management Workflow Overnight",
+        "One PM's Radical Productivity Hack Revealed",
+        "Terminal Magic: Claude Code Reinvents Workflows"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use real-time screenshot annotations of terminal workflow",
+            "Include interactive code snippets for reader engagement",
+            "Add personal commentary on learning process"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Create SEO-friendly headings breaking down each workflow step",
+            "Include comparative productivity metrics before/after implementation",
+            "Embed technical diagrams explaining Claude Code integration"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Highlight professional impact and time-saving metrics",
+            "Include quotes from potential use cases",
+            "Target executive and product leadership audience"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dark mode terminal aesthetic with neon code highlights, dynamic split-screen showing workflow transformation, futuristic sans-serif typography, subtle motion graphics revealing code execution, cyberpunk-inspired color palette of deep blues, electric greens, and sharp whites"
+      },
+      "exampleOutline": [
+        "Section 1: Productivity Pain Point Introduction",
+        "Section 2: Traditional PM Workflow Limitations",
+        "Section 3: Claude Code Technical Implementation",
+        "Section 4: Breakthrough Productivity Insights",
+        "Section 5: Future of AI-Powered Product Management"
+      ],
+      "hashtags": "#AIProductivity #ProductManagement #ClaudioCode #AIWorkflow #TechInnovation #ProductTech #AITools #WorkflowOptimization #CodeProductivity #TechLeadership",
+      "textureIndex": 3
+    },
+    {
+      "title": "10 things I learned from burning myself out with AI coding agents",
+      "description": "10 things I learned from burning myself out with AI coding agents",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/information-technology/2026/01/10-things-i-learned-from-burning-myself-out-with-ai-coding-agents/"
+        }
+      ],
+      "format": "article",
+      "subcategory": "visionary",
+      "hooks": [
+        "AI Coding Burnout: My Brutal Journey into Automation",
+        "When AI Agents Pushed Me Past My Limits",
+        "Coding's Dark Side: My Unfiltered AI Experiment"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use real-time annotation screenshots of coding process",
+            "Include interactive code snippets showing failure points",
+            "Create a personal narrative thread throughout the article"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Optimize SEO with technical keywords about AI coding",
+            "Include data visualizations of productivity metrics",
+            "Add clear section headers for scannability"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame insights as professional development lessons",
+            "Include industry-relevant statistics about AI coding productivity",
+            "Use a more formal, reflective tone for professional audience"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dark mode tech aesthetic with glitch-inspired graphics, deep blues and electric teals, fractured typography suggesting system breakdown, motion graphics simulating code compilation errors, minimalist tech-noir mood board references"
+      },
+      "exampleOutline": [
+        "Introduction: Personal AI Coding Experiment Setup",
+        "The Initial Promise: What I Expected vs Reality",
+        "5 Specific Burnout Moments & Technical Breakdowns",
+        "Psychological Impact of Continuous AI Interaction",
+        "Lessons Learned & Future Recommendations"
+      ],
+      "hashtags": "#AICodeing #TechBurnout #AIProductivity #SoftwareDevelopment #AIAgents #CodingInsights #TechMental #AIWorkflow #ProgrammerLife #TechExperiment",
+      "textureIndex": 0
     }
   ]
 }

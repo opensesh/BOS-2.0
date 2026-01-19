@@ -1,392 +1,331 @@
 {
   "type": "short-form",
-  "date": "2026-01-19T16:21:44.138Z",
+  "date": "2026-01-19T16:29:50.656Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Well, there goes the metaverse!",
+      "description": "The metaverse is on its last legs as VR is eclipsed by AI. But that's not the only thing that went wrong for Meta's VR ambitions.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover/8-tips-for-designers-building-branded-templates-in-figma-buz"
-        }
-      ],
-      "format": "carousel",
-      "subcategory": "carousel",
-      "hooks": [
-        "Design Templates That Scale Without Breaking Brand",
-        "Figma Secrets: Build Flexible Brand Templates Now",
-        "Unlock Self-Serve Design Without Losing Control"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick cuts between template examples",
-            "Include dynamic text overlays showing template transformations",
-            "Start with a provocative before/after visual"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "Design each slide as a standalone visual story",
-            "Use consistent color palette across slides",
-            "Include clear, readable text on each slide"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Create rapid-fire template demonstration sequence",
-            "Use voiceover to explain key insights",
-            "Include screen recording of Figma workflow"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Add more technical depth to template explanation",
-            "Include professional case study references",
-            "Use more corporate-oriented visual language"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, experimental typography with high-contrast color palette. Dynamic geometric shapes representing template flexibility. Gradient overlays suggesting transformation. Modern tech-inspired aesthetic with clean, sharp edges. Motion graphics showing template adaptability. Color scheme: deep blues, electric teals, bright oranges."
-      },
-      "exampleOutline": [
-        "Slide 1: Attention-grabbing hook with provocative template visual",
-        "Slide 2: Problem statement - brand consistency vs. flexibility",
-        "Slide 3-6: 4 core template design principles",
-        "Slide 7: Key strategic insight/takeaway",
-        "Slide 8: Call-to-action and community engagement prompt"
-      ],
-      "hashtags": "#FigmaDesign #BrandTemplates #AIDesign #CreativeTools #DesignSystem #ProductivityHacks #DesignTips #CreativeTech #WorkflowOptimization #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/12512667/pexels-photo-12512667.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 8
-    },
-    {
-      "title": "Moxie Marlinspike has a privacy-conscious alternative to ChatGPT",
-      "description": "Confer is designed to look and feel like ChatGPT or Claude, but your conversations can't be used for training or advertising.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2026/01/18/moxie-marlinspike-has-a-privacy-conscious-alternative-to-chatgpt/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2026/01/16/chatgpt-users-are-about-to-get-hit-with-targeted-ads/"
-        },
-        {
-          "name": "Cryptorank",
-          "url": "https://cryptorank.io/news/feed/69d58-moxie-marlinspike-privacy-ai-confer"
-        },
-        {
-          "name": "Time",
-          "url": "https://time.com/7346534/signal-confer-ai-moxie-marlinspike/"
-        },
-        {
-          "name": "Privacytutor",
-          "url": "https://privacytutor.substack.com/p/the-signal-creator-just-launched"
-        },
-        {
-          "name": "Privacyguides",
-          "url": "https://www.privacyguides.org/livestreams/2026/01/16/signal-founder-announces-private-ai-alternative-privacy-services-form-a-privacy-alliance-threema-gets-acquired-again-and-more/"
-        }
-      ],
-      "format": "carousel",
-      "subcategory": "carousel",
-      "hooks": [
-        "Privacy AI: Signal Creator's ChatGPT Killer Is Here",
-        "Moxie's New AI Won't Sell Your Secrets",
-        "The Private ChatGPT Alternative You Need Now"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use dynamic transitions between carousel slides",
-            "Include quick visual privacy metaphors",
-            "Add subtle motion graphics explaining key points"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must have provocative visual hook",
-            "Use contrasting colors for data privacy visuals",
-            "Design slides to scroll smoothly and tell progressive story"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Condense carousel content into rapid-fire narrative",
-            "Use text overlays to highlight key privacy points",
-            "Create energetic pacing with quick cuts"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Add more technical depth to carousel",
-            "Include professional credibility markers",
-            "Frame as thought leadership content"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast cyberpunk-inspired palette with deep blues and electric teals. Geometric typography with subtle glitch effects. Minimalist icon design representing data privacy. Semi-transparent layers suggesting information boundaries. Clean, technical aesthetic with hint of rebellious energy."
-      },
-      "exampleOutline": [
-        "Slide 1: Bold Hook + Moxie Marlinspike Portrait",
-        "Slide 2: ChatGPT Privacy Problem Visualization",
-        "Slide 3: Confer AI Core Value Proposition",
-        "Slide 4: Technical Privacy Mechanism Overview",
-        "Slide 5: Call-to-Action + Signup/Learn More"
-      ],
-      "hashtags": "#PrivacyAI #AIEthics #TechPrivacy #ConferAI #MoxieMarlinspike #AIInnovation #PrivacyFirst #TechTrends #AITools #DataProtection",
-      "pexelsImageUrl": "https://images.pexels.com/photos/17483093/pexels-photo-17483093.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Theaiinsider",
-          "url": "https://theaiinsider.tech/2025/12/12/figma-introduces-new-ai-powered-image-editing-suite-to-streamline-design-workflows/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Oreateai",
-          "url": "http://oreateai.com/blog/figmas-new-ai-image-editing-a-game-changer-for-designers/566d1a934f7f96a378a7f4e634c395b4"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        }
-      ],
-      "format": "reel",
-      "subcategory": "reel",
-      "hooks": [
-        "Figma just dropped 3 AI editing tools that change EVERYTHING 🔥",
-        "Design faster: Figma's secret AI image editing weapons revealed",
-        "Watch how AI is transforming image editing in seconds 👀"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick screen recordings showing actual tool functionality",
-            "Overlay text explaining key features during demonstration",
-            "Include dynamic transitions between tool demonstrations"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must showcase dramatic before/after transformation",
-            "Use infographic-style slides explaining each tool's unique capability",
-            "Final slide includes direct call-to-action and tool link"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with provocative question about design challenges",
-            "Use rapid-cut editing to maintain high energy",
-            "Include clear screen recordings with cursor movements"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Add professional context about workflow efficiency",
-            "Include subtle data visualization of time savings",
-            "Maintain more technical, analytical tone"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast cyberpunk-inspired color palette (deep blues, electric teals, neon accents). Dynamic motion graphics with glitch/tech transitions. Bold sans-serif typography with slight digital distortion. Futuristic UI overlay animations showcasing tool interactions."
-      },
-      "exampleOutline": [
-        "Hook: Provocative statement about AI image editing revolution",
-        "Problem: Current design workflow limitations",
-        "Solution: Three groundbreaking Figma AI tools",
-        "Demonstration: Quick tool functionality showcase",
-        "Call-to-Action: Try tools now"
-      ],
-      "hashtags": "#FigmaAI #DesignTech #AIDesign #CreativeTech #ImageEditing #DesignInnovation #AITools #ProductivityHack #UXDesign #CreativeAI",
-      "pexelsImageUrl": "https://images.pexels.com/photos/29817566/pexels-photo-29817566.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 3
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/19/well-there-goes-the-metaverse/"
         }
       ],
       "format": "quick-image",
       "subcategory": "quick-image",
       "hooks": [
-        "Design Faster: Figma Buzz's Secret Weapon 🚀",
-        "3 Game-Changing Features Designers Can't Ignore",
-        "Figma Just Leveled Up Your Creative Workflow"
+        "VR's Epic Fail: Why Meta's Metaverse Crashed",
+        "The Metaverse: Dead on Arrival?",
+        "AI Just Killed the Virtual Reality Dream"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick, dynamic transitions between feature highlights",
-            "Include text overlays that pop in sync with motion",
-            "Create a rhythm with fast-paced visual cuts"
+            "Use quick-cut transitions between tech visuals",
+            "Incorporate glitch effects to represent tech breakdown",
+            "Add dynamic text overlays highlighting key points"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide must have a bold, eye-catching graphic",
-            "Use slide transitions that reveal features sequentially",
-            "Include concise, punchy text on each slide"
+            "First slide: Provocative headline graphic",
+            "Use progressive reveal of metaverse failure points",
+            "Final slide: Clear takeaway or future prediction"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with a pattern-interrupt visual",
-            "Use screen recordings showing actual Figma Buzz features",
-            "Add energetic background music to maintain engagement"
+            "Start with unexpected visual metaphor",
+            "Use rapid-fire stat callouts",
+            "End with punchy commentary on tech evolution"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Frame features as professional productivity enhancers",
-            "Include a more detailed explanation of technical benefits",
-            "Use a more polished, corporate-friendly visual style"
+            "Frame as thought leadership insight",
+            "Include professional data visualization",
+            "Add nuanced industry context"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "Cyberpunk-meets-minimalist aesthetic. Dark background with electric blue/neon accent colors. Fragmented typography suggesting technological breakdown. Glitch art elements. Sharp geometric shapes representing digital disruption. High contrast, angular composition with tech-deconstruction visual metaphors."
+      },
+      "exampleOutline": [
+        "Provocative Opening: Metaverse Collapse Headline",
+        "Quick Context: Meta's Massive Investment",
+        "Key Failure Points: AI vs VR Showdown",
+        "Unexpected Insight: Technology's Brutal Evolution",
+        "Future Prediction: What Comes Next"
+      ],
+      "hashtags": "#Metaverse #AI #TechTrends #VirtualReality #FutureOfTech #Innovation #TechFail #AIRevolution #DigitalTransformation #TechInsights",
+      "textureIndex": 4
+    },
+    {
+      "title": "Rogue agents and shadow AI: Why VCs are betting big on AI security",
+      "description": "Misaligned agents are just one layer of the AI security challenge that startup Witness AI is trying to solve. It detects employee use of unapproved tools, blocking attacks, and ensuring compliance.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/19/rogue-agents-and-shadow-ai-why-vcs-are-betting-big-on-ai-security/"
+        }
+      ],
+      "format": "carousel",
+      "subcategory": "carousel",
+      "hooks": [
+        "AI's Wild West: Security Threats Lurking Everywhere",
+        "Rogue Agents: The Silent AI Killer",
+        "When AI Tools Go Renegade: Insider Risks"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick cuts between slides to maintain energy",
+            "Add dynamic text animations for each key point",
+            "Include a provocative voiceover teasing the security risks"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have a striking visual metaphor for AI security",
+            "Use consistent color palette across all slides",
+            "Design each slide as a mini-infographic with clear hierarchy"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Condense carousel to most dramatic 3-4 slides",
+            "Add dramatic background music",
+            "Include quick text overlays highlighting key risks"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add more technical depth to carousel content",
+            "Include credible source citations",
+            "Use more professional, data-driven visual language"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "Cyberpunk-inspired dark color palette with electric blue and neon green accents. Fractured, glitch-like typography suggesting system vulnerability. Geometric shapes representing fragmented digital networks. High-contrast imagery with shadowy silhouettes and digital interference textures. Motion graphics suggesting system instability and hidden threats."
+      },
+      "exampleOutline": [
+        "Slide 1: Provocative hook with striking visual metaphor",
+        "Slide 2: Current AI security landscape overview",
+        "Slide 3: Specific risks of uncontrolled AI tools",
+        "Slide 4: Witness AI's innovative solution approach",
+        "Slide 5: Call-to-action and further exploration"
+      ],
+      "hashtags": "#AISecurity #TechInnovation #CyberRisk #AIEthics #StartupTech #CyberSecurity #AICompliance #TechTrends #InnovationSecurity #AIRisks",
+      "textureIndex": 3
+    },
+    {
+      "title": "Looking ahead to 2026: What&#8217;s next for Startup Battlefield 200",
+      "description": "See what to expect for Startup Battlefield 200 in 2026, the ultimate startup pitch competition on the global stage at TechCrunch Disrupt. Join the mailing list to be the first to know when applications drop.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/19/looking-ahead-to-2026-whats-next-for-startup-battlefield-200/"
+        }
+      ],
+      "format": "reel",
+      "subcategory": "reel",
+      "hooks": [
+        "Startup Battlefield 200: The Future Starts Here 🚀",
+        "2026's Most Epic Startup Competition Revealed",
+        "Tech's Next Battlefield: Are You Ready?"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic motion graphics to simulate tech innovation",
+            "Create fast-paced transitions between startup scenes",
+            "Include animated text overlays highlighting key competition details"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have provocative statistic about startup ecosystem",
+            "Use progressive visual storytelling across slides",
+            "End with clear application/mailing list CTA slide"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Open with high-energy startup pitch clip",
+            "Use quick-cut editing style",
+            "Include subtitles for silent viewing"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame content as professional opportunity",
+            "Use more data-driven narrative approach",
+            "Highlight potential career/networking benefits"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast color palette with electric blues and neon accents, geometric typography with sharp angles, dynamic motion graphics showing feature transformations, minimal tech-inspired aesthetic with futuristic UI elements, integrate Figma's brand colors subtly"
+        "description": "Futuristic cyberpunk color palette with electric blues and neon accents, dynamic geometric compositions, holographic text overlays, rapid-transition motion graphics simulating technological acceleration, minimalist yet energetic design aesthetic"
       },
       "exampleOutline": [
-        "Bold Visual Hook: Graphic showing design speed boost",
-        "Quick Problem Statement: Design workflow bottlenecks",
-        "Feature Breakdown: 3 key Figma Buzz innovations",
-        "Rapid Impact Insight: How these features change the game",
-        "Call-to-Action: Try Figma Buzz Now"
+        "Hook: Explosive startup competition reveal",
+        "Context: Global tech innovation landscape",
+        "Core Content: Startup Battlefield 200 unique features",
+        "Key Insight: Why this matters for entrepreneurs",
+        "CTA: Join mailing list, applications coming soon"
       ],
-      "hashtags": "#FigmaBuzz #DesignTips #CreativeTech #AIDesign #ProductivityHack #DesignTools #CreativeWorkflow #UXDesign #DigitalDesign #InnovationTech",
-      "pexelsImageUrl": "https://images.pexels.com/photos/13729933/pexels-photo-13729933.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "hashtags": "#StartupBattlefield #TechInnovation #Entrepreneurship #TechDisrupt #StartupLife #FutureOfTech #InnovationCompetition #TechCrunch #Startups2026 #EntrepreneurshipOpportunity",
       "textureIndex": 0
     },
     {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
+      "title": "BioticsAI, Battlefield 2023, gains FDA approval for its AI-powered fetal ultrasound product",
+      "description": "TechCrunch Disrupt Battlefield 2023 winner, BioticsAI, announced on Monday that it has received FDA clearance for its AI software that helps detect fetal abnormalities in ultrasound images.",
       "starred": false,
       "sources": [
         {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/19/biotics-ai-battlefield-2023-gains-fda-approval-for-its-ai-powered-fetal-ultrasound-product/"
         }
       ],
       "format": "story",
       "subcategory": "story",
       "hooks": [
-        "Design Jobs: Your Dream Career Starts Here 🚀",
-        "Unlock the Secret to Landing Top Design Roles",
-        "San Francisco's Hottest Design Job Revealed"
+        "AI is revolutionizing medical imaging forever 🩺",
+        "Breakthrough: Detecting baby health with AI magic 👶",
+        "Tech meets medicine: Saving tiny lives"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick, dynamic cuts between job details",
-            "Include motion graphics highlighting key skills",
-            "Add text overlays with critical job requirements"
+            "Use medical/tech split-screen transitions",
+            "Include animated ultrasound graphic overlays",
+            "Quick cuts between AI interface and medical imagery"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "Each slide focuses on one job aspect",
-            "Use consistent visual branding across slides",
-            "Create a narrative flow between carousel images"
+            "First slide: Dramatic before/after comparison",
+            "Use infographic-style slides with data visualization",
+            "Include clean, minimal medical iconography"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Compress key insights into 60-second narrative",
-            "Use professional but energetic voiceover",
-            "Include quick visual portfolio snippets"
+            "Start with unexpected medical technology montage",
+            "Use voiceover explaining complex technology simply",
+            "Include human-centered storytelling moment"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Provide more detailed professional context",
-            "Include specific skill requirements",
-            "Link to full job description"
+            "Frame as professional medical technology breakthrough",
+            "Include expert quote or statistical validation",
+            "Emphasize potential patient impact"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, tech-forward aesthetic with San Francisco design scene inspiration. High-contrast color palette (electric blue, charcoal gray, white). Dynamic typography with angular layouts. Minimal illustrations of design tools and urban landscapes. Subtle motion graphics showing design process. Clean, modern Silicon Valley design language."
+        "description": "Futuristic medical aesthetic with soft blue/white color palette, holographic AI overlay elements, clean sans-serif typography, subtle motion graphics simulating medical scanning, minimalist technical illustration style with organic curves"
       },
       "exampleOutline": [
-        "Section 1: Attention-grabbing job title reveal",
-        "Section 2: What makes Moniker unique",
-        "Section 3: Key role responsibilities",
-        "Section 4: Required skills and qualifications",
-        "Section 5: How to apply/next steps"
+        "Section 1: Dramatic AI breakthrough reveal",
+        "Section 2: Current medical imaging challenges",
+        "Section 3: How BioticsAI technology works",
+        "Section 4: Potential lives impacted",
+        "Section 5: Call to learn more/follow journey"
       ],
-      "hashtags": "#DesignJobs #SanFranciscoDesign #CareerOpportunity #CreativeRole #DesignTalent #AIDesign #BrandIdentity #ProductDesign #HiringNow #DesignCommunity",
-      "pexelsImageUrl": "https://images.pexels.com/photos/28428588/pexels-photo-28428588.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 1
+      "hashtags": "#AI #MedicalTechnology #Healthcare #Innovation #FutureMedicine #TechDisrupt #AIInHealthcare #MedicalAI #Ultrasound #WomenHealth",
+      "textureIndex": 12
+    },
+    {
+      "title": "Sequoia to invest in Anthropic, breaking VC taboo on backing rivals: FT",
+      "description": "Sequoia Capital is reportedly joining a blockbuster funding round for Anthropic, the AI startup behind Claude, according to the Financial Times. It&#8217;s a move sure to turn heads in Silicon Valley. Why? Because venture capital firms have historically avoided backing competing companies in the same sector, preferring to place their bets on a single winner. [&#8230;]",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/18/sequoia-to-invest-in-anthropic-breaking-vc-taboo-on-backing-rivals-ft/"
+        }
+      ],
+      "format": "reel",
+      "subcategory": "reel",
+      "hooks": [
+        "Sequoia breaks VC rules: Investing in AI rivals?",
+        "Silicon Valley's boldest bet just dropped 🚀",
+        "When venture capitalists play chess, not checkers"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick dynamic transitions between key points",
+            "Add text overlays highlighting surprising stats",
+            "Include subtle motion graphics to maintain energy"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have provocative visual headline",
+            "Use infographic-style slides for complex information",
+            "Progressive reveal of key insights across slides"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected visual pattern interrupt",
+            "Use faster pacing than traditional content",
+            "Include clear visual metaphors for complex concepts"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add more analytical, professional tone",
+            "Include potential industry implications",
+            "Reference specific market context"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech-inspired color palette (deep blues/electric oranges), dynamic geometric transitions, futuristic typography with slight glitch effects, abstract data visualization elements, minimalist tech aesthetic with unexpected visual interrupts"
+      },
+      "exampleOutline": [
+        "Shocking VC Investment Trend Revealed",
+        "Traditional Investment Rules Breaking Down",
+        "Anthropic vs Existing Portfolio Dynamics",
+        "What This Means for AI Innovation",
+        "Future of Venture Capital Teaser"
+      ],
+      "hashtags": "#VentureCapital #AIInnovation #TechInvesting #StartupEcosystem #AnthropicAI #SequoiaCapital #AIStartups #InvestmentStrategy #TechTrends #FutureOfTech",
+      "textureIndex": 4
     }
   ]
 }
