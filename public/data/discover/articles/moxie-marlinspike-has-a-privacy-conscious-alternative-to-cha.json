@@ -1,17 +1,17 @@
 {
   "id": "moxie-marlinspike-has-a-privacy-conscious-alternative-to-cha",
   "slug": "moxie-marlinspike-has-a-privacy-conscious-alternative-to-cha",
-  "title": "Signal Founder Moxie Marlinspike Launches Confer: A Privacy-First AI Challenger to ChatGPT",
-  "publishedAt": "2026-01-18T16:14:45.942Z",
-  "generatedAt": "2026-01-18T16:14:45.942Z",
-  "totalSources": 13,
+  "title": "Signal Co-Founder Moxie Marlinspike Launches Confer: A Privacy-First AI Challenger to ChatGPT",
+  "publishedAt": "2026-01-19T16:20:13.250Z",
+  "generatedAt": "2026-01-19T16:20:13.250Z",
+  "totalSources": 12,
   "sections": [
     {
       "id": "section-0",
       "paragraphs": [
         {
           "id": "para-0-0",
-          "content": "Moxie Marlinspike, the cryptographic expert behind Signal and WhatsApp protocols, unveiled Confer on January 18, 2026, as an end-to-end encrypted AI chatbot alternative to ChatGPT. Confer processes AI computations on cloud servers while ensuring user inputs, outputs, and keys remain inaccessible to the provider through Trusted Execution Environments and protected hardware. This launch addresses growing concerns over AI data exposure, where mainstream tools like ChatGPT store logs even after deletion, as seen in a May 2025 court order.",
+          "content": "Moxie Marlinspike, the cryptographer behind Signal and WhatsApp's encryption protocol, has unveiled Confer, an end-to-end encrypted AI chatbot designed as a direct alternative to ChatGPT. Launched in December 2025, Confer ensures servers never access or retain user conversations, preventing data use for training models or targeted advertising. This approach mimics ChatGPT's familiar interface while deploying secure enclaves for cloud-based AI inference accessible only to users.",
           "citations": [
             {
               "primarySource": {
@@ -25,9 +25,9 @@
               "additionalSources": [
                 {
                   "id": "source-2",
-                  "name": "mezha",
-                  "url": "https://mezha.net/eng/bukvy/confer-ai-assistant-prioritizes-user-privacy-with-secure-encryption/",
-                  "favicon": "https://www.google.com/s2/favicons?domain=mezha.net&sz=32",
+                  "name": "techcrunch",
+                  "url": "https://techcrunch.com/2026/01/18/threads-edges-out-x-in-daily-mobile-users-new-data-shows/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
                   "title": "Moxie Marlinspike has a privacy-conscious alternative to ChatGPT"
                 }
               ]
@@ -36,23 +36,23 @@
         },
         {
           "id": "para-0-1",
-          "content": "Confer offers a free tier with basic open-source models and a paid plan at $34.99 per month for advanced models and unlimited access, positioning it as pricier than ChatGPT Plus at $20. The tool supports device syncing without compromising encryption, treating conversations like secure Signal messages. Early coverage praises its potential to shift AI toward privacy by design amid ChatGPT's traffic share dropping to 64.5% from 86.7% yearly.",
+          "content": "Confer's free tier caps users at 20 messages per day and five active chats, with a paid plan at $35 monthly unlocking unlimited access, advanced models, and personalization—steeper than ChatGPT Plus or Claude Pro at $20 each. Marlinspike warns that mainstream AI chats resemble group conversations involving executives, hackers, advertisers, and governments, despite users' perceptions of privacy. The service builds on his Signal legacy to address rising concerns over AI data practices, including OpenAI's ad experiments.",
           "citations": [
             {
               "primarySource": {
                 "id": "source-4",
-                "name": "jasonhowell",
-                "url": "https://jasonhowell.substack.com/p/openai-and-anthropic-battle-for-health",
-                "favicon": "https://www.google.com/s2/favicons?domain=jasonhowell.substack.com&sz=32",
+                "name": "cryptorank",
+                "url": "https://cryptorank.io/news/feed/69d58-moxie-marlinspike-privacy-ai-confer",
+                "favicon": "https://www.google.com/s2/favicons?domain=cryptorank.io&sz=32",
                 "title": "Moxie Marlinspike has a privacy-conscious alternative to ChatGPT"
               },
               "additionalCount": 1,
               "additionalSources": [
                 {
                   "id": "source-5",
-                  "name": "androidheadlines",
-                  "url": "https://www.androidheadlines.com/2026/01/signal-founder-launches-private-ai-assistant-confer.html",
-                  "favicon": "https://www.google.com/s2/favicons?domain=www.androidheadlines.com&sz=32",
+                  "name": "time",
+                  "url": "https://time.com/7346534/signal-confer-ai-moxie-marlinspike/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=time.com&sz=32",
                   "title": "Moxie Marlinspike has a privacy-conscious alternative to ChatGPT"
                 }
               ]
@@ -63,27 +63,27 @@
     },
     {
       "id": "section-1",
-      "title": "Confer's Encryption Model Mirrors Signal's Secure Foundations",
+      "title": "Confer's Encryption Backbone and Usage Limits",
       "paragraphs": [
         {
           "id": "para-1-0",
-          "content": "Confer encrypts all user interactions end-to-end, making data unreadable even with physical device access or legal subpoenas, via keys stored in hardware-protected environments. Marlinspike likened typical ChatGPT use to a \"group chat with executives, employees, hackers, advertisers, and governments,\" highlighting plaintext vulnerabilities. The system uses Noise Pipes to encrypt prompts directly into confidential VMs, with remote attestation verifying server integrity without exposing user data.",
+          "content": "Confer employs WebAuthn passkeys for authentication, optimized for mobile and macOS Sequoia, with password manager workarounds for Windows and Linux users. All inference runs in trusted execution environments with remote attestation to verify integrity, using open-weight models tailored to tasks without user selection. This setup guarantees no conversation storage or leaks, even under legal demands, contrasting sharply with competitors' 30-day retention policies.",
           "citations": [
             {
               "primarySource": {
-                "id": "source-3",
-                "name": "time",
-                "url": "https://time.com/7346534/signal-confer-ai-moxie-marlinspike/",
-                "favicon": "https://www.google.com/s2/favicons?domain=time.com&sz=32",
+                "id": "source-6",
+                "name": "privacyguides",
+                "url": "https://www.privacyguides.org/livestreams/2026/01/16/signal-founder-announces-private-ai-alternative-privacy-services-form-a-privacy-alliance-threema-gets-acquired-again-and-more/",
+                "favicon": "https://www.google.com/s2/favicons?domain=www.privacyguides.org&sz=32",
                 "title": "Moxie Marlinspike has a privacy-conscious alternative to ChatGPT"
               },
               "additionalCount": 1,
               "additionalSources": [
                 {
-                  "id": "source-6",
-                  "name": "privacyguides",
-                  "url": "https://www.privacyguides.org/livestreams/2026/01/16/signal-founder-announces-private-ai-alternative-privacy-services-form-a-privacy-alliance-threema-gets-acquired-again-and-more/",
-                  "favicon": "https://www.google.com/s2/favicons?domain=www.privacyguides.org&sz=32",
+                  "id": "source-3",
+                  "name": "techcrunch",
+                  "url": "https://techcrunch.com/2026/01/16/chatgpt-users-are-about-to-get-hit-with-targeted-ads/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
                   "title": "Moxie Marlinspike has a privacy-conscious alternative to ChatGPT"
                 }
               ]
@@ -92,7 +92,7 @@
         },
         {
           "id": "para-1-1",
-          "content": "Unlike data-hungry AI firms, Confer avoids storing or training on user inputs, enabling \"smart math\" for private cloud inference on open-source models tailored to tasks. Users access it like a therapist or coding partner without confession to a \"data lake\" exploited by employers or ads. This approach combines open-source privacy with closed-model safeguards, potentially benefiting AI safety.",
+          "content": "The free model's responses echo early ChatGPT styles, such as \"It's not X, it's Y\" phrasing, though lacking some dynamism compared to top proprietary options. Paid subscribers gain access to superior models on benchmarks like MMLU and GSM8K, alongside personalization features. Privacy advocates praise this as a \"clean break\" from surveillance-driven AI paradigms.",
           "citations": [
             {
               "primarySource": {
@@ -106,9 +106,9 @@
               "additionalSources": [
                 {
                   "id": "source-8",
-                  "name": "techcrunch",
-                  "url": "https://techcrunch.com/2026/01/18/how-yc-backed-bucket-robotics-survived-its-first-ces/",
-                  "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
+                  "name": "findarticles",
+                  "url": "https://www.findarticles.com/moxie-marlinspike-unveils-private-chatgpt-rival/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.findarticles.com&sz=32",
                   "title": "Moxie Marlinspike has a privacy-conscious alternative to ChatGPT"
                 }
               ]
@@ -119,18 +119,18 @@
     },
     {
       "id": "section-2",
-      "title": "Market Challenges and Expert Praise for Confer's Privacy Push",
+      "title": "Privacy Advocates Champion Confer Amid AI Data Alarms",
       "paragraphs": [
         {
           "id": "para-2-0",
-          "content": "Experts hail Confer as \"one of the most important things happening in AI right now,\" predicting ecosystem effects like Signal's encryption normalization, pressuring giants amid ad plans and log retention. Privacy advocates note its speed outperforms rivals like Proton Lumo while maintaining encryption, though some question true end-to-end status without homomorphic encryption. TIME critiques the free tier's early ChatGPT-style responses lacking \"spark,\" but praises its version-one features.",
+          "content": "PrivacyGuides.org hailed Confer as \"the most private on the market\" during a January 16, 2026 livestream, linking it to trends like a new privacy services alliance involving Windscribe and Kagi. Boing Boing described it as end-to-end encrypted AI chat combating surveillance, leveraging Marlinspike's cryptographic reputation. Forum discussions on PrivacyGuides note its speed advantages over rivals like Proton Lumo despite encryption overhead.",
           "citations": [
             {
               "primarySource": {
                 "id": "source-9",
-                "name": "privacytutor",
-                "url": "https://privacytutor.substack.com/p/the-signal-creator-just-launched",
-                "favicon": "https://www.google.com/s2/favicons?domain=privacytutor.substack.com&sz=32",
+                "name": "careeraheadonline",
+                "url": "https://careeraheadonline.com/moxie-marlinspike-has-a-privacy-conscious-alternative-to-chatgpt/",
+                "favicon": "https://www.google.com/s2/favicons?domain=careeraheadonline.com&sz=32",
                 "title": "Moxie Marlinspike has a privacy-conscious alternative to ChatGPT"
               },
               "additionalCount": 1,
@@ -138,7 +138,7 @@
                 {
                   "id": "source-10",
                   "name": "aol",
-                  "url": "https://www.aol.com/finance/ex-openai-researcher-study-million-110000049.html",
+                  "url": "https://www.aol.com/articles/encrypted-chatbot-signals-founder-223731533.html",
                   "favicon": "https://www.google.com/s2/favicons?domain=www.aol.com&sz=32",
                   "title": "Moxie Marlinspike has a privacy-conscious alternative to ChatGPT"
                 }
@@ -148,23 +148,23 @@
         },
         {
           "id": "para-2-1",
-          "content": "Confer enters a competitive field with Gemini at 21.5% AI traffic share, up from 5.7%, as privacy alliances form among tools like Windscribe and Kagi. Analysts foresee broader adoption if performance improves, shielding users from corporate data extraction normalized in AI. Its open-source design and Marlinspike's legacy position it to influence industry standards on secure AI compute.",
+          "content": "Marlinspike positions Confer to replicate Signal's industry influence, potentially sparking a \"race to the top\" in user privacy against Big Tech dominance. TIME suggests it could reshape AI ecosystems by prioritizing trust as a premium, even as ChatGPT holds 64.5% market traffic amid Gemini's rise. Critics flag the free tier's limitations and higher costs but see version-one promise in its architectural innovations.",
           "citations": [
             {
               "primarySource": {
                 "id": "source-11",
-                "name": "soylentnews",
-                "url": "https://soylentnews.org/article.pl?sid=26%2F01%2F16%2F0510252",
-                "favicon": "https://www.google.com/s2/favicons?domain=soylentnews.org&sz=32",
+                "name": "privacytutor",
+                "url": "https://privacytutor.substack.com/p/the-signal-creator-just-launched",
+                "favicon": "https://www.google.com/s2/favicons?domain=privacytutor.substack.com&sz=32",
                 "title": "Moxie Marlinspike has a privacy-conscious alternative to ChatGPT"
               },
               "additionalCount": 1,
               "additionalSources": [
                 {
                   "id": "source-12",
-                  "name": "aol",
-                  "url": "https://www.aol.com/articles/ads-coming-chatgpt-conversations-201107466.html",
-                  "favicon": "https://www.google.com/s2/favicons?domain=www.aol.com&sz=32",
+                  "name": "androidheadlines",
+                  "url": "https://www.androidheadlines.com/2026/01/signal-founder-launches-private-ai-assistant-confer.html",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.androidheadlines.com&sz=32",
                   "title": "Moxie Marlinspike has a privacy-conscious alternative to ChatGPT"
                 }
               ]
@@ -184,30 +184,30 @@
     },
     {
       "id": "source-2",
-      "name": "mezha",
-      "url": "https://mezha.net/eng/bukvy/confer-ai-assistant-prioritizes-user-privacy-with-secure-encryption/",
-      "favicon": "https://www.google.com/s2/favicons?domain=mezha.net&sz=32",
+      "name": "techcrunch",
+      "url": "https://techcrunch.com/2026/01/18/threads-edges-out-x-in-daily-mobile-users-new-data-shows/",
+      "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
       "title": "Moxie Marlinspike has a privacy-conscious alternative to ChatGPT"
     },
     {
       "id": "source-3",
-      "name": "time",
-      "url": "https://time.com/7346534/signal-confer-ai-moxie-marlinspike/",
-      "favicon": "https://www.google.com/s2/favicons?domain=time.com&sz=32",
+      "name": "techcrunch",
+      "url": "https://techcrunch.com/2026/01/16/chatgpt-users-are-about-to-get-hit-with-targeted-ads/",
+      "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
       "title": "Moxie Marlinspike has a privacy-conscious alternative to ChatGPT"
     },
     {
       "id": "source-4",
-      "name": "jasonhowell",
-      "url": "https://jasonhowell.substack.com/p/openai-and-anthropic-battle-for-health",
-      "favicon": "https://www.google.com/s2/favicons?domain=jasonhowell.substack.com&sz=32",
+      "name": "cryptorank",
+      "url": "https://cryptorank.io/news/feed/69d58-moxie-marlinspike-privacy-ai-confer",
+      "favicon": "https://www.google.com/s2/favicons?domain=cryptorank.io&sz=32",
       "title": "Moxie Marlinspike has a privacy-conscious alternative to ChatGPT"
     },
     {
       "id": "source-5",
-      "name": "androidheadlines",
-      "url": "https://www.androidheadlines.com/2026/01/signal-founder-launches-private-ai-assistant-confer.html",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.androidheadlines.com&sz=32",
+      "name": "time",
+      "url": "https://time.com/7346534/signal-confer-ai-moxie-marlinspike/",
+      "favicon": "https://www.google.com/s2/favicons?domain=time.com&sz=32",
       "title": "Moxie Marlinspike has a privacy-conscious alternative to ChatGPT"
     },
     {
@@ -228,30 +228,30 @@
     },
     {
       "id": "source-2",
-      "name": "mezha",
-      "url": "https://mezha.net/eng/bukvy/confer-ai-assistant-prioritizes-user-privacy-with-secure-encryption/",
-      "favicon": "https://www.google.com/s2/favicons?domain=mezha.net&sz=32",
+      "name": "techcrunch",
+      "url": "https://techcrunch.com/2026/01/18/threads-edges-out-x-in-daily-mobile-users-new-data-shows/",
+      "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
       "title": "Moxie Marlinspike has a privacy-conscious alternative to ChatGPT"
     },
     {
       "id": "source-3",
-      "name": "time",
-      "url": "https://time.com/7346534/signal-confer-ai-moxie-marlinspike/",
-      "favicon": "https://www.google.com/s2/favicons?domain=time.com&sz=32",
+      "name": "techcrunch",
+      "url": "https://techcrunch.com/2026/01/16/chatgpt-users-are-about-to-get-hit-with-targeted-ads/",
+      "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
       "title": "Moxie Marlinspike has a privacy-conscious alternative to ChatGPT"
     },
     {
       "id": "source-4",
-      "name": "jasonhowell",
-      "url": "https://jasonhowell.substack.com/p/openai-and-anthropic-battle-for-health",
-      "favicon": "https://www.google.com/s2/favicons?domain=jasonhowell.substack.com&sz=32",
+      "name": "cryptorank",
+      "url": "https://cryptorank.io/news/feed/69d58-moxie-marlinspike-privacy-ai-confer",
+      "favicon": "https://www.google.com/s2/favicons?domain=cryptorank.io&sz=32",
       "title": "Moxie Marlinspike has a privacy-conscious alternative to ChatGPT"
     },
     {
       "id": "source-5",
-      "name": "androidheadlines",
-      "url": "https://www.androidheadlines.com/2026/01/signal-founder-launches-private-ai-assistant-confer.html",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.androidheadlines.com&sz=32",
+      "name": "time",
+      "url": "https://time.com/7346534/signal-confer-ai-moxie-marlinspike/",
+      "favicon": "https://www.google.com/s2/favicons?domain=time.com&sz=32",
       "title": "Moxie Marlinspike has a privacy-conscious alternative to ChatGPT"
     },
     {
@@ -270,44 +270,37 @@
     },
     {
       "id": "source-8",
-      "name": "techcrunch",
-      "url": "https://techcrunch.com/2026/01/18/how-yc-backed-bucket-robotics-survived-its-first-ces/",
-      "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
+      "name": "findarticles",
+      "url": "https://www.findarticles.com/moxie-marlinspike-unveils-private-chatgpt-rival/",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.findarticles.com&sz=32",
       "title": "Moxie Marlinspike has a privacy-conscious alternative to ChatGPT"
     },
     {
       "id": "source-9",
+      "name": "careeraheadonline",
+      "url": "https://careeraheadonline.com/moxie-marlinspike-has-a-privacy-conscious-alternative-to-chatgpt/",
+      "favicon": "https://www.google.com/s2/favicons?domain=careeraheadonline.com&sz=32",
+      "title": "Moxie Marlinspike has a privacy-conscious alternative to ChatGPT"
+    },
+    {
+      "id": "source-10",
+      "name": "aol",
+      "url": "https://www.aol.com/articles/encrypted-chatbot-signals-founder-223731533.html",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.aol.com&sz=32",
+      "title": "Moxie Marlinspike has a privacy-conscious alternative to ChatGPT"
+    },
+    {
+      "id": "source-11",
       "name": "privacytutor",
       "url": "https://privacytutor.substack.com/p/the-signal-creator-just-launched",
       "favicon": "https://www.google.com/s2/favicons?domain=privacytutor.substack.com&sz=32",
       "title": "Moxie Marlinspike has a privacy-conscious alternative to ChatGPT"
     },
     {
-      "id": "source-10",
-      "name": "aol",
-      "url": "https://www.aol.com/finance/ex-openai-researcher-study-million-110000049.html",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.aol.com&sz=32",
-      "title": "Moxie Marlinspike has a privacy-conscious alternative to ChatGPT"
-    },
-    {
-      "id": "source-11",
-      "name": "soylentnews",
-      "url": "https://soylentnews.org/article.pl?sid=26%2F01%2F16%2F0510252",
-      "favicon": "https://www.google.com/s2/favicons?domain=soylentnews.org&sz=32",
-      "title": "Moxie Marlinspike has a privacy-conscious alternative to ChatGPT"
-    },
-    {
       "id": "source-12",
-      "name": "aol",
-      "url": "https://www.aol.com/articles/ads-coming-chatgpt-conversations-201107466.html",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.aol.com&sz=32",
-      "title": "Moxie Marlinspike has a privacy-conscious alternative to ChatGPT"
-    },
-    {
-      "id": "source-13",
-      "name": "webpronews2037",
-      "url": "https://webpronews2037.rssing.com/chan-10905513/article292.html?nocache=0",
-      "favicon": "https://www.google.com/s2/favicons?domain=webpronews2037.rssing.com&sz=32",
+      "name": "androidheadlines",
+      "url": "https://www.androidheadlines.com/2026/01/signal-founder-launches-private-ai-assistant-confer.html",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.androidheadlines.com&sz=32",
       "title": "Moxie Marlinspike has a privacy-conscious alternative to ChatGPT"
     }
   ],
@@ -315,8 +308,8 @@
     "url": "https://techcrunch.com/wp-content/uploads/2017/09/moxie-marlinspike-147a2527.jpg?resize=1200,800"
   },
   "sidebarSections": [
-    "Confer's Encryption Model Mirrors Signal's Secure Foundations",
-    "Market Challenges and Expert Praise for Confer's Privacy Push"
+    "Confer's Encryption Backbone and Usage Limits",
+    "Privacy Advocates Champion Confer Amid AI Data Alarms"
   ],
   "relatedArticles": []
 }

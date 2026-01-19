@@ -1,17 +1,17 @@
 {
   "id": "8-tips-for-designers-building-branded-templates-in-figma-buz",
   "slug": "8-tips-for-designers-building-branded-templates-in-figma-buz",
-  "title": "Eight Essential Tips for Building Brand-Controlled Templates in Figma Buzz",
-  "publishedAt": "2026-01-18T16:15:58.064Z",
-  "generatedAt": "2026-01-18T16:15:58.064Z",
-  "totalSources": 13,
+  "title": "What I can do instead:",
+  "publishedAt": "2026-01-19T16:18:38.499Z",
+  "generatedAt": "2026-01-19T16:18:38.499Z",
+  "totalSources": 14,
   "sections": [
     {
       "id": "section-0",
       "paragraphs": [
         {
           "id": "para-0-0",
-          "content": "Figma has published a comprehensive guide outlining eight critical best practices for designers creating branded templates in Figma Buzz, a platform designed to help teams produce on-brand marketing assets at scale.These recommendations focus on balancing brand consistency with user flexibility, enabling marketing teams to customize templates without breaking design guidelines.The tips address core design principles including responsive layouts, modular layer structures, and strategic use of component variants.By implementing these practices, design teams can reduce review cycles and empower non-designers to create professional, consistent assets independently.",
+          "content": "I appreciate your detailed request, but I need to clarify an important limitation: **the search results provided do not contain Figma's official \"8 Tips for Designers Building Branded Templates in Figma Buzz\" blog post in full.**",
           "citations": [
             {
               "primarySource": {
@@ -36,23 +36,23 @@
         },
         {
           "id": "para-0-1",
-          "content": "Figma Buzz distinguishes itself by allowing designers to lock specific elements while leaving others editable, creating what the platform calls \"template guidelines\" that function as guardrails rather than absolute restrictions.The platform supports advanced workflows like Bulk Create, which enables teams to generate multiple assets simultaneously by importing data from CSV or XLSX files.These capabilities make branded templates particularly valuable for marketing departments managing high-volume asset production across social media, display advertising, and other channels.The eight tips represent Figma's recommended approach to maximizing template effectiveness while maintaining brand integrity.",
+          "content": "While search result references this blog post by URL (https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/), the actual content snippet provided is minimal—only mentioning layer naming conventions and component variants. The search results lack the complete eight tips needed to write a comprehensive, well-sourced article.",
           "citations": [
             {
               "primarySource": {
-                "id": "source-4",
-                "name": "designmodo",
-                "url": "https://designmodo.com/figma-components/",
-                "favicon": "https://www.google.com/s2/favicons?domain=designmodo.com&sz=32",
+                "id": "source-3",
+                "name": "figma",
+                "url": "https://www.figma.com/community/file/898953891031417312/branding-made-simple-a-step-by-step-template",
+                "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
                 "title": "8 tips for designers building branded templates in Figma Buzz"
               },
               "additionalCount": 1,
               "additionalSources": [
                 {
-                  "id": "source-3",
-                  "name": "gola",
-                  "url": "https://www.gola.supply/blog/figma-website-template",
-                  "favicon": "https://www.google.com/s2/favicons?domain=www.gola.supply&sz=32",
+                  "id": "source-4",
+                  "name": "designmodo",
+                  "url": "https://designmodo.com/figma-components/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=designmodo.com&sz=32",
                   "title": "8 tips for designers building branded templates in Figma Buzz"
                 }
               ]
@@ -63,11 +63,11 @@
     },
     {
       "id": "section-1",
-      "title": "Core Design Principles: Auto Layout, Text Separation, and Layer Management",
+      "title": "Key Developments",
       "paragraphs": [
         {
           "id": "para-1-0",
-          "content": "Auto layout serves as the foundation of responsive template design in Figma Buzz, ensuring that design elements automatically adjust spacing and alignment when content changes.When a user enters a long headline or modifies images within a template, auto layout prevents elements from shifting out of position or creating visual misalignment.This responsive behavior is particularly critical for templates designed to work across multiple formats and platforms.By building templates with auto layout, designers create flexible systems that accommodate varying content lengths without requiring manual repositioning.",
+          "content": "Additionally, the \"AVAILABLE SOURCES\" list you provided in the research context differs from the actual search results [1-8] delivered to me, making it impossible to cite those external sources accurately.",
           "citations": [
             {
               "primarySource": {
@@ -81,9 +81,9 @@
               "additionalSources": [
                 {
                   "id": "source-6",
-                  "name": "youtube",
-                  "url": "https://www.youtube.com/watch?v=FEjYVGOlaWE",
-                  "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
+                  "name": "figma",
+                  "url": "https://www.figma.com/community/design-templates",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
                   "title": "8 tips for designers building branded templates in Figma Buzz"
                 }
               ]
@@ -92,7 +92,7 @@
         },
         {
           "id": "para-1-1",
-          "content": "Separating text layers for each unique input is essential for both template structure and practical functionality, especially when layers use different font styles or sizes.This separation is crucial for Bulk Create workflows, where each data field from a CSV or XLSX import must map to a specific layer to avoid formatting breaks.Designers should rename layers descriptively—using labels like \"Event Title,\" \"CTA Button Text,\" or \"Speaker Photo\" rather than generic names—to guide users and ensure consistent outputs.Including example text with formatting guidance, such as \"Date of Event (e.g. July 10, 2025),\" helps template users understand proper formatting within the design layout.",
+          "content": "1. **Write an article based solely on the search results provided [1-8]**, which cover Figma Buzz brand controls, template publishing, and best practices—but this won't be specifically about the \"8 tips\" post, since that content isn't fully available in the results.",
           "citations": [
             {
               "primarySource": {
@@ -106,9 +106,9 @@
               "additionalSources": [
                 {
                   "id": "source-8",
-                  "name": "figma",
-                  "url": "https://www.figma.com/community/design-templates",
-                  "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+                  "name": "youtube",
+                  "url": "https://www.youtube.com/watch?v=AMeOS6Qrqvc",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
                   "title": "8 tips for designers building branded templates in Figma Buzz"
                 }
               ]
@@ -119,17 +119,17 @@
     },
     {
       "id": "section-2",
-      "title": "Component Variants and Template Flexibility: Reducing Template Sprawl",
+      "title": "Looking Ahead",
       "paragraphs": [
         {
           "id": "para-2-0",
-          "content": "Component variants enable designers to offer multiple design options—such as logo orientations, background patterns, or color styles—within a single template, allowing users to customize without overexposing elements to manual editing.Rather than creating separate templates for a horizontal logo lockup, vertical logo lockup, and each color variation, designers can combine these options into one component variant set.Users can then select the appropriate variant using Figma's inline toolbar \"Swap Content\" feature, eliminating the need to maintain dozens of similar templates.This approach significantly reduces template management overhead while preserving brand control.",
+          "content": "2. **Acknowledge the gap clearly** and provide what information is available about branded template creation in Figma Buzz from the actual search results, using proper citations.",
           "citations": [
             {
               "primarySource": {
                 "id": "source-9",
                 "name": "figma",
-                "url": "https://www.figma.com/community/file/1490247876925428279/the-ultimate-brand-guidelines-template",
+                "url": "https://www.figma.com/community/file/1142237308258990211/brand-guideline-branding-style-guide",
                 "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
                 "title": "8 tips for designers building branded templates in Figma Buzz"
               },
@@ -137,9 +137,9 @@
               "additionalSources": [
                 {
                   "id": "source-10",
-                  "name": "figma",
-                  "url": "https://www.figma.com/community/file/898953891031417312/branding-made-simple-a-step-by-step-template",
-                  "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+                  "name": "youtube",
+                  "url": "https://www.youtube.com/watch?v=23lJ2YAnlC8",
+                  "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
                   "title": "8 tips for designers building branded templates in Figma Buzz"
                 }
               ]
@@ -148,13 +148,13 @@
         },
         {
           "id": "para-2-1",
-          "content": "Figma's brand controls system uses template guidelines—marked by pink outlines and lock icons—to visually indicate which elements are protected and which are editable within published templates.When templates are properly configured, template users see limited editing options in the Edit Content panel, ensuring they can only modify designated elements like unlocked text fields and images.The platform maintains flexibility by allowing template users to swap component variants, remove guidelines if they need full editing access, or update specific content fields without affecting locked brand elements like logos and brand colors.This balance between control and flexibility empowers teams to work independently while maintaining brand compliance.",
+          "content": "Would you like me to proceed with option 1 or 2? If you have the full \"8 Tips\" blog post content, please share it, and I'll write the comprehensive article in the exact format you've requested.",
           "citations": [
             {
               "primarySource": {
                 "id": "source-11",
                 "name": "youtube",
-                "url": "https://www.youtube.com/watch?v=23lJ2YAnlC8",
+                "url": "https://www.youtube.com/watch?v=FEjYVGOlaWE",
                 "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
                 "title": "8 tips for designers building branded templates in Figma Buzz"
               },
@@ -163,7 +163,7 @@
                 {
                   "id": "source-12",
                   "name": "figma",
-                  "url": "https://www.figma.com/community/file/1498061139983086023/straightforward-brand-guidelines",
+                  "url": "https://www.figma.com/community/file/1498103274059654620/modern-brand-design-studio",
                   "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
                   "title": "8 tips for designers building branded templates in Figma Buzz"
                 }
@@ -191,9 +191,9 @@
     },
     {
       "id": "source-3",
-      "name": "gola",
-      "url": "https://www.gola.supply/blog/figma-website-template",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.gola.supply&sz=32",
+      "name": "figma",
+      "url": "https://www.figma.com/community/file/898953891031417312/branding-made-simple-a-step-by-step-template",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
     },
     {
@@ -212,9 +212,9 @@
     },
     {
       "id": "source-6",
-      "name": "youtube",
-      "url": "https://www.youtube.com/watch?v=FEjYVGOlaWE",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
+      "name": "figma",
+      "url": "https://www.figma.com/community/design-templates",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
     }
   ],
@@ -235,9 +235,9 @@
     },
     {
       "id": "source-3",
-      "name": "gola",
-      "url": "https://www.gola.supply/blog/figma-website-template",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.gola.supply&sz=32",
+      "name": "figma",
+      "url": "https://www.figma.com/community/file/898953891031417312/branding-made-simple-a-step-by-step-template",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
     },
     {
@@ -256,9 +256,9 @@
     },
     {
       "id": "source-6",
-      "name": "youtube",
-      "url": "https://www.youtube.com/watch?v=FEjYVGOlaWE",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
+      "name": "figma",
+      "url": "https://www.figma.com/community/design-templates",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
     },
     {
@@ -270,43 +270,50 @@
     },
     {
       "id": "source-8",
-      "name": "figma",
-      "url": "https://www.figma.com/community/design-templates",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
+      "name": "youtube",
+      "url": "https://www.youtube.com/watch?v=AMeOS6Qrqvc",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
     },
     {
       "id": "source-9",
       "name": "figma",
-      "url": "https://www.figma.com/community/file/1490247876925428279/the-ultimate-brand-guidelines-template",
+      "url": "https://www.figma.com/community/file/1142237308258990211/brand-guideline-branding-style-guide",
       "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
     },
     {
       "id": "source-10",
-      "name": "figma",
-      "url": "https://www.figma.com/community/file/898953891031417312/branding-made-simple-a-step-by-step-template",
-      "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
-      "title": "8 tips for designers building branded templates in Figma Buzz"
-    },
-    {
-      "id": "source-11",
       "name": "youtube",
       "url": "https://www.youtube.com/watch?v=23lJ2YAnlC8",
       "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
     },
     {
+      "id": "source-11",
+      "name": "youtube",
+      "url": "https://www.youtube.com/watch?v=FEjYVGOlaWE",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32",
+      "title": "8 tips for designers building branded templates in Figma Buzz"
+    },
+    {
       "id": "source-12",
       "name": "figma",
-      "url": "https://www.figma.com/community/file/1498061139983086023/straightforward-brand-guidelines",
+      "url": "https://www.figma.com/community/file/1498103274059654620/modern-brand-design-studio",
       "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
     },
     {
       "id": "source-13",
+      "name": "gola",
+      "url": "https://www.gola.supply/blog/figma-website-template",
+      "favicon": "https://www.google.com/s2/favicons?domain=www.gola.supply&sz=32",
+      "title": "8 tips for designers building branded templates in Figma Buzz"
+    },
+    {
+      "id": "source-14",
       "name": "figma",
-      "url": "https://www.figma.com/community/file/1498103274059654620/modern-brand-design-studio",
+      "url": "https://www.figma.com/community/file/862055198151671663/brand-guide-template",
       "favicon": "https://www.google.com/s2/favicons?domain=www.figma.com&sz=32",
       "title": "8 tips for designers building branded templates in Figma Buzz"
     }
@@ -315,8 +322,8 @@
     "url": "https://cdn.sanity.io/images/599r6htc/regionalized/bccc680cc37f12685ef585b45f538eda221fb2c6-3840x2160.png?w=1200&amp;q=70&amp;fit=max&amp;auto=format"
   },
   "sidebarSections": [
-    "Core Design Principles: Auto Layout, Text Separation, and Layer Management",
-    "Component Variants and Template Flexibility: Reducing Template Sprawl"
+    "Key Developments",
+    "Looking Ahead"
   ],
   "relatedArticles": []
 }
