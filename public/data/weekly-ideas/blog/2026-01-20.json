@@ -1,332 +1,291 @@
 {
   "type": "blog",
-  "date": "2026-01-20T16:26:30.495Z",
+  "date": "2026-01-20T16:37:41.340Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Humans&#038;, a &#8216;human-centric&#8217; AI startup founded by Anthropic, xAI, Google alums, raised $480M seed round",
+      "description": "Humans&#038;, a startup that believes AI should empower people, not replace them, has reportedly raised a $480 million seed round at a $4.48 billion valuation.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover/8-tips-for-designers-building-branded-templates-in-figma-buz"
-        }
-      ],
-      "format": "case-study",
-      "subcategory": "case-study-deep-dive",
-      "hooks": [
-        "Templates that scale: Design meets marketing magic",
-        "Bend Brand Rules Without Breaking Them",
-        "Figma Templates: Your Strategic Design Superpower"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Include real-time template creation screenshots",
-            "Share personal workflow challenges and solutions",
-            "Use interactive annotations in images"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Add SEO-optimized headings for template design",
-            "Include comparative before/after template examples",
-            "Embed Figma prototype links for deeper engagement"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Add industry-specific template use case statistics",
-            "Include professional designer testimonial quotes",
-            "Frame content as strategic design leadership"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold geometric layout with modular grid, high-contrast color palette (navy/coral), dynamic typography with technical annotations, motion-based UI transition animations showcasing template flexibility, minimalist design system aesthetic with technical precision"
-      },
-      "exampleOutline": [
-        "The Template Transformation Challenge",
-        "Why Traditional Design Templates Fail",
-        "8 Strategic Design Template Principles",
-        "Case Studies: Brands Who Nailed Flexible Design",
-        "Future of Self-Serve Brand Systems"
-      ],
-      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystem #CreativeStrategy #AIDesign #ProductDesign #DesignInnovation #WorkflowOptimization #CreativeTech #DesignScaling",
-      "pexelsImageUrl": "https://images.pexels.com/photos/5709687/pexels-photo-5709687.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 8
-    },
-    {
-      "title": "Evil Ray by Seachange",
-      "description": "Until fairly recently, arguably sunscreen brands have had to do little in the way of brand design. Instead, they’ve been able to coast along relying on their credentials alone – and the fact that (in the UK at least) there hasn’t been a ton of competition.  Things have been largely almost medicinal and rigidly adherent to category tropes: orange, yellow,\nThe post Evil Ray by Seachange appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2026/01/20/evil-ray-sunscreen-branding-by-seachange/"
-        }
-      ],
-      "format": "guide",
-      "subcategory": "instructional",
-      "hooks": [
-        "Sunscreen Branding: The Radical Design Revolution",
-        "How One Brand Transformed Boring Sunscreen Design",
-        "Breaking Category Norms: A Sunscreen Design Case Study"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Use real-time screenshots of Evil Ray's design process",
-            "Include interactive design comparison sliders",
-            "Share personal design critique and breakdown"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Create SEO-optimized headers for design analysis",
-            "Include statistical insights on brand design impact",
-            "Use comprehensive, research-backed design exploration"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Frame design evolution as professional innovation",
-            "Include expert quotes on brand transformation",
-            "Highlight business strategy behind design choices"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, high-contrast color palette with electric blues and sunset oranges. Dynamic asymmetrical layouts with overlapping design elements. Sans-serif typography with experimental type treatments. Animated design process transitions. Mood: Disruptive, energetic, next-generation design aesthetic."
-      },
-      "exampleOutline": [
-        "Introduction: The Stagnant Sunscreen Design Landscape",
-        "Historical Context: Why Sunscreen Branding Became Predictable",
-        "Evil Ray Case Study: Design Deconstruction",
-        "Key Design Innovations and Their Strategic Impact",
-        "Future of Category Design Transformation"
-      ],
-      "hashtags": "#BrandDesign #SunscreenInnovation #CreativeDirection #DesignRevolution #BrandingStrategy #ProductDesign #CreativeBranding #DesignThinking #BrandIdentity #MarketingInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7827951/pexels-photo-7827951.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 5
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Theaiinsider",
-          "url": "https://theaiinsider.tech/2025/12/12/figma-introduces-new-ai-powered-image-editing-suite-to-streamline-design-workflows/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Oreateai",
-          "url": "http://oreateai.com/blog/transforming-design-figmas-new-aipowered-image-editing-tools/90a05141f7c43ac94a243a13dffe521b"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        }
-      ],
-      "format": "article",
-      "subcategory": "visionary",
-      "hooks": [
-        "AI Transforms Figma: 3 Game-Changing Image Editing Tools",
-        "Design Precision Reimagined: Figma's New AI Toolkit",
-        "Unleash Creative Superpowers with Figma's AI Editors"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Include real-time screen capture GIFs demonstrating tools",
-            "Add personal experiment/use case with new features",
-            "Use conversational tone, break down technical details"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Optimize for SEO with comprehensive keyword integration",
-            "Include comparative screenshots of before/after edits",
-            "Add expert commentary and industry context"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Frame tools through professional workflow optimization lens",
-            "Include statistics on time/efficiency gains",
-            "Target design managers and creative directors"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, dynamic visual layout with high-contrast color palette. Incorporate futuristic tech-inspired gradients. Use clean, sans-serif typography with occasional animated UI element callouts. Integrate Figma's brand colors with electric blue/purple accent highlights. Minimal but energetic motion graphics showcasing tool transitions."
-      },
-      "exampleOutline": [
-        "Section 1: Provocative Opening - The Design Workflow Revolution",
-        "Section 2: Current Design Editing Challenges",
-        "Section 3: Detailed Tool Breakdown & Capabilities",
-        "Section 4: Practical Implementation Strategies",
-        "Section 5: Future of AI-Powered Design Workflows"
-      ],
-      "hashtags": "#FigmaAI #DesignTech #CreativeTools #AIDesign #ProductivityHack #CreativeTech #DesignInnovation #AICreativity #WorkflowOptimization #DesignTrends",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7828710/pexels-photo-7828710.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 2
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        }
-      ],
-      "format": "thread",
-      "subcategory": "explanatory",
-      "hooks": [
-        "Design workflows just got supercharged with Figma Buzz 🚀",
-        "3 game-changing features designers can't ignore",
-        "Figma's latest update: Your creativity's new best friend"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Embed interactive Figma preview screenshots in thread companion post",
-            "Create a behind-the-scenes breakdown of thread insights",
-            "Offer exclusive deep-dive newsletter version of thread content"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Develop long-form article expanding on thread insights",
-            "Include detailed workflow examples and case studies",
-            "Add SEO-optimized headers and professional graphics"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Frame features through professional productivity lens",
-            "Include data-driven arguments about workflow efficiency",
-            "Add expert commentary and potential business impact"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, dynamic visual style with electric blue and gradient overlays, clean san-serif typography, motion-graphic inspired thread cards with subtle parallax effects, minimalist iconography representing each feature, high-contrast color palette emphasizing innovation and speed"
-      },
-      "exampleOutline": [
-        "Thread Opener: Provocative hook about design innovation",
-        "Feature 1: Marketing template context and problem",
-        "Feature 2: Design system connection breakdown",
-        "Feature 3: Plugin and app integration insights",
-        "Closing: Future of design workflow CTA"
-      ],
-      "hashtags": "#FigmaBuzz #DesignInnovation #CreativeTech #AIDesign #WorkflowOptimization #ProductivityHacks #DesignTools #CreativeWorkflow #TechInnovation #DigitalDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/28587684/pexels-photo-28587684.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 11
-    },
-    {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/20/humans-a-human-centric-ai-startup-founded-by-anthropic-xai-google-alums-raised-480m-seed-round/"
         }
       ],
       "format": "listicle",
       "subcategory": "explanatory",
       "hooks": [
-        "5 Design Secrets Top Studios Never Tell You",
-        "Crack the Visual Identity Code: Designer Insider Tips",
-        "Behind the Scenes: How Elite Designers Think"
+        "5 Mind-Blowing Secrets Behind Humans& AI Revolution",
+        "Why $480M Means More Than Just Money",
+        "Startup Disrupting AI: The Human-First Playbook"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Use personal anecdotes between list items to increase engagement",
-            "Include real-time screenshots of design process",
-            "Encourage reader comments/design challenges in each list point"
+            "Use numbered emojis for each listicle point",
+            "Include personal commentary between list items",
+            "Add interactive poll about reader's AI perspectives"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Optimize headline with clear numerical promise (5 Ways...)",
-            "Add inline expert quotes to boost credibility",
-            "Include SEO-friendly alt text for design images"
+            "Optimize SEO with clear subheadings for each point",
+            "Include expert quotes to validate listicle insights",
+            "Add inline graphics for each list item"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Tag featured designers/studios mentioned in the list",
-            "Use professional, data-backed language in list descriptions",
-            "Include downloadable design framework/template as content upgrade"
+            "Tag founders/investors mentioned in the piece",
+            "Use professional data visualizations for key points",
+            "Frame listicle as professional learning opportunity"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Bold, high-contrast design with experimental grid layouts. Incorporate fractured typography, vibrant accent colors against grayscale background. Use dynamic motion graphics between list sections. Reference Swiss design principles with contemporary digital twist. Incorporate subtle glitch/AI-generated texture overlays."
+        "description": "Bold futuristic aesthetic with dynamic geometric overlays, electric blue and deep purple color palette, sans-serif typography with slight motion blur, abstract AI/human silhouette graphics, minimalist tech-inspired compositions with asymmetric grid layouts"
       },
       "exampleOutline": [
-        "Attention-Grabbing Introduction: The Hidden World of Design",
-        "Why Traditional Design Approaches Are Failing",
-        "5 Transformative Design Principles (Numbered List)",
-        "Case Studies: Real-World Design Transformations",
-        "Call-to-Action: Join the Design Revolution"
+        "Opening: Provocative Introduction to Humans& Story",
+        "Context: AI Startup Funding Landscape",
+        "5 Key Insights About Humans& Strategy",
+        "Deeper Analysis of Human-Centric AI Approach",
+        "Future Implications and Call to Engagement"
       ],
-      "hashtags": "#DesignInnovation #CreativeStrategy #VisualIdentity #DesignThinking #AIDesign #BrandSystem #CreativeTips #DesignLeadership #StudioSecrets #DesignCommunity",
-      "pexelsImageUrl": "https://images.pexels.com/photos/18022596/pexels-photo-18022596.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
+      "hashtags": "#AIStartup #HumanCentricAI #TechInnovation #VentureCapital #AIEthics #StartupFunding #FutureOfWork #TechTrends #AIRevolution #InnovationEconomy",
+      "textureIndex": 2
+    },
+    {
+      "title": "Indian vibe-coding startup Emergent triples valuation to $300M with $70M fundraise",
+      "description": "The funding comes as the startup claims it has scaled ARR to $50 million, and is targeting $100 million by April 2026.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/20/indian-vibe-coding-startup-emergent-raises-70m-at-300m-valuation-from-softbank-khosla-ventures/"
+        }
+      ],
+      "format": "thread",
+      "subcategory": "explanatory",
+      "hooks": [
+        "Indian AI startup Emergent just 3x'd their valuation 🚀",
+        "From zero to $300M: Emergent's wild startup journey",
+        "How this Indian tech team cracked the $70M code"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use thread as teaser for full deep-dive article",
+            "Include behind-the-scenes startup growth commentary",
+            "Link thread to subscriber-exclusive startup analysis"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Expand thread into long-form startup growth case study",
+            "Add data visualizations of funding trajectory",
+            "Include expert commentary and market context"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Target professional audience with strategic insights",
+            "Include leadership quotes and growth strategy breakdown",
+            "Highlight scalability and investment potential"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Vibrant Indian tech-inspired color palette (saffron, teal, electric blue), dynamic geometric infographics, modern sans-serif typography with startup energy, subtle motion animations highlighting growth metrics, minimalist startup aesthetic with bold data visualization"
+      },
+      "exampleOutline": [
+        "Thread Hook: Emergent's Incredible Growth Story 🌍🚀",
+        "Startup Context: Indian Tech Innovation Landscape",
+        "Funding Details: $70M Raise & $300M Valuation",
+        "Key Growth Metrics: ARR Journey to $50M",
+        "Future Projection & Investment Opportunity"
+      ],
+      "hashtags": "#EmergentAI #StartupGrowth #IndianTech #AIInnovation #VentureCapital #TechFunding #AIStartup #InnovationEconomy #TechTrends #ScaleUp",
+      "textureIndex": 3
+    },
+    {
+      "title": "ChatGPT apps are about to be the next big distribution channel: Here’s how to build one",
+      "description": "A step-by-step guide to jumping in and building your first ChatGPT app",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/chatgpt-apps-are-about-to-be-the"
+        }
+      ],
+      "format": "case-study",
+      "subcategory": "case-study-deep-dive",
+      "hooks": [
+        "ChatGPT Apps: Your Shortcut to Next-Level Distribution",
+        "Unlock the ChatGPT App Gold Rush Now",
+        "Build Once, Scale Everywhere: ChatGPT App Guide"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use real-time experiment screenshots of app building process",
+            "Include interactive code snippets inline",
+            "Share personal learning moments and challenges"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Add comprehensive technical diagrams of app architecture",
+            "Include SEO-friendly headings for each development stage",
+            "Embed performance metrics and growth potential graphics"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Highlight professional value and career growth potential",
+            "Include expert quotes and industry validation",
+            "Add credibility with statistical market size references"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy tech-futurist aesthetic with dynamic gradient backgrounds, isometric app interface illustrations, animated code flow graphics, modern sans-serif typography in electric blue/deep purple palette, subtle parallax motion effects suggesting technological dynamism"
+      },
+      "exampleOutline": [
+        "The ChatGPT App Opportunity: Why Now Matters",
+        "Current Distribution Landscape: Where Apps Are Breaking Through",
+        "Step-by-Step Technical Blueprint for ChatGPT App Development",
+        "Case Studies: Real-World Success and Scaling Strategies",
+        "Future Implications and Your Next Move"
+      ],
+      "hashtags": "#ChatGPTApps #AIInnovation #TechStartups #ProductDevelopment #AIDistribution #IndieMakers #SoftwareDev #TechTrends #AIProduct #StartupStrategy",
+      "textureIndex": 7
+    },
+    {
+      "title": "ChatGPT apps are about to be the next big distribution channel: Here’s how to build one",
+      "description": "A step-by-step guide to jumping in and building your first ChatGPT app",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/chatgpt-apps-are-about-to-be-the-172"
+        }
+      ],
+      "format": "guide",
+      "subcategory": "instructional",
+      "hooks": [
+        "ChatGPT Apps: Your Ticket to Tech's Next Gold Rush",
+        "Build Once, Scale Everywhere: ChatGPT App Secrets",
+        "The Ultimate Playbook for ChatGPT App Domination"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use inline code snippets to break down technical steps",
+            "Include real-time experiment screenshots of app building process",
+            "Create interactive poll about readers' app ideas"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Add SEO-optimized headers for each major development stage",
+            "Include comparative performance metrics for different ChatGPT app approaches",
+            "Use canonical technical diagrams to explain complex concepts"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame guide as professional skill development opportunity",
+            "Include quotes from industry leaders about AI app potential",
+            "Add credibility with developer success story case studies"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Cyberpunk-inspired tech aesthetic with neon blue/purple gradients, isometric app development illustrations, dynamic geometric overlays, futuristic sans-serif typography, motion graphics showing app transformation stages"
+      },
+      "exampleOutline": [
+        "Introduction: The ChatGPT App Revolution",
+        "Why ChatGPT Apps Matter Right Now",
+        "Step-by-Step Development Framework",
+        "Technical Architecture and Best Practices",
+        "Future Opportunities and Scaling Strategies"
+      ],
+      "hashtags": "#AIApps #ChatGPTDevelopment #TechInnovation #StartupStrategy #AITechnology #ProductDevelopment #IndieMakers #TechTrends #AIEntrepreneurship #SoftwareDev",
+      "textureIndex": 6
+    },
+    {
+      "title": "Here are the 55 US AI startups that raised $100M or more in 2025",
+      "description": "Last year was monumental for the AI industry in the U.S. and beyond. How will 2025 compare?",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/19/here-are-the-49-us-ai-startups-that-have-raised-100m-or-more-in-2025/"
+        }
+      ],
+      "format": "article",
+      "subcategory": "visionary",
+      "hooks": [
+        "55 AI Startups Rewriting the Future of Tech",
+        "The $100M AI Startup Revolution Unveiled",
+        "Inside America's Most Funded AI Innovators"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use real-time data visualization inline",
+            "Include personal commentary on trends",
+            "Embed interactive startup funding timeline"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Optimize for SEO with detailed startup descriptions",
+            "Include expert quotes from industry leaders",
+            "Create comprehensive, research-backed analysis"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Target professional audience with strategic insights",
+            "Use credible investment and growth statistics",
+            "Highlight career and networking opportunities"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, data-driven design with dynamic infographics. Dark mode color palette with electric blue and deep purple accents. Animated funding charts. Modern sans-serif typography. Futuristic tech-inspired visual metaphors blending startup logos and circuit board patterns."
+      },
+      "exampleOutline": [
+        "Introduction: The AI Investment Landscape of 2025",
+        "Methodology: How We Analyzed $100M+ Startup Funding",
+        "Top 55 AI Startups: Comprehensive Breakdown",
+        "Emerging Trends and Future Predictions",
+        "Conclusion: What This Means for Tech Innovation"
+      ],
+      "hashtags": "#AIStartups #TechInnovation #VentureCapital #AIFunding #TechTrends #StartupEcosystem #InnovationEconomy #AIRevolution #TechInvestment #EmergingTech",
+      "textureIndex": 6
     }
   ]
 }

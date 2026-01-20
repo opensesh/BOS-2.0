@@ -1,372 +1,331 @@
 {
   "type": "short-form",
-  "date": "2026-01-20T16:26:30.495Z",
+  "date": "2026-01-20T16:36:09.818Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "One of the first alternative app stores in the EU is shutting down",
+      "description": "Setapp Mobile, one of the first alternative app stores in the EU, is shutting down next month, citing Apple's ever-changing terms.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover/8-tips-for-designers-building-branded-templates-in-figma-buz"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/20/one-of-the-first-alternative-app-stores-in-the-eu-is-shutting-down/"
         }
       ],
       "format": "reel",
       "subcategory": "reel",
       "hooks": [
-        "Design templates that don't break your brand's soul 🔥",
-        "Figma secrets: Make templates that actually work",
-        "Brand templates that flex without falling apart"
+        "App Store Drama: Another Alternative Bites the Dust 🚨",
+        "Big Tech Wins Again? Alternative App Store Shutters",
+        "EU Tech Startup's Last Stand Against Apple"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick transitions between template examples",
-            "Add text overlay for key points",
-            "Include dynamic motion graphics to illustrate template flexibility"
+            "Use fast-paced text transitions to highlight key points",
+            "Include dynamic screen recordings showing app store interface",
+            "Use red/warning color palette to create visual tension"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Provocative template problem statement",
-            "Use before/after slides to demonstrate concept",
-            "Final slide with clear call-to-action"
+            "First slide must have provocative headline",
+            "Use infographic-style slides to break down complex narrative",
+            "Include screenshot evidence of app store closure"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with pattern-interrupt visual",
-            "Use screen recording of actual Figma workflow",
-            "Include verbal and text-based explanations simultaneously"
+            "Start with shocking statistic or quote",
+            "Use screen capture with dramatic voiceover",
+            "Include quick cuts to maintain high energy"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "More technical, professional tone",
-            "Include specific design system references",
-            "Emphasize scalability and enterprise relevance"
+            "Frame as thought leadership on tech ecosystem",
+            "Include more detailed contextual background",
+            "Use more professional, analytical tone"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast color palette with electric blue and charcoal gray. Dynamic diagonal compositions. Sans-serif typography with bold, condensed weights. Quick, punchy motion graphics. Minimal 3D design elements. Tech-forward, slightly futuristic aesthetic with clean, experimental edge."
+        "description": "High-contrast cyberpunk-inspired color palette (deep blues, electric oranges), glitch-style text animations, fragmented screen recordings, sharp geometric typography, dynamic motion graphics suggesting technological disruption"
       },
       "exampleOutline": [
-        "Hook: Provocative template design challenge",
-        "Problem: Rigid vs. flexible brand systems",
-        "8 Rapid Template Design Tips",
-        "Key Transformation Insight",
-        "Final Call-to-Experiment"
+        "Quick shocking statistic about app store closure",
+        "Brief context of Setapp Mobile's situation",
+        "Explanation of Apple's restrictive ecosystem",
+        "Broader implications for tech innovation",
+        "Call-to-action: Stay informed about tech changes"
       ],
-      "hashtags": "#DesignTemplates #FigmaHacks #BrandDesign #CreativeToolkit #AIDesign #TemplateDesign #ProductDesign #CreativeTech #DesignSystem #BrandIdentity",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7054400/pexels-photo-7054400.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 3
+      "hashtags": "#AppleTech #EUTech #StartupLife #TechInnovation #AlternativeAppStore #TechPolicy #DigitalRights #TechNews #Entrepreneurship #AITech",
+      "textureIndex": 5
     },
     {
-      "title": "Evil Ray by Seachange",
-      "description": "Until fairly recently, arguably sunscreen brands have had to do little in the way of brand design. Instead, they’ve been able to coast along relying on their credentials alone – and the fact that (in the UK at least) there hasn’t been a ton of competition.  Things have been largely almost medicinal and rigidly adherent to category tropes: orange, yellow,\nThe post Evil Ray by Seachange appeared first on BP&O - Branding, Packaging and Opinion.",
+      "title": "Grubhub parent acquires restaurant rewards startup Claim",
+      "description": "The acquisition will give restaurants on Grubhub access to Claim’s customer acquisition and retention tools, while Grubhub diners can receive rewards.",
       "starred": false,
       "sources": [
         {
-          "name": "BP&O",
-          "url": "https://bpando.org/2026/01/20/evil-ray-sunscreen-branding-by-seachange/"
-        }
-      ],
-      "format": "carousel",
-      "subcategory": "carousel",
-      "hooks": [
-        "Design Revolution: When Sunscreen Breaks Brand Rules",
-        "Boring Brands Are Dead. This Is Why.",
-        "How One Design Agency Reimagined Sun Protection"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use dynamic transitions between carousel slides",
-            "Add motion graphics to highlight key design elements",
-            "Keep pace fast and energetic (3-4 seconds per slide)"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must be visually striking to stop scroll",
-            "Use high-contrast color palette to differentiate slides",
-            "Progressive reveal of design narrative across slides"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Compress carousel narrative into 60-second storytelling",
-            "Use text overlays to explain design concepts quickly",
-            "Maintain visual consistency with original carousel"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Add more technical design context",
-            "Include professional design terminology",
-            "Focus on strategic design thinking"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 8,
-        "description": "Bold, experimental color palette with unexpected orange and teal combinations. Asymmetrical grid layouts. Modern sans-serif typography with dynamic text sizing. Integrated motion graphics showing design deconstruction. Aesthetic references: Swiss design meets contemporary brand innovation."
-      },
-      "exampleOutline": [
-        "Slide 1: Provocative visual hook + bold statement",
-        "Slide 2: Traditional sunscreen design problem",
-        "Slide 3: Evil Ray brand design breakthrough",
-        "Slide 4: Design process and philosophy",
-        "Slide 5: Call-to-action and design inspiration"
-      ],
-      "hashtags": "#DesignInnovation #BrandRevolution #CreativeDesign #SunscreenDesign #BrandStrategy #GraphicDesign #AIDesign #CreativeCommunity #DesignThinking #BrandIdentity",
-      "pexelsImageUrl": "https://images.pexels.com/photos/206784/pexels-photo-206784.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 9
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Theaiinsider",
-          "url": "https://theaiinsider.tech/2025/12/12/figma-introduces-new-ai-powered-image-editing-suite-to-streamline-design-workflows/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Oreateai",
-          "url": "http://oreateai.com/blog/transforming-design-figmas-new-aipowered-image-editing-tools/90a05141f7c43ac94a243a13dffe521b"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        }
-      ],
-      "format": "story",
-      "subcategory": "story",
-      "hooks": [
-        "AI Just Transformed Image Editing in Figma",
-        "3 Game-Changing Tools Designers Need Now",
-        "Precision Editing: The Future is Here"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick screen recordings showing actual tool functionality",
-            "Incorporate fast-paced transitions between editing steps",
-            "Add text overlays highlighting key tool capabilities"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must visually shock/intrigue viewers",
-            "Use consistent color palette across slides",
-            "Include minimal text, maximize visual demonstration"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Open with unexpected visual transformation",
-            "Use voiceover explaining tool's unique value",
-            "Include before/after comparisons rapidly"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame tools as professional productivity enhancement",
-            "Include data/efficiency metrics",
-            "Use more technical language and workflow context"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast cyberpunk-inspired color palette (neon blues/purples), dynamic geometric transitions, floating holographic UI elements, minimal typography with sharp sans-serif fonts, liquid motion graphics showing tool transformations, futuristic yet clean aesthetic"
-      },
-      "exampleOutline": [
-        "Section 1: Provocative Tool Reveal",
-        "Section 2: Design Workflow Pain Points",
-        "Section 3: Three AI Editing Tools Breakdown",
-        "Section 4: Live Demo/Transformation Sequence",
-        "Section 5: Quick Implementation Call-to-Action"
-      ],
-      "hashtags": "#FigmaAI #DesignTech #CreativeTools #AIDesign #ProductivityHack #UXDesign #CreativeTech #DesignInnovation #AIToolkit #FigmaTips",
-      "pexelsImageUrl": "https://images.pexels.com/photos/28428592/pexels-photo-28428592.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 10
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        }
-      ],
-      "format": "reel",
-      "subcategory": "reel",
-      "hooks": [
-        "Figma just leveled up your design workflow 🚀",
-        "3 game-changing Figma Buzz features designers need",
-        "Marketing design just got MUCH easier"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use fast-paced screen transitions",
-            "Include text overlays highlighting key features",
-            "Keep total video under 45 seconds"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must be a bold graphic summary",
-            "Use consistent color palette across slides",
-            "Include clear, large text explanations"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with provocative visual/text pattern interrupt",
-            "Use dynamic screen captures of Figma interface",
-            "End with clear call-to-action"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Add professional context about workflow efficiency",
-            "Include subtle data visualization",
-            "Reference potential productivity gains"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-energy tech-inspired aesthetic with electric blue/deep purple gradient backgrounds, dynamic motion graphics, floating UI elements, sans-serif typography with sharp edges, quick jump cuts between feature demonstrations"
-      },
-      "exampleOutline": [
-        "Rapid-fire hook showcasing Figma Buzz's potential",
-        "Quick problem statement about design workflow challenges",
-        "Three feature demonstrations with motion graphics",
-        "Rapid insights on how features solve real problems",
-        "Final call-to-action with Figma link/website"
-      ],
-      "hashtags": "#FigmaDesign #AICreativity #MarketingTools #DesignWorkflow #CreativeTech #ProductivityHacks #DesignInnovation #FigmaBuzz #AIDesign #CreativeTools",
-      "pexelsImageUrl": "https://images.pexels.com/photos/1340392/pexels-photo-1340392.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 3
-    },
-    {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/20/grubhub-parent-acquires-restaurant-rewards-startup-claim/"
         }
       ],
       "format": "quick-image",
       "subcategory": "quick-image",
       "hooks": [
-        "Design Jobs That Actually Spark Joy 🔥",
-        "Want the Dream Design Gig in SF?",
-        "Moniker's Calling Creative Rebels 💡"
+        "Food Tech Fusion: Grubhub's Game-Changing Rewards Move 🚀",
+        "When Delivery Meets Data: Claim's Big Win 💡",
+        "Restaurant Marketing Just Got Smarter 🍽️"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick-cut transitions between job details",
-            "Include animated icons representing design skills",
-            "Start with a provocative visual of SF design studio"
+            "Use quick, dynamic transitions between acquisition stats",
+            "Incorporate food/tech visual metaphors",
+            "End with a surprising data point that sparks curiosity"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Bold job title graphic",
-            "Alternate between text and visual job requirement slides",
-            "Use consistent color palette matching Moniker's brand"
+            "First slide: Bold graphic with acquisition headline",
+            "Use infographic-style slides showing impact",
+            "Final slide: Clear value proposition for restaurants"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Open with high-energy motion graphics",
-            "Use voiceover explaining job opportunity",
-            "Include quick b-roll of design workspace"
+            "Open with unexpected visual comparison",
+            "Use fast-paced editing to maintain energy",
+            "Include text overlays explaining key acquisition details"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "More text-heavy, professional tone",
-            "Include specific role requirements",
-            "Use data/stats about design career potential"
+            "More data-driven, professional tone",
+            "Include expert quote or industry context",
+            "Emphasize strategic implications of acquisition"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast SF tech aesthetic, neon-edged typography, dynamic diagonal compositions, minimalist color palette with electric blue/charcoal accents, motion-driven graphic elements suggesting creative energy and technological innovation"
+        "description": "Bold, tech-forward aesthetic with vibrant blue/orange color palette. Dynamic geometric overlays representing data/connection. Modern sans-serif typography with slight motion. Blend of photographic restaurant elements with abstract tech graphics. High contrast, energetic composition mimicking digital innovation."
       },
       "exampleOutline": [
-        "Hook: Provocative job opportunity statement",
-        "Problem: Current design job market limitations",
-        "Moniker Role Overview: Unique opportunity details",
-        "Key Skills Highlighted",
-        "Call-to-Action: Application Process"
+        "Section 1: Attention-grabbing headline/visual",
+        "Section 2: Quick market problem context",
+        "Section 3: Acquisition key details",
+        "Section 4: Potential industry impact",
+        "Section 5: Call-to-learn-more CTA"
       ],
-      "hashtags": "#DesignJobs #SFDesign #CreativeCareer #TechDesign #MonikerId #DesignInnovation #JobOpportunity #CreativeTalent #DesignCommunity #CareerGrowth",
-      "pexelsImageUrl": "https://images.pexels.com/photos/28428588/pexels-photo-28428588.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
+      "hashtags": "#FoodTech #RestaurantInnovation #AIMarketing #DeliveryTech #StartupAcquisition #BusinessStrategy #TechNews #RestaurantTrends #MarketingTech #DataDriven",
+      "textureIndex": 2
+    },
+    {
+      "title": "Humans&#038;, a &#8216;human-centric&#8217; AI startup founded by Anthropic, xAI, Google alums, raised $480M seed round",
+      "description": "Humans&#038;, a startup that believes AI should empower people, not replace them, has reportedly raised a $480 million seed round at a $4.48 billion valuation.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/20/humans-a-human-centric-ai-startup-founded-by-anthropic-xai-google-alums-raised-480m-seed-round/"
+        }
+      ],
+      "format": "carousel",
+      "subcategory": "carousel",
+      "hooks": [
+        "AI Startup Disrupts $4.48B with Human-First Vision",
+        "Tech Legends' Secret: AI That Empowers, Not Replaces",
+        "Inside $480M Bet on Humanity-Powered AI"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic motion graphics between slides",
+            "Include quick founder/team profile shots",
+            "Create rapid-fire text transitions"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have maximum visual impact",
+            "Use contrasting color blocks between slides",
+            "Ensure each slide tells micro-narrative"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Compress carousel narrative into 60-second flow",
+            "Add voiceover explaining key points",
+            "Use bold text overlays"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add more professional, data-driven language",
+            "Include founder credentials explicitly",
+            "Emphasize investment/market opportunity"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, high-contrast futuristic aesthetic with tech-organic gradient transitions. Deep blues, electric teals, and warm oranges. Modern sans-serif typography with slight motion blur. Geometric shapes representing human-AI interaction. Subtle glitch/digital interference effects between slides."
+      },
+      "exampleOutline": [
+        "Slide 1: Provocative Hook/Headline",
+        "Slide 2: Startup Origin & Founders",
+        "Slide 3: Investment Context",
+        "Slide 4: Human-Centric AI Philosophy",
+        "Slide 5: Call-to-Action/Future Vision"
+      ],
+      "hashtags": "#AIStartup #HumanCentricAI #TechInnovation #VentureCapital #AIEthics #FutureOfWork #TechFounders #InvestmentNews #AITechnology #StartupCulture",
+      "textureIndex": 1
+    },
+    {
+      "title": "Eat App wants a bite of India&#8217;s restaurant reservation business with an aquistion and Swiggy partnership",
+      "description": "Eat App is making India its central focus to market its reservation and dine-in growth suite",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/20/eat-app-wants-a-bite-of-indias-restaurant-reservation-business-with-an-aquistion-and-swiggy-partnership/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "India's Restaurant Tech Just Got a Tasty Upgrade 🍽️",
+        "Eat App: Disrupting Dining Reservations in India 🚀",
+        "How Swiggy is Transforming Restaurant Bookings"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick, dynamic transitions between restaurant/tech visuals",
+            "Include animated percentage or growth graphic",
+            "Overlay bold text statistics about market opportunity"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Eye-catching headline graphic",
+            "Use infographic-style slides showing market impact",
+            "Final slide: Clear call-to-action with Swiggy/Eat App logos"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected visual metaphor about tech/dining",
+            "Use fast-paced screen transitions",
+            "Include quick text overlays highlighting key partnership details"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "More data-driven, professional visual approach",
+            "Include credible source attribution from TechCrunch",
+            "Use clean, corporate-friendly design elements"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-forward design with vibrant orange/blue color palette. Dynamic geometric shapes representing technology and dining. Modern sans-serif typography with strong hierarchy. Incorporate subtle motion graphics suggesting digital transformation. Minimalist but energetic visual style blending startup innovation with culinary aesthetics."
+      },
+      "exampleOutline": [
+        "Section 1: Provocative headline/visual hook",
+        "Section 2: Market gap in restaurant reservations",
+        "Section 3: Eat App + Swiggy partnership mechanics",
+        "Section 4: Potential industry transformation insight",
+        "Section 5: Invitation to explore further"
+      ],
+      "hashtags": "#RestaurantTech #IndiaStartups #FoodInnovation #SwiggyEatApp #TechDisruption #FoodReservations #StartupIndia #AIinFood #RestaurantDigitization #TechCrunch",
+      "textureIndex": 3
+    },
+    {
+      "title": "SpaceX didn&#8217;t properly inspect crane before collapse at Starbase, OSHA says",
+      "description": "The federal safety agency has hit SpaceX with a $115,850 fine after finding seven \"serious\" violations during its investigation.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/20/spacex-didnt-properly-inspect-crane-before-collapse-at-starbase-osha-says/"
+        }
+      ],
+      "format": "story",
+      "subcategory": "story",
+      "hooks": [
+        "SpaceX's $115k Crane Fail: Safety Secrets Revealed",
+        "When Rocket Science Meets Workplace Safety Fails",
+        "OSHA Drops the Hammer on SpaceX Crane Incident"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic motion graphics to visualize crane collapse",
+            "Include quick text overlays with key violation details",
+            "Create a visually engaging timeline of the incident"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "Design each slide with a different safety insight",
+            "Use infographic-style layouts to break down OSHA findings",
+            "Include a final slide with key takeaways and learning points"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with a dramatic reconstruction of the crane incident",
+            "Use quick cuts and high-energy transitions",
+            "Include expert commentary-style voiceover"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame content as a professional safety learning opportunity",
+            "Use more technical language and detailed analysis",
+            "Include potential industry-wide implications"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast red and gray color palette; angular, technical typography; dynamic motion graphics simulating crane mechanics; industrial aesthetic with glitch-like error state overlays; blend of technical diagrams and abstract visual metaphors for safety failures"
+      },
+      "exampleOutline": [
+        "Section 1: Dramatic Hook - Crane Collapse Moment",
+        "Section 2: OSHA Investigation Context",
+        "Section 3: Detailed Violation Breakdown",
+        "Section 4: Safety Implications for Tech Industries",
+        "Section 5: Call to Action - Safety First"
+      ],
+      "hashtags": "#SpaceX #WorkplaceSafety #OSHA #TechSafety #IndustryStandards #RocketScience #SafetyFirst #TechIncident #IndustryLessons #WorkplaceRisk",
+      "textureIndex": 6
     }
   ]
 }
