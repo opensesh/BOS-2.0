@@ -1,387 +1,330 @@
 {
   "type": "short-form",
-  "date": "2026-01-21T16:29:27.363Z",
+  "date": "2026-01-21T16:44:19.383Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "YouTube TV’s multiview is getting a huge upgrade, letting viewers mix and match channels",
+      "description": "Soon, YouTube TV will allow viewers  to customize the multiview feature to watch any four channels they want side by side.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/figma-buzz"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover/8-tips-for-designers-building-branded-templates-in-figma-buz"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/21/youtube-tvs-multiview-is-getting-a-huge-upgrade-letting-viewers-mix-and-match-channels/"
         }
       ],
-      "format": "story",
-      "subcategory": "story",
+      "format": "reel",
+      "subcategory": "reel",
       "hooks": [
-        "Design Templates That Don't Break Your Brand",
-        "Figma Buzz: The Designer's Secret Weapon",
-        "Make Your Brand Flexible, Not Fragile"
+        "YouTube TV's multiview just got WILD 🔥",
+        "Watch 4 channels at ONCE? Game changer! 📺",
+        "TV multitasking level: UNLOCKED 🚀"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick, dynamic transitions between template examples",
-            "Include real-time screen recording of Figma editing",
-            "Highlight 'before and after' brand template moments"
+            "Use quick jump cuts between multiview scenes",
+            "Add dynamic text overlays highlighting key features",
+            "Include reaction shots showing viewer excitement"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "Each slide represents one template design principle",
-            "Use consistent color-coded graphic system across slides",
-            "First slide must have provocative visual metaphor"
+            "First slide: Dramatic reveal of multiview concept",
+            "Use swipe-to-compare visual transitions",
+            "Include infographic-style explanation slides"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
             "Start with unexpected visual pattern interrupt",
-            "Use rapid-fire text overlay animations",
-            "Include designer POV voiceover explaining concepts"
+            "Use screen recording to demonstrate feature",
+            "Add energetic background music/sound effects"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Frame content as professional design strategy",
-            "Include data/statistics about template effectiveness",
-            "More technical, detailed explanation of principles"
+            "Frame as productivity/media consumption innovation",
+            "Include professional context and potential use cases",
+            "Use more refined, analytical tone"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast geometric color palette with electric blue/neon accents, modular grid-based compositions, sans-serif technical typography, motion graphics showing template transformations, minimal but energetic design system aesthetic"
+        "description": "High-energy, tech-futuristic aesthetic. Neon-electric color palette with deep blues and electric teals. Dynamic split-screen compositions mimicking multiview. Fast-paced motion graphics. Typography: bold, sans-serif, slightly tilted. Cyberpunk-meets-UI design visual style."
       },
       "exampleOutline": [
-        "Section 1: Attention-grabbing brand template problem statement",
-        "Section 2: Why current template design fails",
-        "Section 3: 8 key design flexibility principles",
-        "Section 4: Real-world template transformation example",
-        "Section 5: Call-to-action and further learning"
+        "Hook: Dramatic multiview reveal",
+        "Problem: Traditional TV viewing limitations",
+        "Solution: YouTube TV's new multiview feature",
+        "Demonstration: How it actually works",
+        "Call-to-Action: Try it out"
       ],
-      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystem #CreativeStrategy #AIDesign #ProductDesign #VisualBranding #DesignTips #CreativeTech #UIUXDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7054379/pexels-photo-7054379.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
-    },
-    {
-      "title": "In an effort to protect young users, ChatGPT will now predict how old you are",
-      "description": "The feature is designed to stop problematic content from being delivered to users under the age of 18.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2026/01/20/in-an-effort-to-protect-young-users-chatgpt-will-now-predict-how-old-you-are/"
-        },
-        {
-          "name": "Siliconrepublic",
-          "url": "https://www.siliconrepublic.com/business/openai-chatgpt-age-prediction-eu-globally-persona"
-        },
-        {
-          "name": "Helpnetsecurity",
-          "url": "https://www.helpnetsecurity.com/2026/01/21/chatgpt-age-prediction-teen-safety/"
-        },
-        {
-          "name": "Openai",
-          "url": "https://openai.com/index/our-approach-to-age-prediction/"
-        },
-        {
-          "name": "Chosun",
-          "url": "https://www.chosun.com/english/industry-en/2026/01/21/5OTZWTZRMZEMVNS76B6XTUQL4E/"
-        }
-      ],
-      "format": "carousel",
-      "subcategory": "carousel",
-      "hooks": [
-        "ChatGPT's Age Detective: Protecting Gen Z Online 🕵️",
-        "AI Now Guesses Your Age: Safety Revolution?",
-        "Digital Guardian: ChatGPT's New Age Shield"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick jump cuts to simulate age verification process",
-            "Include playful graphics showing age detection",
-            "Add text overlays highlighting key safety points"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must have provocative visual hook",
-            "Use clean, infographic-style design for explanation slides",
-            "Final slide should include clear call-to-action or learning moment"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Condense complex topic into 3-4 key visual moments",
-            "Use screen recordings to demonstrate feature",
-            "Add dynamic text animations to explain concept"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame as professional tech innovation story",
-            "Include data points about youth online safety",
-            "Use more formal, authoritative graphic design"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast cyberpunk-inspired palette with neon blues and deep purples. Geometric, fragmented typography suggesting digital verification. Glitch-style motion graphics simulating age scanning. Clean, futuristic interface mockups with translucent overlays. Minimalist iconography representing digital identity and protection."
-      },
-      "exampleOutline": [
-        "Section 1: Provocative Hook Slide - Visual Age Detection Concept",
-        "Section 2: Problem Statement - Online Safety Challenges",
-        "Section 3: How AI Age Detection Works",
-        "Section 4: Potential Impact on Digital Experiences",
-        "Section 5: Call-to-Action & Future Implications"
-      ],
-      "hashtags": "#AI #ChatGPT #OnlineSafety #TechInnovation #DigitalProtection #AgeVerification #GenZ #TechEthics #AITrends #CyberSecurity",
-      "pexelsImageUrl": "https://images.pexels.com/photos/9544452/pexels-photo-9544452.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 12
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Theaiinsider",
-          "url": "https://theaiinsider.tech/2025/12/12/figma-introduces-new-ai-powered-image-editing-suite-to-streamline-design-workflows/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Oreateai",
-          "url": "http://oreateai.com/blog/transforming-design-figmas-new-aipowered-image-editing-tools/90a05141f7c43ac94a243a13dffe521b"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/shorts/62QA4jq-VNk"
-        }
-      ],
-      "format": "reel",
-      "subcategory": "reel",
-      "hooks": [
-        "AI just transformed image editing in Figma forever 🚀",
-        "Three game-changing tools designers need right now",
-        "Precision editing just got impossibly easy"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use fast-paced jump cuts to demonstrate tool functionality",
-            "Include on-screen text to highlight key features",
-            "Maintain high energy with dynamic screen recordings"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must visually demonstrate before/after transformation",
-            "Use consistent design system across slides",
-            "Leverage slide transitions to show tool progression"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Open with unexpected visual that grabs attention",
-            "Use screen capture with dramatic zoom/highlight effects",
-            "Include voiceover explaining technical details quickly"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame tools in professional workflow context",
-            "Include data/efficiency metrics",
-            "Use more technical, detailed language"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 8,
-        "description": "High-contrast cyberpunk-inspired color palette with electric blues/purples, dynamic motion graphics showcasing tool transformations, clean sans-serif typography with glitch/tech overlay effects, rapid transitions highlighting precision and speed"
-      },
-      "exampleOutline": [
-        "Hook: Dramatic visual of impossible image edit",
-        "Problem: Current design workflow limitations",
-        "Solution: Reveal three new Figma AI tools",
-        "Demonstration: Quick tool functionality showcase",
-        "Call-to-Action: Try new Figma features now"
-      ],
-      "hashtags": "#FigmaAI #DesignTech #CreativeTech #AIDesign #ImageEditing #ProductivityHack #DesignTools #CreativeWorkflow #TechInnovation #AICreativity",
-      "pexelsImageUrl": "https://images.pexels.com/photos/29817566/pexels-photo-29817566.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "hashtags": "#YouTubeTv #MultiView #TechInnovation #StreamingTips #MediaTech #ContentCreation #TVTech #DigitalMedia #TechTrends #FutureOfTV",
       "textureIndex": 6
     },
     {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
+      "title": "We&#8217;re not nostalgic for 2016 — we&#8217;re nostalgic for the internet before all the slop",
+      "description": "At the time, people felt like 2016 was cursed -- but at least we did not yet have a word for \"doomscrolling.\"",
       "starred": false,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        }
-      ],
-      "format": "carousel",
-      "subcategory": "carousel",
-      "hooks": [
-        "Figma Buzz: 3 Design Game-Changers You Can't Miss",
-        "Supercharge Your Design Workflow in 3 Clicks",
-        "Design Faster, Smarter: Figma Buzz Secrets Revealed"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick transitions between slides to maintain energy",
-            "Add motion graphics to highlight key feature changes",
-            "Include text overlay for key statistics/benefits"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide must be visually striking and explanatory",
-            "Use consistent color scheme across all 5-6 slides",
-            "Design each slide as a standalone visual story"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Compress multi-slide content into 60-second narrative",
-            "Use quick cuts between feature explanations",
-            "Add dynamic text animations to maintain engagement"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Add more technical detail in slide descriptions",
-            "Include professional context for each feature",
-            "Use more formal, authoritative tone"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, tech-forward aesthetic with sharp geometric shapes, deep blue and electric accent colors, modern sans-serif typography, subtle gradient backgrounds, minimalist icons representing each feature, clean UI-inspired design language with slight motion design elements"
-      },
-      "exampleOutline": [
-        "Slide 1: Bold hook + visual overview of 3 features",
-        "Slide 2: Marketing Template Connection Problem/Solution",
-        "Slide 3: Plugin Integration Explanation",
-        "Slide 4: Video Trimming Feature Breakdown",
-        "Slide 5: Call-to-Action and Quick Implementation Tips"
-      ],
-      "hashtags": "#FigmaBuzz #DesignTools #AIDesign #CreativeTech #ProductivityHacks #DesignWorkflow #MarketingDesign #UIUXTips #CreativeTechnology #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/12256511/pexels-photo-12256511.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 7
-    },
-    {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/21/were-not-nostalgic-for-2016-were-nostalgic-for-the-internet-before-all-the-slop/"
         }
       ],
       "format": "quick-image",
       "subcategory": "quick-image",
       "hooks": [
-        "Typography nerds, this is your brand design origin story 🔤",
-        "How Figma designed a font that breaks all rules 👀",
-        "Behind the scenes: A typeface revolution unfolds"
+        "Internet nostalgia: When memes were pure gold 🌟",
+        "Remember when the web felt magical? 💻",
+        "2016: The last good year online?"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use kinetic typography to showcase font evolution",
-            "Include quick visual transitions between font stages",
-            "Add subtle design easter eggs in background"
+            "Use nostalgic early internet visual aesthetic",
+            "Incorporate quick visual transitions mimicking old web design",
+            "Add retro filter/glitch effect for authenticity"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: Dramatic before/after font comparison",
-            "Use square grid layout for clean typography showcase",
-            "Include designer sketches and process slides"
+            "First slide: Bold nostalgic headline",
+            "Progressive reveal of internet evolution slides",
+            "Use consistent vintage color palette across slides"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with unexpected font transformation moment",
-            "Use rapid-cut editing to maintain energy",
-            "Include voiceover explaining design philosophy"
+            "Fast-paced visual montage of 2016 internet moments",
+            "Use quick cuts between different internet eras",
+            "Narrate with humorous, slightly ironic tone"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Frame as professional design case study",
-            "Highlight strategic reasoning behind typeface design",
-            "Use more technical, process-oriented language"
+            "Frame as professional digital culture commentary",
+            "Use more analytical, reflective visual approach",
+            "Include subtle data visualization elements"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Retro-futuristic aesthetic blending early web design with modern graphic sensibilities. Pixelated overlays, vaporwave color gradients, glitch effects. Typography mixing vintage computer fonts with clean sans-serif. Nostalgic but not purely retrospective - hint at current digital landscape transformation."
+      },
+      "exampleOutline": [
+        "Opening: Provocative nostalgia hook",
+        "Context: 2016 internet landscape snapshot",
+        "Contrast: Then vs now digital experience",
+        "Insight: How internet culture transformed",
+        "Call-to-Action: Reflect/Engage"
+      ],
+      "hashtags": "#InternetNostalgia #DigitalCulture #WebEvolution #TechMemories #Millennials #InternetHistory #ViralContent #OnlineCommunity #WebDesign #TechTrends",
+      "textureIndex": 11
+    },
+    {
+      "title": "OpenAI’s former sales leader joins VC firm Acrew: OpenAI taught her where startups can build a ‘moat’",
+      "description": "Aliisa Rosenthal has found a new career as a VC. She knows what startups can do to protect themselves from the model makers eating their markets.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/21/openais-former-sales-leader-joins-vc-firm-acrew-openai-taught-her-where-startups-can-build-a-moat/"
+        }
+      ],
+      "format": "story",
+      "subcategory": "story",
+      "hooks": [
+        "VC Secrets: How OpenAI's Sales Leader Beats AI Disruption",
+        "Startup Survival Guide: Lessons from Big Tech Insider",
+        "Build Your AI Moat Before It's Too Late"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick scene transitions to maintain energy",
+            "Include animated text overlays highlighting key insights",
+            "Create visual metaphors for 'moat' concept"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "Design each slide with clear, minimal information hierarchy",
+            "Use consistent color palette across slides",
+            "First slide must have provocative visual/headline"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected visual/audio pattern interrupt",
+            "Use dynamic text animations",
+            "Include subtle screen recordings/tech visuals"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add more professional, data-driven context",
+            "Include subtle corporate/tech-inspired design elements",
+            "Emphasize thought leadership angle"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech-inspired color palette (deep blues, electric teals, sharp whites). Geometric typography with angular transitions. Glitch/digital distortion effects. Futuristic data visualization elements. Blend of technical infographic and artistic abstraction."
+      },
+      "exampleOutline": [
+        "Opening: Dramatic reveal of Aliisa Rosenthal's journey",
+        "Problem: AI eating startup markets",
+        "Key Insights: Building defensible startup strategies",
+        "Case Study: OpenAI's internal learnings",
+        "Call-to-Action: How viewers can apply insights"
+      ],
+      "hashtags": "#AIStartups #VCInsights #TechStrategy #AIInnovation #StartupLife #OpenAI #VentureCapital #TechTrends #AIDisruption #InnovationStrategy",
+      "textureIndex": 9
+    },
+    {
+      "title": "YouTube will soon let creators make Shorts with their own AI likeness",
+      "description": "YouTube Shorts viewers might soon see AI versions of their favorite creators when scrolling through their feeds.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/21/youtube-will-soon-let-creators-make-shorts-with-their-own-ai-likeness/"
+        }
+      ],
+      "format": "carousel",
+      "subcategory": "carousel",
+      "hooks": [
+        "AI Creators: YouTube's Wild New Shapeshifting Shorts Feature",
+        "Your Digital Twin is Coming to YouTube Shorts",
+        "Clone Yourself: YouTube's Next Creator Revolution"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick cuts between AI and human creator shots",
+            "Include reaction-style transitions showing transformation",
+            "Keep pace fast, under 3-second visual transitions"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have shocking/unexpected AI transformation visual",
+            "Use square 1:1 or 4:5 ratio for maximum engagement",
+            "Progressive reveal of AI capabilities across slides"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with pattern interrupt visual of AI morphing",
+            "Use text overlays explaining technological breakthrough",
+            "Include creator reaction/commentary clip"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as professional innovation, not just entertainment",
+            "Include potential business/creator economy implications",
+            "Use more technical language and data points"
           ]
         }
       ],
       "visualDirection": {
         "rating": 8,
-        "description": "High-contrast monochromatic palette with electric blue/charcoal accents, geometric composition emphasizing typographic grid, animated letterform deconstructions, Swiss design meets digital brutalism aesthetic, dynamic negative space utilization"
+        "description": "Cyberpunk-meets-glitch aesthetic, neon-electric color palette with blues/purples, liquid morphing transitions between human/AI representations, high-contrast typography, dynamic geometric fragmentation effects suggesting technological transformation"
       },
       "exampleOutline": [
-        "Provocative visual hook: Deconstructed letter forms",
-        "Design challenge: Bland corporate typography",
-        "Figma Sans: Our radical solution",
-        "Design principles that break conventions",
-        "Community-driven design call-to-action"
+        "Slide 1: Provocative hook + eye-catching AI transformation visual",
+        "Slide 2: What is YouTube's new AI creator feature?",
+        "Slide 3: How the technology actually works",
+        "Slide 4: Potential creator/audience implications",
+        "Slide 5: Call-to-action and future predictions"
       ],
-      "hashtags": "#DesignInnovation #Typography #FigmaDesign #CreativeTech #BrandIdentity #AIDesign #ProductDesign #CreativeProcess #DesignSystem #TypefaceDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/20533544/pexels-photo-20533544.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "hashtags": "#AICreators #YouTubeShorts #CreatorEconomy #AIInnovation #DigitalTransformation #TechTrends #ContentCreation #FutureOfMedia #AITechnology #CreatorTools",
+      "textureIndex": 6
+    },
+    {
+      "title": "OpenAI aims to ship its first device in 2026, and it could be earbuds",
+      "description": "The AI startup is on track to announce its first hardware device in the second half of this year, OpenAI Chief Global Affairs Officer Chris Lehane said during an interview Davos.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/21/openai-aims-to-ship-its-first-device-in-2026-and-it-could-be-earbuds/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "OpenAI's Secret Earbud Revolution 🚀",
+        "AI in Your Ears: OpenAI's Hardware Surprise",
+        "Future Listening: OpenAI's 2026 Tech Bomb"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic split-screen animation showing tech evolution",
+            "Incorporate futuristic sound design to enhance tech narrative",
+            "Create quick visual transitions mimicking earbud transformation"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Provocative close-up of conceptual AI earbuds",
+            "Use infographic-style slides to break down potential features",
+            "Final slide includes speculative design mockup"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected audio glitch/interrupt",
+            "Use rapid-fire text overlay for key information",
+            "Include reaction-style commentary overlay"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "More serious, data-driven visual approach",
+            "Include credible source citation",
+            "Use professional color palette with tech undertones"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Cyberpunk-minimal aesthetic with electric blue/neon accents, floating holographic earbud renders, liquid metallic textures, high-contrast typography, futuristic motion graphics suggesting technological emergence"
+      },
+      "exampleOutline": [
+        "Section 1: Provocative Visual Hook",
+        "Section 2: OpenAI Hardware Context Teaser",
+        "Section 3: 2026 Device Speculation",
+        "Section 4: Potential AI Earbud Implications",
+        "Section 5: Invitation to Imagine Future"
+      ],
+      "hashtags": "#OpenAI #AITech #FutureHardware #TechInnovation #AIEarbuds #InnovationWatch #TechTrends #AIRevolution #FutureOfSound #InnovationDesign",
       "textureIndex": 8
     }
   ]

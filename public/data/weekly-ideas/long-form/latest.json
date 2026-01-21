@@ -1,268 +1,212 @@
 {
   "type": "long-form",
-  "date": "2026-01-21T16:29:27.363Z",
+  "date": "2026-01-21T16:45:01.752Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "YouTube will soon let creators make Shorts with their own AI likeness",
+      "description": "YouTube Shorts viewers might soon see AI versions of their favorite creators when scrolling through their feeds.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/figma-buzz"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover/8-tips-for-designers-building-branded-templates-in-figma-buz"
-        }
-      ],
-      "format": "documentary",
-      "subcategory": "framework",
-      "hooks": [
-        "Design Templates That Bend Without Breaking Brand Rules",
-        "How Pro Designers Hack Scalable Brand Systems",
-        "Unlock Figma's Secret Template Engineering Techniques"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use cinematic B-roll showing template adaptations",
-            "Include picture-in-picture designer commentary moments",
-            "Create dynamic screen recordings with zoom/highlight effects"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Modern, technical-elegant aesthetic with dynamic motion graphics. Cool blue/gray color palette with electric accent colors. Typography: Sharp sans-serif, clean technical overlays. Smooth transitions between screen recordings and talking head segments. Subtle parallax and depth effects to illustrate template flexibility."
-      },
-      "exampleOutline": [
-        "Cold Open: Designer's Template Failure Story",
-        "The Hidden Complexity of Brand Template Design",
-        "8 Tactical Template Engineering Principles",
-        "Real-World Case Study: Successful Template Implementation",
-        "Future of Adaptive Design Systems Teaser"
-      ],
-      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystems #ProductDesign #UXDesign #DesignTips #CreativeStrategy #AIDesign #TemplateEngineering #OpenSesh",
-      "pexelsImageUrl": "https://images.pexels.com/photos/15578085/pexels-photo-15578085.png?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 0
-    },
-    {
-      "title": "In an effort to protect young users, ChatGPT will now predict how old you are",
-      "description": "The feature is designed to stop problematic content from being delivered to users under the age of 18.",
-      "starred": false,
-      "sources": [
-        {
           "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2026/01/20/in-an-effort-to-protect-young-users-chatgpt-will-now-predict-how-old-you-are/"
-        },
-        {
-          "name": "Siliconrepublic",
-          "url": "https://www.siliconrepublic.com/business/openai-chatgpt-age-prediction-eu-globally-persona"
-        },
-        {
-          "name": "Helpnetsecurity",
-          "url": "https://www.helpnetsecurity.com/2026/01/21/chatgpt-age-prediction-teen-safety/"
-        },
-        {
-          "name": "Openai",
-          "url": "https://openai.com/index/our-approach-to-age-prediction/"
-        },
-        {
-          "name": "Chosun",
-          "url": "https://www.chosun.com/english/industry-en/2026/01/21/5OTZWTZRMZEMVNS76B6XTUQL4E/"
-        }
-      ],
-      "format": "tutorial",
-      "subcategory": "instructional",
-      "hooks": [
-        "ChatGPT's New Age Detector: How It Actually Works",
-        "Predict Your AI Age: A Step-by-Step Guide",
-        "Unlocking ChatGPT's Age Verification Secrets"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use screen recording to demonstrate age prediction interface",
-            "Include side-by-side comparisons of different age verification scenarios",
-            "Create chapter markers for each step of the process"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, tech-forward design with futuristic blue-purple gradient overlays. Dynamic motion graphics showing age verification process. Clean, sans-serif typography with high-contrast text. Animated data visualization elements. Cybersecurity-inspired visual metaphors with translucent UI elements and subtle digital texture."
-      },
-      "exampleOutline": [
-        "Section 1: Why Age Verification Matters in AI",
-        "Section 2: Understanding ChatGPT's New Age Prediction Mechanism",
-        "Section 3: Step-by-Step Tutorial of Age Verification Process",
-        "Section 4: Implications for User Safety and Privacy",
-        "Section 5: Future of AI Age Protection"
-      ],
-      "hashtags": "#ChatGPT #AISafety #AgeVerification #AITechnology #DigitalPrivacy #TechTutorial #AIEthics #MachineLearning #TechInnovation #AIProtection",
-      "pexelsImageUrl": "https://images.pexels.com/photos/30820142/pexels-photo-30820142.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Theaiinsider",
-          "url": "https://theaiinsider.tech/2025/12/12/figma-introduces-new-ai-powered-image-editing-suite-to-streamline-design-workflows/"
-        },
-        {
-          "name": "Contentgrip",
-          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Oreateai",
-          "url": "http://oreateai.com/blog/transforming-design-figmas-new-aipowered-image-editing-tools/90a05141f7c43ac94a243a13dffe521b"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/shorts/62QA4jq-VNk"
+          "url": "https://techcrunch.com/2026/01/21/youtube-will-soon-let-creators-make-shorts-with-their-own-ai-likeness/"
         }
       ],
       "format": "documentary",
       "subcategory": "framework",
       "hooks": [
-        "AI Just Transformed Image Editing in Figma Forever",
-        "Three Tools That Will Revolutionize Design Workflows",
-        "Inside Figma's Breakthrough Image Editing Revolution"
+        "AI Creators: The Future of YouTube is Here",
+        "Digital Doubles: YouTube's Radical Creator Revolution",
+        "When Creators Become Their Own AI Clones"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use cinematic B-roll of designers working in Figma",
-            "Include side-by-side before/after demonstration clips",
-            "Create chapter markers showing tool transitions"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast tech-inspired color palette with deep blues and electric accent colors. Dynamic split-screen compositions highlighting tool functionality. Sleek, modern typography with technical motion graphics. Incorporate subtle glitch/digital texture effects to emphasize AI innovation. Use clean, precision-focused visual metaphors that communicate technical excellence."
-      },
-      "exampleOutline": [
-        "Section 1: Cold Open - Dramatic AI Image Edit Reveal",
-        "Section 2: Design Industry Challenge & Current Limitations",
-        "Section 3: Deep Dive into Three New AI Tools",
-        "Section 4: Real-World Workflow Transformation Case Studies",
-        "Section 5: Future of AI-Powered Design Invitation"
-      ],
-      "hashtags": "#FigmaAI #DesignTechnology #AIDesign #CreativeWorkflow #ImageEditing #DesignInnovation #TechTools #AICreativity #DesignTips #FigmaTutorial",
-      "pexelsImageUrl": "https://images.pexels.com/photos/18999289/pexels-photo-18999289.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 11
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        }
-      ],
-      "format": "video",
-      "subcategory": "thought-leadership",
-      "hooks": [
-        "Design Faster: Figma Buzz's Game-Changing New Features",
-        "3 Secrets to Supercharge Your Figma Workflow",
-        "Figma Just Leveled Up Design Productivity"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use screen recording with picture-in-picture demonstration",
-            "Include chapter markers for easy navigation",
-            "Create dynamic motion graphics to illustrate Figma features"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, dynamic visual approach with vibrant Figma-inspired color palette. High-contrast typography with animated transitions. Screen recordings featuring smooth cursor movements and highlight animations. Clean, modern interface overlays with subtle depth and motion. Incorporate Figma's design system with energetic, tech-forward aesthetic."
-      },
-      "exampleOutline": [
-        "Hook: Rapid-fire intro showcasing new Figma Buzz features",
-        "Context: Current design workflow challenges and limitations",
-        "Feature Breakdown: Deep dive into 3 new tools",
-        "Practical Demonstration: Live workflow optimization examples",
-        "Call-to-Action: How to immediately implement new features"
-      ],
-      "hashtags": "#FigmaDesign #DesignTips #ProductivityHacks #CreativeTech #UIDesign #DesignWorkflow #FigmaBuzz #DesignTools #CreativeWorkflow #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/30766684/pexels-photo-30766684.png?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 6
-    },
-    {
-      "title": "Just our type: The story of creating Figma Sans",
-      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
-        }
-      ],
-      "format": "livestream",
-      "subcategory": "leadership",
-      "hooks": [
-        "How we designed a font that tells Figma's story",
-        "The secret behind Figma's most personal design yet",
-        "Typeface revolution: Inside Figma Sans creation"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Enable live chat for real-time audience interaction",
-            "Prepare pre-submitted Q&A questions as backup",
-            "Use YouTube's live stream markers to highlight key moments"
+            "Use cinematic B-roll showing AI generation process",
+            "Include split-screen comparisons of real vs AI creator",
+            "Leverage chapter markers for clear documentary flow"
           ]
         }
       ],
       "visualDirection": {
         "rating": 8,
-        "description": "High-energy, dynamic visual storytelling with animated type specimens, behind-the-scenes design process footage, interactive screen transitions showing font evolution, color palette matching Figma's brand blues and energetic gradients, motion graphics revealing typographic details, picture-in-picture designer interviews"
+        "description": "High-contrast cyberpunk color palette (deep blues, electric teals, neon accents). Dynamic composition with technological overlay graphics. Futuristic sans-serif typography. Motion graphics simulating digital transformation/morphing. References: WIRED documentaries, Blade Runner visual aesthetic, tech future visualizations."
       },
       "exampleOutline": [
-        "Opening: Live intro & audience welcome",
-        "Backstory: Why Figma needed a custom typeface",
-        "Design process: From concept to final font",
-        "Technical deep dive: Font engineering insights",
-        "Live Q&A and audience interaction"
+        "Opening: Dramatic AI generation sequence",
+        "Context: Current state of creator technology",
+        "Deep Dive: How AI likeness generation works",
+        "Implications: Future of digital content creation",
+        "Closing: Ethical considerations and creator empowerment"
       ],
-      "hashtags": "#Figma #Typography #DesignSystem #CreativeCoding #BrandDesign #FontDesign #ProductDesign #AdobeAlternative #DesignTools #CreativeProcess",
-      "pexelsImageUrl": "https://images.pexels.com/photos/28428592/pexels-photo-28428592.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 8
+      "hashtags": "#AICreators #YouTubeAI #CreatorEconomy #FutureOfMedia #AITechnology #DigitalIdentity #ContentCreation #TechInnovation #AIShorts #CreatorTools",
+      "textureIndex": 5
+    },
+    {
+      "title": "OpenAI aims to ship its first device in 2026, and it could be earbuds",
+      "description": "The AI startup is on track to announce its first hardware device in the second half of this year, OpenAI Chief Global Affairs Officer Chris Lehane said during an interview Davos.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/21/openai-aims-to-ship-its-first-device-in-2026-and-it-could-be-earbuds/"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "OpenAI's First Device: 5 Mind-Blowing Insights",
+        "Decode OpenAI's Hardware Revolution in 6 Steps",
+        "Earbuds or Game-Changer? OpenAI's Secret Revealed"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use side-by-side screen comparisons of current AI hardware",
+            "Create dynamic motion graphics showing potential device evolution",
+            "Include picture-in-picture expert commentary segments"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech-inspired color palette (electric blue, deep graphite, bright white), futuristic typography with sharp angles, dynamic diagonal composition layouts, subtle holographic motion graphics overlays, clean Apple-meets-cyberpunk aesthetic with technical precision"
+      },
+      "exampleOutline": [
+        "Section 1: Explosive Hook - OpenAI's Hardware Breakthrough",
+        "Section 2: Industry Context - Why Hardware Matters in AI",
+        "Section 3: 5-Step Breakdown of OpenAI's Device Strategy",
+        "Section 4: Technical Deep Dive - Earbud Technology Insights",
+        "Section 5: Future Predictions and Community Engagement CTA"
+      ],
+      "hashtags": "#OpenAI #AIHardware #TechInnovation #FutureOfTech #AIEarbuds #SiliconValley #TechTrends #InnovationInsights #AIRevolution #TechTutorial",
+      "textureIndex": 2
+    },
+    {
+      "title": "Has Gemini surpassed ChatGPT? We put the AI models to the test.",
+      "description": "Has Gemini surpassed ChatGPT? We put the AI models to the test.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/features/2026/01/has-gemini-surpassed-chatgpt-we-put-the-ai-models-to-the-test/"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "AI Titans Clash: Gemini vs ChatGPT Showdown",
+        "Can Google's Gemini Dethrone ChatGPT?",
+        "The Ultimate AI Model Smackdown Revealed"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dynamic split-screen comparisons during model tests",
+            "Include chapter markers for easy navigation",
+            "Create high-production B-roll of AI testing environment"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast blue and gray color palette. Dynamic split-screen compositions. Futuristic typography with technical overlay graphics. Smooth motion transitions between test scenarios. Cinematic documentary-style lighting with technical data visualizations. Reference: MKBHD tech review aesthetic with scientific precision."
+      },
+      "exampleOutline": [
+        "Opening: Dramatic AI model introduction",
+        "Context: Current state of conversational AI",
+        "Methodology: Detailed testing framework",
+        "Head-to-Head Comparisons: Performance Metrics",
+        "Surprising Discoveries and Insights",
+        "Final Verdict and Future Implications"
+      ],
+      "hashtags": "#AI #ArtificialIntelligence #GeminiAI #ChatGPT #TechComparison #AIResearch #MachineLearning #TechReview #AIInnovation #TechnologyTrends",
+      "textureIndex": 6
+    },
+    {
+      "title": "TechCrunch Disrupt 2026 tickets now on sale: Lowest rates all year",
+      "description": "TechCrunch Disrupt 2026 tickets are officially on sale. Save up to $680 on your ticket and be among the first 500 registrants to score a +1 pass at 50% off. Don't miss 10,000 tech leaders, founders, and VCs in San Francisco from Oct 13-15. Register before these one-time deals vanish.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/21/techcrunch-disrupt-2026-tickets-now-on-sale-lowest-rates-all-year/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "Hack TechCrunch Disrupt: Save $680 Before It's Gone",
+        "Tech's Biggest Event: Insider Ticket Strategy Revealed",
+        "500 Founders, 10,000 Leaders, One Unmissable Opportunity"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dynamic screen recordings showing ticket purchase process",
+            "Incorporate animated graphics showing ticket savings/value",
+            "Create picture-in-picture overlay with founder testimonials/event highlights"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy tech aesthetic with electric blue/charcoal gray gradient backgrounds, sharp geometric motion graphics, futuristic sans-serif typography, rapid-cut transitions highlighting ticket value, subtle tech-inspired animation elements, clean data visualization of event statistics"
+      },
+      "exampleOutline": [
+        "Section 1: High-energy event reveal/ticket savings hook",
+        "Section 2: TechCrunch Disrupt context and historical significance",
+        "Section 3: Detailed ticket tier breakdown and strategic purchasing advice",
+        "Section 4: Exclusive insights on networking and event value",
+        "Section 5: Urgent call-to-action with registration link"
+      ],
+      "hashtags": "#TechCrunchDisrupt #StartupConference #TechTickets #SiliconValley #TechEvent2026 #InnovationSummit #VCNetworking #TechConference #StartupLife #InvestorMeetup",
+      "textureIndex": 0
+    },
+    {
+      "title": "Adobe Acrobat now lets you edit files using prompts, generate podcast summaries",
+      "description": "Adobe is adding AI tools to Acrobat, including the ability to generate podcast summaries of files, create presentations, and a way for users to edit files using prompts.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/21/adobe-acrobat-now-lets-you-edit-files-using-prompts-generate-podcast-summaries/"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "AI is transforming document editing forever 🔥",
+        "Unlock secret Adobe Acrobat AI superpowers now",
+        "How AI will revolutionize your PDF workflow"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use live chat to encourage real-time audience interaction",
+            "Prepare pre-screened Q&A questions as conversation starters",
+            "Enable channel memberships to boost engagement during livestream"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dynamic split-screen design with live presenter on one side, AI demonstration/screen recording on other. High-contrast electric blue and deep charcoal color palette. Animated tech-inspired lower thirds. Futuristic sans-serif typography with subtle motion graphics. Clean, energetic aesthetic blending professional and cutting-edge design sensibilities."
+      },
+      "exampleOutline": [
+        "Section 1: High-energy livestream intro & personal AI workflow story",
+        "Section 2: Adobe Acrobat AI feature breakdown",
+        "Section 3: Live AI prompt editing demonstration",
+        "Section 4: Real-world use cases & productivity hacks",
+        "Section 5: Interactive Q&A with audience, live technique sharing"
+      ],
+      "hashtags": "#AdobeAI #AIProductivity #DocumentWorkflow #TechInnovation #AITools #ProductivityHacks #CreativeTech #FutureOfWork #AIEditing #TechTips",
+      "textureIndex": 6
     }
   ]
 }
