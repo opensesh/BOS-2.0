@@ -1,229 +1,175 @@
 {
   "type": "long-form",
-  "date": "2026-01-22T16:25:38.451Z",
+  "date": "2026-01-22T16:37:04.717Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Personal Intelligence in AI Mode in Search: Help that's uniquely yours",
+      "description": "&lt;img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/pcontext_sizzle_thumbnail.max-600x600.format-webp.webp\"&gt;Personal Intelligence lets you tap into your context from Gmail and Photos to deliver tailored responses in Search, just for you.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover/8-tips-for-designers-building-branded-templates-in-figma-buz"
-        }
-      ],
-      "format": "video",
-      "subcategory": "thought-leadership",
-      "hooks": [
-        "Design Templates That Won't Break Your Brand",
-        "Figma Buzz: Make Templates That Actually Work",
-        "How Pros Create Bulletproof Design Systems"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use screen recording with high-contrast Figma UI",
-            "Include picture-in-picture designer commentary",
-            "Add chapter markers for easy navigation"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, dynamic color palette with deep blues and electric accents. High-contrast typography with modern sans-serif. Animated design system overlays. Clean motion graphics demonstrating template flexibility. Split-screen comparisons of rigid vs. flexible designs. Minimalist but energetic aesthetic inspired by design systems."
-      },
-      "exampleOutline": [
-        "Cold Open: Dramatic Design System Failure Example",
-        "Why Most Templates Completely Fail Brands",
-        "8 Strategic Template Design Principles",
-        "Live Figma Demonstration of Principles",
-        "Final Actionable Takeaways & Community Challenge"
-      ],
-      "hashtags": "#FigmaDesign #DesignSystems #BrandTemplates #CreativeDirection #ProductDesign #UIUXTips #DesignStrategy #CreativeTech #DesignWorkflow #AIDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/30766684/pexels-photo-30766684.png?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 3
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Theaiinsider",
-          "url": "https://theaiinsider.tech/2025/12/12/figma-introduces-new-ai-powered-image-editing-suite-to-streamline-design-workflows/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Oreateai",
-          "url": "http://oreateai.com/blog/transforming-design-figmas-new-aipowered-image-editing-tools/90a05141f7c43ac94a243a13dffe521b"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/release-notes/"
-        }
-      ],
-      "format": "video",
-      "subcategory": "thought-leadership",
-      "hooks": [
-        "AI Just Transformed Figma Image Editing Forever",
-        "3 Mind-Blowing Tools Designers Can't Ignore",
-        "Figma's Secret Weapon: Next-Level Image Editing"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use screen recording with high-quality Figma interface capture",
-            "Include picture-in-picture with host explaining key features",
-            "Create dynamic chapter markers for easy navigation"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, tech-forward aesthetic with deep blue and electric cyan color palette. Dynamic motion graphics showing before/after image editing. Clean, sans-serif typography with slight futuristic edge. Animated transitions highlighting tool transformations. Subtle parallax effects during tool demonstrations."
-      },
-      "exampleOutline": [
-        "Section 1: High-energy intro revealing three new AI tools",
-        "Section 2: Current design workflow pain points",
-        "Section 3: Detailed walkthrough of each new Figma tool",
-        "Section 4: Real-world impact and workflow acceleration",
-        "Section 5: Call-to-action with free tutorial resources"
-      ],
-      "hashtags": "#Figma #AIDesign #CreativeTech #DesignTools #ImageEditing #AICreativity #ProductivityHack #DesignWorkflow #CreativeTechnology #FigmaUpdates",
-      "pexelsImageUrl": "https://images.pexels.com/photos/28428588/pexels-photo-28428588.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 6
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Ux-news",
-          "url": "https://ux-news.com/new-features-in-figma-buzz-customizable-templates-plugins-and-video-trimming/"
-        },
-        {
-          "name": "Releasebot",
-          "url": "https://releasebot.io/updates/figma"
-        },
-        {
-          "name": "Forum",
-          "url": "https://forum.figma.com/suggest-a-feature-11/adaptive-font-size-to-fixed-size-text-boxes-for-figma-and-buzz-49686"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/resource-library/web-design-trends/"
-        }
-      ],
-      "format": "documentary",
-      "subcategory": "framework",
-      "hooks": [
-        "Design Tools Revolution: Figma Buzz Changes Everything",
-        "How Designers Are Reclaiming Creative Power",
-        "3 Game-Changing Features Transforming Digital Workflows"
-      ],
-      "platformTips": [
-        {
-          "platform": "YouTube",
-          "tips": [
-            "Use cinematic b-roll of designers working in real environments",
-            "Include expert testimonial clips to add credibility",
-            "Create dynamic screen recordings with smooth transitions"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Modern documentary aesthetic with high-contrast color palette (charcoal gray, electric blue, white), clean Swiss typography, fluid motion graphics overlaying technical screen captures, subtle parallax effects during feature demonstrations, minimalist infographic transitions highlighting key feature details"
-      },
-      "exampleOutline": [
-        "Cold Open: Dramatic Designer Workspace Scene",
-        "The Current Design Workflow Challenge",
-        "Deep Dive: Figma Buzz Feature Analysis",
-        "Real-World Impact & Case Studies",
-        "Future of Design Tools Prediction"
-      ],
-      "hashtags": "#FigmaBuzz #DesignTech #CreativeTools #UXDesign #ProductDesign #AIDesign #DesignInnovation #CreativeTech #WorkflowOptimization #DesignCommunity",
-      "pexelsImageUrl": "https://images.pexels.com/photos/29764257/pexels-photo-29764257.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 1
-    },
-    {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
+          "name": "Google AI Blog",
+          "url": "https://blog.google/products-and-platforms/products/search/personal-intelligence-ai-mode-search/"
         }
       ],
       "format": "livestream",
       "subcategory": "leadership",
       "hooks": [
-        "Design Career Secrets: Inside Moniker's Senior Design Role",
-        "How Top Design Studios Really Hire Senior Talent",
-        "Crack the Code: Moniker's Elite Design Opportunity"
+        "AI Search Just Got Personally Epic 🔥",
+        "Your Context, Your Search: Game Changer Alert",
+        "Google's AI Mode: Search Feels Like Magic"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Enable live chat for real-time audience interaction",
-            "Prepare pre-screened Q&A questions to maintain flow",
-            "Use stream annotations to highlight key discussion points"
+            "Enable live chat interaction during stream",
+            "Prepare real-time screen sharing for demo",
+            "Have pre-planned Q&A segments with audience"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-energy visual design with San Francisco tech aesthetic: Clean white/charcoal base, bold accent colors (electric blue/orange), dynamic motion graphics overlays, sleek sans-serif typography, minimalist design studio B-roll footage, picture-in-picture designer interview style"
+        "description": "Dynamic, tech-forward visual aesthetic with futuristic blue-purple gradients, holographic overlays, clean sans-serif typography. Picture-in-picture demos with animated context transitions. Sleek motion graphics highlighting personalization moments. Minimal but high-energy visual language."
       },
       "exampleOutline": [
-        "Introduction: Moniker's Design Philosophy & Role Context",
-        "Career Landscape: Senior Design Opportunities in Tech",
-        "Deep Dive: Role Requirements & Skill Expectations",
-        "Behind-the-Scenes: What Makes a Successful Design Candidate",
-        "Live Q&A: Direct Insights from Industry Experts"
+        "Intro: Live Welcome & Personal Intelligence Teaser",
+        "What is Personal Intelligence in Search?",
+        "Live Demonstration of Contextual AI Responses",
+        "Real-World Use Cases & User Benefits",
+        "Interactive Q&A with Audience Exploration"
       ],
-      "hashtags": "#DesignCareer #SeniorDesign #CreativeJobs #SanFranciscoDesign #TechDesign #DesignOpportunity #CreativeTalent #DesignIndustry #CareerAdvice #DesignCommunity",
-      "pexelsImageUrl": "https://images.pexels.com/photos/28428592/pexels-photo-28428592.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 2
+      "hashtags": "#GoogleAI #SearchInnovation #PersonalIntelligence #AISearch #TechTrends #FutureOfSearch #MachineLearning #TechDemo #AIAssistant #InnovationLive",
+      "textureIndex": 10
     },
     {
-      "title": "Anthropic has to keep revising its technical interview test so you can’t cheat on it with Claude",
+      "title": "Google&#8217;s AI Mode can now tap into your Gmail and Photos to provide tailored responses",
+      "description": "The company notes that AI Mode doesn’t train directly on your Gmail inbox or Google Photos library. Instead, it trains on specific prompts and the model’s responses.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/22/googles-ai-mode-can-now-tap-into-your-gmail-and-photos-to-provide-tailored-responses/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "AI Just Got Personal: Google's Secret Inbox Magic",
+        "Your Photos & Emails: The New AI Superpower",
+        "Google's AI Knows You Better Than You Think"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use picture-in-picture screen recording to demonstrate AI interactions",
+            "Create dynamic chapter markers showing key privacy/feature transitions",
+            "Include side-by-side visual comparisons of AI responses"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-futuristic aesthetic with deep blue and electric cyan color palette. Sharp, geometric typography with motion-tracked text reveals. Sleek screen recordings with glitch-style transition effects. Clean, high-contrast design emphasizing technological innovation and user empowerment."
+      },
+      "exampleOutline": [
+        "Hook: Dramatic AI Capability Reveal",
+        "Context: Privacy Concerns & Tech Limitations",
+        "How Google's AI Mode Actually Works",
+        "Real-World Use Cases & Implications",
+        "Future of Personalized AI Interactions"
+      ],
+      "hashtags": "#GoogleAI #AIPrivacy #TechInnovation #MachineLearning #ArtificialIntelligence #PersonalAI #TechTrends #AIEthics #GooglePhotos #EmailAI",
+      "textureIndex": 12
+    },
+    {
+      "title": "Google reportedly snags up team behind AI voice startup Hume AI",
+      "description": "Google has hired the CEO and top top behind voice AI startup Hume AI, signaling that voice is increasingly becoming the preferred interface over screens.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/22/google-reportedly-snags-up-team-behind-ai-voice-startup-hume-ai/"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "Voice AI: The Silent Revolution Transforming Tech",
+        "Google's Secret Weapon: Hume AI's Voice Pioneers",
+        "When AI Learns to Truly Listen"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use cinematic B-roll of tech environments and voice interaction scenes",
+            "Incorporate interview-style expert commentary with dynamic motion graphics",
+            "Create chapter markers highlighting key voice AI transition moments"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "High-contrast dark mode aesthetic with electric blue/teal accents. Dynamic split-screen compositions showing human-AI voice interactions. Minimalist futuristic typography with subtle motion tracking. Incorporate abstract data visualization representing voice wave patterns. Reference visual style of 'Ex Machina' and WIRED documentary aesthetics."
+      },
+      "exampleOutline": [
+        "Opening: Dramatic voice AI interaction montage",
+        "Context: Evolution of human-computer communication",
+        "Hume AI Story: Startup's groundbreaking technology",
+        "Google Acquisition: Strategic implications and future vision",
+        "Closing: Call to understand voice AI's potential"
+      ],
+      "hashtags": "#VoiceAI #GoogleAI #HumeAI #ArtificialIntelligence #TechInnovation #AIVoice #FutureOfTech #VoiceTechnology #AIStartup #TechDocumentary",
+      "textureIndex": 7
+    },
+    {
+      "title": "From invisibility cloaks to AI chips: Neurophos raises $110M to build tiny optical processors for inferencing",
+      "description": "Neurophos is taking a crack at solving the AI industry's power efficiency problem with an optical chip that uses a composite material to do the math required in AI inferencing tasks.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/22/from-invisibility-cloaks-to-ai-chips-neurophos-raises-110m-to-build-tiny-optical-processors-for-inferencing/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "Invisibility Cloaks Meet AI: The $110M Chip Revolution",
+        "How Tiny Optical Chips Will Transform AI Forever",
+        "Light-Speed AI: The Breakthrough Silicon Can't Match"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dynamic screen recordings showing chip architecture",
+            "Include picture-in-picture with founder/expert interviews",
+            "Create clear chapter markers for complex technical content",
+            "Use visual metaphors to explain complex optical processing",
+            "Incorporate motion graphics to illustrate technical concepts"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast teal and electric blue color palette, futuristic translucent graphics simulating optical pathways, clean sans-serif typography with technical precision, fluid motion transitions suggesting light/data movement, minimalist tech-documentary aesthetic blending scientific accuracy with creative visualization"
+      },
+      "exampleOutline": [
+        "Opening: Dramatic reveal of Neurophos breakthrough",
+        "The AI Power Problem: Current limitations",
+        "Optical Processing: How Neurophos solves inefficiency",
+        "Technical Deep Dive: Composite material innovation",
+        "Future Implications & Call to Explore"
+      ],
+      "hashtags": "#AIInnovation #OpticalComputing #TechBreakthrough #AIChips #FutureOfComputing #Neurophos #DeepTech #InnovationTech #MachineLearning #TechStartups",
+      "textureIndex": 6
+    },
+    {
+      "title": "Anthropic has to keep revising its technical interview test so you can&#8217;t cheat on it with Claude",
       "description": "Since 2024, Anthropic's performance optimization team has given job seekers a take-home test to make sure they know their stuff — but as AI coding tools have gotten better, the test has had to change a lot to stay ahead of AI-assisted cheating.",
       "starred": false,
       "sources": [
@@ -235,34 +181,33 @@
       "format": "tutorial",
       "subcategory": "instructional",
       "hooks": [
-        "Hack-Proof Interviews: How Tech Giants Stay Ahead",
-        "The AI Cheating Arms Race in Tech Hiring",
-        "Inside Anthropic's Evolving Technical Interview Challenge"
+        "How Tech Interviews Outsmart AI Cheating",
+        "The Cat-and-Mouse Game of Technical Interviews",
+        "Beating AI: Inside Anthropic's Interview Evolution"
       ],
       "platformTips": [
         {
           "platform": "YouTube",
           "tips": [
-            "Use screen recordings of interview test evolution",
-            "Include side-by-side comparisons of old vs. new test designs",
-            "Create chapter markers for each test iteration step"
+            "Use screen recordings of interview test modifications",
+            "Include animated diagrams showing AI detection strategies",
+            "Create chapter markers for each interview evolution stage"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast cybersecurity-inspired color palette (dark blues, electric greens), dynamic split-screen layouts, futuristic typography with technical grid overlay, animated transitions showing test evolution, motion graphics highlighting code complexity and AI detection mechanisms"
+        "description": "High-contrast cybersecurity-inspired color palette (dark blues, electric greens), dynamic split-screen compositions showing AI vs human problem-solving, futuristic sans-serif typography, motion graphics illustrating algorithmic detection techniques, clean tech documentary aesthetic"
       },
       "exampleOutline": [
-        "Section 1: Dramatic Hook - AI vs. Human Testing Challenge",
-        "Section 2: The Growing AI Cheating Threat in Technical Interviews",
-        "Section 3: Step-by-Step Breakdown of Interview Test Adaptations",
-        "Section 4: Technical Deep Dive into Anti-Cheating Mechanisms",
-        "Section 5: Future of Technical Hiring in an AI World"
+        "Section 1: Dramatic AI Interview Challenge Opening",
+        "Section 2: Why Traditional Interviews Fail with AI",
+        "Section 3: Step-by-Step Interview Test Evolution Techniques",
+        "Section 4: Technical Deep Dive into Detection Strategies",
+        "Section 5: Future of Technical Interviewing Call-to-Action"
       ],
-      "hashtags": "#AIInterview #TechHiring #CodingChallenges #AIEthics #TechInnovation #InterviewPrep #AITechnology #TechRecruitment #CheatingPrevention #JobSeekerTips",
-      "pexelsImageUrl": "https://images.pexels.com/photos/30766684/pexels-photo-30766684.png?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 10
+      "hashtags": "#AIInterview #TechHiring #InterviewTips #AIEthics #CareerTech #CodingChallenges #TechRecruitment #AIDetection #JobInterviews #InnovationInHiring",
+      "textureIndex": 6
     }
   ]
 }

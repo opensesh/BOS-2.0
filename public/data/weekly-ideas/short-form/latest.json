@@ -1,388 +1,331 @@
 {
   "type": "short-form",
-  "date": "2026-01-22T16:25:38.451Z",
+  "date": "2026-01-22T16:36:22.800Z",
   "ideas": [
     {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "title": "Google&#8217;s AI Mode can now tap into your Gmail and Photos to provide tailored responses",
+      "description": "The company notes that AI Mode doesn’t train directly on your Gmail inbox or Google Photos library. Instead, it trains on specific prompts and the model’s responses.",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover/8-tips-for-designers-building-branded-templates-in-figma-buz"
-        }
-      ],
-      "format": "story",
-      "subcategory": "story",
-      "hooks": [
-        "Templates That Don't Break Under Marketing Pressure 💥",
-        "Figma Secrets: Design Flexibility Meets Brand Control",
-        "Build Bulletproof Brand Templates in 8 Steps"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use fast-paced transitions between template examples",
-            "Include quick visual before/after comparisons",
-            "Add dynamic text overlays highlighting key points"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "Make first slide a provocative template fail scenario",
-            "Use swipe-up animations to reveal template insights",
-            "Design each slide as a standalone visual lesson"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Open with unexpected template design challenge",
-            "Use screen recordings showing Figma workflow",
-            "Include rapid-fire voiceover explaining concepts"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame tips as strategic design thinking",
-            "Include professional case study references",
-            "Use more technical, detailed visual explanations"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast geometric design with glitch-inspired transitions, neon accent colors against dark mode background, sans-serif technical typography, animated wireframe elements, motion graphics showing template flexibility, clean UI overlays with bold typographic hierarchy"
-      },
-      "exampleOutline": [
-        "Section 1: Provocative Design Template Failure Scenario",
-        "Section 2: Why Rigid Templates Kill Creativity",
-        "Section 3: 8 Strategic Flexibility Principles",
-        "Section 4: Real-World Template Transformation Case Study",
-        "Section 5: Call-to-Experiment Challenge"
-      ],
-      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystem #CreativeStrategy #AIDesign #ProductDesign #UXTips #DesignFlexibility #CreativeCoding #DesignInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7130573/pexels-photo-7130573.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Theaiinsider",
-          "url": "https://theaiinsider.tech/2025/12/12/figma-introduces-new-ai-powered-image-editing-suite-to-streamline-design-workflows/"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Oreateai",
-          "url": "http://oreateai.com/blog/transforming-design-figmas-new-aipowered-image-editing-tools/90a05141f7c43ac94a243a13dffe521b"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/release-notes/"
-        }
-      ],
-      "format": "reel",
-      "subcategory": "reel",
-      "hooks": [
-        "AI just transformed Figma image editing forever 🚀",
-        "3 mind-blowing Figma tools designers NEED to know",
-        "Design faster: Figma's secret AI editing weapons"
-      ],
-      "platformTips": [
-        {
-          "platform": "Instagram Reel",
-          "tips": [
-            "Use quick screen recordings showing actual tool functionality",
-            "Include dynamic text overlays highlighting key features",
-            "Keep pace fast - switch scenes every 2-3 seconds"
-          ]
-        },
-        {
-          "platform": "Instagram Carousel",
-          "tips": [
-            "First slide: Dramatic before/after comparison",
-            "Use infographic-style slides explaining each tool",
-            "Final slide includes clear call-to-action"
-          ]
-        },
-        {
-          "platform": "YouTube Short",
-          "tips": [
-            "Start with unexpected visual demonstration",
-            "Use professional voiceover explaining technical details",
-            "Include quick tutorial segment showing workflow"
-          ]
-        },
-        {
-          "platform": "LinkedIn",
-          "tips": [
-            "Frame as professional productivity enhancement",
-            "Include data/efficiency metrics",
-            "More technical, detailed explanation of tools"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "High-contrast cyberpunk-inspired palette with electric blues/teals, sharp geometric transitions, kinetic typography, minimal design elements, quick motion graphics showcasing tool functionality, futuristic yet accessible aesthetic"
-      },
-      "exampleOutline": [
-        "Hook: Dramatic AI tool reveal",
-        "Problem: Current image editing limitations",
-        "Solution: 3 new Figma AI tools",
-        "Demonstration: Quick workflow examples",
-        "CTA: Try new Figma features"
-      ],
-      "hashtags": "#FigmaAI #DesignTools #AIDesign #CreativeTech #ProductivityHack #DesignInnovation #AICreativity #FigmaTips #DesignWorkflow #TechInnovation",
-      "pexelsImageUrl": "https://images.pexels.com/photos/6985001/pexels-photo-6985001.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 5
-    },
-    {
-      "title": "Three new features to help build brand momentum with Figma Buzz",
-      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Ux-news",
-          "url": "https://ux-news.com/new-features-in-figma-buzz-customizable-templates-plugins-and-video-trimming/"
-        },
-        {
-          "name": "Releasebot",
-          "url": "https://releasebot.io/updates/figma"
-        },
-        {
-          "name": "Forum",
-          "url": "https://forum.figma.com/suggest-a-feature-11/adaptive-font-size-to-fixed-size-text-boxes-for-figma-and-buzz-49686"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/resource-library/web-design-trends/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/22/googles-ai-mode-can-now-tap-into-your-gmail-and-photos-to-provide-tailored-responses/"
         }
       ],
       "format": "carousel",
       "subcategory": "carousel",
       "hooks": [
-        "Design Faster: Figma Buzz's Game-Changing New Features",
-        "Unlock Next-Level Design Workflow in Figma Buzz",
-        "3 Tools That Will Transform Your Design Process"
+        "AI Now Reads Your Emails Without Reading Them",
+        "Google's Privacy-First AI: Your Data, Your Rules",
+        "Personal AI Assistant Without the Creepy Factor"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use quick cuts between feature demonstrations",
-            "Highlight each feature with dynamic motion graphics",
-            "Keep total video under 60 seconds with crisp transitions"
+            "Use quick, dynamic transitions between carousel slides",
+            "Add subtle motion graphics to highlight key points",
+            "Ensure text is large and readable in vertical format"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide must have bold, attention-grabbing graphic",
-            "Use consistent color palette across all slides",
-            "Each slide should focus on one specific feature/benefit"
+            "First slide must have a provocative visual/headline",
+            "Use consistent color scheme across all slides",
+            "Include a clear progression of information from slide to slide"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with surprising statistic or provocative question",
-            "Use screen recordings to demonstrate actual features",
-            "Include text overlays for key points"
+            "Extract most compelling 60-second narrative from carousel",
+            "Add voiceover explaining key points",
+            "Include dynamic text overlays matching carousel design"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Add professional context about workflow efficiency",
-            "Include potential ROI or productivity gains",
-            "Use more technical language and detailed explanations"
+            "Add more technical depth to carousel content",
+            "Include professional context and potential business implications",
+            "Use more formal, authoritative tone"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast gradient background, futuristic tech-inspired color palette (electric blues, deep purples), clean sans-serif typography, animated icons demonstrating each feature, minimal but dynamic composition with subtle 3D depth effects"
+        "description": "High-contrast cyberpunk-inspired palette with electric blues and deep purples, geometric typography with soft digital glitch effects, minimalist illustrations of data flows and privacy shields, clean tech-forward composition with subtle animated elements suggesting intelligent movement"
       },
       "exampleOutline": [
-        "Slide 1: Attention-grabbing title/hook with bold graphic",
-        "Slide 2: Problem statement about design workflow challenges",
-        "Slide 3: Marketing Templates Feature Overview",
-        "Slide 4: Design System Connection Explanation",
-        "Slide 5: Call-to-Action and Quick Implementation Tips"
+        "Slide 1: Attention-grabbing headline + provocative visual",
+        "Slide 2: How Google's AI Mode works technically",
+        "Slide 3: Privacy safeguards and user control",
+        "Slide 4: Practical use cases and benefits",
+        "Slide 5: Call-to-action and exploration invitation"
       ],
-      "hashtags": "#FigmaBuzz #DesignTools #CreativeTech #AIDesign #WorkflowHacks #ProductivityTips #UXDesign #DesignInnovation #CreativeTools #DigitalDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/12256511/pexels-photo-12256511.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 6
+      "hashtags": "#GoogleAI #PrivacyTech #AIInnovation #TechTrends #DataPrivacy #AIAssistant #FutureOfTech #MachineLearning #TechInnovation #AIEthics",
+      "textureIndex": 0
     },
     {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
+      "title": "Here’s what you should know about the US TikTok deal",
+      "description": "A number of investors are competing for the opportunity to purchase the app, and if a deal were to go through, the platform's U.S. business could have its valuation soar to upward of $60 billion.",
       "starred": false,
       "sources": [
         {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/22/heres-whats-you-should-know-about-the-us-tiktok-deal/"
         }
       ],
       "format": "quick-image",
       "subcategory": "quick-image",
       "hooks": [
-        "Design Jobs That Actually Pay Well in 2024 🚀",
-        "Senior Designer Secrets: How to Level Up 💡",
-        "San Francisco Design Career Hack: Moniker's Playbook"
+        "TikTok's $60B valuation: Who's really buying?",
+        "Billion-dollar battle for TikTok's future",
+        "Inside the high-stakes TikTok ownership showdown"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use fast-paced text transitions between design salary/job stats",
-            "Include quick visual comparisons of junior vs senior designer roles",
-            "Add dynamic motion graphics showing career progression"
+            "Use dynamic text overlay with dollar sign graphics",
+            "Create quick visual comparison of potential buyers",
+            "Use fast-paced editing to maintain viewer attention"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide: provocative salary/opportunity statistic",
-            "Use infographic-style slides with clean, bold typography",
-            "Final slide includes direct call-to-action/application link"
+            "First slide: Shocking valuation number in large text",
+            "Use infographic-style slides with key investment details",
+            "Final slide with clear call-to-action or conversation prompt"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Open with unexpected visual metaphor about design careers",
-            "Use rapid-cut style highlighting job requirements",
-            "Include testimonial-style soundbite from current designer"
+            "Open with unexpected visual metaphor about tech acquisition",
+            "Use quick cuts between news clips and animated graphics",
+            "Include subtle motion graphics highlighting key numbers"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Frame as professional career development opportunity",
-            "Include detailed role requirements and skill breakdown",
-            "Use more text-heavy, analytical visual approach"
+            "Frame content as strategic business opportunity",
+            "Use more detailed, data-driven visual approach",
+            "Include subtle professional design elements"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast cyberpunk-meets-corporate design aesthetic. Neon accent colors on dark background. Sharp geometric typography. Dynamic diagonal compositional layouts. Integrate tech/design iconography. Blend SF startup energy with professional polish."
+        "description": "High-contrast color palette with electric blue and neon accents, geometric typography breaking traditional grid, dynamic diagonal compositions, subtle glitch/digital interference effects, minimalist iconography representing tech investment landscape"
       },
       "exampleOutline": [
-        "Section 1: Attention-grabbing salary/opportunity stat",
-        "Section 2: Design industry transformation context",
-        "Section 3: Specific Moniker role highlights",
-        "Section 4: Key skills/qualifications snapshot",
-        "Section 5: Quick application/next steps CTA"
+        "Attention-grabbing headline with shocking valuation",
+        "Quick context of TikTok ownership drama",
+        "Key investors and potential deal structures",
+        "Potential market impact visualization",
+        "Provocative closing statement/question"
       ],
-      "hashtags": "#DesignCareers #SanFranciscoTech #SeniorDesigner #AIDesign #CareerGrowth #CreativeTech #DesignJobs #TechCareers #BrandDesign #ProductDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/28428592/pexels-photo-28428592.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 6
+      "hashtags": "#TikTok #TechDeal #SocialMediaBusiness #InvestmentNews #AITech #StartupStrategy #TechInvestment #SocialMedia #BusinessInnovation #TechTrends",
+      "textureIndex": 2
     },
     {
-      "title": "Anthropic has to keep revising its technical interview test so you can’t cheat on it with Claude",
-      "description": "Since 2024, Anthropic's performance optimization team has given job seekers a take-home test to make sure they know their stuff — but as AI coding tools have gotten better, the test has had to change a lot to stay ahead of AI-assisted cheating.",
+      "title": "Under Armour says it&#8217;s &#8216;aware&#8217; of data breach claims after 72M customer records were posted online",
+      "description": "TechCrunch obtained a sample of the stolen data, which contained names, email addresses, dates of birth, and the user's approximate geographic location. Under Armour confirmed some sensitive information was taken in the breach.",
       "starred": false,
       "sources": [
         {
-          "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2026/01/22/anthropic-has-to-keep-revising-its-technical-interview-test-so-you-cant-cheat-on-it-with-claude/"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/22/under-armour-says-its-aware-of-data-breach-claims-after-72m-customer-records-were-posted-online/"
+        }
+      ],
+      "format": "story",
+      "subcategory": "story",
+      "hooks": [
+        "72M Records Leaked: Your Data's Never Safe 😱",
+        "Under Armour Breach: What Hackers Know About You",
+        "Digital Privacy Nightmare: The Silent Data Theft"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use red/danger color palette to signal urgency",
+            "Include quick animated data leak visualization",
+            "Add fast-paced text transitions between key facts"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Dramatic headline statistic",
+            "Use infographic-style design for data visualization",
+            "Progressive reveal of breach details across slides"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with shocking data point",
+            "Use screen recording/hacker aesthetic",
+            "Include rapid-fire privacy protection tips"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as professional cybersecurity insights",
+            "Include expert commentary tone",
+            "Emphasize business risk implications"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "Dark cyberpunk color palette (deep blacks, electric blues, warning reds), glitch/data leak motion graphics, fragmented typography, digital noise overlay, tech-surveillance aesthetic with high contrast and sharp geometric elements"
+      },
+      "exampleOutline": [
+        "Shocking Headline & Breach Overview",
+        "What Data Was Compromised",
+        "Personal Risk Assessment",
+        "Immediate Protection Strategies",
+        "Call-to-Action: Protect Yourself Now"
+      ],
+      "hashtags": "#DataPrivacy #CyberSecurity #UnderArmour #DataBreach #DigitalSafety #HackingAlert #TechNews #PrivacyMatters #CyberRisk #DataProtection",
+      "textureIndex": 9
+    },
+    {
+      "title": "Google reportedly snags up team behind AI voice startup Hume AI",
+      "description": "Google has hired the CEO and top top behind voice AI startup Hume AI, signaling that voice is increasingly becoming the preferred interface over screens.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/22/google-reportedly-snags-up-team-behind-ai-voice-startup-hume-ai/"
         }
       ],
       "format": "reel",
       "subcategory": "reel",
       "hooks": [
-        "AI Can't Hack This Interview Test 🚀",
-        "Anthropic's Secret Weapon Against AI Cheating",
-        "How Tech Giants Block AI Interview Tricks"
+        "Google's secret weapon: Voice AI takeover?",
+        "The future of tech is listening...",
+        "Voice AI: Screens are so yesterday"
       ],
       "platformTips": [
         {
           "platform": "Instagram Reel",
           "tips": [
-            "Use fast-paced screen transitions to maintain energy",
-            "Include text overlays explaining technical nuances",
-            "Use dynamic code/tech-inspired motion graphics"
+            "Use quick jump cuts to maintain energy",
+            "Add dynamic text overlays highlighting key stats",
+            "Include trending audio or voiceover effect"
           ]
         },
         {
           "platform": "Instagram Carousel",
           "tips": [
-            "First slide must have provocative visual hook",
-            "Break technical concept into sequential visual steps",
-            "Use infographic-style design for complex explanations"
+            "First slide must have provocative visual graphic",
+            "Use infographic-style slides with minimal text",
+            "Create visual progression that tells story sequentially"
           ]
         },
         {
           "platform": "YouTube Short",
           "tips": [
-            "Start with unexpected visual metaphor",
-            "Use screen recording/code demonstration elements",
-            "Include quick cuts to maintain viewer attention"
+            "Open with unexpected visual metaphor about voice tech",
+            "Use screen recording or mockup animations",
+            "Include rapid-fire statistics with bold typography"
           ]
         },
         {
           "platform": "LinkedIn",
           "tips": [
-            "Add more professional context and expertise framing",
-            "Include subtle data visualization elements",
-            "Use more formal but still engaging tone"
+            "Frame as thought leadership insight",
+            "Include professional data visualization",
+            "More technical, nuanced language approach"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "High-contrast cyberpunk-inspired palette with electric blues/purples, glitch-style motion graphics, futuristic sans-serif typography, abstract technological visual metaphors suggesting voice/listening interfaces"
+      },
+      "exampleOutline": [
+        "Quick provocative opening about voice tech",
+        "Google's strategic AI voice acquisition",
+        "Why screens are becoming obsolete",
+        "Hume AI's breakthrough technology explained",
+        "Call-to-follow for more tech insights"
+      ],
+      "hashtags": "#AITech #VoiceAI #GoogleAI #FutureOfTech #TechInnovation #AIStartups #VoiceTechnology #TechTrends #AIInnovation #StartupNews",
+      "textureIndex": 7
+    },
+    {
+      "title": "From invisibility cloaks to AI chips: Neurophos raises $110M to build tiny optical processors for inferencing",
+      "description": "Neurophos is taking a crack at solving the AI industry's power efficiency problem with an optical chip that uses a composite material to do the math required in AI inferencing tasks.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/22/from-invisibility-cloaks-to-ai-chips-neurophos-raises-110m-to-build-tiny-optical-processors-for-inferencing/"
+        }
+      ],
+      "format": "story",
+      "subcategory": "story",
+      "hooks": [
+        "Tiny chips, massive AI revolution 🚀",
+        "Invisibility tech meets AI processing 🤯",
+        "How light is solving AI's biggest challenge"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick transitions between technical and visual explanations",
+            "Include animated graphics showing optical chip miniaturization",
+            "Create a narrative arc that builds technological suspense"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have provocative visual of chip technology",
+            "Use infographic-style slides with clean, minimal design",
+            "Progressive reveal of technological complexity across slides"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Open with unexpected visual metaphor for optical processing",
+            "Use text overlays to explain complex concepts quickly",
+            "Include dynamic motion graphics showing chip functionality"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add more technical depth and industry context",
+            "Include expert quote or credibility marker",
+            "Use more formal, professional visual treatment"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "High-contrast tech aesthetic with glitch/digital interference effects. Dark mode color palette (deep blues, electric teals). Dynamic typography with code-inspired animations. Geometric overlays suggesting algorithmic complexity. Blend of digital illustration and real-world tech imagery."
+        "description": "Futuristic cyberpunk aesthetic with translucent blue-purple gradients, holographic chip representations, dynamic geometric overlays, clean sans-serif typography, motion graphics showing light-based processing, high-contrast color palette suggesting technological innovation"
       },
       "exampleOutline": [
-        "Quick visual provocation about AI interview challenges",
-        "Rapid explanation of Anthropic's testing evolution",
-        "Key technical cat-and-mouse game insights",
-        "Surprising twist about AI adaptation strategies",
-        "Call-to-action exploring future of technical hiring"
+        "Opening: Provocative AI chip revolution teaser",
+        "Problem: Current AI processing limitations",
+        "Solution: Optical chip breakthrough",
+        "Technical Insight: How light transforms computing",
+        "Future Potential: Implications for technology"
       ],
-      "hashtags": "#AIInterview #TechHiring #AnthropicAI #FutureOfWork #AITechnology #TechTrends #InterviewTips #AIEthics #TechInnovation #CareerAdvice",
-      "pexelsImageUrl": "https://images.pexels.com/photos/28428582/pexels-photo-28428582.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 9
+      "hashtags": "#AIInnovation #TechBreakthrough #OpticalComputing #FutureOfTech #AIChips #DeepTech #TechnologyTrends #InnovationHub #ComputerScience #EmergingTech",
+      "textureIndex": 2
     }
   ]
 }
