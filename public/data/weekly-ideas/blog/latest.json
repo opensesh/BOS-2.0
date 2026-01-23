@@ -1,337 +1,291 @@
 {
   "type": "blog",
-  "date": "2026-01-23T16:21:47.751Z",
+  "date": "2026-01-23T16:32:09.621Z",
   "ideas": [
     {
-      "title": "Show don't tell: Embed Make prototypes everywhere you work in Figma",
-      "description": "Today, we’re introducing the ability to embed Figma Make prototypes into Figma Design, FigJam, and Figma Slides, along with new editing tools that help you build and share your best ideas.",
+      "title": "AI CEOs transformed Davos into a tech conference",
+      "description": "The World Economic Forum&#8217;s annual meeting in Davos&#160;felt different this year, and not just because Meta and Salesforce took over storefronts on the main promenade.&#160;AI dominated the conversation in a way that overshadowed traditional topics like climate change and global poverty, and the CEOs&#160;weren&#8217;t&#160;holding back. There was public criticism of trade policy, warnings about AI [&#8230;]",
       "starred": true,
       "sources": [
         {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-figma-make-embeds/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/solutions/ai-onboarding-app-builder/"
-        }
-      ],
-      "format": "article",
-      "subcategory": "visionary",
-      "hooks": [
-        "Design's Future: Embed Prototypes Everywhere",
-        "Figma Make: Transforming Design Workflow",
-        "Prototype Revolution: Design Without Limits"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Include live screenshots of prototype embedding process",
-            "Share personal workflow transformation story",
-            "Add interactive code snippets demonstrating implementation"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Deep dive into technical implementation details",
-            "Include SEO-optimized headers for design professionals",
-            "Add comparative analysis with previous design methods"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Highlight professional productivity gains",
-            "Include industry statistics on design efficiency",
-            "Target design managers and creative directors"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Dynamic, tech-forward aesthetic with electric blue and gradient overlays, modular grid layouts, semi-transparent prototype mockups, motion graphics showing seamless embedding transitions, modern sans-serif typography with technical precision"
-      },
-      "exampleOutline": [
-        "The Design Workflow Revolution",
-        "Why Traditional Prototyping Falls Short",
-        "Figma Make: A New Paradigm",
-        "Technical Deep Dive: Embedding Mechanics",
-        "Future of Collaborative Design Ecosystems"
-      ],
-      "hashtags": "#FigmaDesign #AIPrototyping #DesignTech #CreativeWorkflow #ProductDesign #UXInnovation #DesignTools #TechDesign #PrototypingRevolution #FigmaMake",
-      "pexelsImageUrl": "https://images.pexels.com/photos/6985001/pexels-photo-6985001.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 2
-    },
-    {
-      "title": "8 tips for designers building branded templates in Figma Buzz",
-      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Webdesignernews",
-          "url": "https://webdesignernews.com/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
-        },
-        {
-          "name": "Figmalion",
-          "url": "https://figmalion.com/topics/community/page/3"
-        },
-        {
-          "name": "Opensesh",
-          "url": "https://www.opensesh.app/discover/8-tips-for-designers-building-branded-templates-in-figma-buz"
-        }
-      ],
-      "format": "case-study",
-      "subcategory": "case-study-deep-dive",
-      "hooks": [
-        "Design Templates That Scale Without Breaking Brand Guidelines",
-        "Figma Buzz: Mastering Self-Serve Brand Design Systems",
-        "How Top Designers Create Flexible Branded Templates"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Include live Figma template screenshots",
-            "Share real-time template iteration process",
-            "Add interactive breakdown of template mechanics"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Create detailed SEO-optimized section headers",
-            "Include statistical insights about template effectiveness",
-            "Add comprehensive visual step-by-step walkthrough"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Highlight professional value proposition",
-            "Include quotes from design leaders",
-            "Showcase enterprise-level template strategy insights"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Dynamic grid-based layout with modular design elements, using bold geometric typography, vibrant yet professional color palette (blues/grays), subtle motion graphics demonstrating template flexibility, clean Figma interface references with annotated interaction zones"
-      },
-      "exampleOutline": [
-        "Introduction: The Template Design Challenge",
-        "Why Flexible Templates Matter in Modern Branding",
-        "8 Tactical Strategies for Scalable Template Design",
-        "Case Study: Successful Brand Template Implementation",
-        "Future of Self-Serve Design Systems"
-      ],
-      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystems #CreativeWorkflow #AIDesign #ProductDesign #DesignStrategy #BrandingTips #TemplateDesign #DigitalDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/12512667/pexels-photo-12512667.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
-    },
-    {
-      "title": "Introducing three new tools for precise image editing in Figma",
-      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "Figma Blog",
-          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
-        },
-        {
-          "name": "Oreateai",
-          "url": "http://oreateai.com/blog/revolutionizing-design-figmas-new-ai-image-editing-tools/9785110184a5f2289df68b0f9d05911c"
-        },
-        {
-          "name": "Techcrunch",
-          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
-        },
-        {
-          "name": "Help",
-          "url": "https://help.figma.com/hc/en-us/articles/24004542669463-Make-or-edit-an-image-with-AI"
-        },
-        {
-          "name": "Figma",
-          "url": "https://www.figma.com/solutions/ai-photo-editing-app-builder/"
-        }
-      ],
-      "format": "listicle",
-      "subcategory": "explanatory",
-      "hooks": [
-        "3 AI Tools That Will Transform Your Figma Workflow",
-        "Precision Image Editing: Figma's Secret Weapons Revealed",
-        "Design Smarter: Figma's Game-Changing Image Tools"
-      ],
-      "platformTips": [
-        {
-          "platform": "Substack",
-          "tips": [
-            "Include live GIF demonstrations of each tool in action",
-            "Add personal experimentation notes and initial impressions",
-            "Create interactive poll asking readers which tool excites them most"
-          ]
-        },
-        {
-          "platform": "Medium",
-          "tips": [
-            "Use SEO-optimized headers for each tool description",
-            "Include comparative screenshots showing before/after edits",
-            "Add expert commentary on workflow implications"
-          ]
-        },
-        {
-          "platform": "LinkedIn Article",
-          "tips": [
-            "Emphasize professional productivity gains",
-            "Include industry statistics on design efficiency",
-            "Frame tools as competitive advantage for design teams"
-          ]
-        }
-      ],
-      "visualDirection": {
-        "rating": 7,
-        "description": "Bold, high-contrast design with dynamic split-screen compositions showing tool transformations. Futuristic color palette (electric blue, deep purple, bright cyan). Animated typography revealing each tool. Clean, geometric motion graphics highlighting precision. Figma's design system as underlying aesthetic framework."
-      },
-      "exampleOutline": [
-        "Introduction: The New Frontier of AI Image Editing",
-        "Context: Current Challenges in Design Workflows",
-        "Tool 1: Breakthrough Precision Editing Capability",
-        "Tool 2: Intelligent Object Manipulation",
-        "Tool 3: Seamless Image Extension Technology",
-        "Conclusion: Future of Design is Here"
-      ],
-      "hashtags": "#FigmaAI #DesignTechnology #CreativeTools #AIDesign #ProductivityHack #ImageEditing #DesignInnovation #AIWorkflow #CreativeTech #FigmaTools",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7629979/pexels-photo-7629979.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 4
-    },
-    {
-      "title": "Senior Designer, Moniker, San Francisco",
-      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
-      "starred": false,
-      "sources": [
-        {
-          "name": "BP&O",
-          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/ai-ceos-transformed-davos-into-a-tech-conference/"
         }
       ],
       "format": "guide",
       "subcategory": "instructional",
       "hooks": [
-        "Unlock the Hidden Blueprint of Senior Design Roles",
-        "Design Career Secrets: Beyond the Job Description",
-        "Master the Art of High-Impact Design Leadership"
+        "AI Rewrites Global Leadership at Davos",
+        "Tech CEOs Redefine World Economic Forum",
+        "Inside the AI Takeover of Global Politics"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Use real-time annotation and inline commentary to break down job requirements",
-            "Include personal anecdotes from design leadership experiences",
-            "Create interactive tooltips explaining complex design terminology"
+            "Include real-time tweet/quote screenshots from Davos",
+            "Use interactive data visualizations of AI mentions",
+            "Add personal commentary on emerging tech trends"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Optimize for SEO with clear section headers and keywords",
-            "Include statistical insights about design career trajectories",
-            "Embed visual career progression diagrams"
+            "Optimize SEO with detailed AI conference keywords",
+            "Include expert interview pull quotes",
+            "Create clear section headers for scannable content"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Leverage professional network connections for credibility",
-            "Include quotes from design leaders and recruiters",
-            "Create shareable infographic summaries of key insights"
+            "Use professional tone with data-driven insights",
+            "Include executive perspective and strategic implications",
+            "Add credibility with specific executive quotes"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Modern, dynamic design with geometric overlays, San Francisco tech-inspired color palette (deep blues, vibrant oranges), clean sans-serif typography, subtle motion graphics highlighting career progression, minimalist isometric illustrations of design workflows"
+        "description": "Bold futuristic design with electric blue/graphite color palette, geometric overlays representing tech networks, dynamic typography with angular cuts, subtle motion graphics showing data flow and interconnectedness, minimalist infographic elements"
       },
       "exampleOutline": [
-        "Introduction: The Evolving Landscape of Senior Design Roles",
-        "Understanding the Senior Designer Ecosystem",
-        "Core Competencies and Career Capabilities",
-        "Navigating Complex Organizational Design Challenges",
-        "Future of Design Leadership: Strategies and Insights"
+        "Introduction: The AI Moment at Davos",
+        "Historical Context: Traditional vs. New Economic Forums",
+        "AI's Emerging Political and Economic Influence",
+        "Key CEO Perspectives and Strategic Shifts",
+        "Future Implications and Global Technology Landscape"
       ],
-      "hashtags": "#DesignCareer #SeniorDesign #CreativeLeadership #AIDesign #DesignStrategy #TechCareers #CreativeProfessionals #DesignInnovation #CareerGrowth #ProductDesign",
-      "pexelsImageUrl": "https://images.pexels.com/photos/7130573/pexels-photo-7130573.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 12
+      "hashtags": "#AILeadership #DavosAI #TechPolicy #GlobalEconomics #AIInnovation #WorldEconomicForum #FutureOfTech #AIStrategy #TechTrends #GlobalBusiness",
+      "textureIndex": 11
     },
     {
-      "title": "Voice AI engine and OpenAI partner LiveKit hits $1B valuation",
-      "description": "The five-year-old-startup powers OpenAI’s ChatGPT voice mode and raised a $100 million round led by Index Ventures.",
+      "title": "OpenAI chief Sam Altman plans India visit as AI leaders converge in New Delhi: sources",
+      "description": "Sam Altman is set for his first India visit in nearly a year.",
       "starred": false,
       "sources": [
         {
           "name": "TechCrunch AI",
-          "url": "https://techcrunch.com/2026/01/22/voice-ai-engine-and-openai-partner-livekit-hits-1b-valuation/"
+          "url": "https://techcrunch.com/2026/01/23/openai-chief-sam-altman-plans-india-visit-as-ai-leaders-converge-in-new-delhi-sources/"
+        }
+      ],
+      "format": "case-study",
+      "subcategory": "case-study-deep-dive",
+      "hooks": [
+        "AI's Global Chess: Altman's India Strategy Unveiled",
+        "Inside the Silicon Valley-New Delhi AI Corridor",
+        "How One Visit Could Reshape Global Tech"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use real-time annotation and live commentary style",
+            "Include personal reactions and behind-the-scenes insights",
+            "Embed tweet/social media reactions for dynamic storytelling"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Create an SEO-optimized headline with clear value proposition",
+            "Use data visualizations to illustrate geopolitical AI dynamics",
+            "Link to authoritative sources for credibility"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame as professional strategic analysis, not just news",
+            "Include quotes from industry experts",
+            "Use professional infographics showing AI investment trends"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, futuristic color palette with electric blues and deep teals. Geometric motion graphics showing interconnected global tech nodes. Modern sans-serif typography with angular cuts. Parallax scrolling effect highlighting key data points. Minimal but dynamic design emphasizing information flow."
+      },
+      "exampleOutline": [
+        "Section 1: The Geopolitical AI Moment",
+        "Section 2: Why India Matters for AI's Future",
+        "Section 3: Altman's Strategic Investment Landscape",
+        "Section 4: Emerging Tech Diplomacy Insights",
+        "Section 5: What This Means for Global Innovation"
+      ],
+      "hashtags": "#AIStrategy #GlobalTech #SamAltman #AIIndia #TechDiplomacy #OpenAI #InnovationEconomy #AIFrontiers #TechTrends #FutureOfAI",
+      "textureIndex": 7
+    },
+    {
+      "title": "Only 1 week left (or until the first 500 passes are gone): The first TechCrunch Disrupt 2026 ticket discount is ending",
+      "description": "Register now to save up to $680 on your TechCrunch Disrupt 2026 pass and get a second ticket at 50% off. This offer ends next week on January 30, or once the first 500 tickets are claimed — whichever comes first.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/23/only-1-week-left-or-until-the-first-500-passes-are-gone-the-first-disrupt-2026-ticket-discount-is-ending/"
+        }
+      ],
+      "format": "article",
+      "subcategory": "visionary",
+      "hooks": [
+        "TechCrunch Disrupt 2026: Your Innovation Ticket Expires Soon",
+        "Unlock Tech's Future Before Discount Disappears",
+        "500 Passes Left: Your Startup's Golden Ticket"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use real-time countdown timer in article header",
+            "Include personal story about past Disrupt experiences",
+            "Embed interactive ticket selection graphic"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Optimize headline for SEO with event keywords",
+            "Include detailed pricing comparison breakdown",
+            "Add expert quotes about event's historical significance"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Target professional networking angle of event attendance",
+            "Include statistical ROI for startup founders",
+            "Highlight potential investor connections at Disrupt"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dynamic futuristic design with electric blue/neon accent colors, geometric fractals representing tech innovation, clean sans-serif typography, subtle motion graphics showing ticket countdown, minimalist tech-inspired illustrations"
+      },
+      "exampleOutline": [
+        "Section 1: Urgent Opportunity Headline and Event Context",
+        "Section 2: Why TechCrunch Disrupt Matters in 2026",
+        "Section 3: Detailed Ticket Discount Breakdown",
+        "Section 4: Strategic Networking and Growth Potential",
+        "Section 5: Immediate Registration Call-to-Action"
+      ],
+      "hashtags": "#TechCrunchDisrupt #StartupConference #TechInnovation #Networking2026 #InnovatorTicket #TechEvent #StartupLife #AIConference #InnovationSummit #TechLeaders",
+      "textureIndex": 1
+    },
+    {
+      "title": "2026 Lucid Air Touring review: This feels like a complete car now",
+      "description": "2026 Lucid Air Touring review: This feels like a complete car now",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/features/2026/01/2026-lucid-air-touring-review-this-feels-like-a-complete-car-now/"
+        }
+      ],
+      "format": "listicle",
+      "subcategory": "explanatory",
+      "hooks": [
+        "5 Mind-Blowing Features Making Lucid Air a Game-Changer",
+        "Why the 2026 Lucid Air Touring Rewrites Electric Luxury",
+        "Electric Revolution: Inside Lucid Air's Radical Transformation"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use personal anecdote/first-drive experience to open listicle",
+            "Include real-time screenshots/snapshots from test drive",
+            "Create interactive poll about reader's electric vehicle expectations"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Optimize headline for SEO with specific numeric promise",
+            "Include technical comparisons with competitive models",
+            "Use embedded performance graphs/data visualizations"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame listicle as professional automotive technology insight",
+            "Include industry expert quote or commentary",
+            "Add professional networking CTA for automotive professionals"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Futuristic electric blue and charcoal color palette, dynamic diagonal compositions, sleek sans-serif typography, subtle motion graphics highlighting car's technological features, minimalist automotive design aesthetic with high-contrast technical overlay"
+      },
+      "exampleOutline": [
+        "Introduction: Electric Vehicle Transformation Moment",
+        "Context: Lucid Air's Market Position",
+        "5 Revolutionary Features Deep Dive",
+        "Future Implications for Electric Mobility",
+        "Call-to-Action: Experience the Future"
+      ],
+      "hashtags": "#LucidAir #ElectricVehicles #FutureOfMobility #TechInnovation #ElectricLuxury #AutoTech #EVRevolution #SustainableTransport #CarReview #TechTrends",
+      "textureIndex": 11
+    },
+    {
+      "title": "Former Sequoia partner’s new startup uses AI to negotiate your calendar for you",
+      "description": "Blockit, an AI agent that communicates directly with other calendars, has raised $5 million in seed funding led by Sequoia.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/22/former-sequoia-partners-new-startup-uses-ai-to-negotiate-your-calendar-for-you/"
         }
       ],
       "format": "thread",
       "subcategory": "explanatory",
       "hooks": [
-        "Voice AI's Billion-Dollar Breakthrough: LiveKit's Insane Rise 🚀",
-        "How One Startup Powers ChatGPT's Voice Revolution 🗣️",
-        "From Zero to $1B: The AI Voice Engine Changing Everything"
+        "AI just revolutionized scheduling. Here's how.",
+        "Startup cracked the calendar negotiation code 🤯",
+        "Your meetings, now autonomously managed by AI"
       ],
       "platformTips": [
         {
           "platform": "Substack",
           "tips": [
-            "Use thread as teaser for full deep-dive newsletter",
-            "Include behind-the-scenes insights not in public thread",
-            "Create downloadable one-pager for email subscribers"
+            "Use thread as teaser for longer deep-dive newsletter",
+            "Embed interactive calendar poll to boost engagement",
+            "Offer exclusive AI scheduling framework for subscribers"
           ]
         },
         {
           "platform": "Medium",
           "tips": [
-            "Expand thread into long-form SEO-optimized article",
-            "Include more technical context and industry analysis",
-            "Add expert commentary and future predictions"
+            "Link full technical breakdown in article",
+            "Include data visualization of AI scheduling efficiency",
+            "Create companion SEO-optimized long-form article"
           ]
         },
         {
           "platform": "LinkedIn Article",
           "tips": [
-            "Frame story as professional tech innovation case study",
-            "Include leadership and strategic growth perspectives",
-            "Add professional network engagement prompts"
+            "Target professional audience with productivity metrics",
+            "Include executive testimonials about AI scheduling",
+            "Highlight potential enterprise applications"
           ]
         }
       ],
       "visualDirection": {
         "rating": 7,
-        "description": "Dynamic gradient background with tech-inspired circuit-like overlay, futuristic sans-serif typography, high-contrast color palette (deep blues/electric teals), subtle motion graphics emphasizing technological acceleration, minimalist iconography representing voice/AI connections"
+        "description": "Dynamic isometric graphics showing AI calendar interactions, electric blue/deep purple gradient background, futuristic sans-serif typography, subtle motion graphics of calendar blocks sliding/rearranging, minimalist tech-inspired illustration style"
       },
       "exampleOutline": [
-        "Thread Opener: Shocking Valuation Reveal",
-        "LiveKit's Origin & OpenAI Partnership",
-        "How Voice AI Technology Works",
-        "Impact on Conversational AI Landscape",
-        "Future Predictions & Investment Insights"
+        "Section 1: Provocative AI scheduling hook",
+        "Section 2: Blockit startup backstory & problem",
+        "Section 3: How AI calendar negotiation works",
+        "Section 4: Potential industry transformation insights",
+        "Section 5: Future of autonomous scheduling CTA"
       ],
-      "hashtags": "#VoiceAI #AIInnovation #StartupSuccess #TechBreakthrough #OpenAI #AIFunding #VentureCapital #TechTrends #AIVoice #InnovationEconomy",
-      "pexelsImageUrl": "https://images.pexels.com/photos/6984995/pexels-photo-6984995.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "textureIndex": 10
+      "hashtags": "#AIScheduling #FutureOfWork #ProductivityHack #AIStartup #TechInnovation #CalendarAI #WorkSmarter #EntrepreneurTips #AITechnology #BusinessIntelligence",
+      "textureIndex": 6
     }
   ]
 }
