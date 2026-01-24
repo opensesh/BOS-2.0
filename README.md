@@ -1,40 +1,62 @@
-# Brand Operating System (BOS) 2.0
+# BOS-2.0
 
-A modern, responsive interface built with Next.js 14+, TypeScript, and Tailwind CSS, featuring BRAND-OS color system integration.
+> **Note:** BOS-2.0 is the evolution of [BOS-1.0](https://github.com/opensesh/BOS-1.0), which explored Figma MCP + Claude Code + Cursor as a design-to-code pipeline. BOS-2.0 takes that learning and builds a standalone systems UI application where the code itself is the design system — no Figma dependency required.
 
-## 🚀 Features
+**A code-first brand operating system — where design tokens, components, and brand logic live in the application itself, powered by AI.**
 
-- **Modern Tech Stack**: Next.js 14+ with App Router, TypeScript, Tailwind CSS
-- **Dark/Light Mode**: Persistent theme switching with next-themes
-- **Responsive Design**: Mobile-first design that works across all devices
-- **BRAND-OS Integration**: Custom color system from opensesh/BRAND-OS
-- **Interactive UI**: Comprehensive hover, focus, active, and disabled states
-- **Keyboard Shortcuts**: 
-  - `Cmd/Ctrl + K` - Focus search input
-  - `Escape` - Blur search input
-  - `Enter` - Submit query
-  - `Shift + Enter` - New line in textarea
-- **Accessibility**: ARIA labels, keyboard navigation, focus management
+---
 
-## 🎨 Design System
+## 🎯 Philosophy
 
-### Colors (BRAND-OS)
-- **Charcoal** (#191919): Dark backgrounds
-- **Vanilla** (#FFFAEE): Light/cream accents
-- **Aperol** (#FE5102): Primary brand color
+BOS-1.0 proved that AI could bridge the gap between design tools and code. BOS-2.0 asks: what if we remove the bridge entirely?
 
-### Key Features
-- Collapsible sidebar with smooth transitions
-- Multi-page routing (Home, Discover, Spaces, Finance)
-- Chat interface with toolbar and quick actions
-- Theme persistence across sessions
-- Mobile-responsive navigation
+- **Code as source of truth** — Design tokens, typography scales, color systems, and component patterns are defined in code, not pulled from external tools
+- **AI is native, not bolted on** — Anthropic and Perplexity integrations are woven into the core experience, from content generation to brand knowledge retrieval
+- **Systems thinking over pixel pushing** — Every surface in the app is a living expression of the design system it manages
 
-## 📦 Installation
+---
+
+## 🏗️ Built on Solid Foundations
+
+- **Code-First Design System** — Tokens, components, and brand rules live in `lib/brand-knowledge/`, not in a Figma file
+- **AI-Native** — Anthropic SDK for chat and content generation, Perplexity for discovery and research
+- **Full-Stack** — Next.js 15 with App Router, Supabase for persistence, Prisma for data modeling
+- **Component-Driven** — React 19, TypeScript, Tailwind CSS with semantic design tokens
+- **3D & Motion** — Three.js for spatial interfaces, GSAP and Framer Motion for interaction design
+
+---
+
+## ✨ Key Features
+
+### 🎨 Brand Hub
+Identity management center — colors, typography, logos, design tokens, guidelines, and art direction all in one place. The system that manages itself.
+
+### 🧠 Brain
+AI-powered knowledge base for brand identity, writing styles, component documentation, and system architecture. Ask questions, get answers grounded in your brand.
+
+### 🔍 Discover
+Curated articles, inspiration, trending companies, and resource exploration with an interactive 3D visualization layer.
+
+### 💰 Finance
+Financial tracking and market data with per-symbol detail views.
+
+### 🌐 Spaces
+Workspace management with threaded chat — collaborative environments for projects and teams.
+
+---
+
+## 🚀 Quick Start
 
 ```bash
+# Clone the repo
+git clone https://github.com/opensesh/BOS-2.0.git
+cd BOS-2.0
+
 # Install dependencies
 npm install
+
+# Set up environment variables
+cp .env.example .env.local
 
 # Run development server
 npm run dev
@@ -46,96 +68,104 @@ npm run build
 npm start
 ```
 
-## 🏗️ Project Structure
+---
+
+## 📁 Project Structure
 
 ```
-BOS/
-├── app/                    # Next.js App Router
-│   ├── layout.tsx         # Root layout with theme provider
-│   ├── page.tsx           # Homepage
-│   ├── discover/          # Discover page
-│   ├── spaces/            # Spaces page
-│   ├── finance/           # Finance page
-│   └── globals.css        # Global styles
-├── components/            # React components
-│   ├── Sidebar.tsx        # Navigation sidebar
-│   ├── ChatInterface.tsx  # Main chat/search interface
-│   └── ThemeToggle.tsx    # Dark/light mode toggle
-├── hooks/                 # Custom React hooks
-│   └── useKeyboardShortcuts.ts
-├── lib/                   # Utilities
-│   └── theme-provider.tsx
-├── types/                 # TypeScript definitions
-│   └── index.ts
-└── tailwind.config.ts     # Tailwind configuration
+BOS-2.0/
+├── app/                        # Next.js 15 App Router
+│   ├── page.tsx               # Homepage
+│   ├── brand-hub/             # Brand identity management
+│   │   ├── colors/            # Color system
+│   │   ├── fonts/             # Typography
+│   │   ├── logo/              # Logo variations
+│   │   ├── design-tokens/     # Token documentation
+│   │   ├── guidelines/        # Brand guidelines
+│   │   └── art-direction/     # Art direction
+│   ├── brain/                 # AI knowledge base
+│   │   ├── brand-identity/    # Brand info
+│   │   ├── writing-styles/    # Writing guides
+│   │   ├── components/        # Component library
+│   │   └── architecture/      # System architecture
+│   ├── discover/              # Content discovery
+│   │   ├── inspo/             # Inspiration explorer
+│   │   └── resources/         # 3D resource browser
+│   ├── spaces/                # Workspace management
+│   │   └── [slug]/chat/       # Threaded conversations
+│   ├── finance/               # Financial tracking
+│   └── api/                   # API routes
+│       ├── chat/              # AI chat endpoint
+│       ├── discover/          # Discovery data
+│       ├── suggestions/       # AI suggestions
+│       └── finance/           # Market data
+├── components/                 # React components
+│   ├── chat/                  # Chat interface system
+│   ├── discover/              # Discovery UI
+│   ├── spaces/                # Workspace components
+│   ├── finance/               # Finance displays
+│   ├── brain/                 # Knowledge base UI
+│   ├── brand-hub/             # Brand management UI
+│   └── ui/                    # Shared primitives
+├── lib/                        # Core utilities
+│   ├── ai/                    # LLM provider config
+│   ├── brand-knowledge/       # Brand data & token index
+│   ├── content-generator/     # Automated content tools
+│   ├── stores/                # Zustand state management
+│   ├── supabase/              # Database client
+│   └── utils/                 # Helper functions
+├── hooks/                      # Custom React hooks
+├── types/                      # TypeScript definitions
+├── supabase/                   # Migrations & DB config
+├── scripts/                    # Build & generation scripts
+└── assets/                     # Static assets
 ```
-
-## 🎯 Usage
-
-### Development
-1. Start the development server: `npm run dev`
-2. Open [http://localhost:3000](http://localhost:3000)
-3. Edit components in `components/` or pages in `app/`
-4. Changes will hot-reload automatically
-
-### Navigation
-- **Home**: Main search/chat interface
-- **Discover**: Placeholder for discovery features
-- **Spaces**: Placeholder for workspace features
-- **Finance**: Placeholder for finance-related features
-
-### Chat Interface
-- Type in the search box to compose queries
-- Use toolbar icons for additional functionality (placeholder for now)
-- Click "New Chat" to start a fresh conversation
-- Quick action buttons provide shortcuts to common tasks
-
-## 🔧 Configuration
-
-### Tailwind Colors
-Customize colors in `tailwind.config.ts`:
-```typescript
-colors: {
-  brand: {
-    charcoal: '#191919',
-    vanilla: '#FFFAEE',
-    aperol: '#FE5102',
-  },
-  // ... more colors
-}
-```
-
-### Theme
-Adjust theme settings in `app/layout.tsx`:
-```typescript
-<ThemeProvider
-  attribute="class"
-  defaultTheme="dark"  // or "light" or "system"
-  enableSystem
-  disableTransitionOnChange
->
-```
-
-## 🚧 Future Enhancements
-
-- [ ] Backend API integration for AI responses
-- [ ] Real-time message streaming
-- [ ] File upload functionality
-- [ ] Voice input support
-- [ ] Search history
-- [ ] User authentication
-- [ ] Workspace/spaces management
-- [ ] Analytics and insights
-- [ ] Mobile app (React Native)
-
-## 📝 License
-
-GNU General Public License v3.0
-
-## 🤝 Contributing
-
-This is a personal project, but suggestions and feedback are welcome!
 
 ---
 
-Built with ❤️ using BRAND-OS design system
+## 🔧 Tech Stack
+
+| Category | Technology |
+|----------|-----------|
+| **Framework** | Next.js 15, React 19 |
+| **Language** | TypeScript |
+| **Styling** | Tailwind CSS, CSS Variables |
+| **AI** | Anthropic AI SDK, Perplexity |
+| **Database** | Supabase, Prisma |
+| **3D** | Three.js, React Three Fiber, Drei |
+| **Animation** | GSAP, Framer Motion |
+| **State** | Zustand |
+| **Auth** | NextAuth.js, Supabase SSR |
+| **Validation** | Zod |
+| **Analytics** | Vercel Analytics |
+| **Deployment** | Vercel |
+
+---
+
+## 📖 Why Open Source?
+
+The same reason we open-sourced BOS-1.0: we believe design infrastructure should be transparent, adaptable, and community-driven.
+
+- **Learn** — See how a systems UI application is architected from tokens to production
+- **Adapt** — Fork it, retheme it, make it yours
+- **Contribute** — Improve patterns, fix bugs, suggest features
+
+We're not building a SaaS product. We're building a reference implementation for what brand management software can look like when AI is a first-class citizen.
+
+---
+
+## 🔮 What's Next
+
+- Deeper AI integration for real-time brand enforcement and content review
+- Component library extraction as a standalone package
+- Multi-brand support — manage multiple identities from one system
+- Enhanced 3D spatial interfaces for brand exploration
+- Plugin architecture for custom brand modules
+
+---
+
+Built by [OPEN SESSION](https://opensession.studio) — Powered by Claude AI
+
+## 📄 License
+
+[GNU General Public License v3.0](LICENSE)
