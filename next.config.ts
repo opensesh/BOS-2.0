@@ -14,14 +14,11 @@ const nextConfig: NextConfig = {
         hostname: 'www.google.com',
         pathname: '/s2/favicons/**',
       },
-      // Allow all external images for og:image thumbnails
+      // Pexels image CDN
       {
         protocol: 'https',
-        hostname: '**',
-      },
-      {
-        protocol: 'http',
-        hostname: '**',
+        hostname: 'images.pexels.com',
+        pathname: '/**',
       },
     ],
   },
