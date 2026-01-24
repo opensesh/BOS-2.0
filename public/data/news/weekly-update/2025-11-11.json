@@ -1,0 +1,64 @@
+{
+  "type": "weekly-update",
+  "date": "2025-11-11T17:18:05.384Z",
+  "updates": [
+    {
+      "title": "Meta's chief AI scientist Yann LeCun is reportedly leaving to start his own AI startup focused on world models, marking a significant departure from one of the industry's most influential research leaders.",
+      "timestamp": "11/11/2025, 2:58 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/11/metas-chief-ai-scientist-yann-lecun-reportedly-plans-to-leave-to-build-his-own-startup/"
+        }
+      ]
+    },
+    {
+      "title": "ElevenLabs launches new AI voice marketplace allowing brands to license AI-replicated voices of famous figures for advertisements and content, expanding commercial applications of synthetic voice technology.",
+      "timestamp": "11/11/2025, 5:00 PM",
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/818470/elevenlabs-iconic-voice-marketplace-ai-audio"
+        }
+      ]
+    },
+    {
+      "title": "Google Photos introduces conversational AI editing for iPhone users, allowing them to make image edits by typing or verbally describing changes they want to make.",
+      "timestamp": "11/11/2025, 5:00 PM",
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/818346/google-photos-ios-help-me-edit-update"
+        }
+      ]
+    },
+    {
+      "title": "AI customer service startup Wonderful raises massive $100M Series A led by Index Ventures to deploy AI agents for front-line customer support, while coding platform Lovable approaches 8 million users.",
+      "timestamp": "11/11/2025, 4:08 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/11/wonderful-raised-100m-series-a-to-put-ai-agents-on-the-front-lines-of-customer-service/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/10/lovable-says-its-nearing-8-million-users-as-the-year-old-ai-coding-startup-eyes-more-corporate-employees/"
+        }
+      ]
+    },
+    {
+      "title": "Industry veterans share insights on AI startup product-market fit challenges while analysts question whether Wall Street is losing faith in AI investments after recent tech stock volatility.",
+      "timestamp": "11/11/2025, 5:15 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/11/how-ai-startups-should-be-thinking-about-product-market-fit/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/08/is-wall-street-losing-faith-in-ai/"
+        }
+      ]
+    }
+  ]
+}

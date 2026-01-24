@@ -1,0 +1,72 @@
+{
+  "type": "monthly-outlook",
+  "date": "2025-11-22T17:16:36.107Z",
+  "updates": [
+    {
+      "title": "AI agent platforms are scaling rapidly with Sierra reaching $100M ARR in under two years, signaling enterprise readiness for AI-powered customer service and business automation in 2025.",
+      "timestamp": "11/21/2025, 11:00 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/21/bret-taylors-sierra-reaches-100m-arr-in-under-two-years/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/chatgpt-launches-group-chats-globally/"
+        }
+      ]
+    },
+    {
+      "title": "Google's latest AI models are becoming more capable for creative workflows with Nano Banana Pro offering enhanced image generation, web search integration, and higher resolution outputs for designers.",
+      "timestamp": "11/20/2025, 3:00 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/google-releases-nano-banana-pro-its-latest-image-generation-model/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/mixup-is-a-new-mad-libs-style-app-for-creating-ai-images-from-photos-text-and-doodles/"
+        }
+      ]
+    },
+    {
+      "title": "Voice AI and dictation tools are gaining significant traction with Wispr securing $25M in additional funding just months after their Series A, indicating strong market demand for voice-powered creative workflows.",
+      "timestamp": "11/20/2025, 3:00 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/as-its-voice-dectation-app-takes-off-wispr-secures-25m-from-notable-capital/"
+        }
+      ]
+    },
+    {
+      "title": "AI infrastructure spending continues to surge with Nvidia's data center business reaching nearly $50 billion, while massive investments in AI data centers like TCS and TPG's $2B project in India signal sustained growth in AI compute capacity.",
+      "timestamp": "11/21/2025, 8:04 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/ai-mania-is-making-nvidia-a-lot-of-money/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/indias-tcs-gets-tpg-to-fund-half-of-2b-ai-data-center-project/"
+        }
+      ]
+    },
+    {
+      "title": "AI detection and content verification tools are becoming critical as Wikipedia releases comprehensive guides for spotting AI-generated writing, while Google expands real-time scam detection capabilities.",
+      "timestamp": "11/20/2025, 4:32 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/the-best-guide-to-spotting-ai-writing-comes-from-wikipedia/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/google-steps-up-ai-scam-protection-in-india-but-gaps-remain/"
+        }
+      ]
+    }
+  ]
+}

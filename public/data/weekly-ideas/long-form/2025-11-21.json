@@ -1,0 +1,101 @@
+{
+  "type": "long-form",
+  "date": "2025-11-21T17:17:31.849Z",
+  "ideas": [
+    {
+      "title": "Tutorial: ChatGPT Group Chats for Design Team Collaboration",
+      "description": "Complete setup guide for using ChatGPT's new group chat feature to streamline design reviews and feedback",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/chatgpt-launches-group-chats-globally/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/podcast/825979/ai-agents-are-invading-your-pc"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/ai-industry-monopoly-nvidia-microsoft-google/"
+        }
+      ]
+    },
+    {
+      "title": "Deep Dive: Google Nano Banana Pro for Design System Assets",
+      "description": "Hands-on exploration of Google's new image model - testing quality, consistency, and workflow integration",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/google-releases-nano-banana-pro-its-latest-image-generation-model/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/mixup-is-a-new-mad-libs-style-app-for-creating-ai-images-from-photos-text-and-doodles/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/column/826172/ai-startup-arr-numbers-sierra-bret-taylor"
+        }
+      ]
+    },
+    {
+      "title": "Tutorial: Mixup App Integration for Rapid Design Ideation",
+      "description": "Step-by-step workflow using Mixup's Mad Libs-style AI to generate design concepts from sketches and text",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/mixup-is-a-new-mad-libs-style-app-for-creating-ai-images-from-photos-text-and-doodles/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/google-releases-nano-banana-pro-its-latest-image-generation-model/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/gallery/best-viral-tiktok-gadgets/"
+        }
+      ]
+    },
+    {
+      "title": "Framework: Spotting AI-Generated Design Content (Wikipedia Method)",
+      "description": "Learn Wikipedia's proven techniques for identifying AI content - applied to design portfolios and presentations",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/the-best-guide-to-spotting-ai-writing-comes-from-wikipedia/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/column/825219/optimizer-ai-nutrition-tracking-wellness"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/ai-industry-monopoly-nvidia-microsoft-google/"
+        }
+      ]
+    },
+    {
+      "title": "Business Case: How We Use Voice Dictation for Design Documentation",
+      "description": "Real workflow showing Wispr-style voice tools for creating design specs, user stories, and project notes",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/as-its-voice-dectation-app-takes-off-wispr-secures-25m-from-notable-capital/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/podcast/825979/ai-agents-are-invading-your-pc"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/chatgpt-launches-group-chats-globally/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "type": "long-form",
+  "date": "2025-12-27T16:25:45.469Z",
+  "ideas": [
+    {
+      "title": "Equity&#8217;s 2026 Predictions: AI Agents, Blockbuster IPOs, and the Future of VC",
+      "description": "TechCrunch&#8217;s&#160;Equity&#160;crew is bringing 2025 to a close and getting ahead on the year to come with our annual&#160;predictions&#160;episode! Hosts Kirsten Korosec, Anthony Ha, and Rebecca Bellan were joined by Build Mode host&#160;Isabelle Johannessen&#160;to dissect the year&#8217;s biggest tech developments, from mega AI funding rounds that defied expectations to the rise of &#8220;physical AI,&#8221; and make [&#8230;]",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/equitys-2026-predictions-ai-agents-blockbuster-ipos-and-the-future-of-vc/"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "Master 2026's Tech Predictions: Your AI Roadmap",
+        "Unlock Future Tech: 5 Groundbreaking Predictions",
+        "AI's Next Frontier: 2026 Insider Secrets Revealed"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use annotated timeline graphics for prediction milestones",
+            "Include clickable chapter markers for each prediction",
+            "Create dynamic screen overlays showing data/trend visualizations"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Futuristic cyberpunk color palette (deep blues, electric teals, neon accents). Dynamic motion graphics with holographic data visualizations. Sharp, geometric sans-serif typography. Minimal but high-tech composition with layered information panels. Animated predictive trend lines and AI-inspired visual metaphors."
+      },
+      "exampleOutline": [
+        "Introduction: Why 2026 Tech Predictions Matter",
+        "Context: Current AI and VC Landscape",
+        "Step-by-Step Prediction Methodology",
+        "5 Detailed Tech Predictions with Evidence",
+        "Strategic Takeaways and Future Implications"
+      ],
+      "hashtags": "#AIFuture #TechPredictions2026 #VentureCapital #AITrends #TechInnovation #FutureOfTech #AIAgents #StartupInsights #EmergingTech #InnovationStrategy",
+      "textureIndex": 0
+    },
+    {
+      "title": "Ars Technica’s Top 20 video games of 2025",
+      "description": "Ars Technica’s Top 20 video games of 2025",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/gaming/2025/12/ars-technicas-top-20-video-games-of-2025/"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "2025's Most Epic Games: Ars Technica's Ultimate Countdown",
+        "Gaming's Future Revealed: Top 20 Games You Can't Miss",
+        "Live: Breaking Down 2025's Most Groundbreaking Video Games"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Enable live chat for real-time audience interaction",
+            "Use YouTube's Q&A feature to collect pre-stream questions",
+            "Create countdown timer graphic to build anticipation before stream"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy cyberpunk-inspired design with dynamic game-inspired motion graphics. Deep blue and electric neon color palette. Dynamic typography that mimics gaming UI. Split-screen compositions showing game footage and live host. Animated game logo transitions. Glitch effects and tech-inspired visual overlays."
+      },
+      "exampleOutline": [
+        "Section 1: High-Energy Stream Introduction & Concept",
+        "Section 2: Methodology for Game Selection",
+        "Section 3: Countdown of Top 20 Games (10-1)",
+        "Section 4: Deep Dive into Top 5 Games",
+        "Section 5: Live Q&A and Community Interaction"
+      ],
+      "hashtags": "#VideoGames2025 #GamingTop20 #ArsTechnica #GameReview #GamingFuture #VideoGameStream #LiveGaming #GameCommunity #GamerLife #TechGaming",
+      "textureIndex": 1
+    },
+    {
+      "title": "Nvidia to license AI chip challenger Groq&#8217;s tech and hire its CEO",
+      "description": "With Groq on its side, Nvidia is poised to become even more dominant in chip manufacturing.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/24/nvidia-acquires-ai-chip-challenger-groq-for-20b-report-says/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "Nvidia's Billion-Dollar Chess Move in AI Chips",
+        "How Groq Just Reshaped the AI Hardware Landscape",
+        "Inside the Tech Merger Changing Everything"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dynamic screen recordings of chip architecture",
+            "Include picture-in-picture with expert commentary",
+            "Create chapter markers for complex technical segments"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech-inspired color palette (deep blues, electric teals), geometric motion graphics simulating circuit board animations, futuristic sans-serif typography with technical wireframe overlays, dynamic split-screen transitions showcasing chip comparisons"
+      },
+      "exampleOutline": [
+        "Opening: Dramatic reveal of Nvidia-Groq partnership",
+        "Context: Current AI chip manufacturing landscape",
+        "Technical Deep Dive: What makes Groq's technology unique",
+        "Strategic Implications: Future of AI hardware",
+        "Closing CTA: Invite viewers to discuss implications"
+      ],
+      "hashtags": "#NVIDIA #AIChips #TechInnovation #AIHardware #ComputerEngineering #Groq #TechMerger #ArtificialIntelligence #SiliconValley #InnovationTech",
+      "textureIndex": 2
+    },
+    {
+      "title": "The year data centers went from backend to center stage",
+      "description": "Data centers are no longer the boring tech issue they once were.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/24/the-year-data-centers-went-from-backend-to-center-stage/"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "Data Centers: The Hidden Powerhouses Reshaping Our World",
+        "When Tech Infrastructure Became the New Rockstars",
+        "Behind the Servers: A Tech Revolution Unfolds"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use cinematic B-roll of massive data center facilities",
+            "Incorporate dynamic motion graphics explaining complex infrastructure",
+            "Include expert interview snippets for credibility and narrative depth"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Cool tech-noir aesthetic with deep blue and silver color palette, high-contrast typography, dynamic camera movements simulating data flow, architectural cinematography highlighting data center scale, subtle glitch/digital overlay effects, clean but bold graphic transitions"
+      },
+      "exampleOutline": [
+        "Opening: Dramatic aerial shot of massive data center campus",
+        "Context: The invisible infrastructure powering global technology",
+        "Transformation: How AI and cloud computing changed data centers",
+        "Impact: Economic and technological implications of infrastructure evolution",
+        "Future Outlook: Predictions and emerging trends in data center technology"
+      ],
+      "hashtags": "#DataCenters #TechInfrastructure #AITechnology #CloudComputing #FutureOfTech #TechInnovation #ServerTechnology #DigitalTransformation #TechTrends #InfrastructureRevolution",
+      "textureIndex": 1
+    },
+    {
+      "title": "The European startup market&#8217;s data doesn&#8217;t match its energy — yet",
+      "description": "Europe's startup market hasn't produced meaningful numbers but there is reason to believe the data will start to change.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/24/the-european-startup-markets-data-doesnt-match-its-energy-yet/"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "Europe's Startup Secrets: The Data Dilemma Revealed",
+        "Why European Tech Is About to Explode 🚀",
+        "Decoding the Hidden Potential of European Startups"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Enable live chat for real-time audience engagement",
+            "Prepare pre-screened audience questions to maintain flow",
+            "Use YouTube's live polling features to interact dynamically"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-forward design with electric blue and deep indigo color palette. Dynamic motion graphics showing startup growth trajectories. Clean, angular typography with futuristic overlay animations. Incorporate data visualization elements with smooth, responsive transitions. Use a split-screen layout to showcase live Q&A and supporting graphics simultaneously."
+      },
+      "exampleOutline": [
+        "Section 1: High-Energy Stream Introduction & Topic Framing",
+        "Section 2: Current European Startup Ecosystem Overview",
+        "Section 3: Data Analysis and Market Potential",
+        "Section 4: Interactive Q&A Segment with Audience",
+        "Section 5: Future Predictions and Call to Action"
+      ],
+      "hashtags": "#EuropeanStartups #TechInnovation #StartupEcosystem #AITech #VentureCapital #InnovationInsights #TechTrends #StartupData #EuropeanTech #InnovationUnlocked",
+      "textureIndex": 12
+    }
+  ]
+}

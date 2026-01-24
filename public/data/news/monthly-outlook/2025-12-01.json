@@ -1,0 +1,62 @@
+{
+  "type": "monthly-outlook",
+  "date": "2025-12-01T16:19:39.416Z",
+  "updates": [
+    {
+      "title": "Beyond The Hype: What AI Can Really Do For Product Design",
+      "description": "AI tools are improving fast, but it’s still not clear how they fit into a real product design workflow. Nikita Samutin walks through four core stages — from analytics and ideation to prototyping and visual design — to show where AI fits and where it doesn’t, illustrated with real-world examples.",
+      "timestamp": "08/18/2025, 1:00 PM",
+      "sources": [
+        {
+          "name": "Smashing Magazine",
+          "url": "https://smashingmagazine.com/2025/08/beyond-hype-what-ai-can-do-product-design/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://smashingmagazine.com/2025/08/beyond-hype-what-ai-can-do-product-design/",
+      "topicCategory": "ai-creative"
+    },
+    {
+      "title": "Just our type: The story of creating Figma Sans",
+      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
+      "timestamp": "09/05/2024, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/the-story-of-creating-figma-sans/",
+      "topicCategory": "branding"
+    },
+    {
+      "title": "Black Forest Labs raises $300M at $3.25B valuation",
+      "description": "The round was co-led by Salesforce Ventures and Anjney Midha (AMP), and saw participation from a16z, NVIDIA, Northzone, Creandum, Earlybird VC, BroadLight Capital, General Catalyst, Temasek, Bain Capital Ventures, Air Street Capital, Visionaries Club, Canva and Figma Ventures.",
+      "timestamp": "12/01/2025, 2:08 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/01/black-forest-labs-raises-300m-at-3-25b-valuation/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/2025/12/01/black-forest-labs-raises-300m-at-3-25b-valuation/",
+      "topicCategory": "startup-business"
+    },
+    {
+      "title": "‘Avatar’ director James Cameron says generative AI is ‘horrifying’",
+      "description": "James Cameron’s movies are often at the cutting edge of visual effects technology, but that doesn't make him a fan of generative AI.",
+      "timestamp": "11/30/2025, 10:53 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/30/avatar-director-james-cameron-says-generative-ai-is-horrifying/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/2025/11/30/avatar-director-james-cameron-says-generative-ai-is-horrifying/",
+      "topicCategory": "ai-creative"
+    }
+  ]
+}

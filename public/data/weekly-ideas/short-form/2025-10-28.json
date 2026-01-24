@@ -1,0 +1,89 @@
+{
+  "type": "short-form",
+  "date": "2025-10-28T17:18:06.335Z",
+  "ideas": [
+    {
+      "title": "Carousel: Adobe Firefly 5 vs older AI tools",
+      "description": "5-slide visual comparison showing layer support and custom model capabilities",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/28/adobe-firefly-image-5-brings-support-for-layers-will-let-creators-make-custom-models/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/28/adobe-launches-ai-assistants-for-express-and-photoshop/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/adobe-max-2025-firefly-photoshop-updates/"
+        }
+      ]
+    },
+    {
+      "title": "Reel: GitHub AI Agent Hub workflow",
+      "description": "Quick demo of multiple AI coding agents working together in one interface",
+      "starred": true,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/808032/github-ai-agent-hq-coding-openai-anthropic"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/28/mem0-raises-24m-from-yc-peak-xv-and-basis-set-to-build-the-memory-layer-for-ai-apps/"
+        }
+      ]
+    },
+    {
+      "title": "Static post: Memory layers in design systems",
+      "description": "Visual breakdown of how AI memory could revolutionize component libraries",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/28/mem0-raises-24m-from-yc-peak-xv-and-basis-set-to-build-the-memory-layer-for-ai-apps/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/808032/github-ai-agent-hq-coding-openai-anthropic"
+        }
+      ]
+    },
+    {
+      "title": "Carousel: The future of creative work",
+      "description": "3-slide exploration of AI shortening workweeks and what that means for designers",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/27/zoom-ceo-eric-yuan-says-ai-will-shorten-our-workweek/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/28/adobe-launches-ai-assistants-for-express-and-photoshop/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/adobe-max-2025-firefly-photoshop-updates/"
+        }
+      ]
+    },
+    {
+      "title": "Reel: ChatGPT shopping integration demo",
+      "description": "30-second walkthrough of PayPal + ChatGPT changing e-commerce design patterns",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/28/paypal-partners-with-openai-to-let-users-pay-for-their-shopping-within-chatgpt/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/808079/chatgpt-paypal-openai-acp-purchases"
+        }
+      ]
+    }
+  ]
+}

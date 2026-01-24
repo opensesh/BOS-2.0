@@ -1,0 +1,72 @@
+{
+  "type": "weekly-update",
+  "date": "2025-10-26T17:15:47.158Z",
+  "updates": [
+    {
+      "title": "OpenAI launches ChatGPT app integrations with Spotify, Figma, Canva, and other design tools, allowing users to work directly within ChatGPT. The company also acquired Sky, an AI interface for Mac that can view screens and take actions in apps.",
+      "timestamp": "10/24/2025, 7:08 PM",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/10/24/how-to-use-the-new-chatgpt-app-integrations-including-spotify-figma-canva-and-others/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/10/23/openai-buys-sky-an-ai-interface-for-mac/"
+        }
+      ]
+    },
+    {
+      "title": "OpenAI reportedly developing new generative music tool that could add music to existing videos or guitar accompaniment to vocal tracks, expanding into the creative AI audio space.",
+      "timestamp": "10/25/2025, 7:48 PM",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/10/25/openai-reportedly-developing-new-generative-music-tool/"
+        }
+      ]
+    },
+    {
+      "title": "AI browsers are becoming the new battleground as OpenAI launches Atlas, a ChatGPT-powered browser for natural language web browsing, though security experts warn of significant privacy and security risks.",
+      "timestamp": "10/24/2025, 7:00 PM",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/video/the-browser-wars-are-back-and-this-time-theyre-powered-by-ai/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/10/25/the-glaring-security-risks-with-ai-browser-agents/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/10/25/who-are-ai-browsers-for/"
+        }
+      ]
+    },
+    {
+      "title": "Real estate industry enters its AI-generated content era with fake video walk-throughs, magically expanding spaces, and stair hallucinations appearing in property listings.",
+      "timestamp": "10/25/2025, 11:00 AM",
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/real-estate-is-entering-its-ai-slop-era/"
+        }
+      ]
+    },
+    {
+      "title": "TechCrunch Disrupt 2025 begins October 27-29 in San Francisco, featuring AI startups, space tech innovations, and breakout sessions on AI workflows and fundraising for 10,000 attendees.",
+      "timestamp": "10/26/2025, 2:00 PM",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/10/26/less-than-24-hours-until-10000-founders-investors-and-innovators-hit-techcrunch-disrupt-2025-and-ticket-rates-rise/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/10/24/ai-at-the-edge-how-startups-are-powering-the-future-of-space-at-techcrunch-disrupt-2025/"
+        }
+      ]
+    }
+  ]
+}

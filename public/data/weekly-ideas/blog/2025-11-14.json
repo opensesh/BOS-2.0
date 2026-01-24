@@ -1,0 +1,93 @@
+{
+  "type": "blog",
+  "date": "2025-11-14T17:17:31.967Z",
+  "ideas": [
+    {
+      "title": "Why the AI investment frenzy signals a design system revolution",
+      "description": "How VCs abandoning old rules for AI startups reveals the infrastructure shift designers need to prepare for",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/13/vcs-abandon-old-rules-for-a-funky-time-of-investing-in-ai-startups/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/13/coding-assistant-cursor-raises-2-3b-5-months-after-its-previous-round/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/13/teen-founders-raise-6m-to-reinvent-pesticides-using-ai-and-convince-paul-graham-to-join-in/"
+        }
+      ]
+    },
+    {
+      "title": "The data center resistance reveals AI's hidden design cost",
+      "description": "Why the growing backlash against AI infrastructure should reshape how we think about sustainable design workflows",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/the-data-center-resistance-has-arrived/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/13/apples-new-app-review-guidelines-clamp-down-on-apps-sharing-personal-data-with-third-party-ai/"
+        }
+      ]
+    },
+    {
+      "title": "Why conversational AI will kill the design brief (and what replaces it)",
+      "description": "How tools like ChatGPT group chats and NotebookLM's Deep Research are fundamentally changing client collaboration",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/14/chatgpt-launches-pilot-group-chats-across-japan-new-zealand-south-korea-and-taiwan/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/13/googles-notebooklm-adds-deep-research-tool-support-for-more-file-types/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/13/linkedin-adds-ai-powered-search-to-help-users-find-people/"
+        }
+      ]
+    },
+    {
+      "title": "The Harvey model: How legal tech is showing designers the future of AI specialization",
+      "description": "Why the most successful AI companies focus on narrow expertise, and what this means for design agencies",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/14/inside-harvey-how-a-first-year-legal-associate-built-one-of-silicon-valleys-hottest-startups/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/13/coding-assistant-cursor-raises-2-3b-5-months-after-its-previous-round/"
+        }
+      ]
+    },
+    {
+      "title": "Why Apple's privacy crackdown is actually good news for designers",
+      "description": "How new App Store guidelines forcing AI transparency will create opportunities for human-centered design",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/13/apples-new-app-review-guidelines-clamp-down-on-apps-sharing-personal-data-with-third-party-ai/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/820906/meta-scam-ads-failure-remove-consequences"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/the-data-center-resistance-has-arrived/"
+        }
+      ]
+    }
+  ]
+}

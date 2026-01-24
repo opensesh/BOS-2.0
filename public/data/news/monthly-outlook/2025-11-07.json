@@ -1,0 +1,76 @@
+{
+  "type": "monthly-outlook",
+  "date": "2025-11-07T17:17:54.142Z",
+  "updates": [
+    {
+      "title": "OpenAI's rapid scaling continues with $20B ARR and $1.4 trillion in data center commitments, signaling massive infrastructure investments ahead for enterprise AI deployment.",
+      "timestamp": "11/06/2025, 9:18 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/sam-altman-says-openai-has-20b-arr-and-about-1-4-trillion-in-data-center-commitments/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/sam-altman-says-he-doesnt-want-the-government-to-bail-out-openai-if-it-fails/"
+        }
+      ]
+    },
+    {
+      "title": "Major platform partnerships emerge as Perplexity signs $400M deal with Snap and Apple reportedly nears $1B annual agreement with Google to power new Siri capabilities.",
+      "timestamp": "11/06/2025, 11:33 AM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/perplexity-to-pay-snap-400m-to-power-search-in-snapchat/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/05/apple-nears-deal-to-pay-google-1b-annually-to-power-new-siri-report-says/"
+        }
+      ]
+    },
+    {
+      "title": "AI content creation tools gain mainstream adoption as Sora for Android hits 500K installs on day one and Amazon launches Kindle Translate for e-book authors.",
+      "timestamp": "11/06/2025, 7:48 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/sora-for-android-saw-nearly-half-a-million-installs-on-its-first-day/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/amazon-launches-an-ai-powered-kindle-translate-service-for-ebook-authors/"
+        }
+      ]
+    },
+    {
+      "title": "Enterprise AI development accelerates with Inception raising $50M for code-focused diffusion models and new AI evaluation grants targeting practical applications.",
+      "timestamp": "11/06/2025, 1:00 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/inception-raises-50-million-to-build-diffusion-models-for-code-and-text/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/laude-institute-announces-first-batch-of-slingshots-ai-grants/"
+        }
+      ]
+    },
+    {
+      "title": "Open source AI gains enterprise momentum as Pinterest reports 'tremendous performance' with reduced costs, while new voice isolation models target noisy environment challenges.",
+      "timestamp": "11/05/2025, 7:00 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/05/pinterest-ceo-touts-open-source-ai-tremendous-performance-with-reduced-costs/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/subtle-computings-voice-isolation-models-help-computers-understand-you-in-noisy-environments/"
+        }
+      ]
+    }
+  ]
+}

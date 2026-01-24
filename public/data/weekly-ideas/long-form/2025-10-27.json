@@ -1,0 +1,101 @@
+{
+  "type": "long-form",
+  "date": "2025-10-27T17:16:53.129Z",
+  "ideas": [
+    {
+      "title": "Tutorial: ChatGPT app integrations with Figma and Canva for design workflows",
+      "description": "Complete setup guide showing how to connect ChatGPT with Figma and Canva for automated design tasks",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/24/how-to-use-the-new-chatgpt-app-integrations-including-spotify-figma-canva-and-others/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/report/806359/openai-sora-deepfake-detection-c2pa-content-credentials"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/ai-weapon-anduril-llms-drones/"
+        }
+      ]
+    },
+    {
+      "title": "Deep dive: AI browser agents for design - security setup and practical workflows",
+      "description": "Hands-on exploration of AI browsers with security best practices for design teams",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/who-are-ai-browsers-for/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/the-glaring-security-risks-with-ai-browser-agents/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/video/the-browser-wars-are-back-and-this-time-theyre-powered-by-ai/"
+        }
+      ]
+    },
+    {
+      "title": "Framework: Building AI-proof design systems using atomic design principles",
+      "description": "Why atomic design matters in the AI era - complete framework with component examples",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/openai-reportedly-developing-new-generative-music-tool/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/807078/qualcomm-ai-chips-launch-hexagon-npus"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/ai-sentient-consciousness-algorithm/"
+        }
+      ]
+    },
+    {
+      "title": "Tutorial: Pinterest AI personalized boards for design inspiration workflows",
+      "description": "Step-by-step guide using Pinterest's new AI boards to organize and generate design concepts",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/27/pinterest-experiments-with-new-ai-powered-personalized-boards/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/806243/fitbit-ai-health-coach-app-update-preview"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/ai-americanizer-end-accents/"
+        }
+      ]
+    },
+    {
+      "title": "Business case: How we use AI detection tools to verify design authenticity",
+      "description": "Our workflow for detecting AI-generated content and maintaining design integrity for clients",
+      "starred": false,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/report/806359/openai-sora-deepfake-detection-c2pa-content-credentials"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/chatgpt-psychosis-and-self-harm-update/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/high-schools-ai-security-system-confuses-doritos-bag-for-a-possible-firearm/"
+        }
+      ]
+    }
+  ]
+}

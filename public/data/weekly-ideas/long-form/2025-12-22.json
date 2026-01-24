@@ -1,0 +1,211 @@
+{
+  "type": "long-form",
+  "date": "2025-12-22T16:27:42.697Z",
+  "ideas": [
+    {
+      "title": "This week on How I AI: How to get your whole team excited about AI",
+      "description": "Your weekly listens from How I AI, part of the Lenny's Podcast Network",
+      "starred": true,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/this-week-on-how-i-ai-how-to-get"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "Transform Your Team's AI Fear into Excitement",
+        "5 Proven Steps to AI Team Buy-In",
+        "Unlock Team Potential: AI Adoption Roadmap"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use chapter markers to highlight each step clearly",
+            "Include animated progress tracker showing tutorial steps",
+            "Embed quick team reaction shots/testimonials between sections"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, energetic design with dynamic motion graphics. High-contrast color palette (electric blue, deep navy, bright white). Clean, geometric typography with rounded edges. Animated step transitions showing team transformation. Isometric illustrations of collaborative AI workflows. Subtle particle/connection animations representing team integration."
+      },
+      "exampleOutline": [
+        "Section 1: Attention-Grabbing AI Team Transformation Hook",
+        "Section 2: Why Teams Resist AI (Common Challenges)",
+        "Section 3: 5-Step AI Adoption & Excitement Framework",
+        "Section 4: Real-World Success Case Studies",
+        "Section 5: Call-to-Action: Start Your AI Journey"
+      ],
+      "hashtags": "#AIAdoption #TeamInnovation #AIStrategy #WorkplaceTech #AILeadership #TeamTransformation #FutureOfWork #AITraining #InnovationCulture #TechLeadership",
+      "textureIndex": 12
+    },
+    {
+      "title": "ChatGPT: Everything you need to know about the AI-powered chatbot",
+      "description": "A timeline of ChatGPT product updates and releases, starting with the latest, which we’ve been updating throughout the year.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/22/chatgpt-everything-to-know-about-the-ai-chatbot/"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "How ChatGPT Transformed AI in Just One Year",
+        "The Untold Story Behind ChatGPT's Rise",
+        "AI Revolution: Inside ChatGPT's Breakthrough Moments"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use archival footage and timeline graphics to illustrate historical context",
+            "Incorporate expert interview-style talking head segments for credibility",
+            "Create dynamic motion graphics to visualize complex AI concepts"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast blue and white color palette with futuristic data visualization elements. Sleek, modern typography with technical overlay graphics. Cinematic documentary-style transitions with subtle digital/glitch effects. Incorporate data flow animations and holographic UI elements to represent AI evolution. Reference visual style of tech documentaries like 'The Social Dilemma' with a more optimistic, forward-looking aesthetic."
+      },
+      "exampleOutline": [
+        "Opening Sequence: Dramatic montage of AI's rapid evolution",
+        "Historical Context: Pre-ChatGPT AI landscape and limitations",
+        "Timeline of Key Releases: Chronological deep dive into ChatGPT versions",
+        "Impact Analysis: How ChatGPT changed technology and society",
+        "Future Predictions: What's next for AI communication"
+      ],
+      "hashtags": "#ChatGPT #ArtificialIntelligence #TechDocumentary #AIRevolution #OpenAI #FutureOfTech #MachineLearning #TechnologyInnovation #AITrends #TechExplained",
+      "textureIndex": 2
+    },
+    {
+      "title": "How to get your whole team excited about AI (and actually using it) | Brian Greenbaum (product designer at Pendo)",
+      "description": "Watch now | &#127897;&#65039; How to transform your organization from AI-curious to AI-proficient: synchronous workshops, asynchronous sharing channels, and measuring adoption success",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/how-to-get-your-whole-team-excited"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "Transform Your Team's AI Adoption in 5 Simple Steps",
+        "Unlock Team AI Excitement: The Ultimate Playbook",
+        "AI Adoption Secrets: Make Your Team Love Innovation"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use clear chapter markers for each step of the tutorial",
+            "Include animated progress tracker showing tutorial steps",
+            "Create dynamic screen recordings showing real team collaboration interfaces"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, energetic design with electric blue and deep teal color palette. Dynamic motion graphics showing team collaboration. Clean, sans-serif typography with subtle tech-inspired geometric overlays. Animated flow charts and step progression visualizations. Minimal but high-contrast design that feels innovative and accessible."
+      },
+      "exampleOutline": [
+        "Section 1: Hook - Why AI Team Adoption Matters",
+        "Section 2: Current Challenges in AI Implementation",
+        "Section 3: 5-Step AI Adoption Framework",
+        "Section 4: Measuring Success and Continuous Improvement",
+        "Section 5: Call-to-Action and Next Steps"
+      ],
+      "hashtags": "#AIAdoption #TeamInnovation #AIStrategy #ProductivityHacks #TechLeadership #AIWorkplace #InnovationCulture #TeamTech #AITraining #DigitalTransformation",
+      "textureIndex": 2
+    },
+    {
+      "title": "Waymo resumes service in San Francisco after robotaxis stall during blackout",
+      "description": "Waymo suspended its SF robotaxi service on Saturday evening after a massive blackout appeared to leave many of its vehicles stalled on city streets.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/21/waymo-suspends-service-in-san-francisco-as-robotaxis-stall-during-blackout/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "Robotaxis Stranded: When AI Meets City Blackout",
+        "San Francisco's Tech Nightmare: Waymo's Autonomous Chaos",
+        "Blackout Breaks Robots: Inside Waymo's Urban Meltdown"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dynamic screen recordings of actual Waymo vehicle stalls",
+            "Include real-time map graphics showing robotaxi disruptions",
+            "Create picture-in-picture segments comparing human vs. AI response"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast urban color palette (dark blues, electric teals, charcoal grays). Glitchy motion graphics simulating system disruption. Sharp, technical typography with angular screen elements. Blend of data visualization and cinematic urban landscape shots. Aesthetic: tech documentary meets cyberpunk infographic"
+      },
+      "exampleOutline": [
+        "Opening: Dramatic cityscape with stalled robotaxis",
+        "Context: SF Blackout Technical Overview",
+        "Waymo's Autonomous System Breakdown",
+        "Technical Analysis: AI Resilience Limitations",
+        "Future of Urban Autonomous Technology Insights"
+      ],
+      "hashtags": "#WaymoFail #AutonomousVehicles #TechDisruption #SanFrancisco #AIFails #RoboticTransport #TechChallenges #SmartCity #FutureOfTransport #UrbanTechnology",
+      "textureIndex": 2
+    },
+    {
+      "title": "Full Tutorial: Automate Your Life with Claude Code | Teresa Torres",
+      "description": "How to set up a 3-layer Claude Code context system to run your life and business",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Peter Yang (Creator Economy)",
+          "url": "https://creatoreconomy.so/p/automate-your-life-with-claude-code-teresa-torres"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "Automate Your Entire Life in 3 Simple Claude Layers",
+        "Code Your Way to Total Life Optimization",
+        "Live: AI Automation Secrets Revealed"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Enable live chat interaction during stream",
+            "Prepare pre-written pinned comments with key resources",
+            "Use YouTube Live's multi-participant streaming feature for Q&A"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy cyberpunk-inspired visual aesthetic with dynamic split-screen interfaces, glowing neon accent colors (electric blue, deep purple), futuristic typography with code-like elements. Dynamic motion graphics showing workflow connections. Picture-in-picture with live presenter overlaid on complex AI workflow visualizations."
+      },
+      "exampleOutline": [
+        "Live Stream Introduction & Personal AI Journey",
+        "The Problem: Information & Task Overload in Modern Life",
+        "Claude Code 3-Layer Automation System Walkthrough",
+        "Live Demonstration & Real-Time Implementation",
+        "Q&A Session with Audience Interaction"
+      ],
+      "hashtags": "#AIAutomation #ClaudeCode #ProductivityHacks #AILifeHacks #TechTips #CreatorTech #AIWorkflow #AutomationSecrets #LiveCoding #TechStream",
+      "textureIndex": 8
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "type": "short-form",
+  "date": "2025-11-15T17:14:16.989Z",
+  "ideas": [
+    {
+      "title": "Reel: ChatGPT group chats for design teams",
+      "description": "Quick demo of how design teams can use ChatGPT's new group chat feature for collaborative ideation",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/14/chatgpt-launches-pilot-group-chats-across-japan-new-zealand-south-korea-and-taiwan/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/14/chatgpt-everything-to-know-about-the-ai-chatbot/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/14/openai-says-its-fixed-chatgpts-em-dash-problem/"
+        }
+      ]
+    },
+    {
+      "title": "Carousel: NotebookLM Deep Research for designers",
+      "description": "5 slides showing how to use Google's new Deep Research tool for design system documentation",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/13/googles-notebooklm-adds-deep-research-tool-support-for-more-file-types/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/ai-features-in-omnifocus/"
+        }
+      ]
+    },
+    {
+      "title": "Static: Open source vs closed AI for creatives",
+      "description": "Visual breakdown of why open source AI matters for independent designers and agencies",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/14/databricks-co-founder-argues-us-must-go-open-source-to-beat-china-in-ai/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/13/vcs-abandon-old-rules-for-a-funky-time-of-investing-in-ai-startups/"
+        }
+      ]
+    },
+    {
+      "title": "Reel: Apple's AI privacy rules impact",
+      "description": "30-second explainer on how Apple's new AI guidelines affect design apps and user data",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/13/apples-new-app-review-guidelines-clamp-down-on-apps-sharing-personal-data-with-third-party-ai/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/major-leak-spills-chinese-hacking-contractor-tools-targets/"
+        }
+      ]
+    },
+    {
+      "title": "Carousel: AI agents in virtual design spaces",
+      "description": "4 slides exploring Google's SIMA 2 and what it means for future design collaboration tools",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/13/googles-sima-2-agent-uses-gemini-to-reason-and-act-in-virtual-worlds/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/games/818606/valve-steam-machine-tv-gaming-pc-wanted/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/821420/framework-laptop-16-2025-nvidia-rtx5070-review/"
+        }
+      ]
+    }
+  ]
+}

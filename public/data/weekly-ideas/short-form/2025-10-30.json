@@ -1,0 +1,81 @@
+{
+  "type": "short-form",
+  "date": "2025-10-30T17:17:06.538Z",
+  "ideas": [
+    {
+      "title": "Carousel: Figma's AI acquisition breakdown",
+      "description": "3-slide visual showing how Figma + Weavy changes AI media generation in design workflows",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/30/figma-acquires-ai-powered-media-generation-company-weavy/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/810251/canva-affinity-design-suite-free-app-relaunch"
+        }
+      ]
+    },
+    {
+      "title": "Reel: AI browsers vs traditional design tools",
+      "description": "Quick comparison showing security risks when AI browsers handle sensitive design files",
+      "starred": false,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/report/810083/ai-browser-cybersecurity-problems"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/29/box-ceo-aaron-levie-on-how-ai-is-changing-the-enterprise-saas-landscape/"
+        }
+      ]
+    },
+    {
+      "title": "Story poll: Affinity's unified app philosophy",
+      "description": "Ask followers: One app for everything vs specialized tools - what's better for design systems?",
+      "starred": true,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/810251/canva-affinity-design-suite-free-app-relaunch"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/30/figma-acquires-ai-powered-media-generation-company-weavy/"
+        }
+      ]
+    },
+    {
+      "title": "Carousel: The commoditization of AI audio",
+      "description": "Visual timeline showing how AI tools become commoditized and what that means for designers",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/29/elevenlabs-ceo-says-ai-audio-models-will-be-commoditized-over-time/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/29/nvidia-becomes-first-public-company-worth-5-trillion/"
+        }
+      ]
+    },
+    {
+      "title": "Reel: Pinterest's AI shopping vs design systems",
+      "description": "Show how Pinterest's AI assistant approach could inspire better component recommendation systems",
+      "starred": false,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/809326/pinterest-ai-shopping-assistant-ceo-ready"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/29/box-ceo-aaron-levie-on-how-ai-is-changing-the-enterprise-saas-landscape/"
+        }
+      ]
+    }
+  ]
+}

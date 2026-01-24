@@ -1,0 +1,62 @@
+{
+  "type": "monthly-outlook",
+  "date": "2025-12-07T16:17:12.014Z",
+  "updates": [
+    {
+      "title": "Behind the Plugins: Yitong Zhang, Product Designer @ Coinbase",
+      "description": "In today’s segment of “Behind the Plugins,” I’m sitting down with Yitong Zhang, Product Designer at Coinbase. Yitong joined Coinbase’s design team of 16 to help the digital currency platform create an open financial system for the world. Embarking on this big mission meant that Coinbase’s teams also had to open up their design process to be more inclusive of their partners. Find out what he is building with the Figma API and get to know the creator behind the plugin. This article is part 3 of a ",
+      "timestamp": "07/25/2019, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/behind-the-plugins-yitong-zhang-coinbase/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/behind-the-plugins-yitong-zhang-coinbase/",
+      "topicCategory": "general-tech"
+    },
+    {
+      "title": "Double click: What does it mean to be a designer in the age of AI?",
+      "description": "The scope of what designers, developers, and product managers do is expanding, and the boundaries between them are blurring. As workflows shift, a bigger question emerges: What happens to job titles—and the ways of working and sense of identity that comes with them?",
+      "timestamp": "12/03/2025, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/double-click-what-does-it-mean-to-be-a-designer-in-the-age-of-ai/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/double-click-what-does-it-mean-to-be-a-designer-in-the-age-of-ai/",
+      "topicCategory": "general-tech"
+    },
+    {
+      "title": "How we shaped the visual identity for Config 2025",
+      "description": "From giant inflatable glyphs to welcoming soundscapes, Figma’s Brand Studio designed an immersive conference that celebrated the spirit of makership at every turn.",
+      "timestamp": "07/03/2025, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/how-we-shaped-the-visual-identity-for-config-2025/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/how-we-shaped-the-visual-identity-for-config-2025/",
+      "topicCategory": "branding"
+    },
+    {
+      "title": "Pat Gelsinger wants to save Moore’s Law, with a little help from the Feds",
+      "description": "The company is aiming to produce its first silicon wafers by 2028 and have its first commercial system online by 2029.",
+      "timestamp": "12/07/2025, 12:18 AM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/06/pat-gelsinger-wants-to-save-moores-law-with-a-little-help-from-the-feds/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/2025/12/06/pat-gelsinger-wants-to-save-moores-law-with-a-little-help-from-the-feds/",
+      "topicCategory": "ai-creative"
+    }
+  ]
+}

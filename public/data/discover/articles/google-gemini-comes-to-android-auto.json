@@ -1,0 +1,492 @@
+{
+  "id": "article-1732146000000",
+  "slug": "google-gemini-comes-to-android-auto",
+  "title": "Google Gemini Comes to Android Auto",
+  "publishedAt": "2025-11-20T17:00:00.000Z",
+  "generatedAt": "2025-11-29T10:00:00.000Z",
+  "totalSources": 42,
+  "sections": [
+    {
+      "id": "section-0",
+      "paragraphs": [
+        {
+          "id": "para-0-0",
+          "content": "Google announced a significant transformation in automotive technology on November 20, 2025, when the company officially began rolling out Gemini, its advanced artificial intelligence assistant, to Android Auto users globally. This deployment marks one of the largest consumer AI integrations in the automotive industry with support across 45 languages and deployment to over 250 million compatible vehicles. The transition fundamentally reshapes how millions of drivers interact with their vehicles by replacing Google Assistant with a conversational AI system built on large language models.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-1",
+                "name": "techcrunch",
+                "url": "https://techcrunch.com/2025/11/20/gemini-starts-rolling-out-to-android-auto-globally/",
+                "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
+                "title": "Gemini starts rolling out to Android Auto globally"
+              },
+              "additionalCount": 2,
+              "additionalSources": [
+                {
+                  "id": "source-2",
+                  "name": "androidpolice",
+                  "url": "https://www.androidpolice.com/gemini-arrives-on-android-auto-as-your-cars-new-co-pilot/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=androidpolice.com&sz=32",
+                  "title": "Gemini arrives on Android Auto as your car's new co-pilot"
+                },
+                {
+                  "id": "source-3",
+                  "name": "google",
+                  "url": "https://blog.google/products/android/android-auto-gemini-tips/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=blog.google&sz=32",
+                  "title": "Android Auto Gemini Tips - Google Blog"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "para-0-1",
+          "content": "The rollout represents not merely a software update but a strategic pivot toward making Gemini the unified assistant across Google's entire ecosystem of devices and platforms. Android Auto currently operates in nearly all new cars sold globally, with Google stating that almost 250 million compatible vehicles exist on roads worldwide, making Gemini's rollout one of the broadest AI adoption initiatives in automotive history. The initial rollout targets users who have already upgraded from Google Assistant to Gemini on their phones, creating a seamless experience where familiar voice commands transition naturally from mobile devices to automotive environments.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-4",
+                "name": "9to5google",
+                "url": "https://9to5google.com/2025/11/20/gemini-android-auto-launch-rolling-out/",
+                "favicon": "https://www.google.com/s2/favicons?domain=9to5google.com&sz=32",
+                "title": "Gemini Android Auto launch rolling out"
+              },
+              "additionalCount": 2,
+              "additionalSources": [
+                {
+                  "id": "source-5",
+                  "name": "android",
+                  "url": "https://android.gadgethacks.com/news/google-gemini-replaces-assistant-in-android-auto/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=gadgethacks.com&sz=32",
+                  "title": "Google Gemini replaces Assistant in Android Auto"
+                },
+                {
+                  "id": "source-6",
+                  "name": "ainvest",
+                  "url": "https://www.ainvest.com/news/google-gemini-ai-transition-android-auto-implications-connected-car-ecosystem-2511/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=ainvest.com&sz=32",
+                  "title": "Google Gemini AI transition - implications for connected car ecosystem"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-1",
+      "title": "Conversational Driving Experience",
+      "paragraphs": [
+        {
+          "id": "para-1-0",
+          "content": "Gemini brings fundamentally enhanced conversational abilities to Android Auto by leveraging sophisticated language models trained to understand natural language queries, maintain contextual awareness across multi-turn conversations, and execute complex tasks requiring multiple steps without requiring users to repeat commands or employ specific syntactic structures. Unlike Google Assistant's command-response paradigm where users must memorize and precisely articulate specific phrases, Gemini enables drivers to speak conversationally and ask follow-up questions naturally, as though interacting with a knowledgeable passenger.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-7",
+                "name": "google",
+                "url": "https://blog.google/products/android/android-auto-gemini-tips/",
+                "favicon": "https://www.google.com/s2/favicons?domain=blog.google&sz=32",
+                "title": "Android Auto Gemini Tips"
+              },
+              "additionalCount": 2,
+              "additionalSources": [
+                {
+                  "id": "source-8",
+                  "name": "techcrunch",
+                  "url": "https://techcrunch.com/2025/05/13/googles-bringing-gemini-to-your-car-with-android-auto/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
+                  "title": "Google's bringing Gemini to your car with Android Auto"
+                },
+                {
+                  "id": "source-9",
+                  "name": "aicerts",
+                  "url": "https://www.aicerts.ai/news/gemini-drives-smarter-automotive-integration-for-android-auto/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=aicerts.ai&sz=32",
+                  "title": "Gemini drives smarter automotive integration"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "para-1-1",
+          "content": "Users can now request assistance using contextually rich queries such as 'I'm suddenly craving barbecue. Any good spots along my route that are open now, near my destination?' followed by natural follow-ups like 'What are their most popular dishes?' or 'Are they dog-friendly?' without restarting the interaction. Navigation functionality integrates deeply with Google Maps' comprehensive business database containing information about 250 million locations worldwide. Gemini can analyze business reviews, extract relevant information from search results, and present recommendations that account for multiple criteria simultaneously.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-10",
+                "name": "googlemaps",
+                "url": "https://blog.google/products/maps/gemini-navigation-features-landmark-lens/",
+                "favicon": "https://www.google.com/s2/favicons?domain=blog.google&sz=32",
+                "title": "Gemini navigation features with Landmark Lens"
+              },
+              "additionalCount": 2,
+              "additionalSources": [
+                {
+                  "id": "source-11",
+                  "name": "androidpolice",
+                  "url": "https://www.androidpolice.com/google-maps-gets-a-gemini-boost-ahead-of-the-holidays/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=androidpolice.com&sz=32",
+                  "title": "Google Maps gets a Gemini boost ahead of the holidays"
+                },
+                {
+                  "id": "source-12",
+                  "name": "voiceflow",
+                  "url": "https://www.voiceflow.com/blog/gemini-vs-google-assistant",
+                  "favicon": "https://www.google.com/s2/favicons?domain=voiceflow.com&sz=32",
+                  "title": "Gemini vs Google Assistant comparison"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-2",
+      "title": "Productivity and Communication Features",
+      "paragraphs": [
+        {
+          "id": "para-2-0",
+          "content": "Communication and messaging capabilities within Gemini for Android Auto allow drivers to compose, edit, and send messages without the rigidity demanded by previous voice systems. Drivers can dictate messages conversationally and then refine them through natural language edits, such as saying 'Can you also ask if he wants to grab coffee after the game? And please translate the message into Spanish.' Gemini automatically composes appropriate messages incorporating these requests, translates content into 40+ languages before sending, and appends estimated time of arrival information when relevant.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-13",
+                "name": "google",
+                "url": "https://blog.google/products/android/android-auto-gemini-tips/",
+                "favicon": "https://www.google.com/s2/favicons?domain=blog.google&sz=32",
+                "title": "Android Auto Gemini Tips"
+              },
+              "additionalCount": 1,
+              "additionalSources": [
+                {
+                  "id": "source-14",
+                  "name": "androidpolice",
+                  "url": "https://www.androidpolice.com/gemini-arrives-on-android-auto-as-your-cars-new-co-pilot/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=androidpolice.com&sz=32",
+                  "title": "Gemini arrives as your car's new co-pilot"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "para-2-1",
+          "content": "Gemini's integration with Google's productivity ecosystem transforms commute time from passive driving into productive work time by enabling drivers to access Gmail, Google Calendar, Google Tasks, and Google Keep through conversational voice commands. A driver planning a business trip can ask Gemini to 'find my hotel confirmation email and navigate there,' prompting the system to retrieve relevant messages from Gmail, extract the address, and initiate navigation automatically. Entertainment functionality enables sophisticated playlist curation through conversational requests that account for context, duration, audience preferences, and mood specifications.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-15",
+                "name": "techcrunch",
+                "url": "https://techcrunch.com/2025/11/20/gemini-starts-rolling-out-to-android-auto-globally/",
+                "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
+                "title": "Gemini starts rolling out to Android Auto globally"
+              },
+              "additionalCount": 2,
+              "additionalSources": [
+                {
+                  "id": "source-16",
+                  "name": "asurion",
+                  "url": "https://www.asurion.com/connect/tech-tips/gemini-vs-google-assistant/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=asurion.com&sz=32",
+                  "title": "Gemini vs Google Assistant - Tech Tips"
+                },
+                {
+                  "id": "source-17",
+                  "name": "outrightcrm",
+                  "url": "https://www.outrightcrm.com/blog/gemini-vs-google-assistant/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=outrightcrm.com&sz=32",
+                  "title": "Gemini vs Google Assistant comparison"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-3",
+      "title": "Gemini Live and Continuous Conversation",
+      "paragraphs": [
+        {
+          "id": "para-3-0",
+          "content": "Gemini Live, offered in beta within Android Auto, enables continuous conversational interactions without the start-stop pattern of wake-word activation required by previous Google Assistant implementations. Drivers can initiate Gemini Live by saying 'Hey Google, let's talk' or 'let's talk live,' entering a conversational mode where they can brainstorm ideas, rehearse presentations, learn about destinations, or discuss topics at length without interruption. This feature transforms long drives into opportunities for productive thinking.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-18",
+                "name": "google",
+                "url": "https://gemini.google/assistant/?hl=en",
+                "favicon": "https://www.google.com/s2/favicons?domain=gemini.google&sz=32",
+                "title": "Gemini Assistant"
+              },
+              "additionalCount": 2,
+              "additionalSources": [
+                {
+                  "id": "source-19",
+                  "name": "support",
+                  "url": "https://support.google.com/gemini?p=gemini_live&hl=en-IS",
+                  "favicon": "https://www.google.com/s2/favicons?domain=support.google.com&sz=32",
+                  "title": "Gemini Live support"
+                },
+                {
+                  "id": "source-20",
+                  "name": "9to5google",
+                  "url": "https://9to5google.com/2025/11/06/android-auto-gemini-starts-rolling-out/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=9to5google.com&sz=32",
+                  "title": "Android Auto Gemini starts rolling out"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "para-3-1",
+          "content": "A driver traveling to St. Louis for a wedding could ask Gemini to 'be my tour guide and share fun facts about the city,' then pivot naturally to 'help me come up with gift ideas for the rehearsal dinner hosts' without requiring topic reinitialization. The system maintains conversational context and understands implicit relationships between topics, creating experiences that feel more like speaking with an informed companion than issuing commands to a device. Users can interrupt Gemini mid-response if they need to focus on driving hazards.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-21",
+                "name": "androidpolice",
+                "url": "https://www.androidpolice.com/gemini-arrives-on-android-auto-as-your-cars-new-co-pilot/",
+                "favicon": "https://www.google.com/s2/favicons?domain=androidpolice.com&sz=32",
+                "title": "Gemini arrives on Android Auto as your car's new co-pilot"
+              },
+              "additionalCount": 1,
+              "additionalSources": [
+                {
+                  "id": "source-22",
+                  "name": "techcrunch",
+                  "url": "https://techcrunch.com/2025/11/20/gemini-starts-rolling-out-to-android-auto-globally/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
+                  "title": "Gemini starts rolling out to Android Auto globally"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-4",
+      "title": "Automotive Industry Impact",
+      "paragraphs": [
+        {
+          "id": "para-4-0",
+          "content": "The connected car market represents a rapidly expanding sector projected to grow from $22.5 billion in 2024 to $42.2 billion by 2030, driven by increasing consumer demand for artificial intelligence-powered infotainment systems. Strategic partnerships between Google and major automotive manufacturers underscore the industry's recognition that Gemini integration provides competitive differentiation. General Motors announced plans to roll out Gemini-powered AI assistants across Buick, Chevrolet, Cadillac, and GMC brands beginning in 2026.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-23",
+                "name": "ainvest",
+                "url": "https://www.ainvest.com/news/google-gemini-ai-transition-android-auto-implications-connected-car-ecosystem-2511/",
+                "favicon": "https://www.google.com/s2/favicons?domain=ainvest.com&sz=32",
+                "title": "Google Gemini AI transition implications"
+              },
+              "additionalCount": 2,
+              "additionalSources": [
+                {
+                  "id": "source-24",
+                  "name": "omdia",
+                  "url": "https://omdia.tech.informa.com/om139292/ai-copilots-voice-assistants-redefine-the-automotive-experience",
+                  "favicon": "https://www.google.com/s2/favicons?domain=omdia.tech.informa.com&sz=32",
+                  "title": "AI copilots redefine the automotive experience"
+                },
+                {
+                  "id": "source-25",
+                  "name": "edisonsmart",
+                  "url": "https://edisonsmart.com/i-o-2025-google-steers-gemini-ai-into-connected-cars/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=edisonsmart.com&sz=32",
+                  "title": "Google steers Gemini AI into connected cars"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "para-4-1",
+          "content": "Mercedes-Benz, Volvo, Polestar, Honda, and Renault have similarly announced Gemini integration partnerships. Polestar specifically committed to Gemini availability across all models starting with the Polestar 2, with deployment expected to reach customers through 2026 software updates. Alphabet, Google's parent company, experienced measurable stock market appreciation following Gemini's advanced automotive integration announcements, with shares rising 2.8% following the launch and closing at all-time highs as investors recognized the strategic value of AI-driven ecosystem expansion.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-26",
+                "name": "polestar",
+                "url": "https://www.destinationcharged.com/news/googles-gemini-voice-assistant-is-coming-to-polestar-vehicles/",
+                "favicon": "https://www.google.com/s2/favicons?domain=destinationcharged.com&sz=32",
+                "title": "Google's Gemini coming to Polestar vehicles"
+              },
+              "additionalCount": 2,
+              "additionalSources": [
+                {
+                  "id": "source-27",
+                  "name": "carsdirect",
+                  "url": "https://www.carsdirect.com/automotive-news/polestar-evs-will-come-with-google-gemini",
+                  "favicon": "https://www.google.com/s2/favicons?domain=carsdirect.com&sz=32",
+                  "title": "Polestar EVs will come with Google Gemini"
+                },
+                {
+                  "id": "source-28",
+                  "name": "autotechinsight",
+                  "url": "https://autotechinsight.spglobal.com/news/5285293/google-begins-to-integrate-gemini-ai-in-android-auto-",
+                  "favicon": "https://www.google.com/s2/favicons?domain=spglobal.com&sz=32",
+                  "title": "Google begins to integrate Gemini AI in Android Auto"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-5",
+      "title": "Google Assistant Transition Timeline",
+      "paragraphs": [
+        {
+          "id": "para-5-0",
+          "content": "Google has confirmed through support documentation that Google Assistant will remain available in Android Auto until March 2026, establishing a definitive sunset date for the decade-old assistant that launched in 2016. This timeline provides approximately six months from Gemini's November 2025 rollout for users to transition while Google Assistant remains functionally available. The staged assistant transition reflects lessons Google learned from previous platform migrations, where abrupt discontinuation generated consumer frustration.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-29",
+                "name": "9to5google",
+                "url": "https://9to5google.com/2025/11/24/google-assistant-shutdown-date-support-page-message/",
+                "favicon": "https://www.google.com/s2/favicons?domain=9to5google.com&sz=32",
+                "title": "Google Assistant shutdown date revealed"
+              },
+              "additionalCount": 1,
+              "additionalSources": [
+                {
+                  "id": "source-30",
+                  "name": "androidauthority",
+                  "url": "https://www.androidauthority.com/google-assistant-end-of-life-3618932/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=androidauthority.com&sz=32",
+                  "title": "Google Assistant end of life"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "para-5-1",
+          "content": "The broader Google Assistant sunset represents the culmination of Google's multi-year strategic decision to consolidate its artificial intelligence offerings under the Gemini brand, eliminating product fragmentation and directing organizational resources toward advancing a single assistant across all platforms. By 2026, Google intends to have completed the transition sufficiently that end-user customers perceive Google as a single artificial intelligence company with one primary assistant rather than managing multiple overlapping tools with inconsistent capabilities.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-31",
+                "name": "techbuzz",
+                "url": "https://www.techbuzz.ai/articles/google-replaces-assistant-with-gemini-in-android-auto",
+                "favicon": "https://www.google.com/s2/favicons?domain=techbuzz.ai&sz=32",
+                "title": "Google replaces Assistant with Gemini"
+              },
+              "additionalCount": 1,
+              "additionalSources": [
+                {
+                  "id": "source-32",
+                  "name": "outrightcrm",
+                  "url": "https://www.outrightcrm.com/blog/gemini-vs-google-assistant/",
+                  "favicon": "https://www.google.com/s2/favicons?domain=outrightcrm.com&sz=32",
+                  "title": "Gemini vs Google Assistant"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sourceCards": [
+    {
+      "id": "source-1",
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2025/11/20/gemini-starts-rolling-out-to-android-auto-globally/",
+      "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
+      "title": "Gemini starts rolling out to Android Auto globally"
+    },
+    {
+      "id": "source-2",
+      "name": "Android Police",
+      "url": "https://www.androidpolice.com/gemini-arrives-on-android-auto-as-your-cars-new-co-pilot/",
+      "favicon": "https://www.google.com/s2/favicons?domain=androidpolice.com&sz=32",
+      "title": "Gemini arrives on Android Auto as your car's new co-pilot"
+    },
+    {
+      "id": "source-3",
+      "name": "Google Blog",
+      "url": "https://blog.google/products/android/android-auto-gemini-tips/",
+      "favicon": "https://www.google.com/s2/favicons?domain=blog.google&sz=32",
+      "title": "Android Auto Gemini Tips"
+    },
+    {
+      "id": "source-4",
+      "name": "9to5Google",
+      "url": "https://9to5google.com/2025/11/20/gemini-android-auto-launch-rolling-out/",
+      "favicon": "https://www.google.com/s2/favicons?domain=9to5google.com&sz=32",
+      "title": "Gemini Android Auto launch rolling out"
+    },
+    {
+      "id": "source-5",
+      "name": "Google Maps Blog",
+      "url": "https://blog.google/products/maps/gemini-navigation-features-landmark-lens/",
+      "favicon": "https://www.google.com/s2/favicons?domain=blog.google&sz=32",
+      "title": "Gemini navigation features"
+    },
+    {
+      "id": "source-6",
+      "name": "Polestar News",
+      "url": "https://www.destinationcharged.com/news/googles-gemini-voice-assistant-is-coming-to-polestar-vehicles/",
+      "favicon": "https://www.google.com/s2/favicons?domain=destinationcharged.com&sz=32",
+      "title": "Gemini coming to Polestar vehicles"
+    }
+  ],
+  "allSources": [
+    {"id": "source-1", "name": "techcrunch", "url": "https://techcrunch.com/2025/11/20/gemini-starts-rolling-out-to-android-auto-globally/", "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32", "title": "Gemini starts rolling out to Android Auto globally"},
+    {"id": "source-2", "name": "androidpolice", "url": "https://www.androidpolice.com/gemini-arrives-on-android-auto-as-your-cars-new-co-pilot/", "favicon": "https://www.google.com/s2/favicons?domain=androidpolice.com&sz=32", "title": "Gemini arrives on Android Auto"},
+    {"id": "source-3", "name": "google", "url": "https://blog.google/products/android/android-auto-gemini-tips/", "favicon": "https://www.google.com/s2/favicons?domain=blog.google&sz=32", "title": "Android Auto Gemini Tips"},
+    {"id": "source-4", "name": "9to5google", "url": "https://9to5google.com/2025/11/20/gemini-android-auto-launch-rolling-out/", "favicon": "https://www.google.com/s2/favicons?domain=9to5google.com&sz=32", "title": "Gemini Android Auto launch"},
+    {"id": "source-5", "name": "gadgethacks", "url": "https://android.gadgethacks.com/news/google-gemini-replaces-assistant-in-android-auto/", "favicon": "https://www.google.com/s2/favicons?domain=gadgethacks.com&sz=32", "title": "Gemini replaces Assistant"},
+    {"id": "source-6", "name": "ainvest", "url": "https://www.ainvest.com/news/google-gemini-ai-transition-android-auto-implications-connected-car-ecosystem-2511/", "favicon": "https://www.google.com/s2/favicons?domain=ainvest.com&sz=32", "title": "Gemini AI transition implications"},
+    {"id": "source-7", "name": "aicerts", "url": "https://www.aicerts.ai/news/gemini-drives-smarter-automotive-integration-for-android-auto/", "favicon": "https://www.google.com/s2/favicons?domain=aicerts.ai&sz=32", "title": "Gemini automotive integration"},
+    {"id": "source-8", "name": "techcrunch", "url": "https://techcrunch.com/2025/05/13/googles-bringing-gemini-to-your-car-with-android-auto/", "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32", "title": "Google bringing Gemini to cars"},
+    {"id": "source-9", "name": "googlemaps", "url": "https://blog.google/products/maps/gemini-navigation-features-landmark-lens/", "favicon": "https://www.google.com/s2/favicons?domain=blog.google&sz=32", "title": "Gemini navigation features"},
+    {"id": "source-10", "name": "voiceflow", "url": "https://www.voiceflow.com/blog/gemini-vs-google-assistant", "favicon": "https://www.google.com/s2/favicons?domain=voiceflow.com&sz=32", "title": "Gemini vs Google Assistant"},
+    {"id": "source-11", "name": "androidpolice", "url": "https://www.androidpolice.com/google-maps-gets-a-gemini-boost-ahead-of-the-holidays/", "favicon": "https://www.google.com/s2/favicons?domain=androidpolice.com&sz=32", "title": "Google Maps Gemini boost"},
+    {"id": "source-12", "name": "asurion", "url": "https://www.asurion.com/connect/tech-tips/gemini-vs-google-assistant/", "favicon": "https://www.google.com/s2/favicons?domain=asurion.com&sz=32", "title": "Gemini vs Google Assistant tips"},
+    {"id": "source-13", "name": "outrightcrm", "url": "https://www.outrightcrm.com/blog/gemini-vs-google-assistant/", "favicon": "https://www.google.com/s2/favicons?domain=outrightcrm.com&sz=32", "title": "Gemini vs Google Assistant comparison"},
+    {"id": "source-14", "name": "gemini", "url": "https://gemini.google/assistant/?hl=en", "favicon": "https://www.google.com/s2/favicons?domain=gemini.google&sz=32", "title": "Gemini Assistant"},
+    {"id": "source-15", "name": "support", "url": "https://support.google.com/gemini?p=gemini_live&hl=en-IS", "favicon": "https://www.google.com/s2/favicons?domain=support.google.com&sz=32", "title": "Gemini Live support"},
+    {"id": "source-16", "name": "9to5google", "url": "https://9to5google.com/2025/11/06/android-auto-gemini-starts-rolling-out/", "favicon": "https://www.google.com/s2/favicons?domain=9to5google.com&sz=32", "title": "Android Auto Gemini starts rolling out"},
+    {"id": "source-17", "name": "omdia", "url": "https://omdia.tech.informa.com/om139292/ai-copilots-voice-assistants-redefine-the-automotive-experience", "favicon": "https://www.google.com/s2/favicons?domain=omdia.tech.informa.com&sz=32", "title": "AI copilots redefine automotive"},
+    {"id": "source-18", "name": "edisonsmart", "url": "https://edisonsmart.com/i-o-2025-google-steers-gemini-ai-into-connected-cars/", "favicon": "https://www.google.com/s2/favicons?domain=edisonsmart.com&sz=32", "title": "Gemini AI in connected cars"},
+    {"id": "source-19", "name": "polestar", "url": "https://www.destinationcharged.com/news/googles-gemini-voice-assistant-is-coming-to-polestar-vehicles/", "favicon": "https://www.google.com/s2/favicons?domain=destinationcharged.com&sz=32", "title": "Gemini coming to Polestar"},
+    {"id": "source-20", "name": "carsdirect", "url": "https://www.carsdirect.com/automotive-news/polestar-evs-will-come-with-google-gemini", "favicon": "https://www.google.com/s2/favicons?domain=carsdirect.com&sz=32", "title": "Polestar EVs with Gemini"},
+    {"id": "source-21", "name": "autotechinsight", "url": "https://autotechinsight.spglobal.com/news/5285293/google-begins-to-integrate-gemini-ai-in-android-auto-", "favicon": "https://www.google.com/s2/favicons?domain=spglobal.com&sz=32", "title": "Gemini AI in Android Auto"},
+    {"id": "source-22", "name": "9to5google", "url": "https://9to5google.com/2025/11/24/google-assistant-shutdown-date-support-page-message/", "favicon": "https://www.google.com/s2/favicons?domain=9to5google.com&sz=32", "title": "Google Assistant shutdown date"},
+    {"id": "source-23", "name": "androidauthority", "url": "https://www.androidauthority.com/google-assistant-end-of-life-3618932/", "favicon": "https://www.google.com/s2/favicons?domain=androidauthority.com&sz=32", "title": "Google Assistant end of life"},
+    {"id": "source-24", "name": "techbuzz", "url": "https://www.techbuzz.ai/articles/google-replaces-assistant-with-gemini-in-android-auto", "favicon": "https://www.google.com/s2/favicons?domain=techbuzz.ai&sz=32", "title": "Google replaces Assistant with Gemini"},
+    {"id": "source-25", "name": "findarticles", "url": "https://www.findarticles.com/gemini-begins-activity-on-android-auto-for-drivers/", "favicon": "https://www.google.com/s2/favicons?domain=findarticles.com&sz=32", "title": "Gemini begins on Android Auto"},
+    {"id": "source-26", "name": "support", "url": "https://support.google.com/androidauto/thread/389381969/your-new-driving-co-pilot-gemini-is-coming-to-android-auto?hl=en", "favicon": "https://www.google.com/s2/favicons?domain=support.google.com&sz=32", "title": "Gemini coming to Android Auto"},
+    {"id": "source-27", "name": "support", "url": "https://support.google.com/androidauto/thread/324805001/replace-assistant-with-gemini?hl=en", "favicon": "https://www.google.com/s2/favicons?domain=support.google.com&sz=32", "title": "Replace Assistant with Gemini"},
+    {"id": "source-28", "name": "youtube", "url": "https://www.youtube.com/watch?v=lx5svcUUez0", "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32", "title": "Gemini Android Auto demo"},
+    {"id": "source-29", "name": "youtube", "url": "https://www.youtube.com/watch?v=tbM122Qe-lk", "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32", "title": "Gemini features showcase"},
+    {"id": "source-30", "name": "ppcland", "url": "https://ppc.land/google-gemini-app-gains-automatic-android-access-to-phone-and-messaging-data/", "favicon": "https://www.google.com/s2/favicons?domain=ppc.land&sz=32", "title": "Gemini gains Android access"},
+    {"id": "source-31", "name": "support", "url": "https://support.google.com/gemini/answer/13594961?hl=en", "favicon": "https://www.google.com/s2/favicons?domain=support.google.com&sz=32", "title": "Gemini privacy policy"},
+    {"id": "source-32", "name": "support", "url": "https://support.google.com/gemini/thread/387614238/gemini-rarely-works-on-android-phone-while-driving?hl=en-GB", "favicon": "https://www.google.com/s2/favicons?domain=support.google.com&sz=32", "title": "Gemini while driving"},
+    {"id": "source-33", "name": "rivianforums", "url": "https://www.rivianforums.com/forum/threads/rivian-switching-from-alexa-to-google-gemini-bringing-voice-text-integration-reported-by-riviantracker.51309/page-4", "favicon": "https://www.google.com/s2/favicons?domain=rivianforums.com&sz=32", "title": "Rivian switching to Gemini"},
+    {"id": "source-34", "name": "theautopian", "url": "https://www.theautopian.com/gm-is-getting-rid-of-apple-carplay-and-android-auto-in-all-of-its-cars/comment-page-1/", "favicon": "https://www.google.com/s2/favicons?domain=theautopian.com&sz=32", "title": "GM removing CarPlay and Android Auto"},
+    {"id": "source-35", "name": "youtube", "url": "https://www.youtube.com/watch?v=yxjRK6El6ZM", "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32", "title": "Gemini Android Auto review"},
+    {"id": "source-36", "name": "support", "url": "https://support.google.com/gemini/answer/16735982?hl=en", "favicon": "https://www.google.com/s2/favicons?domain=support.google.com&sz=32", "title": "Gemini access requirements"},
+    {"id": "source-37", "name": "support", "url": "https://support.google.com/gemini/thread/341449446/wtf-were-they-thinking-in-geminis-own-words?hl=en", "favicon": "https://www.google.com/s2/favicons?domain=support.google.com&sz=32", "title": "Gemini community discussion"},
+    {"id": "source-38", "name": "roadtoautonomy", "url": "https://www.roadtoautonomy.com/transcript-most-valuable-part-next-car-autonomy/", "favicon": "https://www.google.com/s2/favicons?domain=roadtoautonomy.com&sz=32", "title": "Future of car autonomy"},
+    {"id": "source-39", "name": "aicerts", "url": "https://www.aicerts.ai/news/apple-ai-strategic-shift-why-google-gemini-may-power-the-next-siri/", "favicon": "https://www.google.com/s2/favicons?domain=aicerts.ai&sz=32", "title": "Gemini may power Siri"},
+    {"id": "source-40", "name": "androidcentral", "url": "https://www.androidcentral.com/apps-software/android-auto/google-unleashes-gemini-on-android-auto-for-a-smarter-and-more-conversational-drive", "favicon": "https://www.google.com/s2/favicons?domain=androidcentral.com&sz=32", "title": "Gemini for smarter driving"},
+    {"id": "source-41", "name": "teletracnavman", "url": "https://www.teletracnavman.com/fleet-management-software/safety/resources/how-advances-in-ai-camera-technology-prevent-distracted-driving", "favicon": "https://www.google.com/s2/favicons?domain=teletracnavman.com&sz=32", "title": "AI preventing distracted driving"},
+    {"id": "source-42", "name": "tiemannlawfirm", "url": "https://tiemannlawfirm.com/how-technology-is-combating-distracted-driving-in-2025/", "favicon": "https://www.google.com/s2/favicons?domain=tiemannlawfirm.com&sz=32", "title": "Technology combating distracted driving"}
+  ],
+  "sidebarSections": ["Conversational Driving Experience", "Productivity and Communication Features", "Gemini Live and Continuous Conversation", "Automotive Industry Impact", "Google Assistant Transition Timeline"],
+  "relatedArticles": []
+}
+

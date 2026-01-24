@@ -1,0 +1,62 @@
+{
+  "type": "monthly-outlook",
+  "date": "2026-01-08T16:28:02.202Z",
+  "updates": [
+    {
+      "title": "Caterpillar taps Nvidia to bring AI to its construction equipment",
+      "description": "Caterpillar is piloting Cat AI Assistant, a system of AI agents in one of its excavators built on Nvidia's physical AI platform.",
+      "timestamp": "01/07/2026, 5:00 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/07/caterpillar-taps-nvidia-to-bring-ai-to-its-construction-equipment/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/2026/01/07/caterpillar-taps-nvidia-to-bring-ai-to-its-construction-equipment/",
+      "topicCategory": "general-tech"
+    },
+    {
+      "title": "Keeping creativity flowing when times are tough",
+      "description": "Building a culture where everyone feels safe and encouraged to contribute is no small task. We are always interested in the ways teams use Figma to do just that—brainstorm, ideate, team-build—and it’s one of the many reasons we launched FigJam. Here, Senior Illustrator Alek Mackie shares how he stays creative and productive.",
+      "timestamp": "07/15/2021, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/keeping-creativity-flowing/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/keeping-creativity-flowing/",
+      "topicCategory": "general-tech"
+    },
+    {
+      "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT",
+      "description": "We’re expanding the capabilities of the Figma app in ChatGPT, so you can turn your ideas into creative assets and presentations that you can polish in Figma Buzz and Figma Slides.",
+      "timestamp": "12/11/2025, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/",
+      "topicCategory": "ai-creative"
+    },
+    {
+      "title": "Why this VC thinks 2026 will be ‘the year of the consumer’",
+      "description": "AI adoption in enterprise is stalling as companies don't know where to start. Vanessa Larco of Premise VC thinks 2026 will be the year of the consumer.",
+      "timestamp": "01/08/2026, 2:46 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/08/why-this-vc-thinks-2026-will-be-the-year-of-the-consumer/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/2026/01/08/why-this-vc-thinks-2026-will-be-the-year-of-the-consumer/",
+      "topicCategory": "ai-creative"
+    }
+  ]
+}

@@ -1,0 +1,291 @@
+{
+  "type": "blog",
+  "date": "2025-12-15T16:33:01.231Z",
+  "ideas": [
+    {
+      "title": "This week on How I AI: How Zapier’s EA built an army of AI interns",
+      "description": "Your weekly listens from How I AI, part of the Lenny's Podcast Network",
+      "starred": true,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/this-week-on-how-i-ai-how-zapiers"
+        }
+      ],
+      "format": "listicle",
+      "subcategory": "explanatory",
+      "hooks": [
+        "5 Mind-Blowing AI Intern Strategies from Zapier's Expert",
+        "How One EA Transformed AI Workflow Forever",
+        "Zapier's Secret: Building an Unstoppable AI Team"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use numbered callout blocks for each AI intern strategy",
+            "Include personal screenshot/experiment evidence",
+            "Add interactive poll about readers' AI workflow challenges"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Optimize headline with SEO-friendly numbered list format",
+            "Include inline code/workflow screenshots for technical credibility",
+            "Add 'Related Reading' section with internal/external links"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Start with professional context about AI workforce transformation",
+            "Include 1-2 data points/statistics about AI productivity",
+            "Tag key LinkedIn influencers in AI/productivity space"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-forward design with dynamic grid layout. Cyberpunk-inspired color palette (electric blues, neon greens). Geometric typography with motion-tracked number treatments. Isometric illustrations of AI workflow. Subtle glitch/digital artifact overlay effects."
+      },
+      "exampleOutline": [
+        "Section 1: Provocative Introduction - AI Intern Revolution",
+        "Section 2: Context - Traditional Workflow Limitations",
+        "Section 3: 5 Specific AI Intern Strategies",
+        "Section 4: Implementation Framework & Lessons Learned",
+        "Section 5: Future of AI-Augmented Workforce Call-to-Action"
+      ],
+      "hashtags": "#AIWorkflow #ZapierAI #ProductivityHacks #AIInterns #FutureOfWork #AIProductivity #TechInnovation #WorkplaceAI #AIStrategy #ProductivityTips",
+      "textureIndex": 3
+    },
+    {
+      "title": "Tokenization takes the lead in the fight for data security",
+      "description": "Presented by Capital One SoftwareTokenization is emerging as a cornerstone of modern data security, helping businesses separate the value of their data from its risk. During this VB in Conversation, Ravi Raghu, president, Capital One Software, talks about the ways tokenization can help reduce the value of breached data and preserve underlying data format and usability, including Capital One’s own experience leveraging tokenization at scale. Tokenization, Raghu asserts, is a far superior technolo",
+      "starred": false,
+      "sources": [
+        {
+          "name": "VentureBeat AI",
+          "url": "https://venturebeat.com/ai/tokenization-takes-the-lead-in-the-fight-for-data-security"
+        }
+      ],
+      "format": "article",
+      "subcategory": "visionary",
+      "hooks": [
+        "Data Breach Nightmare? Tokenization is Your Shield",
+        "Revolutionizing Security: The Tokenization Game-Changer",
+        "Unlock Safer Data: Tokenization's Hidden Power"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Include real-world tokenization experiment or case study",
+            "Use interactive data visualizations to break down complex concepts",
+            "Add personal narrative about data security challenges"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Optimize with SEO-friendly headers and technical keywords",
+            "Include expert quotes from cybersecurity professionals",
+            "Create clear, scannable sections with bold subheadings"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Focus on business impact and ROI of tokenization",
+            "Include industry-specific statistics and credibility markers",
+            "Target C-suite and technical decision-makers directly"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-forward design with deep blue and electric cyan color palette. Geometric data visualization overlays. Futuristic circuit-like background textures. Typography featuring sharp, clean sans-serif with occasional glitch/digital distortion effects. Subtle motion graphics showing data transformation and security layers."
+      },
+      "exampleOutline": [
+        "Section 1: The Growing Data Security Crisis",
+        "Section 2: What is Tokenization and Why It Matters",
+        "Section 3: Technical Deep Dive into Tokenization Mechanisms",
+        "Section 4: Real-World Implementation Strategies",
+        "Section 5: Future of Data Protection Technologies"
+      ],
+      "hashtags": "#DataSecurity #Tokenization #Cybersecurity #AIPrivacy #TechInnovation #DataProtection #CloudSecurity #EnterpriseTech #InformationSecurity #DigitalTransformation",
+      "textureIndex": 5
+    },
+    {
+      "title": "First Voyage raises $2.5M for its AI companion helps you build habits",
+      "description": "First Voyage has raised $2.5 million in a seed funding round from a16z speed run, SignalFire, True Global, and other investors.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/15/first-voyage-raises-2-5m-for-its-ai-companion-helps-you-build-habits/"
+        }
+      ],
+      "format": "guide",
+      "subcategory": "instructional",
+      "hooks": [
+        "AI Companions: The Habit Revolution You Can't Ignore",
+        "Build Better Habits, Powered by Intelligent Technology",
+        "Unlock Personal Growth with AI-Driven Companion Strategies"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Include real-time habit tracking screenshots",
+            "Use personal narrative about habit formation challenges",
+            "Create interactive poll about reader's habit goals"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Deep dive into behavioral science behind AI companions",
+            "Include expert quotes and research citations",
+            "Optimize for SEO with comprehensive keyword coverage"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Focus on professional development and productivity angles",
+            "Include investor perspectives and market potential",
+            "Use data-driven insights about habit formation technology"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, futuristic design with dynamic gradient backgrounds, clean sans-serif typography, isometric illustrations of human-AI interaction, subtle motion graphics showing habit progression, color palette of deep blues, electric teals, and energetic oranges"
+      },
+      "exampleOutline": [
+        "The Habit Formation Landscape: Current Challenges",
+        "How AI Companions Are Transforming Personal Development",
+        "First Voyage: A Deep Dive into Intelligent Habit Building",
+        "Technology, Psychology, and the Future of Self-Improvement",
+        "Actionable Strategies for Implementing AI-Powered Habit Tools"
+      ],
+      "hashtags": "#AICompanion #HabitTech #PersonalDevelopment #FutureOfWork #AIInnovation #TechStartups #BehavioralScience #ProductivityHacks #AIFunding #IntelligentTechnology",
+      "textureIndex": 6
+    },
+    {
+      "title": "Nvidia reportedly weighs ramping up H200 production to meet surging demand in China",
+      "description": "After successfully lobbying the Trump administration to approve the sales of its H200 chips to China, Nvidia is now thinking of adding capacity to produce more of the chips.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/15/nvidia-is-reportedly-weighs-ramping-up-h200-production-to-meet-surging-demand-in-china/"
+        }
+      ],
+      "format": "case-study",
+      "subcategory": "case-study-deep-dive",
+      "hooks": [
+        "Nvidia's AI Chip Strategy: China's Tech Goldmine Revealed",
+        "How H200 Chips Are Reshaping Global Tech Landscapes",
+        "Geopolitical Chess: Nvidia's Bold China Production Move"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use real-time annotations to highlight strategic insights",
+            "Include interactive timeline of Nvidia's China chip strategy",
+            "Add personal commentary on geopolitical tech implications"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Include data visualizations of chip demand trends",
+            "Deep dive into technical specifications of H200 chips",
+            "Optimize with SEO-friendly subheadings and technical keywords"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame as strategic business intelligence for tech professionals",
+            "Include expert quotes and industry analysis",
+            "Use data-driven insights for professional credibility"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-futuristic design with dynamic geometric overlays. Metallic silver and electric blue color palette. Incorporate circuit-board inspired graphic elements. Use angular typography with motion graphics simulating chip architecture. Reference cyberpunk and high-tech design aesthetics."
+      },
+      "exampleOutline": [
+        "Section 1: Dramatic Opening - Nvidia's Strategic Pivot",
+        "Section 2: Geopolitical Context of AI Chip Market",
+        "Section 3: H200 Chip Technical Deep Dive",
+        "Section 4: Strategic Implications for Global Tech Ecosystem",
+        "Section 5: Future Predictions and Call to Action"
+      ],
+      "hashtags": "#NvidiaAI #TechInnovation #AIChips #ChinaTech #GlobalStrategy #TechGeopolitics #AIHardware #IndustryInsights #TechTrends #InnovationStrategy",
+      "textureIndex": 3
+    },
+    {
+      "title": "How Zapier’s EA built an army of AI interns to automate meeting prep, strengthen team culture, and scale internal alignment | Cortney Hickey",
+      "description": "Watch now | &#127897;&#65039; A Zapier EA shows how she automated meeting prep, executive feedback, and cultural reinforcement&#8212;turning AI agents into her own team of interns",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/how-zapiers-ea-built-an-army-of-ai"
+        }
+      ],
+      "format": "thread",
+      "subcategory": "explanatory",
+      "hooks": [
+        "AI Interns: How One EA Transformed Zapier's Workflow",
+        "Cortney's Secret: Automating Meetings with AI Agents",
+        "From Chaos to Clarity: AI Meets Executive Support"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use thread screenshots as embedded content",
+            "Create companion deep-dive article with expanded insights",
+            "Offer downloadable workflow template as lead magnet"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Add SEO-friendly headline for algorithm discovery",
+            "Include detailed case study breakdown",
+            "Embed thread visuals with technical annotations"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame as professional productivity breakthrough",
+            "Add enterprise-level implementation insights",
+            "Include potential ROI calculations for AI workflow"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech-inspired aesthetic. Gradient backgrounds suggesting AI intelligence. Dynamic typography with motion-graphic overlays. Clean, futuristic color palette (blues, teals, subtle electric accents). Isometric illustrations of AI agents/workflow. Modern, clean San Francisco or Inter typeface."
+      },
+      "exampleOutline": [
+        "Thread Opener: Provocative AI workflow revelation",
+        "Problem: Traditional meeting prep limitations",
+        "Solution: AI agent workflow strategy",
+        "Tactical Implementation Details",
+        "Future of AI Executive Support"
+      ],
+      "hashtags": "#AIWorkflow #ExecutiveAssistant #ProductivityHacks #ZapierAI #AIAutomation #FutureOfWork #AIInterns #WorkplaceInnovation #ProductivityTips #AIStrategy",
+      "textureIndex": 5
+    }
+  ]
+}

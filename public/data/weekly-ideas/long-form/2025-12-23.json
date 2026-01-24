@@ -1,0 +1,211 @@
+{
+  "type": "long-form",
+  "date": "2025-12-23T16:28:42.752Z",
+  "ideas": [
+    {
+      "title": "Amazon&#8217;s AI assistant Alexa+ now works with Angi, Expedia, Square, and Yelp",
+      "description": "The new integrations join other services like Yelp, Uber, OpenTable and others.",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/23/amazons-ai-assistant-alexa-now-works-with-angi-expedia-square-and-yelp/"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "Master Alexa's New Integrations: 5 Game-Changing Tricks",
+        "How to Supercharge Alexa with New AI Services",
+        "Unlock Alexa's Latest Power: A Complete Walkthrough"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use screen recording to demonstrate each integration step",
+            "Include picture-in-picture for personal commentary and technical walkthrough",
+            "Create clear chapter markers for each service integration"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech-inspired color palette (deep blues, bright accents), dynamic motion graphics showing service connections, clean sans-serif typography with technical overlay animations, futuristic but accessible visual language that highlights AI connectivity"
+      },
+      "exampleOutline": [
+        "Section 1: Attention-Grabbing Intro to Alexa's New Capabilities",
+        "Section 2: Overview of New Service Integrations",
+        "Section 3: Step-by-Step Setup for Each New Service",
+        "Section 4: Advanced Tips and Workflow Optimization",
+        "Section 5: Future of AI Assistant Integration CTA"
+      ],
+      "hashtags": "#Alexa #AmazonAI #TechTutorial #AIAssistant #SmartHome #TechInnovation #VoiceAssistant #ProductivityHacks #AIIntegration #TechTips",
+      "textureIndex": 11
+    },
+    {
+      "title": "Lemon Slice nabs $10.5M from YC and Matrix to build out its digital avatar tech",
+      "description": "Digital avatar generation company Lemon Slice is working to add a video layer to AI chatbots with a new diffusion model that can create digital avatars from a single image.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/23/lemon-slice-nabs-10-5m-from-yc-and-matrix-to-build-out-its-digital-avatar-tech/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "AI Avatars Just Got a Mind-Blowing Upgrade 🤯",
+        "One Image, Infinite Digital Humans: The Future is Here",
+        "How Startup Lemon Slice Is Reinventing Digital Personas"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dynamic screen recordings showing avatar generation process",
+            "Include picture-in-picture with founder/expert commentary",
+            "Create visually compelling chapter markers for complex technical content"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, futuristic color palette with electric blues and deep purples. Dynamic motion graphics showcasing avatar transformations. Clean, sans-serif typography with subtle technological glitch effects. Incorporate holographic UI elements and smooth transition animations representing digital morphing."
+      },
+      "exampleOutline": [
+        "Hook: Explosive reveal of Lemon Slice's breakthrough technology",
+        "Context: Current limitations in digital avatar generation",
+        "Technical Deep Dive: How single-image diffusion model works",
+        "Real-World Implications: Future of AI-generated digital humans",
+        "Call-to-Action: Explore Lemon Slice's potential"
+      ],
+      "hashtags": "#AIAvatars #GenerativeAI #TechInnovation #DigitalHumans #StartupTech #MachineLearning #ArtificialIntelligence #TechFuture #YCombinator #AITechnology",
+      "textureIndex": 0
+    },
+    {
+      "title": "AI tools are overdelivering: results from our large-scale AI productivity survey",
+      "description": "What exactly AI is doing for people, which AI tools have product-market fit, where the biggest opportunities remain, and what it all means",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/ai-tools-are-overdelivering-results"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "AI's Secret Productivity Revolution: What No One Tells You",
+        "The AI Tools Rewriting Work's Entire Playbook",
+        "Inside the Hidden AI Productivity Tsunami"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use cinematic B-roll of people working with AI tools",
+            "Include data visualization animations for survey results",
+            "Layer interview-style expert commentary with screen recordings"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast modern palette with electric blue/charcoal accents. Dynamic split-screen compositions showing AI tool interfaces and human reactions. Sleek, technical typography with rounded sans-serif. Smooth motion graphics transitioning between data points. Aesthetic references: MKBHD tech reviews, Vox explainer videos, Apple product launch visuals."
+      },
+      "exampleOutline": [
+        "Cold Open: Dramatic AI productivity transformation montage",
+        "Survey Context: Current AI tool landscape and expectations",
+        "Deep Dive: Specific AI tool performance and breakthrough areas",
+        "Surprising Insights: Unexpected productivity gains and user stories",
+        "Future Projection: What this means for work's evolution"
+      ],
+      "hashtags": "#AIProductivity #FutureOfWork #AITools #TechInnovation #ProductivityHacks #AIResearch #WorkTechnology #InnovationInsights #AITrends #WorkSmarter",
+      "textureIndex": 4
+    },
+    {
+      "title": "OpenAI says AI browsers may always be vulnerable to prompt injection attacks",
+      "description": "OpenAI says prompt injections will always be a risk for AI browsers with agentic capabilities, like Atlas. But the firm is beefing up its cybersecurity with an \"LLM-based automated attacker.\"",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/22/openai-says-ai-browsers-may-always-be-vulnerable-to-prompt-injection-attacks/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "AI Security's Biggest Nightmare: Prompt Injection Revealed",
+        "Can AI Browsers Ever Be Truly Safe?",
+        "OpenAI's Shocking Cybersecurity Vulnerability Exposed"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use screen recordings of actual prompt injection demonstrations",
+            "Include picture-in-picture with expert commentary",
+            "Create dramatic visual metaphors for cybersecurity risks"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dark cybersecurity-inspired color palette with electric blue and charcoal grays. Dynamic motion graphics simulating code infiltration. Sharp, technical typography with glitch/hacker aesthetic. Animated network/matrix-style background elements. High-contrast visual storytelling that feels both technical and cinematic."
+      },
+      "exampleOutline": [
+        "Cold Open: Dramatic Prompt Injection Simulation",
+        "What are Prompt Injection Attacks? (Context)",
+        "OpenAI's Current Understanding and Challenges",
+        "Technical Deep Dive: How Vulnerabilities Work",
+        "Future Implications and Potential Solutions"
+      ],
+      "hashtags": "#AI #Cybersecurity #OpenAI #PromptInjection #MachineLearning #TechSecurity #AIEthics #CyberThreat #TechnologyTrends #AIResearch",
+      "textureIndex": 0
+    },
+    {
+      "title": "Alphabet to buy Intersect Power to bypass energy grid bottlenecks",
+      "description": "Alphabet is set to pay $4.75 billion in cash, plus debt, for the data center and clean energy developer.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/22/alphabet-to-buy-intersect-power-to-bypass-energy-grid-bottlenecks/"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "Alphabet's $4.75B Power Move: Grid Revolution?",
+        "Energy Disruption: Google's Massive Clean Tech Bet",
+        "Intersect Power Acquisition: Future of Energy Revealed"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Enable live chat interaction during stream",
+            "Prepare pre-submitted audience questions in advance",
+            "Use multi-camera setup for dynamic visual engagement"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy visual narrative with dynamic green/blue tech gradients, futuristic data visualization overlays, clean minimal motion graphics showing energy grid infrastructure, picture-in-picture with live host and data visualizations, sleek sans-serif typography with technical precision"
+      },
+      "exampleOutline": [
+        "Section 1: Breaking News Intro - Alphabet's Strategic Acquisition",
+        "Section 2: Current Energy Grid Challenges Breakdown",
+        "Section 3: Intersect Power's Technological Capabilities",
+        "Section 4: Strategic Implications for Clean Energy Ecosystem",
+        "Section 5: Live Q&A with Industry Experts"
+      ],
+      "hashtags": "#GoogleEnergy #CleanTech #EnergyInnovation #AlphabetAcquisition #DataCenterTech #RenewableEnergy #TechInvestment #EnergyGrid #AIEnergy #FutureOfPower",
+      "textureIndex": 2
+    }
+  ]
+}

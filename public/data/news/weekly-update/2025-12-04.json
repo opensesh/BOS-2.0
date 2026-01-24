@@ -1,0 +1,169 @@
+{
+  "type": "weekly-update",
+  "date": "2025-12-04T19:09:58.570Z",
+  "updates": [
+    {
+      "title": "8 tips for designers building branded templates in Figma Buzz",
+      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "timestamp": "08/12/2025, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
+        },
+        {
+          "name": "Figma",
+          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+        },
+        {
+          "name": "Figmalion",
+          "url": "https://figmalion.com/issue/221"
+        }
+      ],
+      "tier": "featured",
+      "sourceUrl": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/",
+      "topicCategory": "design-ux"
+    },
+    {
+      "title": "AWS launches Kiro powers with Stripe, Figma, and Datadog integrations for AI-assisted coding",
+      "description": "Amazon Web Services on Wednesday introduced Kiro powers, a system that allows software developers to give their AI coding assistants instant, specialized expertise in specific tools and workflows — addressing what the company calls a fundamental bottleneck in how artificial intelligence agents operate today.AWS made the announcement at its annual re:Invent conference in Las Vegas. The capability marks a departure from how most AI coding tools work today. Typically, these tools load every possibl",
+      "timestamp": "12/04/2025, 2:02 PM",
+      "sources": [
+        {
+          "name": "VentureBeat AI",
+          "url": "https://venturebeat.com/ai/aws-launches-kiro-powers-with-stripe-figma-and-datadog-integrations-for-ai",
+          "thumbnailUrl": "https://images.ctfassets.net/jdtwqhzvc2n1/53TbLNDfKawmAd8kGfw7ce/17400e5e49710944890e2a6b69cf04f8/nuneybits_Vector_art_of_a_server_rack_in_the_clouds_bf8ba787-9002-494b-b6be-fedd40deb4f9.webp?w=300&amp;q=30"
+        },
+        {
+          "name": "Computerweekly",
+          "url": "https://www.computerweekly.com/blog/CW-Developer-Network/AWS-launches-Kiro-IDE-for-real-agentic-development-at-scale"
+        },
+        {
+          "name": "Aws",
+          "url": "https://aws.amazon.com/startups/learn/power-your-startup-with-1-year-of-kiro-pro-plus-now-available-through-aws-startups?lang=en-US"
+        },
+        {
+          "name": "Aboutamazon",
+          "url": "https://www.aboutamazon.com/news/aws/amazon-ai-frontier-agents-autonomous-kiro"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/watch?v=4qcWgPb-8Fk"
+        },
+        {
+          "name": "Siliconangle",
+          "url": "https://siliconangle.com/2025/12/02/aws-puts-ai-agents-work-truly-autonomous-software-development/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://venturebeat.com/ai/aws-launches-kiro-powers-with-stripe-figma-and-datadog-integrations-for-ai",
+      "topicCategory": "general-tech"
+    },
+    {
+      "title": "Anthropic vs. OpenAI red teaming methods reveal different security priorities for enterprise AI",
+      "description": "Model providers want to prove the security and robustness of their models, releasing system cards and conducting red-team exercises with each new release. But it can be difficult for enterprises to parse through the results, which vary widely and can be misleading. Anthropic's 153-page system card for Claude Opus 4.5 versus OpenAI's 60-page GPT-5 system card reveals a fundamental split in how these labs approach security validation. Anthropic discloses in their system card how they rely on multi",
+      "timestamp": "12/04/2025, 5:00 AM",
+      "sources": [
+        {
+          "name": "VentureBeat AI",
+          "url": "https://venturebeat.com/security/anthropic-vs-openai-red-teaming-methods-reveal-different-security-priorities",
+          "thumbnailUrl": "https://images.ctfassets.net/jdtwqhzvc2n1/3rwD78rWMVQoD6mxei3how/7a9957d3a02efd06ca5a7dbee64505de/Anthropic_red_teaming.jpg?w=300&amp;q=30"
+        },
+        {
+          "name": "Fortune",
+          "url": "https://fortune.com/2025/09/04/anthropic-red-team-pushes-ai-models-into-the-danger-zone-and-burnishes-companys-reputation-for-safety/"
+        },
+        {
+          "name": "Cset",
+          "url": "https://cset.georgetown.edu/article/ai-red-teaming-design-threat-models-and-tools/"
+        },
+        {
+          "name": "Openai",
+          "url": "https://openai.com/index/openai-anthropic-safety-evaluation/"
+        },
+        {
+          "name": "Ai-supremacy",
+          "url": "https://www.ai-supremacy.com/p/openai-code-red-2025-the-fall-of-chatgpt"
+        },
+        {
+          "name": "Alignment",
+          "url": "https://alignment.anthropic.com/2025/openai-findings/"
+        }
+      ],
+      "tier": "featured",
+      "sourceUrl": "https://venturebeat.com/security/anthropic-vs-openai-red-teaming-methods-reveal-different-security-priorities",
+      "topicCategory": "ai-creative"
+    },
+    {
+      "title": "Delivering securely on data and AI strategy",
+      "description": "Most organizations feel the imperative to keep pace with continuing advances in AI capabilities, as highlighted in a recent MIT Technology Review Insights report. That clearly has security implications, particularly as organizations navigate a surge in the volume, velocity, and variety of security data. This explosion of data, coupled with fragmented toolchains, is making it…",
+      "timestamp": "12/04/2025, 2:00 PM",
+      "sources": [
+        {
+          "name": "MIT Technology Review AI",
+          "url": "https://www.technologyreview.com/2025/12/04/1128311/delivering-securely-on-data-and-ai-strategy/",
+          "thumbnailUrl": "https://wp.technologyreview.com/wp-content/uploads/2025/11/MIT_DatabricksEbrief_CoverV4_101525.png?w=1555"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.technologyreview.com/2025/12/04/1128311/delivering-securely-on-data-and-ai-strategy/",
+      "topicCategory": "general-tech"
+    },
+    {
+      "title": "Three new features to help build brand momentum with Figma Buzz",
+      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
+      "timestamp": "10/23/2025, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/new-features-in-figma-buzz/",
+      "topicCategory": "design-ux"
+    },
+    {
+      "title": "How to streamline your design system workflow in Figma",
+      "description": "If you’ve ever stared down a blank Figma file while building a new design system, never fear: These new features and plugins will turn that mountain of work into an afternoon task.",
+      "timestamp": "04/08/2025, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/how-to-streamline-your-design-system-workflow-in-figma/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/how-to-streamline-your-design-system-workflow-in-figma/",
+      "topicCategory": "design-ux"
+    },
+    {
+      "title": "Meta centralizes Facebook and Instagram support, tests AI support assistant",
+      "description": "The new support hub will connect users to security tools, account recovery options, and an AI assistant.",
+      "timestamp": "12/04/2025, 5:00 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/04/meta-centralizes-facebook-and-instagram-support-tests-ai-support-assistant/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/2025/12/04/meta-centralizes-facebook-and-instagram-support-tests-ai-support-assistant/",
+      "topicCategory": "social-trends"
+    },
+    {
+      "title": "Just our type: The story of creating Figma Sans",
+      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
+      "timestamp": "09/05/2024, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/the-story-of-creating-figma-sans/",
+      "topicCategory": "branding"
+    }
+  ]
+}

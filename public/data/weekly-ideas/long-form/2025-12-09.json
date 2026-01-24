@@ -1,0 +1,211 @@
+{
+  "type": "long-form",
+  "date": "2025-12-09T16:28:50.447Z",
+  "ideas": [
+    {
+      "title": "Microsoft to invest $17.5B in India by 2029 as AI race accelerates",
+      "description": "The latest is Microsoft's largest investment in Asia.",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/09/microsoft-to-invest-17-5b-in-india-by-2029-as-ai-race-accelerates/"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "Microsoft's $17.5B India Play: AI Strategy Decoded",
+        "Cracking the Code: Microsoft's Billion-Dollar AI Roadmap",
+        "How Big Tech Wins: Microsoft's India Masterplan"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use screen recording to break down investment strategy visually",
+            "Create chapter markers for each key investment segment",
+            "Include dynamic infographics showing investment timeline and impact"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech-inspired design with deep blue and electric orange accents. Geometric data visualization overlays. Clean, angular typography with technical precision. Motion graphics that simulate digital mapping and investment flow. Minimalist but dynamic visual storytelling with technical elegance."
+      },
+      "exampleOutline": [
+        "Section 1: Attention-Grabbing AI Investment Landscape Overview",
+        "Section 2: Unpacking Microsoft's Strategic Investment Motivation",
+        "Section 3: Step-by-Step Breakdown of $17.5B Investment Strategy",
+        "Section 4: Future Implications for Tech and AI Ecosystem",
+        "Section 5: Key Takeaways and Actionable Insights"
+      ],
+      "hashtags": "#MicrosoftAI #TechInvestment #AIStrategy #IndiaTech #MicrosoftIndia #AIRace #TechInnovation #GlobalTech #InvestmentInsights #AIFuture",
+      "textureIndex": 12
+    },
+    {
+      "title": "India proposes charging OpenAI, Google for training AI on copyrighted content",
+      "description": "India has given OpenAI, Google, and other AI firms 30 days to respond to its proposed royalty system for training on copyrighted content.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/09/india-proposes-charging-openai-google-for-training-ai-on-copyrighted-content/"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "AI's Legal Battle: India vs Tech Giants",
+        "Exclusive: How India Wants to Tax AI",
+        "Royalty Revolution: AI Training Gets Expensive"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Enable live chat for real-time audience interaction",
+            "Prepare pre-submitted Q&A questions as backup",
+            "Use YouTube's live polling feature to engage viewers"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast color palette with tech-inspired blues and oranges. Dynamic split-screen layout showing live presenter and supporting graphics. Animated legal/tech iconography. Clean, modern motion design with sharp transitions. Typography should feel authoritative but approachable - sans-serif with geometric precision."
+      },
+      "exampleOutline": [
+        "Opening: Breaking News Intro & Context",
+        "Detailed Policy Breakdown",
+        "Implications for AI Companies & Creators",
+        "Global Tech Policy Trends Comparison",
+        "Live Q&A Session & Audience Insights"
+      ],
+      "hashtags": "#AIPolicy #TechLaw #OpenAI #GoogleAI #AIEthics #IndiaTech #AIRegulation #CopyrightAI #TechPolicy #AITraining",
+      "textureIndex": 5
+    },
+    {
+      "title": "Anthropic and Accenture sign multi-year AI strategic partnership",
+      "description": "The two companies are launching the Accenture Anthropic Business Group to bring Anthropic's AI to Accenture's employees.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/09/anthropic-and-accenture-sign-multi-year-ai-strategic-partnership/"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "How Anthropic + Accenture Will Transform Enterprise AI",
+        "AI Partnership Secrets: Inside Anthropic's Enterprise Strategy",
+        "Build Enterprise AI: Anthropic's Game-Changing Playbook"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use screen recordings showing actual partnership interface",
+            "Include PiP expert commentary for credibility",
+            "Create clear chapter markers for tutorial navigation"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dynamic blue-gray corporate palette with electric accent colors. Geometric motion graphics showing interconnected enterprise systems. Clean, technical typography with subtle tech-inspired animations. Sleek infographic transitions emphasizing step-by-step learning. Minimalist illustrations of AI/human collaboration."
+      },
+      "exampleOutline": [
+        "Introduction: Partnership Landscape Overview",
+        "Context: Enterprise AI Challenges",
+        "Step-by-Step: Implementing Anthropic AI in Accenture",
+        "Technical Deep Dive: Integration Mechanisms",
+        "Future Implications & Actionable Insights"
+      ],
+      "hashtags": "#AI #EnterpriseAI #Anthropic #Accenture #ArtificialIntelligence #BusinessStrategy #TechInnovation #AIPartnership #CorporateTech #FutureOfWork",
+      "textureIndex": 0
+    },
+    {
+      "title": "Pebble&#8217;s founder introduces a $75 AI smart ring for recording brief notes with a press of a button",
+      "description": "After rebooting the Pebble smartwatch, founder Eric Migicovsky is expanding his company's device lineup with a new smart wearable: an AI-powered smart ring known as Index 01. Named for the finger where the ring is meant to be worn, the new $75 ring is not meant to be a competitor to the always-on, always-listening AI devices, like the AI pendant Friend, but instead offers a way to record quick notes and reminders with a press of a button on the ring's side.\n\nAI only comes into play via the open ",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/09/pebbles-founder-introduces-a-75-ai-smart-ring-for-recording-brief-notes-with-a-press-of-a-button/"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "The $75 AI Ring That Could Change Everything",
+        "One Button, Infinite Possibilities: Meet Index 01",
+        "Pebble's Founder Reinvents Wearable Technology"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use cinematic B-roll of hands interacting with ring",
+            "Include founder interview with dynamic lighting and composition",
+            "Create chapter markers highlighting technical and design insights"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast minimalist aesthetic with tech-futurist color palette (deep blues, electric whites, silver accents). Clean, angular compositions emphasizing the ring's minimalist design. Typography: sans-serif, geometric, with subtle motion graphics revealing technical specifications. Incorporate subtle holographic/translucent overlays to suggest AI intelligence."
+      },
+      "exampleOutline": [
+        "Opening: Dramatic reveal of Index 01 ring",
+        "Context: The problem with current note-taking technologies",
+        "Deep Dive: Eric Migicovsky's design philosophy and innovation",
+        "Technical Breakdown: How the ring's one-button AI works",
+        "Future Vision: Implications for wearable technology"
+      ],
+      "hashtags": "#AIRing #WearableTech #Innovation #Pebble #SmartDevice #TechDesign #FutureOfTech #WearableAI #TechInnovation #ProductDesign",
+      "textureIndex": 2
+    },
+    {
+      "title": "Mistral AI surfs vibe coding tailwinds with new coding models",
+      "description": "French AI startup Mistral today launched Devstral 2, a new generation of its AI model designed for coding, as the company seeks to catch up to bigger AI labs like Anthropic and other coding-focused LLMs.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/09/mistral-ai-surfs-vibe-coding-tailwinds-with-new-coding-models/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "How Mistral AI is Rewriting Coding's Future",
+        "French AI's Radical New Coding Breakthrough",
+        "Devstral 2: The Coding Model That Changes Everything"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use screen recording of actual Devstral 2 interface",
+            "Include side-by-side code comparison demos",
+            "Create dynamic code animation transitions between segments"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast electric blue and deep indigo color palette, futuristic tech-inspired motion graphics, sleek sans-serif typography with dynamic code-like animated text reveals, picture-in-picture developer workspace overlays, subtle glitch/tech transition effects"
+      },
+      "exampleOutline": [
+        "Opening: Provocative AI coding landscape overview",
+        "Mistral AI's Competitive Context",
+        "Devstral 2 Technical Capabilities Deep Dive",
+        "Potential Industry Impact & Innovation",
+        "Call-to-Action: Explore Mistral AI Resources"
+      ],
+      "hashtags": "#MistralAI #CodingAI #AIInnovation #TechBreakthrough #DeveloperTools #AIModels #FrenchTech #CodeGeneration #MachineLearning #SoftwareDevelopment",
+      "textureIndex": 12
+    }
+  ]
+}

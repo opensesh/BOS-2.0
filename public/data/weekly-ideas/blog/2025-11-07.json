@@ -1,0 +1,101 @@
+{
+  "type": "blog",
+  "date": "2025-11-07T17:17:19.369Z",
+  "ideas": [
+    {
+      "title": "Why the $20B AI gold rush is actually bad news for designers",
+      "description": "OpenAI's massive ARR signals a shift that will leave most designers behind unless they adapt now",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/sam-altman-says-openai-has-20b-arr-and-about-1-4-trillion-in-data-center-commitments/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/softbank-is-back-and-the-ai-hype-cycle-is-eating-itself/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/inception-raises-50-million-to-build-diffusion-models-for-code-and-text/"
+        }
+      ]
+    },
+    {
+      "title": "Our perspective: Why AI translation will kill generic design faster than you think",
+      "description": "Amazon's Kindle Translate reveals how AI commoditization threatens surface-level creative work",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/amazon-launches-an-ai-powered-kindle-translate-service-for-ebook-authors/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/column/815681/optimizer-ai-translation-google-translate-pocketalk-timekettle"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/tiktok-shop-sales-global-ecommerce/"
+        }
+      ]
+    },
+    {
+      "title": "The realistic designer's guide to surviving the AI hype cycle collapse",
+      "description": "Why the current AI bubble burst will separate strategic designers from tool chasers",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/softbank-is-back-and-the-ai-hype-cycle-is-eating-itself/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/sam-altman-says-he-doesnt-want-the-government-to-bail-out-openai-if-it-fails/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/816451/x-fake-traffic-preloading-links-bluesky-substack"
+        }
+      ]
+    },
+    {
+      "title": "Why voice isolation tech will transform design presentations (and nobody's talking about it)",
+      "description": "How emerging audio AI will revolutionize client meetings and remote design collaboration",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/subtle-computings-voice-isolation-models-help-computers-understand-you-in-noisy-environments/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/sora-for-android-saw-nearly-half-a-million-installs-on-its-first-day/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/podcast/816270/ibook-cheap-mac-ai-shopping-comet-vergecast"
+        }
+      ]
+    },
+    {
+      "title": "The coming design systems reckoning: Why diffusion models change everything",
+      "description": "How code-generating AI will force us to rethink component libraries and design system architecture",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/inception-raises-50-million-to-build-diffusion-models-for-code-and-text/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/816341/ploopy-nano-2-open-source-trackball-button-qmk"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/review/acer-predator-triton-14-ai/"
+        }
+      ]
+    }
+  ]
+}

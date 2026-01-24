@@ -1,0 +1,64 @@
+{
+  "type": "weekly-update",
+  "date": "2025-11-22T17:16:22.200Z",
+  "updates": [
+    {
+      "title": "ChatGPT launches group chats globally, enabling teams to collaborate on projects with AI assistance for coordination, document co-writing, and research.",
+      "timestamp": "11/20/2025, 7:07 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/chatgpt-launches-group-chats-globally/"
+        }
+      ]
+    },
+    {
+      "title": "Google releases Nano Banana Pro with enhanced image generation capabilities including web search integration, higher resolutions, and improved text rendering for designers.",
+      "timestamp": "11/20/2025, 3:00 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/google-releases-nano-banana-pro-its-latest-image-generation-model/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/mixup-is-a-new-mad-libs-style-app-for-creating-ai-images-from-photos-text-and-doodles/"
+        }
+      ]
+    },
+    {
+      "title": "Gemini AI assistant begins global rollout to Android Auto, replacing Google Assistant with enhanced voice capabilities for playlists, email access, and city information.",
+      "timestamp": "11/20/2025, 5:00 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/gemini-starts-rolling-out-to-android-auto-globally/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/gear-news-of-the-week-matter-15-adds-smart-home-camera-support-and-gemini-comes-to-android-auto/"
+        }
+      ]
+    },
+    {
+      "title": "Bret Taylor's AI agent startup Sierra achieves $100M ARR in under two years, signaling rapid enterprise adoption of AI customer service solutions.",
+      "timestamp": "11/21/2025, 11:00 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/21/bret-taylors-sierra-reaches-100m-arr-in-under-two-years/"
+        }
+      ]
+    },
+    {
+      "title": "Voice AI company Wispr secures $25M funding from Notable Capital as their dictation app gains traction, highlighting growing investment in voice-powered creative tools.",
+      "timestamp": "11/20/2025, 3:00 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/as-its-voice-dectation-app-takes-off-wispr-secures-25m-from-notable-capital/"
+        }
+      ]
+    }
+  ]
+}

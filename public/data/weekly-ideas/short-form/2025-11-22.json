@@ -1,0 +1,101 @@
+{
+  "type": "short-form",
+  "date": "2025-11-22T17:15:35.703Z",
+  "ideas": [
+    {
+      "title": "Reel: ChatGPT group chats for design teams",
+      "description": "30-second demo of using ChatGPT's new group chat feature for collaborative design feedback",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/chatgpt-launches-group-chats-globally/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/826695/microsoft-xbox-full-screen-experience-pc-laptop-tablet-windows-insider"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/gallery/best-gifts-under-100/"
+        }
+      ]
+    },
+    {
+      "title": "Carousel: Mad Libs for AI image creation",
+      "description": "3-slide breakdown of Mixup app's approach to combining photos, text, and doodles for AI art",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/mixup-is-a-new-mad-libs-style-app-for-creating-ai-images-from-photos-text-and-doodles/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/entertainment/826367/pluribus-episode-4-discussion"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/netflix-best-movies-this-week/"
+        }
+      ]
+    },
+    {
+      "title": "Story poll: When AI refuses reality",
+      "description": "Interactive story about Gemini 3 refusing to believe it's 2025 - what would you do?",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/gemini-3-refused-to-believe-it-was-2025-and-hilarity-ensued/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/826902/gmail-ai-training-data-opt-out"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/the-climate-paradox-of-having-a-dog/"
+        }
+      ]
+    },
+    {
+      "title": "Carousel: AI wearables for creatives",
+      "description": "4-slide visual guide to hottest AI wearables and how designers can use them in workflows",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/21/the-hottest-ai-wearables-and-gadgets-you-can-buy-right-now/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/gadgets/826225/xreal-one-viture-luma-pro-ar-glasses-steam-deck-switch-2-deal-sale"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/gallery/best-magsafe-power-banks/"
+        }
+      ]
+    },
+    {
+      "title": "Reel: The $100M AI design lesson",
+      "description": "What Sierra's rapid growth teaches us about AI-first design and user experience principles",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/21/bret-taylors-sierra-reaches-100m-arr-in-under-two-years/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/826796/google-ad-tech-closing-arguments"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/gallery/best-gifts-under-100/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "type": "long-form",
+  "date": "2026-01-19T16:30:31.611Z",
+  "ideas": [
+    {
+      "title": "🎙️ This week on How I AI: Claude Code for product managers",
+      "description": "Your weekly listens from How I AI, part of the Lenny's Podcast Network",
+      "starred": true,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/this-week-on-how-i-ai-claude-code"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "Claude Code: Your AI Product Management Secret Weapon",
+        "How Top PMs Are Using AI to Level Up",
+        "AI Tools That Make Product Managers Superhuman"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dynamic screen recordings showing Claude Code in action",
+            "Include picture-in-picture with host commentary",
+            "Create chapter markers for easy navigation"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-forward aesthetic with electric blue and deep charcoal color palette. Dynamic motion graphics overlaying code demonstrations. Sharp, geometric typography with high-contrast technical illustrations. Animated code snippets and workflow visualizations that feel both futuristic and accessible."
+      },
+      "exampleOutline": [
+        "Section 1: High-energy intro revealing Claude Code's potential",
+        "Section 2: Current PM challenges and AI opportunity",
+        "Section 3: Step-by-step Claude Code product workflow demos",
+        "Section 4: Real-world case studies and impact metrics",
+        "Section 5: Call-to-action with free resources and community link"
+      ],
+      "hashtags": "#AIProductManagement #ClaudeCode #ProductTips #AITools #TechInnovation #ProductStrategy #AIWorkflow #TechLeadership #InnovationTips #ProductTech",
+      "textureIndex": 12
+    },
+    {
+      "title": "Rogue agents and shadow AI: Why VCs are betting big on AI security",
+      "description": "Misaligned agents are just one layer of the AI security challenge that startup Witness AI is trying to solve. It detects employee use of unapproved tools, blocking attacks, and ensuring compliance.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/19/rogue-agents-and-shadow-ai-why-vcs-are-betting-big-on-ai-security/"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "AI's Hidden War: Startups vs. Corporate Shadow Threats",
+        "Rogue Algorithms: The Silent Enterprise Security Crisis",
+        "When AI Tools Become Your Company's Weakest Link"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use cinematic B-roll of tech offices and server rooms",
+            "Incorporate interview-style cutaways with cybersecurity experts",
+            "Create dynamic motion graphics explaining AI security mechanisms"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dark cyberpunk color palette with deep blues and electric teals, high-contrast typography, layered screen overlays simulating digital surveillance, clean technical motion graphics with glitch effects, minimalist but intense visual storytelling emphasizing technological tension"
+      },
+      "exampleOutline": [
+        "Cold Open: Dramatic AI security breach scenario",
+        "Context: Rise of uncontrolled AI tool proliferation",
+        "Witness AI's Solution: Detecting and Blocking Shadow IT",
+        "Deeper Technical Analysis of AI Security Challenges",
+        "Future Implications and Call to Action"
+      ],
+      "hashtags": "#AISecurity #CyberThreat #AIEthics #TechInnovation #EnterpriseIT #CyberDefense #AIRisk #StartupTech #CorporateSecurity #AICompliance",
+      "textureIndex": 12
+    },
+    {
+      "title": "Well, there goes the metaverse!",
+      "description": "The metaverse is on its last legs as VR is eclipsed by AI. But that's not the only thing that went wrong for Meta's VR ambitions.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/19/well-there-goes-the-metaverse/"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "Why the Metaverse Died (And How AI Won)",
+        "Meta's VR Nightmare: A Step-by-Step Breakdown",
+        "The Metaverse Autopsy: What Really Happened?"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use chapter markers to break down each metaverse failure point",
+            "Include side-by-side comparisons of VR vs AI interfaces",
+            "Create dynamic screen recordings showing tech transitions"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast cyberpunk color palette (deep blues, electric oranges), fragmented typography suggesting technological disruption, motion graphics that simulate digital deconstruction, glitch-inspired transitions between sections, picture-in-picture comparisons of VR/AI technologies"
+      },
+      "exampleOutline": [
+        "Section 1: Shocking Metaverse Decline - Hook & Initial Context",
+        "Section 2: Step 1 - Meta's Initial Vision vs Reality",
+        "Section 3: Step 2 - Technical Limitations Exposed",
+        "Section 4: Step 3 - AI's Rapid Technological Superiority",
+        "Section 5: Future Implications & Viewer Takeaways"
+      ],
+      "hashtags": "#Metaverse #AITechnology #VirtualReality #TechTrends #FutureOfTech #MetaFail #AIRevolution #TechAnalysis #InnovationInsights #DigitalTransformation",
+      "textureIndex": 7
+    },
+    {
+      "title": "Claude Code for product managers: research, writing, context libraries, custom to-do system, and more | Teresa Torres",
+      "description": "Watch now | &#127897;&#65039; How a product coach built a personalized productivity system using Claude Code in the terminal",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/claude-code-for-product-managers"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "How AI transforms product management workflows",
+        "Inside a pro's Claude Code productivity system",
+        "Terminal tricks that boost product team efficiency"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dynamic screen recordings showing actual terminal workflow",
+            "Include picture-in-picture of Teresa Torres discussing her process",
+            "Create chapter markers for key productivity techniques"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dark mode terminal aesthetic with neon accent colors, kinetic typography showing code snippets, smooth transitions between screen recordings and interview footage, minimal technical graphics illustrating workflow connections, high-contrast color palette emphasizing digital innovation"
+      },
+      "exampleOutline": [
+        "Opening: Teresa Torres introduces her productivity challenge",
+        "Problem: Traditional product management tools' limitations",
+        "Solution: Claude Code as a transformative workflow tool",
+        "Deep Dive: Specific terminal techniques and use cases",
+        "Conclusion: Future of AI-enhanced product management"
+      ],
+      "hashtags": "#ClaudeCode #ProductManagement #AIProductivity #TechWorkflow #ProductTips #AITools #Automation #ProductStrategy #TechInnovation #WorkflowHacks",
+      "textureIndex": 8
+    },
+    {
+      "title": "10 things I learned from burning myself out with AI coding agents",
+      "description": "10 things I learned from burning myself out with AI coding agents",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/information-technology/2026/01/10-things-i-learned-from-burning-myself-out-with-ai-coding-agents/"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "AI Burnout: My Coding Journey's Dark Side",
+        "When AI Agents Push You to the Brink",
+        "Survival Guide: AI Coding Without Breaking Down"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Set up live chat interaction for real-time audience engagement",
+            "Use stream preview image with high-contrast burnout/coding visual metaphor",
+            "Prepare pre-written timestamps for key discussion points to help viewers navigate"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast cyberpunk-inspired aesthetic with glitchy digital overlays. Dark mode color palette (deep blues, electric teals, burnt orange accents). Dynamic typography that fragments and reconstructs. Motion graphics simulating system overload/burnout. Split-screen visual storytelling with live presenter and code/AI visualizations."
+      },
+      "exampleOutline": [
+        "Section 1: Raw Personal Introduction - Live Stream Energy",
+        "Section 2: Burnout Landscape in AI Development",
+        "Section 3: 10 Tactical Lessons Learned",
+        "Section 4: Interactive Q&A with Audience Insights",
+        "Section 5: Future-Proofing Your AI Workflow"
+      ],
+      "hashtags": "#AIDev #CodingBurnout #TechMentalHealth #AIAgents #SoftwareEngineering #TechTips #ProgrammingLife #AIWorkflow #CodingCommunity #TechStress",
+      "textureIndex": 4
+    }
+  ]
+}

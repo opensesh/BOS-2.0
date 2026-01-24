@@ -1,0 +1,77 @@
+{
+  "type": "long-form",
+  "date": "2025-10-28T17:18:20.168Z",
+  "ideas": [
+    {
+      "title": "Tutorial: Adobe Firefly Image 5 layer workflow for design systems",
+      "description": "Complete guide to using Firefly's new layer support for systematic component creation and brand consistency",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/28/adobe-firefly-image-5-brings-support-for-layers-will-let-creators-make-custom-models/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/adobe-max-2025-firefly-photoshop-updates/"
+        }
+      ]
+    },
+    {
+      "title": "Step-by-step: Building custom Firefly models for your brand identity",
+      "description": "How to create and train custom Adobe Firefly models using your brand assets for consistent AI-generated content",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/28/adobe-firefly-image-5-brings-support-for-layers-will-let-creators-make-custom-models/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/adobe-max-2025-firefly-photoshop-updates/"
+        }
+      ]
+    },
+    {
+      "title": "GitHub Agent HQ + design workflow: Multi-AI coding setup tutorial",
+      "description": "How to use GitHub's new AI agent hub with OpenAI and Anthropic for automated design-to-code workflows",
+      "starred": false,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/808032/github-ai-agent-hq-coding-openai-anthropic"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/28/openai-completes-its-for-profit-recapitalization/"
+        }
+      ]
+    },
+    {
+      "title": "Adobe AI Assistants integration: Express + Photoshop workflow guide",
+      "description": "Complete setup and workflow using Adobe's new AI assistants across Express and Photoshop for rapid iteration",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/28/adobe-launches-ai-assistants-for-express-and-photoshop/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/adobe-max-2025-firefly-photoshop-updates/"
+        }
+      ]
+    },
+    {
+      "title": "Memory-driven design systems: Using Mem0's AI memory layer for consistency",
+      "description": "How to implement persistent AI memory in design workflows for brand consistency across all creative outputs",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/28/mem0-raises-24m-from-yc-peak-xv-and-basis-set-to-build-the-memory-layer-for-ai-apps/"
+        }
+      ]
+    }
+  ]
+}

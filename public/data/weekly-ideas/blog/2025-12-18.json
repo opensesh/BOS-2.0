@@ -1,0 +1,295 @@
+{
+  "type": "blog",
+  "date": "2025-12-18T16:32:07.185Z",
+  "ideas": [
+    {
+      "title": "Inside Kaggle's AI Agents intensive course with Google",
+      "description": "&lt;img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/kaggle_AI_intensive_hero.max-600x600.format-webp.webp\"&gt;Kaggle’s AI Agents Intensive with Google brought learners together in a no-cost course to build and deploy the next frontier of AI.",
+      "starred": true,
+      "sources": [
+        {
+          "name": "Google AI Blog",
+          "url": "https://blog.google/technology/developers/ai-agents-intensive-recap/"
+        }
+      ],
+      "format": "case-study",
+      "subcategory": "case-study-deep-dive",
+      "hooks": [
+        "AI Agents: Google's Intensive Revealed",
+        "Inside Kaggle's Groundbreaking AI Learning Experience",
+        "How Google Trains Next-Gen AI Builders"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Include real-time experiment screenshots",
+            "Use personal learning moments/annotations",
+            "Add interactive code/model snippets"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Include detailed technical breakdown",
+            "Use SEO-optimized headings",
+            "Embed performance metrics and visualizations"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Highlight professional skill development",
+            "Include quotes from industry experts",
+            "Emphasize career growth implications"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dynamic tech-futuristic aesthetic with deep blue/electric accent colors, geometric overlays representing AI networks, sleek sans-serif typography, subtle motion graphics simulating algorithmic movement, minimalist data visualization elements"
+      },
+      "exampleOutline": [
+        "The AI Agents Challenge: Context & Opportunity",
+        "Unpacking Kaggle's Intensive Learning Model",
+        "Key Technical Frameworks and Methodologies",
+        "Breakthrough Insights and Learning Outcomes",
+        "Future of AI Agent Development: What's Next?"
+      ],
+      "hashtags": "#AILearning #GoogleAI #KaggleInsights #AIAgents #TechEducation #MachineLearning #AIInnovation #DeveloperTraining #TechCommunity #AIFrontiers",
+      "textureIndex": 2
+    },
+    {
+      "title": "Peripheral Labs taps into self-driving car sensors to bring sports fans right into the game",
+      "description": "The startup has raised a $3.6 million seed round led by Khosla Ventures.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/18/peripheral-labs-taps-into-self-driving-car-sensors-to-bring-sports-fans-right-into-the-game/"
+        }
+      ],
+      "format": "article",
+      "subcategory": "visionary",
+      "hooks": [
+        "Self-Driving Tech: The Future of Sports Viewing",
+        "How Car Sensors Are Revolutionizing Fan Experience",
+        "Beyond the Stadium: AI Transforms Sports Watching"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Include real-time experiment screenshots of sensor technology",
+            "Create interactive inline graphics explaining sensor mapping",
+            "Add personal anecdote about sports viewing limitations"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Optimize for SEO with technical keywords",
+            "Include expert quotes from sports tech industry",
+            "Create comprehensive technical breakdown with clear visuals"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Highlight investment potential and market disruption",
+            "Include investor perspective from Khosla Ventures",
+            "Frame article for tech and sports business professionals"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dynamic split-screen layout mimicking sensor perspectives, electric blue and graphite color palette, technical wireframe overlays, motion graphics showing sensor data transformation, futuristic yet clean typography with technical annotations"
+      },
+      "exampleOutline": [
+        "Section 1: Reimagining Sports Viewing in the AI Era",
+        "Section 2: The Technical Challenge of Fan Immersion",
+        "Section 3: Peripheral Labs' Breakthrough Approach",
+        "Section 4: How Self-Driving Sensor Tech Creates New Experiences",
+        "Section 5: Future of Interactive Sports Media"
+      ],
+      "hashtags": "#AISports #TechInnovation #SensorTechnology #SportsTech #AIFanExperience #FutureOfViewing #TechStartups #InnovationInSports #DataVisualization #SportsMedia",
+      "textureIndex": 5
+    },
+    {
+      "title": "Luma releases a new AI model that lets users generate a video from a start  and end frame",
+      "description": "Luma AI's new model is available through the company's Dream Machine platform.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/18/luma-releases-a-new-ai-model-that-lets-users-generate-a-video-from-a-start-and-end-frame/"
+        }
+      ],
+      "format": "guide",
+      "subcategory": "instructional",
+      "hooks": [
+        "AI Video Magic: Generate Full Clips from Two Frames",
+        "Luma's Dream Machine: Transforming Imagination into Video",
+        "The Future of Video Creation is One Click Away"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Include real-time experiment walkthrough of Dream Machine",
+            "Use animated GIFs to demonstrate video generation process",
+            "Share personal insights and potential creative use cases"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Deep dive into technical architecture of the AI model",
+            "Include comparative analysis with existing video generation tools",
+            "Optimize with technical SEO keywords around AI video generation"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Focus on professional applications and industry implications",
+            "Include expert quotes and potential business use cases",
+            "Use data visualizations to explain technological breakthrough"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dynamic color palette with electric blues and deep purples, futuristic motion graphics showing frame transformation, clean sans-serif typography with geometric transitions, holographic overlay elements suggesting technological breakthrough, minimal but high-tech aesthetic inspired by sci-fi UI designs"
+      },
+      "exampleOutline": [
+        "Introduction: The Video Generation Revolution",
+        "Understanding Luma's Dream Machine Technology",
+        "How the Two-Frame Video Generation Works",
+        "Creative and Professional Use Cases",
+        "Technical Deep Dive: Model Architecture",
+        "Comparative Analysis with Existing Tools",
+        "Future Implications for Content Creation",
+        "Getting Started: Practical Guide",
+        "Conclusion and Future Predictions"
+      ],
+      "hashtags": "#AIVideoGeneration #LumaAI #CreativeTech #VideoCreation #ArtificialIntelligence #TechInnovation #MachineLearning #ContentCreation #AITools #FutureOfMedia",
+      "textureIndex": 2
+    },
+    {
+      "title": "Vibe-coding startup Lovable raises $330M at a $6.6B valuation",
+      "description": "Lovable has seen its valuation more than triple just five months after the company's last funding round in July.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/18/vibe-coding-startup-lovable-raises-330m-at-a-6-6b-valuation/"
+        }
+      ],
+      "format": "thread",
+      "subcategory": "explanatory",
+      "hooks": [
+        "AI startup Lovable just 3x'd its valuation 🚀",
+        "How Lovable became a $6.6B vibe-coding unicorn",
+        "Startup magic: Lovable's insane funding journey"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use thread as teaser for deeper Substack analysis",
+            "Create companion graphic breaking down funding details",
+            "Link full deep-dive in first thread comment"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Expand thread into long-form startup analysis piece",
+            "Include data visualizations of funding trajectory",
+            "SEO-optimize headline with key startup keywords"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame thread as professional startup ecosystem insight",
+            "Add executive commentary and industry context",
+            "Target startup founders and tech investors"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy gradient background, dynamic geometric shapes, bold sans-serif typography, subtle motion animation revealing funding numbers, tech-futuristic color palette of deep blues and electric teals"
+      },
+      "exampleOutline": [
+        "Section 1: Attention-grabbing funding headline",
+        "Section 2: Quick company background",
+        "Section 3: Funding round details",
+        "Section 4: Market implications",
+        "Section 5: Future predictions + call to follow"
+      ],
+      "hashtags": "#AIStartups #TechFunding #VentureCapital #StartupsToWatch #AIInnovation #TechUnicorns #FundingRound #InnovationEconomy #AITech #StartupGrowth",
+      "textureIndex": 12
+    },
+    {
+      "title": "Amazon&#8217;s new Alexa+ feature adds conversational AI to Ring doorbells",
+      "description": "Amazon said that the feature uses the Ring doorbell's video descriptions to determine who the person in front the camera is based on their uniform, actions, and what they are holding.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/18/amazons-new-alexa-feature-adds-conversational-ai-to-ring-doorbells/"
+        }
+      ],
+      "format": "listicle",
+      "subcategory": "explanatory",
+      "hooks": [
+        "5 Mind-Blowing Ways Alexa+ Is Revolutionizing Home Security",
+        "Ring Doorbells Just Got Smarter: Here's How",
+        "Conversational AI Meets Home Protection: Game Changer?"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use animated GIFs to demonstrate each AI feature",
+            "Include personal experiment/reaction to the technology",
+            "Create interactive poll asking readers about AI home security comfort"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Include SEO-optimized headers for each list item",
+            "Add expert quotes from AI security professionals",
+            "Use data visualizations to illustrate technology's impact"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame features as professional/enterprise security innovations",
+            "Include potential business applications of conversational AI",
+            "Add credibility with industry adoption statistics"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, futuristic color palette with electric blues and deep purples. Isometric illustrations of smart home devices. Modern, sans-serif typography with subtle motion graphics. Clean, tech-forward aesthetic with transparent overlays showing AI recognition layers."
+      },
+      "exampleOutline": [
+        "Introduction: The AI Home Security Revolution",
+        "Context: How Traditional Security Systems Fall Short",
+        "5 Breakthrough Alexa+ Ring Doorbell Features",
+        "Future Implications of Conversational AI in Home Protection",
+        "Call-to-Action: Prepare for the Future of Smart Security"
+      ],
+      "hashtags": "#AI #HomeSecurirty #SmartHome #ConversationalAI #TechInnovation #RingDoorbell #AmazonAI #FutureOfTech #CyberSecurity #SmartTechnology",
+      "textureIndex": 9
+    }
+  ]
+}

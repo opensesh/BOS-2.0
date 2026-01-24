@@ -1,0 +1,272 @@
+{
+  "type": "long-form",
+  "date": "2026-01-10T16:23:05.676Z",
+  "ideas": [
+    {
+      "title": "8 tips for designers building branded templates in Figma Buzz",
+      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "starred": true,
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
+        },
+        {
+          "name": "Figmalion",
+          "url": "https://figmalion.com/topics/community/page/3"
+        },
+        {
+          "name": "Webdesignernews",
+          "url": "https://webdesignernews.com/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
+        },
+        {
+          "name": "Figma",
+          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+        },
+        {
+          "name": "Opensesh",
+          "url": "https://www.opensesh.app/discover/8-tips-for-designers-building-branded-templates-in-figma-buz"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "Live Design Challenge: Template Guardrails Without Breaking Brand",
+        "Crack the Code: Flexible Brand Templates in Figma",
+        "Design Systems That Empower, Not Restrict"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Enable live chat for real-time audience interaction during template walkthrough",
+            "Prepare pre-submitted Q&A questions to maintain stream momentum",
+            "Use stream's 'Premiere' feature to build anticipation and pre-promote"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dynamic split-screen design: Live presenter on 1/3 with Figma workspace, bold geometric overlays, electric blue/charcoal color palette, kinetic typography with motion-tracked design elements, clean but energetic Adobe/Figma-inspired aesthetic with experimental grid layouts"
+      },
+      "exampleOutline": [
+        "Section 1: High-Energy Stream Introduction & Design Challenge Setup",
+        "Section 2: Brand Template Complexity - Real World Scenarios",
+        "Section 3: 8 Live-Demonstrated Tactical Template Design Strategies",
+        "Section 4: Interactive Q&A with Audience Template Challenges",
+        "Section 5: Final Crowdsourced Design Insights & Community Challenge"
+      ],
+      "hashtags": "#FigmaDesign #DesignSystems #BrandTemplates #CreativeWorkflow #AIDesign #DesignTips #ProductDesign #UIUXDesign #DesignCommunity #CreativeTech",
+      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 6
+    },
+    {
+      "title": "CES 2026 was all about ‘physical AI’ and robots, robots, robots",
+      "description": "After years of chatbots and image generators, AI is finally leaving the screen. At CES 2026, that shift became impossible to ignore.  The annual tech showcase in Las Vegas was dominated by “physical AI” and robotics, from Boston Dynamic’s newly redesigned Atlas humanoid robot to AI-powered ice makers (yes, really). The companies in attendance clearly want consumers […]",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/ces-2026-was-all-about-physical-ai-and-robots-robots-robots/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/video/inside-ces-2026s-physical-ai-takeover/"
+        },
+        {
+          "name": "Ces",
+          "url": "https://www.ces.tech/articles/the-future-feels-closer-than-ever-day-3-of-ces-2026/"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/watch?v=lSETfPG7fE0"
+        },
+        {
+          "name": "Interestingengineering",
+          "url": "https://interestingengineering.com/ai-robotics/9-humanoid-robots-at-ces-2026"
+        },
+        {
+          "name": "Techcrunch",
+          "url": "https://techcrunch.com/storyline/ces-2026-follow-live-for-the-best-weirdest-most-interesting-tech-as-physical-ai-and-robots-dominates-the-event/"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "Robots Are Taking Over: CES 2026's AI Revolution",
+        "Beyond Screens: When AI Becomes Physical",
+        "The Future Walks: AI's Shocking CES Debut"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dynamic B-roll of actual CES robot demonstrations",
+            "Include expert interview clips with tech innovators",
+            "Create chapter markers for key robotic innovations"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "High-contrast cyberpunk-inspired color palette (electric blues, deep blacks, neon accents). Dynamic split-screen compositions highlighting human-robot interactions. Sleek, futuristic sans-serif typography with animated technical overlays. Motion graphics simulating digital/robotic interfaces. Aesthetic blend of Apple design minimalism and Blade Runner visual complexity."
+      },
+      "exampleOutline": [
+        "Opening: Dramatic CES 2026 robot showcase montage",
+        "Context: AI's evolution from digital to physical realm",
+        "Key Innovations: Detailed robot technology breakdown",
+        "Industry Impact: How physical AI transforms human experience",
+        "Closing: Future predictions and audience call-to-action"
+      ],
+      "hashtags": "#AI #Robotics #CES2026 #FutureOfTech #PhysicalAI #Innovation #TechTrends #Automation #RobotRevolution #EmergingTechnology",
+      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 12
+    },
+    {
+      "title": "Introducing three new tools for precise image editing in Figma",
+      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
+        },
+        {
+          "name": "Contentgrip",
+          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
+        },
+        {
+          "name": "Techcrunch",
+          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
+        },
+        {
+          "name": "Theaiinsider",
+          "url": "https://theaiinsider.tech/2025/12/12/figma-introduces-new-ai-powered-image-editing-suite-to-streamline-design-workflows/"
+        },
+        {
+          "name": "Figma",
+          "url": "https://www.figma.com/release-notes/"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "AI Just Transformed Image Editing in Figma Forever",
+        "Three Tools That Will Change How Designers Work",
+        "The Future of Design: Precision Meets Artificial Intelligence"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use cinematic B-roll showing actual tool performance",
+            "Include split-screen comparisons of before/after edits",
+            "Feature designer testimonials and real-world workflow demonstrations"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast color palette with deep blues and electric teals, dynamic motion graphics showing tool transitions, clean Helvetica Neue typography with technical overlay animations, minimalist yet futuristic aesthetic reminiscent of Apple product launch videos, smooth screen recordings with subtle depth-of-field effects"
+      },
+      "exampleOutline": [
+        "Opening: Dramatic reveal of AI image editing challenge",
+        "Context: Current limitations in design workflows",
+        "Core Content: Detailed walkthrough of three new Figma tools",
+        "Key Insight: How these tools redefine design precision",
+        "CTA: Encourage viewers to explore and experiment"
+      ],
+      "hashtags": "#FigmaAI #DesignTech #AIDesign #CreativeWorkflow #ImageEditing #DesignInnovation #AITools #CreativeTech #DesignTrends #FutureOfDesign",
+      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 6
+    },
+    {
+      "title": "Senior Designer, Moniker, San Francisco",
+      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "BP&O",
+          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "Design Jobs That Pay $200K - Insider Secrets Revealed",
+        "How Top Designers Land Dream Jobs in 2024",
+        "Breaking Into Design: The San Francisco Playbook"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use picture-in-picture to show job application details",
+            "Include salary graphics and animated salary comparisons",
+            "Create chapter markers for easy navigation"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-forward aesthetic with San Francisco skyline color palette. High-contrast typography, dynamic motion graphics showing career progression. Color scheme: deep blues, electric teals, with metallic silver accents. Animated data visualizations of design career trajectories."
+      },
+      "exampleOutline": [
+        "Opening: Dramatic job market overview (30s)",
+        "Moniker Design Role Deep Dive (2min)",
+        "Key Skills & Requirements Breakdown (3min)",
+        "Salary/Career Progression Insights (2min)",
+        "Application Strategy & CTA (1min)"
+      ],
+      "hashtags": "#DesignCareers #SanFranciscoDesign #TechJobs #CreativeCareer #DesignHiring #JobSearch #TechInnovation #CreativeProfessionals #CareerGrowth #DesignIndustry",
+      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 12
+    },
+    {
+      "title": "Just our type: The story of creating Figma Sans",
+      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "How We Designed Figma's Revolutionary Custom Typeface",
+        "Behind the Scenes: Crafting Figma Sans",
+        "Typography Secrets: Building a Brand's Visual Voice"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use screen recordings showing actual design process",
+            "Include picture-in-picture of designer commentary",
+            "Create clear chapter markers for tutorial navigation"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "Bold, experimental typography-focused design. High-contrast color palette inspired by technical drafting and modern design systems. Dynamic motion graphics revealing typeface construction. Clean, grid-based layouts with unexpected type treatments. Incorporate technical design sketches and process documentation as visual texture."
+      },
+      "exampleOutline": [
+        "Introduction: Why Custom Typography Matters",
+        "Design Challenge: Figma's Brand Evolution",
+        "Step-by-Step Typeface Design Process",
+        "Technical Insights: Font Engineering",
+        "Final Reveal and Community Impact"
+      ],
+      "hashtags": "#Typography #Design #Figma #BrandIdentity #ProductDesign #CreativeProcess #FontDesign #AIDesign #DesignTechnology #CreativeCoding",
+      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "type": "monthly-outlook",
+  "date": "2026-01-17T16:17:25.958Z",
+  "updates": [
+    {
+      "title": "Just our type: The story of creating Figma Sans",
+      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
+      "timestamp": "09/05/2024, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/the-story-of-creating-figma-sans/",
+      "topicCategory": "branding"
+    },
+    {
+      "title": "The Huntington by Base Design",
+      "description": "There’s a particular kind of challenge that crops up again and again in cultural branding – not obscurity exactly, but partial recognition. The sort where an institution is famous for one thing, quietly exceptional at several others, and yet rarely understood as a coherent whole.  The Huntington, a century-old cultural and research institution in Southern California, sits squarely in that\nThe post The Huntington by Base Design appeared first on BP&O - Branding, Packaging and Opinion.",
+      "timestamp": "01/15/2026, 9:21 AM",
+      "sources": [
+        {
+          "name": "BP&O",
+          "url": "https://bpando.org/2026/01/15/the-huntington-museum-branding-by-base-design/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://bpando.org/2026/01/15/the-huntington-museum-branding-by-base-design/",
+      "topicCategory": "branding"
+    },
+    {
+      "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT",
+      "description": "We’re expanding the capabilities of the Figma app in ChatGPT, so you can turn your ideas into creative assets and presentations that you can polish in Figma Buzz and Figma Slides.",
+      "timestamp": "12/11/2025, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/",
+      "topicCategory": "ai-creative"
+    },
+    {
+      "title": "California AG sends Musk’s xAI a cease-and-desist order over sexual deepfakes",
+      "description": "The flood of AI-generated sexual imagery has spurred concern from state and congressional officials alike.",
+      "timestamp": "01/16/2026, 11:21 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/16/california-ag-sends-musks-xai-a-cease-and-desist-order-over-sexual-deepfakes/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/2026/01/16/california-ag-sends-musks-xai-a-cease-and-desist-order-over-sexual-deepfakes/",
+      "topicCategory": "ai-creative"
+    }
+  ]
+}

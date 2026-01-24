@@ -1,0 +1,211 @@
+{
+  "type": "long-form",
+  "date": "2025-12-10T16:29:15.512Z",
+  "ideas": [
+    {
+      "title": "ElevenLabs just hit a $6.6B valuation. Its CEO says the real money isn&#8217;t in voice anymore.",
+      "description": "ElevenLabs&#160;has made a name for&#160;itself&#160;building realistic AI voices.&#160;&#160; What started as two Polish engineers annoyed by terrible movie dubbing has grown into a profitable company now valued at $6.6 billion, doubling from just nine months ago. The company recently announced a $100 million tender offer led by Sequoia and ICONIQ, with participation from a16z and others, as [&#8230;]",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/elevenlabs-just-hit-a-6-6b-valuation-its-ceo-says-the-real-money-isnt-in-voice-anymore/"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "AI Voice Gold Rush: ElevenLabs' Surprising Pivot",
+        "Billion-Dollar Voice Tech: What's Next?",
+        "Beyond Voice: ElevenLabs' Secret Strategy Revealed"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use live chat to crowdsource Q&A questions in real-time",
+            "Enable Super Chat to increase viewer engagement",
+            "Create a dynamic lower-third graphic with real-time valuation tracker"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Futuristic tech-noir palette with electric blue and deep charcoal accents. Dynamic motion graphics showing valuation growth with animated data visualization. Clean, angular typography with glitch-inspired transitions. Picture-in-picture split screen for live commentary and supporting graphics. Subtle holographic overlay elements to emphasize tech innovation theme."
+      },
+      "exampleOutline": [
+        "Section 1: High-Energy Live Stream Intro & Personal Connection",
+        "Section 2: ElevenLabs Journey - From Startup to $6.6B",
+        "Section 3: Decoding the AI Voice Market Shifts",
+        "Section 4: Future Predictions & Strategic Insights",
+        "Section 5: Interactive Q&A and Community Engagement"
+      ],
+      "hashtags": "#AIVoiceTech #ElevenLabs #StartupSuccess #AIInnovation #TechValuation #VoiceAI #StartupStrategy #AITrends #InvestmentInsights #TechPodcast",
+      "textureIndex": 9
+    },
+    {
+      "title": "ChatGPT is Apple&#8217;s most downloaded app of 2025 in the US",
+      "description": "This is ChatGPT's first year as the No. 1 app on the U.S. App Store by downloads.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/10/chatgpt-is-apples-most-downloaded-app-of-2025-in-the-us/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "ChatGPT: How One App Conquered the App Store in 2025",
+        "The AI App That Broke Every Download Record",
+        "Inside ChatGPT's Explosive Rise to #1"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use screen recordings showing App Store download charts",
+            "Include picture-in-picture with AI/tech commentary",
+            "Create dynamic motion graphics illustrating download trends"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-futuristic aesthetic with electric blue and deep purple color palette. Dynamic motion graphics showing app download trajectories. Clean, sans-serif typography with slight digital distortion. Incorporate holographic UI elements and animated data visualizations. Aesthetic references: Cyberpunk design, Apple marketing visuals, tech futurism"
+      },
+      "exampleOutline": [
+        "Opening: Dramatic reveal of ChatGPT's download milestone",
+        "Context: AI's transformative year and market disruption",
+        "Deep Dive: How ChatGPT changed user expectations",
+        "Analysis: Implications for tech and AI ecosystem",
+        "Closing: Future predictions and call to engagement"
+      ],
+      "hashtags": "#ChatGPT #AIRevolution #TechTrends #AppStoreSucess #ArtificialIntelligence #TechInnovation #DownloadRecord #AIApp #OpenAI #TechFuture",
+      "textureIndex": 4
+    },
+    {
+      "title": "Google launches managed MCP servers that let AI agents simply plug into its tools",
+      "description": "Google is rolling out managed MCP servers to make its services “agent-ready by design,” starting with Maps and BigQuery, aiming to simplify messy integrations and help AI agents use real tools.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/10/google-is-going-all-in-on-mcp-servers-agent-ready-by-design/"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "AI Agents' New Highway: Google's Radical Server Revolution",
+        "Inside Google's Master Plan for AI Tool Integration",
+        "How Google Is Rewriting AI's Infrastructure Rulebook"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use archival/tech footage as B-roll to illustrate server infrastructure",
+            "Include dynamic screen recordings of actual MCP server interfaces",
+            "Create visual metaphors comparing old vs new AI integration models"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-tech cyberpunk aesthetic with deep blues/electric teals, translucent data overlays, dynamic grid-based compositions, futuristic sans-serif typography, motion graphics simulating data flow and network connections, subtle glitch/digital artifact effects to emphasize technological transformation"
+      },
+      "exampleOutline": [
+        "Cold Open: Dramatic visualization of current AI integration challenges",
+        "Historical Context: Evolution of AI infrastructure limitations",
+        "Google's MCP Server Breakthrough: Technical Deep Dive",
+        "Implications for AI Developers and Future Technology",
+        "Call-to-Action: Explore Google's New AI Integration Ecosystem"
+      ],
+      "hashtags": "#GoogleAI #AIInfrastructure #TechInnovation #AIServers #MachineLearning #GoogleCloud #AIIntegration #TechTrends #FutureOfComputing #AIArchitecture",
+      "textureIndex": 11
+    },
+    {
+      "title": "The AI that scored 95% — until consultants learned it was AI",
+      "description": "Presented by SAPWhen SAP ran a quiet internal experiment to gauge consultant attitudes toward AI, the results were striking. Five teams were asked to validate answers to more than 1,000 business requirements completed by SAP’s AI co-pilot, Joule for Consultants — a workload that would normally take several weeks.Four teams were told the analysis had been completed by junior interns fresh out of school. They reviewed the material, found it impressive, and rated the work about 95% accurate.The fif",
+      "starred": false,
+      "sources": [
+        {
+          "name": "VentureBeat AI",
+          "url": "https://venturebeat.com/ai/the-ai-that-scored-95-until-consultants-learned-it-was-ai"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "How AI Fooled Top Consultants: Exact Playbook",
+        "AI Scoring 95%: Insider Validation Secrets",
+        "Cracking the AI Performance Evaluation Code"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use side-by-side screen comparisons of AI vs human work",
+            "Include interactive timestamps for key methodology steps",
+            "Incorporate animated graphics showing percentage breakdowns"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast blue and white color palette with dynamic geometric overlays. Typography using sharp, technical sans-serif fonts. Motion graphics highlighting percentage comparisons with fluid, data-driven animations. Clean, technical aesthetic with subtle futuristic undertones. Incorporate transparent data visualization layers and subtle parallax effects."
+      },
+      "exampleOutline": [
+        "Introduction: SAP's Surprising AI Validation Experiment",
+        "Context: Traditional Consultant Evaluation Challenges",
+        "Step-by-Step: AI Performance Validation Methodology",
+        "Key Insights: How AI Outperformed Human Expectations",
+        "Actionable Takeaways: Implementing AI Evaluation Strategies"
+      ],
+      "hashtags": "#AIInnovation #BusinessTechnology #AIConsulting #SAPTech #AIPerformance #FutureOfWork #TechTutorial #AIEvaluation #InnovationStrategy #EnterpriseAI",
+      "textureIndex": 4
+    },
+    {
+      "title": "OpenAI report reveals a 6x productivity gap between AI power users and everyone else",
+      "description": "The tools are available to everyone. The subscription is company-wide. The training sessions have been held. And yet, in offices from Wall Street to Silicon Valley, a stark divide is opening between workers who have woven artificial intelligence into the fabric of their daily work and colleagues who have barely touched it.The gap is not small. According to a new report from OpenAI analyzing usage patterns across its more than one million business customers, workers at the 95th percentile of AI a",
+      "starred": false,
+      "sources": [
+        {
+          "name": "VentureBeat AI",
+          "url": "https://venturebeat.com/ai/openai-report-reveals-a-6x-productivity-gap-between-ai-power-users-and"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "6x Productivity Gap: Are You Leaving Money on the Table?",
+        "AI Power Users vs. Everyone Else: The Shocking Truth",
+        "Unlock Your AI Potential: The Hidden Productivity Hack"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use live chat to engage audience during real-time analysis",
+            "Prepare interactive polling questions about AI usage",
+            "Have pre-prepared screen shares of key OpenAI report data"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dynamic split-screen design with data visualizations, animated productivity comparisons, bold typography in high-contrast blue and white, motion graphics showing workflow transformations, clean tech-forward aesthetic with subtle futuristic elements"
+      },
+      "exampleOutline": [
+        "Live Stream Intro: Teaser of Productivity Gap Findings",
+        "Deep Dive: OpenAI Report Methodology and Context",
+        "Key Insights: Breaking Down the 6x Productivity Difference",
+        "Live Audience Interaction: Q&A and Real-world Examples",
+        "Closing: Actionable Strategies to Close the AI Productivity Gap"
+      ],
+      "hashtags": "#AIProductivity #OpenAI #WorkplaceTechnology #AITools #FutureOfWork #ProductivityHacks #AIInnovation #WorkSmarterNotHarder #AITrends #BusinessIntelligence",
+      "textureIndex": 9
+    }
+  ]
+}

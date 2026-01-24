@@ -1,0 +1,211 @@
+{
+  "type": "long-form",
+  "date": "2025-12-29T16:27:06.719Z",
+  "ideas": [
+    {
+      "title": "This week on How I AI: How Webflow’s CPO built an AI chief of staff",
+      "description": "Your weekly listens from How I AI, part of the Lenny's Podcast Network",
+      "starred": true,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/this-week-on-how-i-ai-how-webflows"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "Build Your AI Chief of Staff in 5 Steps",
+        "Webflow's Secret: AI Assistant Breakdown",
+        "Unlock Pro-Level AI Workflow Automation"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use screen recording to demonstrate each step visually",
+            "Include chapter markers for easy navigation",
+            "Use picture-in-picture to show personal commentary alongside technical demonstration"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech aesthetic with electric blue and charcoal gray. Dynamic motion graphics illustrating workflow steps. Clean, geometric typography with technical precision. Animated process diagrams with smooth transitions. Minimalist design with technical depth, referencing Apple design language and modern UI/UX trends."
+      },
+      "exampleOutline": [
+        "Introduction: Why AI Chief of Staff Matters",
+        "Context: Current Workflow Limitations",
+        "Step-by-Step AI Assistant Build Process",
+        "Pro Tips and Advanced Configurations",
+        "Implementation Strategy and Next Steps"
+      ],
+      "hashtags": "#AIWorkflow #ProductivityHack #WebflowAI #AIAssistant #TechTutorial #AIProductivity #WorkSmarterNotHarder #AIInnovation #ProductDesign #TechTips",
+      "textureIndex": 4
+    },
+    {
+      "title": "How to use the new ChatGPT app integrations, including DoorDash, Spotify, Uber, and others",
+      "description": "Learn how to use Spotify, Canva, Figma, Expedia, and other apps directly in ChatGPT.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/29/how-to-use-the-new-chatgpt-app-integrations-including-doordash-spotify-uber-and-others/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "AI Apps Just Got Insanely Powerful: Here's How",
+        "ChatGPT's Secret Superpower: App Integrations Revealed",
+        "5 Mind-Blowing ChatGPT App Tricks You Didn't Know"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use screen recording with clear cursor tracking",
+            "Include picture-in-picture walkthrough demonstrations",
+            "Create dynamic chapter markers for easy navigation"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy tech aesthetic with electric blue and deep purple color palette. Dynamic motion graphics highlighting app connections. Clean, sharp typography with technical overlay animations. Futuristic UI transitions between app demonstrations. Minimal but high-contrast design emphasizing information flow and connectivity."
+      },
+      "exampleOutline": [
+        "Intro: Teaser of ChatGPT's new app integration capabilities",
+        "Context: Why app integrations matter for productivity",
+        "Walkthrough: Detailed demonstrations of Spotify, Canva, Figma, Expedia integrations",
+        "Pro Tips: Advanced strategies for maximizing app connections",
+        "Conclusion: Future of AI-powered app interactions"
+      ],
+      "hashtags": "#ChatGPT #AIApps #TechTips #ProductivityHacks #AIIntegration #TechTutorial #AIInnovation #AppTips #OpenAI #MachineLearning",
+      "textureIndex": 12
+    },
+    {
+      "title": "VCs predict strong enterprise AI adoption next year — again",
+      "description": "More than 20 venture capitalists share their thoughts on AI agents, enterprise AI budgets and more for 2026.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/29/vcs-predict-strong-enterprise-ai-adoption-next-year-again/"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "VCs Spill: Enterprise AI's Shocking 2026 Predictions",
+        "AI Funding Secrets: What VCs Really Think",
+        "Inside VC Boardrooms: The Future of Enterprise AI"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Enable live chat for real-time audience engagement",
+            "Prepare pre-submitted audience questions in advance",
+            "Use multi-screen setup to show source materials and speaker"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy dynamic visual layout with tech-inspired grid overlay, deep blue and electric cyan color palette, floating holographic data visualization elements, animated graph transitions, modern sans-serif typography with sharp angular accents, picture-in-picture VC interview clips"
+      },
+      "exampleOutline": [
+        "Section 1: High-Energy Live Stream Intro & Audience Welcome",
+        "Section 2: TechCrunch Report Context & Key Findings",
+        "Section 3: Deep Dive into VC Predictions & Investment Trends",
+        "Section 4: Interactive Q&A with Pre-Submitted and Live Audience Questions",
+        "Section 5: Future Predictions and Closing Insights"
+      ],
+      "hashtags": "#EnterpriseAI #VCInsights #AIFunding #TechTrends #AIInvestment #StartupStrategy #AIFuture #TechInnovation #AITechnology #VentureCapital",
+      "textureIndex": 4
+    },
+    {
+      "title": "How Webflow’s CPO built an AI chief of staff to manage her calendar, prep for meetings, and drive AI adoption | Rachel Wolan",
+      "description": "Watch now | &#127897;&#65039; The CPO&#8217;s custom AI chief-of-staff app helps prep for meetings, audit her calendar, and level up her entire organization",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/how-webflows-cpo-built-an-ai-chief"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "How AI became her ultimate executive assistant",
+        "The secret weapon of a Fortune 500 CPO",
+        "Building an AI chief of staff from scratch"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use cinematic B-roll of tech workspaces and AI interfaces",
+            "Include dynamic lower-thirds with data visualization",
+            "Create chapter markers for key narrative moments"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "High-contrast tech-noir aesthetic with deep blues and electric teals, sharp geometric typography, fluid motion graphics transitioning between interview, screen capture, and conceptual AI visualization scenes. Aesthetic blend of 'Her' movie meets Apple design documentary - sleek, intelligent, slightly futuristic."
+      },
+      "exampleOutline": [
+        "Opening: Rachel Wolan's personal AI transformation story",
+        "The productivity challenge in modern tech leadership",
+        "Technical walkthrough of custom AI chief of staff build",
+        "Organizational impact and AI adoption insights",
+        "Future of AI-augmented professional workflows"
+      ],
+      "hashtags": "#AIProductivity #TechLeadership #AIAssistant #WorkflowOptimization #ProductManagement #WebflowAI #AIInnovation #ExecutiveTech #ProductivityHacks #AITools",
+      "textureIndex": 5
+    },
+    {
+      "title": "Big Tech basically took Trump’s unpredictable trade war lying down",
+      "description": "Big Tech basically took Trump’s unpredictable trade war lying down",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/tech-policy/2025/12/big-tech-basically-took-trumps-unpredictable-trade-war-lying-down/"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "Tech Giants' Silent Surrender: Trump's Trade War Exposed",
+        "How Big Tech Rolled Over During Trade Tensions",
+        "Unpacking Silicon Valley's Shocking Trade War Compliance"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Prepare interactive poll questions about trade war impacts",
+            "Use live chat to crowdsource audience trade war experiences",
+            "Have backup screen recordings of key trade policy moments"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast geopolitical infographic style with dynamic data visualizations. Red and navy color palette suggesting tension. Animated world map showing trade flow disruptions. Bold, angular typography with sharp-edged motion graphics. Incorporate stock footage of tech headquarters and trade negotiations as B-roll."
+      },
+      "exampleOutline": [
+        "Opening: Live intro with real-time audience engagement",
+        "Trade War Context: Historical setup and key players",
+        "Big Tech's Response: Detailed analysis of corporate strategies",
+        "Deeper Implications: Long-term economic and technological impacts",
+        "Q&A Session: Live audience interaction and expert insights"
+      ],
+      "hashtags": "#TechPolicy #TradeWar #SiliconValley #GlobalEconomy #TechTrends #BusinessStrategy #InternationalTrade #TechIndustry #EconomicPolicy #TrumpEra",
+      "textureIndex": 4
+    }
+  ]
+}

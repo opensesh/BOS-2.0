@@ -1,0 +1,62 @@
+{
+  "type": "monthly-outlook",
+  "date": "2026-01-01T16:18:17.213Z",
+  "updates": [
+    {
+      "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT",
+      "description": "We’re expanding the capabilities of the Figma app in ChatGPT, so you can turn your ideas into creative assets and presentations that you can polish in Figma Buzz and Figma Slides.",
+      "timestamp": "12/11/2025, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/",
+      "topicCategory": "ai-creative"
+    },
+    {
+      "title": "Charmaine Lee’s 10 rules for building developer tools that feel like magic",
+      "description": "As a product manager working on Snapchat’s Lens Studio for AR developers, Charmaine knows what it takes to delight creators.",
+      "timestamp": "06/07/2024, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/charmaine-lees-10-rules-for-building-developer-tools/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/charmaine-lees-10-rules-for-building-developer-tools/",
+      "topicCategory": "general-tech"
+    },
+    {
+      "title": "Investors predict AI is coming for labor in 2026",
+      "description": "The exact impact AI will have on the enterprise labor market is unclear but investors predict trends will start to emerge in 2026.",
+      "timestamp": "12/31/2025, 4:40 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/31/investors-predict-ai-is-coming-for-labor-in-2026/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/2025/12/31/investors-predict-ai-is-coming-for-labor-in-2026/",
+      "topicCategory": "startup-business"
+    },
+    {
+      "title": "Fizz social app’s CEO on why anon works",
+      "description": "Fizz is betting that Gen Z is tired of performing their lives on Instagram and TikTok.   What started as a pandemic-era group chat frustration has turned into the dominant social platform on college campuses across the US, focused on the 99% of life that doesn’t make it into a highlight reel. Capturing the attention of a demographic typically glued […]",
+      "timestamp": "01/01/2026, 1:25 PM",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/video/fizz-social-apps-ceo-on-why-anon-works/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/video/fizz-social-apps-ceo-on-why-anon-works/",
+      "topicCategory": "social-trends"
+    }
+  ]
+}

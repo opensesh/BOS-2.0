@@ -1,0 +1,211 @@
+{
+  "type": "long-form",
+  "date": "2026-01-05T16:29:00.242Z",
+  "ideas": [
+    {
+      "title": "CES 2026: Follow live as NVIDIA, Lego, AMD, Amazon, and more make their big reveals",
+      "description": "CES 2026, the annual consumer tech conference held in Las Vegas is here. And lucky for you, we have TechCrunch editors and reporters on the ground to cover the news, scout out the interesting, weird, and relevant (and some not so relevant) tech, and of course the people working on it. Even before the official kickoff of CES on January 6, there will be product reveals from Amazon, Nvidia, Hyundai, AMD, and more. AI is at the center of most of the action. But this year, we're hearing a lot more ab",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/storyline/ces-2026-follow-live-as-nvidia-lego-amd-amazon-and-more-make-their-big-reveals/"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "CES 2026: AI Tech Reveals Live Right Now!",
+        "Tech Giants Dropping Secrets - Watch Exclusive",
+        "Breaking: Future Tech Unveiled Before Your Eyes"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Enable Super Chat for real-time audience interaction",
+            "Use multi-camera setup for dynamic live coverage",
+            "Prepare pre-loaded graphics/overlays for instant context switching"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "High-energy cyberpunk-inspired visual aesthetic with dynamic split-screen layouts, real-time data overlays, futuristic typography in electric blue/neon accent colors, rapid motion graphics transitioning between live event scenes and product highlights, minimalist but information-dense screen composition"
+      },
+      "exampleOutline": [
+        "Intro: Energetic Live Stream Welcome & Event Overview",
+        "Live Product Reveal Breakdown",
+        "Real-Time Tech Insights & Expert Commentary",
+        "Audience Q&A Interactive Segment",
+        "Closing Predictions & Future Tech Trends"
+      ],
+      "hashtags": "#CES2026 #TechLive #AIRevolution #FutureTech #InnovationNow #TechEvent #NvidiaLaunch #AmazonTech #AITrends #LiveTechCoverage",
+      "textureIndex": 3
+    },
+    {
+      "title": "This week on How I AI: Zapier's CEO shares his personal AI stack",
+      "description": "Your weekly listens from How I AI, part of the Lenny's Podcast Network",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/this-week-on-how-i-ai-zapiers-ceo"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "AI Workflow Secrets: Zapier CEO's Automation Playbook",
+        "Build Your Ultimate AI Tech Stack Now",
+        "Inside Zapier's CEO Personal AI Toolkit"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use screen recording to show actual AI tool interfaces",
+            "Create clear chapter markers for each workflow step",
+            "Include picture-in-picture CEO commentary for authenticity"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy tech-inspired visual design with electric blue/deep charcoal color palette. Dynamic grid-based motion graphics showing workflow connections. Sharp, geometric sans-serif typography. Animated connection lines between AI tools simulating real-time integration. Clean, futuristic aesthetic that feels both professional and cutting-edge."
+      },
+      "exampleOutline": [
+        "Intro: Why AI Workflows Matter",
+        "Current Productivity Challenges in Tech",
+        "Zapier CEO's 5-Step AI Integration Method",
+        "Tactical Tool Selection & Configuration",
+        "Live Demonstration of Integrated Workflow"
+      ],
+      "hashtags": "#AIWorkflow #ZapierCEO #AIProductivity #WorkflowAutomation #AITools #TechHacks #ProductivityTips #AIIntegration #EntrepreneurAI #TechInnovation",
+      "textureIndex": 4
+    },
+    {
+      "title": "Amazon&#8217;s AI assistant comes to the web with Alexa.com",
+      "description": "Amazon is bringing Alexa+ to the web with a new Alexa.com site, expanding its AI assistant beyond devices and positioning it as a family-focused, agent-style chatbot.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/05/alexa-without-an-echo-amazons-ai-chatbot-comes-to-the-web-and-a-revamped-alexa-app/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "Alexa Just Escaped Your Smart Speaker Forever",
+        "Amazon's AI Is Breaking Free Online",
+        "The Future of Alexa: No Device Needed"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dynamic screen recordings showing Alexa.com interface",
+            "Include picture-in-picture reactions/commentary",
+            "Create clear chapter markers for navigation"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-futuristic aesthetic with electric blue and deep charcoal color palette. Dynamic motion graphics showing AI transformation. Clean, sans-serif typography with high-contrast text. Animated UI overlays demonstrating Alexa's web capabilities. Sleek, modern transitions between sections."
+      },
+      "exampleOutline": [
+        "Opening: Dramatic reveal of Alexa.com",
+        "Context: Limitations of current AI assistants",
+        "Core Content: Alexa's new web-based capabilities",
+        "Key Insights: Implications for AI and personal computing",
+        "CTA: Explore Alexa.com beta"
+      ],
+      "hashtags": "#AI #AmazonAlexa #TechInnovation #WebAI #ArtificialIntelligence #FutureOfTech #ChatbotRevolution #AmazonTech #AIAssistant #TechNews",
+      "textureIndex": 9
+    },
+    {
+      "title": "Google previews new Gemini features for TV at CES 2026",
+      "description": "Google TV will let you ask Gemini to find and edit your photos, adjust your TV settings and more.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/05/google-previews-new-gemini-features-for-tv-at-ces-2026/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "AI Is About to Transform Your TV Forever",
+        "Google's Gemini: The TV Assistant You Never Knew You Needed",
+        "Watch How AI Changes Television Interaction"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use picture-in-picture demo of Gemini TV interactions",
+            "Include live screen recording of feature walkthrough",
+            "Create dynamic chapter markers for easy navigation"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech aesthetic with deep blues and electric accents. Dynamic motion graphics simulating AI interactions. Clean, futuristic typography with subtle glitch/tech overlay effects. Minimal but energetic composition emphasizing technological innovation. Incorporate subtle holographic/translucent UI elements to suggest AI intelligence."
+      },
+      "exampleOutline": [
+        "Opening: Dramatic AI TV interaction teaser",
+        "Context: Current TV interaction limitations",
+        "Gemini Features Deep Dive: Photo editing, settings control",
+        "Technical Breakdown: How AI understands context",
+        "Future Implications and CTA"
+      ],
+      "hashtags": "#GoogleGemini #AITV #TechInnovation #FutureOfTelevision #AIAssistant #CES2026 #SmartTV #TechTrends #AIFeatures #GoogleTech",
+      "textureIndex": 1
+    },
+    {
+      "title": "Zapier’s CEO shares his personal AI stack | Wade Foster",
+      "description": "Watch now | &#127897;&#65039; Wade Foster (co-founder and CEO of Zapier) on extracting company culture from meeting transcripts, building interview evaluation agents, and finding hidden talent with Grok",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/zapiers-ceo-shares-his-personal-ai-stack"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "How Zapier's CEO Uses AI to Transform Company Culture",
+        "Inside Wade Foster's Secret AI Talent Discovery Toolkit",
+        "AI Strategies from a Startup Genius: Wade Foster Revealed"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use cinematic b-roll of Foster in office/workspace",
+            "Include screen recordings of actual AI tools being used",
+            "Create chapter markers for easy navigation of technical segments"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Modern documentary aesthetic: High-contrast blue and white color palette, clean Helvetica typography, dynamic split-screen transitions, subtle parallax motion graphics, minimalist infographic overlays with technical data visualizations, soft lens flares to create technological atmosphere"
+      },
+      "exampleOutline": [
+        "Cold Open: Dramatic AI workflow demonstration",
+        "Personal Journey: Foster's AI discovery process",
+        "Technical Deep Dive: Specific AI stack and tools",
+        "Case Study: Real-world AI talent identification method",
+        "Future Vision and Call-to-Action"
+      ],
+      "hashtags": "#AIStrategy #ZapierCEO #ProductivityHacks #AIWorkflow #TechLeadership #StartupInnovation #AITools #WadeFoster #EntrepreneurTips #InnovationTechnology",
+      "textureIndex": 0
+    }
+  ]
+}

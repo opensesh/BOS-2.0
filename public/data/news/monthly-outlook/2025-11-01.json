@@ -1,0 +1,64 @@
+{
+  "type": "monthly-outlook",
+  "date": "2025-11-01T17:15:29.803Z",
+  "updates": [
+    {
+      "title": "Figma's acquisition of AI-powered media generation company Weavy signals major expansion into AI-generated content creation, with plans to integrate the technology across the Figma platform under the 'Weave' brand in coming months.",
+      "timestamp": "10/30/2025, 1:15 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/30/figma-acquires-ai-powered-media-generation-company-weavy/"
+        }
+      ]
+    },
+    {
+      "title": "Apple CEO Tim Cook confirms the company is actively exploring M&A opportunities in the AI space, following their OpenAI partnership, suggesting major AI acquisition announcements may be coming in the near future.",
+      "timestamp": "10/31/2025, 3:17 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/31/tim-cook-says-apple-is-open-to-ma-on-the-ai-front/"
+        }
+      ]
+    },
+    {
+      "title": "Rising consumer concerns about AI data centers driving up electricity costs could trigger industry backlash, with potential regulatory and public relations challenges ahead for major AI companies expanding infrastructure.",
+      "timestamp": "11/01/2025, 4:15 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/01/rising-energy-prices-put-ai-and-data-centers-in-the-crosshairs/"
+        }
+      ]
+    },
+    {
+      "title": "Nvidia's reported $1B investment in coding AI startup Poolside and expanded partnerships with Korean tech giants Hyundai, Samsung, SK, and Naver indicate accelerating enterprise AI adoption across manufacturing and consumer electronics sectors.",
+      "timestamp": "10/30/2025, 9:10 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/30/nvidia-is-reportedly-investing-up-to-1-billion-in-poolside/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/31/nvidia-expands-ai-ties-with-hyundai-samsung-sk-naver/"
+        }
+      ]
+    },
+    {
+      "title": "AI bubble concerns intensify as CoreWeave's failed $1.1B acquisition of Core Scientific highlights overvaluation risks, while the company pivots to smaller acquisitions like Python notebook startup Marimo, suggesting a potential market correction ahead.",
+      "timestamp": "10/31/2025, 6:53 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/31/ai-mania-tanks-coreweaves-core-scientific-acquisition-it-buys-python-notebook-marimo/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/equity-live-from-300m-seed-rounds-to-data-center-builds-ai-is-feeling-bubbly/"
+        }
+      ]
+    }
+  ]
+}

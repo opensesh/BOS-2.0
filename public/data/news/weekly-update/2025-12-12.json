@@ -1,0 +1,157 @@
+{
+  "type": "weekly-update",
+  "date": "2025-12-12T16:20:17.589Z",
+  "updates": [
+    {
+      "title": "Introducing three new tools for precise image editing in Figma",
+      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
+      "timestamp": "12/10/2025, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
+        },
+        {
+          "name": "Figma",
+          "url": "https://www.figma.com/release-notes/"
+        }
+      ],
+      "tier": "featured",
+      "sourceUrl": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/",
+      "topicCategory": "design-ux",
+      "totalSources": 5
+    },
+    {
+      "title": "8 tips for designers building branded templates in Figma Buzz",
+      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "timestamp": "08/12/2025, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
+        },
+        {
+          "name": "Figma",
+          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+        },
+        {
+          "name": "Figmalion",
+          "url": "https://figmalion.com/topics/products/page/3"
+        }
+      ],
+      "tier": "featured",
+      "sourceUrl": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/",
+      "topicCategory": "design-ux",
+      "totalSources": 8
+    },
+    {
+      "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT",
+      "description": "We’re expanding the capabilities of the Figma app in ChatGPT, so you can turn your ideas into creative assets and presentations that you can polish in Figma Buzz and Figma Slides.",
+      "timestamp": "12/11/2025, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/"
+        },
+        {
+          "name": "Techbuzz",
+          "url": "https://www.techbuzz.ai/articles/figma-surges-7-as-openai-demos-chatgpt-integration-at-devday"
+        },
+        {
+          "name": "Morningstar",
+          "url": "https://www.morningstar.com/news/marketwatch/20251006365/figma-and-these-stocks-are-up-after-openai-showed-ai-might-not-eat-software-after-all"
+        },
+        {
+          "name": "Techloy",
+          "url": "https://www.techloy.com/figma-adds-long-requested-ai-editing-tools-that-cut-out-the-need-for-photoshop-and-canva/"
+        },
+        {
+          "name": "Openai",
+          "url": "https://openai.com/index/introducing-apps-in-chatgpt/"
+        },
+        {
+          "name": "Figma",
+          "url": "https://www.figma.com/release-notes/"
+        }
+      ],
+      "tier": "featured",
+      "sourceUrl": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/",
+      "topicCategory": "ai-creative",
+      "totalSources": 11
+    },
+    {
+      "title": "Google launched its deepest AI research agent yet — on the same day OpenAI dropped GPT-5.2",
+      "description": "For the first time, developers can embed Google's Deep Research tool, based on Gemini 3 Pro, into their own apps.",
+      "timestamp": "12/12/2025, 12:18 AM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/11/google-launched-its-deepest-ai-research-agent-yet-on-the-same-day-openai-dropped-gpt-5-2/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/2025/12/11/google-launched-its-deepest-ai-research-agent-yet-on-the-same-day-openai-dropped-gpt-5-2/",
+      "topicCategory": "general-tech"
+    },
+    {
+      "title": "OpenAI fires back at Google with GPT-5.2 after ‘code red’ memo",
+      "description": "OpenAI just launched GPT-5.2, a frontier model aimed at developers and professionals, pushing reasoning and coding benchmarks as it races Google’s Gemini 3 while grappling with compute costs and no generator.",
+      "timestamp": "12/11/2025, 6:02 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/11/openai-fires-back-at-google-with-gpt-5-2-after-code-red-memo/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/2025/12/11/openai-fires-back-at-google-with-gpt-5-2-after-code-red-memo/",
+      "topicCategory": "general-tech"
+    },
+    {
+      "title": "Three new features to help build brand momentum with Figma Buzz",
+      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
+      "timestamp": "10/23/2025, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/new-features-in-figma-buzz/",
+      "topicCategory": "design-ux"
+    },
+    {
+      "title": "Disney signs deal with OpenAI to allow Sora to generate AI videos featuring its characters",
+      "description": "Disney says that alongside the agreement, it will \"become a major customer of OpenAI,\" as it will use its APIs to build new products, tools, and experiences, including for Disney+.",
+      "timestamp": "12/11/2025, 3:21 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/11/disney-signs-deal-with-openai-to-allow-sora-to-generate-ai-videos-featuring-its-characters/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/2025/12/11/disney-signs-deal-with-openai-to-allow-sora-to-generate-ai-videos-featuring-its-characters/",
+      "topicCategory": "ai-creative"
+    },
+    {
+      "title": "Just our type: The story of creating Figma Sans",
+      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
+      "timestamp": "09/05/2024, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/the-story-of-creating-figma-sans/",
+      "topicCategory": "branding"
+    }
+  ]
+}

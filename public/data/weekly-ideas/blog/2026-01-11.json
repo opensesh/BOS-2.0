@@ -1,0 +1,352 @@
+{
+  "type": "blog",
+  "date": "2026-01-11T16:21:23.287Z",
+  "ideas": [
+    {
+      "title": "8 tips for designers building branded templates in Figma Buzz",
+      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "starred": true,
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
+        },
+        {
+          "name": "Figmalion",
+          "url": "https://figmalion.com/topics/community/page/3"
+        },
+        {
+          "name": "Webdesignernews",
+          "url": "https://webdesignernews.com/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
+        },
+        {
+          "name": "Figma",
+          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+        },
+        {
+          "name": "Opensesh",
+          "url": "https://www.opensesh.app/discover/8-tips-for-designers-building-branded-templates-in-figma-buz"
+        }
+      ],
+      "format": "guide",
+      "subcategory": "instructional",
+      "hooks": [
+        "Figma Templates That Scale: Design Without Breaking Brand",
+        "Unlock Flexible Brand Templates in Figma",
+        "Design Smart: Figma Templates for Marketing Teams"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Include real-time template creation screencast",
+            "Add interactive template design challenge for readers",
+            "Share personal template design failures/lessons learned"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Optimize with SEO-friendly headers and subheaders",
+            "Include comparative screenshots of good/bad templates",
+            "Add downloadable template design checklist"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Include industry statistics about template design efficiency",
+            "Add professional case studies from enterprise brands",
+            "Highlight ROI of scalable design systems"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, dynamic layout with modular grid system; vibrant yet professional color palette (blues/grays); animated typography transitions; Figma UI-inspired graphic elements; clean Swiss design influence with modern tech aesthetic"
+      },
+      "exampleOutline": [
+        "Introduction: The Template Design Challenge",
+        "Why Flexible Templates Matter",
+        "8 Expert Design Guardrail Strategies",
+        "Advanced Implementation Techniques",
+        "Future of Scalable Design Systems"
+      ],
+      "hashtags": "#FigmaDesign #DesignTemplates #BrandScaling #CreativeWorkflow #AIDesign #DesignSystems #MarketingDesign #ProductDesign #TemplateStrategy #CreativeTech",
+      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 6
+    },
+    {
+      "title": "Introducing three new tools for precise image editing in Figma",
+      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
+        },
+        {
+          "name": "Contentgrip",
+          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
+        },
+        {
+          "name": "Techcrunch",
+          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
+        },
+        {
+          "name": "Theaiinsider",
+          "url": "https://theaiinsider.tech/2025/12/12/figma-introduces-new-ai-powered-image-editing-suite-to-streamline-design-workflows/"
+        },
+        {
+          "name": "Figma",
+          "url": "https://www.figma.com/release-notes/"
+        }
+      ],
+      "format": "article",
+      "subcategory": "visionary",
+      "hooks": [
+        "AI Transforms Figma: 3 Game-Changing Image Editing Tools",
+        "Design Precision Redefined: Figma's New AI Toolkit",
+        "Unleash Creative Potential with Figma's Latest AI Tools"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Include real-time screen recordings of tool demonstrations",
+            "Add personal anecdote about workflow transformation",
+            "Create interactive poll about reader's current image editing challenges"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Optimize for SEO with detailed keyword integration",
+            "Include comparative screenshots of before/after editing",
+            "Add expert commentary from design professionals"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Highlight professional productivity gains",
+            "Include data-driven insights about design efficiency",
+            "Craft headline targeting design managers and creative directors"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, dynamic composition with futuristic gradient overlays. Clean, sans-serif typography with high-contrast color palette. Animated UI transitions demonstrating tool functionality. Minimal but impactful visual metaphors representing AI-powered precision. Dark mode aesthetic with electric blue and deep purple accents."
+      },
+      "exampleOutline": [
+        "Introduction: The Future of Design is Here",
+        "The Current Landscape of Image Editing Challenges",
+        "Deep Dive: Three Revolutionary AI Image Editing Tools",
+        "Practical Applications and Workflow Transformation",
+        "Call to Action: Upgrade Your Design Process"
+      ],
+      "hashtags": "#FigmaAI #DesignTechnology #CreativeTools #AIDesign #ProductivityHack #ImageEditing #DesignInnovation #CreativeTech #AIWorkflow #DesignEfficiency",
+      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 6
+    },
+    {
+      "title": "Three new features to help build brand momentum with Figma Buzz",
+      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+        },
+        {
+          "name": "Techcrunch",
+          "url": "https://techcrunch.com/2025/05/07/figma-releases-new-ai-powered-tools-for-creating-sites-app-prototypes-and-marketing-assets/"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/shorts/Sf_5xBPH1TM"
+        },
+        {
+          "name": "Figma",
+          "url": "https://www.figma.com/release-notes/"
+        },
+        {
+          "name": "Forum",
+          "url": "https://forum.figma.com/suggest-a-feature-11/feature-request-batch-copy-to-canvas-for-multi-page-ai-flows-49147"
+        },
+        {
+          "name": "Help",
+          "url": "https://help.figma.com/hc/en-us/articles/23954856027159-Navigating-UI3-Figma-s-new-UI"
+        }
+      ],
+      "format": "thread",
+      "subcategory": "explanatory",
+      "hooks": [
+        "Figma Buzz just leveled up designer workflows forever 🚀",
+        "3 game-changing features designers can't ignore",
+        "Design productivity just got a massive upgrade"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use thread screenshot as newsletter header image",
+            "Break down thread insights into deeper article analysis",
+            "Link original thread for additional engagement"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Expand thread into long-form design workflow guide",
+            "Include technical screenshots and implementation details",
+            "Add data-driven insights about productivity gains"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame thread as professional development opportunity",
+            "Add executive-level commentary on design technology trends",
+            "Include testimonials or expert quotes validating new features"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast gradient background, dynamic geometric shapes framing screenshots, modern sans-serif typography, subtle motion animations between thread slides, tech-forward aesthetic with electric blue and deep charcoal color palette"
+      },
+      "exampleOutline": [
+        "Section 1: Provocative hook about design workflow revolution",
+        "Section 2: Current design productivity pain points",
+        "Section 3: Detailed breakdown of 3 Figma Buzz features",
+        "Section 4: Potential impact on design teams",
+        "Section 5: Call-to-action to explore features"
+      ],
+      "hashtags": "#FigmaBuzz #DesignTech #AIDesign #ProductivityHacks #CreativeTech #DesignTools #UXDesign #ProductDesign #AIWorkflow #DesignInnovation",
+      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 5
+    },
+    {
+      "title": "Senior Designer, Moniker, San Francisco",
+      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "BP&O",
+          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
+        }
+      ],
+      "format": "listicle",
+      "subcategory": "explanatory",
+      "hooks": [
+        "7 Design Career Secrets Silicon Valley Doesn't Want You To Know",
+        "How Top Designers Actually Land Dream Jobs",
+        "Insider Strategies: Cracking the Design Industry's Hidden Code"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use personal anecdotes between list items to maintain narrative flow",
+            "Add interactive poll asking readers which tip resonates most",
+            "Include real-time screenshots/proof of tips in action"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Optimize headline with exact number and provocative promise",
+            "Add SEO-friendly alt text for all design-related images",
+            "Include expert quote validating each key point"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Tag relevant design thought leaders in comments",
+            "Use data/statistics to back up each career tip",
+            "Create shareable graphic summarizing key insights"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, dynamic visual grid with isometric design elements, high-contrast San Francisco tech palette (charcoal, electric blue, white), animated transitions between list items, clean sans-serif typography with subtle motion graphics highlighting key points"
+      },
+      "exampleOutline": [
+        "Introduction: Why Traditional Career Advice Fails Designers",
+        "Context: Current Design Industry Challenges",
+        "7 Breakthrough Career Strategies (Numbered List)",
+        "Case Studies/Proof Points",
+        "Call-to-Action: How to Implement Immediately"
+      ],
+      "hashtags": "#DesignCareer #SiliconValleyDesign #CareerTips #CreativeIndustry #DesignJobs #ProfessionalDevelopment #AIDesign #CreativeTech #JobStrategy #DesignInnovation",
+      "pexelsImageUrl": "https://images.pexels.com/photos/3946168/pexels-photo-3946168.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 10
+    },
+    {
+      "title": "Just our type: The story of creating Figma Sans",
+      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+        }
+      ],
+      "format": "case-study",
+      "subcategory": "case-study-deep-dive",
+      "hooks": [
+        "Design's Hidden Language: Inside Figma's Typographic Revolution",
+        "When Pixels Speak: Crafting a Brand's Voice",
+        "Beyond Fonts: Figma's Radical Identity Transformation"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Include real-time screenshots of design process",
+            "Add interactive polls about typography design",
+            "Share behind-the-scenes design decision moments"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Use SEO-optimized headings for design terminology",
+            "Include expert quotes from type designers",
+            "Create clear, digestible visual breakdowns"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Emphasize professional design strategy insights",
+            "Include quantitative impact of brand redesign",
+            "Target design leadership and creative directors"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, experimental typography-focused layout with dynamic grid system, high-contrast color palette featuring Figma's brand colors, animated type transitions showcasing font evolution, minimalist yet intricate design details highlighting typographic nuances"
+      },
+      "exampleOutline": [
+        "Introduction: The Design Identity Challenge",
+        "Why Typography Matters in Brand Evolution",
+        "Figma Sans: Design Process & Philosophy",
+        "Technical & Creative Breakthroughs",
+        "Future of Design Communication"
+      ],
+      "hashtags": "#DesignSystem #Typography #BrandIdentity #FigmaDesign #CreativeProcess #AIDesign #ProductDesign #BrandEvolution #DesignInnovation #CreativeTechnology",
+      "pexelsImageUrl": "https://images.pexels.com/photos/12214868/pexels-photo-12214868.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 0
+    }
+  ]
+}

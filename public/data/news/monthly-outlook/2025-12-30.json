@@ -1,0 +1,62 @@
+{
+  "type": "monthly-outlook",
+  "date": "2025-12-30T16:18:14.439Z",
+  "updates": [
+    {
+      "title": "Behind the Plugins: Yitong Zhang, Product Designer @ Coinbase",
+      "description": "In today’s segment of “Behind the Plugins,” I’m sitting down with Yitong Zhang, Product Designer at Coinbase. Yitong joined Coinbase’s design team of 16 to help the digital currency platform create an open financial system for the world. Embarking on this big mission meant that Coinbase’s teams also had to open up their design process to be more inclusive of their partners. Find out what he is building with the Figma API and get to know the creator behind the plugin. This article is part 3 of a ",
+      "timestamp": "07/25/2019, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/behind-the-plugins-yitong-zhang-coinbase/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/behind-the-plugins-yitong-zhang-coinbase/",
+      "topicCategory": "general-tech"
+    },
+    {
+      "title": "VCs predict enterprises will spend more on AI in 2026 — through fewer vendors",
+      "description": "Enterprises have been experimenting with AI tools for a few years. Investors predict they will start to pick winners in 2026.",
+      "timestamp": "12/30/2025, 3:30 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/30/vcs-predict-enterprises-will-spend-more-on-ai-in-2026-through-fewer-vendors/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/2025/12/30/vcs-predict-enterprises-will-spend-more-on-ai-in-2026-through-fewer-vendors/",
+      "topicCategory": "ai-creative"
+    },
+    {
+      "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT",
+      "description": "We’re expanding the capabilities of the Figma app in ChatGPT, so you can turn your ideas into creative assets and presentations that you can polish in Figma Buzz and Figma Slides.",
+      "timestamp": "12/11/2025, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/",
+      "topicCategory": "ai-creative"
+    },
+    {
+      "title": "2025 was the year AI got a vibe check",
+      "description": "AI’s early-2025 spending spree featured massive raises and trillion-dollar infrastructure promises. By year’s end, hype gave way to a vibe check, with growing scrutiny over sustainability, safety, and business models.",
+      "timestamp": "12/29/2025, 7:00 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/29/2025-was-the-year-ai-got-a-vibe-check/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/2025/12/29/2025-was-the-year-ai-got-a-vibe-check/",
+      "topicCategory": "startup-business"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "type": "monthly-outlook",
+  "date": "2025-12-05T16:19:34.374Z",
+  "updates": [
+    {
+      "title": "Keeping creativity flowing when times are tough",
+      "description": "Building a culture where everyone feels safe and encouraged to contribute is no small task. We are always interested in the ways teams use Figma to do just that—brainstorm, ideate, team-build—and it’s one of the many reasons we launched FigJam. Here, Senior Illustrator Alek Mackie shares how he stays creative and productive.",
+      "timestamp": "07/15/2021, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/keeping-creativity-flowing/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/keeping-creativity-flowing/",
+      "topicCategory": "general-tech"
+    },
+    {
+      "title": "Behind the Plugins: Yitong Zhang, Product Designer @ Coinbase",
+      "description": "In today’s segment of “Behind the Plugins,” I’m sitting down with Yitong Zhang, Product Designer at Coinbase. Yitong joined Coinbase’s design team of 16 to help the digital currency platform create an open financial system for the world. Embarking on this big mission meant that Coinbase’s teams also had to open up their design process to be more inclusive of their partners. Find out what he is building with the Figma API and get to know the creator behind the plugin. This article is part 3 of a ",
+      "timestamp": "07/25/2019, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/behind-the-plugins-yitong-zhang-coinbase/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/behind-the-plugins-yitong-zhang-coinbase/",
+      "topicCategory": "general-tech"
+    },
+    {
+      "title": "How we shaped the visual identity for Config 2025",
+      "description": "From giant inflatable glyphs to welcoming soundscapes, Figma’s Brand Studio designed an immersive conference that celebrated the spirit of makership at every turn.",
+      "timestamp": "07/03/2025, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/how-we-shaped-the-visual-identity-for-config-2025/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/how-we-shaped-the-visual-identity-for-config-2025/",
+      "topicCategory": "branding"
+    },
+    {
+      "title": "How to plug in and power up your designer-developer handoff with Figma and Jira",
+      "description": "Product development teams from Ingka Group, One.com, and Condé Nast share the tools and tips for achieving that elusive design-development flow state.",
+      "timestamp": "02/07/2024, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/designer-developer-handoff-with-figma-and-jira/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/designer-developer-handoff-with-figma-and-jira/",
+      "topicCategory": "general-tech"
+    }
+  ]
+}

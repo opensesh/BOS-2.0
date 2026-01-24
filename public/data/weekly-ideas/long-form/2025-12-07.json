@@ -1,0 +1,211 @@
+{
+  "type": "long-form",
+  "date": "2025-12-07T16:23:19.329Z",
+  "ideas": [
+    {
+      "title": "OpenAI says it’s turned off app suggestions that look like ads",
+      "description": "While OpenAI continues to insist that there are currently no ads — or tests for advertising — live in ChatGPT, the company’s chief research officer also acknowledged that the company “fell short” with recent promotional messages.",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/07/openai-says-its-turned-off-app-suggestions-that-look-like-ads/"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "AI's Ad Drama: What OpenAI Isn't Telling You",
+        "Inside OpenAI's Controversial App Suggestion Rollback",
+        "Secrets Behind ChatGPT's Promotional Experiment Revealed"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use live chat to encourage real-time audience interaction during Q&A",
+            "Prepare pre-submitted questions from community to supplement live discussions",
+            "Enable Super Chat to increase engagement and audience participation"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech-inspired design with dynamic motion graphics. Dark mode color palette (deep blues, electric teals). Floating holographic UI elements. Animated data visualizations showing app suggestion trends. Typography with sharp, technical angles. Picture-in-picture overlay for host with live chat sidebar."
+      },
+      "exampleOutline": [
+        "Section 1: Live Stream Intro & Context Setting",
+        "Section 2: Breakdown of OpenAI's Recent Promotional Experiment",
+        "Section 3: Technical Analysis of App Suggestion Mechanism",
+        "Section 4: Implications for AI Product Development",
+        "Section 5: Live Q&A and Community Discussion"
+      ],
+      "hashtags": "#OpenAI #ChatGPT #AIEthics #TechTransparency #AIAdvertising #AIInnovation #TechNews #AIStartups #ProductDevelopment #AITrends",
+      "textureIndex": 3
+    },
+    {
+      "title": "An Inside Look at What Alexa Can Now Do with AI | Daniel Rausch",
+      "description": "Alexa can now do much more than play music and set alarms. Plus why it took so long to add AI to Alexa and how to apply Amazon's PRFAQ process to build AI products",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Peter Yang (Creator Economy)",
+          "url": "https://creatoreconomy.so/p/an-inside-look-at-what-alexa-can-do-with-ai"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "Alexa's AI Revolution: What You Never Knew Was Possible",
+        "Inside Amazon's Secret AI Transformation",
+        "How AI Is Rewriting Alexa's Entire Playbook"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Enable live chat for real-time audience engagement",
+            "Pre-promote Q&A segments to increase viewer anticipation",
+            "Use YouTube's live stream markers to highlight key discussion points"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy, tech-forward visual aesthetic with dynamic blue and electric accent colors. Futuristic motion graphics overlay featuring AI/circuit-inspired animations. Bold, sans-serif typography with transparent tech-inspired overlays. Picture-in-picture with live host and AI visualization elements. Subtle glitch/digital transition effects to emphasize technological transformation."
+      },
+      "exampleOutline": [
+        "Opening: Live Stream Intro & Energy Building",
+        "Alexa's AI Journey: Historical Context & Challenges",
+        "Technical Deep Dive: New AI Capabilities Explained",
+        "Amazon's PRFAQ Process: Behind-the-Scenes Product Strategy",
+        "Live Q&A: Audience Interaction & Insights"
+      ],
+      "hashtags": "#AI #Alexa #AmazonTech #ArtificialIntelligence #TechInnovation #VoiceAssistant #MachineLearning #ProductDevelopment #TechTrends #InnovationInsights",
+      "textureIndex": 2
+    },
+    {
+      "title": "The 100-person AI lab that became Anthropic and Google's secret weapon | Edwin Chen (Surge AI)",
+      "description": "Surge's founder on building a billion-dollar AI data company with 60 people, why AI is being optimized for dopamine instead of truth, and how taste shapes the future of intelligence",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/surge-ai-edwin-chen"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "How AI Companies Really Make Their Secret Sauce",
+        "The Hidden World of AI Data Engineering",
+        "Building Billion-Dollar AI: Behind the Scenes"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dynamic screen recordings of AI platforms",
+            "Include picture-in-picture with interview/founder footage",
+            "Create clear chapter markers for complex technical content"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech-inspired aesthetic with electric blue and deep charcoal color palette. Dynamic motion graphics showing data flows and AI connections. Modern sans-serif typography with technical precision. Animated data visualization overlays. Clean, futuristic screen interfaces with subtle parallax animations."
+      },
+      "exampleOutline": [
+        "Intro: Surge AI's Unexpected Origin Story",
+        "The AI Data Challenge: Why Current Methods Fail",
+        "Edwin Chen's Innovative Approach to AI Training",
+        "How Taste and Human Judgment Shape Intelligence",
+        "Future of AI: Lessons and Predictions"
+      ],
+      "hashtags": "#AITechnology #MachineLearning #TechInnovation #AIData #SurgeAI #EdwinChen #ArtificialIntelligence #StartupStory #TechFounders #AIResearch",
+      "textureIndex": 1
+    },
+    {
+      "title": "Pat Gelsinger wants to save Moore&#8217;s Law, with a little help from the Feds",
+      "description": "The company is aiming to produce its first silicon wafers by 2028 and have its first commercial system online by 2029.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/06/pat-gelsinger-wants-to-save-moores-law-with-a-little-help-from-the-feds/"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "How One CEO Plans to Resurrect Silicon's Dying Promise",
+        "Moore's Law: The Fight for Tech's Future Begins",
+        "Inside Intel's Radical Semiconductor Moonshot"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use archival/historical semiconductor manufacturing footage as B-roll",
+            "Include expert interview clips with Pat Gelsinger for credibility",
+            "Create dynamic motion graphics explaining technical semiconductor concepts"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast blue/gray color palette representing technology and innovation. Dynamic split-screen compositions showing semiconductor evolution. Futuristic typography with technical precision. Kinetic motion graphics transitioning between historical and future semiconductor imagery. Aesthetic references: WIRED documentary style, MIT Technology Review visual language"
+      },
+      "exampleOutline": [
+        "Opening: Dramatic historical montage of semiconductor evolution",
+        "Context: Declining Moore's Law and global chip challenges",
+        "Core Content: Pat Gelsinger's federal collaboration strategy",
+        "Technical Deep Dive: Proposed semiconductor manufacturing innovations",
+        "Closing: Future implications and potential technological breakthrough"
+      ],
+      "hashtags": "#MooresLaw #Semiconductor #TechInnovation #IntelCEO #FutureOfComputing #AIChips #TechPolicy #SiliconValley #TechnologyTrends #InnovationStrategy",
+      "textureIndex": 3
+    },
+    {
+      "title": "🧠 Community Wisdom: Combating ageism, facilitating roadmap discussions, 90-day onboarding plan, staying stealth pre-launch, and more",
+      "description": "Community Wisdom 264",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/community-wisdom-combating-ageism"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "5 Career Hacks Top Tech Pros Never Tell You",
+        "Unlock Your Professional Potential: Insider Strategies Revealed",
+        "Step-by-Step: Navigate Tech Career Challenges Like a Pro"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use screen recordings with clear chapter markers for each step",
+            "Include picture-in-picture for personal insights and context",
+            "Create dynamic motion graphics to illustrate each key strategy"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-forward design with high-contrast color palette (deep blues, electric teals, bright accents). Dynamic typography with angular cuts. Animated transition elements between steps. Minimal but high-impact infographic-style visuals. Use geometric overlays and translucent layers to create depth and visual hierarchy."
+      },
+      "exampleOutline": [
+        "Introduction: Why Community Wisdom Matters in Tech",
+        "Problem Context: Career Challenges in Modern Tech Landscape",
+        "Step-by-Step Framework: 5 Proven Career Navigation Strategies",
+        "Key Insights: Tactical Approaches for Professional Growth",
+        "Actionable Takeaways and Community Call-to-Action"
+      ],
+      "hashtags": "#TechCareer #ProfessionalDevelopment #CareerGrowth #TechTips #AICareer #ProfessionalStrategy #TechCommunity #CareerHacks #IndustryInsights #WorkplaceTips",
+      "textureIndex": 9
+    }
+  ]
+}

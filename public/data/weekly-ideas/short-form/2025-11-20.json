@@ -1,0 +1,101 @@
+{
+  "type": "short-form",
+  "date": "2025-11-20T17:15:30.056Z",
+  "ideas": [
+    {
+      "title": "Carousel: AI detection in design workflows",
+      "description": "5 slides showing how to spot AI-generated design work and maintain quality standards",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/the-best-guide-to-spotting-ai-writing-comes-from-wikipedia/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/report/825141/sunos-ceo-ai-text-prompt-really-active-music-creation"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/swatchs-new-openai-powered-tool-lets-you-design-your-own-watch/"
+        }
+      ]
+    },
+    {
+      "title": "Reel: Google's Nano Banana Pro image generation demo",
+      "description": "Quick demo showing how new image AI tools can enhance design system creation",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/google-releases-nano-banana-pro-its-latest-image-generation-model/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/825022/microsoft-windows-40-year-anniversary-agentic-os-future"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/swatchs-new-openai-powered-tool-lets-you-design-your-own-watch/"
+        }
+      ]
+    },
+    {
+      "title": "Static: Voice interfaces in design systems",
+      "description": "Visual breakdown of how voice dictation changes design workflows and component creation",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/as-its-voice-dectation-app-takes-off-wispr-secures-25m-from-notable-capital/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/825008/googles-gemini-is-now-on-android-auto"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/column/824994/ar-viture-ai-glasses"
+        }
+      ]
+    },
+    {
+      "title": "Carousel: What happens when AI designs better than humans?",
+      "description": "Provocative exploration of AI creative capability vs human intuition in 4 slides",
+      "starred": false,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/report/825141/sunos-ceo-ai-text-prompt-really-active-music-creation"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/19/vc-jennifer-neundorfer-explains-how-founders-can-stand-out-in-a-crowded-ai-market/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/paradromics-gets-fda-approval-to-trial-its-brain-implant-in-people/"
+        }
+      ]
+    },
+    {
+      "title": "Reel: AR glasses meet design systems",
+      "description": "Quick look at how spatial design principles change when interfaces float in 3D space",
+      "starred": false,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/column/824994/ar-viture-ai-glasses"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/19/nvidias-record-57b-revenue-and-upbeat-forecast-quiets-ai-bubble-talk/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/825022/microsoft-windows-40-year-anniversary-agentic-os-future"
+        }
+      ]
+    }
+  ]
+}

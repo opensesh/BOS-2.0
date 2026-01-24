@@ -1,0 +1,105 @@
+{
+  "type": "long-form",
+  "date": "2025-10-21T23:01:14.595Z",
+  "ideas": [
+    {
+      "title": "OpenAI's Atlas Browser: The Future of AI-Native Design",
+      "description": "How OpenAI's new browser could revolutionize web design workflows and creative processes",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/21/openai-launches-an-ai-powered-browser-chatgpt-atlas/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/21/openais-new-browser-is-a-broadside-shot-at-google/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/openai-atlas-browser-chrome-agents-web-browsing/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/21/as-the-browser-wars-heat-up-here-are-the-hottest-alternatives-to-chrome-and-safari-in-2025/"
+        }
+      ]
+    },
+    {
+      "title": "Netflix's AI Strategy: What Designers Can Learn",
+      "description": "How entertainment giants are integrating AI into creative workflows and user experiences",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/21/netflix-goes-all-in-on-generative-ai-as-entertainment-industry-remains-divided/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/803097/netflix-games-interactive-experiences-real-time-voting-q3-2025-earnings"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/803818/youtube-ai-likeness-detection-deepfake/"
+        }
+      ]
+    },
+    {
+      "title": "From SEO to GEO: Designing for AI Search Engines",
+      "description": "How generative engine optimization changes everything about web design and content strategy",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/goodbye-seo-hello-geo-brandlight-openai/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/21/cloudflare-ceo-matthew-prince-is-pushing-uk-regulator-to-unbundle-googles-search-and-ai-crawlers/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/21/openais-new-browser-is-a-broadside-shot-at-google/"
+        }
+      ]
+    },
+    {
+      "title": "Building AI Agents for Design Teams",
+      "description": "LangChain's $1.25B valuation shows the future of AI-powered creative workflows",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/21/open-source-agentic-startup-langchain-hits-1-25b-valuation/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/21/a16z-backed-codi-launches-ai-agent-office-manager/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/21/sesame-the-conversational-ai-startup-from-oculus-founders-raises-250m-and-launches-beta/"
+        }
+      ]
+    },
+    {
+      "title": "Multimodal AI in Creative Workflows",
+      "description": "Fal.ai's $4B+ valuation signals the rise of visual AI tools for designers and creators",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/21/sources-multimodal-ai-startup-fal-ai-already-raised-at-4b-valuation/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/21/sesame-the-conversational-ai-startup-from-oculus-founders-raises-250m-and-launches-beta/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/803818/youtube-ai-likeness-detection-deepfake/"
+        }
+      ]
+    }
+  ]
+}

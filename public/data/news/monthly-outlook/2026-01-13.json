@@ -1,0 +1,66 @@
+{
+  "type": "monthly-outlook",
+  "date": "2026-01-13T16:23:52.157Z",
+  "updates": [
+    {
+      "title": "Hands-on with Bee, Amazon’s latest AI wearable",
+      "description": "We tried Amazon's new AI wearable Bee. It's not for pro users yet, but more features are expected this year.",
+      "timestamp": "01/13/2026, 12:00 AM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/12/hands-on-with-bee-amazons-latest-ai-wearable/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/12/why-amazon-bought-bee-an-ai-wearable/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/2026/01/12/hands-on-with-bee-amazons-latest-ai-wearable/",
+      "topicCategory": "ai-creative"
+    },
+    {
+      "title": "Just our type: The story of creating Figma Sans",
+      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
+      "timestamp": "09/05/2024, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/the-story-of-creating-figma-sans/",
+      "topicCategory": "branding"
+    },
+    {
+      "title": "Apple launches ‘Creator Studio’ bundle of apps for $12.99 per month",
+      "description": "The bundle includes access to Final Cut Pro, Logic Pro, and Pixelmator Pro on Mac and iPad, as well as Motion, Compressor, and MainStage on Mac.",
+      "timestamp": "01/13/2026, 2:40 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/13/apple-launches-creator-studio-bundle-of-apps-for-12-99-per-month/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/2026/01/13/apple-launches-creator-studio-bundle-of-apps-for-12-99-per-month/",
+      "topicCategory": "general-tech"
+    },
+    {
+      "title": "ElevenLabs CEO says the voice AI startup crossed $330 million ARR last year",
+      "description": "The company said it took only five months to go from $200 million to $330 million in annual recurring revenue.",
+      "timestamp": "01/13/2026, 4:15 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/13/elevenlabs-ceo-says-the-voice-ai-startup-crossed-330-million-arr-last-year/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/2026/01/13/elevenlabs-ceo-says-the-voice-ai-startup-crossed-330-million-arr-last-year/",
+      "topicCategory": "startup-business"
+    }
+  ]
+}

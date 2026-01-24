@@ -1,0 +1,101 @@
+{
+  "type": "blog",
+  "date": "2025-11-09T17:14:57.954Z",
+  "ideas": [
+    {
+      "title": "Why Wall Street's AI skepticism is actually good news for designers",
+      "description": "The cooling hype cycle means practical AI adoption over flashy demos - exactly what creative professionals need",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/08/is-wall-street-losing-faith-in-ai/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/softbank-is-back-and-the-ai-hype-cycle-is-eating-itself/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/sam-altman-says-openai-has-20b-arr-and-about-1-4-trillion-in-data-center-commitments/"
+        }
+      ]
+    },
+    {
+      "title": "The 'made by humans' backlash is missing the point about creative AI",
+      "description": "Why emphasizing human creation over AI collaboration reveals a fundamental misunderstanding of the future",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/08/breaking-bad-creators-new-show-pluribus-was-emphatically-made-by-humans-not-ai/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/07/kim-kardashian-says-chatgpt-is-her-frenemy/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/report/816427/no-mans-sky-album-journeys-65daysofstatic"
+        }
+      ]
+    },
+    {
+      "title": "Why algorithms failed music (and what designers can learn before it's too late)",
+      "description": "The creative industries' recommendation crisis reveals why human curation must evolve, not disappear",
+      "starred": false,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/column/815744/music-recommendation-algorithms"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/games/816750/the-sims-ea-buyout-content-creator-program-departures-lilsimsie"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/what-is-adobe-firefly/"
+        }
+      ]
+    },
+    {
+      "title": "The real AI safety crisis isn't what tech leaders are talking about",
+      "description": "OpenAI lawsuits reveal the gap between AI ethics theater and protecting vulnerable users in creative tools",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/07/seven-more-families-are-now-suing-openai-over-chatgpts-role-in-suicides-delusions/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/sam-altman-says-he-doesnt-want-the-government-to-bail-out-openai-if-it-fails/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/08/openai-asked-trump-administration-to-expand-chips-act-tax-credit-to-cover-data-centers/"
+        }
+      ]
+    },
+    {
+      "title": "Why the death of netbooks predicted today's AI design tool chaos",
+      "description": "Apple's strategy against cheap laptops reveals how platform consolidation will reshape AI creative tools",
+      "starred": false,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/817277/apple-ipad-killed-the-netbook-cheap-macbook-is-bringing-them-back"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/podcast/816739/amazon-fire-phone-version-history"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/amazon-launches-an-ai-powered-kindle-translate-service-for-ebook-authors/"
+        }
+      ]
+    }
+  ]
+}

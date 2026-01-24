@@ -1,0 +1,211 @@
+{
+  "type": "long-form",
+  "date": "2026-01-12T16:28:15.755Z",
+  "ideas": [
+    {
+      "title": "🎙️This week on How I AI: The power user’s guide to Codex",
+      "description": "Your weekly listens from How I AI, part of the Lenny's Podcast Network",
+      "starred": true,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/this-week-on-how-i-ai-the-power-users"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "AI Coding Secrets Pros Don't Want You to Know",
+        "Unlock Codex: Transform Your Programming Overnight",
+        "The Hidden Power of AI Development Workflows"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dynamic screen recordings showing actual Codex interactions",
+            "Include picture-in-picture with presenter for personal connection",
+            "Create clear chapter markers for complex technical content"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech aesthetic with electric blue and deep charcoal color palette. Dynamic motion graphics showing code transformation. Modern sans-serif typography with subtle glitch/tech overlay effects. Incorporate futuristic UI elements with smooth transitions. Visual metaphors comparing traditional vs AI-powered coding workflows."
+      },
+      "exampleOutline": [
+        "Cold Open: Surprising Codex Code Generation Demo",
+        "The Current State of AI in Software Development",
+        "Deep Dive: Codex Architecture and Capabilities",
+        "Practical Power User Techniques and Workflows",
+        "Future of AI-Assisted Programming Closing Call-to-Action"
+      ],
+      "hashtags": "#AICodex #ProgrammingTips #AIDevTools #CodeGeneration #MachineLearning #SoftwareDevelopment #TechInnovation #AITutorial #CodingHacks #ProgrammerLife",
+      "textureIndex": 3
+    },
+    {
+      "title": "Harmattan AI raises $200M Series B led by Dassault Aviation, becomes defense unicorn",
+      "description": "French defense tech company Harmattan AI is now valued at $1.4 billion after raising a $200 million Series B round led by Dassault Aviation, which is best known for making the Rafale fighter jet.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/12/harmattan-ai-raises-200m-series-b-led-by-dassault-aviation-becomes-defense-unicorn/"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "How AI is Transforming Defense Tech Forever",
+        "Defense Unicorns: The AI Revolution Starts Here",
+        "Build Your Own Defense AI Strategy Now"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use screen recordings of AI defense simulations",
+            "Include picture-in-picture expert commentary segments",
+            "Create clear chapter markers for tutorial flow"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech-inspired palette with deep navy and electric blue accents. Dynamic motion graphics simulating radar/targeting interfaces. Sans-serif technical typography. Layered screen recordings with tactical overlay animations. Aesthetic references: DARPA design language, modern military UX interfaces."
+      },
+      "exampleOutline": [
+        "Section 1: AI Defense Tech Landscape Overview",
+        "Section 2: Understanding Defense AI Investment Trends",
+        "Section 3: Step-by-Step: Analyzing Harmattan's Strategic Model",
+        "Section 4: Future Implications for Tech Entrepreneurs",
+        "Section 5: How You Can Enter Defense AI Market"
+      ],
+      "hashtags": "#DefenseTech #ArtificialIntelligence #VentureCapital #AIStrategy #MilitaryInnovation #StartupFunding #TechUnicorns #InvestmentInsights #EmergingTech #AIRevolution",
+      "textureIndex": 8
+    },
+    {
+      "title": "The power user’s guide to Codex: parallelizing workflows, planning techniques, advanced context engineering tips, automating code reviews, and more | Alexander Embiricos",
+      "description": "Listen now | &#127897;&#65039; The power user's guide to Codex: Parallelizing workflows, planning techniques, advanced context engineering tips, automating code reviews, more",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/a-full-software-engineering-teammate"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "AI's secret weapon: Codex workflow mastery revealed",
+        "How top engineers supercharge productivity with Codex",
+        "Codex hacks that transform software engineering forever"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dynamic split-screen to show code and workflow simultaneously",
+            "Incorporate cinematic b-roll of developers in innovative workspaces",
+            "Add motion graphics to visualize complex workflow parallelization concepts"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "High-contrast tech-inspired color palette (deep blues, electric teals, high-luminosity accents). Asymmetrical composition with technical overlay graphics. Modern sans-serif typography with technical precision. Fluid motion transitions suggesting workflow optimization. Aesthetic blend of Silicon Valley documentary and cutting-edge tech visualization."
+      },
+      "exampleOutline": [
+        "Cold open: Dramatic workflow bottleneck scenario",
+        "Historical context of software engineering challenges",
+        "Deep dive into Codex workflow parallelization techniques",
+        "Case studies of elite engineering transformations",
+        "Future-forward call to action and skill development"
+      ],
+      "hashtags": "#CodexMastery #AIEngineering #WorkflowOptimization #SoftwareDev #TechInnovation #ProductivityHacks #AITools #CodingTips #EngineeringLife #TechDocumentary",
+      "textureIndex": 0
+    },
+    {
+      "title": "The most fascinating monitors at CES 2026",
+      "description": "The most fascinating monitors at CES 2026",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/gadgets/2026/01/the-most-fascinating-monitors-at-ces-2026/"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "CES 2026: Monitors That'll Blow Your Mind 🖥️",
+        "Future of Displays: What Blew Us Away",
+        "Tech Revolution: Monitors Redefining Visual Experiences"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Enable live chat for real-time audience interaction",
+            "Prepare pre-written timestamped timestamps for key monitor highlights",
+            "Use multi-camera setup to showcase monitor details dynamically"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast cyberpunk-inspired color palette with electric blues and neon accents. Dynamic split-screen compositions showcasing monitor technologies. Futuristic sans-serif typography with motion-tracked reveal animations. Picture-in-picture tech demonstrations with floating holographic UI elements. Reference aesthetic: Blade Runner 2049 tech interfaces mixed with minimal Apple product reveal style."
+      },
+      "exampleOutline": [
+        "Section 1: High-Energy Live Stream Intro & Audience Greeting",
+        "Section 2: CES 2026 Context - Display Technology Landscape",
+        "Section 3: Top 5 Most Innovative Monitors Breakdown",
+        "Section 4: Deep Dive into Technical Specifications & Features",
+        "Section 5: Live Q&A, Audience Interaction, Final Recommendations"
+      ],
+      "hashtags": "#CES2026 #MonitorTech #FutureDisplay #TechInnovation #DisplayTechnology #AIMonitors #CreativeTech #VisualInnovation #TechReview #GadgetNews",
+      "textureIndex": 5
+    },
+    {
+      "title": "Motional puts AI at center of robotaxi reboot as it targets 2026 for driverless service",
+      "description": "Motional says it will launch a driverless robotaxi service in Las Vegas before the end of 2026.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/11/motional-puts-ai-at-center-of-robotaxi-reboot-as-it-targets-2026-for-driverless-service/"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "The AI Driving Revolution: Beyond Self-Driving Dreams",
+        "Robotaxis: When Technology Rewrites Urban Mobility",
+        "Motional's Bold Bet: AI Takes the Wheel"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use cinematic B-roll of autonomous vehicles in urban settings",
+            "Include expert interview clips with Motional engineers/leadership",
+            "Create dynamic motion graphics explaining AI navigation technology"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech aesthetic with deep blues and electric accents. Sleek, futuristic motion graphics overlaying real-world robotaxi footage. Clean sans-serif typography with technical precision. Incorporate subtle holographic/digital overlay effects to emphasize AI intelligence. Visual mood: sophisticated, cutting-edge, authoritative."
+      },
+      "exampleOutline": [
+        "Opening: Dramatic cityscape revealing autonomous vehicle potential",
+        "Context: Current challenges in self-driving technology",
+        "Motional's Approach: AI-first robotaxi strategy and innovations",
+        "Technical Deep Dive: How AI solves autonomous driving challenges",
+        "Future Vision: Implications for urban transportation by 2026"
+      ],
+      "hashtags": "#AutonomousVehicles #AITransportation #FutureOfMobility #RobotaxiRevolution #TechInnovation #UrbanMobility #SelfDrivingCars #AITechnology #Motional #TransportationTech",
+      "textureIndex": 2
+    }
+  ]
+}

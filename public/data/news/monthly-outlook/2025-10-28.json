@@ -1,0 +1,72 @@
+{
+  "type": "monthly-outlook",
+  "date": "2025-10-28T17:19:03.077Z",
+  "updates": [
+    {
+      "title": "Adobe's Firefly Image 5 introduces layer support and custom model training capabilities, signaling a major shift toward personalized AI design workflows that could reshape how agencies create brand-specific visual content.",
+      "timestamp": "10/28/2025, 12:00 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/28/adobe-firefly-image-5-brings-support-for-layers-will-let-creators-make-custom-models/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/28/adobe-launches-ai-assistants-for-express-and-photoshop/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/adobe-max-2025-firefly-photoshop-updates/"
+        }
+      ]
+    },
+    {
+      "title": "OpenAI's completed for-profit restructuring and new Microsoft partnership could accelerate enterprise AI tool development, potentially impacting how design agencies access and integrate advanced AI capabilities into their workflows.",
+      "timestamp": "10/28/2025, 2:30 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/28/openai-completes-its-for-profit-recapitalization/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/807875/openai-microsoft-for-profit-agi"
+        }
+      ]
+    },
+    {
+      "title": "GitHub's new Agent HQ platform will give developers access to multiple AI coding assistants beyond Copilot, including OpenAI's Codex and Anthropic's Claude, potentially revolutionizing how design agencies approach web development and automation.",
+      "timestamp": "10/28/2025, 4:10 PM",
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/808032/github-ai-agent-hq-coding-openai-anthropic"
+        }
+      ]
+    },
+    {
+      "title": "PayPal's integration with ChatGPT for direct purchasing capabilities launching in 2026 suggests a trend toward AI-powered commerce that could influence how design agencies create and monetize digital experiences.",
+      "timestamp": "10/28/2025, 10:47 AM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/28/paypal-partners-with-openai-to-let-users-pay-for-their-shopping-within-chatgpt/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/808079/chatgpt-paypal-openai-acp-purchases"
+        }
+      ]
+    },
+    {
+      "title": "Mem0's $24M funding for AI memory infrastructure indicates growing investment in persistent AI context systems, which could enable more sophisticated long-term creative collaborations between designers and AI tools.",
+      "timestamp": "10/28/2025, 3:14 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/28/mem0-raises-24m-from-yc-peak-xv-and-basis-set-to-build-the-memory-layer-for-ai-apps/"
+        }
+      ]
+    }
+  ]
+}

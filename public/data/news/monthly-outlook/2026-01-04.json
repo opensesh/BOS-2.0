@@ -1,0 +1,62 @@
+{
+  "type": "monthly-outlook",
+  "date": "2026-01-04T16:16:46.608Z",
+  "updates": [
+    {
+      "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT",
+      "description": "We’re expanding the capabilities of the Figma app in ChatGPT, so you can turn your ideas into creative assets and presentations that you can polish in Figma Buzz and Figma Slides.",
+      "timestamp": "12/11/2025, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/",
+      "topicCategory": "ai-creative"
+    },
+    {
+      "title": "Charmaine Lee’s 10 rules for building developer tools that feel like magic",
+      "description": "As a product manager working on Snapchat’s Lens Studio for AR developers, Charmaine knows what it takes to delight creators.",
+      "timestamp": "06/07/2024, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/charmaine-lees-10-rules-for-building-developer-tools/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/charmaine-lees-10-rules-for-building-developer-tools/",
+      "topicCategory": "general-tech"
+    },
+    {
+      "title": "Tech billionaires cashed out $16 billion in 2025 as stocks soared",
+      "description": "Jeff Bezos led the way. The Amazon founder sold 25 million shares for $5.7 billion in June and July, right around the time he was getting hitched to Lauren Sanchez in Venice.",
+      "timestamp": "01/03/2026, 11:45 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/03/tech-billionaires-cashed-out-16-billion-in-2025-as-stocks-soared/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/2026/01/03/tech-billionaires-cashed-out-16-billion-in-2025-as-stocks-soared/",
+      "topicCategory": "ai-creative"
+    },
+    {
+      "title": "How AI is reshaping work and who gets to do it, according to Mercor’s CEO",
+      "description": "Three-year-old startup Mercor has become a $10 billion middleman in AI’s data gold rush. The company connects AI labs like OpenAI and Anthropic with former employees of Goldman Sachs, McKinsey, and white-shoe law firms, paying them up to $200 an hour to share their industry expertise and train the AI models that could eventually automate their former employers out of business.   Today we’re bringing […]",
+      "timestamp": "01/02/2026, 5:33 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/how-ai-is-reshaping-work-and-who-gets-to-do-it-according-to-mercors-ceo/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/podcast/how-ai-is-reshaping-work-and-who-gets-to-do-it-according-to-mercors-ceo/",
+      "topicCategory": "startup-business"
+    }
+  ]
+}

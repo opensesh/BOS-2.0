@@ -1,0 +1,213 @@
+{
+  "type": "long-form",
+  "date": "2025-12-30T16:28:30.969Z",
+  "ideas": [
+    {
+      "title": "VCs predict enterprises will spend more on AI in 2026 — through fewer vendors",
+      "description": "Enterprises have been experimenting with AI tools for a few years. Investors predict they will start to pick winners in 2026.",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/30/vcs-predict-enterprises-will-spend-more-on-ai-in-2026-through-fewer-vendors/"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "AI Investment Showdown: VCs Reveal Enterprise Strategy",
+        "2026: How Enterprises Will Actually Spend AI Dollars",
+        "Fewer Vendors, More AI: Investors' Bold Prediction"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use multi-person panel format to increase engagement",
+            "Prepare pre-submitted audience Q&A questions in advance",
+            "Enable live chat for real-time audience interaction"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy visual design with dynamic split-screen layouts, futuristic data visualization overlays, pulsing gradient backgrounds in deep blues and electric teals. Typography should feel technical yet approachable - sans-serif with slight geometric edge. Incorporate real-time data animation and investor quote callouts."
+      },
+      "exampleOutline": [
+        "Opening: Live Stream Introduction & Panel Intro",
+        "Market Context: Current AI Enterprise Landscape",
+        "VC Insights: Spending Trends & Vendor Consolidation",
+        "Expert Panel Discussion & Predictions",
+        "Live Q&A with Audience Interaction"
+      ],
+      "hashtags": "#AIInvestment #EnterpriseAI #VCPredictions #TechTrends #AIStrategy #FutureOfWork #InvestmentInsights #TechInnovation #AIBusiness #StartupEcosystem",
+      "textureIndex": 0
+    },
+    {
+      "title": "The 10 best vehicles Ars Technica drove in 2025",
+      "description": "The 10 best vehicles Ars Technica drove in 2025",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/cars/2025/12/the-10-best-vehicles-ars-technica-drove-in-2025/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "10 Mind-Blowing Cars That Redefined Driving in 2025",
+        "Future of Driving: Ars Technica's Top Vehicles Revealed",
+        "These Cars Will Blow Your Mind This Year"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dynamic screen transitions between vehicle showcases",
+            "Include picture-in-picture of test drive moments",
+            "Create chapter markers for each vehicle highlight",
+            "Use high-energy b-roll footage of vehicles in motion",
+            "Add performance graphics and spec overlays"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy automotive design aesthetic with sleek metallic gradients, sharp technological typography, dynamic motion graphics showing vehicle performance metrics, futuristic color palette of deep blues, silver, and electric accents. Incorporate holographic-style UI elements and smooth cinematic transitions between vehicle showcases."
+      },
+      "exampleOutline": [
+        "Section 1: High-Impact Intro (Why 2025's Vehicles Matter)",
+        "Section 2: Methodology & Selection Criteria",
+        "Section 3: Countdown of Top 10 Vehicles (2-3 min per vehicle)",
+        "Section 4: Emerging Trends & Future Predictions",
+        "Section 5: Call-to-Action & Viewer Engagement"
+      ],
+      "hashtags": "#FutureOfDriving #CarTechnology #AutoInnovation #2025Cars #ElectricVehicles #TechReview #ArstechnicaReview #Automotive #VehicleInnovation #TransportationTech",
+      "textureIndex": 11
+    },
+    {
+      "title": "Meta just bought Manus, an AI startup everyone has been talking about",
+      "description": "Meta says it'll keep Manus running independently while weaving its agents into Facebook, Instagram, and WhatsApp, where Meta's own chatbot, Meta AI, is already available to users.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/29/meta-just-bought-manus-an-ai-startup-everyone-has-been-talking-about/"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "AI Acquisition: Meta's Bold Move to Dominate Social Media",
+        "Inside the Manus Takeover: Meta's Secret Weapon",
+        "How One Startup Could Reshape Social Media Forever"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use archival footage and simulated tech interfaces",
+            "Include expert talking head interviews for credibility",
+            "Create dynamic screen transitions mimicking AI network connections"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "High-contrast blue and black color palette with electric blue accents. Futuristic motion graphics simulating AI neural networks. Typography with sharp, technical sans-serif fonts. Incorporate glitch effects and data visualization transitions. Aesthetic references: 'Black Mirror' visual style meets tech documentary approach."
+      },
+      "exampleOutline": [
+        "Cold Open: Dramatic AI acquisition moment",
+        "Historical Context: Meta's AI Strategy Evolution",
+        "Deep Dive: Manus Technology Breakdown",
+        "Industry Impact Analysis",
+        "Future Predictions and Call to Action"
+      ],
+      "hashtags": "#MetaAI #AcquisitionNews #AIStartup #SocialMediaTech #FutureOfTech #AIInnovation #TechDisruption #FacebookAI #StartupExit #AITrends",
+      "textureIndex": 10
+    },
+    {
+      "title": "2025 was the year AI got a vibe check",
+      "description": "AI’s early-2025 spending spree featured massive raises and trillion-dollar infrastructure promises. By year’s end, hype gave way to a vibe check, with growing scrutiny over sustainability, safety, and business models.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/29/2025-was-the-year-ai-got-a-vibe-check/"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "AI's Reality Check: 5 Lessons from 2025's Wild Ride",
+        "Trillion-Dollar Promises vs. Real AI Impact",
+        "How AI Survived Its Biggest Vibe Check Yet"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use screen recordings of key AI funding/news timelines",
+            "Include picture-in-picture expert commentary segments",
+            "Create clear chapter markers for step-by-step learning flow"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Futuristic data visualization aesthetic with dynamic motion graphics. High-contrast color palette (deep blues, electric oranges). Typography that feels technical but approachable. Animated infographic transitions showing AI investment/scrutiny timeline. Clean, bold geometric design elements suggesting technological precision and forward momentum."
+      },
+      "exampleOutline": [
+        "Section 1: Dramatic AI Landscape Opening (Hook)",
+        "Section 2: 2025 AI Investment Context",
+        "Section 3: Step-by-Step Breakdown of Market Shifts",
+        "Section 4: Key Sustainability & Safety Insights",
+        "Section 5: Future Prediction & Learning Takeaways"
+      ],
+      "hashtags": "#AITrends2025 #AIInvestment #TechFuture #AIEthics #MachineLearning #TechInnovation #AIStrategy #FutureOfTech #InvestmentInsights #AITechnology",
+      "textureIndex": 11
+    },
+    {
+      "title": "The latest AI news we announced in December",
+      "description": "&lt;img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Dec_AI_Recap_still.max-600x600.format-webp.webp\"&gt;Here are Google’s latest AI updates from December 2025",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Google AI Blog",
+          "url": "https://blog.google/technology/ai/google-ai-updates-december-2025/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "AI Just Changed Everything in December",
+        "Google's Mind-Blowing AI Updates Revealed",
+        "The AI Breakthroughs No One's Talking About"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use animated text overlays to highlight key AI updates",
+            "Include picture-in-picture screen recordings of actual AI interfaces",
+            "Create dynamic chapter markers for easy navigation"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, futuristic color palette with electric blues and deep purples. Dynamic motion graphics that simulate AI neural networks. Clean, geometric typography with subtle glitch effects. Incorporate abstract data visualization elements. Use high-contrast transitions that feel technological and cutting-edge."
+      },
+      "exampleOutline": [
+        "Opening: Dramatic AI update teaser (5-10s)",
+        "Context: Why December's AI updates matter (1-2 min)",
+        "Deep Dive: Specific Google AI innovations (3-5 min)",
+        "Technical Breakdown: How these changes impact tech (2-3 min)",
+        "Closing CTA: How viewers can leverage these updates (30s)"
+      ],
+      "hashtags": "#GoogleAI #ArtificialIntelligence #TechInnovation #AIUpdates #FutureOfTech #MachineLearning #DeepLearning #TechNews #AIRevolution #InnovationInsights",
+      "textureIndex": 2
+    }
+  ]
+}

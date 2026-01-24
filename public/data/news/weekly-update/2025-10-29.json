@@ -1,0 +1,64 @@
+{
+  "type": "weekly-update",
+  "date": "2025-10-29T17:18:43.760Z",
+  "updates": [
+    {
+      "title": "ElevenLabs CEO predicts AI audio models will become 'commoditized' over time, while still maintaining competitive advantage in the short term through superior model quality and innovation.",
+      "timestamp": "10/29/2025, 4:59 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/29/elevenlabs-ceo-says-ai-audio-models-will-be-commoditized-over-time/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/adobe-max-sneaks-2025-corrective-ai/"
+        }
+      ]
+    },
+    {
+      "title": "Nvidia becomes the first public company to reach $5 trillion market cap, now worth more than the combined stock markets of all countries except the US, China, and Japan.",
+      "timestamp": "10/29/2025, 3:52 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/29/nvidia-becomes-first-public-company-worth-5-trillion/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/809017/nvidia-5-trillion-market-cap-ai"
+        }
+      ]
+    },
+    {
+      "title": "Grammarly rebrands to 'Superhuman' after acquiring the Superhuman email client in July and launches a new AI assistant to expand beyond writing assistance.",
+      "timestamp": "10/29/2025, 1:00 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/29/grammarly-rebrands-to-superhuman-launches-a-new-ai-assistant/"
+        }
+      ]
+    },
+    {
+      "title": "Character.AI ends chatbot experience for kids following lawsuits and public outcry after two teenager suicides, implementing significant platform changes to protect minors.",
+      "timestamp": "10/29/2025, 1:00 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/29/character-ai-is-killing-the-chatbot-experience-for-minors/"
+        }
+      ]
+    },
+    {
+      "title": "OpenAI CEO Sam Altman predicts the company will have a 'legitimate AI researcher' by 2028, betting on algorithmic innovation and scaling up 'test time compute' for model thinking processes.",
+      "timestamp": "10/28/2025, 6:46 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/28/sam-altman-says-openai-will-have-a-legitimate-ai-researcher-by-2028/"
+        }
+      ]
+    }
+  ]
+}

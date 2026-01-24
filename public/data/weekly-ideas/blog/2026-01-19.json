@@ -1,0 +1,291 @@
+{
+  "type": "blog",
+  "date": "2026-01-19T16:31:24.037Z",
+  "ideas": [
+    {
+      "title": "🎙️ This week on How I AI: Claude Code for product managers",
+      "description": "Your weekly listens from How I AI, part of the Lenny's Podcast Network",
+      "starred": true,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/this-week-on-how-i-ai-claude-code"
+        }
+      ],
+      "format": "thread",
+      "subcategory": "explanatory",
+      "hooks": [
+        "AI coding magic for PMs: Claude's secret weapon revealed",
+        "How top product managers are leveling up with AI",
+        "Unlock Claude's coding superpowers for product teams"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use thread screenshots as a teaser for full Substack post",
+            "Create a companion deep-dive article with more technical details",
+            "Offer exclusive code snippets or templates for subscribers"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Transform thread into a long-form SEO-optimized article",
+            "Add more technical context and industry research",
+            "Include downloadable resources for readers"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame content as professional development insight",
+            "Add testimonials or case studies from product managers",
+            "Include data-driven arguments about AI productivity gains"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech-inspired design with neon blue and deep charcoal. Dynamic diagonal grid layout. Futuristic sans-serif typography. Animated code snippet overlays. Subtle glitch effects to emphasize AI theme. Minimal but energetic visual approach that feels cutting-edge and accessible."
+      },
+      "exampleOutline": [
+        "🚀 Why Claude is a game-changer for product managers",
+        "🤔 The productivity challenge in modern product development",
+        "💡 Claude's unique AI coding capabilities for PMs",
+        "🔍 Practical use cases and real-world examples",
+        "🌟 How to integrate Claude into your workflow"
+      ],
+      "hashtags": "#AI #ProductManagement #AIInnovation #TechProductivity #CodingAI #ProductTech #AITools #InnovationStrategy #TechLeadership #AIWorkflow",
+      "textureIndex": 12
+    },
+    {
+      "title": "Rogue agents and shadow AI: Why VCs are betting big on AI security",
+      "description": "Misaligned agents are just one layer of the AI security challenge that startup Witness AI is trying to solve. It detects employee use of unapproved tools, blocking attacks, and ensuring compliance.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/19/rogue-agents-and-shadow-ai-why-vcs-are-betting-big-on-ai-security/"
+        }
+      ],
+      "format": "guide",
+      "subcategory": "instructional",
+      "hooks": [
+        "AI Security: The Silent Battle in Enterprise Tech",
+        "Invisible Threats: When AI Goes Rogue",
+        "VCs' Billion-Dollar Bet on AI Protection"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use interactive risk assessment graphic for AI security",
+            "Include real-time polling about reader's AI security concerns",
+            "Embed short explainer video about shadow AI risks"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Optimize with SEO-friendly headings about AI security trends",
+            "Include data visualizations of AI security investment patterns",
+            "Create downloadable AI security checklist as content upgrade"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Use professional tone with precise enterprise security language",
+            "Include quotes from VC investors and security experts",
+            "Add LinkedIn-specific call-to-action for professional networking"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dark cyberpunk palette with electric blue/deep charcoal, layered translucent security interface graphics, dynamic grid compositions suggesting network complexity, motion-tracked typography revealing hidden data patterns, technical but cinematic aesthetic inspired by Blade Runner design language"
+      },
+      "exampleOutline": [
+        "The Rise of Shadow AI: Understanding the Invisible Threat",
+        "Enterprise Risk Landscape: How Unauthorized AI Tools Emerge",
+        "Witness AI's Approach: Detection, Prevention, Compliance",
+        "VC Investment Trends: Why Security is the Next Frontier",
+        "Actionable Strategies for Protecting Your AI Ecosystem"
+      ],
+      "hashtags": "#AISecurity #EnterpriseAI #TechInnovation #CyberSecurity #VentureCapital #AIEthics #TechTrends #AICompliance #StartupInnovation #FutureOfWork",
+      "textureIndex": 6
+    },
+    {
+      "title": "Well, there goes the metaverse!",
+      "description": "The metaverse is on its last legs as VR is eclipsed by AI. But that's not the only thing that went wrong for Meta's VR ambitions.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/19/well-there-goes-the-metaverse/"
+        }
+      ],
+      "format": "listicle",
+      "subcategory": "explanatory",
+      "hooks": [
+        "Metaverse Meltdown: 5 Reasons VR Just Crashed",
+        "Why Meta's Virtual Dream Is Falling Apart",
+        "The Death of VR: An Insider's Autopsy"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use numbered emojis for each list item",
+            "Include personal anecdote about VR experience",
+            "Add real-time poll for reader engagement"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Optimize headline for SEO with specific numbers",
+            "Include expert quotes to add credibility",
+            "Add inline graphics for each list point"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame listicle as professional industry analysis",
+            "Include data visualizations and charts",
+            "Target tech leadership and innovation professionals"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast digital deconstruction aesthetic. Glitchy VR interface fragments, neon blue/red color palette, fragmented typography overlaying abstract tech landscape. Parallax scrolling effect with dissolving 3D elements. Reference: Cyberpunk 2077 UI meets digital decay graphics."
+      },
+      "exampleOutline": [
+        "Intro: The Metaverse's Spectacular Collapse",
+        "Context: How VR Promised Everything",
+        "5 Critical Failure Points in Meta's Strategy",
+        "Future of Immersive Technology",
+        "Call to Action: What Innovators Should Do Now"
+      ],
+      "hashtags": "#Metaverse #VirtualReality #TechTrends #AIRevolution #FutureOfTech #InnovationStrategy #DigitalTransformation #TechCrisis #MetaFails #AIEconomy",
+      "textureIndex": 10
+    },
+    {
+      "title": "Claude Code for product managers: research, writing, context libraries, custom to-do system, and more | Teresa Torres",
+      "description": "Watch now | &#127897;&#65039; How a product coach built a personalized productivity system using Claude Code in the terminal",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/claude-code-for-product-managers"
+        }
+      ],
+      "format": "case-study",
+      "subcategory": "case-study-deep-dive",
+      "hooks": [
+        "AI Transforms Product Management Workflow Overnight",
+        "One PM's Radical Productivity Hack Revealed",
+        "Terminal Magic: Claude Code Reinvents Workflows"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use real-time screenshot annotations of terminal workflow",
+            "Include interactive code snippets for reader engagement",
+            "Add personal commentary on learning process"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Create SEO-friendly headings breaking down each workflow step",
+            "Include comparative productivity metrics before/after implementation",
+            "Embed technical diagrams explaining Claude Code integration"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Highlight professional impact and time-saving metrics",
+            "Include quotes from potential use cases",
+            "Target executive and product leadership audience"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dark mode terminal aesthetic with neon code highlights, dynamic split-screen showing workflow transformation, futuristic sans-serif typography, subtle motion graphics revealing code execution, cyberpunk-inspired color palette of deep blues, electric greens, and sharp whites"
+      },
+      "exampleOutline": [
+        "Section 1: Productivity Pain Point Introduction",
+        "Section 2: Traditional PM Workflow Limitations",
+        "Section 3: Claude Code Technical Implementation",
+        "Section 4: Breakthrough Productivity Insights",
+        "Section 5: Future of AI-Powered Product Management"
+      ],
+      "hashtags": "#AIProductivity #ProductManagement #ClaudioCode #AIWorkflow #TechInnovation #ProductTech #AITools #WorkflowOptimization #CodeProductivity #TechLeadership",
+      "textureIndex": 3
+    },
+    {
+      "title": "10 things I learned from burning myself out with AI coding agents",
+      "description": "10 things I learned from burning myself out with AI coding agents",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/information-technology/2026/01/10-things-i-learned-from-burning-myself-out-with-ai-coding-agents/"
+        }
+      ],
+      "format": "article",
+      "subcategory": "visionary",
+      "hooks": [
+        "AI Coding Burnout: My Brutal Journey into Automation",
+        "When AI Agents Pushed Me Past My Limits",
+        "Coding's Dark Side: My Unfiltered AI Experiment"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use real-time annotation screenshots of coding process",
+            "Include interactive code snippets showing failure points",
+            "Create a personal narrative thread throughout the article"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Optimize SEO with technical keywords about AI coding",
+            "Include data visualizations of productivity metrics",
+            "Add clear section headers for scannability"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame insights as professional development lessons",
+            "Include industry-relevant statistics about AI coding productivity",
+            "Use a more formal, reflective tone for professional audience"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dark mode tech aesthetic with glitch-inspired graphics, deep blues and electric teals, fractured typography suggesting system breakdown, motion graphics simulating code compilation errors, minimalist tech-noir mood board references"
+      },
+      "exampleOutline": [
+        "Introduction: Personal AI Coding Experiment Setup",
+        "The Initial Promise: What I Expected vs Reality",
+        "5 Specific Burnout Moments & Technical Breakdowns",
+        "Psychological Impact of Continuous AI Interaction",
+        "Lessons Learned & Future Recommendations"
+      ],
+      "hashtags": "#AICodeing #TechBurnout #AIProductivity #SoftwareDevelopment #AIAgents #CodingInsights #TechMental #AIWorkflow #ProgrammerLife #TechExperiment",
+      "textureIndex": 0
+    }
+  ]
+}

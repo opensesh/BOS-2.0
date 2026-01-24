@@ -1,0 +1,211 @@
+{
+  "type": "long-form",
+  "date": "2025-12-08T16:29:10.402Z",
+  "ideas": [
+    {
+      "title": "&#8216;ONE RULE&#8217;: Trump says he&#8217;ll sign an executive order blocking state AI laws despite bipartisan pushback",
+      "description": "“I will be doing a ONE RULE Executive Order this week,” Trump posted on social media. “You can’t expect a company to get 50 Approvals every time they want to do something.”",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/08/one-rule-trump-says-hell-sign-an-executive-order-blocking-state-ai-laws-despite-bipartisan-pushback/"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "Trump's AI Executive Order: Game Changer or Power Grab?",
+        "50 State Laws vs. One Presidential Rule",
+        "Inside Trump's Controversial AI Regulatory Playbook"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Enable live chat for real-time audience interaction",
+            "Prepare pre-screened Q&A questions to maintain flow",
+            "Use multi-camera setup for dynamic visual engagement"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast red/blue political color palette, dynamic infographic overlays, animated legal/policy icons, split-screen news footage, bold sans-serif typography with motion tracking, minimalist yet dramatic design suggesting complexity and tension"
+      },
+      "exampleOutline": [
+        "Opening: Live Stream Introduction & Breaking News Context",
+        "Detailed Executive Order Analysis",
+        "State vs. Federal AI Regulation Breakdown",
+        "Potential Industry & Tech Sector Implications",
+        "Live Q&A and Audience Interaction Segment"
+      ],
+      "hashtags": "#AIRegulation #TrumpExecutiveOrder #AIPolicy #TechLaw #AIGovernance #StateLaws #FederalRegulation #AIEthics #TechPolicy #PoliticalTech",
+      "textureIndex": 2
+    },
+    {
+      "title": "This week on How I AI: Which AI model is the best designer? and ChatGPT agent mode, the “little helper” that transformed recruiting",
+      "description": "Your weekly listens from How I AI, part of the Lenny's Podcast Network",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/this-week-on-how-i-ai-which-ai-model"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "This changes everything about This week on...",
+        "What nobody tells you about This week on",
+        "We tested this so you don't have to"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Optimize for YouTube's algorithm by posting at peak hours",
+            "Use native features specific to YouTube",
+            "Engage with comments in the first hour"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 5,
+        "description": "Modern, clean aesthetic with brand colors. Professional but approachable. Consider subtle motion graphics to add visual interest."
+      },
+      "exampleOutline": [
+        "Hook: Visual + compelling statement (5s)",
+        "Context: Why this matters (1-2 min)",
+        "Core Value: Main teaching (3-5 min)",
+        "Deep Dive: Technical details (2-3 min)",
+        "Conclusion: Next steps + CTA (30s)"
+      ],
+      "hashtags": "#design #creativecoding #AIdesign #designsystems #UXdesign #branding #creativetechnology #opensession #designtips #workflow",
+      "textureIndex": 11
+    },
+    {
+      "title": "Booking.com’s agent strategy: Disciplined, modular and already delivering 2× accuracy",
+      "description": "When many enterprises weren’t even thinking about agentic behaviors or infrastructures, Booking.com had already “stumbled” into them with its homegrown conversational recommendation system. \n\nThis early experimentation has allowed the company to take a step back and avoid getting swept up in the frantic AI agent hype. Instead, it is taking a disciplined, layered, modular approach to model development: small, travel-specific models for cheap, fast inference; larger large language models (LLMs) fo",
+      "starred": false,
+      "sources": [
+        {
+          "name": "VentureBeat AI",
+          "url": "https://venturebeat.com/ai/booking-coms-agent-strategy-disciplined-modular-and-already-delivering-2"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "How Booking.com quietly revolutionized AI travel recommendations",
+        "The secret AI strategy beating Silicon Valley's hype",
+        "Travel AI: A masterclass in disciplined innovation"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use archival travel footage as B-roll to illustrate Booking.com's journey",
+            "Include motion graphics showing technical architecture of recommendation system",
+            "Create chapter markers highlighting key technical insights"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Cool, tech-forward documentary aesthetic with deep blue and slate gray color palette. Infographic-style technical visualizations. Clean sans-serif typography with subtle technical wireframe overlays. Dynamic camera movements simulating data flow. Minimal but sophisticated motion design emphasizing information hierarchy."
+      },
+      "exampleOutline": [
+        "Opening: Cinematic travel scene revealing AI's transformative potential",
+        "Context: Traditional travel recommendation challenges",
+        "Booking.com's Modular AI Strategy: Technical Deep Dive",
+        "Competitive Advantage: 2x Accuracy Case Study",
+        "Future of Travel Tech: Closing Vision and Call to Action"
+      ],
+      "hashtags": "#AITravel #BookingcomAI #TravelTech #ArtificialIntelligence #MachineLearning #TravelInnovation #AIRecommendations #IntelligentTravel #TechStrategy #FutureOfTravel",
+      "textureIndex": 4
+    },
+    {
+      "title": "ChatGPT agent mode: The “little helper” that transformed recruiting, crafted user personas, and solved parking nightmares | Michal Peled (Honeybook)",
+      "description": "Watch now | &#127897;&#65039; Michal Peled on using ChatGPT agent mode to automate LinkedIn recruiting, creating AI personas from customer research, and building practical AI tools that solve real business problems",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/chatgpt-agent-mode-the-little-helper"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "ChatGPT Agent Mode: 3 Business Hacks in 10 Minutes",
+        "Transform Recruiting with AI's Secret Weapon",
+        "One ChatGPT Trick That Solves Everything"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use screen recording to demonstrate each agent mode step",
+            "Include live demonstrations of actual prompts and outputs",
+            "Create chapter markers for each specific use case"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech-inspired color palette with electric blue and charcoal gray. Dynamic split-screen compositions showing prompt inputs and AI outputs. Modern sans-serif typography with sharp, clean lines. Animated transition graphics between use cases. Subtle glitch/tech overlay effects to emphasize AI innovation."
+      },
+      "exampleOutline": [
+        "Section 1: What is ChatGPT Agent Mode? (Hook)",
+        "Section 2: LinkedIn Recruiting Automation Walkthrough",
+        "Section 3: User Persona Generation Technique",
+        "Section 4: Practical Business Problem Solving",
+        "Section 5: Next Steps & Implementation Strategy"
+      ],
+      "hashtags": "#ChatGPT #AITutorial #BusinessHacks #AIRecruitment #ProductivityTips #AIAgentMode #TechInnovation #WorksmartNotHard #AITools #BusinessStrategy",
+      "textureIndex": 7
+    },
+    {
+      "title": "Hinge&#8217;s new AI feature helps daters move beyond boring small talk",
+      "description": "Hinge launched “Convo Starters,” a feature powered by AI that provides personalized tips for initiating meaningful conversations.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/08/hinges-new-ai-feature-helps-daters-start-better-convos-moving-beyond-boring-small-talk/"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "AI is Transforming Dating: Hinge's Radical New Approach",
+        "Beyond Small Talk: How AI Reimagines Connection",
+        "The End of Awkward First Messages"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use cinematic b-roll of real dating scenarios",
+            "Include interview-style testimonials from actual Hinge users",
+            "Create dynamic motion graphics explaining AI technology"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Modern, sleek documentary aesthetic with warm color palette (soft blues, muted oranges). Utilize split-screen techniques, data visualization overlays. Typography should feel contemporary and approachable - sans-serif, clean lines. Incorporate subtle AI-inspired graphic elements suggesting connection and technology. Motion should feel fluid and intelligent, with smooth transitions highlighting human-AI interaction."
+      },
+      "exampleOutline": [
+        "Opening: Emotional Personal Story of Dating Struggle",
+        "Context: Current Dating Communication Challenges",
+        "Tech Exploration: How Hinge's AI Actually Works",
+        "Real-World Impact: User Transformation Stories",
+        "Future Vision: AI and Human Connection"
+      ],
+      "hashtags": "#AIDating #HingeTech #DatingInnovation #AIRelationships #ModernLove #TechDating #AIConnections #DatingApp #RelationshipTechnology #ArtificialIntelligence",
+      "textureIndex": 2
+    }
+  ]
+}

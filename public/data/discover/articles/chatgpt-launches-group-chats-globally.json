@@ -1,0 +1,283 @@
+{
+  "id": "article-1732924800000",
+  "slug": "chatgpt-launches-group-chats-globally",
+  "title": "ChatGPT Launches Group Chats Globally",
+  "publishedAt": "2025-11-20T08:00:00.000Z",
+  "generatedAt": "2025-11-29T08:00:00.000Z",
+  "totalSources": 40,
+  "sections": [
+    {
+      "id": "section-0",
+      "paragraphs": [
+        {
+          "id": "para-0-0",
+          "content": "OpenAI has announced the global rollout of group chats in ChatGPT, expanding the feature to all users on Free, Go, Plus, and Pro plans following a successful pilot in select Asia-Pacific markets. The announcement was made on Thursday, November 20, 2025, just one week after the company began piloting the feature in regions including Japan, New Zealand, South Korea, and Taiwan. This launch represents a significant shift in how the AI assistant functions, transforming it from a one-on-one tool into a collaborative platform where multiple participants can engage in shared conversations.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-1",
+                "name": "techcrunch",
+                "url": "https://techcrunch.com/2025/11/20/chatgpt-launches-group-chats-globally/",
+                "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
+                "title": "ChatGPT launches group chats globally"
+              },
+              "additionalCount": 2,
+              "additionalSources": [
+                {
+                  "id": "source-2",
+                  "name": "gadgets360",
+                  "url": "https://www.gadgets360.com/ai/news/openai-chatgpt-group-chats-rolling-out-globally-all-logged-in-users-9677008",
+                  "favicon": "https://www.google.com/s2/favicons?domain=gadgets360.com&sz=32",
+                  "title": "OpenAI Is Now Rolling Out Group Chats in ChatGPT Globally"
+                },
+                {
+                  "id": "source-3",
+                  "name": "techradar",
+                  "url": "https://www.techradar.com/ai-platforms-assistants/chatgpt/chatgpt-enters-the-group-chat-globally",
+                  "favicon": "https://www.google.com/s2/favicons?domain=techradar.com&sz=32",
+                  "title": "ChatGPT enters the group chat globally"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "para-0-1",
+          "content": "The group chat feature allows up to 20 people to participate in a single conversation thread, with ChatGPT available to assist, analyze, or respond when needed. Users can create or join group chats by tapping a people-shaped icon and either adding participants directly or sharing an invitation link. The feature is designed for various collaborative activities, including planning trips, co-writing documents, settling debates, and conducting research together. When users join or create their first group chat, they are asked to set up a profile with their name, username, and photo to ensure everyone knows who is participating in the conversation.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-4",
+                "name": "gizmodo",
+                "url": "https://gizmodo.com/openai-launches-baffling-group-chats-so-you-and-your-friends-can-hang-out-with-chatgpt-2000689280",
+                "favicon": "https://www.google.com/s2/favicons?domain=gizmodo.com&sz=32",
+                "title": "OpenAI Launches 'Group Chats' So You and Your Friends Can Hang Out with ChatGPT"
+              },
+              "additionalCount": 2,
+              "additionalSources": [
+                {
+                  "id": "source-5",
+                  "name": "mashable",
+                  "url": "https://mashable.com/article/chatgpt-group-chat",
+                  "favicon": "https://www.google.com/s2/favicons?domain=mashable.com&sz=32",
+                  "title": "ChatGPT is now an actual chat app"
+                },
+                {
+                  "id": "source-6",
+                  "name": "timesofindia",
+                  "url": "https://timesofindia.indiatimes.com/technology/tech-news/openai-rolls-out-group-chats-to-all-chatgpt-users/articleshow/125478769.cms",
+                  "favicon": "https://www.google.com/s2/favicons?domain=timesofindia.com&sz=32",
+                  "title": "OpenAI rolls out group chats to all ChatGPT users"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-1",
+      "title": "Privacy and User Control",
+      "paragraphs": [
+        {
+          "id": "para-1-0",
+          "content": "Privacy and user control remain central to the design of this new feature, with OpenAI implementing several safeguards to ensure collaborative experiences remain separate from individual interactions. The company emphasizes that personal settings and memory stay private to each user, with no personal memory shared or created in group chats. When new participants are added to an existing conversation, a separate group chat copy is created, leaving the original chat unchanged for existing members.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-7",
+                "name": "techcrunch",
+                "url": "https://techcrunch.com/2025/11/14/chatgpt-launches-pilot-group-chats-across-japan-new-zealand-south-korea-and-taiwan/",
+                "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
+                "title": "ChatGPT launches pilot group chats across Japan, New Zealand, South Korea and Taiwan"
+              },
+              "additionalCount": 1,
+              "additionalSources": [
+                {
+                  "id": "source-8",
+                  "name": "openai",
+                  "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+                  "favicon": "https://www.google.com/s2/favicons?domain=openai.com&sz=32",
+                  "title": "ChatGPT Release Notes - OpenAI Help Center"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "para-1-1",
+          "content": "OpenAI has designed the AI to be context-aware within group settings, intelligently knowing when to participate and when to stay quiet during natural group discussions. ChatGPT will only respond when directly tagged by users, preventing interruptions and allowing the AI to remain appropriately silent during human-to-human exchanges. The assistant can also react to messages with emojis and reference profile photos to enhance the conversational experience and feel more natural within group conversations.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-9",
+                "name": "aitechsuite",
+                "url": "https://www.aitechsuite.com/ai-news/openai-launches-chatgpt-group-chat-revolutionizing-collaborative-ai",
+                "favicon": "https://www.google.com/s2/favicons?domain=aitechsuite.com&sz=32",
+                "title": "OpenAI Launches ChatGPT Group Chat, Revolutionizing Collaborative AI"
+              },
+              "additionalCount": 1,
+              "additionalSources": [
+                {
+                  "id": "source-10",
+                  "name": "gadgets360",
+                  "url": "https://www.gadgets360.com/ai/news/openai-chatgpt-group-chats-rolling-out-globally-all-logged-in-users-9677008",
+                  "favicon": "https://www.google.com/s2/favicons?domain=gadgets360.com&sz=32",
+                  "title": "OpenAI Is Now Rolling Out Group Chats in ChatGPT Globally"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-2",
+      "title": "Enterprise and Future Outlook",
+      "paragraphs": [
+        {
+          "id": "para-2-0",
+          "content": "The early feedback from the group chat pilot has been positive, prompting OpenAI to accelerate the global rollout timeline. Industry observers see potential applications across multiple sectors, from casual use cases like friends deciding on restaurant recommendations to professional applications such as team brainstorming, document collaboration, and project planning. The feature's flexibility in supporting group-specific instructions for tone, personality, and conversation style suggests that businesses and marketing teams may leverage group chats for client collaboration and creative workflows.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-11",
+                "name": "techradar",
+                "url": "https://www.techradar.com/ai-platforms-assistants/chatgpt/chatgpt-enters-the-group-chat-globally",
+                "favicon": "https://www.google.com/s2/favicons?domain=techradar.com&sz=32",
+                "title": "ChatGPT enters the group chat globally"
+              },
+              "additionalCount": 1,
+              "additionalSources": [
+                {
+                  "id": "source-12",
+                  "name": "mashable",
+                  "url": "https://mashable.com/article/chatgpt-group-chat",
+                  "favicon": "https://www.google.com/s2/favicons?domain=mashable.com&sz=32",
+                  "title": "ChatGPT is now an actual chat app"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "para-2-1",
+          "content": "Looking forward, OpenAI's expansion of group chats to enterprise and business plans signals substantial commercial potential and positions the company to compete more directly with collaboration-focused platforms. The phased rollout approach and focus on privacy controls indicate that OpenAI is carefully managing user concerns while establishing group chat functionality as a cornerstone feature of its platform. As the feature matures and more use cases emerge, group chats could fundamentally reshape how teams and communities interact with AI, potentially establishing ChatGPT as a central hub for both individual and collective decision-making processes.",
+          "citations": [
+            {
+              "primarySource": {
+                "id": "source-13",
+                "name": "gizmodo",
+                "url": "https://gizmodo.com/openai-launches-baffling-group-chats-so-you-and-your-friends-can-hang-out-with-chatgpt-2000689280",
+                "favicon": "https://www.google.com/s2/favicons?domain=gizmodo.com&sz=32",
+                "title": "OpenAI Launches 'Group Chats' So You and Your Friends Can Hang Out with ChatGPT"
+              },
+              "additionalCount": 1,
+              "additionalSources": [
+                {
+                  "id": "source-14",
+                  "name": "timesofindia",
+                  "url": "https://timesofindia.indiatimes.com/technology/tech-news/openai-rolls-out-group-chats-to-all-chatgpt-users/articleshow/125478769.cms",
+                  "favicon": "https://www.google.com/s2/favicons?domain=timesofindia.com&sz=32",
+                  "title": "OpenAI rolls out group chats to all ChatGPT users"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sourceCards": [
+    {
+      "id": "source-1",
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2025/11/20/chatgpt-launches-group-chats-globally/",
+      "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32",
+      "title": "ChatGPT launches group chats globally"
+    },
+    {
+      "id": "source-2",
+      "name": "Gadgets 360",
+      "url": "https://www.gadgets360.com/ai/news/openai-chatgpt-group-chats-rolling-out-globally-all-logged-in-users-9677008",
+      "favicon": "https://www.google.com/s2/favicons?domain=gadgets360.com&sz=32",
+      "title": "OpenAI Is Now Rolling Out Group Chats in ChatGPT Globally"
+    },
+    {
+      "id": "source-3",
+      "name": "TechRadar",
+      "url": "https://www.techradar.com/ai-platforms-assistants/chatgpt/chatgpt-enters-the-group-chat-globally",
+      "favicon": "https://www.google.com/s2/favicons?domain=techradar.com&sz=32",
+      "title": "ChatGPT enters the group chat globally"
+    },
+    {
+      "id": "source-4",
+      "name": "Gizmodo",
+      "url": "https://gizmodo.com/openai-launches-baffling-group-chats-so-you-and-your-friends-can-hang-out-with-chatgpt-2000689280",
+      "favicon": "https://www.google.com/s2/favicons?domain=gizmodo.com&sz=32",
+      "title": "OpenAI Launches 'Group Chats' So You Can Hang Out with ChatGPT"
+    },
+    {
+      "id": "source-5",
+      "name": "Mashable",
+      "url": "https://mashable.com/article/chatgpt-group-chat",
+      "favicon": "https://www.google.com/s2/favicons?domain=mashable.com&sz=32",
+      "title": "ChatGPT is now an actual chat app"
+    },
+    {
+      "id": "source-6",
+      "name": "Times of India",
+      "url": "https://timesofindia.indiatimes.com/technology/tech-news/openai-rolls-out-group-chats-to-all-chatgpt-users/articleshow/125478769.cms",
+      "favicon": "https://www.google.com/s2/favicons?domain=timesofindia.com&sz=32",
+      "title": "OpenAI rolls out group chats to all ChatGPT users"
+    },
+    {
+      "id": "source-7",
+      "name": "AI Tech Suite",
+      "url": "https://www.aitechsuite.com/ai-news/openai-launches-chatgpt-group-chat-revolutionizing-collaborative-ai",
+      "favicon": "https://www.google.com/s2/favicons?domain=aitechsuite.com&sz=32",
+      "title": "OpenAI Launches ChatGPT Group Chat, Revolutionizing Collaborative AI"
+    },
+    {
+      "id": "source-8",
+      "name": "OpenAI",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "favicon": "https://www.google.com/s2/favicons?domain=openai.com&sz=32",
+      "title": "ChatGPT Release Notes - OpenAI Help Center"
+    }
+  ],
+  "allSources": [
+    {"id": "source-1", "name": "techcrunch", "url": "https://techcrunch.com/2025/11/20/chatgpt-launches-group-chats-globally/", "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32", "title": "ChatGPT launches group chats globally"},
+    {"id": "source-2", "name": "gadgets360", "url": "https://www.gadgets360.com/ai/news/openai-chatgpt-group-chats-rolling-out-globally-all-logged-in-users-9677008", "favicon": "https://www.google.com/s2/favicons?domain=gadgets360.com&sz=32", "title": "OpenAI Is Now Rolling Out Group Chats in ChatGPT Globally"},
+    {"id": "source-3", "name": "techradar", "url": "https://www.techradar.com/ai-platforms-assistants/chatgpt/chatgpt-enters-the-group-chat-globally", "favicon": "https://www.google.com/s2/favicons?domain=techradar.com&sz=32", "title": "ChatGPT enters the group chat globally"},
+    {"id": "source-4", "name": "gizmodo", "url": "https://gizmodo.com/openai-launches-baffling-group-chats-so-you-and-your-friends-can-hang-out-with-chatgpt-2000689280", "favicon": "https://www.google.com/s2/favicons?domain=gizmodo.com&sz=32", "title": "OpenAI Launches 'Group Chats' So You and Your Friends Can Hang Out with ChatGPT"},
+    {"id": "source-5", "name": "mashable", "url": "https://mashable.com/article/chatgpt-group-chat", "favicon": "https://www.google.com/s2/favicons?domain=mashable.com&sz=32", "title": "ChatGPT is now an actual chat app"},
+    {"id": "source-6", "name": "timesofindia", "url": "https://timesofindia.indiatimes.com/technology/tech-news/openai-rolls-out-group-chats-to-all-chatgpt-users/articleshow/125478769.cms", "favicon": "https://www.google.com/s2/favicons?domain=timesofindia.com&sz=32", "title": "OpenAI rolls out group chats to all ChatGPT users"},
+    {"id": "source-7", "name": "techcrunch", "url": "https://techcrunch.com/2025/11/14/chatgpt-launches-pilot-group-chats-across-japan-new-zealand-south-korea-and-taiwan/", "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32", "title": "ChatGPT launches pilot group chats across Japan, New Zealand, South Korea and Taiwan"},
+    {"id": "source-8", "name": "openai", "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes", "favicon": "https://www.google.com/s2/favicons?domain=openai.com&sz=32", "title": "ChatGPT Release Notes - OpenAI Help Center"},
+    {"id": "source-9", "name": "aitechsuite", "url": "https://www.aitechsuite.com/ai-news/openai-launches-chatgpt-group-chat-revolutionizing-collaborative-ai", "favicon": "https://www.google.com/s2/favicons?domain=aitechsuite.com&sz=32", "title": "OpenAI Launches ChatGPT Group Chat, Revolutionizing Collaborative AI"},
+    {"id": "source-10", "name": "gadgets360", "url": "https://www.gadgets360.com/ai/news/openai-chatgpt-group-chats-rolling-out-globally-all-logged-in-users-9677008/amp", "favicon": "https://www.google.com/s2/favicons?domain=gadgets360.com&sz=32", "title": "OpenAI Is Now Rolling Out Group Chats in ChatGPT Globally (AMP)"},
+    {"id": "source-11", "name": "techradar", "url": "https://www.techradar.com/ai-platforms-assistants/chatgpt/chatgpt-enters-the-group-chat-globally", "favicon": "https://www.google.com/s2/favicons?domain=techradar.com&sz=32", "title": "ChatGPT enters the group chat globally"},
+    {"id": "source-12", "name": "mashable", "url": "https://mashable.com/article/chatgpt-group-chat", "favicon": "https://www.google.com/s2/favicons?domain=mashable.com&sz=32", "title": "ChatGPT is now an actual chat app"},
+    {"id": "source-13", "name": "gizmodo", "url": "https://gizmodo.com/openai-launches-baffling-group-chats-so-you-and-your-friends-can-hang-out-with-chatgpt-2000689280", "favicon": "https://www.google.com/s2/favicons?domain=gizmodo.com&sz=32", "title": "OpenAI Launches 'Group Chats' So You and Your Friends Can Hang Out with ChatGPT"},
+    {"id": "source-14", "name": "timesofindia", "url": "https://timesofindia.indiatimes.com/technology/tech-news/openai-rolls-out-group-chats-to-all-chatgpt-users/articleshow/125478769.cms", "favicon": "https://www.google.com/s2/favicons?domain=timesofindia.com&sz=32", "title": "OpenAI rolls out group chats to all ChatGPT users"}
+  ],
+  "heroImage": {
+    "url": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200",
+    "attribution": "Unsplash"
+  },
+  "sidebarSections": [
+    "Privacy and User Control",
+    "Enterprise and Future Outlook"
+  ],
+  "relatedArticles": [
+    {
+      "slug": "google-gemini-android-auto",
+      "title": "Google Gemini Comes to Android Auto"
+    },
+    {
+      "slug": "sierra-100m-arr-ai-agents",
+      "title": "Sierra Hits $100M ARR in Under Two Years"
+    }
+  ]
+}

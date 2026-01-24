@@ -1,0 +1,291 @@
+{
+  "type": "blog",
+  "date": "2025-12-29T16:27:54.930Z",
+  "ideas": [
+    {
+      "title": "This week on How I AI: How Webflow’s CPO built an AI chief of staff",
+      "description": "Your weekly listens from How I AI, part of the Lenny's Podcast Network",
+      "starred": true,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/this-week-on-how-i-ai-how-webflows"
+        }
+      ],
+      "format": "article",
+      "subcategory": "visionary",
+      "hooks": [
+        "AI Chief of Staff: Webflow's Secret Productivity Weapon",
+        "How One Tech Leader Reimagined Team Collaboration",
+        "Building an AI Sidekick That Actually Works"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use inline audio/podcast embed for immediate context",
+            "Include personal reflection on AI productivity insights",
+            "Create interactive poll about AI workflow adoption"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Optimize headline for SEO with precise keywords",
+            "Include detailed step-by-step implementation breakdown",
+            "Add expert quotes to boost credibility"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame article as professional development strategy",
+            "Include quantifiable productivity metrics",
+            "Tag key industry leaders for broader reach"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-forward design with dynamic gradient overlays. Futuristic sans-serif typography. Isometric illustrations of AI workflow. Muted tech-blue color palette with electric accent colors. Subtle motion graphics showing AI collaboration dynamics."
+      },
+      "exampleOutline": [
+        "Section 1: Provocative AI Productivity Hook",
+        "Section 2: Webflow CPO's Collaboration Challenge",
+        "Section 3: AI Chief of Staff Architecture",
+        "Section 4: Practical Implementation Strategies",
+        "Section 5: Future of AI-Augmented Teamwork"
+      ],
+      "hashtags": "#AIProductivity #WorkflowOptimization #AICollaboration #TechInnovation #ProductivityHacks #AIAssistant #WebflowTech #FutureOfWork #AIStrategy #InnovationLeadership",
+      "textureIndex": 3
+    },
+    {
+      "title": "How to use the new ChatGPT app integrations, including DoorDash, Spotify, Uber, and others",
+      "description": "Learn how to use Spotify, Canva, Figma, Expedia, and other apps directly in ChatGPT.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/29/how-to-use-the-new-chatgpt-app-integrations-including-doordash-spotify-uber-and-others/"
+        }
+      ],
+      "format": "guide",
+      "subcategory": "instructional",
+      "hooks": [
+        "ChatGPT Apps: Your New Productivity Superpower",
+        "Unlock Hidden AI Integrations in Seconds",
+        "Transform Apps with ChatGPT Magic"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Create interactive walkthrough screenshots",
+            "Include real-time experiment sections",
+            "Use personal anecdotes of app integration discoveries"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Include detailed step-by-step visual guides",
+            "Add SEO-optimized section headers",
+            "Embed comparative performance metrics"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Highlight professional productivity gains",
+            "Include enterprise-level use cases",
+            "Add credibility with expert quotes/statistics"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dynamic split-screen compositions showing before/after app states, vibrant tech-inspired color palette (electric blues, deep purples), clean sans-serif typography, subtle motion graphics revealing app integration workflows, minimalist tech-futurist aesthetic with clean iconography"
+      },
+      "exampleOutline": [
+        "Introduction: AI Integration Revolution",
+        "Understanding ChatGPT App Ecosystems",
+        "Detailed App Integration Walkthrough",
+        "Advanced Integration Strategies & Tips",
+        "Future of AI-Powered App Experiences"
+      ],
+      "hashtags": "#ChatGPT #AIProductivity #TechInnovation #AppIntegration #AITools #ProductivityHacks #TechTips #AIAssistant #FutureOfWork #InnovationStrategy",
+      "textureIndex": 8
+    },
+    {
+      "title": "VCs predict strong enterprise AI adoption next year — again",
+      "description": "More than 20 venture capitalists share their thoughts on AI agents, enterprise AI budgets and more for 2026.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/29/vcs-predict-strong-enterprise-ai-adoption-next-year-again/"
+        }
+      ],
+      "format": "thread",
+      "subcategory": "explanatory",
+      "hooks": [
+        "Enterprise AI is exploding: VCs reveal 2026 investment secrets",
+        "AI spending surge: What top investors know",
+        "Inside the $100B enterprise AI investment wave"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Create companion long-form analysis with thread screenshots",
+            "Use thread as teaser for full Substack piece",
+            "Embed interactive poll about AI investment predictions"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Transform thread into SEO-optimized listicle article",
+            "Include data visualizations expanding on thread insights",
+            "Add expert commentary to thread statistics"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame thread as professional industry forecast",
+            "Add corporate headshots of quoted VCs",
+            "Include detailed investment trend analysis"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech-inspired design with futuristic gradient overlays, geometric data visualization elements, bold sans-serif typography in electric blue/charcoal palette, minimal motion graphics showing upward investment trajectories"
+      },
+      "exampleOutline": [
+        "Thread Hook: Provocative AI investment statistic",
+        "VC Landscape Overview",
+        "Top 3 Enterprise AI Investment Trends",
+        "Breakthrough Sectors & Predictions",
+        "Call-to-Action: Follow for More Insights"
+      ],
+      "hashtags": "#AIInvestment #EnterpriseAI #VentureCapital #TechTrends #AIStrategy #StartupFunding #EmergingTech #InvestmentInsights #FutureOfWork #AIEconomy",
+      "textureIndex": 12
+    },
+    {
+      "title": "How Webflow’s CPO built an AI chief of staff to manage her calendar, prep for meetings, and drive AI adoption | Rachel Wolan",
+      "description": "Watch now | &#127897;&#65039; The CPO&#8217;s custom AI chief-of-staff app helps prep for meetings, audit her calendar, and level up her entire organization",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/how-webflows-cpo-built-an-ai-chief"
+        }
+      ],
+      "format": "case-study",
+      "subcategory": "case-study-deep-dive",
+      "hooks": [
+        "AI Chief of Staff: Webflow's Productivity Revolution",
+        "How One CPO Hacked Her Workflow with AI",
+        "Rachel Wolan's Secret Weapon: Custom AI Assistant"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Include real-time screenshot of AI tool in action",
+            "Use conversational tone showing personal experiment",
+            "Highlight unexpected insights from implementation"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Break down technical implementation with clear diagrams",
+            "Include quantitative productivity gains",
+            "Optimize for SEO with strategic headers and keywords"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame as professional development case study",
+            "Include executive-level insights on AI adoption",
+            "Use data-driven language for credibility"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dynamic infographic-style layout with tech-inspired color palette (deep blues, electric teals), clean geometric typography, subtle motion graphics showing workflow transformation, minimalist iconography representing AI interactions"
+      },
+      "exampleOutline": [
+        "Opening: Rachel Wolan's AI Productivity Experiment",
+        "The Productivity Challenge in High-Performance Environments",
+        "Building a Custom AI Chief of Staff: Technical Breakdown",
+        "Measurable Impact: Workflow Transformation Insights",
+        "Future of AI in Executive Productivity"
+      ],
+      "hashtags": "#AIProductivity #ExecutiveTech #WorkflowOptimization #AIAssistant #ProductivityHacks #WebflowInnovation #AITools #ExecutiveEfficiency #TechLeadership #ProductivityAI",
+      "textureIndex": 4
+    },
+    {
+      "title": "Big Tech basically took Trump’s unpredictable trade war lying down",
+      "description": "Big Tech basically took Trump’s unpredictable trade war lying down",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/tech-policy/2025/12/big-tech-basically-took-trumps-unpredictable-trade-war-lying-down/"
+        }
+      ],
+      "format": "listicle",
+      "subcategory": "explanatory",
+      "hooks": [
+        "How Big Tech Surrendered to Trump's Trade War Chaos",
+        "5 Shocking Ways Tech Giants Folded Under Pressure",
+        "The Silent Surrender: Tech's Trade War Capitulation"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use a personal narrative opener about trade war impact",
+            "Include real-time screenshots or tweet embeds",
+            "Invite reader comments and trade war experiences"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Add SEO-friendly subheadings for each list point",
+            "Include expert quotes to boost credibility",
+            "Use data visualizations to illustrate trade war effects"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame content as professional industry analysis",
+            "Include corporate strategy implications",
+            "Use network tagging for broader reach"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, high-contrast infographic style with geopolitical map overlays, using electric blue and deep red color palette. Dynamic typography with angular design elements suggesting conflict and disruption. Animated data points and timeline transitions."
+      },
+      "exampleOutline": [
+        "Introduction: The Unexpected Tech Trade War Landscape",
+        "Context: Trump's Unpredictable Global Economic Maneuvers",
+        "5 Key Moments of Tech Industry Capitulation",
+        "Long-Term Strategic Implications for Tech Giants",
+        "Future Outlook and Lessons Learned"
+      ],
+      "hashtags": "#TechPolicy #TradeWar #TechIndustry #GlobalEconomics #TrumpEra #BusinessStrategy #InnovationPolicy #TechLeadership #EconomicDisruption #AIPolicy",
+      "textureIndex": 0
+    }
+  ]
+}

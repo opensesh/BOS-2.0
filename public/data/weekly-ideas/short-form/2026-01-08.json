@@ -1,0 +1,373 @@
+{
+  "type": "short-form",
+  "date": "2026-01-08T16:28:02.203Z",
+  "ideas": [
+    {
+      "title": "8 tips for designers building branded templates in Figma Buzz",
+      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "starred": true,
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
+        },
+        {
+          "name": "Figmalion",
+          "url": "https://figmalion.com/issue/221"
+        },
+        {
+          "name": "Figma",
+          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+        }
+      ],
+      "format": "reel",
+      "subcategory": "reel",
+      "hooks": [
+        "Figma templates that scale without breaking brand rules",
+        "Design guardrails that make marketing teams happy",
+        "8 pro secrets for bulletproof Figma templates"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use rapid text transitions between template tips",
+            "Show quick before/after template screenshots",
+            "Include dynamic cursor/design tool movements"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "Each slide represents one template design tip",
+            "Use high-contrast Figma UI screenshots",
+            "Include minimal text overlay with key insights"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with provocative design challenge",
+            "Use screen recording of actual Figma workflow",
+            "Include voiceover explaining template strategy"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as professional design strategy",
+            "Include data/research about template effectiveness",
+            "More detailed technical explanations"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy tech-design aesthetic. Dark mode Figma UI color palette. Dynamic motion graphics. Sharp geometric transitions. Cursor movements as visual storytelling. Minimal but impactful typography. High contrast between UI elements and text overlays."
+      },
+      "exampleOutline": [
+        "Hook: Provocative template design challenge",
+        "Problem: Rigid vs flexible brand guidelines",
+        "8 Quick Template Design Tips",
+        "Key Workflow Insights",
+        "Call-to-Experiment/Learn More"
+      ],
+      "hashtags": "#FigmaDesign #AIDesign #CreativeTemplates #DesignSystem #ProductivityHacks #DesignTips #BrandDesign #WorkflowOptimization #CreativeTech #DesignInnovation",
+      "pexelsImageUrl": "https://images.pexels.com/photos/7767791/pexels-photo-7767791.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 1
+    },
+    {
+      "title": "Yoshi by Saint-Urbain",
+      "description": "Early days for sure, but this is hands down the best brand identity design I’ve seen this year – kudos to Saint-Urbain for once again putting a project out into the world that’s not only an absolute joy to look at, but which shows a razor-sharp nous for branding that’s both searingly zeitgeist and resolutely, timelessly future-facing. Said project is\nThe post Yoshi by Saint-Urbain appeared first on BP&O - Branding, Packaging and Opinion.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "BP&O",
+          "url": "https://bpando.org/2026/01/08/yoshi-matcha-by-saint-urbain/"
+        },
+        {
+          "name": "Brandarchive",
+          "url": "https://brandarchive.substack.com/p/yoshi-matcha-liqueur-by-saint-urbain"
+        },
+        {
+          "name": "Thedieline",
+          "url": "https://thedieline.com/forget-matcha-lattes-yoshi-is-a-premium-matcha-spirit/"
+        }
+      ],
+      "format": "story",
+      "subcategory": "story",
+      "hooks": [
+        "Design that breaks every branding rule 🔥",
+        "When brands become pure art 🎨",
+        "Matcha meets design revolution 💥"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick jump cuts between brand identity elements",
+            "Add text overlay revealing design insights",
+            "Include behind-the-scenes design process snippets"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Provocative brand identity screenshot",
+            "Use progressive reveal of design elements",
+            "Include comparison slides showing design evolution"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected visual pattern interrupt",
+            "Rapid-fire design breakdown in 60 seconds",
+            "Include designer interview microclip"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as design innovation case study",
+            "Include professional design process insights",
+            "Highlight strategic branding decisions"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "Experimental neo-brutalist aesthetic with high-contrast neon accents, asymmetric typography, dynamic motion graphics revealing design layers, minimalist color palette with unexpected matcha green highlights, swiss design system meets digital glitch art"
+      },
+      "exampleOutline": [
+        "Section 1: Provocative brand identity reveal",
+        "Section 2: Design challenge/market context",
+        "Section 3: Saint-Urbain's innovative design approach",
+        "Section 4: Key visual breakthrough moments",
+        "Section 5: Future of brand design CTA"
+      ],
+      "hashtags": "#BrandDesign #CreativeDirection #AIDesign #GraphicDesign #BrandIdentity #DesignInnovation #CreativeTech #VisualBranding #DesignTrends #ArtDirection",
+      "pexelsImageUrl": "https://images.pexels.com/photos/8014528/pexels-photo-8014528.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 10
+    },
+    {
+      "title": "Introducing three new tools for precise image editing in Figma",
+      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
+        },
+        {
+          "name": "Contentgrip",
+          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
+        },
+        {
+          "name": "Techcrunch",
+          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
+        },
+        {
+          "name": "Theaiinsider",
+          "url": "https://theaiinsider.tech/2025/12/12/figma-introduces-new-ai-powered-image-editing-suite-to-streamline-design-workflows/"
+        },
+        {
+          "name": "Figma",
+          "url": "https://www.figma.com/release-notes/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "AI just transformed image editing in Figma 🚀",
+        "3 game-changing tools designers NEED to know",
+        "Design faster, smarter: Figma's new AI magic"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick screen recording of tool demo",
+            "Include before/after split screen transitions",
+            "Add energetic text overlays highlighting key features"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Dramatic visual transformation",
+            "Use numbered slides for each tool feature",
+            "Include comparison graphics between manual vs AI editing"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected visual glitch/transition",
+            "Use rapid-fire feature highlight technique",
+            "Include personal reaction/excitement moment"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as professional workflow enhancement",
+            "Include quantitative productivity gains",
+            "Use more technical, precise language"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast cyberpunk-inspired color palette with electric blues and neon accents. Dynamic diagonal compositions with fractured, overlapping design elements. Bold sans-serif typography with slight digital distortion. Animated glitch transitions suggesting technological transformation. Minimalist yet energetic aesthetic blending tech precision with creative fluidity."
+      },
+      "exampleOutline": [
+        "Hook: Surprising AI editing revelation",
+        "Problem: Design workflow inefficiencies",
+        "Solution: Figma's 3 new AI tools",
+        "Demonstration: Quick visual proof",
+        "Call-to-Action: Try now"
+      ],
+      "hashtags": "#FigmaAI #DesignTech #CreativeTech #AIDesign #ProductivityHack #DesignTools #CreativeWorkflow #TechInnovation #AICreativity #DesignInnovation",
+      "pexelsImageUrl": "https://images.pexels.com/photos/5477779/pexels-photo-5477779.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 2
+    },
+    {
+      "title": "Three new features to help build brand momentum with Figma Buzz",
+      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "Design Faster: Figma Buzz Just Leveled Up 🚀",
+        "3 Game-Changing Figma Buzz Features Designers Need",
+        "Workflow Magic: Figma Buzz's New Superpowers"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick screen recording of new Figma features",
+            "Overlay text animations highlighting each feature",
+            "Include rapid jump cuts to maintain energy"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Bold feature headline",
+            "Use clean, high-contrast design system graphics",
+            "Each slide focuses on one feature benefit"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with provocative 'before vs after' workflow comparison",
+            "Use voiceover explaining features dynamically",
+            "Include quick demo of each new tool"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame features as professional productivity enhancers",
+            "Include subtle data visualization of time saved",
+            "Use more technical, detailed language"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy tech-minimalist aesthetic. Vibrant electric blue and white color palette. Dynamic geometric shapes fragmenting/reassembling. Sans-serif typography with slight motion. Futuristic UI overlay elements. Clean Apple/Figma design system inspiration with unexpected visual interrupts."
+      },
+      "exampleOutline": [
+        "Quick Hook/Attention Grabber",
+        "Rapid Problem Statement: Design Workflow Friction",
+        "Three Feature Highlights (Marketing Templates, Plugins, Video Trimming)",
+        "Transformative Potential Insight",
+        "Call-to-Action: Try New Figma Buzz Features"
+      ],
+      "hashtags": "#FigmaBuzz #DesignTips #AIDesign #CreativeTech #ProductivityHack #DesignTools #UIDesign #CreativeWorkflow #DesignInnovation #TechTrends",
+      "pexelsImageUrl": "https://images.pexels.com/photos/7767791/pexels-photo-7767791.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 10
+    },
+    {
+      "title": "Senior Designer, Moniker, San Francisco",
+      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "BP&O",
+          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
+        }
+      ],
+      "format": "carousel",
+      "subcategory": "carousel",
+      "hooks": [
+        "Design Careers: Insider Secrets from San Francisco's Top Studio",
+        "How Moniker Builds World-Class Design Teams",
+        "Want a Dream Design Job? Here's the Blueprint"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic motion transitions between carousel slides",
+            "Add subtle text animations to highlight key points",
+            "Create a narrative arc that pulls viewers through slides"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must be visually striking to stop scroll",
+            "Use consistent color palette across all 6-8 slides",
+            "Design each slide as a standalone visual story"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Extract most compelling carousel slide as Short opening",
+            "Add voiceover explaining design career insights",
+            "Use high-energy editing to maintain viewer engagement"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add more professional context and industry insights",
+            "Include specific role requirements and skills",
+            "Use more text-heavy, detailed slide designs"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-forward aesthetic with San Francisco design studio vibe. High-contrast color palette mixing electric blues and warm neutrals. Geometric typography with organic motion graphics. Clean, modern layout with unexpected visual interruptions. Incorporate subtle tech/design iconography and grid-based compositions."
+      },
+      "exampleOutline": [
+        "Slide 1: Attention-grabbing visual + bold headline about design career",
+        "Slide 2: Moniker studio context and design philosophy",
+        "Slide 3: Senior Designer role key responsibilities",
+        "Slide 4: Required skills and portfolio expectations",
+        "Slide 5: Career growth and development opportunities",
+        "Slide 6: Call-to-action and application details"
+      ],
+      "hashtags": "#DesignCareers #SeniorDesigner #SanFranciscoDesign #CreativeJobs #DesignStudio #CareerGrowth #AIDesign #CreativeTech #DesignInnovation #JobOpportunity",
+      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 11
+    }
+  ]
+}

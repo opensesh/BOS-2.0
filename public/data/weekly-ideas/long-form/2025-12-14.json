@@ -1,0 +1,211 @@
+{
+  "type": "long-form",
+  "date": "2025-12-14T16:24:31.284Z",
+  "ideas": [
+    {
+      "title": "A Founder's Playbook for Shipping 10x Faster with AI | Yana Welinder",
+      "description": "Candid advice from a serial founder on staying scrappy and being OK with mistakes. Plus full demos of Yana's best AI workflows to triage emails and aggregate customer feedback",
+      "starred": true,
+      "sources": [
+        {
+          "name": "Peter Yang (Creator Economy)",
+          "url": "https://creatoreconomy.so/p/a-founders-playbook-for-shipping-10x-faster-with-ai-yana-welinder"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "AI Hacks: How Founders Ship 10x Faster",
+        "Startup Secrets: Build Faster with AI Tools",
+        "Crush Startup Speed Limits Using AI Workflows"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dynamic screen recordings showcasing actual AI workflows",
+            "Include picture-in-picture founder commentary for personal connection",
+            "Create clear chapter markers for easy navigation"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy color palette with electric blue and vibrant orange accents. Dynamic motion graphics highlighting workflow transitions. Clean, modern sans-serif typography with technical overlay animations. Screen capture aesthetic with sleek tech-startup visual language. Quick-cut editing style mimicking startup energy."
+      },
+      "exampleOutline": [
+        "Cold Open: Dramatic AI workflow reveal (5s)",
+        "Founder's Context: Startup Speed Challenges (1-2 min)",
+        "AI Workflow Deep Dive: Email & Feedback Triage (3-4 min)",
+        "Tactical Insights: How These Tools Transform Productivity (2 min)",
+        "Call-to-Action: Practical Next Steps (30s)"
+      ],
+      "hashtags": "#AIStartups #ProductivityHacks #FounderTips #AIWorkflows #StartupTechnology #EntrepreneurLife #AITools #ProductivityAI #TechInnovation #StartupStrategy",
+      "textureIndex": 6
+    },
+    {
+      "title": "Why humans are AI’s biggest bottleneck (and what’s coming in 2026) | Alexander Embiricos (OpenAI Codex Product Lead)",
+      "description": "OpenAI's Codex lead on 20x growth, how the Sora Android app hit #1 in 18 day, and why the best way to use AI coding tools is giving them your hardest problems.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/why-humans-are-ais-biggest-bottleneck"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "AI's Dirty Secret: Humans Are Holding It Back",
+        "Why Coders Will Become Obsolete by 2026",
+        "The Bottleneck No One's Talking About in AI"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dynamic screen recordings showing AI code generation",
+            "Include picture-in-picture of speaker for personal connection",
+            "Add chapter markers for easy navigation"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech-inspired palette (deep blues, electric greens), futuristic motion graphics overlaying code snippets, clean sans-serif typography with subtle glitch animations, clean tech aesthetic blending minimalism with dynamic energy"
+      },
+      "exampleOutline": [
+        "Cold Open: Provocative AI coding demonstration",
+        "The Human Limitation in AI Development",
+        "Case Studies: Where Humans Slow Down AI Progress",
+        "2026 Predictions: The Next Wave of AI Capabilities",
+        "Actionable Strategies for Developers to Stay Relevant"
+      ],
+      "hashtags": "#AIRevolution #FutureOfCoding #TechInnovation #ArtificialIntelligence #MachineLearning #SoftwareDevelopment #CodexAI #TechTrends #AITools #ProgrammingFuture",
+      "textureIndex": 9
+    },
+    {
+      "title": "Why most enterprise AI coding pilots underperform (Hint: It's not the model)",
+      "description": "Gen AI in software engineering has moved well beyond autocomplete. The emerging frontier is agentic coding: AI systems capable of planning changes, executing them across multiple steps and iterating based on feedback. Yet despite the excitement around “AI agents that code,” most enterprise deployments underperform. The limiting factor is no longer the model. It’s context: The structure, history and intent surrounding the code being changed. In other words, enterprises are now facing a systems de",
+      "starred": false,
+      "sources": [
+        {
+          "name": "VentureBeat AI",
+          "url": "https://venturebeat.com/ai/why-most-enterprise-ai-coding-pilots-underperform-hint-its-not-the-model"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "AI is changing coding forever. But not how you think.",
+        "Enterprise AI pilots are failing. Here's why.",
+        "The hidden bottleneck in AI software engineering revealed."
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use cinematic B-roll of software development environments",
+            "Include expert interview-style cutaways for credibility",
+            "Use dynamic screen recordings with motion graphics overlays"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dark tech-inspired color palette with deep blues and electric teals. Futuristic typography with clean sans-serif fonts. Layered motion graphics simulating code flow and system interactions. High-contrast visual metaphors comparing traditional vs AI-powered development. Incorporate subtle glitch/digital artifact effects to represent technological transition."
+      },
+      "exampleOutline": [
+        "Cold open: Dramatic AI coding failure scenario",
+        "Historical context of enterprise AI coding attempts",
+        "Deep dive: Why context trumps model performance",
+        "Case studies of successful and failed AI coding pilots",
+        "Future predictions and actionable enterprise strategies"
+      ],
+      "hashtags": "#AIEngineering #SoftwareDevelopment #EnterpriseAI #CodingInnovation #TechTrends #AIAgents #SoftwareArchitecture #MachineLearning #AIStrategy #TechDocumentary",
+      "textureIndex": 7
+    },
+    {
+      "title": "AI data center boom could be bad news for other infrastructure projects",
+      "description": "Improvements to roads, bridges, and other infrastructure could take a hit as data center construction accelerates.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/13/ai-data-center-boom-could-be-bad-news-for-other-infrastructure-projects/"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "How AI Data Centers Will Break Infrastructure Economics",
+        "3 Shocking Ways AI Centers Drain City Resources",
+        "Infrastructure's Hidden Battle: AI vs. Public Works"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dynamic screen recordings of infrastructure maps/data",
+            "Include side-by-side comparisons of infrastructure spending pre/post AI boom",
+            "Create chapter markers for clear step-by-step navigation"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast color palette with electric blues and deep grays. Geometric infographic style with sharp data visualization. Motion graphics showing infrastructure transformation. Typography: clean, technical sans-serif. Aesthetic blend of urban planning and futuristic tech visualization."
+      },
+      "exampleOutline": [
+        "Step 1: Current Infrastructure Investment Landscape",
+        "Step 2: AI Data Center Boom - Economic Context",
+        "Step 3: Resource Allocation Shift Mechanics",
+        "Step 4: Potential Local/Regional Impact Analysis",
+        "Step 5: Strategic Recommendations for Cities/Planners"
+      ],
+      "hashtags": "#AIInfrastructure #UrbanPlanning #TechEconomics #DataCenters #CityDevelopment #InfrastructureTrends #TechPolicy #EconomicShift #AIEconomy #PublicWorks",
+      "textureIndex": 10
+    },
+    {
+      "title": "🧠 Community Wisdom: The ROI of “wrapped” campaigns, identifying early product-market-fit, working with a non-PM manager, using Google AI Studio for rapid prototyping, and more",
+      "description": "Community Wisdom 165",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/community-wisdom-the-roi-of-wrapped"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "Community Wisdom: Your Tech Career Superpower 🚀",
+        "Unlock Pro Insights: Live Q&A Masterclass",
+        "Real Founders, Real Strategies: Ask Anything!"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Enable live chat for real-time audience interaction",
+            "Use YouTube's Q&A timestamp feature to highlight key questions",
+            "Prepare pre-screened community questions for smooth flow"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dynamic split-screen design with host on one side, live chat/questions on other. High-contrast teal and charcoal color palette. Animated transition graphics between topics. Clean, modern sans-serif typography with bold highlights. Subtle motion graphics highlighting key insights. Dynamic lower-third graphics for community member names/questions."
+      },
+      "exampleOutline": [
+        "Section 1: High-Energy Live Stream Introduction",
+        "Section 2: Community Question Selection Framework",
+        "Section 3: Deep-Dive into Submitted Tech Strategies",
+        "Section 4: Interactive Live Q&A Segment",
+        "Section 5: Community Takeaways & Future Connections"
+      ],
+      "hashtags": "#TechCommunity #ProductManagement #CareerGrowth #TechTips #StartupLife #AIInnovation #ProfessionalDevelopment #LiveQandA #TechInsights #CommunityWisdom",
+      "textureIndex": 8
+    }
+  ]
+}

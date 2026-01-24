@@ -1,0 +1,291 @@
+{
+  "type": "blog",
+  "date": "2025-12-22T16:28:34.322Z",
+  "ideas": [
+    {
+      "title": "This week on How I AI: How to get your whole team excited about AI",
+      "description": "Your weekly listens from How I AI, part of the Lenny's Podcast Network",
+      "starred": true,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/this-week-on-how-i-ai-how-to-get"
+        }
+      ],
+      "format": "guide",
+      "subcategory": "instructional",
+      "hooks": [
+        "AI Transformation: Rally Your Team in 5 Simple Steps",
+        "Unlock Team AI Excitement: The Ultimate Playbook",
+        "From Skeptics to Believers: AI Team Revolution"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use interactive inline polls to engage readers",
+            "Include personal experiment screenshots/GIFs",
+            "Add real-time comment sections for team strategy discussions"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Optimize with clear H2/H3 subheadings for SEO",
+            "Include data visualizations of AI adoption trends",
+            "Add expert quote breakouts for credibility"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Tag relevant AI and leadership influencers",
+            "Include professional case study screenshots",
+            "Use data-driven metrics to substantiate claims"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, dynamic infographic-style layout with electric blue/deep teal gradient backgrounds, geometric AI-inspired vector illustrations, clean sans-serif typography, motion graphics showing team transformation, minimalist but energetic design language"
+      },
+      "exampleOutline": [
+        "Why AI Team Adoption Matters: The Current Landscape",
+        "Diagnosing Your Team's AI Resistance",
+        "5-Step Transformation Framework",
+        "Case Studies: Successful AI Team Integration",
+        "Next Steps: Your Team's AI Action Plan"
+      ],
+      "hashtags": "#AITransformation #TeamInnovation #AIStrategy #FutureOfWork #TechLeadership #AIAdoption #TeamProductivity #InnovationCulture #AIWorkplace #TechTrends",
+      "textureIndex": 12
+    },
+    {
+      "title": "ChatGPT: Everything you need to know about the AI-powered chatbot",
+      "description": "A timeline of ChatGPT product updates and releases, starting with the latest, which we’ve been updating throughout the year.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/22/chatgpt-everything-to-know-about-the-ai-chatbot/"
+        }
+      ],
+      "format": "case-study",
+      "subcategory": "case-study-deep-dive",
+      "hooks": [
+        "How ChatGPT Rewrote the Rules of AI Communication",
+        "Inside the AI Revolution: ChatGPT's Untold Story",
+        "From Prototype to Phenomenon: ChatGPT Decoded"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use real-time screenshots of ChatGPT evolution",
+            "Include personal experimentation notes and insights",
+            "Create interactive timeline visualization"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Optimize with SEO-friendly section headers",
+            "Include expert quotes and industry perspectives",
+            "Add data visualizations of ChatGPT's growth"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Focus on professional implications of ChatGPT",
+            "Include enterprise adoption statistics",
+            "Highlight potential business transformation angles"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dynamic, tech-forward design with glitch-inspired color transitions, geometric typography, isometric AI-themed illustrations, subtle motion graphics showing technological progression, dark mode aesthetic with electric blue and deep purple accent colors"
+      },
+      "exampleOutline": [
+        "Introduction: The ChatGPT Phenomenon",
+        "Historical Context: AI Chatbot Evolution",
+        "Technical Deep Dive: Architecture and Capabilities",
+        "Impact Analysis: Industry and Cultural Transformation",
+        "Future Projections and Actionable Insights"
+      ],
+      "hashtags": "#ChatGPT #ArtificialIntelligence #AITechnology #InnovationInsights #TechTrends #MachineLearning #AIRevolution #FutureOfWork #TechnologyInnovation #AIResearch",
+      "textureIndex": 2
+    },
+    {
+      "title": "How to get your whole team excited about AI (and actually using it) | Brian Greenbaum (product designer at Pendo)",
+      "description": "Watch now | &#127897;&#65039; How to transform your organization from AI-curious to AI-proficient: synchronous workshops, asynchronous sharing channels, and measuring adoption success",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/how-to-get-your-whole-team-excited"
+        }
+      ],
+      "format": "article",
+      "subcategory": "visionary",
+      "hooks": [
+        "AI Transformation: Turning Skeptics into Believers",
+        "Team AI Adoption: Your Competitive Advantage",
+        "From AI-Curious to AI-Powered: A Roadmap"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use personal anecdotes to make AI adoption feel relatable",
+            "Include interactive polls to engage readers",
+            "Add real-time commentary about current AI adoption challenges"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Optimize headline for SEO with clear AI transformation keywords",
+            "Include data-driven insights to build credibility",
+            "Use clean, scannable formatting with subheadings and bullet points"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Highlight professional credibility with specific industry examples",
+            "Include quote graphics from design leaders",
+            "Craft a networking-friendly CTA for professional audience"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-forward design with gradient overlays, futuristic iconography, dynamic typography in blue-purple-white palette. Incorporate subtle AI-inspired geometric patterns. Use motion graphics to illustrate team transformation concepts."
+      },
+      "exampleOutline": [
+        "The AI Adoption Challenge: Why Most Teams Fail",
+        "Understanding Organizational Resistance to AI",
+        "Proven Strategies for Seamless AI Integration",
+        "Measuring Success: Metrics That Matter",
+        "Your AI Transformation Roadmap"
+      ],
+      "hashtags": "#AITransformation #TeamInnovation #DesignTech #AIAdoption #ProductDesign #InnovationStrategy #FutureOfWork #AIWorkplace #DesignLeadership #TechInnovation",
+      "textureIndex": 0
+    },
+    {
+      "title": "Waymo resumes service in San Francisco after robotaxis stall during blackout",
+      "description": "Waymo suspended its SF robotaxi service on Saturday evening after a massive blackout appeared to leave many of its vehicles stalled on city streets.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/21/waymo-suspends-service-in-san-francisco-as-robotaxis-stall-during-blackout/"
+        }
+      ],
+      "format": "listicle",
+      "subcategory": "explanatory",
+      "hooks": [
+        "5 Shocking Revelations from Waymo's SF Robotaxi Blackout",
+        "When AI Meets Urban Chaos: Waymo's Unexpected Challenge",
+        "Robotaxis vs. Blackout: The Tech Resilience Test"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use real-time screenshots from the blackout incident",
+            "Include a personal narrative about AI urban resilience",
+            "Create an interactive poll about reader's autonomous vehicle expectations"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Include technical deep-dive into robotaxi navigation challenges",
+            "Use SEO-optimized headers for each listicle point",
+            "Add expert quotes from autonomous vehicle engineers"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Frame listicle as professional industry insight",
+            "Include data visualization of autonomous vehicle performance",
+            "Highlight potential business implications of technology disruption"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast cyberpunk-inspired design with glitchy urban overlays, neon blue/grey color palette, fragmented typography suggesting technological disruption, animated graphic elements showing robotaxis in urban grid with intermittent blackout effects"
+      },
+      "exampleOutline": [
+        "Introduction: The Unexpected Urban Tech Challenge",
+        "Context: Waymo's San Francisco Autonomous Operations",
+        "5 Key Insights from the Blackout Incident",
+        "Future Implications for Autonomous Transportation",
+        "Call-to-Action: What This Means for Tech Innovation"
+      ],
+      "hashtags": "#WaymoBlackout #AutonomousVehicles #AITech #UrbanMobility #TechResilience #SelfDrivingCars #SanFranciscoTech #FutureOfTransport #AIChallenge #TechInnovation",
+      "textureIndex": 5
+    },
+    {
+      "title": "Best of 2025 Awards – part one",
+      "description": "Sunday late night reading edition. Part two coming this week.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Oren Meets World",
+          "url": "https://www.hyperstudios.us/p/best-of-2025-awards-part-one"
+        }
+      ],
+      "format": "thread",
+      "subcategory": "explanatory",
+      "hooks": [
+        "2025's Most Mind-Blowing Design & Tech Innovations Revealed 🚀",
+        "AI, Design, Future: What Changed Everything This Year? 🤯",
+        "Exclusive: The Awards That Will Reshape Your Industry 🏆"
+      ],
+      "platformTips": [
+        {
+          "platform": "Substack",
+          "tips": [
+            "Use thread screenshot as newsletter header image",
+            "Create companion deep-dive post with expanded insights",
+            "Offer subscriber-only additional context/commentary"
+          ]
+        },
+        {
+          "platform": "Medium",
+          "tips": [
+            "Convert thread into long-form SEO-optimized article",
+            "Add data visualizations and expert quotes",
+            "Link back to original Twitter/X thread for engagement"
+          ]
+        },
+        {
+          "platform": "LinkedIn Article",
+          "tips": [
+            "Add professional commentary and industry analysis",
+            "Include LinkedIn-specific networking call-to-action",
+            "Tag key thought leaders mentioned in awards"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast cyberpunk-inspired color palette (deep blues, electric teals, neon accents). Futuristic sans-serif typography with slight motion blur. Geometric thread card designs with subtle 3D depth. Incorporate AI-generated texture overlays. Reference aesthetics: Blade Runner, Cyberpunk 2077 design language"
+      },
+      "exampleOutline": [
+        "Thread Opener: Provocative headline + visual teaser",
+        "Context: Why 2025's innovations matter",
+        "Award Categories: Breakdown of key sectors",
+        "Top 3 Groundbreaking Innovations Revealed",
+        "Future Predictions & Audience Engagement CTA"
+      ],
+      "hashtags": "#AI #Design #Innovation2025 #TechAwards #FutureOfWork #CreativeTech #AIInnovation #DesignTrends #TechInnovation #EmergingTech",
+      "textureIndex": 1
+    }
+  ]
+}

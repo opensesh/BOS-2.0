@@ -1,0 +1,211 @@
+{
+  "type": "long-form",
+  "date": "2026-01-06T16:30:27.726Z",
+  "ideas": [
+    {
+      "title": "Best of Lenny’s Newsletter 2026",
+      "description": "The 25 best posts from the past year, plus a few all-time classics",
+      "starred": true,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/best-of-lennys-newsletter-2026"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "Unlock Lenny's Top 25 Product Insights",
+        "Master Product Strategy in 10 Minutes",
+        "Your 2026 Product Playbook Revealed"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use clear chapter markers for each newsletter highlight",
+            "Include dynamic screen recordings of key insights",
+            "Create visual summaries for complex concepts"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-forward design with clean product interface aesthetic. Use dynamic blue-gray color palette with sharp geometric typography. Incorporate subtle motion graphics that highlight key text and transition between newsletter sections. Blend minimal startup design language with elegant information hierarchy. Use picture-in-picture technique to showcase newsletter excerpts alongside expert commentary."
+      },
+      "exampleOutline": [
+        "Introduction: Why These 25 Posts Matter",
+        "Context: Product Strategy Landscape in 2026",
+        "Breakdown: Top 5 Transformative Insights",
+        "Deep Dive: Tactical Implementation Strategies",
+        "Conclusion: How to Apply These Lessons"
+      ],
+      "hashtags": "#ProductStrategy #LennyNewsletter #TechInsights #ProductManagement #StartupTips #InnovationPlaybook #BusinessGrowth #AIProduct #TechTrends #ProductLeadership",
+      "textureIndex": 8
+    },
+    {
+      "title": "AMD unveils new AI PC processors for general use and gaming at CES",
+      "description": "AMD announced the latest version of its AI-powered PC chips designed for a variety of tasks from gaming to content creation and multitasking.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/05/amd-unveils-new-ai-pc-processors-for-general-use-and-gaming-at-ces/"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "Unlock Next-Gen Computing: AMD's AI Processor Guide",
+        "Boost Your PC Performance: AMD AI Chips Explained",
+        "Step-by-Step: AMD's Game-Changing AI Processors Revealed"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use screen recordings showing processor benchmarks",
+            "Include side-by-side performance comparisons",
+            "Create chapter markers for easy navigation"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech aesthetic with electric blue and graphite gray color palette. Dynamic motion graphics showing processor performance. Clean, angular typography with technical overlay animations. Circuit board-inspired background textures. Picture-in-picture demonstrations of processor capabilities."
+      },
+      "exampleOutline": [
+        "Introduction: What Makes AMD's New AI Processors Unique",
+        "The Problem: Current PC Performance Limitations",
+        "Step-by-Step: Breaking Down AI Processor Architecture",
+        "Performance Insights: Gaming, Creativity, and Multitasking",
+        "Future-Proofing Your PC: Implementation Strategies"
+      ],
+      "hashtags": "#AMDCES #AIProcessors #PCTechnology #ComputerUpgrade #TechInnovation #AIComputing #GamingPC #TechTutorial #ProcessorGuide #AMDInnovation",
+      "textureIndex": 4
+    },
+    {
+      "title": "Microsoft&#8217;s Nadella wants us to stop thinking of AI as &#8216;slop&#8217;",
+      "description": "Nadella wants us to think of AI as a human helper instead of a slop-generating job killer. New data for 2026 indicates he could be right.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/05/microsofts-nadella-wants-us-to-stop-thinking-of-ai-as-slop/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "AI: Your Career Upgrade, Not Job Killer",
+        "Nadella's Vision: AI as Your Professional Sidekick",
+        "Why AI Won't Replace You in 2026"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dynamic screen recordings showing Nadella's quotes/interviews",
+            "Include picture-in-picture with expert commentary segments",
+            "Create chapter markers for easy navigation and retention"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-forward design with electric blue/charcoal gradients, futuristic sans-serif typography, dynamic motion graphics showing AI/human collaboration, clean data visualization overlays, high-contrast color transitions representing transformation"
+      },
+      "exampleOutline": [
+        "Cold Open: Provocative AI job market statistic",
+        "Nadella's Philosophical Framework: AI as Augmentation",
+        "2026 Data: How AI Actually Transforms Work",
+        "Practical Skills for AI-Enhanced Careers",
+        "Call-to-Action: Free AI Career Roadmap Download"
+      ],
+      "hashtags": "#AI #CareerTech #MicrosoftAI #FutureOfWork #ProfessionalDevelopment #TechInnovation #AICareer #NadellaInsights #WorkplaceTrends #AITransformation",
+      "textureIndex": 12
+    },
+    {
+      "title": "Nvidia wants to be the Android of generalist robotics",
+      "description": "Nvidia unveiled a full-stack robotics ecosystem at CES 2026, including foundation models, simulation tools, and hardware. It wants to be the default platform for robotics.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/05/nvidia-wants-to-be-the-android-of-generalist-robotics/"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "Nvidia's Robot Revolution: Android of Robotics Revealed!",
+        "CES 2026: The Future of Robotics Just Changed",
+        "One Platform to Rule All Robots?"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use multi-camera setup to simulate live event feel",
+            "Prepare interactive graphic overlays for real-time audience engagement",
+            "Enable Super Chat for audience funding/interaction during stream"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy cyberpunk-inspired visual palette with electric blue and neon accents. Dynamic split-screen layouts showing live presenter and robot/tech demos. Futuristic motion graphics with technical wireframe elements. Typography: Sharp, angular sans-serif fonts. Animated technical diagrams that pulse and transform in real-time."
+      },
+      "exampleOutline": [
+        "Opening: Dramatic Nvidia robotics ecosystem reveal",
+        "Context: Current robotics landscape limitations",
+        "Deep Dive: Nvidia's Full-Stack Robotics Platform",
+        "Live Demonstration: Foundation Models in Action",
+        "Q&A and Community Interaction Segment"
+      ],
+      "hashtags": "#Nvidia #Robotics #AI #CES2026 #TechInnovation #FutureOfRobotics #AIRobotics #TechEvent #Innovation #RobotTechnology",
+      "textureIndex": 7
+    },
+    {
+      "title": "Nvidia launches powerful new Rubin chip architecture",
+      "description": "Nvidia CEO Jensen Huang officially launched the company’s new Rubin computing architecture, which he described as the state of the art in AI computing.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/05/nvidia-launches-powerful-new-rubin-chip-architecture/"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "AI's Next Leap: Inside Nvidia's Revolutionary Rubin Chip",
+        "Nvidia's Secret Weapon: A Computing Breakthrough",
+        "Jensen Huang Reveals Future of AI Computing"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use archival footage of Jensen Huang's keynote",
+            "Include technical B-roll of chip manufacturing process",
+            "Create animated graphics explaining chip architecture complexity"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-tech cinematic aesthetic with deep navy and electric blue color palette. Sleek, futuristic typography with technical motion graphics. Incorporate silicon/circuit board textures. Use subtle holographic overlays to represent computational complexity. Mix archival interview footage with dynamic 3D renderings of chip architecture."
+      },
+      "exampleOutline": [
+        "Opening: Dramatic reveal of Rubin chip's significance",
+        "Context: Current limitations in AI computing landscape",
+        "Core Content: Detailed breakdown of Rubin architecture innovations",
+        "Key Insight: Potential impact on AI development and computing",
+        "Closing: Future implications and Nvidia's strategic vision"
+      ],
+      "hashtags": "#NvidiaRubin #AIComputing #TechInnovation #JensenHuang #ChipTechnology #AIHardware #ComputerScience #TechBreakthrough #FutureOfAI #SiliconInnovation",
+      "textureIndex": 12
+    }
+  ]
+}

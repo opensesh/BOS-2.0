@@ -1,0 +1,101 @@
+{
+  "type": "long-form",
+  "date": "2025-10-26T17:15:16.022Z",
+  "ideas": [
+    {
+      "title": "Tutorial: ChatGPT Figma integration - Complete workflow setup",
+      "description": "Step-by-step guide to using ChatGPT's new Figma integration for automated design workflows",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/24/how-to-use-the-new-chatgpt-app-integrations-including-spotify-figma-canva-and-others/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/who-are-ai-browsers-for/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/video/the-browser-wars-are-back-and-this-time-theyre-powered-by-ai/"
+        }
+      ]
+    },
+    {
+      "title": "AI Browser Security: How we protect client work with browser agents",
+      "description": "Real security practices for using AI browser tools safely in professional design workflows",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/the-glaring-security-risks-with-ai-browser-agents/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/openai-wants-to-power-your-browser-and-that-might-be-security-nightmare/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/policy/806425/ice-social-media-surveillance-free-speech-assault"
+        }
+      ]
+    },
+    {
+      "title": "Framework: Design systems in the AI browser era",
+      "description": "How atomic design principles adapt when AI browsers can manipulate your components directly",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/video/the-browser-wars-are-back-and-this-time-theyre-powered-by-ai/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/who-are-ai-browsers-for/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/column/805821/the-next-legal-frontier-is-your-face-and-ai"
+        }
+      ]
+    },
+    {
+      "title": "Deep Dive: OpenAI's music generation tool for design presentations",
+      "description": "Hands-on exploration of creating custom soundtracks for client presentations and brand videos",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/openai-reportedly-developing-new-generative-music-tool/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/24/how-to-use-the-new-chatgpt-app-integrations-including-spotify-figma-canva-and-others/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/podcast/806168/guitar-hero-game-version-history"
+        }
+      ]
+    },
+    {
+      "title": "Business Use Case: How we validate AI tools before client work",
+      "description": "Our complete testing framework for evaluating new AI tools for production design workflows",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/high-schools-ai-security-system-confuses-doritos-bag-for-a-possible-firearm/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/real-estate-is-entering-its-ai-slop-era/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/casios-fluffy-ai-robot-squeaked-its-way-into-my-heart/"
+        }
+      ]
+    }
+  ]
+}

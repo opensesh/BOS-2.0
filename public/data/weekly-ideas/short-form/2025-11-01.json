@@ -1,0 +1,89 @@
+{
+  "type": "short-form",
+  "date": "2025-11-01T17:14:28.645Z",
+  "ideas": [
+    {
+      "title": "Carousel: AI robot creativity vs human design",
+      "description": "3 slides comparing how AI 'channels Robin Williams' in robotics vs how designers use AI for creative work",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/01/ai-researchers-embodied-an-llm-into-a-robot-and-it-started-channeling-robin-williams/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/31/chatgpt-everything-to-know-about-the-ai-chatbot/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/31/yc-alum-adam-raises-4-1m-to-turn-viral-text-to-3d-tool-into-ai-copilot/"
+        }
+      ]
+    },
+    {
+      "title": "Reel: Text-to-3D workflow demo",
+      "description": "Quick tutorial showing Adam's viral text-to-3D tool in action for design mockups",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/31/yc-alum-adam-raises-4-1m-to-turn-viral-text-to-3d-tool-into-ai-copilot/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/31/chatgpt-everything-to-know-about-the-ai-chatbot/"
+        }
+      ]
+    },
+    {
+      "title": "Story Poll: AI energy costs vs creative output",
+      "description": "Interactive poll asking followers if rising AI energy costs will change how they use creative tools",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/01/rising-energy-prices-put-ai-and-data-centers-in-the-crosshairs/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/31/aws-exceeds-wall-streets-expectations-as-demand-for-cloud-infra-remains-high/"
+        }
+      ]
+    },
+    {
+      "title": "Carousel: Apple's AI M&A strategy for designers",
+      "description": "Breaking down what Tim Cook's AI acquisition openness means for creative tools and workflows",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/31/tim-cook-says-apple-is-open-to-ma-on-the-ai-front/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/equity-live-from-300m-seed-rounds-to-data-center-builds-ai-is-feeling-bubbly/"
+        }
+      ]
+    },
+    {
+      "title": "Post: Future of design in the cloud",
+      "description": "Thought-provoking question about whether all design tools will eventually live in cloud infrastructure",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/31/aws-exceeds-wall-streets-expectations-as-demand-for-cloud-infra-remains-high/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/31/ai-mania-tanks-coreweaves-core-scientific-acquisition-it-buys-python-notebook-marimo/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/811826/microsoft-xbox-full-screen-experience-fse-msi-claw-windows-11-insider"
+        }
+      ]
+    }
+  ]
+}

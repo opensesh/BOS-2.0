@@ -1,0 +1,97 @@
+{
+  "type": "blog",
+  "date": "2025-10-26T17:15:31.630Z",
+  "ideas": [
+    {
+      "title": "Why AI browsers will kill the design handoff (and that's good)",
+      "description": "How browser-native AI agents are making design-to-development translation obsolete",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/who-are-ai-browsers-for/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/video/the-browser-wars-are-back-and-this-time-theyre-powered-by-ai/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/the-glaring-security-risks-with-ai-browser-agents/"
+        }
+      ]
+    },
+    {
+      "title": "The ChatGPT-Figma integration changes nothing (and everything)",
+      "description": "Why surface-level tool integrations miss the real AI transformation in design",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/24/how-to-use-the-new-chatgpt-app-integrations-including-spotify-figma-canva-and-others/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/openai-wants-to-power-your-browser-and-that-might-be-a-security-nightmare/"
+        }
+      ]
+    },
+    {
+      "title": "Our take: Why AI security failures reveal design's blind spots",
+      "description": "What Doritos-detecting school systems teach us about designing responsible AI interfaces",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/high-schools-ai-security-system-confuses-doritos-bag-for-a-possible-firearm/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/column/805821/the-next-legal-frontier-is-your-face-and-ai"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/policy/806425/ice-social-media-surveillance-free-speech-assault"
+        }
+      ]
+    },
+    {
+      "title": "Where design is heading: From creative tools to creative infrastructure",
+      "description": "Why the next wave isn't about better brushes, but about systems that think",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/openai-reportedly-developing-new-generative-music-tool/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/real-estate-is-entering-its-ai-slop-era/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/casios-fluffy-ai-robot-squeaked-its-way-into-my-heart/"
+        }
+      ]
+    },
+    {
+      "title": "The realistic AI adoption framework for design teams in 2025",
+      "description": "Beyond the hype: What actually works when integrating AI into existing design workflows",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/the-glaring-security-risks-with-ai-browser-agents/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/report/806728/tech-left-teens-fighting-over-scraps-robots-taking-jobs"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/browser-password-managers/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,331 @@
+{
+  "type": "short-form",
+  "date": "2026-01-02T16:25:59.829Z",
+  "ideas": [
+    {
+      "title": "Tesla annual sales decline 9% as it’s overtaken by BYD as global EV leader",
+      "description": "Tesla annual sales have fallen for the second year in a row, a drop fueled by the removal of the federal tax credit in the U.S. and competition from Chinese automakers.",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/02/tesla-annual-sales-decline-9-as-its-overtaken-by-byd-as-global-ev-leader/"
+        }
+      ],
+      "format": "story",
+      "subcategory": "story",
+      "hooks": [
+        "Tesla's EV Empire Crumbling?",
+        "The Rise of BYD: Game Over Tesla?",
+        "9% Drop: What Happened to Tesla?"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic data visualization transitions",
+            "Include quick comparative graphics between Tesla and BYD",
+            "Create rapid-fire stat animations to maintain engagement"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "Each slide should highlight a different sales/market insight",
+            "Use clean, infographic-style design for data presentation",
+            "Progressive reveal of key statistics across slides"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Open with shocking sales percentage graphic",
+            "Use voice-over with fast-paced visual transitions",
+            "Include global map showing EV market shifts"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add more detailed industry analysis context",
+            "Use more professional, data-driven visual language",
+            "Include expert commentary quote graphic"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast electric blue and dark gray color palette. Geometric, angular data visualizations with electric/tech-inspired motion graphics. Bold sans-serif typography with dynamic scaling. Futuristic tech aesthetic blending data transparency with dramatic visual storytelling."
+      },
+      "exampleOutline": [
+        "Section 1: Provocative Sales Decline Headline",
+        "Section 2: Tesla vs BYD Market Context",
+        "Section 3: Key Sales Percentage Breakdown",
+        "Section 4: Global EV Market Implications",
+        "Section 5: Future Prediction/Call to Engage"
+      ],
+      "hashtags": "#Tesla #ElectricVehicles #EVMarket #BYD #TechInnovation #AutoIndustry #SalesTrends #CleanEnergy #GlobalTech #IndustryDisruption",
+      "textureIndex": 2
+    },
+    {
+      "title": "Nvidia&#8217;s AI empire: A look at its top startup investments",
+      "description": "Over the last two years, Nvidia has used its ballooning fortunes to invest in over 100 AI startups. Here are the giant semiconductor's largest investments.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/02/nvidias-ai-empire-a-look-at-its-top-startup-investments/"
+        }
+      ],
+      "format": "carousel",
+      "subcategory": "carousel",
+      "hooks": [
+        "Nvidia's AI Investment Goldmine: 100+ Startups Revealed",
+        "How Nvidia Bets Billions on AI Future",
+        "Silicon Valley's Biggest AI Shopping Spree Exposed"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic motion graphics between slides",
+            "Create quick transitions highlighting investment numbers",
+            "Add subtle AI-inspired visual effects"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have a provocative stat",
+            "Use consistent color palette across slides",
+            "Design each slide as a mini-infographic"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Compress carousel content into 60-second narrative",
+            "Use voiceover to explain investment strategy",
+            "Add text overlays for key data points"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add more technical context for professional audience",
+            "Include potential investment impact analysis",
+            "Use more formal typography and design"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech-inspired palette with electric blues and deep blacks. Geometric, angular design language mimicking circuit boards. Futuristic typography with sharp edges. Subtle glitch/data visualization animations. Cyberpunk-adjacent aesthetic blending information design with visual excitement."
+      },
+      "exampleOutline": [
+        "Slide 1: Provocative headline & opening stat",
+        "Slide 2: Nvidia's AI investment landscape overview",
+        "Slide 3-5: Top 3 startup investment highlights",
+        "Slide 6: Total investment & strategic vision",
+        "Slide 7: Call-to-action & further exploration"
+      ],
+      "hashtags": "#NvidiaAI #AIStartups #TechInvestment #ArtificialIntelligence #VentureCapital #SiliconValley #TechInnovation #AITrends #StartupEcosystem #FutureOfTech",
+      "textureIndex": 12
+    },
+    {
+      "title": "The 16 top logistics, manufacturing, materials startups from Disrupt Startup Battlefield",
+      "description": "Here is the full list of the logistics, manufacturing, and materials Startup Battlefield 200 selectees, along with a note on what made us select them for the competition.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/02/the-16-top-logistics-manufacturing-materials-startups-from-disrupt-startup-battlefield/"
+        }
+      ],
+      "format": "reel",
+      "subcategory": "reel",
+      "hooks": [
+        "16 Startups Reshaping Manufacturing's Future 🚀",
+        "Disrupt Battlefield's Hidden Innovation Gems",
+        "Tech Startups Breaking Industrial Boundaries"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick transitions between startup logos/visuals",
+            "Include dynamic motion graphics for each startup highlight",
+            "Create text overlays that appear/disappear rapidly"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Dramatic title/hook",
+            "Each slide showcases one startup with key innovation",
+            "Final slide: Call-to-action and follow/learn more"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Open with high-energy startup montage",
+            "Use voiceover to quickly explain each startup's unique value",
+            "End with unexpected/surprising statistic about innovation"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "More professional, data-driven narrative",
+            "Include potential investment/market impact insights",
+            "Use more technical language and industry context"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy, tech-futuristic aesthetic with bold geometric transitions. Cyberpunk-inspired color palette (deep blues, electric teals, sharp oranges). Dynamic typography that animates/fragments. Rapid visual rhythm mimicking technological acceleration. Incorporate circuit/network overlay graphics."
+      },
+      "exampleOutline": [
+        "Hook: Dramatic startup innovation reveal",
+        "Context: Disrupt Battlefield's innovation landscape",
+        "Rapid startup showcase (3-5 second segments)",
+        "Key trend/pattern across selected startups",
+        "Call-to-action: Learn more about innovations"
+      ],
+      "hashtags": "#StartupInnovation #TechDisruption #Manufacturing #AIStartups #IndustrialTech #FutureOfWork #TechBattlefield #StartupScene #InnovationEconomy #TechTrends",
+      "textureIndex": 7
+    },
+    {
+      "title": "Pebble reboots its thinnest smartwatch with the Pebble Round 2",
+      "description": "Pebble launches a $199 smartwatch with rounded screen that can last up to 2 weeks on one charge.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/02/pebble-reboots-its-thinnest-smartwatch-with-the-pebble-round-2/"
+        }
+      ],
+      "format": "reel",
+      "subcategory": "reel",
+      "hooks": [
+        "Smartwatch revolution: 2 weeks battery, impossibly thin design",
+        "The watch that never dies - Pebble's comeback",
+        "Future of wearables fits in your pocket"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic product reveal animation",
+            "Highlight battery life with visual countdown",
+            "Include rapid-fire feature transitions"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Dramatic product silhouette",
+            "Alternate slides between technical specs and lifestyle shots",
+            "Final slide with clear purchase/learn more CTA"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected product comparison",
+            "Use quick-cut editing style",
+            "Include text overlays for key specs"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as tech innovation narrative",
+            "Include brief market context",
+            "Use more technical language"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "Sleek cyberpunk-inspired aesthetic with high-contrast metallic grays, electric blue accents. Minimalist typography with floating holographic product renders. Dynamic motion graphics showing battery life and device thinness. Blend of technical precision and futuristic abstraction."
+      },
+      "exampleOutline": [
+        "Hook: Dramatic product reveal",
+        "Problem: Current smartwatch limitations",
+        "Solution: Pebble Round 2 features",
+        "Key Innovation: Battery & design breakthrough",
+        "Call-to-Action: Learn more/Pre-order"
+      ],
+      "hashtags": "#SmartWatch #TechInnovation #Wearables #PebbleRound #FutureOfTech #GadgetReview #InnovativeTech #WearableTech #TechDesign #ProductLaunch",
+      "textureIndex": 1
+    },
+    {
+      "title": "In 2026, AI will move from hype to pragmatism",
+      "description": "In 2026, here's what you can expect from the AI industry: new architectures, smaller models, world models, reliable agents, physical AI, and products designed for real-world use.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/02/in-2026-ai-will-move-from-hype-to-pragmatism/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "AI in 2026: Beyond Hype, Into Reality",
+        "The Pragmatic AI Revolution Starts Now",
+        "6 Ways AI Will Transform Your World"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use fast-paced text transitions to highlight key trends",
+            "Include bold, futuristic motion graphics",
+            "Create a quick visual countdown of AI predictions"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "Each slide focuses on one key AI trend",
+            "Use minimalist infographic style with clean icons",
+            "Progressive reveal of insights across slides"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with a provocative AI prediction statement",
+            "Use quick cuts between conceptual AI imagery",
+            "Include dynamic text overlays with key statistics"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add more technical depth and professional context",
+            "Include expert quote or credible source reference",
+            "Use more subdued, analytical visual approach"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Cyberpunk-meets-minimalism aesthetic. High-contrast color palette with electric blues, deep purples, and neon accents. Geometric, fragmented typography suggesting technological deconstruction. Subtle glitch effects and translucent layering. Futuristic but not overwhelming, balancing complexity with clean design principles."
+      },
+      "exampleOutline": [
+        "Hook: Provocative AI prediction statement",
+        "Quick context of current AI landscape",
+        "6 key trends for 2026 (rapid-fire format)",
+        "Implications for industry and individuals",
+        "Call-to-action: Learn more, stay curious"
+      ],
+      "hashtags": "#AI2026 #FutureOfTech #ArtificialIntelligence #TechTrends #InnovationInsights #AIRevolution #EmergingTech #FutureTech #InnovationStrategy #TechIntelligence",
+      "textureIndex": 10
+    }
+  ]
+}

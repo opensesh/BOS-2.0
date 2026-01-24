@@ -1,0 +1,101 @@
+{
+  "type": "short-form",
+  "date": "2025-10-26T17:15:01.926Z",
+  "ideas": [
+    {
+      "title": "Carousel: ChatGPT integrations for designers",
+      "description": "5-slide breakdown of using ChatGPT with Figma, Canva, and Spotify for creative workflows",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/24/how-to-use-the-new-chatgpt-app-integrations-including-spotify-figma-canva-and-others/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/openai-reportedly-developing-new-generative-music-tool/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/column/805821/the-next-legal-frontier-is-your-face-and-ai"
+        }
+      ]
+    },
+    {
+      "title": "Reel: AI browser security demo",
+      "description": "Quick visual showing why AI browsers might be risky for design teams handling client data",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/the-glaring-security-risks-with-ai-browser-agents/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/openai-wants-to-power-your-browser-and-that-might-be-a-security-nightmare/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/video/the-browser-wars-are-back-and-this-time-theyre-powered-by-ai/"
+        }
+      ]
+    },
+    {
+      "title": "Story series: AI fails in design",
+      "description": "3-part story showing funny AI mistakes (like Doritos bag = firearm) and design implications",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/high-schools-ai-security-system-confuses-doritos-bag-for-a-possible-firearm/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/real-estate-is-entering-its-ai-slop-era/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/column/805821/the-next-legal-frontier-is-your-face-and-ai"
+        }
+      ]
+    },
+    {
+      "title": "Carousel: Future of creative work",
+      "description": "4 slides exploring how AI is changing jobs for designers, with realistic take on automation",
+      "starred": true,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/report/806728/tech-left-teens-fighting-over-scraps-robots-taking-jobs"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/who-are-ai-browsers-for/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/casios-fluffy-ai-robot-squeaked-its-way-into-my-heart/"
+        }
+      ]
+    },
+    {
+      "title": "Reel: AI music + visual design",
+      "description": "30-second exploration of how generative music tools could change motion graphics workflows",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/openai-reportedly-developing-new-generative-music-tool/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/24/how-to-use-the-new-chatgpt-app-integrations-including-spotify-figma-canva-and-others/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/podcast/806168/guitar-hero-game-version-history"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "type": "weekly-update",
+  "date": "2025-11-01T17:15:15.517Z",
+  "updates": [
+    {
+      "title": "Figma acquires AI-powered media generation company Weavy to integrate content creation capabilities into its design platform, signaling major expansion of AI tools for designers.",
+      "timestamp": "10/30/2025, 1:15 PM",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/10/30/figma-acquires-ai-powered-media-generation-company-weavy/"
+        }
+      ]
+    },
+    {
+      "title": "Apple CEO Tim Cook announces openness to AI-focused acquisitions while expanding partnerships beyond OpenAI integration, indicating accelerated AI strategy for creative tools.",
+      "timestamp": "10/31/2025, 3:17 PM",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/10/31/tim-cook-says-apple-is-open-to-ma-on-the-ai-front/"
+        }
+      ]
+    },
+    {
+      "title": "YC-backed Adam raises $4.1M seed round to transform viral text-to-3D generation tool into comprehensive AI design copilot after generating 10+ million social media impressions.",
+      "timestamp": "10/31/2025, 2:20 PM",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/10/31/yc-alum-adam-raises-4-1m-to-turn-viral-text-to-3d-tool-into-ai-copilot/"
+        }
+      ]
+    },
+    {
+      "title": "Perplexity strikes multi-year licensing deal with Getty Images, legitimizing AI-powered search platform's use of stock photography and addressing previous plagiarism concerns.",
+      "timestamp": "10/31/2025, 3:46 PM",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/10/31/perplexity-strikes-multi-year-licensing-deal-with-getty-images/"
+        }
+      ]
+    },
+    {
+      "title": "AI industry shows bubble warning signs as CoreWeave's $5.4B Core Scientific acquisition fails while energy costs and consumer backlash against data centers intensify.",
+      "timestamp": "11/01/2025, 4:15 PM",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/11/01/rising-energy-prices-put-ai-and-data-centers-in-the-crosshairs/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/10/31/ai-mania-tanks-coreweaves-core-scientific-acquisition-it-buys-python-notebook-marimo/"
+        }
+      ]
+    }
+  ]
+}

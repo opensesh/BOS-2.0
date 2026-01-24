@@ -1,0 +1,62 @@
+{
+  "type": "monthly-outlook",
+  "date": "2026-01-15T16:26:14.439Z",
+  "updates": [
+    {
+      "title": "The multibillion-dollar AI security problem enterprises can’t ignore",
+      "description": "AI agents are supposed to make work easier. But they’re also creating a whole new category of security nightmares.  As companies deploy AI-powered chatbots, agents, and copilots across their operations, they’re facing a new risk: How do you let employees and AI agents use powerful AI tools without accidentally leaking sensitive data, violating compliance rules, or opening […]",
+      "timestamp": "01/14/2026, 7:26 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/the-multi-billion-ai-security-problem-enterprises-cant-ignore/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/podcast/the-multi-billion-ai-security-problem-enterprises-cant-ignore/",
+      "topicCategory": "ai-creative"
+    },
+    {
+      "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT",
+      "description": "We’re expanding the capabilities of the Figma app in ChatGPT, so you can turn your ideas into creative assets and presentations that you can polish in Figma Buzz and Figma Slides.",
+      "timestamp": "12/11/2025, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/",
+      "topicCategory": "ai-creative"
+    },
+    {
+      "title": "Charmaine Lee’s 10 rules for building developer tools that feel like magic",
+      "description": "As a product manager working on Snapchat’s Lens Studio for AR developers, Charmaine knows what it takes to delight creators.",
+      "timestamp": "06/07/2024, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/charmaine-lees-10-rules-for-building-developer-tools/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/charmaine-lees-10-rules-for-building-developer-tools/",
+      "topicCategory": "general-tech"
+    },
+    {
+      "title": "US senators demand answers from X, Meta, Alphabet and others on sexualized deepfakes",
+      "description": "In a letter to the leaders of X, Meta, Alphabet, Snap, Reddit and TikTok, several U.S. senators are demanding the companies provide proof that they have \"robust protections and policies\" in place, and how they plan to curb the rise of sexualized deepfakes on their platforms.",
+      "timestamp": "01/15/2026, 3:00 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/15/us-senators-demand-answers-from-x-meta-alphabet-on-sexualized-deepfakes/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/2026/01/15/us-senators-demand-answers-from-x-meta-alphabet-on-sexualized-deepfakes/",
+      "topicCategory": "social-trends"
+    }
+  ]
+}

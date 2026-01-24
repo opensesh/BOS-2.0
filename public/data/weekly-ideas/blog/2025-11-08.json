@@ -1,0 +1,101 @@
+{
+  "type": "blog",
+  "date": "2025-11-08T17:15:07.467Z",
+  "ideas": [
+    {
+      "title": "Why the AI hype cycle is actually helping designers (if you know where to look)",
+      "description": "Analysis of how market saturation and backlash create opportunities for thoughtful AI adoption",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/softbank-is-back-and-the-ai-hype-cycle-is-eating-itself/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/meta-brings-its-short-form-video-feed-of-ai-slop-to-europe/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/sam-altman-says-openai-has-20b-arr-and-about-1-4-trillion-in-data-center-commitments/"
+        }
+      ]
+    },
+    {
+      "title": "Our take: Why OpenAI's $20B ARR means nothing for most designers",
+      "description": "Breaking down what enterprise AI growth actually means for day-to-day creative work",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/sam-altman-says-openai-has-20b-arr-and-about-1-4-trillion-in-data-center-commitments/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/sam-altman-says-he-doesnt-want-the-government-to-bail-out-openai-if-it-fails/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/07/kim-kardashian-says-chatgpt-is-her-frenemy/"
+        }
+      ]
+    },
+    {
+      "title": "The creative responsibility gap: What Kim K's 'frenemy' comment reveals about AI adoption",
+      "description": "Why mainstream AI anxiety signals the need for designer leadership in responsible implementation",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/07/kim-kardashian-says-chatgpt-is-her-frenemy/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/07/seven-more-families-are-now-suing-openai-over-chatgpts-role-in-suicides-delusions/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/entertainment/816399/peter-hujars-day-ira-sachs-interview"
+        }
+      ]
+    },
+    {
+      "title": "Why voice isolation tech will change design workflows more than image generation",
+      "description": "Analysis of how better human-computer communication transforms creative collaboration",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/subtle-computings-voice-isolation-models-help-computers-understand-you-in-noisy-environments/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/21309820/best-wireless-earbuds"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/gear-news-of-the-week-fairphone-lands-in-the-us-and-whatsapp-is-finally-on-the-apple-watch/"
+        }
+      ]
+    },
+    {
+      "title": "The translation revolution designers aren't talking about",
+      "description": "How AI translation tools will reshape global design systems and cross-cultural creative work",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/amazon-launches-an-ai-powered-kindle-translate-service-for-ebook-authors/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/gear-news-of-the-week-fairphone-lands-in-the-us-and-whatsapp-is-finally-on-the-apple-watch/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/817277/apple-ipad-killed-the-netbook-cheap-macbook-is-bringing-them-back"
+        }
+      ]
+    }
+  ]
+}

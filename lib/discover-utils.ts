@@ -1,0 +1,396 @@
+import { NewsCardData, IdeaCardData, Source, NewsData, IdeaData, ContentTier, PlatformTip } from '@/types';
+
+// ===========================================
+// HTML Entity Decoder (Client-side safety net)
+// ===========================================
+
+/**
+ * Decode HTML entities in text (e.g., &#x27; → ', &#8217; → ')
+ * Used as a safety net for any content that may have slipped through
+ */
+export function decodeHTMLEntities(text: string): string {
+  if (!text || typeof text !== 'string') return text;
+  
+  // Use DOM API if available (browser)
+  if (typeof document !== 'undefined') {
+    const textarea = document.createElement('textarea');
+    textarea.innerHTML = text;
+    return textarea.value;
+  }
+  
+  // Fallback for server-side/Node.js
+  const namedEntities: Record<string, string> = {
+    '&amp;': '&',
+    '&lt;': '<',
+    '&gt;': '>',
+    '&quot;': '"',
+    '&apos;': "'",
+    '&nbsp;': ' ',
+    '&mdash;': '\u2014', // —
+    '&ndash;': '\u2013', // –
+    '&ldquo;': '\u201C', // "
+    '&rdquo;': '\u201D', // "
+    '&lsquo;': '\u2018', // '
+    '&rsquo;': '\u2019', // '
+    '&hellip;': '\u2026', // …
+  };
+  
+  let decoded = text;
+  
+  // Replace named entities
+  for (const [entity, char] of Object.entries(namedEntities)) {
+    decoded = decoded.replace(new RegExp(entity, 'gi'), char);
+  }
+  
+  // Replace numeric entities (decimal: &#8217; and hex: &#x27;)
+  decoded = decoded.replace(/&#(\d+);/g, (_, num) => {
+    return String.fromCharCode(parseInt(num, 10));
+  });
+  
+  decoded = decoded.replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => {
+    return String.fromCharCode(parseInt(hex, 16));
+  });
+  
+  return decoded;
+}
+
+// ===========================================
+// Sonic Line Texture Utilities
+// ===========================================
+
+/**
+ * All available sonic line texture paths
+ * These are used as card backgrounds for IdeaCards
+ */
+export const SONIC_LINE_TEXTURES = [
+  '/assets/textures/GFX-DATABASE-SONIC-LINE-01.jpg',
+  '/assets/textures/GFX-DATABASE-SONIC-LINE-02.jpg',
+  '/assets/textures/GFX-DATABASE-SONIC-LINE-03.jpg',
+  '/assets/textures/GFX-DATABASE-SONIC-LINE-04.jpg',
+  '/assets/textures/GFX-DATABASE-SONIC-LINE-05.jpg',
+  '/assets/textures/GFX-DATABASE-SONIC-LINE-06.jpg',
+  '/assets/textures/GFX-DATABASE-SONIC-LINE-07.jpg',
+  '/assets/textures/GFX-DATABASE-SONIC-LINE-08.jpg',
+  '/assets/textures/GFX-DATABASE-SONIC-LINE-09.jpg',
+  '/assets/textures/GFX-DATABASE-SONIC-LINE-010.jpg',
+  '/assets/textures/GFX-DATABASE-SONIC-LINE-011.jpg',
+  '/assets/textures/GFX-DATABASE-SONIC-LINE-012.jpg',
+  '/assets/textures/GFX-DATABASE-SONIC-LINE-013.jpg',
+] as const;
+
+/**
+ * Get a sonic line texture path by index
+ * Wraps around if index exceeds array length
+ */
+export function getTextureByIndex(index: number): string {
+  const safeIndex = Math.abs(index) % SONIC_LINE_TEXTURES.length;
+  return SONIC_LINE_TEXTURES[safeIndex];
+}
+
+/**
+ * Get a random texture index (1-13)
+ * Used during content generation to assign textures
+ */
+export function getRandomTextureIndex(): number {
+  return Math.floor(Math.random() * SONIC_LINE_TEXTURES.length);
+}
+
+/**
+ * Get a deterministic texture index based on a string (for consistent assignment)
+ * Useful when you need the same item to always get the same texture
+ */
+export function getTextureIndexFromString(str: string): number {
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    const char = str.charCodeAt(i);
+    hash = ((hash << 5) - hash) + char;
+    hash = hash & hash; // Convert to 32bit integer
+  }
+  return Math.abs(hash) % SONIC_LINE_TEXTURES.length;
+}
+
+/**
+ * Aggregate sources from multiple items, removing duplicates
+ */
+export function aggregateSources(items: Array<{ sources: Array<{ name: string; url: string }> }>): Source[] {
+  const sourceMap = new Map<string, Source>();
+  
+  items.forEach((item) => {
+    item.sources.forEach((source, index) => {
+      const key = source.name.toLowerCase();
+      if (!sourceMap.has(key)) {
+        sourceMap.set(key, {
+          id: `source-${sourceMap.size}`,
+          name: source.name,
+          url: source.url,
+        });
+      }
+    });
+  });
+  
+  return Array.from(sourceMap.values());
+}
+
+/**
+ * Generate a slug from a title
+ */
+function generateSlug(title: string): string {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .substring(0, 60);
+}
+
+/**
+ * Format timestamp to relative time or date string
+ */
+function formatTimestamp(timestamp: string): string {
+  try {
+    const date = new Date(timestamp);
+    const now = new Date();
+    const diffMs = now.getTime() - date.getTime();
+    const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
+    const diffDays = Math.floor(diffHours / 24);
+    
+    if (diffHours < 1) {
+      return 'Just now';
+    } else if (diffHours < 24) {
+      return `${diffHours} ${diffHours === 1 ? 'hour' : 'hours'} ago`;
+    } else if (diffDays < 7) {
+      return `${diffDays} ${diffDays === 1 ? 'day' : 'days'} ago`;
+    } else {
+      return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+    }
+  } catch {
+    return timestamp;
+  }
+}
+
+/**
+ * Generate a unified title from multiple items
+ */
+function generateUnifiedTitle(items: Array<{ title: string }>, category: string): string {
+  if (items.length === 0) return '';
+  if (items.length === 1) return items[0].title;
+  
+  // For multiple items, use the first title as base and indicate aggregation
+  const firstTitle = items[0].title;
+  // If title is too long, truncate and add context
+  if (firstTitle.length > 100) {
+    return firstTitle.substring(0, 97) + '...';
+  }
+  return firstTitle;
+}
+
+/**
+ * Generate a unified summary/body from multiple items
+ */
+function generateUnifiedSummary(items: Array<{ title: string; description?: string }>): string {
+  if (items.length === 0) return '';
+  if (items.length === 1) {
+    return items[0].description || items[0].title.substring(0, 150);
+  }
+  
+  // Combine descriptions or titles
+  const summaries = items
+    .map((item) => item.description || item.title)
+    .filter(Boolean)
+    .slice(0, 3); // Limit to first 3 items
+  
+  if (summaries.length === 0) return '';
+  if (summaries.length === 1) return summaries[0].substring(0, 200);
+  
+  // Combine summaries
+  const combined = summaries.join(' • ').substring(0, 200);
+  return combined + (combined.length >= 200 ? '...' : '');
+}
+
+/**
+ * Determine content tier based on available data
+ * - Items with articlePath = 'featured' (full Perplexity research)
+ * - Items with aiSummary = 'summary' (AI-generated summary)
+ * - Everything else = 'quick' (RSS description + external link)
+ */
+function determineTier(update: {
+  tier?: ContentTier;
+  articlePath?: string;
+  aiSummary?: string;
+}): ContentTier {
+  // If tier is explicitly set in JSON, use it
+  if (update.tier) return update.tier;
+  
+  // Auto-assign based on available fields
+  if (update.articlePath) return 'featured';
+  if (update.aiSummary) return 'summary';
+  return 'quick';
+}
+
+/**
+ * Process news data from JSON files
+ */
+export function processNewsData(data: NewsData): NewsCardData[] {
+  if (!data.updates || data.updates.length === 0) return [];
+  
+  // Group updates into cards (can be 1-4 items per card)
+  const cards: NewsCardData[] = [];
+  
+  // Process each update as a potential card
+  data.updates.forEach((update, index) => {
+    const sources: Source[] = update.sources.map((source, idx) => ({
+      id: `source-${index}-${idx}`,
+      name: decodeHTMLEntities(source.name),
+      url: source.url,
+    }));
+    
+    // Decode HTML entities from title and description
+    const cleanTitle = decodeHTMLEntities(update.title);
+    const cleanDescription = update.description ? decodeHTMLEntities(update.description) : undefined;
+    
+    // Use description if available, otherwise fall back to a truncated title
+    const summary = cleanDescription 
+      ? cleanDescription.split('\n')[0] // Use first paragraph as summary
+      : cleanTitle.substring(0, 200);
+    
+    // Determine tier based on available data
+    const tier = determineTier(update);
+    
+    // For quick tier, use first source URL as the external link
+    const sourceUrl = tier === 'quick' && sources.length > 0 
+      ? sources[0].url 
+      : update.sourceUrl;
+    
+    const card: NewsCardData = {
+      id: `news-${data.type}-${index}`,
+      slug: generateSlug(cleanTitle),
+      title: cleanTitle,
+      summary,
+      content: cleanDescription ? cleanDescription.split('\n\n') : undefined,
+      sources,
+      publishedAt: formatTimestamp(update.timestamp),
+      category: data.type,
+      // Tiered content fields
+      tier,
+      articlePath: update.articlePath,
+      aiSummary: update.aiSummary ? decodeHTMLEntities(update.aiSummary) : undefined,
+      sourceUrl,
+      // Topic categorization
+      topicCategory: update.topicCategory,
+      // Total sources count (for featured articles with Perplexity sources)
+      totalSources: update.totalSources,
+    };
+    
+    cards.push(card);
+  });
+  
+  return cards;
+}
+
+/**
+ * Process idea data from JSON files
+ * Idea items are content PROMPTS - they display as non-clickable cards
+ * with a "Generate Brief" action that sends to the chat interface
+ * Now supports rich creative brief fields (hooks, platformTips, etc.)
+ */
+export function processIdeaData(data: IdeaData): IdeaCardData[] {
+  if (!data.ideas || data.ideas.length === 0) return [];
+  
+  return data.ideas.map((idea, index) => {
+    const sources: Source[] = idea.sources.map((source, idx) => ({
+      id: `source-${index}-${idx}`,
+      name: decodeHTMLEntities(source.name),
+      url: source.url,
+    }));
+    
+    // Decode HTML entities from title and description
+    const cleanTitle = decodeHTMLEntities(idea.title);
+    const cleanDescription = decodeHTMLEntities(idea.description);
+    
+    // Use pre-assigned texture index, or generate one deterministically from title
+    const textureIndex = idea.textureIndex ?? getTextureIndexFromString(cleanTitle);
+    
+    return {
+      id: `idea-${data.type}-${index}`,
+      slug: generateSlug(cleanTitle),
+      title: cleanTitle,
+      description: cleanDescription,
+      sources,
+      publishedAt: formatTimestamp(data.date),
+      category: data.type,
+      starred: idea.starred,
+      isPrompt: true as const, // Always true - idea items are content prompts
+      // Content format (e.g., 'reel', 'carousel', 'video', 'article')
+      format: idea.format,
+      // Rich creative brief fields (optional for backwards compatibility, also decode)
+      hooks: idea.hooks?.map(h => decodeHTMLEntities(h)),
+      platformTips: idea.platformTips as PlatformTip[] | undefined,
+      visualDirection: idea.visualDirection,
+      exampleOutline: idea.exampleOutline?.map(s => decodeHTMLEntities(s)),
+      hashtags: idea.hashtags ? decodeHTMLEntities(idea.hashtags) : undefined,
+      // Visual design fields
+      pexelsImageUrl: idea.pexelsImageUrl,
+      textureIndex,
+    };
+  });
+}
+
+/**
+ * Load news data from JSON file
+ */
+export async function loadNewsData(type: 'weekly-update' | 'monthly-outlook'): Promise<NewsCardData[]> {
+  try {
+    const response = await fetch(`/data/news/${type}/latest.json`, {
+      cache: 'no-store', // Bypass cache to get fresh data
+    });
+    if (!response.ok) {
+      console.error(`Failed to load ${type} data:`, response.statusText);
+      return [];
+    }
+    const data: NewsData = await response.json();
+    return processNewsData(data);
+  } catch (error) {
+    console.error(`Error loading ${type} data:`, error);
+    return [];
+  }
+}
+
+/**
+ * Load idea data from JSON file
+ */
+export async function loadIdeaData(type: 'short-form' | 'long-form' | 'blog'): Promise<IdeaCardData[]> {
+  try {
+    const response = await fetch(`/data/weekly-ideas/${type}/latest.json`, {
+      cache: 'no-store', // Bypass cache to get fresh data
+    });
+    if (!response.ok) {
+      console.error(`Failed to load ${type} data:`, response.statusText);
+      return [];
+    }
+    const data: IdeaData = await response.json();
+    return processIdeaData(data);
+  } catch (error) {
+    console.error(`Error loading ${type} data:`, error);
+    return [];
+  }
+}
+
+/**
+ * Generate card data in layout pattern (1 featured + 3 compact)
+ */
+export function generateCardGroups<T extends NewsCardData | IdeaCardData>(
+  cards: T[]
+): Array<{ featured: T; compact: T[] }> {
+  const groups: Array<{ featured: T; compact: T[] }> = [];
+  
+  for (let i = 0; i < cards.length; i += 4) {
+    const featured = cards[i];
+    const compact = cards.slice(i + 1, i + 4);
+    
+    if (featured) {
+      groups.push({ featured, compact });
+    }
+  }
+  
+  return groups;
+}
+

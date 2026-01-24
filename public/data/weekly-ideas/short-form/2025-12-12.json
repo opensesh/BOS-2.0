@@ -1,0 +1,331 @@
+{
+  "type": "short-form",
+  "date": "2025-12-12T16:26:12.873Z",
+  "ideas": [
+    {
+      "title": "Flaw in photo booth maker’s website exposes customers’ pictures",
+      "description": "Hama Film makes photo booths that upload pictures and videos online. But their backend systems have a simple flaw that allows anyone to download customer pictures.",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/12/flaw-in-photo-booth-makers-website-exposes-customers-pictures/"
+        }
+      ],
+      "format": "reel",
+      "subcategory": "reel",
+      "hooks": [
+        "Privacy Hack: Photo Booth Leak Exposed Everything",
+        "Your Selfies Are NOT Safe Online",
+        "One Click: How Hackers See Your Pics"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use screen recording to demonstrate vulnerability",
+            "Include rapid text transitions highlighting key risks",
+            "Add dramatic sound effect when revealing security breach"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Shocking statistic about data exposure",
+            "Use infographic-style slides showing breach mechanics",
+            "Final slide with clear protective recommendations"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with provocative visual metaphor about digital privacy",
+            "Use quick cuts to maintain high energy",
+            "Include timestamped annotations explaining technical details"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as professional cybersecurity learning opportunity",
+            "Include expert commentary overlay",
+            "Link to deeper technical analysis"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "Dark cyberpunk color palette (deep blues/blacks), glitch effects simulating data breach, sharp geometric typography, rapid digital transition animations, mix of technical graphics and human-centric imagery"
+      },
+      "exampleOutline": [
+        "Quick shocking visual of exposed photos",
+        "Explain Hama Film's website vulnerability",
+        "Demonstrate how easy breach occurs",
+        "Privacy implications and risks",
+        "Protective steps for users"
+      ],
+      "hashtags": "#Cybersecurity #PrivacyAlert #DataBreach #TechTips #HackingExposed #OnlineSafety #WebSecurity #DigitalPrivacy #PhotoBooth #TechNews",
+      "textureIndex": 10
+    },
+    {
+      "title": "Zevo wants to add robotaxis to its car-share fleet, starting with newcomer Tensor",
+      "description": "As robotaxi adoption continues, wild ideas like personal ownership and renting them out are starting to pop up again.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/12/zevo-wants-to-add-robotaxis-to-its-car-share-fleet-starting-with-newcomer-tensor/"
+        }
+      ],
+      "format": "carousel",
+      "subcategory": "carousel",
+      "hooks": [
+        "Robotaxis: The Future of Car Sharing?",
+        "Zevo's Wild Plan to Disrupt Transportation",
+        "Own a Robotaxi? The Future is Here"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic motion graphics to show robotaxi transformation",
+            "Create quick cuts between current and future car sharing models",
+            "Include surprise element to hook viewers in first 2 seconds"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have bold, eye-catching visualization of robotaxi concept",
+            "Use progressive reveal of information across slides",
+            "End with clear call-to-action or thought-provoking question"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Compress carousel narrative into 60-second storytelling arc",
+            "Use text overlays to explain complex concepts quickly",
+            "Add energetic background music to maintain engagement"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame content as professional innovation insight",
+            "Include data points about robotaxi market potential",
+            "Maintain more serious, analytical tone"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Futuristic cyberpunk-inspired color palette with electric blues and neon accents. Dynamic, asymmetrical compositions featuring semi-transparent robotaxi silhouettes. Bold, geometric sans-serif typography with slight motion blur. Incorporate tech-inspired grid elements and holographic overlay effects."
+      },
+      "exampleOutline": [
+        "Slide 1: Provocative Hook & Visual Concept",
+        "Slide 2: Current Car Sharing Landscape",
+        "Slide 3: Zevo's Robotaxi Innovation",
+        "Slide 4: Potential Market Disruption",
+        "Slide 5: Future Implications & Call-to-Action"
+      ],
+      "hashtags": "#RobotaxiRevolution #FutureOfTransport #AIAutomation #MobilityInnovation #TechDisruption #CarSharing #AutonomousVehicles #ZevoTech #SmartMobility #FutureTransportation",
+      "textureIndex": 0
+    },
+    {
+      "title": "Reddit argues it isn&#8217;t like other social platforms in case against Australia&#8217;s social media ban",
+      "description": "Reddit, one of the world's largest social platforms, is arguing that it doesn't meet the definition of \"social media platforms\" as it seeks to overturn Australia's law banning children under 16 years of age from social media.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/12/reddit-argues-it-isnt-like-other-social-platforms-in-case-against-australias-social-media-ban/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "Reddit vs Australia: The Social Media Loophole 🕵️",
+        "Wait, Reddit isn't social media? 🤯",
+        "How Reddit is dodging the ban hammer 🔨"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use a split-screen meme format comparing Reddit to other platforms",
+            "Create a quick animated text overlay explaining the legal nuance",
+            "Use a playful, fast-paced editing style to maintain viewer engagement"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Provocative headline with Reddit logo",
+            "Use each slide to break down a key point of the legal argument",
+            "Final slide: Thought-provoking question or call to action"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with a dramatic text reveal about the legal challenge",
+            "Use quick cuts and meme-style graphics",
+            "Include a voiceover explaining the key points succinctly"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame the content as a professional legal insight",
+            "Use a more serious, analytical tone",
+            "Include a professional graphic explaining the legal distinction"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, high-contrast design with a playful tech-legal aesthetic. Use a color palette of deep blues and electric orange. Typography should be bold and slightly disruptive, with graphic elements that suggest legal documents and tech interfaces. Incorporate meme-like visual elements with sharp, witty graphic treatments."
+      },
+      "exampleOutline": [
+        "Section 1: Attention-grabbing headline/visual hook",
+        "Section 2: Quick explanation of Reddit's unique platform status",
+        "Section 3: Key legal argument visualization",
+        "Section 4: Surprising twist or implication",
+        "Section 5: Call to learn more or share opinion"
+      ],
+      "hashtags": "#Reddit #SocialMedia #LegalTech #InternetLaw #TechNews #AIEthics #DigitalRegulation #SocialPlatforms #TechPolicy #InternetFreedom",
+      "textureIndex": 12
+    },
+    {
+      "title": "World launches its &#8216;super app,&#8217; including crypto pay and encrypted chat features",
+      "description": "Tools for Humanity, the company behind the app, is seeking to expand its \"real human network.\"",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/11/world-launches-its-super-app-including-crypto-pay-and-encrypted-chat-features/"
+        }
+      ],
+      "format": "carousel",
+      "subcategory": "carousel",
+      "hooks": [
+        "World's First Super App: Privacy Meets Possibility",
+        "Crypto, Chat, Connect: The Network Revolution",
+        "One App to Rule Them All?"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use fast-paced transitions between slides",
+            "Include dynamic motion graphics showing app features",
+            "Create a narrative arc within 30 seconds"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have provocative visual hook",
+            "Use consistent color palette across slides",
+            "Progressive reveal of information with each slide"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Extract most dynamic carousel slides for short",
+            "Add energetic voiceover explaining key concepts",
+            "Include quick visual comparisons to existing apps"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add more technical depth to carousel content",
+            "Include professional implications of the super app",
+            "Use more data-driven visualizations"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast cyberpunk-inspired color palette with electric blues and deep purples. Geometric, fractured typography suggesting network complexity. Glitch-style motion graphics revealing app features. Blend of technical wireframe elements with fluid, organic transitions. Minimalist but futuristic aesthetic reminiscent of cutting-edge tech interfaces."
+      },
+      "exampleOutline": [
+        "Slide 1: Provocative Hook/Visual Overview",
+        "Slide 2: What Makes a Super App?",
+        "Slide 3: Crypto Payment Features",
+        "Slide 4: Encrypted Communication Capabilities",
+        "Slide 5: Future of Connected Networks"
+      ],
+      "hashtags": "#SuperApp #TechInnovation #CryptoTech #DigitalPrivacy #FutureOfConnection #AINetworks #CommunicationTech #DecentralizedApp #TechTrends #GlobalNetwork",
+      "textureIndex": 6
+    },
+    {
+      "title": "Stanford&#8217;s star reporter takes on Silicon Valley&#8217;s &#8216;money-soaked&#8217; startup culture",
+      "description": "His reporting on a Stanford University president put Theo Baker on the map, but his upcoming book may cement his reputation as the rare young journalist willing to challenge Silicon Valley's startup machine.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/11/stanfords-star-reporter-takes-on-silicon-valleys-money-soaked-startup-culture/"
+        }
+      ],
+      "format": "story",
+      "subcategory": "story",
+      "hooks": [
+        "Silicon Valley's Dark Side: One Reporter's Explosive Investigation",
+        "Startup Culture Unmasked: The Story They Don't Want Told",
+        "Who Really Controls Tech's Money Machine?"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic text overlays highlighting investigative quotes",
+            "Include quick cuts of Theo Baker speaking/reporting",
+            "Add subtle motion graphics to emphasize key revelations"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must create immediate intrigue about investigation",
+            "Use infographic-style slides breaking down startup culture stats",
+            "Final slide should prompt engagement/book pre-order"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with most controversial/surprising investigation finding",
+            "Use dramatic b-roll of Silicon Valley landscapes",
+            "Include direct quote that challenges startup narrative"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame story as professional accountability journalism",
+            "Highlight Baker's investigative methodology",
+            "Connect narrative to broader tech ethics discussion"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "High-contrast monochromatic palette with electric blue/charcoal gray accents. Aggressive, documentary-style typography using sans-serif fonts. Dynamic diagonal compositions suggesting investigative tension. Incorporate glitch/data overlay effects to symbolize technological disruption. Reference aesthetic of 'The Social Dilemma' documentary mixed with WIRED magazine design language."
+      },
+      "exampleOutline": [
+        "Section 1: Provocative Investigation Teaser",
+        "Section 2: Silicon Valley's Hidden Power Structures",
+        "Section 3: Theo Baker's Investigative Journey",
+        "Section 4: Key Systemic Revelations",
+        "Section 5: Call to Critical Thinking"
+      ],
+      "hashtags": "#TechJournalism #SiliconValley #StartupCulture #InvestigativeReporting #TechEthics #MediaDisruption #TheoBarker #BookReveal #TechCriticism #InnovationWatch",
+      "textureIndex": 5
+    }
+  ]
+}

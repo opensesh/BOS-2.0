@@ -1,0 +1,98 @@
+{
+  "type": "blog",
+  "date": "2025-11-18T17:19:02.161Z",
+  "ideas": [
+    {
+      "title": "Why designers should stop chasing AI tools and start building systems",
+      "description": "The real opportunity isn't in the latest model—it's in creating frameworks that work with any AI",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/18/google-launches-gemini-3-with-new-coding-app-and-record-benchmark-scores/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/18/poes-ai-app-now-supports-group-chats-across-ai-models/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/google-launches-gemini-3-ai-bubble-search/"
+        }
+      ]
+    },
+    {
+      "title": "The search paradigm is dying—and designers aren't ready",
+      "description": "How the shift from Google to ChatGPT will reshape everything from UX patterns to brand discovery",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/17/as-consumers-ditch-google-for-chatgpt-peec-ai-raises-21m-to-help-brands-adapt/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/google-launches-gemini-3-ai-bubble-search/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/18/intuit-signs-100m-deal-with-openai-to-bring-its-apps-to-chatgpt/"
+        }
+      ]
+    },
+    {
+      "title": "Why AI agents will kill the app ecosystem (and what designers should build instead)",
+      "description": "Microsoft's Agent 365 signals the end of traditional interfaces—here's what comes next",
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/microsoft-ai-agent-365/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/18/intuit-signs-100m-deal-with-openai-to-bring-its-apps-to-chatgpt/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/report/822443/microsoft-windows-copilot-vision-ai-assistant-pc-voice-controls-impressions"
+        }
+      ]
+    },
+    {
+      "title": "Our take: Why the $130B Databricks valuation should terrify traditional design agencies",
+      "description": "The real AI disruption isn't coming from design tools—it's coming from data infrastructure companies",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/18/databricks-reportedly-in-talks-to-raise-funding-at-a-130b-valuation/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/18/stack-overflow-is-remaking-itself-into-an-ai-data-provider/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/17/jeff-bezos-reportedly-returns-to-the-trenches-as-co-ceo-of-new-ai-startup-project-prometheus/"
+        }
+      ]
+    },
+    {
+      "title": "The collaboration paradox: Why group AI chats will fragment creative teams",
+      "description": "Poe's new group chat feature reveals a deeper problem with how we're integrating AI into creative workflows",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/18/poes-ai-app-now-supports-group-chats-across-ai-models/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/microsoft-ai-agent-365/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/report/822443/microsoft-windows-copilot-vision-ai-assistant-pc-voice-controls-impressions"
+        }
+      ]
+    }
+  ]
+}

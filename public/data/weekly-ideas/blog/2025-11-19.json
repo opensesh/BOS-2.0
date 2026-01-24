@@ -1,0 +1,101 @@
+{
+  "type": "blog",
+  "date": "2025-11-19T17:19:04.153Z",
+  "ideas": [
+    {
+      "title": "Why we're in an 'LLM bubble,' not an AI bubble (and what designers should do about it)",
+      "description": "Analysis of why current AI hype misses the mark and how designers can navigate the reality vs. expectations gap",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/18/hugging-face-ceo-says-were-in-an-llm-bubble-not-an-ai-bubble/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/18/stack-overflow-is-remaking-itself-into-an-ai-data-provider/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/report/822151/ai-smart-pen-for-cheating-tests"
+        }
+      ]
+    },
+    {
+      "title": "The Adobe-Semrush deal signals the end of siloed creative tools (here's what's next)",
+      "description": "Why Adobe's $1.9B acquisition reveals the future of integrated design-marketing workflows and what it means for agencies",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/19/adobe-to-buy-semrush-for-1-9-billion/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/823887/adobe-semrush-acquisition-digital-marketing"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/18/google-launches-gemini-3-with-new-coding-app-and-record-benchmark-scores/"
+        }
+      ]
+    },
+    {
+      "title": "Why AI content controls are the design system pattern we've been missing",
+      "description": "How TikTok's AI content management approach reveals principles for designing user-controlled AI experiences",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/18/tiktok-now-lets-you-choose-how-much-ai-generated-content-you-want-to-see/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/823775/tiktok-ai-generated-content-controls-manage-topics"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/18/poes-ai-app-now-supports-group-chats-across-ai-models/"
+        }
+      ]
+    },
+    {
+      "title": "The infrastructure reality check: Why AI design tools need a Lambda moment",
+      "description": "Analysis of how data center investments like Lambda's $1.5B raise reveal the hidden costs of AI creativity",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/18/ai-data-center-provider-lambda-raises-whopping-1-5b-after-multibillion-dollar-microsoft-deal/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/19/as-lovable-hits-200m-arr-its-ceo-credits-staying-in-europe-for-its-success/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/memo-sunday-robotics-home-robot/"
+        }
+      ]
+    },
+    {
+      "title": "From retail to design: What Target's OpenAI integration teaches us about AI adoption patterns",
+      "description": "How enterprise AI rollouts in retail reveal the practical framework for design agencies considering AI integration",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/19/target-joins-openais-growing-list-of-retail-apps/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/18/stack-overflow-is-remaking-itself-into-an-ai-data-provider/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/823329/porsche-cayenne-electric-turbo-specs-price-range"
+        }
+      ]
+    }
+  ]
+}

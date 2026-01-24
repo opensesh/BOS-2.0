@@ -1,0 +1,101 @@
+{
+  "type": "long-form",
+  "date": "2025-11-08T17:14:49.143Z",
+  "ideas": [
+    {
+      "title": "Tutorial: Building AI-powered design workflows with $20B ARR insights from OpenAI",
+      "description": "How to structure scalable design systems using enterprise-level AI integration strategies",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/sam-altman-says-openai-has-20b-arr-and-about-1-4-trillion-in-data-center-commitments/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/amazon-launches-an-ai-powered-kindle-translate-service-for-ebook-authors/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/21309820/best-wireless-earbuds"
+        }
+      ]
+    },
+    {
+      "title": "Step-by-step: Amazon's AI translation workflow adapted for design localization",
+      "description": "Complete guide to automating multi-language design assets using AI translation principles",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/amazon-launches-an-ai-powered-kindle-translate-service-for-ebook-authors/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/gear-news-of-the-week-fairphone-lands-in-the-us-and-whatsapp-is-finally-on-the-apple-watch/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/817277/apple-ipad-killed-the-netbook-cheap-macbook-is-bringing-them-back"
+        }
+      ]
+    },
+    {
+      "title": "Deep dive: Voice isolation AI for better design presentation workflows",
+      "description": "How to integrate voice AI models into client presentations and design critique sessions",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/subtle-computings-voice-isolation-models-help-computers-understand-you-in-noisy-environments/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/21309820/best-wireless-earbuds"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/gear-news-of-the-week-fairphone-lands-in-the-us-and-whatsapp-is-finally-on-the-apple-watch/"
+        }
+      ]
+    },
+    {
+      "title": "Framework: Building ethical AI design systems (avoiding the 'AI slop' trap)",
+      "description": "Our philosophy and practical steps for maintaining quality in AI-assisted creative workflows",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/meta-brings-its-short-form-video-feed-of-ai-slop-to-europe/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/07/seven-more-families-are-now-suing-openai-over-chatgpts-role-in-suicides-delusions/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/one-of-the-biggest-threats-to-your-health-is-something-you-cant-see/"
+        }
+      ]
+    },
+    {
+      "title": "Business case study: How we use AI grants and funding for design tool development",
+      "description": "Complete breakdown of applying AI innovation principles to bootstrap design agency growth",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/laude-institute-announces-first-batch-of-slingshots-ai-grants/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/sam-altman-says-he-doesnt-want-the-government-to-bail-out-openai-if-it-fails/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/gadgets/816352/peloton-q1-2026-earnings-fitness"
+        }
+      ]
+    }
+  ]
+}

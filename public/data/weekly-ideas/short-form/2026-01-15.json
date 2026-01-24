@@ -1,0 +1,331 @@
+{
+  "type": "short-form",
+  "date": "2026-01-15T16:35:44.787Z",
+  "ideas": [
+    {
+      "title": "OpenAI invests in Sam Altman’s brain computer interface startup Merge Labs",
+      "description": "OpenAI is participating in a $250 million seed round into Merge Labs, Sam Altman's brain computer interface startup. The startup is valued at $850 million.",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/15/openai-invests-in-sam-altmans-brain-computer-interface-startup-merge-labs/"
+        }
+      ],
+      "format": "carousel",
+      "subcategory": "carousel",
+      "hooks": [
+        "OpenAI's Wild Bet: Brain Computers Are Coming 🧠🚀",
+        "Sam Altman's $850M Moonshot: Reading Your Mind",
+        "Future Tech Alert: When AI Meets Brain Signals"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use fast-paced neurological/tech transition animations",
+            "Include quick text overlays explaining complex concepts",
+            "Keep visual energy high with dynamic scene changes"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have provocative visual/headline",
+            "Use infographic-style slides with clean, minimal design",
+            "Progressive reveal of information across slides"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Condense carousel into rapid narrative arc",
+            "Use text-heavy graphics for technical details",
+            "Add voiceover explaining complex technological concepts"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add more technical depth and credibility markers",
+            "Include potential industry implications",
+            "Use more professional, data-driven visual language"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "Cyberpunk-meets-neuroscience aesthetic. Electric blue and neon accent colors. Translucent brain/circuit overlay graphics. Sharp, geometric typography. Futuristic motion graphics showing neural network connections. Clean, high-contrast minimalist design with technological abstraction."
+      },
+      "exampleOutline": [
+        "Slide 1: Provocative headline + eye-catching brain/tech visual",
+        "Slide 2: Quick OpenAI investment context",
+        "Slide 3: Merge Labs startup overview",
+        "Slide 4: Brain computer interface technology explanation",
+        "Slide 5: Future potential and implications CTA"
+      ],
+      "hashtags": "#AIInnovation #FutureTech #BrainComputerInterface #OpenAI #SamAltman #TechInvestment #NeuralTechnology #StartupInnovation #AIResearch #EmergingTech",
+      "textureIndex": 6
+    },
+    {
+      "title": "Wikimedia Foundation announces new AI partnerships with Amazon, Meta, Microsoft, Perplexity and others",
+      "description": "The AI partnerships allow companies to access the org's content, like Wikipedia, at scale.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/15/wikimedia-foundation-announces-new-ai-partnerships-with-amazon-meta-microsoft-perplexity-and-others/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "Wikipedia Goes Big: AI Giants Team Up!",
+        "AI's New Playground: Wikipedia's Massive Collab",
+        "Tech Titans Unlock Wikipedia's Knowledge Vault"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick animated text reveals for key partnership names",
+            "Start with unexpected visual metaphor of 'knowledge explosion'",
+            "Include fast-paced transitions between tech company logos"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Provocative headline with company logos",
+            "Use infographic-style slides showing partnership implications",
+            "Final slide: Thought-provoking question or call to action"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Open with pattern-interrupt visual of unexpected knowledge mashup",
+            "Use quick cuts between tech logos and Wikipedia interface",
+            "Add voiceover explaining partnership's significance in 15 seconds"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "More serious tone, focus on strategic implications",
+            "Use data visualization to show partnership scale",
+            "Include expert quote or industry context"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy cyberpunk-inspired design with glitch effects, neon accent colors, transparent overlays of tech logos, dynamic geometric shapes suggesting data flow and interconnectedness, typography that feels both technical and fluid"
+      },
+      "exampleOutline": [
+        "Section 1: Provocative Hook (Wikipedia + AI Logos)",
+        "Section 2: Quick Context of Partnership",
+        "Section 3: Visual Representation of Knowledge Scaling",
+        "Section 4: Potential Impact Teaser",
+        "Section 5: Invitation to Learn More"
+      ],
+      "hashtags": "#AI #Wikipedia #TechInnovation #OpenKnowledge #DataScience #TechPartnerships #ArtificialIntelligence #Innovation #TechTrends #FutureOfKnowledge",
+      "textureIndex": 10
+    },
+    {
+      "title": "How one startup is using prebiotics to try and ease the copper shortage",
+      "description": "Transition Metal Solutions is applying a special cocktail to coax microbes into unlocking more copper from ore.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/15/how-one-startup-is-using-prebiotics-to-try-and-ease-the-copper-shortage/"
+        }
+      ],
+      "format": "story",
+      "subcategory": "story",
+      "hooks": [
+        "Microbes: The Secret Weapon in Copper Mining?",
+        "How Bacteria Could Solve the Global Copper Crisis",
+        "Prebiotics: Unlocking Earth's Hidden Copper Treasure"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic split-screen animations comparing traditional vs. microbial mining",
+            "Incorporate quick scientific graphics to explain prebiotic process",
+            "End with a surprising statistic about copper potential"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Provocative close-up of copper ore",
+            "Use infographic-style slides with minimal text",
+            "Final slide includes call-to-action and startup contact"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected visual metaphor about resource extraction",
+            "Use quick cuts and scientific motion graphics",
+            "Include expert quote or startup founder soundbite"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as industry innovation breakthrough",
+            "Include more technical details about microbial process",
+            "Add credibility with research citations"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "Futuristic bio-tech color palette (teal, electric blue, copper accents). Combine microscopic textures with geological imagery. Use transparent overlays showing microbial networks. Typography should feel technical but organic - sans-serif with soft edges. Incorporate subtle glowing elements suggesting bio-transformation."
+      },
+      "exampleOutline": [
+        "Opening: Provocative visual of copper ore with microscopic overlay",
+        "Problem: Global copper shortage and mining challenges",
+        "Solution: Transition Metal Solutions' prebiotic approach",
+        "Technical Insight: How microbes extract copper differently",
+        "Future Potential: Implications for sustainable resource extraction"
+      ],
+      "hashtags": "#CopperMining #SustainableTech #Biotechnology #ResourceInnovation #MicrobialScience #CleanTech #StartupInnovation #MiningTech #FutureOfMining #ScienceTechnology",
+      "textureIndex": 9
+    },
+    {
+      "title": "US senators demand answers from X, Meta, Alphabet and others on sexualized deepfakes",
+      "description": "In a letter to the leaders of X, Meta, Alphabet, Snap, Reddit and TikTok, several U.S. senators are demanding the companies provide proof that they have \"robust protections and policies\" in place, and how they plan to curb the rise of sexualized deepfakes on their platforms.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/15/us-senators-demand-answers-from-x-meta-alphabet-on-sexualized-deepfakes/"
+        }
+      ],
+      "format": "reel",
+      "subcategory": "reel",
+      "hooks": [
+        "AI Deepfakes: The Tech Senators Are Terrified Of",
+        "Shocking Truth: Tech Giants vs. Deepfake Chaos",
+        "When AI Goes Too Far: Senators Sound Alarm"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use fast-paced text transitions to maintain high energy",
+            "Include dynamic visual effects to illustrate deepfake technology",
+            "Create a scrolling text overlay for key statistics"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have a provocative visual metaphor",
+            "Use infographic-style slides with clear data points",
+            "Final slide should have a clear call-to-action"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with a pattern-interrupt visual or statement",
+            "Use screen recordings to show deepfake examples",
+            "Include quick cuts to maintain viewer attention"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame content as a professional technology ethics discussion",
+            "Use more formal visual language and data-driven approach",
+            "Include expert quote or policy context"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast cyberpunk-inspired color palette with electric blues and neon accents. Glitch-style typography with digital artifact effects. Dynamic motion graphics simulating AI neural network visualizations. Incorporate fragmented, breaking digital textures to represent technological disruption."
+      },
+      "exampleOutline": [
+        "Quick shocking statistic about deepfake prevalence",
+        "Senators' urgent concern explained in 3 seconds",
+        "How AI technology enables these risks",
+        "Rapid-fire implications for personal privacy",
+        "Call to understand and protect yourself"
+      ],
+      "hashtags": "#AIEthics #DeepfakeTechnology #DigitalPrivacy #TechRegulation #AIRisks #CyberSecurity #TechPolicy #InnovationWatch #PrivacyMatters #TechTrends",
+      "textureIndex": 2
+    },
+    {
+      "title": "Spotify raises its subscription prices in the U.S. again",
+      "description": "Spotify's new price for its individual plan is $12.99 per month",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/15/spotify-raises-its-subscription-prices-in-the-u-s-again/"
+        }
+      ],
+      "format": "carousel",
+      "subcategory": "carousel",
+      "hooks": [
+        "Spotify's Price Hike: What Users Need to Know",
+        "Another Monthly Bill Gets Bigger 💸",
+        "Music Streaming Costs: The Ugly Truth"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick text animations to highlight price changes",
+            "Include dynamic audio that hints at frustration",
+            "Create a visual 'price meter' rising dramatically"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must shock with price comparison",
+            "Use infographic-style slides for easy information digestion",
+            "Include a slide showing alternative music services"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with provocative question about streaming costs",
+            "Use quick cuts between pricing graphics",
+            "Include personal reaction/commentary tone"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as industry trend analysis",
+            "Include data visualization of pricing trends",
+            "Add professional commentary on market dynamics"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, high-contrast design with electric blue and deep gray palette. Typography uses modern sans-serif with aggressive angular cuts. Incorporate rising price graphic as central visual metaphor. Animated percentage and dollar sign elements. Clean, tech-forward aesthetic with slight cyberpunk edge."
+      },
+      "exampleOutline": [
+        "Slide 1: Shocking headline and current price",
+        "Slide 2: Price comparison over time",
+        "Slide 3: Impact on average user",
+        "Slide 4: Alternatives and market context",
+        "Slide 5: Final takeaway/CTA"
+      ],
+      "hashtags": "#SpotifyPriceHike #MusicStreaming #TechNews #SubscriptionCosts #ConsumerTrends #StreamingServices #PricingStrategy #TechUpdate #MediaCosts #DigitalEntertainment",
+      "textureIndex": 0
+    }
+  ]
+}

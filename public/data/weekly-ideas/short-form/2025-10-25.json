@@ -1,0 +1,89 @@
+{
+  "type": "short-form",
+  "date": "2025-10-25T17:15:08.740Z",
+  "ideas": [
+    {
+      "title": "Carousel: AI browser security for designers",
+      "description": "5 slides breaking down what AI browsers mean for creative workflows and data safety",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/the-glaring-security-risks-with-ai-browser-agents/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/openai-wants-to-power-your-browser-and-that-might-be-security-nightmare/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/video/the-browser-wars-are-back-and-this-time-theyre-powered-by-ai/"
+        }
+      ]
+    },
+    {
+      "title": "Reel: ChatGPT + Figma integration demo",
+      "description": "Quick tutorial showing new ChatGPT app integrations with design tools in action",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/24/how-to-use-the-new-chatgpt-app-integrations-including-spotify-figma-canva-and-others/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/openai-atlas-browser-hands-on-im-not-convinced-the-web-needs-a-chatbot-tour-guide/"
+        }
+      ]
+    },
+    {
+      "title": "Static: The future of creative browsing",
+      "description": "Visual concept exploring how AI browsers will change how designers research and gather inspiration",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/25/who-are-ai-browsers-for/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/video/the-browser-wars-are-back-and-this-time-theyre-powered-by-ai/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/openai-atlas-browser-hands-on-im-not-convinced-the-web-needs-a-chatbot-tour-guide/"
+        }
+      ]
+    },
+    {
+      "title": "Carousel: Samsung's design revolution",
+      "description": "3 slides analyzing how Samsung's new design direction reflects broader tech design trends",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/the-pepsi-man-is-coming-to-save-samsung-from-boring-design/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/806492/bored-ape-yacht-club-bayc-crypto-metaverse-otherside-yuga-labs"
+        }
+      ]
+    },
+    {
+      "title": "Story series: Brain-computer interfaces for creatives",
+      "description": "Multi-slide exploration of how sound-wave brain reading could change creative workflows",
+      "starred": false,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/column/806666/sam-altman-merge-labs-brain-computer-interface-startup-hire/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/24/ai-at-the-edge-how-startups-are-powering-the-future-of-space-at-techcrunch-disrupt-2025/"
+        }
+      ]
+    }
+  ]
+}

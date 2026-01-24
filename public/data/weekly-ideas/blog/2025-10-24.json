@@ -1,0 +1,101 @@
+{
+  "type": "blog",
+  "date": "2025-10-24T17:17:14.648Z",
+  "ideas": [
+    {
+      "title": "Our perspective: Why browser-based AI will kill native design tools",
+      "description": "OpenAI's Atlas and Microsoft's response signal the end of desktop-first design workflows",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/podcast/openai-wants-to-power-your-browser-and-that-might-be-a-security-nightmare/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/23/two-days-after-openais-atlas-microsoft-launches-a-nearly-identical-ai-browser/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/23/openai-buys-sky-an-ai-interface-for-mac/"
+        }
+      ]
+    },
+    {
+      "title": "The realistic AI design toolkit: What 5 million users taught us about adoption",
+      "description": "Why simple tools like Turbo AI succeed while complex AI platforms fail with designers",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/23/20-year-old-dropouts-built-ai-notetaker-turbo-ai-to-5-million-users/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/23/instagram-users-can-now-use-meta-ai-editing-tools-directly-in-ig-stories/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/806046/openai-chatgpt-company-knowledge-update"
+        }
+      ]
+    },
+    {
+      "title": "Where design is heading: Three trends that matter more than the latest AI drop",
+      "description": "Edge computing, hybrid workflows, and accessibility will reshape design more than any single AI tool",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/24/ai-at-the-edge-how-startups-are-powering-the-future-of-space-at-techcrunch-disrupt-2025/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/games/806242/kirby-air-riders-accessibility-features-nintendo-switch-2"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/806162/microsoft-outlook-ai-overhaul-notepad"
+        }
+      ]
+    },
+    {
+      "title": "Why most agencies are building AI workflows wrong (and what we learned from failure)",
+      "description": "Case study: How we rebuilt our design process after our first AI integration crashed",
+      "starred": false,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/806303/netflix-squid-game-unleashed-boss-fight-entertainment-studio-shut-down"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/23/with-an-intel-recovery-underway-all-eyes-turn-to-its-foundry-business/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/uncanny-valley-podcast-how-data-centers-actually-work/"
+        }
+      ]
+    },
+    {
+      "title": "The philosophy behind 'spec as code': Why designers need to think like systems architects",
+      "description": "How treating design specifications as executable code will transform the designer-developer handoff",
+      "starred": false,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/806162/microsoft-outlook-ai-overhaul-notepad"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/10/23/openai-buys-sky-an-ai-interface-for-mac/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/uncanny-valley-podcast-how-data-centers-actually-work/"
+        }
+      ]
+    }
+  ]
+}

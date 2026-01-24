@@ -1,0 +1,52 @@
+name: Capture Resource Screenshots
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [capture-screenshot]
+
+env:
+  NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+  NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+
+permissions:
+  contents: write
+
+jobs:
+  capture-screenshots:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install shot-scraper
+        run: |
+          pip install shot-scraper
+          shot-scraper install
+
+      - run: npm ci
+
+      - run: mkdir -p public/assets/screenshots
+
+      - run: npx tsx scripts/capture-screenshots.ts
+
+      - name: Commit screenshots
+        run: |
+          git add public/assets/screenshots/
+          if ! git diff --cached --quiet; then
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git config user.name "github-actions[bot]"
+            git commit -m "chore(screenshots): capture pending screenshots"
+            git pull --rebase origin main
+            git push
+          fi

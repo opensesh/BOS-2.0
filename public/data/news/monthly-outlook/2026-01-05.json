@@ -1,0 +1,62 @@
+{
+  "type": "monthly-outlook",
+  "date": "2026-01-05T16:20:25.205Z",
+  "updates": [
+    {
+      "title": "CES 2026: Follow live as NVIDIA, Lego, AMD, Amazon, and more make their big reveals",
+      "description": "CES 2026, the annual consumer tech conference held in Las Vegas is here. And lucky for you, we have TechCrunch editors and reporters on the ground to cover the news, scout out the interesting, weird, and relevant (and some not so relevant) tech, and of course the people working on it. Even before the official kickoff of CES on January 6, there will be product reveals from Amazon, Nvidia, Hyundai, AMD, and more. AI is at the center of most of the action. But this year, we're hearing a lot more ab",
+      "timestamp": "01/05/2026, 4:09 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/storyline/ces-2026-follow-live-as-nvidia-lego-amd-amazon-and-more-make-their-big-reveals/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/storyline/ces-2026-follow-live-as-nvidia-lego-amd-amazon-and-more-make-their-big-reveals/",
+      "topicCategory": "general-tech"
+    },
+    {
+      "title": "Turn your prompts into visual assets and slide decks with the Figma app in ChatGPT",
+      "description": "We’re expanding the capabilities of the Figma app in ChatGPT, so you can turn your ideas into creative assets and presentations that you can polish in Figma Buzz and Figma Slides.",
+      "timestamp": "12/11/2025, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/slides-buzz-figma-app-in-chatgpt/",
+      "topicCategory": "ai-creative"
+    },
+    {
+      "title": "DoorDash says it banned driver who seemingly faked a delivery using AI",
+      "description": "DoorDash seems to have confirmed a viral story about a driver using an AI-generated photo to lie about making a delivery.",
+      "timestamp": "01/04/2026, 9:14 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/01/04/doordash-says-it-banned-driver-who-seemingly-faked-a-delivery-using-ai/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://techcrunch.com/2026/01/04/doordash-says-it-banned-driver-who-seemingly-faked-a-delivery-using-ai/",
+      "topicCategory": "ai-creative"
+    },
+    {
+      "title": "Turn your ChatGPT brainstorms into FigJam diagrams",
+      "description": "With the new Figma app in ChatGPT, you can turn conversations into FigJam diagrams like flow charts, Gantt charts, and more.",
+      "timestamp": "10/06/2025, 12:00 AM",
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/turn-your-chatgpt-brainstorms-into-figjam-diagrams/"
+        }
+      ],
+      "tier": "quick",
+      "sourceUrl": "https://www.figma.com/blog/turn-your-chatgpt-brainstorms-into-figjam-diagrams/",
+      "topicCategory": "ai-creative"
+    }
+  ]
+}

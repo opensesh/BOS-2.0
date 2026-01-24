@@ -1,0 +1,211 @@
+{
+  "type": "long-form",
+  "date": "2026-01-01T16:27:44.433Z",
+  "ideas": [
+    {
+      "title": "We replaced our sales team with 20 AI agents—here’s what happened | Jason Lemkin (SaaStr)",
+      "description": "Jason Lemkin on why he replaced his entire sales team with AI agents, how he fine-tuned them to work better than his human sales people, which vendors to choose, and how to become hyper-employable in the AI area",
+      "starred": true,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "url": "https://www.lennysnewsletter.com/p/we-replaced-our-sales-team-with-20-ai-agents"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "How AI Agents Destroyed Our Sales Team's Playbook",
+        "20 AI Agents: The Sales Revolution No One Saw Coming",
+        "We Fired Our Sales Team. AI Won."
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use cinematic B-roll of tech/office environments",
+            "Include dramatic reenactments of AI agent interactions",
+            "Create dynamic screen recordings of AI sales interfaces"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech-noir aesthetic with deep blues and electric teals. Sharp, geometric typography with subtle glitch effects. Dynamic split-screen compositions showing human vs. AI performance. Low-opacity data visualizations overlaying real-world footage. Motion design that suggests algorithmic precision and technological disruption."
+      },
+      "exampleOutline": [
+        "Cold Open: Shocking AI Sales Replacement Moment",
+        "Background: Traditional Sales Team's Limitations",
+        "AI Agent Implementation Strategy & Results",
+        "Performance Metrics: AI vs. Human Sales",
+        "Future of Work: Employability in AI Era"
+      ],
+      "hashtags": "#AIRevolution #SalesTech #FutureOfWork #AIAgents #EntrepreneurshipAI #TechInnovation #SaaS #AIEmployment #BusinessTransformation #LemkinStrategy",
+      "textureIndex": 10
+    },
+    {
+      "title": "Film Technica: Our top picks for the best films of 2025",
+      "description": "Film Technica: Our top picks for the best films of 2025",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/culture/2026/01/film-technica-our-top-picks-for-the-best-films-of-2025/"
+        }
+      ],
+      "format": "tutorial",
+      "subcategory": "instructional",
+      "hooks": [
+        "Decode 2025's Cinematic Revolution: 5 Must-Watch Films",
+        "Film Tech Insider: Your Ultimate 2025 Movie Guide",
+        "Unlock the Future of Cinema: 2025 Revealed"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use chapter markers to break down each film selection",
+            "Include visual side-by-side comparisons of film technologies",
+            "Create dynamic motion graphics for each film's unique tech innovations"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Futuristic cyberpunk-inspired color palette with deep blues and electric teals. Dynamic split-screen compositions highlighting film technology. Bold, angular typography with tech-inspired glitch effects. Animated transitions that simulate digital scanning and data visualization. Reference aesthetic: Blade Runner 2049 title sequences mixed with MKBHD tech review style."
+      },
+      "exampleOutline": [
+        "Section 1: Cinematic Technology Landscape Introduction",
+        "Section 2: Methodology for Selecting Groundbreaking Films",
+        "Section 3: Detailed Breakdown of Top 5 Films",
+        "Section 4: Technical Innovations in Each Selected Film",
+        "Section 5: Call to Action - Engage with Future Cinema"
+      ],
+      "hashtags": "#FilmTech2025 #CinemaInnovation #MovieTechnology #FutureOfFilm #AICinema #CinematicTech #FilmInnovation #MovieGeek #TechCinema #FilmTechnology",
+      "textureIndex": 2
+    },
+    {
+      "title": "&#8216;College dropout&#8217; has become the most coveted startup founder credential",
+      "description": "AI founders are increasingly using their \"dropout\" status as a credential during YC pitches.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/31/college-dropout-has-become-the-most-coveted-startup-founder-credential/"
+        }
+      ],
+      "format": "livestream",
+      "subcategory": "leadership",
+      "hooks": [
+        "Why dropouts are Silicon Valley's next big founders",
+        "College? Nah. AI startups want dropouts now",
+        "Dropout = Startup Superpower in AI Era"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Enable live chat for real-time audience interaction",
+            "Pre-promote Q&A segments with community posts",
+            "Use YouTube Premieres to build anticipation before live stream"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy cyberpunk-inspired visual aesthetic with dynamic split-screen layouts, glitch transitions between founder stories, bold sans-serif typography in electric blue/neon green palette. Incorporate data visualization elements showing startup success metrics. Use picture-in-picture for founder testimonials and screen recordings of pitch decks."
+      },
+      "exampleOutline": [
+        "Opening: Provocative dropout founder story intro",
+        "Context: Traditional education vs. AI startup ecosystem",
+        "Core Content: Why dropouts are winning in AI",
+        "Case Studies: Successful AI founder dropout journeys",
+        "Live Q&A: Audience questions and expert insights"
+      ],
+      "hashtags": "#AIStartups #TechFounders #SiliconValley #StartupLife #AIEducation #TechDropouts #InnovationCulture #EntrepreneurshipTips #AITrends #FutureOfWork",
+      "textureIndex": 3
+    },
+    {
+      "title": "Investors predict AI is coming for labor in 2026",
+      "description": "The exact impact AI will have on the enterprise labor market is unclear but investors predict trends will start to emerge in 2026.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/12/31/investors-predict-ai-is-coming-for-labor-in-2026/"
+        }
+      ],
+      "format": "documentary",
+      "subcategory": "framework",
+      "hooks": [
+        "AI's Labor Revolution: Who Survives?",
+        "2026: The Year Machines Rewrite Work",
+        "Investors' Secret: AI's Enterprise Takeover"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use archival/stock footage of workplaces and AI technology",
+            "Include expert interview-style talking head segments",
+            "Create dynamic infographics showing AI labor displacement trends"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Dark blue and electric silver color palette. High-contrast typography with technical sans-serif fonts. Layered motion graphics simulating data visualization. Cold, analytical aesthetic with subtle tech-documentary feel. Incorporate glitch/digital transition effects. Use picture-in-picture with data overlays. References: VICE documentaries, Bloomberg Technology visual style."
+      },
+      "exampleOutline": [
+        "Opening: Dramatic AI workforce transformation montage",
+        "Context: Current enterprise labor landscape breakdown",
+        "Investor Predictions: Detailed 2026 AI labor market projections",
+        "Case Studies: Industries most likely to be disrupted",
+        "Closing: Actionable insights for workforce adaptation"
+      ],
+      "hashtags": "#AIWorkforce #FutureOfWork #AIInvestment #TechTrends #EnterpriseAI #LaborMarket #AIEconomy #WorkplaceInnovation #TechDisruption #AIJobs",
+      "textureIndex": 10
+    },
+    {
+      "title": "From prophet to product: How AI came back down to earth in 2025",
+      "description": "From prophet to product: How AI came back down to earth in 2025",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2025/12/from-prophet-to-product-how-ai-came-back-down-to-earth-in-2025/"
+        }
+      ],
+      "format": "video",
+      "subcategory": "thought-leadership",
+      "hooks": [
+        "AI's Reality Check: From Hype to Real Impact",
+        "2025: When AI Finally Grew Up",
+        "The Year AI Became Useful, Not Just Cool"
+      ],
+      "platformTips": [
+        {
+          "platform": "YouTube",
+          "tips": [
+            "Use dynamic screen recordings of AI tool interfaces",
+            "Include picture-in-picture commentary for personal connection",
+            "Create clear chapter markers for easy navigation"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, high-contrast color palette with electric blue and deep charcoal. Dynamic motion graphics showing AI evolution. Clean, geometric typography with sharp angles. Minimalist infographic-style animations illustrating technological shifts. Incorporate circuit board and data visualization elements with smooth transitions."
+      },
+      "exampleOutline": [
+        "Opening: Dramatic AI Transformation Teaser (30s)",
+        "Context: AI's Overhyped Promise vs 2025 Reality (2min)",
+        "Core Content: Key Technological & Practical Shifts (4-5min)",
+        "Insights: Practical AI Applications Across Industries (2min)",
+        "Closing: Future Predictions & Call to Action (1min)"
+      ],
+      "hashtags": "#AIEvolution #TechTrends2025 #ArtificialIntelligence #InnovationInsights #TechFuture #AIApplications #EmergingTech #IndustryTransformation #AIReality #TechnologyPredictions",
+      "textureIndex": 4
+    }
+  ]
+}

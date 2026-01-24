@@ -1,0 +1,331 @@
+{
+  "type": "short-form",
+  "date": "2026-01-13T16:32:15.664Z",
+  "ideas": [
+    {
+      "title": "India reportedly tells quick-commerce firms to drop 10-minute delivery promise",
+      "description": "India's labor ministry is pushing the country's booming quick-commerce sector to prioritize the wellness and safety of its gig workers.",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/13/india-reportedly-tells-quick-commerce-firms-to-drop-10-minute-delivery-promise/"
+        }
+      ],
+      "format": "reel",
+      "subcategory": "reel",
+      "hooks": [
+        "Workers' rights vs. 10-minute delivery: The truth revealed",
+        "Is your quick delivery killing gig workers?",
+        "Tech's dark side: The 10-minute delivery trap"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use fast-paced jump cuts to maintain energy",
+            "Include on-screen text for key statistics",
+            "Create a narrative arc in first 3 seconds"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must be a shocking statistic",
+            "Use infographic-style slides with minimal text",
+            "Final slide should include a call-to-action"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with a provocative question or statement",
+            "Use dynamic motion graphics for data visualization",
+            "Include subtitles for silent viewing"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as a professional ethics discussion",
+            "Use more formal, data-driven language",
+            "Include expert quote or policy insight"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast color palette with electric blue and deep orange. Dynamic, angular compositions with overlapping graphic elements. Typography should be bold, sans-serif with slight tilt. Incorporate data visualization with animated transitions. Aesthetic: blend of tech-forward design and social consciousness"
+      },
+      "exampleOutline": [
+        "Hook: Provocative statistic about gig worker conditions",
+        "Quick context: 10-minute delivery model",
+        "Core issue: Labor ministry's intervention",
+        "Human impact: Worker wellness perspective",
+        "Call-to-action: Demand ethical tech practices"
+      ],
+      "hashtags": "#GigWorkers #TechEthics #FutureOfWork #LaborRights #QuickCommerce #WorkerWellness #TechPolicy #IndianStartups #AIEthics #SocialImpact",
+      "textureIndex": 3
+    },
+    {
+      "title": "ElevenLabs CEO says the voice AI startup crossed $330 million ARR last year",
+      "description": "The company said it took only five months to go from $200 million to $330 million in annual recurring revenue.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/13/elevenlabs-ceo-says-the-voice-ai-startup-crossed-330-million-arr-last-year/"
+        }
+      ],
+      "format": "carousel",
+      "subcategory": "carousel",
+      "hooks": [
+        "AI Voice Startup's Insane Revenue Rocket 🚀",
+        "From $200M to $330M in 5 Months?! 🤯",
+        "ElevenLabs: The Voice AI Money Machine 💸"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic motion graphics to visualize revenue growth",
+            "Create quick cuts between financial milestones",
+            "Add subtle sound effects to emphasize key numbers"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "Design each slide with a clear hierarchy of information",
+            "Use contrasting colors to highlight key financial metrics",
+            "Create a narrative flow between slides that builds excitement"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Condense carousel content into a rapid-fire narrative",
+            "Use text overlays to emphasize key statistics",
+            "Add energetic background music to maintain engagement"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add more detailed context about AI voice technology",
+            "Include professional insights about startup growth",
+            "Use a more formal, analytical tone"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, high-contrast design with electric blue and neon accent colors. Typography that feels both technical and dynamic. Isometric 3D graphs showing explosive growth. Futuristic AI-inspired graphic elements. Minimal but impactful data visualization with animated elements. Combine tech aesthetics with financial infographic style."
+      },
+      "exampleOutline": [
+        "Slide 1: Attention-grabbing headline & hook",
+        "Slide 2: ElevenLabs company context",
+        "Slide 3: Initial revenue milestone ($200M)",
+        "Slide 4: Rapid growth timeline",
+        "Slide 5: Final revenue achievement ($330M)"
+      ],
+      "hashtags": "#AI #VoiceTech #StartupGrowth #TechInnovation #AIStartup #RevenueGrowth #ElevenLabs #VoiceAI #TechTrends #InnovationEconomy",
+      "textureIndex": 9
+    },
+    {
+      "title": "Apple launches &#8216;Creator Studio&#8217; bundle of apps for $12.99 per month",
+      "description": "The bundle includes access to Final Cut Pro, Logic Pro, and Pixelmator Pro on Mac and iPad, as well as Motion, Compressor, and MainStage on Mac.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/13/apple-launches-creator-studio-bundle-of-apps-for-12-99-per-month/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "Pro Creator Tools: Apple's $12.99 Game Changer 🚀",
+        "Everything Creators Need, One Epic Bundle 🎨",
+        "Apple Just Dropped the Ultimate Creator Toolkit 🔥"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic screen capture showing app transitions",
+            "Create quick visual price comparison with competitors",
+            "Include quick text overlay highlighting key bundle features"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Bold price announcement graphic",
+            "Use slide transitions mimicking app switching",
+            "Final slide: Clear call-to-action with Apple link"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with rapid-fire app feature highlights",
+            "Use voiceover explaining bundle value proposition",
+            "Include quick visual price reveal moment"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as professional productivity enhancement",
+            "Include data on potential creator workflow improvements",
+            "Use more technical language and feature breakdown"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast tech-inspired aesthetic with neon accents, dynamic app interface snapshots, floating geometric elements, sleek typography with sharp edges, minimal color palette of white, dark gray, and electric blue, subtle motion graphics highlighting app transitions"
+      },
+      "exampleOutline": [
+        "Bold Price/Offering Headline",
+        "Quick Bundle Feature Breakdown",
+        "Value Proposition Snapshot",
+        "Pricing Context/Comparison",
+        "Action/Download Prompt"
+      ],
+      "hashtags": "#AppleCreatorTools #CreativeSoftware #DesignBundle #TechInnovation #CreatorEconomy #ApplePro #DigitalDesign #CreativeTools #ProductivityHack #TechNews",
+      "textureIndex": 9
+    },
+    {
+      "title": "Deepgram raises $130M at $1.3B valuation and buys a YC AI startup",
+      "description": "Deepgram is raising its Series C round at a $1.3 billion valuation.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/13/deepgram-raises-130m-at-1-3b-valuation-and-buys-a-yc-ai-startup/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "AI Unicorn Deepgram Just Leveled Up 🚀",
+        "Billion-Dollar AI Speech Tech: The Inside Scoop",
+        "Deepgram's Massive Leap: $130M and Counting"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic text animation to highlight key numbers",
+            "Create a quick visual timeline of Deepgram's growth",
+            "Include a brief animated infographic showing valuation milestone"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Bold headline with startup valuation",
+            "Use contrasting colors to highlight financial numbers",
+            "Create a slide-by-slide breakdown of funding journey"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with a pattern-interrupt visual of money/tech",
+            "Use quick cuts to maintain high energy",
+            "Include quick text overlays with key financial stats"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "More data-driven, professional visual approach",
+            "Include founder quote or expert commentary",
+            "Use clean, corporate-style infographic design"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, high-contrast design with tech-futuristic color palette (deep blues, electric teals, metallic silvers). Dynamic typography that breaks traditional grid. Layered graphic elements suggesting acceleration and growth. Incorporate abstract tech motifs and data visualization elements. Blend of technical precision and creative energy."
+      },
+      "exampleOutline": [
+        "Section 1: Attention-grabbing headline with valuation",
+        "Section 2: Quick context of Deepgram's AI speech tech",
+        "Section 3: Key funding and acquisition highlights",
+        "Section 4: What this means for AI industry",
+        "Section 5: Call-to-learn-more or follow Deepgram"
+      ],
+      "hashtags": "#DeepgramAI #AIFunding #TechUnicorn #AIInnovation #StartupSuccess #VentureCapital #AITechnology #SpeechAI #TechNews #InnovationEconomy",
+      "textureIndex": 2
+    },
+    {
+      "title": "Slackbot is an AI agent now",
+      "description": "Salesforce unveils Slackbot, a new AI agent that allows users to complete tasks across multiple enterprise applications from Slack.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/01/13/slackbot-is-an-ai-agent-now/"
+        }
+      ],
+      "format": "story",
+      "subcategory": "story",
+      "hooks": [
+        "AI is taking over Slack – are you ready?",
+        "Slackbot just became your multi-app assistant",
+        "Enterprise workflows transformed: Slackbot's AI magic"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick screen transitions to simulate app switching",
+            "Incorporate screen recording with animated overlays",
+            "Add text animations highlighting key Slackbot capabilities"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Dramatic before/after workflow comparison",
+            "Use consistent color coding across slides",
+            "Include minimal text, maximize visual storytelling"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Open with unexpected AI interaction demonstration",
+            "Use rapid-fire screen capture sequences",
+            "Include reaction-style voiceover explaining implications"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as enterprise productivity breakthrough",
+            "Include expert commentary snippet",
+            "Highlight quantifiable workflow efficiency gains"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Futuristic tech aesthetic with electric blue/deep purple gradient, holographic UI elements, dynamic motion graphics showing seamless app integration, minimalist sans-serif typography with glitch/digital overlay effects"
+      },
+      "exampleOutline": [
+        "Section 1: Provocative AI workflow problem statement",
+        "Section 2: Traditional enterprise workflow pain points",
+        "Section 3: Slackbot's AI agent capabilities showcase",
+        "Section 4: Transformative potential for cross-app automation",
+        "Section 5: Call-to-explore/learn more"
+      ],
+      "hashtags": "#AIProductivity #SlackAI #EnterpriseInnovation #WorkflowAutomation #AIAssistant #FutureOfWork #TechTrends #ProductivityHacks #AITools #SalesforceInnovation",
+      "textureIndex": 6
+    }
+  ]
+}

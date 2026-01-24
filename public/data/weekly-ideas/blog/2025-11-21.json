@@ -1,0 +1,101 @@
+{
+  "type": "blog",
+  "date": "2025-11-21T17:17:47.663Z",
+  "ideas": [
+    {
+      "title": "The AI monopoly problem designers aren't talking about",
+      "description": "Why the consolidation of AI power into 'The Blob' threatens creative independence and what designers can do",
+      "starred": true,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/ai-industry-monopoly-nvidia-microsoft-google/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/chatgpt-launches-group-chats-globally/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/column/826172/ai-startup-arr-numbers-sierra-bret-taylor"
+        }
+      ]
+    },
+    {
+      "title": "Why ChatGPT group chats signal the death of design collaboration tools",
+      "description": "How AI-native collaboration will reshape design workflows and make traditional tools obsolete",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/chatgpt-launches-group-chats-globally/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/podcast/825979/ai-agents-are-invading-your-pc"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/mixup-is-a-new-mad-libs-style-app-for-creating-ai-images-from-photos-text-and-doodles/"
+        }
+      ]
+    },
+    {
+      "title": "The realistic designer's guide to AI agents: Beyond the hype",
+      "description": "What PC-based AI agents actually mean for design workflows versus the marketing promises",
+      "starred": false,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/podcast/825979/ai-agents-are-invading-your-pc"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/as-its-voice-dectation-app-takes-off-wispr-secures-25m-from-notable-capital/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/column/825219/optimizer-ai-nutrition-tracking-wellness"
+        }
+      ]
+    },
+    {
+      "title": "Why Mad Libs-style AI creation tools miss the point of design",
+      "description": "How apps like Mixup reveal fundamental misunderstandings about creative process and professional design",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/mixup-is-a-new-mad-libs-style-app-for-creating-ai-images-from-photos-text-and-doodles/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/google-releases-nano-banana-pro-its-latest-image-generation-model/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/the-best-guide-to-spotting-ai-writing-comes-from-wikipedia/"
+        }
+      ]
+    },
+    {
+      "title": "The Wikipedia approach to spotting AI design: What it means for creative authenticity",
+      "description": "How detection methods reveal deeper questions about human creativity and professional value in AI age",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/20/the-best-guide-to-spotting-ai-writing-comes-from-wikipedia/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/ai-industry-monopoly-nvidia-microsoft-google/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/column/825219/optimizer-ai-nutrition-tracking-wellness"
+        }
+      ]
+    }
+  ]
+}

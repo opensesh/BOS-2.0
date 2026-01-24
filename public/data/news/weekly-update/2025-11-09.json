@@ -1,0 +1,64 @@
+{
+  "type": "weekly-update",
+  "date": "2025-11-09T17:15:14.334Z",
+  "updates": [
+    {
+      "title": "OpenAI reveals massive scale with $20B ARR and $1.4 trillion in data center commitments, while asking Trump administration to expand Chips Act tax credits to support infrastructure expansion",
+      "timestamp": "11/06/2025, 9:18 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/sam-altman-says-openai-has-20b-arr-and-about-1-4-trillion-in-data-center-commitments/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/08/openai-asked-trump-administration-to-expand-chips-act-tax-credit-to-cover-data-centers/"
+        }
+      ]
+    },
+    {
+      "title": "Amazon launches AI-powered Kindle Translate service enabling e-book authors to automatically translate their works into multiple languages, expanding global reach for content creators",
+      "timestamp": "11/06/2025, 8:22 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/amazon-launches-an-ai-powered-kindle-translate-service-for-ebook-authors/"
+        }
+      ]
+    },
+    {
+      "title": "OpenAI's Sora video generation tool sees explosive Android adoption with nearly 500,000 installs on first day, 4x larger than iOS launch with 360,000 installs",
+      "timestamp": "11/06/2025, 7:48 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/sora-for-android-saw-nearly-half-a-million-installs-on-its-first-day/"
+        }
+      ]
+    },
+    {
+      "title": "Meta expands AI-generated video feed 'Vibes' to Europe, reporting 10x increase in media generation within Meta AI app since launch as AI content proliferates social platforms",
+      "timestamp": "11/06/2025, 6:22 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/06/meta-brings-its-short-form-video-feed-of-ai-slop-to-europe/"
+        }
+      ]
+    },
+    {
+      "title": "AI industry faces growing scrutiny as Wall Street shows signs of losing faith in AI investments following rough week for tech stocks, while legal challenges mount against OpenAI over ChatGPT safety concerns",
+      "timestamp": "11/08/2025, 8:53 PM",
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/08/is-wall-street-losing-faith-in-ai/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/07/seven-more-families-are-now-suing-openai-over-chatgpts-role-in-suicides-delusions/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,392 @@
+{
+  "type": "short-form",
+  "date": "2026-01-11T16:21:23.287Z",
+  "ideas": [
+    {
+      "title": "8 tips for designers building branded templates in Figma Buzz",
+      "description": "To create self-serve templates that bend—but don’t break—brand designers need to consider work through a marketing lens. Here’s how to set up editing guardrails and design layouts that flex and scale.",
+      "starred": true,
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
+        },
+        {
+          "name": "Figmalion",
+          "url": "https://figmalion.com/topics/community/page/3"
+        },
+        {
+          "name": "Webdesignernews",
+          "url": "https://webdesignernews.com/8-tips-for-designers-building-branded-templates-in-figma-buzz/"
+        },
+        {
+          "name": "Figma",
+          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+        },
+        {
+          "name": "Opensesh",
+          "url": "https://www.opensesh.app/discover/8-tips-for-designers-building-branded-templates-in-figma-buz"
+        }
+      ],
+      "format": "reel",
+      "subcategory": "reel",
+      "hooks": [
+        "Design Templates That Won't Break Your Brand",
+        "Figma Hack: Build Bulletproof Brand Templates",
+        "8 Secrets to Flexible Design Systems"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use text overlays that match fast-paced editing rhythm",
+            "Include dynamic visual transitions between template tips",
+            "Ensure each tip is max 5-7 seconds long"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must be provocative template design screenshot",
+            "Use consistent color blocking between slides",
+            "Include actionable text callouts on each slide"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected visual pattern interrupt",
+            "Use screen recordings of actual Figma workflows",
+            "Include rapid-fire text animations"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add more technical depth to template insights",
+            "Include professional case study references",
+            "Use more sophisticated motion graphics"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast cyberpunk-inspired color palette with electric blues/neon greens, dynamic motion graphics showing template transformations, sans-serif technical typography with glitch effects, fast-paced editing mimicking digital fluidity"
+      },
+      "exampleOutline": [
+        "Hook: Provocative template design challenge",
+        "Problem: Brand consistency vs. flexibility",
+        "8 Quick Design Template Tips",
+        "Live Figma Workflow Demonstration",
+        "Call-to-Action: Download Template Guide"
+      ],
+      "hashtags": "#FigmaDesign #BrandTemplates #DesignSystem #CreativeStrategy #AIDesign #ProductDesign #TemplateHacks #BrandIdentity #DesignTips #CreativeTech",
+      "pexelsImageUrl": "https://images.pexels.com/photos/5477848/pexels-photo-5477848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 7
+    },
+    {
+      "title": "Introducing three new tools for precise image editing in Figma",
+      "description": "Today we’re introducing three new AI image editing tools that make precision editing faster, cleaner, and more intuitive—powering a more complete creative workflow in Figma.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/introducing-three-new-tools-for-precise-image-editing-in-figma/"
+        },
+        {
+          "name": "Contentgrip",
+          "url": "https://www.contentgrip.com/figma-ai-image-editing-tools-update/"
+        },
+        {
+          "name": "Techcrunch",
+          "url": "https://techcrunch.com/2025/12/10/figma-launches-new-ai-powered-object-removal-and-image-extension/"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/watch?v=y8mzJDJzvX4&vl=en"
+        },
+        {
+          "name": "Theaiinsider",
+          "url": "https://theaiinsider.tech/2025/12/12/figma-introduces-new-ai-powered-image-editing-suite-to-streamline-design-workflows/"
+        },
+        {
+          "name": "Figma",
+          "url": "https://www.figma.com/release-notes/"
+        }
+      ],
+      "format": "carousel",
+      "subcategory": "carousel",
+      "hooks": [
+        "AI Just Revolutionized Figma Image Editing Forever 🚀",
+        "3 Mind-Blowing Tools That Will Transform Your Design",
+        "Design Faster: Figma's New AI Image Magic Revealed"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use quick transitions between tool demonstrations",
+            "Include visual before/after comparisons",
+            "Keep total video under 60 seconds"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have maximum visual impact",
+            "Use clean, high-contrast graphics for each tool",
+            "Include actionable text overlay on each slide"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected visual pattern interrupt",
+            "Use professional voiceover explaining tools",
+            "Include screen recording of actual Figma interface"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Add professional context about workflow efficiency",
+            "Include data/statistics about time saved",
+            "Use more technical language and design insights"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "Bold, tech-forward aesthetic with electric blue and deep purple gradient backgrounds. Sleek product screenshots with glowing edges. Modern sans-serif typography. Animated transitions showing tool transformations. Minimal but high-energy design system with futuristic UI elements."
+      },
+      "exampleOutline": [
+        "Section 1: Provocative Hook & Hero Image",
+        "Section 2: Current Design Workflow Challenges",
+        "Section 3: Introduce First AI Image Editing Tool",
+        "Section 4: Demonstrate Second Tool's Capability",
+        "Section 5: Final Tool & Transformative Potential CTA"
+      ],
+      "hashtags": "#FigmaAI #DesignTech #AIDesign #CreativeTech #ProductivityHack #DesignTools #AICreativity #FigmaTips #UXDesign #CreativeWorkflow",
+      "pexelsImageUrl": "https://images.pexels.com/photos/7245606/pexels-photo-7245606.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 10
+    },
+    {
+      "title": "Three new features to help build brand momentum with Figma Buzz",
+      "description": "With marketing templates that are now connected to your design system, plugins that pull in your favorite apps, and video trimming in Figma Buzz, we’re giving designers and marketers new tools to create branded assets that speak volumes.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/new-features-in-figma-buzz/"
+        },
+        {
+          "name": "Techcrunch",
+          "url": "https://techcrunch.com/2025/05/07/figma-releases-new-ai-powered-tools-for-creating-sites-app-prototypes-and-marketing-assets/"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/shorts/Sf_5xBPH1TM"
+        },
+        {
+          "name": "Figma",
+          "url": "https://www.figma.com/release-notes/"
+        },
+        {
+          "name": "Forum",
+          "url": "https://forum.figma.com/suggest-a-feature-11/feature-request-batch-copy-to-canvas-for-multi-page-ai-flows-49147"
+        },
+        {
+          "name": "Help",
+          "url": "https://help.figma.com/hc/en-us/articles/23954856027159-Navigating-UI3-Figma-s-new-UI"
+        }
+      ],
+      "format": "story",
+      "subcategory": "story",
+      "hooks": [
+        "Figma Buzz: Your Design System's Secret Weapon 🚀",
+        "3 Game-Changing Features Designers Can't Miss",
+        "Supercharge Your Marketing Assets in Seconds"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use fast-paced transitions between feature reveals",
+            "Include quick screen recordings demonstrating each feature",
+            "Add dynamic text overlays highlighting key benefits"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide must have a bold, attention-grabbing graphic",
+            "Use consistent color scheme across all slides",
+            "Include one key takeaway per slide with minimal text"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with a provocative question about design workflow",
+            "Use split-screen comparisons of before/after features",
+            "Include fast-moving screen capture with clear annotations"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame features as professional productivity enhancers",
+            "Include data or statistic about time/efficiency saved",
+            "Use more technical, detailed language compared to other platforms"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-energy cyberpunk-inspired design aesthetic with electric blue and neon accent colors, dynamic diagonal compositions, futuristic sans-serif typography, animated glitch effects suggesting technological innovation, minimal but high-contrast graphics emphasizing speed and transformation"
+      },
+      "exampleOutline": [
+        "Section 1: Provocative Hook - 'Design Workflow Revolution?'",
+        "Section 2: Current Design Challenges Explained",
+        "Section 3: Detailed Feature Walkthrough",
+        "Section 4: Tangible Impact & Workflow Transformation",
+        "Section 5: Call-to-Action & Quick Implementation Guide"
+      ],
+      "hashtags": "#FigmaBuzz #DesignTips #AIDesign #CreativeTech #ProductivityHack #MarketingDesign #UXUIDesign #DesignTools #CreativeWorkflow #AICreativity",
+      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 0
+    },
+    {
+      "title": "Senior Designer, Moniker, San Francisco",
+      "description": "Moniker is looking for a Senior Designer 100% focused on visual identity work: concepting and designing brand systems that can scale across complex organisations, digital products, and real-world environments. This role is hands-on, highly collaborative, and ideal for someone who is as comfortable defining a core visual idea as they are building out the details of a system so it\nThe post Senior Designer, Moniker, San Francisco appeared first on BP&O - Branding, Packaging and Opinion.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "BP&O",
+          "url": "https://bpando.org/2025/12/23/senior-designer-moniker-san-francisco/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "Design Jobs That Actually Pay: San Francisco Edition 💸",
+        "The Secret Sauce of Top Design Careers Revealed",
+        "Moniker's Insider: What Makes a Senior Designer?"
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use dynamic split-screen showing job details vs designer skills",
+            "Create rapid visual transitions highlighting design portfolio moments",
+            "Include text overlays with salary/role key information"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Provocative job title graphic",
+            "Use consistent color palette matching Moniker's brand",
+            "Include infographic-style slides breaking down role requirements"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Start with unexpected visual pattern interrupt",
+            "Use kinetic typography for job description",
+            "Include quick portfolio showcase clips"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "More detailed professional language and context",
+            "Include credibility markers like company logo",
+            "Add subtle data visualization of design market"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 7,
+        "description": "High-contrast cyberpunk-meets-corporate aesthetic. Neon accents on dark background. Glitch-style typography. Geometric overlay graphics. Sharp-edged design elements suggesting precision and innovation. Color palette: electric blue, charcoal gray, bright magenta"
+      },
+      "exampleOutline": [
+        "Opening: Provocative job market insight",
+        "Problem: Design career limitations",
+        "Solution: Moniker's unique senior designer opportunity",
+        "Key Skills Highlight: Visual identity expertise",
+        "Call-to-Action: Application details/link"
+      ],
+      "hashtags": "#DesignCareers #SanFranciscoJobs #CreativeIndustry #AIDesign #DesignTech #CareerOpportunity #GraphicDesign #JobSearch #TechJobs #CreativeProfessionals",
+      "pexelsImageUrl": "https://images.pexels.com/photos/9536008/pexels-photo-9536008.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 1
+    },
+    {
+      "title": "Just our type: The story of creating Figma Sans",
+      "description": "As Figma expands to include tools for all product builders, our community has evolved—and so has our brand. We’ve overhauled our entire visual identity from color palette to illustration style, and even commissioned a new typeface.",
+      "starred": false,
+      "sources": [
+        {
+          "name": "Figma Blog",
+          "url": "https://www.figma.com/blog/the-story-of-creating-figma-sans/"
+        }
+      ],
+      "format": "quick-image",
+      "subcategory": "quick-image",
+      "hooks": [
+        "Fonts tell stories. We just wrote Figma's.",
+        "When design needs a voice, we create it.",
+        "Typography: Not just letters, but brand DNA."
+      ],
+      "platformTips": [
+        {
+          "platform": "Instagram Reel",
+          "tips": [
+            "Use fast-paced typography animation transitions",
+            "Incorporate behind-the-scenes design process clips",
+            "Include quick type specimen reveal moment"
+          ]
+        },
+        {
+          "platform": "Instagram Carousel",
+          "tips": [
+            "First slide: Dramatic before/after type comparison",
+            "Use high-contrast design progression slides",
+            "Final slide: Clear call-to-explore Figma Sans"
+          ]
+        },
+        {
+          "platform": "YouTube Short",
+          "tips": [
+            "Open with unexpected type morphing effect",
+            "Use kinetic typography to explain concept",
+            "Include quick designer interview soundbite"
+          ]
+        },
+        {
+          "platform": "LinkedIn",
+          "tips": [
+            "Frame as professional design innovation story",
+            "Include technical design process details",
+            "Emphasize collaborative community design approach"
+          ]
+        }
+      ],
+      "visualDirection": {
+        "rating": 8,
+        "description": "Bold geometric transitions, high-contrast color palette (navy, electric blue, white), experimental type specimen showcasing Figma Sans' flexibility, motion graphics revealing letter construction, minimalist tech-forward aesthetic with playful design easter eggs"
+      },
+      "exampleOutline": [
+        "Provocative Typography Reveal",
+        "Design Challenge: Representing Figma's Evolution",
+        "Breaking Down Figma Sans Creation",
+        "Why Custom Typefaces Matter",
+        "Explore Figma's Design Journey"
+      ],
+      "hashtags": "#DesignInnovation #Typography #FigmaSans #CreativeProcess #BrandDesign #AIDesign #ProductDesign #CreativeTech #DesignCommunity #TypeSpecimen",
+      "pexelsImageUrl": "https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "textureIndex": 6
+    }
+  ]
+}

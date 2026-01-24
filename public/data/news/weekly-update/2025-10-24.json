@@ -1,0 +1,60 @@
+{
+  "type": "weekly-update",
+  "date": "2025-10-24T17:17:30.264Z",
+  "updates": [
+    {
+      "title": "OpenAI launches Atlas, a ChatGPT-powered browser that lets users surf the web using natural language, while Microsoft quickly follows with a nearly identical AI browser feature called Copilot Mode in Edge.",
+      "timestamp": "10/24/2025, 3:39 PM",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/podcast/openai-wants-to-power-your-browser-and-that-might-be-a-security-nightmare/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/10/23/two-days-after-openais-atlas-microsoft-launches-a-nearly-identical-ai-browser/"
+        }
+      ]
+    },
+    {
+      "title": "OpenAI acquires Sky (Software Applications, Inc.), an AI-powered natural language interface for Mac that can view screens and take actions in apps, expanding their desktop AI capabilities.",
+      "timestamp": "10/23/2025, 8:53 PM",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/10/23/openai-buys-sky-an-ai-interface-for-mac/"
+        }
+      ]
+    },
+    {
+      "title": "OpenAI's Sora video generator receives major updates including AI video creation of pets and objects, new social features, video editing tools, and an upcoming Android app launch.",
+      "timestamp": "10/23/2025, 3:19 PM",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/10/23/sora-update-to-bring-ai-videos-of-your-pets-new-social-features-and-soon-an-android-version/"
+        }
+      ]
+    },
+    {
+      "title": "Instagram integrates Meta AI editing tools directly into Stories, allowing users to describe what they want to add, remove, or change in their photos using natural language prompts.",
+      "timestamp": "10/23/2025, 7:22 PM",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2025/10/23/instagram-users-can-now-use-meta-ai-editing-tools-directly-in-ig-stories/"
+        }
+      ]
+    },
+    {
+      "title": "OpenAI launches new ChatGPT company knowledge feature that makes it easier to search workspace information from third-party apps without switching between platforms.",
+      "timestamp": "10/24/2025, 12:58 PM",
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/806046/openai-chatgpt-company-knowledge-update"
+        }
+      ]
+    }
+  ]
+}

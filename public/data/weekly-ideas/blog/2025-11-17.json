@@ -1,0 +1,101 @@
+{
+  "type": "blog",
+  "date": "2025-11-17T17:19:29.259Z",
+  "ideas": [
+    {
+      "title": "Why MCP is the missing link between design and development (and what it means for our industry)",
+      "description": "Analysis of how Model Context Protocol will finally bridge the design-dev gap designers have struggled with for decades",
+      "starred": true,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/17/mcp-ai-agent-security-startup-runlayer-launches-with-8-unicorns-11m-from-khoslas-keith-rabois-and-felicis/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/822011/coreweave-debt-data-center-ai"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/fidji-simo-is-openais-other-ceo-and-she-swears-shell-make-chatgpt-profitable/"
+        }
+      ]
+    },
+    {
+      "title": "The AI subscription trap: Why paying for every tool is killing creative workflows",
+      "description": "Our perspective on ChatGPT's monetization push and what it means for designers building sustainable AI toolkits",
+      "starred": true,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/fidji-simo-is-openais-other-ceo-and-she-swears-shell-make-chatgpt-profitable/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/14/leaked-documents-shed-light-into-how-much-openai-pays-microsoft/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/822240/google-ai-mode-travel-plans-canvas"
+        }
+      ]
+    },
+    {
+      "title": "Why open source will determine which designers survive the AI revolution",
+      "description": "Analysis of how the US-China AI race mirrors the design tool wars, and why community-driven solutions win",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/14/databricks-co-founder-argues-us-must-go-open-source-to-beat-china-in-ai/"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/17/sakana-ai-raises-135m-series-b-at-a-2-65b-valuation-to-continue-building-ai-models-for-japan/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/best-tech-gifts/"
+        }
+      ]
+    },
+    {
+      "title": "The renewable energy reality check: What AI's environmental cost means for ethical design",
+      "description": "Why designers need to consider the carbon footprint of their AI workflows and tools before it's too late",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/16/how-much-of-the-ai-data-center-boom-will-be-powered-by-renewable-energy/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/822011/coreweave-debt-data-center-ai"
+        },
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/17/powerlattice-attracts-investment-from-ex-intel-ceo-pat-gelsinger-for-its-power-saving-chiplet/"
+        }
+      ]
+    },
+    {
+      "title": "From Google flights to design systems: Why AI's real power is in the mundane workflows",
+      "description": "How Google's practical AI rollouts reveal what actually matters for designers beyond the flashy tool launches",
+      "starred": false,
+      "sources": [
+        {
+          "name": "TechCrunch AI",
+          "url": "https://techcrunch.com/2025/11/17/google-rolls-out-its-ai-flight-deals-tool-globally-adds-new-travel-features-in-search/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/822240/google-ai-mode-travel-plans-canvas"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/fidji-simo-is-openais-other-ceo-and-she-swears-shell-make-chatgpt-profitable/"
+        }
+      ]
+    }
+  ]
+}
