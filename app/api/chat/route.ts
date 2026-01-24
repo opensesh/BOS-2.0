@@ -203,10 +203,10 @@ function hasRequiredApiKey(modelId: ModelId): { valid: boolean; error?: string }
 }
 
 export async function POST(req: Request) {
-  console.log('=== Chat API called ===');
+  if (process.env.NODE_ENV === 'development') console.log('=== Chat API called ===');
   try {
     const body = await req.json();
-    console.log('Request body keys:', Object.keys(body));
+    if (process.env.NODE_ENV === 'development') console.log('Request body keys:', Object.keys(body));
     const { messages, model = 'auto', context, connectors } = body as {
       messages: ClientMessage[];
       model?: string;
@@ -222,20 +222,20 @@ export async function POST(req: Request) {
       discover: true,
     };
     
-    console.log('Active connectors:', activeConnectors);
-    
-    // Log context for debugging
-    console.log('Page context received:', context?.type || 'none', {
-      hasArticle: !!context?.article,
-      articleSlug: context?.article?.slug,
-      hasSummary: !!context?.article?.summary,
-      summaryLength: context?.article?.summary?.length || 0,
-    });
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Active connectors:', activeConnectors);
+      console.log('Page context received:', context?.type || 'none', {
+        hasArticle: !!context?.article,
+        articleSlug: context?.article?.slug,
+        hasSummary: !!context?.article?.summary,
+        summaryLength: context?.article?.summary?.length || 0,
+      });
+    }
     
     // Enrich article context by fetching content if we have slug but no summary
     let enrichedContext = context;
     if (context?.type === 'article' && context.article?.slug && !context.article.summary) {
-      console.log('Fetching article content for slug:', context.article.slug);
+      if (process.env.NODE_ENV === 'development') console.log('Fetching article content for slug:', context.article.slug);
       const articleContent = await fetchArticleContent(context.article.slug);
       if (articleContent) {
         enrichedContext = {
@@ -246,7 +246,7 @@ export async function POST(req: Request) {
             sections: articleContent.sections,
           },
         };
-        console.log('Article context enriched with content, summary length:', articleContent.summary.length);
+        if (process.env.NODE_ENV === 'development') console.log('Article context enriched with content, summary length:', articleContent.summary.length);
       }
     }
 
@@ -317,10 +317,12 @@ export async function POST(req: Request) {
         const discoverResults = await searchDiscoverContent(userQuery);
         discoverContext = discoverResults.formattedContext;
         discoverSources = discoverResults.results;
-        console.log('Discover search completed:', {
-          query: userQuery.slice(0, 50),
-          foundResults: discoverSources.length,
-        });
+        if (process.env.NODE_ENV === 'development') {
+          console.log('Discover search completed:', {
+            query: userQuery.slice(0, 50),
+            foundResults: discoverSources.length,
+          });
+        }
       }
     }
 
@@ -335,17 +337,18 @@ export async function POST(req: Request) {
       systemPrompt += `\n\n${discoverContext}\n\nWhen referencing these sources, cite them using [1], [2], etc. format to help users verify information.`;
     }
     
-    // Log system prompt details for debugging
-    console.log('=== SYSTEM PROMPT DEBUG ===');
-    console.log('Context type:', enrichedContext?.type || 'none');
-    console.log('Prompt length:', systemPrompt.length);
-    console.log('Has article summary:', !!enrichedContext?.article?.summary);
-    console.log('Article summary preview:', enrichedContext?.article?.summary?.slice(0, 200) || 'none');
-    console.log('Has discover context:', !!discoverContext);
-    console.log('Discover sources count:', discoverSources.length);
-    console.log('Selected model:', selectedModel);
-    console.log('Message count:', modelMessages.length);
-    console.log('=== END DEBUG ===');
+    if (process.env.NODE_ENV === 'development') {
+      console.log('=== SYSTEM PROMPT DEBUG ===');
+      console.log('Context type:', enrichedContext?.type || 'none');
+      console.log('Prompt length:', systemPrompt.length);
+      console.log('Has article summary:', !!enrichedContext?.article?.summary);
+      console.log('Article summary preview:', enrichedContext?.article?.summary?.slice(0, 200) || 'none');
+      console.log('Has discover context:', !!discoverContext);
+      console.log('Discover sources count:', discoverSources.length);
+      console.log('Selected model:', selectedModel);
+      console.log('Message count:', modelMessages.length);
+      console.log('=== END DEBUG ===');
+    }
 
     // Stream the response with error handling
     try {
@@ -357,19 +360,11 @@ export async function POST(req: Request) {
         maxTokens: 4096,
       });
 
-      console.log('Stream created successfully, returning response...');
+      if (process.env.NODE_ENV === 'development') console.log('Stream created successfully, returning response...');
 
       // Return streaming response in format useChat expects (AI SDK 5.x)
       // Must use toUIMessageStreamResponse() for useChat hook to parse correctly
-      // Include brand and discover sources in headers for client-side rendering
-      return result.toUIMessageStreamResponse({
-        headers: {
-          'X-Model-Used': selectedModel,
-          'X-Brand-Sources': JSON.stringify(BRAND_SOURCES),
-          'X-Discover-Sources': JSON.stringify(discoverSources),
-          'X-Active-Connectors': JSON.stringify(activeConnectors),
-        },
-      });
+      return result.toUIMessageStreamResponse();
     } catch (streamError) {
       console.error('Error creating stream:', streamError);
       throw streamError;

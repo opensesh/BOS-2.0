@@ -14,6 +14,20 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Brand Operating System',
   description: 'Your AI-powered brand management platform built with Next.js and BRAND-OS styling',
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/favicon.ico',
+    apple: '/assets/icons/OS_brand_favicon.png',
+  },
+  openGraph: {
+    title: 'Brand Operating System',
+    description: 'Your AI-powered brand management platform',
+    images: [{ url: '/og-image.webp', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/og-image.webp'],
+  },
 };
 
 export default function RootLayout({

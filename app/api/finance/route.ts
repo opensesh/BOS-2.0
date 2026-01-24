@@ -1,4 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { validateSymbol, sanitizeErrorMessage } from '@/lib/security';
+
+const VALID_RANGES = ['1d', '5d', '1mo', '6mo', 'ytd', '1y', '5y', 'max'] as const;
 
 // Yahoo Finance API via RapidAPI
 const RAPIDAPI_HOST = 'yahoo-finance15.p.rapidapi.com';
@@ -304,9 +307,20 @@ async function fetchYahooFinanceFree(endpoint: string) {
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const action = searchParams.get('action');
-  const symbol = searchParams.get('symbol');
+  const rawSymbol = searchParams.get('symbol');
   const range = searchParams.get('range') || '1d';
   const query = searchParams.get('query');
+
+  // Validate symbol if provided
+  const symbol = rawSymbol ? validateSymbol(rawSymbol) : null;
+  if (rawSymbol && !symbol) {
+    return NextResponse.json({ error: 'Invalid symbol format' }, { status: 400 });
+  }
+
+  // Validate range against allowlist
+  if (!VALID_RANGES.includes(range as typeof VALID_RANGES[number])) {
+    return NextResponse.json({ error: 'Invalid range parameter' }, { status: 400 });
+  }
 
   try {
     switch (action) {
@@ -316,7 +330,7 @@ export async function GET(request: NextRequest) {
         }
         
         // Use free Yahoo Finance API for quotes
-        const data = await fetchYahooFinanceFree(`/chart/${symbol}?interval=1m&range=1d`);
+        const data = await fetchYahooFinanceFree(`/chart/${encodeURIComponent(symbol)}?interval=1m&range=1d`);
         const meta = data?.chart?.result?.[0]?.meta;
         const quote = data?.chart?.result?.[0]?.indicators?.quote?.[0];
         
@@ -363,7 +377,7 @@ export async function GET(request: NextRequest) {
         };
         const interval = intervalMap[range] || '5m';
 
-        const data = await fetchYahooFinanceFree(`/chart/${symbol}?interval=${interval}&range=${range}`);
+        const data = await fetchYahooFinanceFree(`/chart/${encodeURIComponent(symbol)}?interval=${encodeURIComponent(interval)}&range=${encodeURIComponent(range)}`);
         const result = data?.chart?.result?.[0];
         
         if (!result) {
@@ -399,7 +413,7 @@ export async function GET(request: NextRequest) {
         if (fmpKey) {
           try {
             const response = await fetch(
-              `https://financialmodelingprep.com/api/v3/profile/${upperSymbol}?apikey=${fmpKey}`,
+              `https://financialmodelingprep.com/api/v3/profile/${encodeURIComponent(upperSymbol)}?apikey=${fmpKey}`,
               { next: { revalidate: 3600 } }
             );
 
@@ -432,7 +446,7 @@ export async function GET(request: NextRequest) {
         if (!profile) {
           try {
             const response = await fetch(
-              `https://query2.finance.yahoo.com/v10/finance/quoteSummary/${upperSymbol}?modules=assetProfile,price`,
+              `https://query2.finance.yahoo.com/v10/finance/quoteSummary/${encodeURIComponent(upperSymbol)}?modules=assetProfile,price`,
               {
                 headers: {
                   'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
@@ -492,7 +506,7 @@ export async function GET(request: NextRequest) {
         // Try the Yahoo Finance RSS feed approach
         try {
           const response = await fetch(
-            `https://feeds.finance.yahoo.com/rss/2.0/headline?s=${symbol}&region=US&lang=en-US`,
+            `https://feeds.finance.yahoo.com/rss/2.0/headline?s=${encodeURIComponent(symbol)}&region=US&lang=en-US`,
             {
               headers: {
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
@@ -534,7 +548,7 @@ export async function GET(request: NextRequest) {
 
         // Fallback: try the older v1 API
         const response = await fetch(
-          `https://query1.finance.yahoo.com/v1/finance/search?q=${symbol}&newsCount=10&quotesCount=0`,
+          `https://query1.finance.yahoo.com/v1/finance/search?q=${encodeURIComponent(symbol)}&newsCount=10&quotesCount=0`,
           {
             headers: {
               'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
@@ -642,7 +656,7 @@ export async function GET(request: NextRequest) {
   } catch (error) {
     console.error('Finance API error:', error);
     return NextResponse.json(
-      { error: error instanceof Error ? error.message : 'Internal server error' },
+      { error: sanitizeErrorMessage(error) },
       { status: 500 }
     );
   }

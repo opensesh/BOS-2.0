@@ -32,6 +32,7 @@ import { StickyArticleHeader } from '@/components/discover/article/StickyArticle
 import { SourceCards } from '@/components/discover/article/SourceCards';
 import { IdeaCardData, PlatformTip, SourceCard } from '@/types';
 import { getTextureByIndex, getTextureIndexFromString } from '@/lib/discover-utils';
+import { decodeHtmlEntities } from '@/lib/security';
 
 // Content-type specific generation options
 interface GenerationOption {
@@ -284,13 +285,7 @@ const getRatingLabel = (rating: number) => {
   return 'Radical';
 };
 
-// HTML entity decoder
-function decodeHTMLEntities(text: string): string {
-  if (typeof window === 'undefined') return text;
-  const textarea = document.createElement('textarea');
-  textarea.innerHTML = text;
-  return textarea.value;
-}
+// decodeHtmlEntities imported from @/lib/security (XSS-safe, no DOM innerHTML)
 
 // Generate enhanced platform tips with consistent high-level tips and specific details
 function enhancePlatformTip(tip: string, platform: string, ideaTitle: string, ideaDescription: string): { quickTip: string; detailedExplanation: string; example: string } {
@@ -402,7 +397,7 @@ export default function IdeaDetailPage() {
   useEffect(() => {
     if (item?.hooks && item.hooks.length > 0) {
       const cleanedHooks = item.hooks.map(hook => {
-        const decoded = decodeHTMLEntities(hook);
+        const decoded = decodeHtmlEntities(hook);
         // Remove surrounding quotes if present
         return decoded.replace(/^["']|["']$/g, '');
       });
@@ -697,12 +692,12 @@ export default function IdeaDetailPage() {
                     ref={titleRef}
                     className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-brand-vanilla mb-4 drop-shadow-md"
                   >
-                    {decodeHTMLEntities(item.title)}
+                    {decodeHtmlEntities(item.title)}
                   </h1>
 
                   {/* Brief Description Preview */}
                   <p className="text-sm md:text-base text-brand-vanilla/80 line-clamp-2 max-w-2xl">
-                    {decodeHTMLEntities(item.description)}
+                    {decodeHtmlEntities(item.description)}
                   </p>
                 </div>
 
@@ -736,7 +731,7 @@ export default function IdeaDetailPage() {
               <div className="flex-1 min-w-0">
                 {/* Full Description */}
                 <p className="text-[15px] leading-[1.75] text-os-text-primary-dark/90 mb-8">
-                  {decodeHTMLEntities(item.description)}
+                  {decodeHtmlEntities(item.description)}
                 </p>
 
                 {/* Hook Ideas - Only show if available */}
@@ -984,7 +979,7 @@ export default function IdeaDetailPage() {
                     {/* Prompt Ideas */}
                     <div className="space-y-3">
                       {(() => {
-                        const baseTitle = decodeHTMLEntities(item.title);
+                        const baseTitle = decodeHtmlEntities(item.title);
                         
                         // Territory-specific visual language (from brand art direction)
                         const territoryStyles: Record<string, { visual: string; lighting: string; mood: string; keywords: string[] }> = {

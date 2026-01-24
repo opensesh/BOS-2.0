@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { validateUrl } from '@/lib/security';
 
 // Cache for OG data to avoid repeated fetches
 const ogCache = new Map<string, { data: OGData; timestamp: number }>();
@@ -120,6 +121,12 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: 'URL parameter is required' }, { status: 400 });
   }
 
+  // SSRF prevention: validate URL before fetching
+  const urlCheck = validateUrl(url);
+  if (!urlCheck.valid) {
+    return NextResponse.json({ error: urlCheck.error || 'Invalid URL' }, { status: 400 });
+  }
+
   // Check cache
   const cached = ogCache.get(url);
   if (cached && Date.now() - cached.timestamp < CACHE_DURATION) {
@@ -128,6 +135,15 @@ export async function GET(request: NextRequest) {
 
   // Extract OG data
   const ogData = await extractOGData(url);
+
+  // Evict oldest entries if cache exceeds size cap
+  if (ogCache.size > 500) {
+    const entries = [...ogCache.entries()]
+      .sort((a, b) => a[1].timestamp - b[1].timestamp);
+    for (let i = 0; i < 100 && i < entries.length; i++) {
+      ogCache.delete(entries[i][0]);
+    }
+  }
 
   // Cache the result
   ogCache.set(url, { data: ogData, timestamp: Date.now() });
