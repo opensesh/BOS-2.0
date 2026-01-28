@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Write(/Users/alexbouhdary/Documents/GitHub/BOS-2.0/**)",
+      "Edit(/Users/alexbouhdary/Documents/GitHub/BOS-2.0/**)"
+    ],
+    "deny": [
+      "Write",
+      "Edit"
+    ]
+  }
+}

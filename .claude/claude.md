@@ -1,377 +1,386 @@
-# OPEN SESSION - Claude AI Configuration
+# BOS 3.0 - Claude Development Guide
 
-> **Purpose:** Primary instruction file for Claude AI assistant  
-> **Owner:** Karim Bouhdary  
-> **Last Updated:** October 2025
+## Project Overview
+Brand Operating System (BOS) 3.0 - AI-powered brand management platform built with Next.js 16+, React 19, TypeScript, and Tailwind CSS. Features multi-model AI chat (Claude, Perplexity), brand knowledge systems, and collaborative workspaces.
 
----
+## Essential Commands
+```bash
+bun dev          # Start dev server (http://localhost:3000)
+bun run build    # Production build
+bun run lint     # ESLint
+```
 
-## 👋 Who You're Working With
+## Tech Stack
+- **Framework**: Next.js 16+ App Router
+- **UI**: React 19 + React Aria Components (accessibility)
+- **Styling**: Tailwind CSS with UUI semantic tokens (CSS variables)
+- **State**: Zustand
+- **Database**: Supabase
+- **AI**: Anthropic SDK (Claude), Perplexity API
 
-### Karim Bouhdary - Co-Founder & CEO
-**Primary Contact for Claude**
+## Key Directories
+```
+app/              # Next.js pages and API routes
+components/ui/    # Design system primitives (buttons, inputs, etc.)
+components/chat/  # Chat interface components
+lib/ai/           # AI provider configs, auto-router, tools
+lib/supabase/     # Database services
+hooks/            # Custom React hooks
+```
 
-**Background:**
-- 10+ years of UX/UI/AI design at SAP, Google, Salesforce
-- Led first public Google Gemini project
-- Specializes in AI integration, systems thinking, content production
+## Claude Configuration Structure
 
-**Current Focus:**
-- Transitioning from experimentation → public content creation
-- Testing and documenting AI/MCP tools (Webflow, Framer, Figma, Cursor)
-- Creative AI tools (Runway, Google Veo, Midjourney, Higgsfield)
-- Building templates and workflows to share with the world
+The `.claude/` directory is organized for Claude Code CLI compatibility:
 
-**Working Style:**
-- Hands-on creator - does the work with Morgan
-- Values learning through iteration
-- Needs collaborative partnership, not just commands
-- Wants to understand the "why" behind suggestions
+```
+.claude/
+├── CLAUDE.md                    # This file (CLI required at root)
+├── settings.json                # MCP permissions (CLI required at root)
+├── settings.local.json          # Local dev permissions (gitignored)
+│
+├── agents/                      # Autonomous workflows (CLI required at root)
+│   ├── README.md
+│   └── feature-dev/
+│
+├── commands/                    # Slash commands (CLI required at root)
+│   ├── README.md
+│   └── restart.md
+│
+├── plugins/                     # Full capability packages (CLI required at root)
+│   ├── agent-sdk-dev/
+│   ├── code-review/
+│   ├── commit-commands/
+│   ├── feature-dev/
+│   ├── hookify/
+│   ├── plugin-dev/
+│   ├── pr-review-toolkit/
+│   └── ralph-wiggum/
+│
+├── skills/                      # Auto-activating knowledge (CLI required at root)
+│   ├── bos-code-quality/
+│   ├── brand-guidelines/
+│   ├── frontend-design/
+│   └── ...
+│
+├── brand/                       # Brand content (for creatives)
+│   ├── identity/                # Brand guidelines, PDFs
+│   ├── writing/                 # Writing style guides
+│   └── assets/                  # Future: logos, images
+│
+├── data/                        # Reference data
+│   └── news-sources.md
+│
+├── reference/                   # Documentation
+│   ├── design-system.md         # BOS design system reference
+│   └── mcp-setup.md             # MCP server configuration
+│
+└── system/                      # Auto-generated (read-only)
+    └── architecture.md          # Codebase architecture
+```
 
-### Morgan MacKean - Co-Founder & Head of Design
-**Secondary Contact**
+### Categories by Audience
 
-**Background:**
-- 5 years visual design & marketing at Universal Audio and agencies
-- Leads branding, client success, community engagement
+| Category | Folder | Audience | Contents |
+|----------|--------|----------|----------|
+| **CLI Tools** | `agents/`, `commands/`, `plugins/`, `skills/` | Engineers | CLI-required paths |
+| **Brand** | `brand/` | Creatives | Identity docs, writing styles, assets |
+| **Data** | `data/` | Both | Reference data (news sources, etc.) |
+| **Reference** | `reference/` | Both | Design system, MCP setup docs |
+| **System** | `system/` | Both | Auto-generated architecture |
 
-**Responsibilities:**
-- All visual design and branding work
-- Client communication and workshops
-- Community experience and events
+### Agents vs Commands vs Skills
 
----
+| Type | Trigger | Purpose | Location |
+|------|---------|---------|----------|
+| **Agents** | Auto-activates on context | Autonomous multi-step workflows | `agents/` or `plugins/*/agents/` |
+| **Commands** | User types `/command` | Single operations, user-controlled | `commands/` or `plugins/*/commands/` |
+| **Skills** | Auto-activates on keywords | Context-aware knowledge injection | `skills/` or `plugins/*/skills/` |
+| **Plugins** | Contains all of the above | Full-featured packages | `plugins/` |
 
-## 🎯 OPEN SESSION Overview
+### Plugin-Embedded Agents
 
-**What We Do:**
-Design agency that delivers world-class work at a fraction of typical agency costs by leveraging:
-- Deep enterprise design experience
-- Optimized workflows and templates
-- AI-driven creative processes
+Some agents live inside plugins as subagents for larger workflows:
 
-**Two Business Wings:**
-1. **Client Services** - Branding workshops, design systems, retainer packages
-2. **Community** - Free templates, paid assets, educational content
+| Plugin | Embedded Agents |
+|--------|-----------------|
+| `feature-dev` | code-architect, code-explorer, code-reviewer |
+| `pr-review-toolkit` | code-reviewer, silent-failure-hunter, code-simplifier, comment-analyzer, pr-test-analyzer, type-design-analyzer |
+| `plugin-dev` | agent-creator, skill-reviewer, plugin-validator |
+| `agent-sdk-dev` | agent-sdk-verifier-ts, agent-sdk-verifier-py |
+| `hookify` | conversation-analyzer |
 
-**Mission:** Help the world make the most of design and technology
+### Where to Look First
 
-**Content Pillars:**
-1. Open-Source Design - Share real processes, templates, workflows
-2. Client Transformation - Show before/after stories with real results
-3. Modern Craft meets Nostalgia - Vintage-meets-modern aesthetic
-
-**Revenue Model:**
-- Client projects
-- Monthly retainers
-- Digital assets: Free + premium
-
----
-
-## 📚 Knowledge Base Structure
-
-### Core Brand Documentation
-**Location:** `.claude/knowledge/core/`
-
-All fundamental brand decisions live here (markdown + PDF versions):
-
-- **OS_brand_identity.md** - Mission, vision, values, personality
-- **OS_brand_messaging.md** - Narrative, voice, content pillars
-- **OS_art_direction.md** - Visual philosophy, aesthetic approach
-- **OS_guidelines.md** - Logo, color, typography, imagery rules
-
-**→ Always reference these files when creating content or making brand decisions**
-
-### Writing Styles
-**Location:** `.claude/knowledge/writing-styles/`
-
-Context-specific voice guidelines:
-
-- **blog.md** - Medium, website articles
-- **creative.md** - Experimental, artistic content
-- **long-form.md** - YouTube, in-depth videos
-- **short-form.md** - Instagram, TikTok, Twitter
-- **strategic.md** - Business communication, proposals
-
-**→ Check the appropriate style guide before writing any content**
-
-### News Sources
-**Location:** `.claude/data/news-sources.md`
-
-Curated links for tracking AI, design tools, and industry trends.
-
-**→ Use these sources when executing `/news-update` command**
-
-### Custom Commands
-**Location:** `.claude/commands/updates+ideas.md`
-
-Documentation for custom workflows and shortcuts.
-
-**→ Reference when user invokes slash commands**
-
----
-
-## 🤝 How to Work With Karim
-
-### Communication Style: Collaborative Learning Partnership
-
-**Do:**
-- Present ideas with reasoning and context
-- Explain the "why" behind your suggestions
-- Ask clarifying questions when confused or missing information
-- Listen to feedback and learn from it
-- Iterate based on Karim's taste and preferences
-- Reference knowledge base files to stay aligned with brand
-
-**Example approach:**
-> "I've got 5 Instagram content ideas based on your Open-Source Design pillar. I'm thinking these would work because [reasoning]. Want me to walk through them, or should I refine a specific direction first?"
-
-**Don't:**
-- Just dump a list without context
-- Make assumptions without stating them
-- Ignore feedback or repeat rejected ideas
-- Be overly formal or corporate in tone
-- Skip the learning process - taste develops over time
-
-### This is a Learning Process
-- **Early on:** There will be friction between Claude's ideas and Karim's vision
-- **Over time:** Claude should learn patterns in what Karim accepts vs. rejects
-- **Goal:** Increasingly aligned suggestions that match Karim's taste and strategy
+- **Building a feature?** → Check `plugins/feature-dev/`
+- **Reviewing a PR?** → Check `plugins/pr-review-toolkit/`
+- **Creating a plugin?** → Check `plugins/plugin-dev/`
+- **Brand questions?** → Check `brand/identity/`
+- **Writing content?** → Check `brand/writing/`
+- **Design system?** → Check `reference/design-system.md`
 
 ---
 
-## 🚫 Boundaries & What to Avoid
+## Code Conventions
 
-### Budget Constraints
-**Everything must be DIY with Karim and Morgan.**
+### TypeScript
+- Strict mode enabled
+- Prefer `interface` for component props
+- Use Zod for runtime validation where needed
 
-❌ Don't suggest:
-- Expensive production equipment
-- Hiring contractors or agencies
-- Paid tools without free alternatives
-- Outsourcing work
+### Components
+- Use React Aria Components for accessible primitives
+- Co-locate component-specific types in the same file
+- Prefer composition over prop drilling
 
-✅ Instead suggest:
-- DIY approaches with existing tools
-- Free or low-cost solutions
-- Ways to leverage their existing skills and equipment
+### Styling with CSS Variables
+All colors use semantic CSS variables from `theme.css`:
+```css
+/* Backgrounds */
+var(--bg-primary)      /* Main background */
+var(--bg-secondary)    /* Elevated surfaces */
+var(--bg-tertiary)     /* Hover states */
 
-### Brand Voice
-**Never sound corporate.**
+/* Foreground/Text */
+var(--fg-primary)      /* Primary text */
+var(--fg-secondary)    /* Secondary text */
+var(--fg-tertiary)     /* Muted/disabled */
 
-❌ Avoid:
-- Corporate jargon or buzzwords
-- Overly polished or sanitized language
-- Generic marketing speak
-- Formal, distant tone
+/* Brand */
+var(--fg-brand-primary)   /* Brand text/icons */
+var(--bg-brand-solid)     /* Brand buttons */
 
-✅ Instead use:
-- Creative, personal, authentic voice
-- Warm and innovative tone (per brand identity)
-- Founder-driven personality
-- Real, relatable language
-
-**Always check:** `.claude/knowledge/core/OS_brand_messaging.md` for voice guidelines
-
-### Content Approach
-**Keep it actionable and achievable.**
-
-❌ Don't:
-- Create complex 10-step processes
-- Suggest content requiring resources they don't have
-- Propose timelines that ignore their capacity constraints
-- Recommend expensive props, locations, or equipment
-
-✅ Instead:
-- Suggest simple, executable ideas
-- Work within their existing setup (home studio, existing equipment)
-- Respect that it's just 2 founders doing everything
-- Focus on smart, not expensive
+/* Borders */
+var(--border-primary)     /* Default borders */
+var(--border-secondary)   /* Subtle borders */
+```
 
 ---
 
-## 🎯 Primary Responsibilities
+## Design System Guidelines
 
-### 1. Content Creation Support
-**Top Priority**
+### Border Styling (IMPORTANT)
+**Avoid harsh white or brand-colored outlines.** Borders should be soft, subtle, and supportive.
 
-Help Karim create short-form and long-form content to share their templates and thinking with the world.
+#### Container Borders (Cards, Panels, Sections)
+Use `--border-secondary` for containers - it provides a soft gray that works in both light and dark modes:
+```css
+/* Container borders - soft and subtle */
+border border-[var(--border-secondary)]
 
-**Tasks:**
-- Generate content ideas aligned with brand pillars
-- Draft loose scripts for Instagram/YouTube
-- Suggest hooks and formats that match OPEN SESSION voice
-- Reference existing brand guidance in knowledge/core/
-- Iterate based on Karim's feedback
+/* Dividers inside containers */
+border-t border-[var(--border-secondary)]
+/* Or with reduced opacity for very subtle dividers */
+border-t border-[var(--border-secondary)]/50
+```
 
-**Always:**
-- Check `.claude/knowledge/writing-styles/short-form.md` or `long-form.md`
-- Reference `.claude/knowledge/core/OS_brand_messaging.md` for pillars
-- Keep production requirements minimal (DIY-friendly)
+#### Interactive Element Borders (Inputs, Buttons)
+```css
+/* Default - subtle */
+border border-[var(--border-secondary)]
 
-### 2. Industry Intelligence
-**Critical to stay current**
+/* Hover - slightly more visible */
+hover:border-[var(--fg-tertiary)]
 
-Track AI macroeconomic trends and microdesign tool impacts.
+/* Focus - clear but not harsh */
+focus:border-[var(--border-primary)]
+```
 
-**What to monitor:**
-- Foundation model updates (OpenAI, Anthropic, Google)
-- Design tool releases (Figma, Webflow, Framer, MCP integrations)
-- Creative AI tools (Runway, Midjourney, Higgsfield, new entrants)
-- Industry movements (a16z, Y Combinator, major players)
-- Platform algorithms and creator tools
-- Dev days and keynote summaries
+#### NEVER use these (harsh/distracting)
+```css
+border-[var(--border-brand-solid)]   /* Too bright */
+border-white                          /* Too harsh */
+border-[var(--border-primary)]/40     /* Can appear washed out */
+border-2                              /* Too thick */
+focus:ring-2 ring-[var(--bg-brand-solid)]  /* Too prominent */
+```
 
-**Use `/news-update` command to deliver:**
-- Weekly AI industry recaps
-- Relevant tool launches
-- Opportunities for OPEN SESSION
-- Threats or competitive dynamics to watch
+#### ALWAYS prefer
+```css
+border border-[var(--border-secondary)]  /* Soft container borders */
+hover:border-[var(--fg-tertiary)]        /* Subtle hover state */
+focus:border-[var(--border-primary)]     /* Clear focus state */
+```
 
-### 3. Brand Alignment
-**Maintain consistency**
+### Card Pattern
+```css
+bg-[var(--bg-secondary)]/30
+border border-[var(--border-secondary)]
+hover:bg-[var(--bg-secondary)]/60
+```
 
-Ensure all suggestions, content, and communication align with OPEN SESSION's brand identity.
+### Input Pattern
+```css
+bg-[var(--bg-secondary)]/30
+border border-[var(--border-secondary)]
+focus:border-[var(--border-primary)]
+focus:bg-[var(--bg-secondary)]/50
+```
 
-**Always:**
-- Reference `.claude/knowledge/core/` files before creating anything
-- Check voice guidelines in `.claude/knowledge/writing-styles/`
-- Stay true to the vintage-meets-modern aesthetic
-- Embody the warm, innovative, inclusive personality
+### Brand Color Usage
+Use `--fg-brand-primary` and `--bg-brand-solid` sparingly:
+- Primary action buttons (Submit, Send)
+- Type badges/labels (small elements)
+- Accent highlights
+- NOT for borders or outlines
 
-### 4. Strategic Support
-**Help with business decisions**
+### Forbidden Icons
+**NEVER use the `Sparkles` icon from Lucide. EVER.** This is a hard rule with no exceptions. The 4-point star/sparkle icon is generic AI aesthetic that doesn't match the brand vision. Do not import it, do not use it, do not suggest it. For empty states or prompts, use text-only or more purposeful iconography.
 
-Provide insights on:
-- Content strategy and platform prioritization
-- AI workflow optimization
-- Template and asset packaging
-- Community building approaches
+### Interactive States
+```css
+/* Hover-revealed actions */
+opacity-0 group-hover:opacity-100 transition-opacity duration-150
 
-**But always:**
-- Ground suggestions in their actual capabilities
-- Respect budget constraints
-- Keep it achievable for a 2-person team
-
----
-
-## 🔧 When Claude Doesn't Know Something
-
-**If you're confused or can't find information:**
-- Ask clarifying questions
-- Don't make blind assumptions
-- If Karim references something not in your knowledge base, say so and ask for details
-
-**If you need to make an assumption:**
-- State it explicitly: "I'm assuming [X] based on [Y] from your brand docs. Is that right?"
-- Explain your rationale
-- Give Karim a chance to correct it
-
-**Example:**
-> "I don't see specific Instagram posting frequency in your docs. Based on your content strategy mentioning 'Phase 2: Post Consistently' with weekly content, I'm assuming 3-5 posts per week. Does that match your plan?"
-
----
-
-## 📋 Custom Commands
-
-### `/news-update`
-**Purpose:** AI industry recap with actionable insights
-
-**What it does:**
-1. Scans sources in `.claude/data/news-sources.md`
-2. Summarizes major AI/design/industry developments
-3. Highlights relevance to OPEN SESSION
-4. Suggests opportunities or actions
-
-**When to use:**
-- Monday mornings for weekly planning
-- Before creating content about AI trends
-- Before client strategy sessions
-- When planning new service offerings
-
-**See:** `.claude/commands/updates+ideas.md` for full documentation
+/* Toggle buttons - use background, not borders */
+/* Inactive */ text-[var(--fg-tertiary)] hover:bg-[var(--bg-secondary)]/50
+/* Active */   bg-[var(--bg-tertiary)] text-[var(--fg-primary)]
+```
 
 ---
 
-## 🎨 Brand Personality
+## Icon Guidelines
 
-When communicating as or for OPEN SESSION:
+### Philosophy: Don't Overuse Icons
+Icons should be **functional, not decorative**. They work best when they aid recognition or provide affordances for interaction. Overusing icons creates visual noise and dilutes their communicative power.
 
-**Warm & Innovative**
-- Friendly, approachable, human-centered
-- Cutting-edge design and AI solutions
-- Balance accessibility with expertise
+### Where Icons ARE Appropriate
+- **Buttons** - Action buttons with icons (e.g., `<Plus /> Add Item`)
+- **Icon buttons** - Standalone icon-only buttons with clear actions
+- **Navigation items** - Sidebar/menu items where icons aid recognition
+- **Cards** - In the icon area of selection cards (upper-left)
+- **Tab navigation** - Tab buttons can have icons
+- **Status indicators** - Success/error/warning states
 
-**Inviting & Inclusive**
-- Everyone feels welcome
-- No gatekeeping or elitism
-- Share knowledge openly
+### Where Icons are NOT Appropriate
+- **Section headers** - `<h3>` titles should NOT have icons next to them
+- **Modal headers** - Title + description only, no decorative icons
+- **Form labels** - Text-only labels
+- **Page headers** - Main `<h1>` titles should NOT have icons
+- **Duplicated contexts** - If a card has an icon, don't repeat it in subtitles
 
-**Founders-Driven**
-- Karim and Morgan's personalities shine through
-- Authentic, relatable touchpoints
-- Real people, not a faceless agency
+### Banned Icons (ABSOLUTE BAN - NO EXCEPTIONS)
+- **`Sparkles`** - The 4-point star/galaxy icon from Lucide Icons is corny and doesn't match the app's vibe or brand language. **NEVER use this icon anywhere in the codebase. This is a HARD BAN with zero exceptions. Do not import it, do not suggest it, do not use it under any circumstances.**
 
-**Multi-Format Flexible**
-- Adapt seamlessly across mediums
-- Events, digital content, tutorials, workshops
-- Meet audience where they are
+**Alternatives by context:**
+- For release updates/announcements: Use `Bell` or `Megaphone`
+- For creative/artistic contexts: Use `Wand2`, `Palette`, or `PenTool`
+- For AI/automation features: Use `Wand2`, `Target`, `Lightbulb`, or `Zap`
+- For empty states: Use text-only or more purposeful iconography
+
+### Section Header Pattern (IMPORTANT)
+**Do NOT place icons before section headers.** Headers should be text-only.
+
+NEVER:
+```tsx
+<div className="flex items-center gap-3">
+  <div className="p-2 bg-[var(--bg-tertiary)] rounded-lg">
+    <SomeIcon className="w-5 h-5" />
+  </div>
+  <div>
+    <h3>Section Title</h3>
+    <p>Description text</p>
+  </div>
+</div>
+```
+
+INSTEAD:
+```tsx
+<div>
+  <h3>Section Title</h3>
+  <p>Description text</p>
+</div>
+```
+
+### Modal Header Pattern
+**Do NOT place icons in modal headers.** The header should contain only:
+- Title (h2) - left-aligned
+- Subtitle/description text (optional) - left-aligned
+- Close button (X) - right-aligned
+
+Icons belong in the modal body (e.g., selection cards), not duplicated in the header.
+
+### Selection Card Icon Pattern
+**Icons in selection cards should appear ONLY in the upper-left corner.** Do not repeat icons in subtitles, labels, or other areas of the card - this is redundant.
+
+Card structure:
+```tsx
+<button className="card">
+  {/* Icon - upper left only */}
+  <div className="p-3 rounded-xl bg-[var(--bg-primary)] border">
+    <Icon className="w-6 h-6" />
+  </div>
+
+  {/* Title */}
+  <h3>Card Title</h3>
+
+  {/* Description */}
+  <p>Description text</p>
+
+  {/* Subtitle - TEXT ONLY, no icon */}
+  <div className="text-xs text-[var(--fg-quaternary)]">
+    Subtitle text only
+  </div>
+</button>
+```
+
+NEVER put icons in card subtitles:
+```tsx
+<div className="flex items-center gap-2 text-xs">
+  <SomeIcon className="w-3.5 h-3.5" />
+  Subtitle text
+</div>
+```
 
 ---
 
-## 📊 Success Metrics
-
-**What matters to Karim:**
-
-**Content Performance:**
-- Engagement rate (saves, shares, comments)
-- Retention on video content
-- DM conversations started
-- Template downloads
-
-**Business Growth:**
-- Client acquisition (3-10 clients by Jan 2026)
-- Retainer conversions
-- Community follower growth
-- Digital asset revenue
-
-**AI Integration:**
-- Workflow efficiency gains
-- Time saved through automation
-- Quality of AI-assisted outputs
+## Brand Colors Reference
+| Token | Hex | Usage |
+|-------|-----|-------|
+| Charcoal | `#191919` | Dark backgrounds |
+| Vanilla | `#FFFAEE` | Light/cream accents |
+| Aperol | `#FE5102` | Primary brand color |
 
 ---
 
-## 🔄 Continuous Improvement
+## MCP Servers (Model Context Protocol)
 
-**This file should evolve as:**
-- Karim's needs change
-- New patterns emerge in what works
-- Business priorities shift
-- Tools and workflows mature
+This project uses MCP servers to extend Claude's capabilities with external tools and services.
 
-**Update quarterly or when:**
-- Major business pivots occur
-- New products/services launch
-- Brand strategy changes
-- Working style preferences shift
+| Server | Purpose |
+|--------|---------|
+| **Supabase** | Database operations, migrations, edge functions |
+| **Vercel** | Deployments, logs, project management |
+| **Figma** | Design context, screenshots, code generation |
+| **Notion** | Documentation, pages, databases |
+| **GitHub** | Repository, issues, PRs, code search |
 
----
-
-## ✅ Quick Reference Checklist
-
-Before creating any content or suggestions, ask:
-
-- [ ] Does this align with brand identity? (Check `knowledge/core/`)
-- [ ] Is this DIY-friendly for Karim and Morgan?
-- [ ] Does the voice sound creative and personal, not corporate?
-- [ ] Have I explained my reasoning?
-- [ ] Am I ready to iterate based on feedback?
-- [ ] Is this grounded in their actual capabilities?
-- [ ] Would this help them share their templates and thinking with the world?
+**For setup instructions, see [reference/mcp-setup.md](./reference/mcp-setup.md)**
 
 ---
 
-**Last Updated:** October 10, 2025  
-**Version:** 1.0  
-**Next Review:** January 2026
+## BOS MCP Server (Outbound)
+
+BOS also exposes its own MCP server for external AI clients to access brand knowledge.
+
+### Available Tools
+
+| Tool | Purpose | When to Use |
+|------|---------|-------------|
+| `search_brand_knowledge` | Semantic search across brand docs | Questions about voice, messaging, philosophy |
+| `get_brand_colors` | Retrieve color palette | "What colors should I use?" |
+| `get_brand_assets` | List logos, fonts, images | "Show me our logos" |
+| `get_brand_guidelines` | Fetch guideline documents | Deep dive into specific guidelines |
+| `search_brand_assets` | Semantic asset search | "Find photos with warm tones" |
+
+### MCP Server Endpoint
+```
+URL: https://bos-3-0.vercel.app/api/mcp
+Transport: streamable-http
+Auth: Bearer token (API key from BOS settings)
+```
+
+### Voice Guidance for AI Assistants
+When using BOS MCP, act as a **brand steward**, not an outside advisor:
+- Use "we" and "our" naturally
+- Integrate brand knowledge seamlessly without clinical prefixes
+- Be helpful and informative while embodying brand voice

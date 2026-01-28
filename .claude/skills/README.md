@@ -1,168 +1,217 @@
-# All Claude Skills - Complete Package
+# BOS Skills Collection
 
-This package contains ALL Claude skills available in your environment, organized for easy access and customization.
-
-## 📁 Package Structure
-
-```
-all-claude-skills/
-├── README.md (this file)
-├── public/                      # Core document creation skills
-│   ├── docx/                   # Word document creation & editing
-│   ├── pdf/                    # PDF creation & manipulation
-│   ├── pptx/                   # PowerPoint creation & editing
-│   └── xlsx/                   # Excel spreadsheet creation & editing
-├── examples/                    # Example & specialty skills
-│   ├── algorithmic-art/        # Create algorithmic art with p5.js
-│   ├── artifacts-builder/      # Build complex multi-component artifacts
-│   ├── brand-guidelines/       # Anthropic's brand guidelines (example)
-│   ├── canvas-design/          # Create visual art and designs
-│   ├── internal-comms/         # Anthropic's internal comms (example)
-│   ├── mcp-builder/            # Build MCP servers
-│   ├── single-cell-rna-qc/     # Bioinformatics quality control
-│   ├── skill-creator/          # Create new skills
-│   ├── slack-gif-creator/      # Create GIFs for Slack
-│   └── theme-factory/          # Apply themes to artifacts
-└── customizable-templates/      # YOUR customizable versions
-    ├── README.md               # Setup instructions
-    ├── brand-guidelines/       # Template for YOUR brand
-    └── internal-comms/         # Template for YOUR company comms
-```
-
-## 🎯 Skills Overview
-
-### Public Skills (Core Document Tools)
-
-These are production-ready skills for creating and editing documents:
-
-1. **docx** - Word document creation, editing, tracked changes, comments
-2. **pdf** - PDF creation, text extraction, form filling, merging/splitting
-3. **pptx** - PowerPoint creation, editing, layouts, speaker notes
-4. **xlsx** - Excel spreadsheet creation, formulas, formatting, data analysis
-
-### Example Skills (Specialty Tools)
-
-These are example skills demonstrating various capabilities:
-
-1. **algorithmic-art** - Create generative art using p5.js with seeded randomness
-2. **artifacts-builder** - Build complex HTML artifacts with React, Tailwind, shadcn/ui
-3. **brand-guidelines** - Apply Anthropic's brand (example for customization)
-4. **canvas-design** - Create beautiful visual designs and posters
-5. **internal-comms** - Write internal communications (example for customization)
-6. **mcp-builder** - Guide for creating MCP servers (Python/TypeScript)
-7. **single-cell-rna-qc** - Bioinformatics quality control workflows
-8. **skill-creator** - Guide for creating new custom skills
-9. **slack-gif-creator** - Create animated GIFs for Slack reactions
-10. **theme-factory** - Apply pre-set or custom themes to artifacts
-
-### Customizable Templates (For You!)
-
-Located in `customizable-templates/` - these are ready-to-customize templates:
-
-1. **brand-guidelines** - Template for YOUR brand colors, fonts, visual identity
-2. **internal-comms** - Template for YOUR company's communication formats
-
-**These need your customization** - see the README in that folder for instructions.
-
-## 🚀 Quick Start
-
-### Using Existing Skills
-
-All skills in `public/` and `examples/` work out of the box. Claude will automatically use them when relevant.
-
-### Customizing Skills for Your Business
-
-1. Go to `customizable-templates/`
-2. Read the README.md in that folder
-3. Edit the SKILL.md files with your brand/company info
-4. Install to your Claude environment (see installation instructions below)
-
-## 📥 Installation Options
-
-### Option 1: Use as Reference
-
-Keep this folder as a reference for how skills work. You can:
-- Read through skill files to understand their structure
-- Copy examples when creating your own skills
-- Reference guidelines when working with Claude
-
-### Option 2: Install Custom Skills
-
-To install your customized skills to Claude:
-
-```bash
-# Install brand-guidelines
-cp -r customizable-templates/brand-guidelines /mnt/skills/user/
-
-# Install internal-comms
-cp -r customizable-templates/internal-comms /mnt/skills/user/
-```
-
-Then restart Claude or reload skills (if applicable).
-
-### Option 3: Keep in Version Control
-
-Recommended approach:
-1. Add `customizable-templates/` to your git repository
-2. Customize the skills over time
-3. Share with your team
-4. Keep skills updated as your processes evolve
-
-## 🔍 Exploring Skills
-
-Each skill folder contains:
-- **SKILL.md** - Main skill file with instructions and guidelines
-- **LICENSE.txt** - License information (if applicable)
-- **examples/** - Example files and templates (for complex skills)
-
-To understand how a skill works, read its SKILL.md file.
-
-## ✏️ Which Skills Should You Customize?
-
-**Definitely customize:**
-- ✅ `brand-guidelines` - Add your brand colors, fonts, logo
-- ✅ `internal-comms` - Add your company's communication formats
-
-**Consider customizing:**
-- `theme-factory` - Add your own custom themes
-- `canvas-design` - Add company-specific design guidelines
-
-**Use as-is:**
-- All `public/` skills (docx, pdf, pptx, xlsx)
-- Most `examples/` skills
-
-## 📚 Learning Resources
-
-- **skill-creator** - Read this to learn how to create new skills
-- **mcp-builder** - If you want to build MCP servers
-- Claude Documentation: https://docs.claude.com
-
-## 🤝 Next Steps
-
-1. **Download this entire package** and add to your codebase
-2. **Explore the existing skills** to see what's available
-3. **Customize the templates** in `customizable-templates/`
-4. **Install your custom skills** to Claude when ready
-5. **Create new skills** as needed using skill-creator as a guide
-
-## 💡 Pro Tips
-
-- Keep skill files in markdown for easy editing
-- Use clear examples in your custom skills
-- Test skills with Claude after customizing
-- Share custom skills with your team
-- Update skills as your processes evolve
-- Use version control for your custom skills
-
-## 📊 Skills Summary
-
-- **Total Skills**: 14
-- **Core Document Tools**: 4 (docx, pdf, pptx, xlsx)
-- **Specialty Skills**: 8
-- **Ready to Customize**: 2
+> Skills adapted from [obra/superpowers](https://github.com/obra/superpowers) and customized for the Brand Operating System (BOS) workflow.
 
 ---
 
-**Package Created**: October 19, 2025  
-**For**: Personal/Business use  
-**Claude Version**: Sonnet 4.5
+## Overview
+
+These skills provide systematic workflows for development with deep BOS design system integration. Each skill:
+- Auto-activates based on context (not manual commands)
+- Enforces design system compliance at every checkpoint
+- Integrates with existing BOS plugins (feature-dev, code-review, hookify)
+- Uses "steward, not advisor" brand voice throughout
+
+---
+
+## Skills Inventory
+
+### Development Workflow Skills
+| Skill | Purpose | Triggers |
+|-------|---------|----------|
+| [writing-plans](claude%20config/Skills/writing-plans/SKILL.md) | Create detailed implementation roadmaps | "plan", "design", "architect", complex multi-file work |
+| [verification-before-completion](claude%20config/Skills/verification-before-completion/SKILL.md) | Evidence-based completion claims | "done", "complete", "finished", "fixed", any completion claim |
+| [systematic-debugging](claude%20config/Skills/systematic-debugging/SKILL.md) | Root cause investigation before fixes | "not working", "broken", "fix", "debug", 2+ failed fixes |
+| [subagent-driven-development](claude%20config/Skills/subagent-driven-development/SKILL.md) | Parallel execution with reviews | "implement the plan", "execute tasks", 3+ independent tasks |
+| [bos-code-quality](claude%20config/Skills/bos-code-quality/SKILL.md) | Design system quality gates | "check quality", "review code", after any UI work |
+
+### Output & Behavior Skills
+| Skill | Purpose | Triggers |
+|-------|---------|----------|
+| [explanatory-output-style](./explanatory-output-style/) | Get insights about implementation choices | Auto-activates during code explanation |
+| [learning-output-style](./learning-output-style/) | Interactive learning — write the meaningful parts | Auto-activates during learning mode |
+| [security-guidance](./security-guidance/) | Security warnings when editing code | Auto-activates on security-sensitive code |
+| [frontend-design](./frontend-design/) | Create distinctive BOS-aligned interfaces | Auto-activates on frontend work |
+
+### Supporting Files
+
+Each skill includes examples and references for practical application:
+
+| Skill | Examples | References |
+|-------|----------|------------|
+| writing-plans | Dashboard Widget Plan | Component Patterns |
+| verification | Verification Scenarios | - |
+| debugging | CSS Variable Debugging, React Aria Debugging | Common BOS Issues |
+| subagent-dev | Feature Implementation | Prompt Templates |
+| bos-code-quality | Review Walkthrough | Design Token Mapping |
+
+---
+
+## Workflow Integration
+
+### Development Lifecycle
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    PLANNING PHASE                               │
+│                                                                 │
+│  writing-plans skill                                            │
+│  ├── Create implementation roadmap                              │
+│  ├── Specify BOS design tokens                                  │
+│  └── Define task breakdown (2-5 min each)                       │
+└─────────────────────────────────────────────────────────────────┘
+                              ↓
+┌─────────────────────────────────────────────────────────────────┐
+│                    EXECUTION PHASE                              │
+│                                                                 │
+│  subagent-driven-development skill                              │
+│  ├── Dispatch implementers per task                             │
+│  ├── Spec compliance review (did they build what was asked?)    │
+│  └── Code quality review (is it well-built?)                    │
+│                                                                 │
+│  systematic-debugging skill (when issues arise)                 │
+│  ├── Phase 1: Root cause investigation                          │
+│  ├── Phase 2: Pattern analysis                                  │
+│  ├── Phase 3: Hypothesis testing                                │
+│  └── Phase 4: Focused implementation                            │
+└─────────────────────────────────────────────────────────────────┘
+                              ↓
+┌─────────────────────────────────────────────────────────────────┐
+│                    VERIFICATION PHASE                           │
+│                                                                 │
+│  verification-before-completion skill                           │
+│  ├── Run tests (fresh, not cached)                              │
+│  ├── Verify build succeeds                                      │
+│  └── Check design system compliance                             │
+│                                                                 │
+│  bos-code-quality skill                                         │
+│  ├── CSS variable usage verified                                │
+│  ├── React Aria compliance checked                              │
+│  └── Brand color usage audited                                  │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### Plugin Integration Map
+
+| Skill | feature-dev | code-review | hookify |
+|-------|-------------|-------------|---------|
+| writing-plans | Discovery/Define phases | Specifies what to review | - |
+| verification | Build/Review gates | Pre-review verification | Automated checks |
+| debugging | Build phase troubleshooting | Review findings investigation | - |
+| subagent-dev | Build phase execution | Reviews per task | - |
+| bos-code-quality | Review phase criteria | Quality dimension | Auto-enforcement |
+
+---
+
+## BOS Design System Integration
+
+Every skill enforces these non-negotiable standards:
+
+### Color System
+```
+Semantic Tokens (Always Use):
+  --bg-primary, --bg-secondary, --bg-tertiary
+  --fg-primary, --fg-secondary, --fg-tertiary
+  --border-primary, --border-secondary
+
+Brand Palette:
+  Charcoal (#191919) — Warm dark
+  Vanilla (#FFFAEE) — Warm light
+  Aperol (#FE5102) — Accent (CTAs only)
+
+Forbidden:
+  #000, #FFF, bg-white, bg-black
+  Brand color for borders
+```
+
+### Border Pattern
+```css
+/* Default: Nearly invisible */
+border-[var(--border-primary)]/40
+
+/* Hover: More visible */
+hover:border-[var(--border-primary)]
+
+/* Focus: Full visibility */
+focus:border-[var(--border-primary)]
+```
+
+### Component Requirements
+```
+All interactive elements → React Aria Components
+All focus states → Visible and styled
+All text → Semantic tokens (no hardcoded colors)
+All animations → Framer Motion / GSAP / Tailwind
+```
+
+---
+
+## Quick Start
+
+### Using a Skill
+
+Skills auto-activate based on context. Examples:
+
+```
+You: "Let's plan the new dashboard feature"
+→ writing-plans skill activates
+
+You: "The button click handler isn't working"
+→ systematic-debugging skill activates
+
+You: "That looks done, let's move on"
+→ verification-before-completion skill activates
+```
+
+### Manual Skill Reference
+
+If you need to explicitly invoke skill behavior:
+
+```
+"Apply the writing-plans skill to create an implementation plan"
+"Use systematic-debugging to investigate this issue"
+"Run bos-code-quality checks on these changes"
+```
+
+---
+
+## Skill Philosophy
+
+These skills are adapted from obra/superpowers with these key principles:
+
+1. **Evidence over claims** — Never trust reports; verify independently
+2. **Root cause first** — No fixes without understanding why
+3. **Fresh context** — New subagent per task prevents pollution
+4. **Two-stage review** — Spec compliance, then code quality
+5. **Design system is non-negotiable** — BOS standards always enforced
+
+### Pressure Resistance
+
+Skills include explicit language to resist shortcuts:
+- "NO COMPLETION CLAIMS WITHOUT FRESH VERIFICATION EVIDENCE"
+- "NO FIXES WITHOUT ROOT CAUSE INVESTIGATION FIRST"
+- "Skipping ANY step = unverified claim = misrepresentation"
+
+---
+
+## Attribution
+
+Skills adapted from:
+- **obra/superpowers** — [github.com/obra/superpowers](https://github.com/obra/superpowers)
+- **BOS-3.0** — Brand Operating System design principles
+
+Core patterns by Jesse Vincent (obra), adapted for BOS by Claude Code integration.
+
+---
+
+## Maintenance
+
+To update skills:
+1. Edit the relevant `SKILL.md` file
+2. Test activation triggers
+3. Verify plugin integrations still work
+4. Update this README if triggers/purpose changes
+
+---
+
+*Last updated: 2026-01-12*

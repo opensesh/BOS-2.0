@@ -40,11 +40,11 @@ To access Open Session's official brand identity and style resources, use this s
 - **Display Font**: Neue Haas Grotesk Display Pro (with system-ui, sans-serif fallback)
   - Weights: 400 (Roman), 500 (Medium), 700 (Bold)
   - Use for: Large headings (Display 1, Display 2, H1-H2), presentations, hero text
-  
+
 - **Body/Text Font**: Neue Haas Grotesk Text Pro (with system-ui, sans-serif fallback)
   - Weights: 400 (Roman), 500 (Medium), 700 (Bold)
   - Use for: Body text, paragraphs, captions, labels, buttons
-  
+
 - **Mono/Accent Font**: Offbit (with ui-monospace, SFMono-Regular, monospace fallback)
   - Weights: 400 (Regular), 700 (Bold)
   - Use for: H5-H6 subheadings, code snippets, technical content, personality accents
@@ -67,7 +67,7 @@ To access Open Session's official brand identity and style resources, use this s
 
 - **Mission**: Democratizing Fortune 500-level design through AI augmentation, design systems, and education
 - **Tone**: Friendly, creative, relatable, intelligent, approachable
-- **Core Traits**: 
+- **Core Traits**:
   - Instructional content: Friendly + Creative (warm, clear, supportive)
   - AI/Innovation content: Visionary + Creative (forward-thinking, experimental)
   - Internal comms: Friendly + Creative (casual, collaborative)
