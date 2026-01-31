@@ -15,6 +15,10 @@ export const metadata: Metadata = {
   title: 'Brand Operating System',
   description: 'Your AI-powered brand management platform built with Next.js and BRAND-OS styling',
   icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.png', type: 'image/png' },
+    ],
     apple: '/assets/icons/OS_brand_favicon.png',
   },
   openGraph: {
