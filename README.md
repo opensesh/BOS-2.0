@@ -70,6 +70,30 @@ npm start
 
 ---
 
+## 🤖 Automated Content Generation (Archived)
+
+This repository previously included GitHub Actions workflows for automated content generation using AI APIs. These have been removed to keep this demo environment cost-free.
+
+**The data in `public/data/` is now static.**
+
+To restore automated content generation:
+
+1. Checkout commit `5e86e49a` to retrieve the workflow files:
+   ```bash
+   git checkout 5e86e49a -- .github/workflows/daily-content.yml .github/workflows/generate-ideas.yml scripts/daily-content-generation.ts scripts/generate-ideas.ts
+   ```
+
+2. Add these GitHub repository secrets:
+   - `ANTHROPIC_API_KEY` - For Claude AI content generation
+   - `PERPLEXITY_API_KEY` - For research and source discovery
+   - `PEXELS_API_KEY` - For brand-aligned imagery
+
+3. Enable the workflows in GitHub Actions settings
+
+**Estimated cost:** ~$6-16/month depending on usage.
+
+---
+
 ## 📁 Project Structure
 
 ```
