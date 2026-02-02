@@ -16,7 +16,7 @@ on:
     # 8:00 AM PDT = 15:00 UTC (during daylight saving)
     # Using 16:00 UTC to cover PST
     - cron: '0 16 * * *'
-  
+
   # Allow manual trigger from GitHub Actions UI or from app
   workflow_dispatch:
     inputs:
@@ -41,6 +41,11 @@ on:
         default: 'false'
         type: boolean
 
+# Prevent concurrent runs - only one ideas generation at a time
+concurrency:
+  group: generate-ideas
+  cancel-in-progress: false
+
 env:
   # API Keys (stored in GitHub Secrets)
   ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -53,7 +58,8 @@ permissions:
 jobs:
   generate-ideas:
     runs-on: ubuntu-latest
-    
+    timeout-minutes: 30
+
     # Only run if we have the required secrets
     if: ${{ vars.CONTENT_GENERATION_ENABLED != 'false' }}
     
