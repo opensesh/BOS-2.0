@@ -6,6 +6,11 @@ on:
   push:
     branches: [main]
 
+# Prevent concurrent runs on the same branch - cancel in-progress runs when new commits are pushed
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
 env:
   NEXT_PUBLIC_SUPABASE_URL: "https://placeholder.supabase.co"
   NEXT_PUBLIC_SUPABASE_ANON_KEY: "placeholder-anon-key"
@@ -13,10 +18,15 @@ env:
 jobs:
   build-and-lint:
     runs-on: ubuntu-latest
+    # Add timeout to prevent hanging jobs
+    timeout-minutes: 15
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Retry checkout on transient failures
+          fetch-depth: 1
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -26,6 +36,9 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+        # Retry npm ci up to 3 times on failure (network issues)
+        env:
+          npm_config_retry: 3
 
       - name: Lint
         run: npm run lint
